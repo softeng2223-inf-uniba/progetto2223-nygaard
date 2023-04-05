@@ -8,6 +8,7 @@ Principali contributi
 
 Simula  
 Il principale contributo di Kristen Nygaard alla scienza informatica fu la creazione, insieme a Ole-Johan Dahl, del linguaggio di programmazione Simula nel 1962. Simula fu il primo linguaggio di programmazione ad introdurre il concetto di "classi" e "istanze", fondamenta della programmazione orientata agli oggetti (OOP).  
+Simula fu sviluppato per facilitare la simulazione di sistemi complessi e la soluzione di problemi scientifici e di ingegneria. Il linguaggio aveva caratteristiche innovative per l'epoca, come l'ereditarietà, il polimorfismo e l'incapsulamento, che sono diventate caratteristiche chiave nella programmazione orientata agli oggetti.
 
 Programmazione orientata agli oggetti  
 Nygaard e Dahl sono considerati i padri della programmazione orientata agli oggetti, grazie al loro lavoro su Simula. L'OOP è un paradigma di programmazione che utilizza "oggetti" - istanze di classi - per rappresentare e manipolare entità del mondo reale. Questo approccio permette di creare codice più modulare, riutilizzabile e facile da mantenere.
