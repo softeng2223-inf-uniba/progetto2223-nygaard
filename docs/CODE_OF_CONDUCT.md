@@ -1,3 +1,7 @@
+Il mio obiettivo è quello di contribuire al progetto in modo costruttivo e positivo, e di aiutare gli altri a fare lo stesso. Per questo motivo, mi impegno a rispettare il codice di condotta del progetto, e a seguire le linee guida di comportamento che seguono.
+
+
+
 Partecipazione al progetto
 
 
