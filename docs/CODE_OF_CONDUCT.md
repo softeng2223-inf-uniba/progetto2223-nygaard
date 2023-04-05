@@ -66,3 +66,4 @@ Non pubblicherò codice che non è stato revisionato e testato
 Dovrò essere in grado di spiegare il codice che scrivo
 
 
+Stile di comunicazione e codice
