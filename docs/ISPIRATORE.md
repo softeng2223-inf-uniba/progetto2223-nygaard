@@ -11,7 +11,8 @@ Il principale contributo di Kristen Nygaard alla scienza informatica fu la creaz
 Simula fu sviluppato per facilitare la simulazione di sistemi complessi e la soluzione di problemi scientifici e di ingegneria. Il linguaggio aveva caratteristiche innovative per l'epoca, come l'ereditarietà, il polimorfismo e l'incapsulamento, che sono diventate caratteristiche chiave nella programmazione orientata agli oggetti.
 
 Programmazione orientata agli oggetti  
-Nygaard e Dahl sono considerati i padri della programmazione orientata agli oggetti, grazie al loro lavoro su Simula. L'OOP è un paradigma di programmazione che utilizza "oggetti" - istanze di classi - per rappresentare e manipolare entità del mondo reale. Questo approccio permette di creare codice più modulare, riutilizzabile e facile da mantenere.
+Nygaard e Dahl sono considerati i padri della programmazione orientata agli oggetti, grazie al loro lavoro su Simula. L'OOP è un paradigma di programmazione che utilizza "oggetti" - istanze di classi - per rappresentare e manipolare entità del mondo reale. Questo approccio permette di creare codice più modulare, riutilizzabile e facile da mantenere.  
+Il lavoro di Nygaard e Dahl ha avuto un impatto significativo sulla scienza informatica, influenzando la creazione di molti linguaggi di programmazione moderni, come Java, C++ e Python.
 
 Riconoscimenti  
 Kristen Nygaard ha ricevuto numerosi premi e riconoscimenti per il suo lavoro nel campo dell'informatica. Tra questi, il Premio Turing, considerato il "Nobel dell'informatica", condiviso con Ole-Johan Dahl nel 2001, per il loro contributo alla programmazione orientata agli oggetti.
