@@ -16,3 +16,6 @@ Il lavoro di Nygaard e Dahl ha avuto un impatto significativo sulla scienza info
 
 Riconoscimenti  
 Kristen Nygaard ha ricevuto numerosi premi e riconoscimenti per il suo lavoro nel campo dell'informatica. Tra questi, il Premio Turing, considerato il "Nobel dell'informatica", condiviso con Ole-Johan Dahl nel 2001, per il loro contributo alla programmazione orientata agli oggetti.
+
+Conclusione  
+Kristen Nygaard è stato un pioniere nello sviluppo della programmazione orientata agli oggetti e nella creazione del linguaggio di programmazione Simula. Il suo lavoro ha rivoluzionato il modo in cui i programmatori affrontano la scrittura di codice e ha avuto un impatto duraturo sulla scienza informatica.
