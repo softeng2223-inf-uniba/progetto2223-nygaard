@@ -149,11 +149,11 @@ A questo punto, il membro del team che ha generato il token dovrà:
 - fare click sul pulsante _"New repository secret"_:
   ![SaveTokenInSecret_7](./img/SaveTokenInSecret_7.png)
   - inserire la stringa `GH_ACCESS_TOKEN` nella textbox con l'etichetta _"Name"_;
-  - inserire il Personal Access Token precedentemente generato nella textarea con l'etichetta _"Value"_;
+  - inserire il Personal Access Token precedentemente generato nella textarea con l'etichetta _"Secret"_;
   - concludere l'operazione cliccando sul pulsante _"Add secret"_.
 - ripetere l'operazione per l'aggiunta di un secret col proprio username: fare click sul link _"New repository secret"_;
   - inserire la stringa `GH_USERNAME` nella textbox con l'etichetta _"Name"_;
-  - inserire il proprio username GitHub nella textarea con l'etichetta _"Value"_;
+  - inserire il proprio username GitHub nella textarea con l'etichetta _"Secret"_;
   - concludere l'operazione cliccando sul pulsante _"Add secret"_.
 
 **N.B.:** È fondamentale che i nomi dei due GitHub Secret vengano scritti esattamente come sono riportati in questa guida: `GH_ACCESS_TOKEN` e `GH_USERNAME`(rispettando le maiuscole e gli underscore).
