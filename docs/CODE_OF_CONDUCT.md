@@ -59,6 +59,6 @@ Utilizzerò lo stile <i><a href="https://it.wikipedia.org/wiki/Notazione_a_camme
 <ul>
 <li>Non pubblicherò una pull request se non sono sicuro che il codice funzioni</li>
 <li>Ogni pull request deve essere revisionata da almeno due membri del team</li>
-<li>Gli Assignees sono colui/lei che hanno creato la issue e colui/lei l'ha risolta (i due possono coincidere)</li>
+<li>Gli Assignees sono il membro del team che ha creato la issue e il membro del team che l'ha risolta. Una singola persona può aver assunto entrambi i ruoli</li>
 <li>I Reviewers sono coloro che devono revisionare il lavoro, dunque quindi chi ha già esperienza su quella particolare area di codice/documentazione</li>
 </ul>
