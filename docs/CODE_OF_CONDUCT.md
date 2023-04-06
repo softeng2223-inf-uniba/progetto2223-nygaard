@@ -80,3 +80,15 @@ Non terminerò i commit, le revisioni e i commenti con un punto
 
 Inizierò ogni commit, revisione e commento con una lettera maiuscola
 
+
+Regole di pull request
+
+
+Non pubblicherò una pull request se non sono sicuro che il codice funzioni
+
+Ogni pull request deve essere revisionata da almeno due membri del team
+
+Gli Assignees sono coloro che devono revisionare il lavoro, dunque quindi chi ha già esperienza su quella particolare area di codice/documentazione
+
+
+I Reviewers sono colui/lei che hanno creato la issue e colui/lei l'ha risolta (i due possono coincidere) 
