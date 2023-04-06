@@ -67,3 +67,13 @@ Dovrò essere in grado di spiegare il codice che scrivo
 
 
 Stile di comunicazione e codice
+
+Utilizzerò lo stile CamelCase per i nomi delle variabili e delle funzioni e delle classi (https://it.wikipedia.org/wiki/Notazione_a_cammello#:~:text=La%20notazione%20a%20cammello%20(in,lasciando%20le%20loro%20iniziali%20maiuscole. )
+
+Inizerò i commit con un verbo al presente oppure con un sostantivo
+
+Il titolo del commit deve essere breve e chiaro
+
+Le mie revisioni e i miei commenti saranno costruttivi, rispettosi, semplici e chiari
+
+Non terminerò i commit, le revisioni e i commenti con un punto
