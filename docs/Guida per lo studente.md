@@ -147,7 +147,7 @@ A questo punto, il membro del team che ha generato il token dovrà:
 - selezionare la voce _"Secrets"_ e la sottovoce _"Actions"_ dalla barra laterale;
   ![SaveTokenInSecret_6](./img/SaveTokenInSecret_6.png)
 - fare click sul pulsante _"New repository secret"_:
-  ![SaveTokenInSecret_6](./img/SaveTokenInSecret_7.png)
+  ![SaveTokenInSecret_7](./img/SaveTokenInSecret_7.png)
   - inserire la stringa `GH_ACCESS_TOKEN` nella textbox con l'etichetta _"Name"_;
   - inserire il Personal Access Token precedentemente generato nella textarea con l'etichetta _"Value"_;
   - concludere l'operazione cliccando sul pulsante _"Add secret"_.
