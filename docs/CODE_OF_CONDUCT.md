@@ -46,7 +46,7 @@
 
 <ul>
 <li>
-Utilizzerò lo stile <i><a href="https://it.wikipedia.org/wiki/Notazione_a_cammello#:~:text=La%20notazione%20a%20cammello%20">CamelCase</a></i> per i nomi delle variabili e delle funzioni e delle classi</li>
+Utilizzerò lo stile <i><a href="https://it.wikipedia.org/wiki/Notazione_a_cammello#:~:text=La%20notazione%20a%20cammello%20">CamelCase</a></i> per i nomi delle variabili, delle funzioni e delle classi</li>
 <li>Inizerò i commit con un verbo al presente oppure con un sostantivo</li>
 <li>Il titolo del commit deve essere breve e chiaro</li>
 <li>Le mie revisioni e i miei commenti saranno costruttivi, rispettosi, semplici e chiari</li>
