@@ -77,3 +77,6 @@ Il titolo del commit deve essere breve e chiaro
 Le mie revisioni e i miei commenti saranno costruttivi, rispettosi, semplici e chiari
 
 Non terminerò i commit, le revisioni e i commenti con un punto
+
+Inizierò ogni commit, revisione e commento con una lettera maiuscola
+
