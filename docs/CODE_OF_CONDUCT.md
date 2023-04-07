@@ -39,8 +39,43 @@
 * Non pubblicherò codice che non funziona
 * Non pubblicherò codice che non è stato revisionato e testato
 * Dovrò essere in grado di spiegare il codice che scrivo
-* Utilizzerò lo stile <i><a href="https://it.wikipedia.org/wiki/Notazione_a_cammello#:~:text=La%20notazione%20a%20cammello%20">CamelCase</a></i> per i nomi delle variabili, delle funzioni e delle classi
+* Viene scritta solamente un'istruzione per riga
+* Ogni dichiarazione di variabile (attributo o locale) contiene una sola variabile. Dichiarazioni come` int a, b;` sono vietate 
+  * Eventuali dichiarazioni multiple nell'header di un ciclo for sono permesse
+* Le dichiarazioni di array in stile C sono vietate: le parentesi quadre fanno parte del tipo, non del nome della variabile (es. `int[] a;` invece di `int a[];`)
+* Per dichiarare variabili di tipo Long e Float si utilizza il suffisso con la lettera maiuscola (es. `3000L` e `300.04F`)
+* I nome dei package possono includere solo lettere minuscole e cifre numeriche. Per esempio, `com.example.deepspace`, no `com.example.deepSpace` o `com.example.deep_space`.
+* I nomi delle classi e delle interfacce sono scritte in ***UpperCamelCase***. Tipicamente sono nomi o frasi nominative, ma eventualmente possono essere usati anche gli aggettivi (es. `Readable`)
+* I nomi dei metodi sono scritti in ***lowerCamelCase***. Tipicamente sono verbi o frasi verbali
+* I nomi delle costanti sono scritte in ***UPPER_SNAKE_CASE***
+* I nomi degli attributi (statici o di istanza) sono scritti in ***lowerCamelCase***. Tipicamente sono nomi o frasi nominali
+* I nomi dei parametri sono scritti in ***lowerCamelCase***. Nei metodi pubblici bisogna evitare di usare nomi di un solo carattere
+* I nomi delle variabili locali sono scritti in ***lowerCamelCase***. 
+  * I nomi delle variabili locali possono essere abbreviate se il loro significato è chiaro dal contesto (es. `i` per `index`)
+* I membri statici di una classe devono essere qualificati mediante il nome della classe, e non mediante un oggetto istanza di quella classe
+* Viene usata la lingua inglese per il codice, mentre viene usata la lingua italiana per la documentazione e i commenti del codice
+* Il codice deve essere ben formattato e indentato
+  * L'indentazione avviene mediante l'uso del tasto *tab* settato per 4 blank spaces
+  * Le parentesi graffe vengono utilizzate anche se il corpo del blocco (es. `if`, `for`) contiene una sola istruzione
+    * La parentesi graffa aperta viene posizionata sulla stessa riga dell'istruzione che la precede, mentre quella chiusa viene posizionata nella riga successiva all'ultima istruzione del blocco
 
+*Segue un esempio di codice ben formattato e indentato:*
+```java
+import java.lang.Math;
+public class Main() {
+    public static void main (String[] args) {
+        int i = Math.random();
+        if (i > 10) {
+            System.out.println("Il numero è maggiore di 10");
+        } else {
+            for (j = 0; j < 10; j++) {
+                i += 1;
+                System.out.println("Il valore del numero è il seguente: " + i);
+            }
+        }
+    }
+}
+```
 <br >
 
 ## **Regole di pull request e commit**
