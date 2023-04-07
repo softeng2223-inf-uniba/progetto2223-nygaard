@@ -39,25 +39,19 @@
 * Non pubblicherò codice che non funziona
 * Non pubblicherò codice che non è stato revisionato e testato
 * Dovrò essere in grado di spiegare il codice che scrivo
-
-<br >
-
-## **Stile di comunicazione e codice**
-
-
-
 * Utilizzerò lo stile <i><a href="https://it.wikipedia.org/wiki/Notazione_a_cammello#:~:text=La%20notazione%20a%20cammello%20">CamelCase</a></i> per i nomi delle variabili, delle funzioni e delle classi
-* Inizerò i commit con un verbo al presente oppure con un sostantivo
-* Il titolo del commit deve essere breve e chiaro
-* Le mie revisioni e i miei commenti saranno costruttivi, rispettosi, semplici e chiari
-* Non terminerò i commit, le revisioni e i commenti con un punto
-* Inizierò ogni commit, revisione e commento con una lettera maiuscola
 
 <br >
 
 ## **Regole di pull request e commit**
 
+* Le mie revisioni e i miei commenti saranno costruttivi, rispettosi, semplici e chiari
+* Non terminerò i commit, le revisioni e i commenti con un punto
+* Inizierò ogni commit, revisione e commento con una lettera maiuscola
+* Il titolo del commit deve essere breve e chiaro
+* Inizerò i commit con un verbo al presente oppure con un sostantivo
 * Non pubblicherò una pull request se non sono sicuro che il codice funzioni
 * Ogni pull request deve essere revisionata da almeno due membri del team
 * Gli Assignees sono il membro del team che ha creato la issue e il membro del team che l'ha risolta. Una singola persona può aver assunto entrambi i ruoli
 * I Reviewers sono coloro che devono revisionare il lavoro, dunque quindi chi ha già esperienza su quella particolare area di codice/documentazione
+
