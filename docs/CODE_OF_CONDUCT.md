@@ -55,7 +55,7 @@
 
 <br >
 
-## **Regole di pull request**
+## **Regole di pull request e commit**
 
 * Non pubblicherò una pull request se non sono sicuro che il codice funzioni
 * Ogni pull request deve essere revisionata da almeno due membri del team
