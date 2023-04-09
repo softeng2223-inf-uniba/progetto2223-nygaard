@@ -81,7 +81,7 @@ Si suppone che lo studente abbia già installato sulla sua macchina l’ultima v
   \*\*Se non trovi il team è probabile che l'assignment sia stato accettato prima della creazione del team. Fermarsi e avvisare il componente designato dal.
 
 - Se ti sei unito a un team già creato, dovrai prima confermare la scelta e quindi avrai subito la conferma.
-  ![promptAcceptAssginment](./img/promptAcceptAssignment.png)
+  ![promptAcceptAssignment](./img/promptAcceptAssignment.png)
 
 - Questo passo terminerà con successo se tutti i componenti del gruppo potranno accedere al repository.
 
