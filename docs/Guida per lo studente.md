@@ -96,7 +96,7 @@ per il vostro progetto sono state definite due pipeline.
 
 La prima pipeline, definita nel file `gradle_build.yml`, viene innescata da ogni Pull Request e realizza i seguenti passaggi:
 
-1. il testing del vostro codice (unit test con [JUnit](https://junit.org/)) e l'analisi dello stesso con strumenti di quality assurance ([Checkstyle](https://checkstyle.org/), [Spotbugs](https://spotbugs.github.io));
+1. il testing del vostro codice (unit test con [JUnit](https://junit.org/)) e l'analisi dello stesso con strumenti di quality assurance ([Checkstyle](https://checkstyle.org/), [Spotbugs](https://spotbugs.github.io), [PMD](https://pmd.github.io/));
 2. la costruzione di un eseguibile (build) a partire dai sorgenti che svilupperete.
 
 La seconda pipeline, definita nel file `docker_build&push.yml`, viene innescata dalle operazioni di push e merge sul branch `main`; oltre a svolgere gli stessi passaggi effettuati dalla prima, effettua la costruzione di un'immagine Docker con la vostra applicazione e il caricamento della stessa su [GitHub Packages](https://github.com/features/packages).
