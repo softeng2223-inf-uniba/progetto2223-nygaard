@@ -17,6 +17,7 @@ La struttura della repository si presenta nel seguente modo:
 |    |–– checkstyle
 |–– docs
 |    |–– Assegnazione progetto.md
+|    |–– CODE_OF_CONDUCT.md
 |    |–– Guida per lo studente.md
 |    |–– img
 |    |–– Report.md
