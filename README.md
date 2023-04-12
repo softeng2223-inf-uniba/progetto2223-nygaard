@@ -61,6 +61,7 @@ Nel seguito si dettagliano i ruoli dei diversi componenti:
 - `drawings/`: contiene tutti i diagrammi UML usati per descrivere il progetto.
 - `.gitattributes`: specifica come Git deve gestire determinati file all'interno del repository.
 - `.gitignore`: specifica tutti i file che devono essere esclusi dal sistema di controllo versione.
+- `Dockerfile`: definisce ciò che deve essere inserito in un container.
 - `build.gradle`: esplicita le direttive e la configurazione di *Gradle*.
 - `gradlew` e `gradlew.bat`: eseguibili di *Gradle*, rispettivamente dedicati a Unix e Windows.
 - `settings.gradle`: file di configurazione di *Gradle*.
