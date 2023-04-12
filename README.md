@@ -8,6 +8,7 @@ La struttura della repository si presenta nel seguente modo:
 |-- .github
 |    |-- workflows
 |    |      |-- ingsw2122.yml
+|    |      |-- docker_build&push.yml
 |-- build
 |    |-- reports
 |    |      |-- checkstyle
