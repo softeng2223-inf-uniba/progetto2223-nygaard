@@ -33,6 +33,7 @@ La struttura della repository si presenta nel seguente modo:
 |    |–– test
 |–– .gitattributes
 |–– .gitignore
+|–– Dockerfile
 |–– build.gradle
 |–– README.md
 |–– gradlew
