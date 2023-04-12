@@ -16,6 +16,7 @@ La struttura della repository si presenta nel seguente modo:
 |    |      |-- tests/test
 |–– config
 |    |–– checkstyle
+|    |–– pmd
 |–– docs
 |    |–– Assegnazione progetto.md
 |    |–– CODE_OF_CONDUCT.md
