@@ -59,6 +59,7 @@ Nel seguito si dettagliano i ruoli dei diversi componenti:
 - `res`: contiene risorse varie utilizzate dal sistema
 - `src`: cartella principale del progetto, in cui scrivere tutto il codice dell’applicazione. In `main/` ci saranno i file sorgente e `test/` conterrà i test di unità previsti.
 - `drawings/`: contiene tutti i diagrammi UML usati per descrivere il progetto.
+- `.gitattributes`: specifica come Git deve gestire determinati file all'interno del repository.
 - `.gitignore`: specifica tutti i file che devono essere esclusi dal sistema di controllo versione.
 - `build.gradle`: esplicita le direttive e la configurazione di *Gradle*.
 - `gradlew` e `gradlew.bat`: eseguibili di *Gradle*, rispettivamente dedicati a Unix e Windows.
