@@ -31,6 +31,7 @@ La struttura della repository si presenta nel seguente modo:
 |–– src
 |    |–– main
 |    |–– test
+|–– .gitattributes
 |–– .gitignore
 |–– build.gradle
 |–– README.md
