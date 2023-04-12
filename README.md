@@ -9,6 +9,7 @@ La struttura della repository si presenta nel seguente modo:
 |    |-- workflows
 |    |      |-- ingsw2122.yml
 |    |      |-- docker_build&push.yml
+|    |      |-- gradle_build.yml
 |-- build
 |    |-- reports
 |    |      |-- checkstyle
