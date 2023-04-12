@@ -44,6 +44,7 @@ La struttura della repository si presenta nel seguente modo:
 Nel seguito si dettagliano i ruoli dei diversi componenti:
 
 - `.github/workflows/ingsw2122.yml`: dettaglia le direttive per assicurare la *continuous integration* attraverso l’uso di GitHub Actions;
+- `.github/workflows/docker_build&push.yml`: dettaglia le direttive per assicurare la *continuous integration* attraverso l’uso di GitHub Actions. In particolare le direttive vengono innescate dalle operazioni di push e merge sul branch *main*;
 - `build/`: ospita la sottocartella `reports/`, contenente gli output dei tool automatici di test e controllo di qualità;
 - `config/`: ospita i file di configurazione. L’unica configurazione di base richiesta è quella per il tool checkstyle;
 - `docs/`: ospita la documentazione di progetto, incluse le figure (nella sottocartella `img/`).
