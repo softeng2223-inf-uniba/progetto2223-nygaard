@@ -46,7 +46,7 @@ Nel seguito si dettagliano i ruoli dei diversi componenti:
 - `.github/workflows/docker_build&push.yml`: dettaglia le direttive per assicurare la *continuous integration* attraverso l’uso di GitHub Actions. In particolare le direttive vengono innescate dalle operazioni di push e merge sul branch *main*;
 - `.github/workflows/gradle_build.yml`: dettaglia le direttive per assicurare la *continuous integration* attraverso l’uso di GitHub Actions. In particolare le direttive vengono innescate da ogni *pull request*;
 - `build/`: ospita la sottocartella `reports/`, contenente gli output dei tool automatici di test e controllo di qualità;
-- `config/`: ospita i file di configurazione. L’unica configurazione di base richiesta è quella per il tool checkstyle;
+- `config/`: ospita i file di configurazione. Le uniche configurazioni di base richieste sono quelle per i tool checkstyle e pmd;
 - `docs/`: ospita la documentazione di progetto, incluse le figure (nella sottocartella `img/`).
   Il file `Report.md` verrà usato per redigere la relazione finale del progetto.
   La cartella raccoglie inoltre:
