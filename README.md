@@ -7,7 +7,8 @@ La struttura della repository si presenta nel seguente modo:
 ```plaintext
 |-- .github
 |    |-- workflows
-|    |      |-- ingsw2122.yml
+|    |      |-- docker_build&push.yml
+|    |      |-- gradle_build.yml
 |-- build
 |    |-- reports
 |    |      |-- checkstyle
@@ -15,6 +16,7 @@ La struttura della repository si presenta nel seguente modo:
 |    |      |-- tests/test
 |–– config
 |    |–– checkstyle
+|    |–– pmd
 |–– docs
 |    |–– Assegnazione progetto.md
 |    |–– CODE_OF_CONDUCT.md
@@ -29,19 +31,22 @@ La struttura della repository si presenta nel seguente modo:
 |–– src
 |    |–– main
 |    |–– test
+|–– .gitattributes
 |–– .gitignore
+|–– Dockerfile
 |–– build.gradle
 |–– README.md
 |–– gradlew
-|–– gradle.bat
+|–– gradlew.bat
 |–– settings.gradle
 ```
 
 Nel seguito si dettagliano i ruoli dei diversi componenti:
 
-- `.github/workflows/ingsw2122.yml`: dettaglia le direttive per assicurare la *continuous integration* attraverso l’uso di GitHub Actions;
+- `.github/workflows/docker_build&push.yml`: dettaglia le direttive per assicurare la *continuous integration* attraverso l’uso di GitHub Actions. In particolare le direttive vengono innescate dalle operazioni di push e merge sul branch *main*;
+- `.github/workflows/gradle_build.yml`: dettaglia le direttive per assicurare la *continuous integration* attraverso l’uso di GitHub Actions. In particolare le direttive vengono innescate da ogni *pull request*;
 - `build/`: ospita la sottocartella `reports/`, contenente gli output dei tool automatici di test e controllo di qualità;
-- `config/`: ospita i file di configurazione. L’unica configurazione di base richiesta è quella per il tool checkstyle;
+- `config/`: ospita i file di configurazione. Le uniche configurazioni di base richieste sono quelle per i tool checkstyle e pmd;
 - `docs/`: ospita la documentazione di progetto, incluse le figure (nella sottocartella `img/`).
   Il file `Report.md` verrà usato per redigere la relazione finale del progetto.
   La cartella raccoglie inoltre:
@@ -54,7 +59,9 @@ Nel seguito si dettagliano i ruoli dei diversi componenti:
 - `res`: contiene risorse varie utilizzate dal sistema
 - `src`: cartella principale del progetto, in cui scrivere tutto il codice dell’applicazione. In `main/` ci saranno i file sorgente e `test/` conterrà i test di unità previsti.
 - `drawings/`: contiene tutti i diagrammi UML usati per descrivere il progetto.
+- `.gitattributes`: specifica come Git deve gestire determinati file all'interno del repository.
 - `.gitignore`: specifica tutti i file che devono essere esclusi dal sistema di controllo versione.
+- `Dockerfile`: definisce ciò che deve essere inserito in un container.
 - `build.gradle`: esplicita le direttive e la configurazione di *Gradle*.
 - `gradlew` e `gradlew.bat`: eseguibili di *Gradle*, rispettivamente dedicati a Unix e Windows.
 - `settings.gradle`: file di configurazione di *Gradle*.
