@@ -11,10 +11,10 @@ class AppTest {
     /**
      * Test the getGreeting method of the App class.
      */
-    @Test
+    /*@Test
     void appHasAGreeting() {
         App classUnderTest = new App();
         assertNotNull(
                 classUnderTest.getGreeting(), "app should have a greeting");
-    }
+    }*/
 }

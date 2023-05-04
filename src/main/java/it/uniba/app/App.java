@@ -16,9 +16,9 @@ public final class App {
     Scanner in = new Scanner(System.in);
     String command;
     // Creazione del match
-    if (args.length > 0 && (args[0].equals("--help") || args[0].equals("-h"))) {
-      // Stampa help
-    }
+    /*if (args.length > 0 && (args[0].equals("--help") || args[0].equals("-h"))) {
+      Stampa help
+    }*/
     while (true) {
       System.out.print("Inserire un comando: ");
       command = in.nextLine().toLowerCase();
@@ -28,7 +28,8 @@ public final class App {
                 case "/medio" -> Setta la difficolta a medio
                 case "/difficile" -> Setta la difficolta a difficile
                 case "/mostralivello" -> Mostrare il livello
-                case "/mostranavi" -> Mostrare le navi e il numero di occorrenze di esse
+                case "/mostranavi" -> Mostrare le navi e
+                il numero di occorrenze di esse
                 case "/gioca" -> Incomincia la partita
                 case "/svelagriglia" -> Svela la griglia con tanto di navi
                  */
