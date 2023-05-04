@@ -7,23 +7,22 @@ import java.util.Scanner;
  */
 public final class App {
 
-    /**
-     * Entrypoint of the application.
-     *
-     * @param args command line arguments
-     */
-    public static void main(final String[] args) {
-        Scanner in = new Scanner(System.in);
-        String command;
-        // Creazione del match
-        if (args.length > 0 && (args[0].equals("--help") || args[0].equals("-h"))) {
-            // Stampa help
-        }
-        while (true) {
-            System.out.print("Inserire un comando: ");
-            command = in.nextLine().toLowerCase();
-            switch (command) {
-                /* case "/help" -> Stampa help
+  /**
+   * Entrypoint of the application.
+   *
+   * @param args command line arguments
+   */
+  public static void main(final String[] args) {
+    Scanner in = new Scanner(System.in);
+    String command;
+    // Creazione del match
+    if (args.length > 0 && (args[0].equals("--help") || args[0].equals("-h"))) {
+      // Stampa help
+    }
+    while (true) {
+      System.out.print("Inserire un comando: ");
+      command = in.nextLine().toLowerCase();
+      /* case "/help" -> Stampa help
                 case "/esci" -> Esegui comando di uscita
                 case "/facile" -> Setta la difficolta a facile
                 case "/medio" -> Setta la difficolta a medio
@@ -33,8 +32,7 @@ public final class App {
                 case "/gioca" -> Incomincia la partita
                 case "/svelagriglia" -> Svela la griglia con tanto di navi
                  */
-                default -> System.out.println("Comando non riconosciuto");
-            }
-        }
+      System.out.println("Comando non riconosciuto");
     }
+  }
 }
