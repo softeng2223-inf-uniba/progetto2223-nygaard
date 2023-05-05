@@ -4,7 +4,11 @@ import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
 
 /**
- * Main class of the application.
+ * <p>
+ *   La classe App si occupa della gestione dei comandi da tastiera,
+ * vede se ci sono flags in ingresso all'avvio dell'applicazione
+ * e in tal caso esegue le funzioni associate.
+ * </p>
  */
 public final class App {
 
@@ -20,9 +24,9 @@ public final class App {
     return "Hello World!!!";
   }
   /**
-   * Entrypoint of the application.
+   * Punto di ingresso dell'applicazione.
    *
-   * @param args command line arguments
+   * @param args Parametri di ingresso da linea di comando
    */
   public static void main(final String[] args) {
     Scanner in = new Scanner(System.in, StandardCharsets.UTF_16);
