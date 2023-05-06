@@ -311,7 +311,7 @@ Svolgere le seguenti operazioni:
 Ad esempio, se il comando precedente (copiato da GitHub dal riquadro mostrato in figura), è:
 
 ```shell
-docker pull docker.pkg.github.com/softeng2122-inf-uniba/provaprogetto2122-prova/prova:latest
+docker pull ghcr.io/softeng2223-inf-uniba/battleship-nygaard:latest
 ```
 
 il comando per eseguire il container sarà:
