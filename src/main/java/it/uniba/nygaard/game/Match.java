@@ -10,7 +10,7 @@ public class Match {
 
   private final int[] attempts;
 
-  Match()
+  public Match()
   {
     this.inGame=false;
     this.difficulty=Util.DIFFICULTY_NOT_SETTED;
@@ -18,7 +18,7 @@ public class Match {
     this.attempts = new int[]{Util.EASY_ATTEMPTS, Util.MEDIUM_ATTEMPTS, Util.HARD_ATTEMPTS};
   }
 
-  void setDifficuly(int difficulty)
+  public void setDifficulty(int difficulty)
   {
     if (this.inGame) {
       System.out.println("Non puoi cambiare difficoltà durante una partita");
