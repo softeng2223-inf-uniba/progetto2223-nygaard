@@ -32,7 +32,7 @@ public final class App {
    * @param args Parametri di ingresso da linea di comando
    */
   public static void main(final String[] args) {
-    Scanner in = new Scanner(System.in, StandardCharsets.UTF_16);
+    Scanner in = new Scanner(System.in, StandardCharsets.UTF_8);
     String command;
     Match p = new Match();
     // Creazione del match
@@ -43,8 +43,8 @@ public final class App {
     */
     while (true) {
       System.out.print("Inserire un comando: ");
-      command = in.nextLine().toLowerCase();
-      switch(command){
+      command = in.nextLine();
+      switch (command) {
         //case "/help" -> Stampa help
         //case "/esci" -> Esegui comando di uscita
         case "/facile" -> p.setDifficulty(Util.DIFFICULTY_EASY);
