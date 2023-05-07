@@ -7,5 +7,11 @@ package it.uniba.nygaard.game;
  * </p>
  */
 public class Util {
-
+  public static final int DIFFICULTY_NOT_SETTED = -1;
+  public static final int DIFFICULTY_EASY = 0;
+  public static final int DIFFICULTY_MEDIUM = 1;
+  public static final int DIFFICULTY_HARD = 2;
+  public static final int EASY_ATTEMPTS = 50;
+  public static final int MEDIUM_ATTEMPTS = 30;
+  public static final int HARD_ATTEMPTS = 10;
 }
