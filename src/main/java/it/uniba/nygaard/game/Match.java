@@ -1,5 +1,8 @@
 package it.uniba.nygaard.game;
 
+import java.nio.charset.StandardCharsets;
+import java.util.Scanner;
+
 public class Match {
   private boolean inGame;
   private int difficulty;
@@ -25,5 +28,32 @@ public class Match {
       System.out.println("Hai già impostato questa difficoltà");
       return;
     }
+    if (this.difficulty!=Util.DIFFICULTY_NOT_SETTED)
+    {
+      System.out.print("Il livello attuale è" +difficultyNames[this.difficulty]+
+              ". Confermare cambio in "+difficultyNames[difficulty]+"? (y/n)");
+      boolean repeat;
+      String choice;
+      Scanner in = new Scanner(System.in, StandardCharsets.UTF_16);
+      do{
+        repeat=false;
+        choice = in.nextLine().toLowerCase();
+        if (choice.equals("y")){
+          this.difficulty=difficulty;
+        }
+        else if (choice.equals("n")){
+          return;
+        }
+        else {
+          repeat=true;
+        }
+      }
+      while(repeat);
+    }
+    else
+    {
+      this.difficulty=difficulty;
+    }
+    System.out.println("OK");
   }
 }
