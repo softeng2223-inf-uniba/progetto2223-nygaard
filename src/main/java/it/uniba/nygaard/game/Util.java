@@ -17,7 +17,7 @@ public final class Util {
    * le informazioni mostrate quando si digita il comando "/help".
    */
   private static final
-  String HELP_PATH = "src/main/java/it/uniba/nygaard/game/help/help.txt";
+    String HELP_PATH = "src/main/java/it/uniba/nygaard/help/help.txt";
 
 
   private Util() { }
