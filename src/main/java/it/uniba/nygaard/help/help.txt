@@ -1,43 +1,16 @@
 Benvenuti nel gioco della battaglia navale!
-Prima di iniziare vi andiamo a presentare una breve introduzione al gioco, per poi
-passare alle sue regole e ai comandi che vi saranno utili durante il gioco.
+Prima di iniziare vi andiamo a presentare una breve introduzione al gioco con
+i suoi relativi comandi.
 
 > INTRODUZIONE
-    In questa realizzazione della battaglia navale, giocherete voi contro il vostro computer
-    che posizionera' le navi in automatico prima dell'inizio della partita.
+    In questa realizzazione della battaglia navale, giocherete voi contro il vostro
+    computer che posizionera' le navi in automatico prima dell'inizio della partita.
 
-    Come giocatore, dovete individuare le posizioni delle navi e affondarle tutte, dalla prima
-    all'ultima.
+    Come giocatore, dovete individuare le posizioni delle navi e affondarle
+    tutte, dalla prima all'ultima.
 
-    Una volta che le avrete affondate tutte, la vittoria sara' vostra, ma fate attenzione, per
-    raggiungerla non potrete sbagliare per un certo numero di volte, in base alla difficolta' da voi
-    scelta, quindi non siate impulsivi ;).
-
-    Vi elenco le difficolta' e il loro numero massimo di tentativi che potrete fallire:
-        * Facile: 50 tentativi falliti;
-        * Medio: 30 tentativi falliti;
-        * Difficile: 10 tentativi falliti;
-
-    Buona fortuna giocatore! Ne avrai bisogno :) .
-
-> REGOLE
-    Il tuo avversario, il computer, avra' a disposizione le seguenti navi con delle dimensioni associate:
-        * Cacciatorpediniere: 4 esemplari da 2 celle;
-        * Incrociatore: 3 esemplari da 3 celle;
-        * Corazzata: 2 esemplari da 4 celle;
-        * Portaerei: 1 esemplari da 5 celle;
-
-    Come giocatore, devi colpirle e affondarle tutte, assegnando delle coordinate del tipo riga-colonna, come per
-    esempio A-4.
-
-    La griglia di gioco contiene 10 righe e 10 colonne dove ad ogni riga e' associata una lettera dalla A alla J e
-    ad ogni colonna, un numero che va da 1 a 10.
-
-    Una nave verra' considerata colpita se nella coordinata inserita e' presente una cella con una nave. Una nave
-    sara considerata colpita e affondata solo se tutte le celle di una nave saranno colpite.
-
-    Il giocatore avra' vinto se avra' affondato tutte le navi dell'avversario entro il numero massimo di tentativi
-    falliti forniti, altrimenti la vittoria sara' assegnata all'avversario.
+    Vincerete la partita solamente se affonderete tutte le navi prima di raggiungere
+    il numero massimo di tentativi falliti, che cambia in base alla difficolta' scelta.
 
 > COMANDI
     * /help             Vengono visualizzate le regole di gioco e i comandi disponibili
