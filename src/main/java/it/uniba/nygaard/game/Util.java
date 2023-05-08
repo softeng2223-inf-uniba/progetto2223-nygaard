@@ -33,14 +33,7 @@ public final class Util {
    * </p>
    */
   public static void printHelp() {
-    Path filePath = Paths.get(Util.HELP_PATH);
-
-    try {
-      String result = Files.readString(filePath);
-      System.out.println(result);
-    } catch (IOException e) {
-      e.printStackTrace();
-    }
+    Util.fileReader(Util.HELP_PATH);
   }
 
   /**
@@ -49,14 +42,7 @@ public final class Util {
    * </p>
    */
   public static void printDescription() {
-    Path filePath = Paths.get(Util.DESCRIPTION_PATH);
-
-    try {
-      String result = Files.readString(filePath);
-      System.out.println(result);
-    } catch (IOException e) {
-      e.printStackTrace();
-    }
+    Util.fileReader(Util.DESCRIPTION_PATH);
   }
 
   /**
@@ -64,8 +50,15 @@ public final class Util {
    * di un file posizionato in un certo percorso.
    * @param path Percorso del file
    */
-  private void fileReader(final String path) {
+  private static void fileReader(final String path) {
+    Path filePath = Paths.get(path);
 
+    try {
+      String content = Files.readString(filePath);
+      System.out.println(content);
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
   }
 
 }
