@@ -22,5 +22,22 @@
 
 Benvenuti nel gioco della battaglia navale!
 Prima di iniziare vi andiamo a presentare una breve introduzione al gioco, per poi
-passare alle sue regole e ai comandi che vi sarano utili durante il gioco.
+passare alle sue regole e ai comandi che vi saranno utili durante il gioco.
 
+> INTRODUZIONE
+    In questa realizzazione della battaglia navale, giocherete voi contro il vostro computer
+    che posizionera' le navi in automatico prima dell'inizio della partita.
+
+    Come giocatore, dovete individuare le posizioni delle navi e affondarle tutte, dalla prima
+    all'ultima.
+
+    Una volta che le avrete affondate tutte, la vittoria sara' vostra, ma fate attenzione, per
+    raggiungerla avrete un numero limitato di mosse, in base alla difficolta' da voi scelta, quindi
+    non siate impulsivi ;).
+
+    Vi elenco le difficolta' e il loro numero massimo di mosse associato:
+        * Facile: 50 mosse;
+        * Medio: 30 mosse;
+        * Difficile: 10 mosse;
+
+    Buona fortuna, giocatore!
