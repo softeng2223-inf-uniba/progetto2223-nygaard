@@ -19,6 +19,10 @@ public final class Util {
   private static final
     String HELP_PATH = "src/main/java/it/uniba/nygaard/help/help.txt";
 
+  private static final
+    String DESCRIPTION_PATH =
+      "src/main/java/it/uniba/nygaard/description/description.txt";
+
 
   private Util() { }
 
@@ -39,8 +43,20 @@ public final class Util {
     }
   }
 
+  /**
+   * <p>
+   *   Mostra una descrizione coincisa del programma.
+   * </p>
+   */
   public static void printDescription() {
+    Path filePath = Paths.get(Util.DESCRIPTION_PATH);
 
+    try {
+      String result = Files.readString(filePath);
+      System.out.println(result);
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
   }
 
 }
