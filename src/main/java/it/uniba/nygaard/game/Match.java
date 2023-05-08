@@ -68,7 +68,10 @@ public final class Match {
         this.difficulty = newDifficulty;
         System.out.println("OK");
     }
-
+    /**
+     *  Il metodo showLevel mostra il livello di gioco impostato
+     *  e il numero massimo di tentativi che possono essere falliti
+     */
     public void showLevel() {
         if (this.difficulty != Util.DIFFICULTY_NOT_SETTED) {
             System.out.println(
