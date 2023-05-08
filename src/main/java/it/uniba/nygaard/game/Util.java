@@ -59,4 +59,13 @@ public final class Util {
     }
   }
 
+  /**
+   * Metodo usato per la lettura di tutto il contenuto
+   * di un file posizionato in un certo percorso.
+   * @param path Percorso del file
+   */
+  private void fileReader(final String path) {
+
+  }
+
 }
