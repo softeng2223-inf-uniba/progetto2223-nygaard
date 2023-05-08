@@ -68,4 +68,20 @@ public final class Match {
         this.difficulty = newDifficulty;
         System.out.println("OK");
     }
+
+    public void showLevel() {
+        if (this.difficulty != Util.DIFFICULTY_NOT_SETTED) {
+            System.out.println(
+                "Livello di difficoltà scelto: "
+                    + this.difficultyNames[this.difficulty]
+                    + "\n"
+                    + "Numero massimo di tentativi falliti: "
+                    + this.attempts[this.difficulty]);
+        } else {
+            System.out.println(
+                "Difficoltà non ancora scelta"
+                    + "\n"
+                    + "Per scegliere la difficoltà utilizzare il comando /facile, /medio o /difficile");
+        }
+    }
 }

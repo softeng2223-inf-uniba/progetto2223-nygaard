@@ -49,7 +49,7 @@ public final class App {
         case "/facile" -> p.setDifficulty(Util.DIFFICULTY_EASY);
         case "/medio" -> p.setDifficulty(Util.DIFFICULTY_MEDIUM);
         case "/difficile" -> p.setDifficulty(Util.DIFFICULTY_HARD);
-        //case "/mostralivello" -> Mostrare il livello
+        case "/mostralivello" -> p.showLevel();
         //case "/mostranavi" -> Mostrare le navi e
         //il numero di occorrenze di esse
         //case "/gioca" -> Incomincia la partita
