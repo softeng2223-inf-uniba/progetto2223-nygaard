@@ -19,3 +19,8 @@
  |_.__/ \__,_|\__|\__|_|\___||___/_| |_|_| .__/
                                          | |
                                          |_|
+
+Benvenuti nel gioco della battaglia navale!
+Prima di iniziare vi andiamo a presentare una breve introduzione al gioco, per poi
+passare alle sue regole e ai comandi che vi sarano utili durante il gioco.
+
