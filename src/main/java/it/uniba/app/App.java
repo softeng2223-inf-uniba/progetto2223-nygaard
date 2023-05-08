@@ -35,13 +35,14 @@ public final class App {
     Scanner in = new Scanner(System.in, StandardCharsets.UTF_8);
     String command;
     // Creazione del match
-
     if (args.length > 0) {
       String argument = args[0].toLowerCase();
 
       if (argument.equals("--help") || argument.equals("-h")) {
         Util.printHelp();
       }
+    } else {
+      Util.printDescription();
     }
 
     while (true) {
