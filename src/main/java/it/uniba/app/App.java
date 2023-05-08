@@ -36,9 +36,9 @@ public final class App {
     String command;
     // Creazione del match
 
-    String argument = args[0].toLowerCase();
-
     if (args.length > 0) {
+      String argument = args[0].toLowerCase();
+
       if (argument.equals("--help") || argument.equals("-h")) {
         Util.printHelp();
       }
