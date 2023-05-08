@@ -32,7 +32,7 @@ public final class App {
    * @param args Parametri di ingresso da linea di comando
    */
   public static void main(final String[] args) {
-    Scanner in = new Scanner(System.in, StandardCharsets.UTF_16);
+    Scanner in = new Scanner(System.in, StandardCharsets.UTF_8);
     String command;
     // Creazione del match
 
@@ -47,6 +47,12 @@ public final class App {
     while (true) {
       System.out.print("Inserire un comando: ");
       command = in.nextLine().toLowerCase();
+
+      switch (command) {
+        case "/help" -> Util.printHelp();
+        default -> System.out.println("Comando non riconosciuto");
+      }
+
       /*
        * case "/help" -> Stampa help
        * case "/esci" -> Esegui comando di uscita
@@ -59,7 +65,6 @@ public final class App {
        * case "/gioca" -> Incomincia la partita
        * case "/svelagriglia" -> Svela la griglia con tanto di navi
        */
-      System.out.println("Comando non riconosciuto");
     }
   }
 }
