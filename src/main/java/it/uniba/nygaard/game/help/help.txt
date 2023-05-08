@@ -60,3 +60,15 @@ passare alle sue regole e ai comandi che vi saranno utili durante il gioco.
 
     Il giocatore avra' vinto se avra' affondato tutte le navi dell'avversario entro il numero massimo di tentativi
     falliti forniti, altrimenti la vittoria sara' assegnata all'avversario.
+
+> COMANDI
+    * /help             Vengono visualizzate le regole di gioco e i comandi disponibili
+    * /esci             Ti permette di uscire dalla partita
+    * /facile           Imposta la difficolta' della partita a "Facile"
+    * /medio            Imposta la difficolta' della partita a "Medio"
+    * /difficile        Imposta la difficolta' della partita a "Difficle"
+    * /mostralivello    Mostra il livello della partita
+    * /mostranavi       Mostra le navi ancora in gioco e il loro numero
+    * /gioca            Ti fa iniziare una partita
+    * /svelagriglia     Mostra la griglia generata dal computer
+
