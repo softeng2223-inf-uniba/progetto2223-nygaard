@@ -14,7 +14,7 @@ import java.nio.file.Paths;
 public final class Util {
   /**
    * Costante che contiene il percorso del file che contiene
-   * le informazioni mostrate quando si digita il comando "/help"
+   * le informazioni mostrate quando si digita il comando "/help".
    */
   private static final
   String HELP_PATH = "src/main/java/it/uniba/nygaard/game/help/help.txt";
