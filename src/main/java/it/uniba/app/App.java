@@ -35,7 +35,6 @@ public final class App {
     Scanner in = new Scanner(System.in, StandardCharsets.UTF_8);
     String command;
     Match p = new Match();
-    // Creazione del match
     /*
     if (args.length > 0 && (args[0].equals("--help") || args[0].equals("-h"))) {
         Stampa help

@@ -31,9 +31,9 @@ public final class Match {
     }
 
     /**
-     * Punto di ingresso dell'applicazione.
+     * Settaggio difficoltà della partita.
      *
-     * @param newDifficulty Parametro di ingresso per imposatere
+     * @param newDifficulty Parametro di ingresso per impostare
      *                    la difficoltà della partita
      */
     public void setDifficulty(final int newDifficulty) {
