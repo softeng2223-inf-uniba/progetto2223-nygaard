@@ -32,12 +32,12 @@ passare alle sue regole e ai comandi che vi saranno utili durante il gioco.
     all'ultima.
 
     Una volta che le avrete affondate tutte, la vittoria sara' vostra, ma fate attenzione, per
-    raggiungerla avrete un numero limitato di mosse, in base alla difficolta' da voi scelta, quindi
-    non siate impulsivi ;).
+    raggiungerla non potrete sbagliare per un certo numero di volte, in base alla difficolta' da voi
+    scelta, quindi non siate impulsivi ;).
 
-    Vi elenco le difficolta' e il loro numero massimo di mosse associato:
-        * Facile: 50 mosse;
-        * Medio: 30 mosse;
-        * Difficile: 10 mosse;
+    Vi elenco le difficolta' e il loro numero massimo di tentativi che potrete fallire:
+        * Facile: 50 tentativi falliti;
+        * Medio: 30 tentativi falliti;
+        * Difficile: 10 tentativi falliti;
 
     Buona fortuna, giocatore!
