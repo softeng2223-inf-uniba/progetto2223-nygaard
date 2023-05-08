@@ -33,44 +33,39 @@ public final class Match {
     /**
      * Punto di ingresso dell'applicazione.
      *
-     * @param difficulty1 Parametro di ingresso per imposatere
+     * @param newDifficulty Parametro di ingresso per imposatere
      *                    la difficoltà della partita
      */
-    public void setDifficulty(final int difficulty1) {
+    public void setDifficulty(final int newDifficulty) {
         if (this.inGame) {
             System.out.println("Non puoi cambiare difficoltà "
-                   + "durante una partita");
+                    + "durante una partita");
             return;
         }
-        if (this.difficulty == difficulty1) {
+        if (this.difficulty == newDifficulty) {
             System.out.println("Hai già impostato questa difficoltà");
             return;
         }
         if (this.difficulty != Util.DIFFICULTY_NOT_SETTED) {
-            boolean repeat;
             String choice;
             Scanner in = new Scanner(System.in, StandardCharsets.UTF_8);
             do {
                 System.out.print("Il livello attuale è "
                         + difficultyNames[this.difficulty]
                         + ". Confermare cambio in "
-                        + difficultyNames[difficulty1]
-                        + "? (y/n)");
-                repeat = false;
+                        + difficultyNames[newDifficulty]
+                        + "? (y/n) ");
                 choice = in.nextLine().toLowerCase();
-                if (choice.equals("y")) {
-                    this.difficulty = difficulty1;
-                } else if (choice.equals("n")) {
-                    return;
-                } else {
+                if (!choice.equals("y") && !choice.equals("n")) {
                     System.out.println("Scelta non valida");
-                    repeat = true;
                 }
+            } while (!choice.equals("y") && !choice.equals("n"));
+            if (choice.equals("n")) {
+                System.out.println("Operazione annullata");
+                return;
             }
-            while (repeat);
-        } else {
-            this.difficulty = difficulty1;
         }
+        this.difficulty = newDifficulty;
         System.out.println("OK");
     }
 }

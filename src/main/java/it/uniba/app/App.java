@@ -43,7 +43,7 @@ public final class App {
     */
     while (true) {
       System.out.print("Inserire un comando: ");
-      command = in.nextLine();
+      command = in.nextLine().toLowerCase();
       switch (command) {
         //case "/help" -> Stampa help
         //case "/esci" -> Esegui comando di uscita
