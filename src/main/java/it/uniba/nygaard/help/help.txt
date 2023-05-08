@@ -1,17 +1,3 @@
-Benvenuti nel gioco della battaglia navale!
-Prima di iniziare vi andiamo a presentare una breve introduzione al gioco con
-i suoi relativi comandi.
-
-> INTRODUZIONE
-    In questa realizzazione della battaglia navale, giocherete voi contro il vostro
-    computer che posizionera' le navi in automatico prima dell'inizio della partita.
-
-    Come giocatore, dovete individuare le posizioni delle navi e affondarle
-    tutte, dalla prima all'ultima.
-
-    Vincerete la partita solamente se affonderete tutte le navi prima di raggiungere
-    il numero massimo di tentativi falliti, che cambia in base alla difficolta' scelta.
-
 > COMANDI
     * /help             Vengono visualizzate le regole di gioco e i comandi disponibili
     * /esci             Ti permette di uscire dalla partita
