@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 /**
  * <p>
- *   La classe App si occupa della gestione dei comandi da tastiera,
+ * La classe App si occupa della gestione dei comandi da tastiera,
  * vede se ci sono flags in ingresso all'avvio dell'applicazione
  * e in tal caso esegue le funzioni associate.
  * </p>
@@ -26,6 +26,7 @@ public final class App {
   public String getGreeting() {
     return "Hello World!!!";
   }
+
   /**
    * Punto di ingresso dell'applicazione.
    *
