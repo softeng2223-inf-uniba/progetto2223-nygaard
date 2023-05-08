@@ -12,6 +12,13 @@ import java.nio.file.Paths;
  * </p>
  */
 public final class Util {
+    /**
+     * Costante che contiene il percorso del file che contiene
+     * le informazioni mostrate quando si digita il comando "/help"
+     */
+    private static final
+        String HELP_PATH = "src/main/java/it/uniba/nygaard/game/help/help.txt";
+
 
     private Util() { }
 
@@ -22,7 +29,7 @@ public final class Util {
      * </p>
      */
     public static void printHelp() {
-        Path filePath = Paths.get("src/main/java/it/uniba/nygaard/game/help/help.txt");
+        Path filePath = Paths.get(Util.HELP_PATH);
 
         try {
             String result = Files.readString(filePath);
