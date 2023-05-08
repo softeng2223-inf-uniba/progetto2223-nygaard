@@ -33,6 +33,7 @@ public final class Util {
    * </p>
    */
   public static void printHelp() {
+    Util.fileReader(Util.DESCRIPTION_PATH);
     Util.fileReader(Util.HELP_PATH);
   }
 
