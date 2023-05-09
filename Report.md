@@ -92,3 +92,5 @@ uno per riga, come da esempio successivo:
     - l’applicazione risponde visualizzando, una griglia 10x10, con le righe numerate da 1 a 10 e le colonne numerate da A a J, e tutte le navi posizionate
 
 <br/>
+
+## 3.2 Requisiti non Funzionali
