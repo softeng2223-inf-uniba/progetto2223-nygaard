@@ -22,3 +22,16 @@ uno per riga, come da esempio successivo:
 - ...
 
 <br/>
+
+- *chiudere il gioco*
+
+  Come giocatore voglio chiudere il gioco.
+
+  **Criteri di accettazione:**
+  Al comando ```/esci```
+
+    - l'applicazione chiede conferma
+        - se la conferma è positiva, l'applicazione si chiude restituendo il controllo al sistema operativo
+        - se la conferma è negativa, l'applicazione si predispone a ricevere nuovi tentativi o comandi
+
+<br/>
