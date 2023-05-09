@@ -4,3 +4,21 @@
 ## 3.1 Requisiti Funzionali
 
 Di seguito, i ***Requisiti Funzionali*** del progetto, facenti parte della *User Story*.
+
+- *mostrare l'help con elenco comandi e regole del gioco*
+
+  Come giocatore voglio mostrare l'help con elenco comandi.
+
+  **Criteri di accettazione**
+  Al comando ```/help```
+  o invocando l'app con flag ```--help``` o ```-h```
+
+il risultato è una descrizione concisa, che normalmente appare all'avvio del
+programma, seguita da una lista di comandi disponibili,
+uno per riga, come da esempio successivo:
+
+- gioca
+- esci
+- ...
+
+<br/>
