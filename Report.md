@@ -54,3 +54,17 @@ uno per riga, come da esempio successivo:
     - l’applicazione risponde con OK e imposta a 10 il numero massimo di tentativi falliti
 
 <br/>
+
+- *mostrare i tipi di nave e il numero*
+
+  Come giocatore voglio mostrare i tipi di nave e il numero
+  
+  **Criteri di accettazione:**
+  Al comando ```/mostranavi``` l’applicazione risponde visualizzando, per ogni tipo di nave, la dimensione in quadrati e il numero di esemplari da affondare
+  
+  -    Cacciatorpediniere ⊠⊠ esemplari: 4
+  -    Incrociatore ⊠⊠⊠ esemplari: 3 
+  -    Corazzata ⊠⊠⊠⊠ esemplari: 2 
+  -    Portaerei ⊠⊠⊠⊠⊠ esemplari: 1
+
+<br/>
