@@ -37,8 +37,8 @@ public final class Util {
    * </p>
    */
   public static void printHelp() {
-    Util.fileReader(Util.DESCRIPTION_PATH);
-    Util.fileReader(Util.HELP_PATH);
+    Util.printFile(Util.DESCRIPTION_PATH);
+    Util.printFile(Util.HELP_PATH);
   }
 
   /**
@@ -55,7 +55,7 @@ public final class Util {
    * di un file posizionato in un certo percorso.
    * @param path Percorso del file
    */
-  private static void fileReader(final String path) {
+  private static void printFile(final String path) {
     Path filePath = Paths.get(path);
 
     try {
