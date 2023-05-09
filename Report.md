@@ -94,3 +94,9 @@ uno per riga, come da esempio successivo:
 <br/>
 
 ## 3.2 Requisiti non Funzionali
+
+Il funzionamento del software richiede:
+
+- il container docker dell’app deve essere eseguito da terminali che supportano Unicode con encoding UTF-8 o UTF-16.
+
+<br/>
