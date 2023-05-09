@@ -51,8 +51,14 @@ public final class Util {
   }
 
   /**
+   * <p>
    * Metodo usato per la lettura di tutto il contenuto
    * di un file posizionato in un certo percorso.
+   * </p>
+   * <p>
+   * Una volta letto tutto il contenuto del file, lo
+   * mostra a video.
+   * </p>
    * @param path Percorso del file
    */
   private static void printFile(final String path) {
