@@ -35,3 +35,22 @@ uno per riga, come da esempio successivo:
         - se la conferma è negativa, l'applicazione si predispone a ricevere nuovi tentativi o comandi
 
 <br/>
+
+- *impostare il livello di gioco per variare il numero massimo di tentativi falliti*
+
+  Come giocatore voglio impostare il livello di gioco per variare il numero massimo di tentativi sbagliati.
+
+  **Criteri di accettazione:**
+  - Al comando ```/facile```
+
+    - l’applicazione risponde con OK e imposta a 50 il numero massimo di tentativi falliti
+
+  - Al comando ```/medio```
+
+    - l’applicazione risponde con OK e imposta a 30 il numero massimo di tentativi falliti
+
+  - Al comando ```/difficile```
+
+    - l’applicazione risponde con OK e imposta a 10 il numero massimo di tentativi falliti
+
+<br/>
