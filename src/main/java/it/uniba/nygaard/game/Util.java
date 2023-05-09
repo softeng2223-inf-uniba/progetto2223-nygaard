@@ -19,6 +19,10 @@ public final class Util {
   private static final
     String HELP_PATH = "src/main/java/it/uniba/nygaard/help/help.txt";
 
+  /**
+   * Costante che contiene il percorso del file che contiene
+   * una breve descrizione del programma.
+   */
   private static final
     String DESCRIPTION_PATH =
       "src/main/java/it/uniba/nygaard/description/description.txt";
