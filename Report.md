@@ -68,3 +68,15 @@ uno per riga, come da esempio successivo:
   -    Portaerei ⊠⊠⊠⊠⊠ esemplari: 1
 
 <br/>
+
+- *iniziare una nuova partita*
+
+  Come giocatore voglio iniziare una nuova partita
+
+  **Criteri di accettazione**
+
+  Al comando ```/gioca```
+
+    - se nessuna partita è in corso l'applicazione imposta casualmente le navi, in orizzontale o in verticale, mostra la griglia vuota e si predispone a ricevere il primo tentativo o altri comandi
+
+<br/>
