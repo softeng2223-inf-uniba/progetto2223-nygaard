@@ -80,3 +80,15 @@ uno per riga, come da esempio successivo:
     - se nessuna partita è in corso l'applicazione imposta casualmente le navi, in orizzontale o in verticale, mostra la griglia vuota e si predispone a ricevere il primo tentativo o altri comandi
 
 <br/>
+
+- *svelare la griglia con le navi posizionate*
+
+  Come giocatore voglio svelare la griglia con le navi posizionate
+
+  **Criteri di accettazione**
+
+  Al comando ```/svelagriglia```
+
+    - l’applicazione risponde visualizzando, una griglia 10x10, con le righe numerate da 1 a 10 e le colonne numerate da A a J, e tutte le navi posizionate
+
+<br/>
