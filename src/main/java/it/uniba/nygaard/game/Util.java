@@ -47,7 +47,7 @@ public final class Util {
    * </p>
    */
   public static void printDescription() {
-    Util.fileReader(Util.DESCRIPTION_PATH);
+    Util.printFile(Util.DESCRIPTION_PATH);
   }
 
   /**
