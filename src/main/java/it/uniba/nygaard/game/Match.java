@@ -117,4 +117,20 @@ public final class Match {
     System.out.println("\tCorazzata \t\t■■■■ \tEsemplari: " + Util.BATTLESHIP_NO);
     System.out.println("\tPortaerei \t\t■■■■■ \tEsemplari: " + Util.AIRCRAFT_NO);
   }
+
+  void play() {
+    if (this.difficulty == Util.DIFFICULTY_NOT_SETTED) {
+      System.out.println("Non hai ancora impostato il livello");
+      return;
+    } else {
+      if (this.inGame) {
+        System.out.println("Sei gia in partita");
+        return;
+      }
+    }
+    this.inGame = true;
+    initializeShips(Util.MIN_SHIP);
+    System.out.println(attackGrid);
+  }
+
 }
