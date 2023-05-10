@@ -4,7 +4,7 @@ import it.uniba.nygaard.game.Util;
 
 public class CellsGrid extends Grid {
 
-  Cell[][] grid;
+  private Cell[][] grid;
 
   public CellsGrid(int dimension) {
     super(dimension);
@@ -16,7 +16,7 @@ public class CellsGrid extends Grid {
     }
   }
 
-  void setCell(int row, int column, Cell cell) {
+  public void setCell(int row, int column, Cell cell) {
     grid[row][column] = cell;
   }
 
@@ -28,7 +28,7 @@ public class CellsGrid extends Grid {
     grid[row][column].setShipIndex(shipIndex);
   }
 
-  Cell getCell(int row, int column) {
+  public Cell getCell(int row, int column) {
     return grid[row][column];
   }
 
