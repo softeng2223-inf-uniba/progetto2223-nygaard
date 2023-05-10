@@ -2,7 +2,7 @@ package it.uniba.nygaard.game.grids;
 
 import it.uniba.nygaard.game.Util;
 
-public class CellsGrid extends Grid {
+public final class CellsGrid extends Grid {
 
   private Cell[][] grid;
 
