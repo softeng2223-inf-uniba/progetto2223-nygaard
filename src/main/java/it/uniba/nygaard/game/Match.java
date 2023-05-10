@@ -32,6 +32,18 @@ public final class Match {
         {Util.EASY_NAME, Util.MEDIUM_NAME, Util.HARD_NAME};
     this.attempts = new int[]
         {Util.EASY_ATTEMPTS, Util.MEDIUM_ATTEMPTS, Util.HARD_ATTEMPTS};
+    this.ships = new Ship[Util.MAX_SHIP];
+    for (int i = Util.MIN_SHIP; i <= Util.MAX_SHIP; i++) {
+      switch (i) {
+        case 1 -> this.ships[i - 1] = new AircraftCarrier();
+        case 2, 3 -> this.ships[i - 1] = new Battleship();
+        case 4, 5, 6 -> this.ships[i - 1] = new Cruiser();
+        case 7, 8, 9, 10 -> this.ships[i - 1] = new Destroyer();
+        default -> this.ships[i - 1].setHp(0);
+      }
+    }
+    this.defenseGrid = new CellsGrid(Util.MAX_ROWS);
+    this.attackGrid = new CharactersGrid(Util.MAX_ROWS);
   }
 
   /**
