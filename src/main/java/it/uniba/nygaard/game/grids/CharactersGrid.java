@@ -27,17 +27,17 @@ public class CharactersGrid extends Grid {
   String toString(Grid grid) {
     String str = "";
     char c;
-    str += Util.concatCharacters('-', Util.HEADING_EDGE_WIDTH);
+    str += "-".repeat(Util.HEADING_EDGE_WIDTH);
     str += "Attacco";
-    str += Util.concatCharacters('-', Util.HEADING_EDGE_WIDTH);
+    str += "-".repeat(Util.HEADING_EDGE_WIDTH);
     str += "\n\n";
-    str += Util.concatCharacters(' ', Util.COLUMNS_EDGE_WIDTH);
+    str += " ".repeat(Util.COLUMNS_EDGE_WIDTH);
     for (char y = Util.MIN_COLUMN; y <= Util.MAX_COLUMN; y++) {
       str += y + " ";
     }
     str += "\n\n";
     for (int x = Util.MIN_ROWS; x <= Util.MAX_ROWS; x++) {
-      str += Util.concatCharacters(' ', Util.ROWS_EDGE_WIDTH);
+      str += " ".repeat(Util.ROWS_EDGE_WIDTH);
       if (x < 10) {
         str += " ";
       }
@@ -49,15 +49,15 @@ public class CharactersGrid extends Grid {
       str += "  " + x + "\n";
     }
     str += "\n";
-    str += Util.concatCharacters(' ', Util.COLUMNS_EDGE_WIDTH);
+    str += " ".repeat(Util.COLUMNS_EDGE_WIDTH);
     for (char y = Util.MIN_COLUMN; y <= Util.MAX_COLUMN; y++) {
       str += y + " ";
     }
-    str += Util.concatCharacters(' ', Util.COLUMNS_EDGE_WIDTH - 1);
+    str += " ".repeat(Util.COLUMNS_EDGE_WIDTH - 1);
     str += "\n\n";
-    str += Util.concatCharacters('-', Util.HEADING_EDGE_WIDTH);
+    str += "-".repeat(Util.HEADING_EDGE_WIDTH);
     str += "Attacco";
-    str += Util.concatCharacters('-', Util.HEADING_EDGE_WIDTH);
+    str += "-".repeat(Util.HEADING_EDGE_WIDTH);
     str += "\n";
     return str;
   }
