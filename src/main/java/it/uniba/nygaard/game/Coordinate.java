@@ -9,4 +9,12 @@ public class Coordinate {
 
   }
 
+  public void setRow(int row) {
+    this.row = row;
+  }
+
+  public void setColumn(char column) {
+    this.column = column;
+  }
+
 }
