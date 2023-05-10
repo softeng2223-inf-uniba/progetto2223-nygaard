@@ -90,6 +90,10 @@ public final class Match {
     }
   }
 
+  /**
+   * Il metodo showShips mostra, per ogni tipo di nave presente nel gioco,
+   * la dimensione in quadrati e il numero di esemplari da affondare.
+   */
   public void showShips() {
     System.out.println("Cacciatorpediniere ⊠⊠ esemplari: 4");
     System.out.println("Incrociatore ⊠⊠⊠ esemplari: 3 ");
