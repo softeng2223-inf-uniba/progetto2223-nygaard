@@ -1,4 +1,6 @@
-package it.uniba.nygaard.game;
+package it.uniba.nygaard.game.grids;
+
+import it.uniba.nygaard.game.Util;
 
 public class Cell {
 

@@ -1,32 +1,50 @@
-package it.uniba.nygaard.game;
+package it.uniba.nygaard.game.grids;
 
-public class CharactersGrid extends Grid {
+import it.uniba.nygaard.game.Util;
 
-  char[][] grid;
+public class CellsGrid extends Grid {
 
-  public CharactersGrid(int dimension) {
+  Cell[][] grid;
+
+  public CellsGrid(int dimension) {
     super(dimension);
-    grid = new char[dimension][dimension];
+    grid = new Cell[dimension][dimension];
     for (int i = 0; i < dimension; i++) {
       for (int j = 0; j < dimension; j++) {
-        grid[i][j] = '~';
+        grid[i][j] = new Cell('~');
       }
     }
   }
 
-  void setCharacter(int row, int column, char character) {
-    grid[row][column] = character;
+  void setCell(int row, int column, Cell cell) {
+    grid[row][column] = cell;
   }
 
-  char getCharacter(int row, int column) {
+  public void setCellCharacter(int row, int column, char character) {
+    grid[row][column].setCharacter(character);
+  }
+
+  public void setCellShipIndex(int row, int column, int shipIndex) {
+    grid[row][column].setShipIndex(shipIndex);
+  }
+
+  Cell getCell(int row, int column) {
     return grid[row][column];
+  }
+
+  public char getCellCharacter(int row, int column) {
+    return grid[row][column].getCharacter();
+  }
+
+  public int getCellShipIndex(int row, int column) {
+    return grid[row][column].getShipIndex();
   }
 
   String toString(Grid grid) {
     String str = "";
     char c;
     str += Util.concatCharacters('-', Util.HEADING_EDGE_WIDTH);
-    str += "Attacco";
+    str += "Difesa";
     str += Util.concatCharacters('-', Util.HEADING_EDGE_WIDTH);
     str += "\n\n";
     str += Util.concatCharacters(' ', Util.COLUMNS_EDGE_WIDTH);
@@ -41,7 +59,7 @@ public class CharactersGrid extends Grid {
       }
       str += x + "   ";
       for (char y = Util.MIN_COLUMN; y <= Util.MAX_COLUMN; y++) {
-        c = ((CharactersGrid) grid).getCharacter(x - 1, y - 'A');
+        c = ((CellsGrid) grid).getCellCharacter(x - 1, y - 'A');
         str += c + " ";
       }
       str += "  " + x + "\n";
@@ -54,7 +72,7 @@ public class CharactersGrid extends Grid {
     str += Util.concatCharacters(' ', Util.COLUMNS_EDGE_WIDTH - 1);
     str += "\n\n";
     str += Util.concatCharacters('-', Util.HEADING_EDGE_WIDTH);
-    str += "Attacco";
+    str += "Difesa";
     str += Util.concatCharacters('-', Util.HEADING_EDGE_WIDTH);
     str += "\n";
     return str;
