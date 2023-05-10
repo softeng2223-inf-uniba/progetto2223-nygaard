@@ -18,4 +18,12 @@ public class Cell {
     this.shipIndex = shipIndex;
   }
 
+  char getCharacter() {
+    return character;
+  }
+
+  int getShipIndex() {
+    return shipIndex;
+  }
+
 }
