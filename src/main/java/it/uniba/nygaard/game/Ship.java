@@ -25,4 +25,16 @@ public abstract class Ship {
     this.hp = hp;
   }
 
+  public Coordinate getCoord() {
+    return coord;
+  }
+
+  public boolean getDirection() {
+    return direction;
+  }
+
+  public int getHp() {
+    return hp;
+  }
+
 }
