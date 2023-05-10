@@ -1,6 +1,7 @@
 package it.uniba.nygaard.game.ships;
 
 import it.uniba.nygaard.game.Util;
+import it.uniba.nygaard.game.grids.CellsGrid;
 
 public abstract class Ship {
 
