@@ -29,6 +29,7 @@ Di seguito, i ***Requisiti Funzionali*** del progetto, facenti parte della *User
   Come giocatore voglio chiudere il gioco.
 
   **Criteri di accettazione:**
+  
   Al comando ```/esci```
 
     - l'applicazione chiede conferma
