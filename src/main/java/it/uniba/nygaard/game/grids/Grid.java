@@ -4,7 +4,7 @@ public abstract class Grid {
 
   private int dimension;
 
-  Grid(int dimension) {
+  Grid(final int dimension) {
     this.dimension = dimension;
   }
 
