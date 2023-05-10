@@ -39,7 +39,11 @@ public final class Util {
   public static final int BATTLESHIP_NO = 2;
   public static final int CRUISER_NO = 3;
   public static final int DESTROYER_NO = 4;
+  public static final int MIN_GENERATIONS = 1;
+  public static final int MAX_GENERATIONS = 50;
   public static final int SEA_INDEX = -1;
+  public static final char SEA_CHARACTER = '~';
+  public static final char SHIP_CHARACTER = '*';
   /**
    * <p>
    * Costante che contiene il percorso del file che contiene
