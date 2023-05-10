@@ -1,5 +1,7 @@
 package it.uniba.nygaard.game;
 
+import it.uniba.nygaard.game.grids.*;
+
 import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
 
