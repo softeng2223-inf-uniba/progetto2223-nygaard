@@ -6,7 +6,7 @@ public class CellsGrid extends Grid {
 
   private Cell[][] grid;
 
-  public CellsGrid(int dimension) {
+  public CellsGrid(final int dimension) {
     super(dimension);
     grid = new Cell[dimension][dimension];
     for (int i = 0; i < dimension; i++) {
@@ -16,27 +16,27 @@ public class CellsGrid extends Grid {
     }
   }
 
-  public void setCell(int row, int column, Cell cell) {
+  public void setCell(final int row, final int column, final Cell cell) {
     grid[row][column] = cell;
   }
 
-  public void setCellCharacter(int row, int column, char character) {
+  public void setCellCharacter(final int row, final int column, final char character) {
     grid[row][column].setCharacter(character);
   }
 
-  public void setCellShipIndex(int row, int column, int shipIndex) {
+  public void setCellShipIndex(final int row, final int column, final int shipIndex) {
     grid[row][column].setShipIndex(shipIndex);
   }
 
-  public Cell getCell(int row, int column) {
+  public Cell getCell(final int row, final int column) {
     return grid[row][column];
   }
 
-  public char getCellCharacter(int row, int column) {
+  public char getCellCharacter(final int row, final int column) {
     return grid[row][column].getCharacter();
   }
 
-  public int getCellShipIndex(int row, int column) {
+  public int getCellShipIndex(final int row, final int column) {
     return grid[row][column].getShipIndex();
   }
 
