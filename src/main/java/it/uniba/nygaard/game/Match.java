@@ -14,8 +14,10 @@ public final class Match {
   private boolean inGame;
   private int difficulty;
   private String[] difficultyNames;
-
   private final int[] attempts;
+  private final Ship[] ships;
+  private final CellsGrid defenseGrid;
+  private final CharactersGrid attackGrid;
 
   /**
    * Metodo costruttore di Match.
