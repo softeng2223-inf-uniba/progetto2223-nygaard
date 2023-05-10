@@ -118,7 +118,7 @@ public final class Match {
     System.out.println("\tPortaerei \t\t■■■■■ \tEsemplari: " + Util.AIRCRAFT_NO);
   }
 
-  void play() {
+  public void play() {
     if (this.difficulty == Util.DIFFICULTY_NOT_SETTED) {
       System.out.println("Non hai ancora impostato il livello");
       return;
