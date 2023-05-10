@@ -43,7 +43,7 @@ public class CharactersGrid extends Grid {
       }
       str += x + "   ";
       for (char y = Util.MIN_COLUMN; y <= Util.MAX_COLUMN; y++) {
-        c = ((CharactersGrid) grid).getCharacter(x - 1, y - Util.MIN_COLUMN);
+        c = this.getCharacter(x - 1, y - Util.MIN_COLUMN);
         str += c + " ";
       }
       str += "  " + x + "\n";
