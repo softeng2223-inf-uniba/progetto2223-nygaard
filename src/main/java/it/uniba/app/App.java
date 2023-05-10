@@ -40,9 +40,11 @@ public final class App {
 
     if (args.length > 0) {
       String argument = args[0].toLowerCase();
-
       if (argument.equals("--help") || argument.equals("-h")) {
         Util.printHelp();
+      } else {
+        System.out.println("Parametro " + argument + " non riconosciuto");
+        //esci
       }
     } else {
       Util.printDescription();
