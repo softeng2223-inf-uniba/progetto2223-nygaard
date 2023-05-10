@@ -60,7 +60,7 @@ public class CellsGrid extends Grid {
       }
       str += x + "   ";
       for (char y = Util.MIN_COLUMN; y <= Util.MAX_COLUMN; y++) {
-        c = ((CellsGrid) grid).getCellCharacter(x - 1, y - Util.MIN_COLUMN);
+        c = this.getCellCharacter(x - 1, y - Util.MIN_COLUMN);
         str += c + " ";
       }
       str += "  " + x + "\n";
