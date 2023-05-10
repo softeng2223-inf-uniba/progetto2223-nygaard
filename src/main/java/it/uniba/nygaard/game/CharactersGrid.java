@@ -18,4 +18,8 @@ public class CharactersGrid extends Grid {
     grid[row][column] = character;
   }
 
+  char getCharacter(int row, int column) {
+    return grid[row][column];
+  }
+
 }
