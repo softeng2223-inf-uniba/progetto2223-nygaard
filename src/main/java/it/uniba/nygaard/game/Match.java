@@ -142,7 +142,7 @@ public final class Match {
     for (int j = Util.MIN_GENERATIONS; j <= Util.MAX_GENERATIONS; j++) {
       direction = ((int) (Math.random() * 2)) == 1;
       coord.setRow((int) (Math.random() * 10 + 1));
-      coord.setColumn((char) ((int) (Math.random() * 10 + 'A')));
+      coord.setColumn((char) ((int) (Math.random() * 10 + Util.MIN_COLUMN)));
       this.ships[i - 1].setDirection(direction);
       this.ships[i - 1].setCoord(coord);
       if (this.ships[i - 1].outOfMap()) {
@@ -175,6 +175,17 @@ public final class Match {
             ships[i].getCoord().getColumn() - Util.MIN_COLUMN + j, Util.SHIP_CHARACTER);
         defenseGrid.setCellShipIndex(ships[i].getCoord().getRow() - 1,
             ships[i].getCoord().getColumn() - Util.MIN_COLUMN + j, i);
+      }
+    }
+  }
+
+  void removeShip(int i) {
+    for (int j = Util.MIN_ROWS; j <= Util.MAX_ROWS; j++) {
+      for (int k = Util.MIN_ROWS; k <= Util.MAX_ROWS; k++) {
+        if (defenseGrid.getCellShipIndex(j - 1, k - 1) == i) {
+          defenseGrid.setCellCharacter(j - 1, k - 1, Util.SEA_CHARACTER);
+          defenseGrid.setCellShipIndex(j - 1, k - 1, Util.SEA_INDEX);
+        }
       }
     }
   }
