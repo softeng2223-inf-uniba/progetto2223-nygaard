@@ -19,6 +19,10 @@ public final class Util {
   public static final int MAX_ROWS = 10;
   public static final char MIN_COLUMN = 'A';
   public static final char MAX_COLUMN = 'J';
+  public static final int AIRCRAFT_CARRIER_HP = 5;
+  public static final int BATTLESHIP_HP = 4;
+  public static final int CRUISER_HP = 3;
+  public static final int DESTROYER_HP = 2;
   public static final int DIFFICULTY_NOT_SETTED = -1;
   public static final int DIFFICULTY_EASY = 0;
   public static final int DIFFICULTY_MEDIUM = 1;
