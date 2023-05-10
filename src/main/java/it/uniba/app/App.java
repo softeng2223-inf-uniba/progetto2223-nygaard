@@ -35,26 +35,33 @@ public final class App {
   public static void main(final String[] args) {
     Scanner in = new Scanner(System.in, StandardCharsets.UTF_8);
     String command;
+
     Match p = new Match();
-    /*
-    if (args.length > 0 && (args[0].equals("--help") || args[0].equals("-h"))) {
-        Stampa help
+
+    if (args.length > 0) {
+      String argument = args[0].toLowerCase();
+
+      if (argument.equals("--help") || argument.equals("-h")) {
+        Util.printHelp();
+      }
+    } else {
+      Util.printDescription();
     }
-    */
+
     while (true) {
       System.out.print("Inserire un comando: ");
       command = in.nextLine().toLowerCase();
+
       switch (command) {
-        //case "/help" -> Stampa help
-        //case "/esci" -> Esegui comando di uscita
+        case "/help" -> Util.printHelp();
         case "/facile" -> p.setDifficulty(Util.DIFFICULTY_EASY);
         case "/medio" -> p.setDifficulty(Util.DIFFICULTY_MEDIUM);
         case "/difficile" -> p.setDifficulty(Util.DIFFICULTY_HARD);
         case "/mostralivello" -> p.showLevel();
-        //case "/mostranavi" -> Mostrare le navi e
-        //il numero di occorrenze di esse
-        //case "/gioca" -> Incomincia la partita
-        //case "/svelagriglia" -> Svela la griglia con tanto di navi
+        // case "/mostranavi" -> Mostrare le navi e
+        // il numero di occorrenze di esse
+        // case "/gioca" -> Incomincia la partita
+        // case "/svelagriglia" -> Svela la griglia con tanto di navi
         default -> System.out.println("Comando non riconosciuto");
       }
     }
