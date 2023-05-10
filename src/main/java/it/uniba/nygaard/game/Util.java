@@ -98,12 +98,4 @@ public final class Util {
     }
   }
 
-  public static String concatCharacters(char c, int n) {
-    String str = "";
-    for (int i = 0; i < n; i++) {
-      str += c;
-    }
-    return str;
-  }
-
 }
