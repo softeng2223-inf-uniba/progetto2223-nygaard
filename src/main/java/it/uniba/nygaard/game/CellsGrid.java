@@ -38,4 +38,42 @@ public class CellsGrid extends Grid {
     return grid[row][column].getShipIndex();
   }
 
+  String toString(Grid grid) {
+    String str = "";
+    char c;
+    str += Util.concatCharacters('-', Util.HEADING_EDGE_WIDTH);
+    str += "Difesa";
+    str += Util.concatCharacters('-', Util.HEADING_EDGE_WIDTH);
+    str += "\n\n";
+    str += Util.concatCharacters(' ', Util.COLUMNS_EDGE_WIDTH);
+    for (char y = Util.MIN_COLUMN; y <= Util.MAX_COLUMN; y++) {
+      str += y + " ";
+    }
+    str += "\n\n";
+    for (int x = Util.MIN_ROWS; x <= Util.MAX_ROWS; x++) {
+      str += Util.concatCharacters(' ', Util.ROWS_EDGE_WIDTH);
+      if (x < 10) {
+        str += " ";
+      }
+      str += x + "   ";
+      for (char y = Util.MIN_COLUMN; y <= Util.MAX_COLUMN; y++) {
+        c = ((CellsGrid) grid).getCellCharacter(x - 1, y - 'A');
+        str += c + " ";
+      }
+      str += "  " + x + "\n";
+    }
+    str += "\n";
+    str += Util.concatCharacters(' ', Util.COLUMNS_EDGE_WIDTH);
+    for (char y = Util.MIN_COLUMN; y <= Util.MAX_COLUMN; y++) {
+      str += y + " ";
+    }
+    str += Util.concatCharacters(' ', Util.COLUMNS_EDGE_WIDTH - 1);
+    str += "\n\n";
+    str += Util.concatCharacters('-', Util.HEADING_EDGE_WIDTH);
+    str += "Difesa";
+    str += Util.concatCharacters('-', Util.HEADING_EDGE_WIDTH);
+    str += "\n";
+    return str;
+  }
+
 }
