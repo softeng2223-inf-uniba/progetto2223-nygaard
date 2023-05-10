@@ -44,6 +44,7 @@ public final class Util {
   public static final int SEA_INDEX = -1;
   public static final char SEA_CHARACTER = '~';
   public static final char SHIP_CHARACTER = '*';
+  public static final int FIRST_TWO_DIGITS = 10;
   /**
    * <p>
    * Costante che contiene il percorso del file che contiene
