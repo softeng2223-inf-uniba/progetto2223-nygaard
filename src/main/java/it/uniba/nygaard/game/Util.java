@@ -12,6 +12,17 @@ import java.nio.file.Paths;
  * </p>
  */
 public final class Util {
+  public static final int DIFFICULTY_NOT_SETTED = -1;
+  public static final int DIFFICULTY_EASY = 0;
+  public static final int DIFFICULTY_MEDIUM = 1;
+  public static final int DIFFICULTY_HARD = 2;
+  public static final int EASY_ATTEMPTS = 50;
+  public static final int MEDIUM_ATTEMPTS = 30;
+  public static final int HARD_ATTEMPTS = 10;
+  public static final String EASY_NAME = "Facile";
+  public static final String MEDIUM_NAME = "Medio";
+  public static final String HARD_NAME = "Difficile";
+
   /**
    * <p>
    * Costante che contiene il percorso del file che contiene
@@ -28,11 +39,11 @@ public final class Util {
    * </p>
    */
   private static final
-    String DESCRIPTION_PATH =
-      "src/main/java/it/uniba/nygaard/description/description.txt";
+    String DESCRIPTION_PATH = "src/main/java/it/uniba/nygaard/"
+      + "description/description.txt";
 
-
-  private Util() { }
+  private Util() {
+  }
 
   /**
    * <p>
@@ -47,7 +58,7 @@ public final class Util {
 
   /**
    * <p>
-   *   Mostra una descrizione coincisa del programma.
+   * Mostra una descrizione coincisa del programma.
    * </p>
    */
   public static void printDescription() {

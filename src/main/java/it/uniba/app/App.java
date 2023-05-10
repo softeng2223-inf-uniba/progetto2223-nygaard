@@ -1,9 +1,10 @@
 package it.uniba.app;
 
+import it.uniba.nygaard.game.Match;
+import it.uniba.nygaard.game.Util;
+
 import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
-
-import it.uniba.nygaard.game.Util;
 
 /**
  * <p>
@@ -34,7 +35,9 @@ public final class App {
   public static void main(final String[] args) {
     Scanner in = new Scanner(System.in, StandardCharsets.UTF_8);
     String command;
-    // Creazione del match
+
+    Match p = new Match();
+
     if (args.length > 0) {
       String argument = args[0].toLowerCase();
 
@@ -51,21 +54,16 @@ public final class App {
 
       switch (command) {
         case "/help" -> Util.printHelp();
+        case "/facile" -> p.setDifficulty(Util.DIFFICULTY_EASY);
+        case "/medio" -> p.setDifficulty(Util.DIFFICULTY_MEDIUM);
+        case "/difficile" -> p.setDifficulty(Util.DIFFICULTY_HARD);
+        case "/mostralivello" -> p.showLevel();
+        // case "/mostranavi" -> Mostrare le navi e
+        // il numero di occorrenze di esse
+        // case "/gioca" -> Incomincia la partita
+        // case "/svelagriglia" -> Svela la griglia con tanto di navi
         default -> System.out.println("Comando non riconosciuto");
       }
-
-      /*
-       * case "/help" -> Stampa help
-       * case "/esci" -> Esegui comando di uscita
-       * case "/facile" -> Setta la difficolta a facile
-       * case "/medio" -> Setta la difficolta a medio
-       * case "/difficile" -> Setta la difficolta a difficile
-       * case "/mostralivello" -> Mostrare il livello
-       * case "/mostranavi" -> Mostrare le navi e
-       * il numero di occorrenze di esse
-       * case "/gioca" -> Incomincia la partita
-       * case "/svelagriglia" -> Svela la griglia con tanto di navi
-       */
     }
   }
 }
