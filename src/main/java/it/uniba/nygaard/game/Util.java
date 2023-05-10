@@ -19,6 +19,8 @@ public final class Util {
   public static final int MAX_ROWS = 10;
   public static final char MIN_COLUMN = 'A';
   public static final char MAX_COLUMN = 'J';
+  public static final int MIN_SHIP = 1;
+  public static final int MAX_SHIP = 10;
   public static final int AIRCRAFT_CARRIER_HP = 5;
   public static final int BATTLESHIP_HP = 4;
   public static final int CRUISER_HP = 3;
