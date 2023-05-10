@@ -40,7 +40,7 @@ public class CellsGrid extends Grid {
     return grid[row][column].getShipIndex();
   }
 
-  String toString(Grid grid) {
+  public String toString() {
     String str = "";
     String tmp;
     char c;
