@@ -74,7 +74,7 @@ public class CellsGrid extends Grid {
     str += "\n\n";
     str += "-".repeat(Util.HEADING_EDGE_WIDTH);
     str += "Difesa";
-    str += " ".repeat(Util.HEADING_EDGE_WIDTH);
+    str += "-".repeat(Util.HEADING_EDGE_WIDTH);
     str += "\n";
     return str;
   }
