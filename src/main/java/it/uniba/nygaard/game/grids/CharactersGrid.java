@@ -2,11 +2,11 @@ package it.uniba.nygaard.game.grids;
 
 import it.uniba.nygaard.game.Util;
 
-public class CharactersGrid extends Grid {
+public final class CharactersGrid extends Grid {
 
   private char[][] grid;
 
-  public CharactersGrid(int dimension) {
+  public CharactersGrid(final int dimension) {
     super(dimension);
     grid = new char[dimension][dimension];
     for (int i = 0; i < dimension; i++) {
@@ -16,11 +16,11 @@ public class CharactersGrid extends Grid {
     }
   }
 
-  public void setCharacter(int row, int column, char character) {
+  public void setCharacter(final int row, final int column, final char character) {
     grid[row][column] = character;
   }
 
-  char getCharacter(int row, int column) {
+  char getCharacter(final int row, final int column) {
     return grid[row][column];
   }
 
