@@ -1,7 +1,12 @@
 package it.uniba.nygaard.game;
 
-import it.uniba.nygaard.game.grids.*;
-import it.uniba.nygaard.game.ships.*;
+import it.uniba.nygaard.game.ships.Ship;
+import it.uniba.nygaard.game.ships.AircraftCarrier;
+import it.uniba.nygaard.game.ships.Battleship;
+import it.uniba.nygaard.game.ships.Cruiser;
+import it.uniba.nygaard.game.ships.Destroyer;
+import it.uniba.nygaard.game.grids.CellsGrid;
+import it.uniba.nygaard.game.grids.CharactersGrid;
 
 import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
