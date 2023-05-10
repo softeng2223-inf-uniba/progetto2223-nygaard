@@ -12,7 +12,7 @@ import java.nio.file.Paths;
  * </p>
  */
 public final class Util {
-  public static final int HEADING_EDGE_WIDTH = 18;
+  public static final int HEADING_EDGE_WIDTH = 19;
   public static final int COLUMNS_EDGE_WIDTH = 13;
   public static final int ROWS_EDGE_WIDTH = 8;
   public static final int MIN_ROWS = 1;
