@@ -47,4 +47,26 @@ public abstract class Ship {
     }
   }
 
+  public boolean intersects(CellsGrid grid) {
+    int startx = Math.max(this.coord.getRow() - 2, Util.MIN_ROWS - 1);
+    int starty = Math.max(this.coord.getColumn() - Util.MIN_COLUMN - 1, Util.MIN_ROWS - 1);
+    int endx;
+    int endy;
+    if (this.direction) {
+      endx = Math.min(this.coord.getRow() + this.hp - 1, Util.MAX_ROWS - 1);
+      endy = Math.min(this.coord.getColumn() - Util.MIN_COLUMN + 1, Util.MAX_ROWS - 1);
+    } else {
+      endx = Math.min(this.coord.getRow(), Util.MAX_ROWS - 1);
+      endy = Math.min(this.coord.getColumn() - Util.MIN_COLUMN + this.hp, Util.MAX_ROWS - 1);
+    }
+    for (int i = startx; i <= endx; i++) {
+      for (int j = starty; j <= endy; j++) {
+        if (grid.getCellCharacter(i, j) != Util.SEA_CHARACTER) {
+          return true;
+        }
+      }
+    }
+    return false;
+  }
+
 }
