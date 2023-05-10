@@ -1,5 +1,7 @@
 package it.uniba.nygaard.game.ships;
 
+import it.uniba.nygaard.game.Util;
+
 public abstract class Ship {
 
   private final Coordinate coord;
