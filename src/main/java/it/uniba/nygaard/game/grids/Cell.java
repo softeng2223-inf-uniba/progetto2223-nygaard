@@ -7,16 +7,16 @@ class Cell {
   private char character;
   private int shipIndex;
 
-  Cell(char c) {
+  Cell(final char c) {
     this.character = c;
     this.shipIndex = Util.SEA_INDEX;
   }
 
-  void setCharacter(char character) {
+  void setCharacter(final char character) {
     this.character = character;
   }
 
-  void setShipIndex(int shipIndex) {
+  void setShipIndex(final int shipIndex) {
     this.shipIndex = shipIndex;
   }
 
