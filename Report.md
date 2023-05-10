@@ -10,17 +10,17 @@ Di seguito, i ***Requisiti Funzionali*** del progetto, facenti parte della *User
   Come giocatore voglio mostrare l'help con elenco comandi.
 
   **Criteri di accettazione**
-  
+
   Al comando ```/help```
   o invocando l'app con flag ```--help``` o ```-h```
 
-il risultato è una descrizione concisa, che normalmente appare all'avvio del
-programma, seguita da una lista di comandi disponibili,
-uno per riga, come da esempio successivo:
+  Il risultato è una descrizione concisa, che normalmente appare all'avvio del
+  programma, seguita da una lista di comandi disponibili,
+  uno per riga, come da esempio successivo:
 
-- gioca
-- esci
-- ...
+  - gioca
+  - esci
+  - ...
 
 <br/>
 
