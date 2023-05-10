@@ -10,6 +10,7 @@ Di seguito, i ***Requisiti Funzionali*** del progetto, facenti parte della *User
   Come giocatore voglio mostrare l'help con elenco comandi.
 
   **Criteri di accettazione**
+  
   Al comando ```/help```
   o invocando l'app con flag ```--help``` o ```-h```
 
