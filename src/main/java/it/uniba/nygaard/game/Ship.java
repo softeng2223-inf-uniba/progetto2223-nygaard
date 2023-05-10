@@ -12,4 +12,17 @@ public abstract class Ship {
     this.hp = hp;
   }
 
+  public void setCoord(Coordinate coord) {
+    this.coord.setRow(coord.getRow());
+    this.coord.setColumn(coord.getColumn());
+  }
+
+  public void setDirection(boolean direction) {
+    this.direction = direction;
+  }
+
+  public void setHp(int hp) {
+    this.hp = hp;
+  }
+
 }
