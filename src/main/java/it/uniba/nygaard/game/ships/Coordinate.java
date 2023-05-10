@@ -2,8 +2,8 @@ package it.uniba.nygaard.game.ships;
 
 public class Coordinate {
 
-  int row;
-  char column;
+  private int row;
+  private char column;
 
   public Coordinate() {
 
