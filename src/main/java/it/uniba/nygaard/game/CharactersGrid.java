@@ -14,4 +14,8 @@ public class CharactersGrid extends Grid {
     }
   }
 
+  void setCharacter(int row, int column, char character) {
+    grid[row][column] = character;
+  }
+
 }
