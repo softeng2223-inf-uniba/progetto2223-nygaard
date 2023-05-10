@@ -24,7 +24,7 @@ public class CharactersGrid extends Grid {
     return grid[row][column];
   }
 
-  String toString(Grid grid) {
+  public String toString() {
     String str = "";
     char c;
     str += "-".repeat(Util.HEADING_EDGE_WIDTH);
