@@ -62,6 +62,7 @@ Di seguito, i ***Requisiti Funzionali*** del progetto, facenti parte della *User
   Come giocatore voglio mostrare i tipi di nave e il numero
   
   **Criteri di accettazione:**
+  
   Al comando ```/mostranavi``` l’applicazione risponde visualizzando, per ogni tipo di nave, la dimensione in quadrati e il numero di esemplari da affondare
   
   -    Cacciatorpediniere ⊠⊠ esemplari: 4
