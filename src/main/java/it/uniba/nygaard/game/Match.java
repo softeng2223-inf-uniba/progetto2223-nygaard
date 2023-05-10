@@ -161,4 +161,22 @@ public final class Match {
     return false;
   }
 
+  void placeShip(int i) {
+    if (ships[i].getDirection()) {
+      for (int j = 0; j < ships[i].getHp(); j++) {
+        defenseGrid.setCellCharacter(ships[i].getCoord().getRow() - 1 + j,
+            ships[i].getCoord().getColumn() - Util.MIN_COLUMN, Util.SHIP_CHARACTER);
+        defenseGrid.setCellShipIndex(ships[i].getCoord().getRow() - 1 + j,
+            ships[i].getCoord().getColumn() - Util.MIN_COLUMN, i);
+      }
+    } else {
+      for (int j = 0; j < ships[i].getHp(); j++) {
+        defenseGrid.setCellCharacter(ships[i].getCoord().getRow() - 1,
+            ships[i].getCoord().getColumn() - Util.MIN_COLUMN + j, Util.SHIP_CHARACTER);
+        defenseGrid.setCellShipIndex(ships[i].getCoord().getRow() - 1,
+            ships[i].getCoord().getColumn() - Util.MIN_COLUMN + j, i);
+      }
+    }
+  }
+
 }
