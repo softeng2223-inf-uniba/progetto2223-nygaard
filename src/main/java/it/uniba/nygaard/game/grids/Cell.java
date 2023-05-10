@@ -2,10 +2,10 @@ package it.uniba.nygaard.game.grids;
 
 import it.uniba.nygaard.game.Util;
 
-public class Cell {
+class Cell {
 
-  char character;
-  int shipIndex;
+  private char character;
+  private int shipIndex;
 
   Cell(char c) {
     this.character = c;
