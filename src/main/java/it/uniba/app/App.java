@@ -62,7 +62,7 @@ public final class App {
         case "/difficile" -> p.setDifficulty(Util.DIFFICULTY_HARD);
         case "/mostralivello" -> p.showLevel();
         case "/mostranavi" -> p.showShips();
-        // case "/gioca" -> Incomincia la partita
+        case "/gioca" -> p.play();
         // case "/svelagriglia" -> Svela la griglia con tanto di navi
         default -> System.out.println("Comando non riconosciuto");
       }
