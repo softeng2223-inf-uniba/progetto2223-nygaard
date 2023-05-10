@@ -6,4 +6,10 @@ public abstract class Ship {
   private boolean direction;
   private int hp;
 
+  public Ship(int hp) {
+    this.coord = new Coordinate();
+    this.direction = false;
+    this.hp = hp;
+  }
+
 }
