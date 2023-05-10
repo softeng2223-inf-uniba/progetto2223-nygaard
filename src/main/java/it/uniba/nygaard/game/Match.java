@@ -95,9 +95,9 @@ public final class Match {
    * la dimensione in quadrati e il numero di esemplari da affondare.
    */
   public void showShips() {
-    System.out.println("Cacciatorpediniere ⊠⊠ esemplari: " + Util.DESTROYER_NO);
-    System.out.println("Incrociatore ⊠⊠⊠ esemplari: " + Util.CRUISER_NO);
-    System.out.println("Corazzata ⊠⊠⊠⊠ esemplari: " + Util.BATTLESHIP_NO);
-    System.out.println("Portaerei ⊠⊠⊠⊠⊠ esemplari: " + Util.AIRCRAFT_NO);
+    System.out.println("\tCacciatorpediniere \t■■ \tEsemplari: " + Util.DESTROYER_NO);
+    System.out.println("\tIncrociatore \t\t■■■ \tEsemplari: " + Util.CRUISER_NO);
+    System.out.println("\tCorazzata \t\t■■■■ \tEsemplari: " + Util.BATTLESHIP_NO);
+    System.out.println("\tPortaerei \t\t■■■■■ \tEsemplari: " + Util.AIRCRAFT_NO);
   }
 }
