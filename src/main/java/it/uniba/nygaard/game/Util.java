@@ -22,7 +22,10 @@ public final class Util {
   public static final String EASY_NAME = "Facile";
   public static final String MEDIUM_NAME = "Medio";
   public static final String HARD_NAME = "Difficile";
-
+  public static final int AIRCRAFT_NO = 1;
+  public static final int BATTLESHIP_NO = 2;
+  public static final int CRUISER_NO = 3;
+  public static final int DESTROYER_NO = 4;
   /**
    * <p>
    * Costante che contiene il percorso del file che contiene

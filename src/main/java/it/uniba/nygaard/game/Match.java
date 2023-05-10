@@ -89,4 +89,15 @@ public final class Match {
               + "il comando /facile, /medio o /difficile");
     }
   }
+
+  /**
+   * Il metodo showShips mostra, per ogni tipo di nave presente nel gioco,
+   * la dimensione in quadrati e il numero di esemplari da affondare.
+   */
+  public void showShips() {
+    System.out.println("\tCacciatorpediniere \t■■ \tEsemplari: " + Util.DESTROYER_NO);
+    System.out.println("\tIncrociatore \t\t■■■ \tEsemplari: " + Util.CRUISER_NO);
+    System.out.println("\tCorazzata \t\t■■■■ \tEsemplari: " + Util.BATTLESHIP_NO);
+    System.out.println("\tPortaerei \t\t■■■■■ \tEsemplari: " + Util.AIRCRAFT_NO);
+  }
 }
