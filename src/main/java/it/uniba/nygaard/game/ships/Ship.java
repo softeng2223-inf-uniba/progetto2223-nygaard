@@ -37,4 +37,12 @@ public abstract class Ship {
     return hp;
   }
 
+  public boolean outOfMap() {
+    if (this.direction) {
+      return this.coord.getRow() + this.hp > Util.MAX_ROWS;
+    } else {
+      return this.coord.getColumn() + this.hp > Util.MAX_COLUMN;
+    }
+  }
+
 }
