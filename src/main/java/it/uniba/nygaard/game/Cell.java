@@ -10,4 +10,12 @@ public class Cell {
     this.shipIndex = Util.SEA_INDEX;
   }
 
+  void setCharacter(char character) {
+    this.character = character;
+  }
+
+  void setShipIndex(int shipIndex) {
+    this.shipIndex = shipIndex;
+  }
+
 }
