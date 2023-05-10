@@ -26,4 +26,16 @@ public class CellsGrid extends Grid {
     grid[row][column].setShipIndex(shipIndex);
   }
 
+  Cell getCell(int row, int column) {
+    return grid[row][column];
+  }
+
+  public char getCellCharacter(int row, int column) {
+    return grid[row][column].getCharacter();
+  }
+
+  public int getCellShipIndex(int row, int column) {
+    return grid[row][column].getShipIndex();
+  }
+
 }
