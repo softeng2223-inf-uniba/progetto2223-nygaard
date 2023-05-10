@@ -133,4 +133,32 @@ public final class Match {
     System.out.println(attackGrid);
   }
 
+  private boolean initializeShips(int i) {
+    if (i > Util.MAX_SHIP) {
+      return true;
+    }
+    boolean direction;
+    Coordinate coord = new Coordinate();
+    for (int j = Util.MIN_GENERATIONS; j <= Util.MAX_GENERATIONS; j++) {
+      direction = ((int) (Math.random() * 2)) == 1;
+      coord.setRow((int) (Math.random() * 10 + 1));
+      coord.setColumn((char) ((int) (Math.random() * 10 + 'A')));
+      this.ships[i - 1].setDirection(direction);
+      this.ships[i - 1].setCoord(coord);
+      if (this.ships[i - 1].outOfMap()) {
+        j--;
+        continue;
+      }
+      if (this.ships[i - 1].intersects(defenseGrid)) {
+        continue;
+      }
+      placeShip(i - 1);
+      if (initializeShips(i + 1)) {
+        return true;
+      }
+      removeShip(i - 1);
+    }
+    return false;
+  }
+
 }
