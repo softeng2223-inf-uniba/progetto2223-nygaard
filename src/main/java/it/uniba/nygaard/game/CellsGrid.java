@@ -14,4 +14,16 @@ public class CellsGrid extends Grid {
     }
   }
 
+  void setCell(int row, int column, Cell cell) {
+    grid[row][column] = cell;
+  }
+
+  public void setCellCharacter(int row, int column, char character) {
+    grid[row][column].setCharacter(character);
+  }
+
+  public void setCellShipIndex(int row, int column, int shipIndex) {
+    grid[row][column].setShipIndex(shipIndex);
+  }
+
 }
