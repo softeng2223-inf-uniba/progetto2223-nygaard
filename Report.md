@@ -28,7 +28,7 @@ Di seguito, i ***Requisiti Funzionali*** del progetto, facenti parte della *User
 
   Come giocatore voglio chiudere il gioco.
 
-  **Criteri di accettazione:**
+  **Criteri di accettazione**
   
   Al comando ```/esci```
 
@@ -42,7 +42,7 @@ Di seguito, i ***Requisiti Funzionali*** del progetto, facenti parte della *User
 
   Come giocatore voglio impostare il livello di gioco per variare il numero massimo di tentativi sbagliati.
 
-  **Criteri di accettazione:**
+  **Criteri di accettazione**
   - Al comando ```/facile```
 
     - l’applicazione risponde con OK e imposta a 50 il numero massimo di tentativi falliti
@@ -61,8 +61,8 @@ Di seguito, i ***Requisiti Funzionali*** del progetto, facenti parte della *User
 
   Come giocatore voglio mostrare i tipi di nave e il numero
   
-  **Criteri di accettazione:**
-  
+  **Criteri di accettazione**
+
   Al comando ```/mostranavi``` l’applicazione risponde visualizzando, per ogni tipo di nave, la dimensione in quadrati e il numero di esemplari da affondare
   
   -    Cacciatorpediniere ⊠⊠ esemplari: 4
