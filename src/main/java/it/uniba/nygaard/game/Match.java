@@ -89,4 +89,11 @@ public final class Match {
               + "il comando /facile, /medio o /difficile");
     }
   }
+
+  public void showShips() {
+    System.out.println("Cacciatorpediniere ⊠⊠ esemplari: 4");
+    System.out.println("Incrociatore ⊠⊠⊠ esemplari: 3 ");
+    System.out.println("Corazzata ⊠⊠⊠⊠ esemplari: 2 ");
+    System.out.println("Portaerei ⊠⊠⊠⊠⊠ esemplari: 1 ");
+  }
 }
