@@ -38,7 +38,7 @@ public class CharactersGrid extends Grid {
     str += "\n\n";
     for (int x = Util.MIN_ROWS; x <= Util.MAX_ROWS; x++) {
       str += " ".repeat(Util.ROWS_EDGE_WIDTH);
-      if (x < 10) {
+      if (x < Util.FIRST_TWO_DIGITS) {
         str += " ";
       }
       str += x + "   ";
