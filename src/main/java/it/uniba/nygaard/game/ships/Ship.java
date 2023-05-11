@@ -9,22 +9,22 @@ public abstract class Ship {
   private boolean direction;
   private int hp;
 
-  public Ship(int hp) {
+  public Ship(final int hp) {
     this.coord = new Coordinate();
     this.direction = false;
     this.hp = hp;
   }
 
-  public void setCoord(Coordinate coord) {
+  public void setCoord(final Coordinate coord) {
     this.coord.setRow(coord.getRow());
     this.coord.setColumn(coord.getColumn());
   }
 
-  public void setDirection(boolean direction) {
+  public void setDirection(final boolean direction) {
     this.direction = direction;
   }
 
-  public void setHp(int hp) {
+  public void setHp(final int hp) {
     this.hp = hp;
   }
 
@@ -48,7 +48,7 @@ public abstract class Ship {
     }
   }
 
-  public boolean intersects(CellsGrid grid) {
+  public boolean intersects(final CellsGrid grid) {
     int startx = Math.max(this.coord.getRow() - 2, Util.MIN_ROWS - 1);
     int starty = Math.max(this.coord.getColumn() - Util.MIN_COLUMN - 1, Util.MIN_ROWS - 1);
     int endx;
