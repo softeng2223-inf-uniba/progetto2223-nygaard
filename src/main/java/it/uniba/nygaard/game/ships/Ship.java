@@ -9,23 +9,23 @@ public abstract class Ship {
   private boolean direction;
   private int hp;
 
-  Ship(final int hp) {
+  Ship(final int newHp) {
     this.coord = new Coordinate();
     this.direction = false;
-    this.hp = hp;
+    this.hp = newHp;
   }
 
-  public void setCoord(final Coordinate coord) {
-    this.coord.setRow(coord.getRow());
-    this.coord.setColumn(coord.getColumn());
+  public void setCoord(final Coordinate newCoord) {
+    this.coord.setRow(newCoord.getRow());
+    this.coord.setColumn(newCoord.getColumn());
   }
 
-  public void setDirection(final boolean direction) {
-    this.direction = direction;
+  public void setDirection(final boolean newDirection) {
+    this.direction = newDirection;
   }
 
-  public void setHp(final int hp) {
-    this.hp = hp;
+  public void setHp(final int newHp) {
+    this.hp = newHp;
   }
 
   public Coordinate getCoord() {
