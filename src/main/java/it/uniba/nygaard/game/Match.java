@@ -13,6 +13,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
 
 /**
+ * <h2> Match </h2>
  * <p>
  * La classe Match si occupa della partita.
  * Contiene tutte le informazioni relative alla partita
@@ -29,8 +30,11 @@ public final class Match {
   private final CharactersGrid attackGrid;
 
   /**
+   * <h3> Costruttore </h3>
+   * <p>
    * Metodo costruttore di Match.
    * Inizializza tutti i suoi attributi ai valori di default prefissati.
+   * </p>
    */
   public Match() {
     this.inGame = false;
@@ -62,10 +66,11 @@ public final class Match {
   }
 
   /**
-   * Settaggio difficoltà della partita.
-   *
-   * @param newDifficulty Parametro d'ingresso per impostare
-   *                      la difficoltà della partita
+   * <h3> setDifficulty </h3>
+   * <p>
+   * Imposta la difficoltà della partita.
+   * </p>
+   * @param newDifficulty Difficoltà della partita.
    */
   public void setDifficulty(final int newDifficulty) {
     if (this.inGame) {
@@ -101,8 +106,11 @@ public final class Match {
   }
 
   /**
+   * <h3> showLevel </h3>
+   * <p>
    * Il metodo showLevel mostra il livello di gioco impostato
    * e il numero massimo di tentativi che possono essere falliti.
+   * </p>
    */
   public void showLevel() {
     if (this.difficulty != Util.DIFFICULTY_NOT_SETTED) {
@@ -122,8 +130,11 @@ public final class Match {
   }
 
   /**
+   * <h3> showShips </h3>
+   * <p>
    * Il metodo showShips mostra, per ogni tipo di nave presente nel gioco,
    * la dimensione in quadrati e il numero di esemplari da affondare.
+   * </p>
    */
   public void showShips() {
     System.out.println("\tCacciatorpediniere \t■■ \tEsemplari: " + Util.DESTROYER_NO);
@@ -132,6 +143,12 @@ public final class Match {
     System.out.println("\tPortaerei \t\t■■■■■ \tEsemplari: " + Util.AIRCRAFT_NO);
   }
 
+  /**
+   * <h3> play </h3>
+   * <p>
+   * Il metodo play inizia una nuova partita.
+   * </p>
+   */
   public void play() {
     if (this.difficulty == Util.DIFFICULTY_NOT_SETTED) {
       System.out.println("Non hai ancora impostato il livello");
@@ -147,6 +164,14 @@ public final class Match {
     System.out.println(attackGrid);
   }
 
+  /**
+   * <h3> initializeShips </h3>
+   * <p>
+   * Il metodo initializeShips inizializza le navi in posizioni casuali.
+   * </p>
+   * @param i Indice della nave da inizializzare.
+   * @return true se tutte le navi sono state inizializzate, false altrimenti.
+   */
   private boolean initializeShips(final int i) {
     if (i > Util.MAX_SHIP) {
       return true;
@@ -175,6 +200,13 @@ public final class Match {
     return false;
   }
 
+  /**
+   * <h3> placeShip </h3>
+   * <p>
+   * Il metodo placeShip posiziona la nave i-esima sulla griglia di difesa.
+   * </p>
+   * @param i Indice della nave da posizionare.
+   */
   void placeShip(final int i) {
     if (ships[i].getDirection()) {
       for (int j = 0; j < ships[i].getHp(); j++) {
@@ -193,6 +225,13 @@ public final class Match {
     }
   }
 
+  /**
+   * <h3> removeShip </h3>
+   * <p>
+   * Il metodo removeShip rimuove la nave i-esima dalla griglia di difesa.
+   * </p>
+   * @param i Indice della nave da rimuovere.
+   */
   void removeShip(final int i) {
     for (int j = Util.MIN_ROWS; j <= Util.MAX_ROWS; j++) {
       for (int k = Util.MIN_ROWS; k <= Util.MAX_ROWS; k++) {
