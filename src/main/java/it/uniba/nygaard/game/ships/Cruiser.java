@@ -5,13 +5,14 @@ import it.uniba.nygaard.game.Util;
 /**
  * <h2> Cruiser </h2>
  * <p>
- * La classe Cruiser rappresenta la nave incrociatore.
- * @see Ship
+ * La classe Cruiser rappresenta la nave Incrociatore.
  * </p>
+ * @see Ship
  */
 public class Cruiser extends Ship {
 
   /**
+   * <h3> Costruttore </h3>
    * <p>
    * Costruttore della classe Cruiser.
    * </p>

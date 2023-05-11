@@ -6,12 +6,13 @@ import it.uniba.nygaard.game.Util;
  * <h2> Battleship </h2>
  * <p>
  * La classe Battleship rappresenta la nave Corazzata.
- * @see Ship
  * </p>
+ * @see Ship
  */
 public class Battleship extends Ship {
 
   /**
+   * <h3> Costruttore </h3>
    * <p>
    * Costruttore della classe Battleship.
    * </p>
