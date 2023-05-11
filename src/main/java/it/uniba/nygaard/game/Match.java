@@ -212,17 +212,17 @@ public final class Match {
   void placeShip(final int i) {
     if (ships[i].getDirection()) {
       for (int j = 0; j < ships[i].getHp(); j++) {
-        defenseGrid.setCellCharacter(ships[i].getCoord().getRow() - 1 + j,
-            ships[i].getCoord().getColumn() - Util.MIN_COLUMN, Util.SHIP_CHARACTER);
-        defenseGrid.setCellShipIndex(ships[i].getCoord().getRow() - 1 + j,
-            ships[i].getCoord().getColumn() - Util.MIN_COLUMN, i);
+        defenseGrid.setCellCharacter(ships[i].getCoordRow() - 1 + j,
+            ships[i].getCoordColumn() - Util.MIN_COLUMN, Util.SHIP_CHARACTER);
+        defenseGrid.setCellShipIndex(ships[i].getCoordRow() - 1 + j,
+            ships[i].getCoordColumn() - Util.MIN_COLUMN, i);
       }
     } else {
       for (int j = 0; j < ships[i].getHp(); j++) {
-        defenseGrid.setCellCharacter(ships[i].getCoord().getRow() - 1,
-            ships[i].getCoord().getColumn() - Util.MIN_COLUMN + j, Util.SHIP_CHARACTER);
-        defenseGrid.setCellShipIndex(ships[i].getCoord().getRow() - 1,
-            ships[i].getCoord().getColumn() - Util.MIN_COLUMN + j, i);
+        defenseGrid.setCellCharacter(ships[i].getCoordRow() - 1,
+            ships[i].getCoordColumn() - Util.MIN_COLUMN + j, Util.SHIP_CHARACTER);
+        defenseGrid.setCellShipIndex(ships[i].getCoordRow() - 1,
+            ships[i].getCoordColumn() - Util.MIN_COLUMN + j, i);
       }
     }
   }

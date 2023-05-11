@@ -63,14 +63,25 @@ public abstract class Ship {
   }
 
   /**
-   * <h3> getCoord </h3>
+   * <h3> getCoordRow </h3>
    * <p>
-   * Restituisce le coordinate della nave.
+   * Restituisce la riga della coordinata iniziale della nave.
    * </p>
-   * @return Coordinate della nave.
+   * @return Riga della coordinata iniziale della nave.
    */
-  public Coordinate getCoord() {
-    return coord;
+  public int getCoordRow() {
+    return coord.getRow();
+  }
+
+  /**
+   * <h3> getCoordColumn </h3>
+   * <p>
+   * Restituisce la colonna della coordinata iniziale della nave.
+   * </p>
+   * @return Colonna della coordinata iniziale della nave.
+   */
+  public char getCoordColumn() {
+    return coord.getColumn();
   }
 
   /**
