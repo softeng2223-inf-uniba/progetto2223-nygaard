@@ -1,5 +1,6 @@
 package it.uniba.nygaard.game;
 
+import it.uniba.nygaard.game.ships.Coordinate;
 import it.uniba.nygaard.game.ships.Ship;
 import it.uniba.nygaard.game.ships.AircraftCarrier;
 import it.uniba.nygaard.game.ships.Battleship;
@@ -39,14 +40,22 @@ public final class Match {
     this.attempts = new int[]
         {Util.EASY_ATTEMPTS, Util.MEDIUM_ATTEMPTS, Util.HARD_ATTEMPTS};
     this.ships = new Ship[Util.MAX_SHIP];
-    for (int i = Util.MIN_SHIP; i <= Util.MAX_SHIP; i++) {
-      switch (i) {
-        case 1 -> this.ships[i - 1] = new AircraftCarrier();
-        case 2, 3 -> this.ships[i - 1] = new Battleship();
-        case 4, 5, 6 -> this.ships[i - 1] = new Cruiser();
-        case 7, 8, 9, 10 -> this.ships[i - 1] = new Destroyer();
-        default -> this.ships[i - 1].setHp(0);
-      }
+    int i = Util.MIN_SHIP;
+    for (int j = 0; j < Util.AIRCRAFT_NO; j++) {
+      this.ships[i - 1] = new AircraftCarrier();
+      i++;
+    }
+    for (int j = 0; j < Util.BATTLESHIP_NO; j++) {
+      this.ships[i - 1] = new Battleship();
+      i++;
+    }
+    for (int j = 0; j < Util.CRUISER_NO; j++) {
+      this.ships[i - 1] = new Cruiser();
+      i++;
+    }
+    for (int j = 0; j < Util.DESTROYER_NO; j++) {
+      this.ships[i - 1] = new Destroyer();
+      i++;
     }
     this.defenseGrid = new CellsGrid(Util.MAX_ROWS);
     this.attackGrid = new CharactersGrid(Util.MAX_ROWS);
