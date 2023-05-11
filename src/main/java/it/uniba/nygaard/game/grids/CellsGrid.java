@@ -4,7 +4,7 @@ import it.uniba.nygaard.game.Util;
 
 public final class CellsGrid extends Grid {
 
-  private Cell[][] grid;
+  private final Cell[][] grid;
 
   public CellsGrid(final int dimension) {
     super(dimension);
@@ -42,7 +42,6 @@ public final class CellsGrid extends Grid {
 
   public String toString() {
     String str = "";
-    String tmp;
     char c;
     str += "-".repeat(Util.HEADING_EDGE_WIDTH);
     str += "Difesa";
