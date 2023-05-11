@@ -34,20 +34,55 @@ Per la stesura del codice seguiamo le linee guida fornitoci dal file _checkstyle
 
 Segue un esempio di codice ben formattato che segue le linee guida fornite:
 ```java
-import java.lang.Math;
-public class Main() {
-    public static void main (String[] args) {
-        int i = Math.random();
-        if (i > 10) {
-            System.out.println("Il numero è maggiore di 10");
-        } else {
-            for (j = 0; j < 10; j++) {
-                i += 1;
-                System.out.println("Il valore del numero è il seguente: " + i);
-            }
-        }
+/**
+ * <h2> Main </h2>
+ * Classe di esempio.
+ */
+public final class Main {
+
+  private Main() { }
+
+  /**
+   * Punto di ingresso dell'applicazione.
+   *
+   * @param args Parametri di ingresso da linea di comando
+   */
+  public static void main(final String[] args) {
+    final int min = 49;
+    final int max = 1;
+
+    System.out.println(range(min, max));
+  }
+
+  /**
+   * <p>
+   * Genera un numero intero casuale, compreso nell'intervallo {@code [min, max]}.
+   * </p>
+   * <p>
+   * Se {@code min > max} gli estremi vengono scambiati.
+   * </p>
+   * @param min Valore minimo dell'intervallo
+   * @param max Valore massimo dell'intervallo
+   * @return Numero casuale compreso fra min e max inclusi
+   */
+  public static int range(final int min, final int max) {
+    if (min == max) {
+      return min;
     }
+
+    int minValue = min;
+    int maxValue = max;
+
+    if (min > max) {
+      int temp = maxValue;
+      maxValue = minValue;
+      minValue = temp;
+    }
+
+    return (int) Math.floor(Math.random() * (maxValue - minValue + 1) + minValue);
+  }
 }
+
 ```
 <br >
 
