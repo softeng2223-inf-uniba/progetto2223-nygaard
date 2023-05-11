@@ -9,12 +9,12 @@ public final class Coordinate {
 
   }
 
-  public void setRow(final int row) {
-    this.row = row;
+  public void setRow(final int newRow) {
+    this.row = newRow;
   }
 
-  public void setColumn(final char column) {
-    this.column = column;
+  public void setColumn(final char newColumn) {
+    this.column = newColumn;
   }
 
   public int getRow() {
