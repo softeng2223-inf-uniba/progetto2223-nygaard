@@ -30,9 +30,10 @@
 
 ## **Scrittura del codice**
 
-Per la stesura del codice seguiamo le linee guida fornitoci dal file _checkstyle.xml_ .
+Per la stesura del codice seguiamo le linee guida forniteci dal file _checkstyle.xml_ .
 
 Segue un esempio di codice ben formattato che segue le linee guida fornite:
+
 ```java
 /**
  * <h2> Main </h2>
@@ -84,6 +85,7 @@ public final class Main {
 }
 
 ```
+
 <br >
 
 ## **Regole di pull request e commit**
