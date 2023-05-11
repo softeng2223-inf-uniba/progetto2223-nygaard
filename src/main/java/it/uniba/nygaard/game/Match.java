@@ -147,7 +147,7 @@ public final class Match {
     System.out.println(attackGrid);
   }
 
-  private boolean initializeShips(int i) {
+  private boolean initializeShips(final int i) {
     if (i > Util.MAX_SHIP) {
       return true;
     }
@@ -175,7 +175,7 @@ public final class Match {
     return false;
   }
 
-  void placeShip(int i) {
+  void placeShip(final int i) {
     if (ships[i].getDirection()) {
       for (int j = 0; j < ships[i].getHp(); j++) {
         defenseGrid.setCellCharacter(ships[i].getCoord().getRow() - 1 + j,
@@ -193,7 +193,7 @@ public final class Match {
     }
   }
 
-  void removeShip(int i) {
+  void removeShip(final int i) {
     for (int j = Util.MIN_ROWS; j <= Util.MAX_ROWS; j++) {
       for (int k = Util.MIN_ROWS; k <= Util.MAX_ROWS; k++) {
         if (defenseGrid.getCellShipIndex(j - 1, k - 1) == i) {
