@@ -4,7 +4,7 @@ import it.uniba.nygaard.game.Util;
 
 public final class CharactersGrid extends Grid {
 
-  private char[][] grid;
+  private final char[][] grid;
 
   public CharactersGrid(final int dimension) {
     super(dimension);
