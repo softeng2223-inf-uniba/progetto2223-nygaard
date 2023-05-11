@@ -86,6 +86,14 @@ public final class Main {
 
 ```
 
+Insieme alle linee guida date dal CheckStyle, ogni membro del gruppo deve rispettare le seguenti linee guida:
+
+* Esprimerò le mie idee chiaramente e in modo conciso
+* Aggiungerò commenti al codice quando necessario
+* Scriverò codice che aderisce alle convenzioni di formattazione e stile del mio team
+* Non pubblicherò codice che non funziona
+* Non pubblicherò codice che non è stato revisionato e testato
+* Dovrò essere in grado di spiegare il codice che scrivo
 <br >
 
 ## **Regole di pull request e commit**
