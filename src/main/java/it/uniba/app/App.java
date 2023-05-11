@@ -7,6 +7,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
 
 /**
+ * <h2> App </h2>
  * <p>
  * La classe App si occupa della gestione dei comandi da tastiera,
  * vede se ci sono flags in ingresso all'avvio dell'applicazione
@@ -28,8 +29,10 @@ public final class App {
   }
 
   /**
+   * <h3> Main </h3>
+   * <p>
    * Punto d'ingresso dell'applicazione.
-   *
+   * </p>
    * @param args Parametri d'ingresso da linea di comando
    */
   public static void main(final String[] args) {
