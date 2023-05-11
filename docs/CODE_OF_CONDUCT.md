@@ -30,49 +30,70 @@
 
 ## **Scrittura del codice**
 
+Per la stesura del codice seguiamo le linee guida forniteci dal file _checkstyle.xml_ .
+
+Segue un esempio di codice ben formattato che segue le linee guida fornite:
+
+```java
+/**
+ * <h2> Main </h2>
+ * Classe di esempio.
+ */
+public final class Main {
+
+  private Main() { }
+
+  /**
+   * Punto di ingresso dell'applicazione.
+   *
+   * @param args Parametri di ingresso da linea di comando
+   */
+  public static void main(final String[] args) {
+    final int min = 49;
+    final int max = 1;
+
+    System.out.println(range(min, max));
+  }
+
+  /**
+   * <p>
+   * Genera un numero intero casuale, compreso nell'intervallo {@code [min, max]}.
+   * </p>
+   * <p>
+   * Se {@code min > max} gli estremi vengono scambiati.
+   * </p>
+   * @param min Valore minimo dell'intervallo
+   * @param max Valore massimo dell'intervallo
+   * @return Numero casuale compreso fra min e max inclusi
+   */
+  public static int range(final int min, final int max) {
+    if (min == max) {
+      return min;
+    }
+
+    int minValue = min;
+    int maxValue = max;
+
+    if (min > max) {
+      int temp = maxValue;
+      maxValue = minValue;
+      minValue = temp;
+    }
+
+    return (int) Math.floor(Math.random() * (maxValue - minValue + 1) + minValue);
+  }
+}
+
+```
+
+Insieme alle linee guida date dal CheckStyle, ogni membro del gruppo deve rispettare le seguenti linee guida:
+
 * Esprimerò le mie idee chiaramente e in modo conciso
 * Aggiungerò commenti al codice quando necessario
 * Scriverò codice che aderisce alle convenzioni di formattazione e stile del mio team
 * Non pubblicherò codice che non funziona
 * Non pubblicherò codice che non è stato revisionato e testato
 * Dovrò essere in grado di spiegare il codice che scrivo
-* Viene scritta solamente un'istruzione per riga
-* Ogni dichiarazione di variabile (attributo o locale) contiene una sola variabile. Dichiarazioni come` int a, b;` sono vietate 
-  * Eventuali dichiarazioni multiple nell'header di un ciclo for sono permesse
-* Le dichiarazioni di array in stile C sono vietate: le parentesi quadre fanno parte del tipo, non del nome della variabile (es. `int[] a;` al posto di `int a[];`)
-* Per dichiarare variabili di tipo Long e Float si utilizza il suffisso con la lettera maiuscola (es. `3000L` e `300.04F`)
-* I nomi dei package possono includere solo lettere minuscole e cifre numeriche. Per esempio, `com.example.deepspace`, no `com.example.deepSpace` o `com.example.deep_space`.
-* I nomi delle classi e delle interfacce sono scritte in ***UpperCamelCase***. Tipicamente sono nomi o frasi nominative, ma eventualmente possono essere usati anche gli aggettivi (es. `Readable`)
-* I nomi dei metodi sono scritti in ***lowerCamelCase***. Tipicamente sono verbi o frasi verbali
-* I nomi delle costanti sono scritte in ***UPPER_SNAKE_CASE***
-* I nomi degli attributi (statici o d'istanza) sono scritti in ***lowerCamelCase***. Tipicamente sono nomi o frasi nominali
-* I nomi dei parametri sono scritti in ***lowerCamelCase***. Nei metodi pubblici bisogna evitare di usare nomi di un solo carattere
-* I nomi delle variabili locali sono scritti in ***lowerCamelCase***. 
-  * I nomi delle variabili locali possono essere abbreviate se il loro significato è chiaro dal contesto (es. `i` per `index`)
-* I membri statici di una classe devono essere qualificati mediante il nome della classe, e non mediante un oggetto istanza di quella classe
-* Viene usata la lingua inglese per il codice, mentre viene usata la lingua italiana per la documentazione e i commenti del codice
-* Il codice deve essere ben formattato e indentato
-  * L'indentazione avviene mediante l'uso del tasto *tab* settato per 4 blank spaces
-  * Le parentesi graffe vengono utilizzate anche se il corpo del blocco (es. `if`, `for`) contiene una sola istruzione
-    * La parentesi graffa aperta viene posizionata sulla stessa riga dell'istruzione che la precede, mentre quella chiusa viene posizionata nella riga successiva all'ultima istruzione del blocco
-
-*Segue un esempio di codice ben formattato e indentato:*
-```java
-import java.lang.Math;
-public class Main() {
-    public static void main (String[] args) {
-        int i = Math.random();
-        if (i > 10) {
-            System.out.println("Il numero è maggiore di 10");
-        } else {
-            for (j = 0; j < 10; j++) {
-                i += 1;
-                System.out.println("Il valore del numero è il seguente: " + i);
-            }
-        }
-    }
-}
-```
 <br >
 
 ## **Regole di pull request e commit**
