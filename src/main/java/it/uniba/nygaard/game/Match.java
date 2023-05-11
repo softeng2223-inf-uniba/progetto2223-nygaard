@@ -10,6 +10,7 @@ import it.uniba.nygaard.game.grids.CellsGrid;
 import it.uniba.nygaard.game.grids.CharactersGrid;
 
 import java.nio.charset.StandardCharsets;
+import java.util.Random;
 import java.util.Scanner;
 
 /**
@@ -177,11 +178,12 @@ public final class Match {
       return true;
     }
     boolean direction;
+    Random rnd = new Random();
     Coordinate coord = new Coordinate();
     for (int j = Util.MIN_GENERATIONS; j <= Util.MAX_GENERATIONS; j++) {
-      direction = ((int) (Math.random() * 2)) == 1;
-      coord.setRow((int) (Math.random() * Util.MAX_ROWS + 1));
-      coord.setColumn((char) ((int) (Math.random() * (Util.MAX_COLUMN - Util.MIN_COLUMN + 1) + Util.MIN_COLUMN)));
+      direction = rnd.nextInt(2) == 1;
+      coord.setRow(rnd.nextInt(Util.MAX_ROWS) + 1);
+      coord.setColumn((char) (rnd.nextInt(Util.MAX_COLUMN - Util.MIN_COLUMN + 1) + Util.MIN_COLUMN));
       this.ships[i - 1].setDirection(direction);
       this.ships[i - 1].setCoord(coord);
       if (this.ships[i - 1].outOfMap()) {
