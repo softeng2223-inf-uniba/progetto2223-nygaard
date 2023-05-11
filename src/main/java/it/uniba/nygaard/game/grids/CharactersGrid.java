@@ -2,10 +2,24 @@ package it.uniba.nygaard.game.grids;
 
 import it.uniba.nygaard.game.Util;
 
+/**
+ * <h2> CharactersGrid </h2>
+ * <p>
+ * La classe CharactersGrid rappresenta la griglia di attacco (griglia di caratteri).
+ * @see Grid
+ * </p>
+ */
 public final class CharactersGrid extends Grid {
 
   private final char[][] grid;
 
+  /**
+   * <h3> Costruttore </h3>
+   * <p>
+   * Costruttore della classe CharactersGrid.
+   * </p>
+   * @param dimension Dimensione della griglia.
+   */
   public CharactersGrid(final int dimension) {
     super(dimension);
     grid = new char[dimension][dimension];
@@ -16,14 +30,39 @@ public final class CharactersGrid extends Grid {
     }
   }
 
+  /**
+   * <h3> setCharacter </h3>
+   * <p>
+   * Imposta un carattere della griglia.
+   * </p>
+   * @param row Riga del carattere.
+   * @param column Colonna del carattere.
+   * @param character Carattere da impostare.
+   */
   public void setCharacter(final int row, final int column, final char character) {
     grid[row][column] = character;
   }
 
+  /**
+   * <h3> getCharacter </h3>
+   * <p>
+   * Restituisce un carattere della griglia.
+   * </p>
+   * @param row Riga del carattere.
+   * @param column Colonna del carattere.
+   * @return Carattere della griglia.
+   */
   char getCharacter(final int row, final int column) {
     return grid[row][column];
   }
 
+  /**
+   * <h3> toString </h3>
+   * <p>
+   * Restituisce una stringa che rappresenta la griglia.
+   * </p>
+   * @return Stringa che rappresenta la griglia.
+   */
   public String toString() {
     String str = "";
     char c;
