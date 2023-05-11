@@ -4,7 +4,7 @@ import it.uniba.nygaard.game.Util;
 
 /**
  * <p>
- * La classe AircraftCarrier rappresenta la nave Portaerei.
+ * La classe AircraftCarrier rappresenta il Portaerei.
  * </p>
  */
 public class AircraftCarrier extends Ship {
