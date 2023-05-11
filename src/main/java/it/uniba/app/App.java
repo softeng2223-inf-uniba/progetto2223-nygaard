@@ -28,9 +28,9 @@ public final class App {
   }
 
   /**
-   * Punto di ingresso dell'applicazione.
+   * Punto d'ingresso dell'applicazione.
    *
-   * @param args Parametri di ingresso da linea di comando
+   * @param args Parametri d'ingresso da linea di comando
    */
   public static void main(final String[] args) {
     Scanner in = new Scanner(System.in, StandardCharsets.UTF_8);
