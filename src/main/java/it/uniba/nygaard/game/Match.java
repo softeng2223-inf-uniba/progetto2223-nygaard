@@ -64,7 +64,7 @@ public final class Match {
   /**
    * Settaggio difficoltà della partita.
    *
-   * @param newDifficulty Parametro di ingresso per impostare
+   * @param newDifficulty Parametro d'ingresso per impostare
    *                      la difficoltà della partita
    */
   public void setDifficulty(final int newDifficulty) {
