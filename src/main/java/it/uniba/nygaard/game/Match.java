@@ -155,8 +155,8 @@ public final class Match {
     Coordinate coord = new Coordinate();
     for (int j = Util.MIN_GENERATIONS; j <= Util.MAX_GENERATIONS; j++) {
       direction = ((int) (Math.random() * 2)) == 1;
-      coord.setRow((int) (Math.random() * 10 + 1));
-      coord.setColumn((char) ((int) (Math.random() * 10 + Util.MIN_COLUMN)));
+      coord.setRow((int) (Math.random() * Util.MAX_ROWS + 1));
+      coord.setColumn((char) ((int) (Math.random() * (Util.MAX_COLUMN - Util.MIN_COLUMN + 1) + Util.MIN_COLUMN)));
       this.ships[i - 1].setDirection(direction);
       this.ships[i - 1].setCoord(coord);
       if (this.ships[i - 1].outOfMap()) {
