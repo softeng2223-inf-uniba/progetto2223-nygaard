@@ -6,7 +6,17 @@ Nella seguente documentazione verrà descritta la relazione tecnica del progetto
 Iniziamo con le presentazioni:
 
 <style>
-    
+    .title-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .title {
+        color: #e2e2e2;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 24px;
+    }
 </style>
 
 <div class="title-container">
