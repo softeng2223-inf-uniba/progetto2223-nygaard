@@ -209,7 +209,7 @@ public final class Match {
    * </p>
    * @param i Indice della nave da posizionare.
    */
-  void placeShip(final int i) {
+  private void placeShip(final int i) {
     if (ships[i].getDirection()) {
       for (int j = 0; j < ships[i].getHp(); j++) {
         defenseGrid.setCellCharacter(ships[i].getCoordRow() - 1 + j,
@@ -234,7 +234,7 @@ public final class Match {
    * </p>
    * @param i Indice della nave da rimuovere.
    */
-  void removeShip(final int i) {
+  private void removeShip(final int i) {
     for (int j = Util.MIN_ROWS; j <= Util.MAX_ROWS; j++) {
       for (int k = Util.MIN_ROWS; k <= Util.MAX_ROWS; k++) {
         if (defenseGrid.getCellShipIndex(j - 1, k - 1) == i) {

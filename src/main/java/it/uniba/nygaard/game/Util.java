@@ -45,6 +45,7 @@ public final class Util {
   public static final char SEA_CHARACTER = '~';
   public static final char SHIP_CHARACTER = '*';
   public static final int FIRST_TWO_DIGITS = 10;
+
   /**
    * <p>
    * Costante che contiene il percorso del file che contiene
@@ -100,7 +101,6 @@ public final class Util {
    */
   private static void printFile(final String path) {
     Path filePath = Paths.get(path);
-
     try {
       String content = Files.readString(filePath);
       System.out.println(content);

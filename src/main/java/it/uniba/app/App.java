@@ -24,7 +24,7 @@ public final class App {
    *
    * @return the "Hello World!" string.
    */
-  public String getGreeting() {
+  String getGreeting() {
     return "Hello World!!!";
   }
 

@@ -53,7 +53,7 @@ public final class Coordinate {
    * </p>
    * @return Riga della coordinata.
    */
-  public int getRow() {
+  int getRow() {
     return row;
   }
 
@@ -64,7 +64,7 @@ public final class Coordinate {
    * </p>
    * @return Colonna della coordinata.
    */
-  public char getColumn() {
+  char getColumn() {
     return column;
   }
 
