@@ -113,6 +113,14 @@ Iniziamo con le presentazioni:
     </div>
 </div>
 
+---
+
+<br>
+
+Il progetto svolto, consiste nella realizzazione della **Battaglia Navale**, sotto forma di applicazione eseguibile da riga di comando (*CLI*).
+
+
+
 # 2. Modello Di Dominio
 
 *I diagrammi che verranno mostrati, all'interno della relazione, sono stati realizzati
