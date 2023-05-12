@@ -22,6 +22,7 @@ Iniziamo con le presentazioni:
     </div>
     <div class="student">
         <div class="item">
+            <img src="./img/membri/curri.jpg" alt="mattiacurri">
         </div>
         <div class="info">
         </div>
