@@ -25,6 +25,9 @@ Iniziamo con le presentazioni:
             <img src="./img/membri/curri.jpg" alt="mattiacurri">
         </div>
         <div class="info">
+            <p class="name"> Mattia Curri </p>
+            <p class="live"> 20 anni, Ceglie Messapica (BR) </p>
+            <p class="email"> m.curri8@studenti.uniba.it </p>
         </div>
     </div>
     <div class="student">
