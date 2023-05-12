@@ -114,7 +114,7 @@ public abstract class Ship {
    * @return True se la nave è fuori dalla griglia, false altrimenti.
    */
   public boolean outOfMap() {
-    if (this.direction==Util.VERTICAL) {
+    if (this.direction == Util.VERTICAL) {
       return this.coord.getRow() + this.hp > Util.MAX_ROWS;
     } else {
       return this.coord.getColumn() + this.hp > Util.MAX_COLUMN;
@@ -134,7 +134,7 @@ public abstract class Ship {
     int starty = Math.max(this.coord.getColumn() - Util.MIN_COLUMN - 1, Util.MIN_ROWS - 1);
     int endx;
     int endy;
-    if (this.direction==Util.VERTICAL) {
+    if (this.direction == Util.VERTICAL) {
       endx = Math.min(this.coord.getRow() + this.hp - 1, Util.MAX_ROWS - 1);
       endy = Math.min(this.coord.getColumn() - Util.MIN_COLUMN + 1, Util.MAX_ROWS - 1);
     } else {

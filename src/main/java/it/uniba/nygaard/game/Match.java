@@ -213,7 +213,7 @@ public final class Match {
    * @param i Indice della nave da posizionare.
    */
   private void placeShip(final int i) {
-    if (ships[i].getDirection()==Util.VERTICAL) {
+    if (ships[i].getDirection() == Util.VERTICAL) {
       for (int j = 0; j < ships[i].getHp(); j++) {
         defenseGrid.setCellCharacter(ships[i].getCoordRow() - 1 + j,
             ships[i].getCoordColumn() - Util.MIN_COLUMN, Util.SHIP_CHARACTER);
