@@ -6,12 +6,6 @@ Nella seguente documentazione verrà descritta la relazione tecnica del progetto
 Iniziamo con le presentazioni:
 
 <style>
-    .student {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-    }
-
     .info {
         margin-left: 1rem;
     }
@@ -41,7 +35,7 @@ Iniziamo con le presentazioni:
 </div>
 
 <div class=" display: grid; gap: 16px;">
-    <div class="student">
+    <div style="display: flex; flex-direction: row; align-items: center;">
         <div style="width: 128px; height: auto;">
             <img style="width: 100%; height: 100%;" src="./img/membri/cirilli.jpg" alt="Davy592">
         </div>
@@ -51,7 +45,7 @@ Iniziamo con le presentazioni:
             <p class="email"> d.cirilli2@studenti.uniba.it </p>
         </div>
     </div>
-    <div class="student">
+    <div style="display: flex; flex-direction: row; align-items: center;">
         <div style="width: 128px; height: auto;">
             <img style="width: 100%; height: 100%;" src="./img/membri/curri.png" alt="mattiacurri">
         </div>
@@ -61,7 +55,7 @@ Iniziamo con le presentazioni:
             <p class="email"> m.curri8@studenti.uniba.it </p>
         </div>
     </div>
-    <div class="student">
+    <div style="display: flex; flex-direction: row; align-items: center;">
         <div style="width: 128px; height: auto;">
             <img style="width: 100%; height: 100%;" src="./img/membri/fontana.jpg" alt="Fonty02">
         </div>
@@ -71,7 +65,7 @@ Iniziamo con le presentazioni:
             <p class="email"> e.fontana7@studenti.uniba.it </p>
         </div>
     </div>
-    <div class="student">
+    <div style="display: flex; flex-direction: row; align-items: center;">
         <div style="width: 128px; height: auto;">
             <img style="width: 100%; height: 100%;" src="./img/membri/labianca.jpg" alt="Stefano-Labianca">
         </div>
@@ -81,7 +75,7 @@ Iniziamo con le presentazioni:
             <p class="email"> s.labianca10@studenti.uniba.it </p>
         </div>
     </div>
-    <div class="student">
+    <div style="display: flex; flex-direction: row; align-items: center;">
         <div style="width: 128px; height: auto;">
              <img style="width: 100%; height: 100%;" src="./img/membri/izzo.jpg" alt="GiudittaIzzo">
         </div>
