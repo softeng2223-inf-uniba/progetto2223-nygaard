@@ -5,14 +5,6 @@ Nella seguente documentazione verrà descritta la relazione tecnica del progetto
 
 Iniziamo con le presentazioni:
 
-<style>
-    .email, .live {
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 8px;
-    }
-</style>
-
 <div class="display: flex; justify-content: center; align-items: center;">
     <h2 class="color: #e2e2e2; font-family: 'Montserrat', sans-serif; font-size: 24px;"> Gruppo Nygaard </h2>
 </div>
@@ -25,7 +17,7 @@ Iniziamo con le presentazioni:
         <div style="margin-left: 1rem; color: #e2e2e2;">
             <p style="font-size: 18px; font-weight: 700; line-height: 16px;"> Davide Cirilli</p>
             <p style="font-size: 14px; font-weight: 400; line-height: 8px;"> 20 anni, Molfetta (BA) </p>
-            <p class="email"> d.cirilli2@studenti.uniba.it </p>
+            <p style="font-size: 14px; font-weight: 400; line-height: 8px;"> d.cirilli2@studenti.uniba.it </p>
         </div>
     </div>
     <div style="display: flex; flex-direction: row; align-items: center;">
@@ -35,7 +27,8 @@ Iniziamo con le presentazioni:
         <div style="margin-left: 1rem; color: #e2e2e2;">
             <p style="font-size: 18px; font-weight: 700; line-height: 16px;"> Mattia Curri </p>
             <p style="font-size: 14px; font-weight: 400; line-height: 8px;"> 20 anni, Ceglie Messapica (BR) </p>
-            <p class="email"> m.curri8@studenti.uniba.it </p>
+            <p style="font-size: 14px; font-weight: 400;
+         height: 8px;"> m.curri8@studenti.uniba.it </p>
         </div>
     </div>
     <div style="display: flex; flex-direction: row; align-items: center;">
@@ -45,7 +38,7 @@ Iniziamo con le presentazioni:
         <div style="margin-left: 1rem; color: #e2e2e2;">
             <p style="font-size: 18px; font-weight: 700; line-height: 16px;"> Emanuele Fontana </p>
             <p style="font-size: 14px; font-weight: 400; line-height: 8px;"> 20 anni, Matera (MT) </p>
-            <p class="email"> e.fontana7@studenti.uniba.it </p>
+            <p style="font-size: 14px; font-weight: 400; line-height: 8px;"> e.fontana7@studenti.uniba.it </p>
         </div>
     </div>
     <div style="display: flex; flex-direction: row; align-items: center;">
@@ -55,7 +48,7 @@ Iniziamo con le presentazioni:
         <div style="margin-left: 1rem; color: #e2e2e2;">
             <p style="font-size: 18px; font-weight: 700; line-height: 16px;"> Stefano Labianca</p>
             <p style="font-size: 14px; font-weight: 400; line-height: 8px;"> 20 anni, Corato (BA) </p>
-            <p class="email"> s.labianca10@studenti.uniba.it </p>
+            <p style="font-size: 14px; font-weight: 400; line-height: 8px;"> s.labianca10@studenti.uniba.it </p>
         </div>
     </div>
     <div style="display: flex; flex-direction: row; align-items: center;">
@@ -65,7 +58,8 @@ Iniziamo con le presentazioni:
         <div style="margin-left: 1rem; color: #e2e2e2;">
             <p style="font-size: 18px; font-weight: 700; line-height: 16px;"> Giuditta Izzo </p>
             <p style="font-size: 14px; font-weight: 400; line-height: 8px;"> 21 anni, Bari (BA) </p>
-            <p class="email"> g.izzo2@studenti.uniba.it </p>
+            <p style="font-size: 14px; font-weight: 400;
+         height: 8px;"> g.izzo2@studenti.uniba.it </p>
         </div>
     </div>
 </div>
