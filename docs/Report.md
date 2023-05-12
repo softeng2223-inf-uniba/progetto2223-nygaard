@@ -52,6 +52,11 @@ Iniziamo con le presentazioni:
         font-size: 18px;
         font-weight: 700;
     }
+
+    .email, .live {
+        font-size: 14px;
+        font-weight: 400;
+    }
 </style>
 
 <div class="title-container">
