@@ -3,6 +3,7 @@
 # 1. Introduzione
 Nella seguente documentazione verrà descritta la relazione tecnica del progetto di **Ingegneria del Software Anno Accademico 2022-2023**.
 
+Iniziamo con le presentazioni, noi siamo il gruppo **Nygaard** composto da:
 
 
 # 2. Modello Di Dominio
