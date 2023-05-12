@@ -10,7 +10,36 @@ Iniziamo con le presentazioni:
 </div>
 
 <div class="gallery">
-    
+    <div class="student">
+        <div class="item">
+        </div>
+        <div class="info">
+        </div>
+    </div>
+    <div class="student">
+        <div class="item">
+        </div>
+        <div class="info">
+        </div>
+    </div>
+    <div class="student">
+        <div class="item">
+        </div>
+        <div class="info">
+        </div>
+    </div>
+    <div class="student">
+        <div class="item">
+        </div>
+        <div class="info">
+        </div>
+    </div>
+    <div class="student">
+        <div class="item">
+        </div>
+        <div class="info">
+        </div>
+    </div>
 </div>
 
 # 2. Modello Di Dominio
