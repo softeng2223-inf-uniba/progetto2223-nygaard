@@ -5,11 +5,11 @@ Nella seguente documentazione verrà descritta la relazione tecnica del progetto
 
 Iniziamo con le presentazioni:
 
-<div class="display: flex; justify-content: center; align-items: center;">
-    <h2 class="color: #e2e2e2; font-family: 'Montserrat', sans-serif; font-size: 24px;"> Gruppo Nygaard </h2>
+<div style="display: flex; justify-content: center; align-items: center;">
+    <h2 style="color: #e2e2e2; font-family: 'Montserrat', sans-serif; font-size: 24px;"> Gruppo Nygaard </h2>
 </div>
 
-<div class=" display: grid; gap: 16px;">
+<div style=" display: grid; gap: 16px;">
     <div style="display: flex; flex-direction: row; align-items: center;">
         <div style="width: 128px; height: auto;">
             <img style="width: 100%; height: 100%;" src="./img/membri/cirilli.jpg" alt="Davy592">
