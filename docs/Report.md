@@ -36,7 +36,7 @@ Iniziamo con le presentazioni:
     </div>
     <div class="student">
         <div class="item">
-            <img src="./img/membri/curri.jpg" alt="mattiacurri">
+            <img src="./img/membri/curri.png" alt="mattiacurri">
         </div>
         <div class="info">
             <p class="name"> Mattia Curri </p>
