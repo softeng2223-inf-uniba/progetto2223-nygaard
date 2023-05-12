@@ -18,6 +18,7 @@ class Cell {
    * <p>
    * Costruttore della classe Cell.
    * </p>
+   *
    * @param c Carattere della cella.
    */
   Cell(final char c) {
@@ -30,6 +31,7 @@ class Cell {
    * <p>
    * Imposta il carattere della cella.
    * </p>
+   *
    * @param newCharacter Carattere da impostare.
    */
   void setCharacter(final char newCharacter) {
@@ -41,6 +43,7 @@ class Cell {
    * <p>
    * Imposta l'indice della nave della cella.
    * </p>
+   *
    * @param newShipIndex Indice della nave da impostare.
    */
   void setShipIndex(final int newShipIndex) {
@@ -52,6 +55,7 @@ class Cell {
    * <p>
    * Restituisce il carattere della cella.
    * </p>
+   *
    * @return Carattere della cella.
    */
   char getCharacter() {
@@ -63,6 +67,7 @@ class Cell {
    * <p>
    * Restituisce l'indice della nave della cella.
    * </p>
+   *
    * @return Indice della nave della cella.
    */
   int getShipIndex() {

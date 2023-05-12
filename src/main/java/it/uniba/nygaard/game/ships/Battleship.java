@@ -7,6 +7,7 @@ import it.uniba.nygaard.game.Util;
  * <p>
  * La classe Battleship rappresenta la nave Corazzata.
  * </p>
+ *
  * @see Ship
  */
 public class Battleship extends Ship {

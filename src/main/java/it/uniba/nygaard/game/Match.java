@@ -40,10 +40,8 @@ public final class Match {
   public Match() {
     this.inGame = false;
     this.difficulty = Util.DIFFICULTY_NOT_SETTED;
-    this.difficultyNames = new String[]
-        {Util.EASY_NAME, Util.MEDIUM_NAME, Util.HARD_NAME};
-    this.attempts = new int[]
-        {Util.EASY_ATTEMPTS, Util.MEDIUM_ATTEMPTS, Util.HARD_ATTEMPTS};
+    this.difficultyNames = new String[]{Util.EASY_NAME, Util.MEDIUM_NAME, Util.HARD_NAME};
+    this.attempts = new int[]{Util.EASY_ATTEMPTS, Util.MEDIUM_ATTEMPTS, Util.HARD_ATTEMPTS};
     this.ships = new Ship[Util.MAX_SHIP];
     int i = Util.MIN_SHIP;
     for (int j = 0; j < Util.AIRCRAFT_NO; j++) {
@@ -71,12 +69,12 @@ public final class Match {
    * <p>
    * Imposta la difficoltà della partita.
    * </p>
+   *
    * @param newDifficulty Difficoltà della partita.
    */
   public void setDifficulty(final int newDifficulty) {
     if (this.inGame) {
-      System.out.println("Non puoi cambiare difficoltà "
-          + "durante una partita");
+      System.out.println("Non puoi cambiare difficoltà durante una partita");
       return;
     }
     if (this.difficulty == newDifficulty) {
@@ -87,11 +85,8 @@ public final class Match {
       String choice;
       Scanner in = new Scanner(System.in, StandardCharsets.UTF_8);
       do {
-        System.out.print("Il livello attuale è "
-            + difficultyNames[this.difficulty]
-            + ". Confermare cambio in "
-            + difficultyNames[newDifficulty]
-            + "? (y/n) ");
+        System.out.print("Il livello attuale è " + difficultyNames[this.difficulty] + ". Confermare cambio in "
+            + difficultyNames[newDifficulty] + "? (y/n) ");
         choice = in.nextLine().toLowerCase();
         if (!choice.equals("y") && !choice.equals("n")) {
           System.out.println("Scelta non valida");
@@ -115,18 +110,11 @@ public final class Match {
    */
   public void showLevel() {
     if (this.difficulty != Util.DIFFICULTY_NOT_SETTED) {
-      System.out.println(
-          "Livello di difficoltà scelto: "
-              + this.difficultyNames[this.difficulty]
-              + "\n"
-              + "Numero massimo di tentativi falliti: "
-              + this.attempts[this.difficulty]);
+      System.out.println("Livello di difficoltà scelto: " + this.difficultyNames[this.difficulty] + "\n"
+          + "Numero massimo di tentativi falliti: " + this.attempts[this.difficulty]);
     } else {
-      System.out.println(
-          "Difficoltà non ancora scelta"
-              + "\n"
-              + "Per scegliere la difficoltà utilizzare "
-              + "il comando /facile, /medio o /difficile");
+      System.out.println("Difficoltà non ancora scelta" + "\n" + "Per scegliere la difficoltà utilizzare "
+          + "il comando /facile, /medio o /difficile");
     }
   }
 
@@ -169,6 +157,7 @@ public final class Match {
    * <p>
    * Il metodo initializeShips inizializza le navi in posizioni casuali.
    * </p>
+   *
    * @param i Indice della nave da inizializzare.
    * @return true se tutte le navi sono state inizializzate, false altrimenti.
    */
@@ -210,6 +199,7 @@ public final class Match {
    * <p>
    * Il metodo placeShip posiziona la nave i-esima sulla griglia di difesa.
    * </p>
+   *
    * @param i Indice della nave da posizionare.
    */
   private void placeShip(final int i) {
@@ -235,6 +225,7 @@ public final class Match {
    * <p>
    * Il metodo removeShip rimuove la nave i-esima dalla griglia di difesa.
    * </p>
+   *
    * @param i Indice della nave da rimuovere.
    */
   private void removeShip(final int i) {

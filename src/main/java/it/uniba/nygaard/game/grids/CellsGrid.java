@@ -7,6 +7,7 @@ import it.uniba.nygaard.game.Util;
  * <p>
  * La classe CellsGrid rappresenta la griglia di difesa (griglia di celle carattere-intero).
  * </p>
+ *
  * @see Grid
  */
 public final class CellsGrid extends Grid {
@@ -18,6 +19,7 @@ public final class CellsGrid extends Grid {
    * <p>
    * Costruttore della classe CellsGrid.
    * </p>
+   *
    * @param dimension Dimensione della griglia.
    */
   public CellsGrid(final int dimension) {
@@ -35,10 +37,11 @@ public final class CellsGrid extends Grid {
    * <p>
    * Imposta una cella della griglia.
    * </p>
-   * @param row Riga della cella.
+   *
+   * @param row    Riga della cella.
    * @param column Colonna della cella.
-   * @param cell Cella da impostare.
-   *   @see Cell
+   * @param cell   Cella da impostare.
+   * @see Cell
    */
   public void setCell(final int row, final int column, final Cell cell) {
     grid[row][column] = cell;
@@ -49,8 +52,9 @@ public final class CellsGrid extends Grid {
    * <p>
    * Imposta il carattere di una cella della griglia.
    * </p>
-   * @param row Riga della cella.
-   * @param column Colonna della cella.
+   *
+   * @param row       Riga della cella.
+   * @param column    Colonna della cella.
    * @param character Carattere da impostare.
    */
   public void setCellCharacter(final int row, final int column, final char character) {
@@ -62,8 +66,9 @@ public final class CellsGrid extends Grid {
    * <p>
    * Imposta l'indice della nave di una cella della griglia.
    * </p>
-   * @param row Riga della cella.
-   * @param column Colonna della cella.
+   *
+   * @param row       Riga della cella.
+   * @param column    Colonna della cella.
    * @param shipIndex Indice della nave da impostare.
    */
   public void setCellShipIndex(final int row, final int column, final int shipIndex) {
@@ -75,10 +80,11 @@ public final class CellsGrid extends Grid {
    * <p>
    * Restituisce una cella della griglia.
    * </p>
-   * @param row Riga della cella.
+   *
+   * @param row    Riga della cella.
    * @param column Colonna della cella.
    * @return Cella della griglia.
-   *   @see Cell
+   * @see Cell
    */
   public Cell getCell(final int row, final int column) {
     return grid[row][column];
@@ -89,7 +95,8 @@ public final class CellsGrid extends Grid {
    * <p>
    * Restituisce il carattere di una cella della griglia.
    * </p>
-   * @param row Riga della cella.
+   *
+   * @param row    Riga della cella.
    * @param column Colonna della cella.
    * @return Carattere della cella.
    */
@@ -102,7 +109,8 @@ public final class CellsGrid extends Grid {
    * <p>
    * Restituisce l'indice della nave di una cella della griglia.
    * </p>
-   * @param row Riga della cella.
+   *
+   * @param row    Riga della cella.
    * @param column Colonna della cella.
    * @return Indice della nave della cella.
    */
@@ -115,6 +123,7 @@ public final class CellsGrid extends Grid {
    * <p>
    * Restituisce una stringa che rappresenta la griglia.
    * </p>
+   *
    * @return Stringa che rappresenta la griglia.
    */
   public String toString() {

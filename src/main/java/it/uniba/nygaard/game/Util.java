@@ -56,8 +56,7 @@ public final class Util {
    * le informazioni mostrate quando si digita il comando "/help".
    * </p>
    */
-  private static final
-    String HELP_PATH = "src/main/java/it/uniba/nygaard/help/help.txt";
+  private static final String HELP_PATH = "src/main/java/it/uniba/nygaard/help/help.txt";
 
   /**
    * <h3> DESCRIPTION_PATH </h3>
@@ -66,9 +65,7 @@ public final class Util {
    * una breve descrizione del programma.
    * </p>
    */
-  private static final
-    String DESCRIPTION_PATH = "src/main/java/it/uniba/nygaard/"
-      + "description/description.txt";
+  private static final String DESCRIPTION_PATH = "src/main/java/it/uniba/nygaard/description/description.txt";
 
   /**
    * <h3> Costruttore </h3>
@@ -111,6 +108,7 @@ public final class Util {
    * Una volta letto tutto il contenuto del file, lo
    * mostra a video.
    * </p>
+   *
    * @param path Percorso del file
    */
   private static void printFile(final String path) {

@@ -20,6 +20,7 @@ public abstract class Ship {
    * <p>
    * Costruttore della classe Ship.
    * </p>
+   *
    * @param newHp Hp della nave.
    */
   Ship(final int newHp) {
@@ -33,6 +34,7 @@ public abstract class Ship {
    * <p>
    * Imposta le coordinate della nave.
    * </p>
+   *
    * @param newCoord Coordinate della nave.
    */
   public void setCoord(final Coordinate newCoord) {
@@ -45,6 +47,7 @@ public abstract class Ship {
    * <p>
    * Imposta la direzione della nave.
    * </p>
+   *
    * @param newDirection Direzione della nave.
    */
   public void setDirection(final boolean newDirection) {
@@ -56,6 +59,7 @@ public abstract class Ship {
    * <p>
    * Imposta gli hp della nave.
    * </p>
+   *
    * @param newHp Hp della nave.
    */
   public void setHp(final int newHp) {
@@ -67,6 +71,7 @@ public abstract class Ship {
    * <p>
    * Restituisce la riga della coordinata iniziale della nave.
    * </p>
+   *
    * @return Riga della coordinata iniziale della nave.
    */
   public int getCoordRow() {
@@ -78,6 +83,7 @@ public abstract class Ship {
    * <p>
    * Restituisce la colonna della coordinata iniziale della nave.
    * </p>
+   *
    * @return Colonna della coordinata iniziale della nave.
    */
   public char getCoordColumn() {
@@ -89,6 +95,7 @@ public abstract class Ship {
    * <p>
    * Restituisce la direzione della nave.
    * </p>
+   *
    * @return Direzione della nave.
    */
   public boolean getDirection() {
@@ -100,6 +107,7 @@ public abstract class Ship {
    * <p>
    * Restituisce gli hp della nave.
    * </p>
+   *
    * @return Hp della nave.
    */
   public int getHp() {
@@ -111,6 +119,7 @@ public abstract class Ship {
    * <p>
    * Verifica se la nave è fuori dalla griglia.
    * </p>
+   *
    * @return True se la nave è fuori dalla griglia, false altrimenti.
    */
   public boolean outOfMap() {
@@ -126,6 +135,7 @@ public abstract class Ship {
    * <p>
    * Verifica se la nave interseca altre navi.
    * </p>
+   *
    * @param grid Griglia di gioco.
    * @return True se la nave interseca altre navi, false altrimenti.
    */

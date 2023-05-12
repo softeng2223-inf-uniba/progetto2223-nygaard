@@ -33,6 +33,7 @@ public final class App {
    * <p>
    * Punto d'ingresso dell'applicazione.
    * </p>
+   *
    * @param args Parametri d'ingresso da linea di comando
    */
   public static void main(final String[] args) {

@@ -7,6 +7,7 @@ import it.uniba.nygaard.game.Util;
  * <p>
  * La classe Cruiser rappresenta la nave Incrociatore.
  * </p>
+ *
  * @see Ship
  */
 public class Cruiser extends Ship {

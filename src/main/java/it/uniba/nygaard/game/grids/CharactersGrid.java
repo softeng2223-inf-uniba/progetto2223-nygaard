@@ -6,8 +6,9 @@ import it.uniba.nygaard.game.Util;
  * <h2> CharactersGrid </h2>
  * <p>
  * La classe CharactersGrid rappresenta la griglia di attacco (griglia di caratteri).
- * @see Grid
  * </p>
+ *
+ * @see Grid
  */
 public final class CharactersGrid extends Grid {
 
@@ -18,6 +19,7 @@ public final class CharactersGrid extends Grid {
    * <p>
    * Costruttore della classe CharactersGrid.
    * </p>
+   *
    * @param dimension Dimensione della griglia.
    */
   public CharactersGrid(final int dimension) {
@@ -35,8 +37,9 @@ public final class CharactersGrid extends Grid {
    * <p>
    * Imposta un carattere della griglia.
    * </p>
-   * @param row Riga del carattere.
-   * @param column Colonna del carattere.
+   *
+   * @param row       Riga del carattere.
+   * @param column    Colonna del carattere.
    * @param character Carattere da impostare.
    */
   public void setCharacter(final int row, final int column, final char character) {
@@ -48,7 +51,8 @@ public final class CharactersGrid extends Grid {
    * <p>
    * Restituisce un carattere della griglia.
    * </p>
-   * @param row Riga del carattere.
+   *
+   * @param row    Riga del carattere.
    * @param column Colonna del carattere.
    * @return Carattere della griglia.
    */
@@ -61,6 +65,7 @@ public final class CharactersGrid extends Grid {
    * <p>
    * Restituisce una stringa che rappresenta la griglia.
    * </p>
+   *
    * @return Stringa che rappresenta la griglia.
    */
   public String toString() {

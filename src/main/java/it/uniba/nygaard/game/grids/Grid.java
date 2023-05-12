@@ -15,6 +15,7 @@ public abstract class Grid {
    * <p>
    * Costruttore della classe Grid.
    * </p>
+   *
    * @param newDimension Dimensione della griglia.
    */
   Grid(final int newDimension) {
@@ -26,6 +27,7 @@ public abstract class Grid {
    * <p>
    * Imposta la dimensione della griglia.
    * </p>
+   *
    * @param newDimension Dimensione della griglia.
    */
   public void setDimension(final int newDimension) {
@@ -37,6 +39,7 @@ public abstract class Grid {
    * <p>
    * Restituisce la dimensione della griglia.
    * </p>
+   *
    * @return Dimensione della griglia.
    */
   public int getDimension() {

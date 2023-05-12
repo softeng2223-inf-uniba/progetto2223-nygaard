@@ -7,6 +7,7 @@ package it.uniba.nygaard.game.ships;
  * Se la nave è posizionata in verticale, la coordinata rappresenta la cella in alto.
  * Se la nave è posizionata in orizzontale, la coordinata rappresenta la cella a sinistra.
  * </p>
+ *
  * @see Ship
  */
 public final class Coordinate {
@@ -29,6 +30,7 @@ public final class Coordinate {
    * <p>
    * Imposta la riga della coordinata.
    * </p>
+   *
    * @param newRow Riga della coordinata.
    */
   public void setRow(final int newRow) {
@@ -40,6 +42,7 @@ public final class Coordinate {
    * <p>
    * Imposta la colonna della coordinata.
    * </p>
+   *
    * @param newColumn Colonna della coordinata.
    */
   public void setColumn(final char newColumn) {
@@ -51,6 +54,7 @@ public final class Coordinate {
    * <p>
    * Restituisce la riga della coordinata.
    * </p>
+   *
    * @return Riga della coordinata.
    */
   int getRow() {
@@ -62,6 +66,7 @@ public final class Coordinate {
    * <p>
    * Restituisce la colonna della coordinata.
    * </p>
+   *
    * @return Colonna della coordinata.
    */
   char getColumn() {

@@ -7,6 +7,7 @@ import it.uniba.nygaard.game.Util;
  * <p>
  * La classe Destroyer rappresenta la nave Cacciatorpediniere.
  * </p>
+ *
  * @see Ship
  */
 public class Destroyer extends Ship {
