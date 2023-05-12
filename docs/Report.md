@@ -6,11 +6,6 @@ Nella seguente documentazione verrà descritta la relazione tecnica del progetto
 Iniziamo con le presentazioni:
 
 <style>
-    .gallery {
-        display: grid;
-        gap: 16px;
-    }
-
     .gallery img {
         width: 100%;
         height: 100%;
@@ -55,7 +50,7 @@ Iniziamo con le presentazioni:
         font-size: 24px;"> Gruppo Nygaard </h2>
 </div>
 
-<div class="gallery">
+<div class=" display: grid; gap: 16px;">
     <div class="student">
         <div class="item">
             <img src="./img/membri/cirilli.jpg" alt="Davy592">
