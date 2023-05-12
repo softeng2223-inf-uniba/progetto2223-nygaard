@@ -45,6 +45,7 @@ Iniziamo con le presentazioni:
 
     .info p {
         color: #e2e2e2;
+        line-height: 12px;
     }
 
     .name {
