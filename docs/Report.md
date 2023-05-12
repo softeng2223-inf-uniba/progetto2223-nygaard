@@ -22,6 +22,12 @@ Iniziamo con le presentazioni:
         display: grid;
         gap: 16px;
     }
+
+    .gallery img {
+        width: 100%;
+        height: 100%;
+    }
+
 </style>
 
 <div class="title-container">
