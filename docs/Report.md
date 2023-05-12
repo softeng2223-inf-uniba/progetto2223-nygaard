@@ -12,6 +12,7 @@ Iniziamo con le presentazioni:
 <div class="gallery">
     <div class="student">
         <div class="item">
+            <img src="./img/membri/cirilli.jpg" alt="Davy592">
         </div>
         <div class="info">
         </div>
