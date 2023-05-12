@@ -45,17 +45,18 @@ Iniziamo con le presentazioni:
 
     .info p {
         color: #e2e2e2;
-        line-height: 12px;
     }
 
     .name {
         font-size: 18px;
         font-weight: 700;
+        line-height: 16px;
     }
 
     .email, .live {
         font-size: 14px;
         font-weight: 400;
+        line-height: 8px;
     }
 </style>
 
