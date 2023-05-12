@@ -15,6 +15,9 @@ Iniziamo con le presentazioni:
             <img src="./img/membri/cirilli.jpg" alt="Davy592">
         </div>
         <div class="info">
+            <p class="name"> Davide Cirilli</p>
+            <p class="live"> 20 anni, Molfetta (BA) </p>
+            <p class="email"> d.cirilli2@studenti.uniba.it </p>
         </div>
     </div>
     <div class="student">
