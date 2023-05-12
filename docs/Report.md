@@ -9,6 +9,10 @@ Iniziamo con le presentazioni:
     <h2> Gruppo Nygaard </h2>
 </div>
 
+<div class="gallery">
+    
+</div>
+
 # 2. Modello Di Dominio
 
 *I diagrammi che verranno mostrati, all'interno della relazione, sono stati realizzati
