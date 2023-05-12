@@ -32,6 +32,7 @@ Iniziamo con le presentazioni:
     </div>
     <div class="student">
         <div class="item">
+            <img src="./img/membri/fontana.jpg" alt="Fonty02">
         </div>
         <div class="info">
         </div>
