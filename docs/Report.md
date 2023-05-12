@@ -45,6 +45,9 @@ Iniziamo con le presentazioni:
             <img src="./img/membri/labianca.jpg" alt="Stefano-Labianca">
         </div>
         <div class="info">
+            <p class="name"> Stefano Labianca</p>
+            <p class="live"> 20 anni, Corato (BA) </p>
+            <p class="email"> s.labianca10@studenti.uniba.it </p>
         </div>
     </div>
     <div class="student">
