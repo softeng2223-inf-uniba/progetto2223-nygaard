@@ -6,6 +6,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 
 /**
+ * <h2> Util </h2>
  * <p>
  * La classe Util contiene tutte le costanti globali
  * e funzioni di servizio.
@@ -47,6 +48,7 @@ public final class Util {
   public static final int FIRST_TWO_DIGITS = 10;
 
   /**
+   * <h3> HELP_PATH </h3>
    * <p>
    * Costante che contiene il percorso del file che contiene
    * le informazioni mostrate quando si digita il comando "/help".
@@ -56,6 +58,7 @@ public final class Util {
     String HELP_PATH = "src/main/java/it/uniba/nygaard/help/help.txt";
 
   /**
+   * <h3> DESCRIPTION_PATH </h3>
    * <p>
    * Costante che contiene il percorso del file che contiene
    * una breve descrizione del programma.
@@ -65,10 +68,17 @@ public final class Util {
     String DESCRIPTION_PATH = "src/main/java/it/uniba/nygaard/"
       + "description/description.txt";
 
+  /**
+   * <h3> Costruttore </h3>
+   * <p>
+   * Costruttore della classe Util.
+   * </p>
+   */
   private Util() {
   }
 
   /**
+   * <h3> printHelp </h3>
    * <p>
    * Mostra una descrizione del programma insieme a tutti
    * i comandi disponibili che si possono eseguire.
@@ -80,6 +90,7 @@ public final class Util {
   }
 
   /**
+   * <h3> printDescription </h3>
    * <p>
    * Mostra una descrizione coincisa del programma.
    * </p>
@@ -89,6 +100,7 @@ public final class Util {
   }
 
   /**
+   * <h3> printFile </h3>
    * <p>
    * Metodo usato per la lettura di tutto il contenuto
    * di un file posizionato in un certo percorso.
