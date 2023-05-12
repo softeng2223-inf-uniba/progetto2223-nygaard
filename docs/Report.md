@@ -28,6 +28,11 @@ Iniziamo con le presentazioni:
         height: 100%;
     }
 
+    .item {
+        width: 128px;
+        height: auto;
+    }
+
 </style>
 
 <div class="title-container">
