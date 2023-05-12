@@ -6,11 +6,6 @@ Nella seguente documentazione verrà descritta la relazione tecnica del progetto
 Iniziamo con le presentazioni:
 
 <style>
-    .item {
-        width: 128px;
-        height: auto;
-    }
-
     .student {
         display: flex;
         flex-direction: row;
@@ -47,7 +42,7 @@ Iniziamo con le presentazioni:
 
 <div class=" display: grid; gap: 16px;">
     <div class="student">
-        <div class="item">
+        <div style="width: 128px; height: auto;">
             <img style="width: 100%; height: 100%;" src="./img/membri/cirilli.jpg" alt="Davy592">
         </div>
         <div class="info">
@@ -57,7 +52,7 @@ Iniziamo con le presentazioni:
         </div>
     </div>
     <div class="student">
-        <div class="item">
+        <div style="width: 128px; height: auto;">
             <img style="width: 100%; height: 100%;" src="./img/membri/curri.png" alt="mattiacurri">
         </div>
         <div class="info">
@@ -67,7 +62,7 @@ Iniziamo con le presentazioni:
         </div>
     </div>
     <div class="student">
-        <div class="item">
+        <div style="width: 128px; height: auto;">
             <img style="width: 100%; height: 100%;" src="./img/membri/fontana.jpg" alt="Fonty02">
         </div>
         <div class="info">
@@ -77,7 +72,7 @@ Iniziamo con le presentazioni:
         </div>
     </div>
     <div class="student">
-        <div class="item">
+        <div style="width: 128px; height: auto;">
             <img style="width: 100%; height: 100%;" src="./img/membri/labianca.jpg" alt="Stefano-Labianca">
         </div>
         <div class="info">
@@ -87,7 +82,7 @@ Iniziamo con le presentazioni:
         </div>
     </div>
     <div class="student">
-        <div class="item">
+        <div style="width: 128px; height: auto;">
              <img style="width: 100%; height: 100%;" src="./img/membri/izzo.jpg" alt="GiudittaIzzo">
         </div>
         <div class="info">
