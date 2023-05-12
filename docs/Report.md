@@ -6,14 +6,6 @@ Nella seguente documentazione verrà descritta la relazione tecnica del progetto
 Iniziamo con le presentazioni:
 
 <style>
-    .info {
-        margin-left: 1rem;
-    }
-
-    .info p {
-        color: #e2e2e2;
-    }
-
     .name {
         font-size: 18px;
         font-weight: 700;
@@ -28,10 +20,7 @@ Iniziamo con le presentazioni:
 </style>
 
 <div class="display: flex; justify-content: center; align-items: center;">
-    <h2 class="
-        color: #e2e2e2;
-        font-family: 'Montserrat', sans-serif;
-        font-size: 24px;"> Gruppo Nygaard </h2>
+    <h2 class="color: #e2e2e2; font-family: 'Montserrat', sans-serif; font-size: 24px;"> Gruppo Nygaard </h2>
 </div>
 
 <div class=" display: grid; gap: 16px;">
@@ -39,7 +28,7 @@ Iniziamo con le presentazioni:
         <div style="width: 128px; height: auto;">
             <img style="width: 100%; height: 100%;" src="./img/membri/cirilli.jpg" alt="Davy592">
         </div>
-        <div class="info">
+        <div style="margin-left: 1rem; color: #e2e2e2;">
             <p class="name"> Davide Cirilli</p>
             <p class="live"> 20 anni, Molfetta (BA) </p>
             <p class="email"> d.cirilli2@studenti.uniba.it </p>
@@ -49,7 +38,7 @@ Iniziamo con le presentazioni:
         <div style="width: 128px; height: auto;">
             <img style="width: 100%; height: 100%;" src="./img/membri/curri.png" alt="mattiacurri">
         </div>
-        <div class="info">
+        <div style="margin-left: 1rem; color: #e2e2e2;">
             <p class="name"> Mattia Curri </p>
             <p class="live"> 20 anni, Ceglie Messapica (BR) </p>
             <p class="email"> m.curri8@studenti.uniba.it </p>
@@ -59,7 +48,7 @@ Iniziamo con le presentazioni:
         <div style="width: 128px; height: auto;">
             <img style="width: 100%; height: 100%;" src="./img/membri/fontana.jpg" alt="Fonty02">
         </div>
-        <div class="info">
+        <div style="margin-left: 1rem; color: #e2e2e2;">
             <p class="name"> Emanuele Fontana </p>
             <p class="live"> 20 anni, Matera (MT) </p>
             <p class="email"> e.fontana7@studenti.uniba.it </p>
@@ -69,7 +58,7 @@ Iniziamo con le presentazioni:
         <div style="width: 128px; height: auto;">
             <img style="width: 100%; height: 100%;" src="./img/membri/labianca.jpg" alt="Stefano-Labianca">
         </div>
-        <div class="info">
+        <div style="margin-left: 1rem; color: #e2e2e2;">
             <p class="name"> Stefano Labianca</p>
             <p class="live"> 20 anni, Corato (BA) </p>
             <p class="email"> s.labianca10@studenti.uniba.it </p>
@@ -79,7 +68,7 @@ Iniziamo con le presentazioni:
         <div style="width: 128px; height: auto;">
              <img style="width: 100%; height: 100%;" src="./img/membri/izzo.jpg" alt="GiudittaIzzo">
         </div>
-        <div class="info">
+        <div style="margin-left: 1rem; color: #e2e2e2;">
             <p class="name"> Giuditta Izzo </p>
             <p class="live"> 21 anni, Bari (BA) </p>
             <p class="email"> g.izzo2@studenti.uniba.it </p>
