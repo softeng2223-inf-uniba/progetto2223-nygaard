@@ -7,6 +7,12 @@ con **StarUML**.* (https://staruml.io/)
 
 <br/>
 
+- ### Diagramma delle Classi con prospettiva concettuale
+
+![diagramma](img/ModelloDominio.png)
+
+  <br/>
+
 
 # 3. Requisiti specifici
 
