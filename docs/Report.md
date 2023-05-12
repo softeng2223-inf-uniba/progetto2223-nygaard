@@ -35,6 +35,9 @@ Iniziamo con le presentazioni:
             <img src="./img/membri/fontana.jpg" alt="Fonty02">
         </div>
         <div class="info">
+            <p class="name"> Emanuele Fontana </p>
+            <p class="live"> 20 anni, Matera (MT) </p>
+            <p class="email"> e.fontana7@studenti.uniba.it </p>
         </div>
     </div>
     <div class="student">
