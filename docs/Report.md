@@ -43,6 +43,9 @@ Iniziamo con le presentazioni:
         margin-left: 1rem;
     }
 
+    .info p {
+        color: #e2e2e2;
+    }
 </style>
 
 <div class="title-container">
