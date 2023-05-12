@@ -6,11 +6,6 @@ Nella seguente documentazione verrà descritta la relazione tecnica del progetto
 Iniziamo con le presentazioni:
 
 <style>
-    .gallery img {
-        width: 100%;
-        height: 100%;
-    }
-
     .item {
         width: 128px;
         height: auto;
@@ -53,7 +48,7 @@ Iniziamo con le presentazioni:
 <div class=" display: grid; gap: 16px;">
     <div class="student">
         <div class="item">
-            <img src="./img/membri/cirilli.jpg" alt="Davy592">
+            <img style="width: 100%; height: 100%;" src="./img/membri/cirilli.jpg" alt="Davy592">
         </div>
         <div class="info">
             <p class="name"> Davide Cirilli</p>
@@ -63,7 +58,7 @@ Iniziamo con le presentazioni:
     </div>
     <div class="student">
         <div class="item">
-            <img src="./img/membri/curri.png" alt="mattiacurri">
+            <img style="width: 100%; height: 100%;" src="./img/membri/curri.png" alt="mattiacurri">
         </div>
         <div class="info">
             <p class="name"> Mattia Curri </p>
@@ -73,7 +68,7 @@ Iniziamo con le presentazioni:
     </div>
     <div class="student">
         <div class="item">
-            <img src="./img/membri/fontana.jpg" alt="Fonty02">
+            <img style="width: 100%; height: 100%;" src="./img/membri/fontana.jpg" alt="Fonty02">
         </div>
         <div class="info">
             <p class="name"> Emanuele Fontana </p>
@@ -83,7 +78,7 @@ Iniziamo con le presentazioni:
     </div>
     <div class="student">
         <div class="item">
-            <img src="./img/membri/labianca.jpg" alt="Stefano-Labianca">
+            <img style="width: 100%; height: 100%;" src="./img/membri/labianca.jpg" alt="Stefano-Labianca">
         </div>
         <div class="info">
             <p class="name"> Stefano Labianca</p>
@@ -93,7 +88,7 @@ Iniziamo con le presentazioni:
     </div>
     <div class="student">
         <div class="item">
-             <img src="./img/membri/izzo.jpg" alt="GiudittaIzzo">
+             <img style="width: 100%; height: 100%;" src="./img/membri/izzo.jpg" alt="GiudittaIzzo">
         </div>
         <div class="info">
             <p class="name"> Giuditta Izzo </p>
