@@ -5,6 +5,10 @@ Nella seguente documentazione verrà descritta la relazione tecnica del progetto
 
 Iniziamo con le presentazioni:
 
+<div>
+    <h2> Gruppo Nygaard </h2>
+</div>
+
 # 2. Modello Di Dominio
 
 *I diagrammi che verranno mostrati, all'interno della relazione, sono stati realizzati
