@@ -39,6 +39,10 @@ Iniziamo con le presentazioni:
         align-items: center;
     }
 
+    .info {
+        margin-left: 1rem;
+    }
+
 </style>
 
 <div class="title-container">
