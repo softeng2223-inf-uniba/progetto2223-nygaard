@@ -33,6 +33,12 @@ Iniziamo con le presentazioni:
         height: auto;
     }
 
+    .student {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
 </style>
 
 <div class="title-container">
