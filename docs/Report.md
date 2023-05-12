@@ -1,4 +1,19 @@
 # Report
+
+# 2. Modello Di Dominio
+
+*I diagrammi che verranno mostrati, all'interno della relazione, sono stati realizzati
+con **StarUML**.* (https://staruml.io/)
+
+<br/>
+
+- ### Diagramma delle Classi con prospettiva concettuale
+
+![diagramma](img/ModelloDominio.png)
+
+  <br/>
+
+
 # 3. Requisiti specifici
 
 ## 3.1 Requisiti Funzionali
