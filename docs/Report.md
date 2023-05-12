@@ -110,6 +110,9 @@ Iniziamo con le presentazioni:
              <img src="./img/membri/izzo.jpg" alt="GiudittaIzzo">
         </div>
         <div class="info">
+            <p class="name"> Giuditta Izzo </p>
+            <p class="live"> 21 anni, Bari (BA) </p>
+            <p class="email"> g.izzo2@studenti.uniba.it </p>
         </div>
     </div>
 </div>
