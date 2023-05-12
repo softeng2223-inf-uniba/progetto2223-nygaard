@@ -5,8 +5,8 @@ Nella seguente documentazione verrà descritta la relazione tecnica del progetto
 
 Iniziamo con le presentazioni:
 
-<div>
-    <h2> Gruppo Nygaard </h2>
+<div class="title-container">
+    <h2 class="title"> Gruppo Nygaard </h2>
 </div>
 
 <div class="gallery">
