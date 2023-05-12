@@ -154,11 +154,10 @@ public final class Match {
     if (this.difficulty == Util.DIFFICULTY_NOT_SETTED) {
       System.out.println("Non hai ancora impostato il livello");
       return;
-    } else {
-      if (this.inGame) {
-        System.out.println("Sei gia in partita");
-        return;
-      }
+    }
+    if (this.inGame) {
+      System.out.println("Sei gia in partita");
+      return;
     }
     this.inGame = true;
     initializeShips(Util.MIN_SHIP);
