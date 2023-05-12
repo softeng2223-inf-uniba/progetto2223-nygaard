@@ -17,6 +17,11 @@ Iniziamo con le presentazioni:
         font-family: 'Montserrat', sans-serif;
         font-size: 24px;
     }
+
+    .gallery {
+        display: grid;
+        gap: 16px;
+    }
 </style>
 
 <div class="title-container">
