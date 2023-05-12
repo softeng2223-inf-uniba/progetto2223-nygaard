@@ -32,4 +32,15 @@ public abstract class Grid {
     this.dimension = newDimension;
   }
 
+  /**
+   * <h3> getDimension </h3>
+   * <p>
+   * Restituisce la dimensione della griglia.
+   * </p>
+   * @return Dimensione della griglia.
+   */
+  public int getDimension() {
+    return this.dimension;
+  }
+
 }
