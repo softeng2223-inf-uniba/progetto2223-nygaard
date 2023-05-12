@@ -46,6 +46,8 @@ public final class Util {
   public static final char SEA_CHARACTER = '~';
   public static final char SHIP_CHARACTER = '*';
   public static final int FIRST_TWO_DIGITS = 10;
+  public static final boolean VERTICAL = true;
+  public static final boolean HORIZONTAL = false;
 
   /**
    * <h3> HELP_PATH </h3>
