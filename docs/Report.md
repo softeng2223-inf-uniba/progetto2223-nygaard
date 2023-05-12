@@ -46,6 +46,11 @@ Iniziamo con le presentazioni:
     .info p {
         color: #e2e2e2;
     }
+
+    .name {
+        font-size: 18px;
+        font-weight: 700;
+    }
 </style>
 
 <div class="title-container">
