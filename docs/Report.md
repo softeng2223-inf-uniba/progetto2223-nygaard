@@ -107,6 +107,7 @@ Iniziamo con le presentazioni:
     </div>
     <div class="student">
         <div class="item">
+             <img src="./img/membri/izzo.jpg" alt="GiudittaIzzo">
         </div>
         <div class="info">
         </div>
