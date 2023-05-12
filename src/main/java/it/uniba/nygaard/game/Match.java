@@ -180,7 +180,11 @@ public final class Match {
     Random rnd = new Random();
     Coordinate coord = new Coordinate();
     for (int j = Util.MIN_GENERATIONS; j <= Util.MAX_GENERATIONS; j++) {
-      direction = rnd.nextInt(2) == 1;
+      if (rnd.nextInt(2) == 1) {
+        direction = Util.VERTICAL;
+      } else {
+        direction = Util.HORIZONTAL;
+      }
       coord.setRow(rnd.nextInt(Util.MAX_ROWS) + 1);
       coord.setColumn((char) (rnd.nextInt(Util.MAX_COLUMN - Util.MIN_COLUMN + 1) + Util.MIN_COLUMN));
       this.ships[i - 1].setDirection(direction);
@@ -209,7 +213,7 @@ public final class Match {
    * @param i Indice della nave da posizionare.
    */
   private void placeShip(final int i) {
-    if (ships[i].getDirection()) {
+    if (ships[i].getDirection()==Util.VERTICAL) {
       for (int j = 0; j < ships[i].getHp(); j++) {
         defenseGrid.setCellCharacter(ships[i].getCoordRow() - 1 + j,
             ships[i].getCoordColumn() - Util.MIN_COLUMN, Util.SHIP_CHARACTER);
