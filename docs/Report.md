@@ -1,5 +1,7 @@
 # Report
 
+# 1. Introduzione
+
 # 2. Modello Di Dominio
 
 *I diagrammi che verranno mostrati, all'interno della relazione, sono stati realizzati
