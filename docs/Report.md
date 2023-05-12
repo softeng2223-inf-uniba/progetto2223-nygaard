@@ -42,6 +42,7 @@ Iniziamo con le presentazioni:
     </div>
     <div class="student">
         <div class="item">
+            <img src="./img/membri/labianca.jpg" alt="Stefano-Labianca">
         </div>
         <div class="info">
         </div>
