@@ -21,4 +21,15 @@ public abstract class Grid {
     this.dimension = newDimension;
   }
 
+  /**
+   * <h3> setDimension </h3>
+   * <p>
+   * Imposta la dimensione della griglia.
+   * </p>
+   * @param newDimension Dimensione della griglia.
+   */
+  public void setDimension(final int newDimension) {
+    this.dimension = newDimension;
+  }
+
 }
