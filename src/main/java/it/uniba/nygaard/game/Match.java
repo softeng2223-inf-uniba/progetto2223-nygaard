@@ -152,6 +152,10 @@ public final class Match {
     System.out.println(attackGrid);
   }
   public void showDefenseGrid() {
+    if (!this.inGame) {
+      System.out.println("Non sei in partita");
+      return;
+    }
     System.out.println(defenseGrid);
   }
   /**
