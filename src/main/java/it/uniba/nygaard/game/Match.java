@@ -151,6 +151,13 @@ public final class Match {
     initializeShips(Util.MIN_SHIP);
     System.out.println(attackGrid);
   }
+
+  /**
+   * <h3> showDefenseGrid </h3>
+   * <p>
+   * Il metodo effettua la stampa della griglia delle navi posizionate.
+   * </p>
+   */
   public void showDefenseGrid() {
     if (!this.inGame) {
       System.out.println("Non sei in partita");
