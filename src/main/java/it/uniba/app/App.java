@@ -60,7 +60,7 @@ public final class App {
 
       switch (command) {
         case "/help" -> Util.printHelp();
-        //case "/esci" -> l'app chiede conferma, in caso affermativo l'app si chiude
+        case "/esci" ->Util.exit();
         case "/facile" -> p.setDifficulty(Util.DIFFICULTY_EASY);
         case "/medio" -> p.setDifficulty(Util.DIFFICULTY_MEDIUM);
         case "/difficile" -> p.setDifficulty(Util.DIFFICULTY_HARD);
