@@ -7,6 +7,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
 
 /**
+ * <h2> App </h2>
  * <p>
  * La classe App si occupa della gestione dei comandi da tastiera,
  * vede se ci sono flags in ingresso all'avvio dell'applicazione
@@ -23,14 +24,17 @@ public final class App {
    *
    * @return the "Hello World!" string.
    */
-  public String getGreeting() {
+  String getGreeting() {
     return "Hello World!!!";
   }
 
   /**
-   * Punto di ingresso dell'applicazione.
+   * <h3> Main </h3>
+   * <p>
+   * Punto d'ingresso dell'applicazione.
+   * </p>
    *
-   * @param args Parametri di ingresso da linea di comando
+   * @param args Parametri d'ingresso da linea di comando
    */
   public static void main(final String[] args) {
     Scanner in = new Scanner(System.in, StandardCharsets.UTF_8);
@@ -56,12 +60,13 @@ public final class App {
 
       switch (command) {
         case "/help" -> Util.printHelp();
+        //case "/esci" -> l'app chiede conferma, in caso affermativo l'app si chiude
         case "/facile" -> p.setDifficulty(Util.DIFFICULTY_EASY);
         case "/medio" -> p.setDifficulty(Util.DIFFICULTY_MEDIUM);
         case "/difficile" -> p.setDifficulty(Util.DIFFICULTY_HARD);
         case "/mostralivello" -> p.showLevel();
         case "/mostranavi" -> p.showShips();
-        // case "/gioca" -> Incomincia la partita
+        case "/gioca" -> p.play();
         // case "/svelagriglia" -> Svela la griglia con tanto di navi
         default -> System.out.println("Comando non riconosciuto");
       }
