@@ -5,9 +5,7 @@ Nella seguente documentazione verrà descritta la relazione tecnica del progetto
 
 Iniziamo con le presentazioni:
 
-<div style="display: flex; justify-content: center; align-items: center;">
-    <h2 style="color: #e2e2e2; font-family: 'Montserrat', sans-serif; font-size: 24px;"> Gruppo Nygaard </h2>
-</div>
+## Gruppo Nygaard
 
 <div style=" display: grid; gap: 16px;">
     <div style="display: flex; flex-direction: row; align-items: center;">
