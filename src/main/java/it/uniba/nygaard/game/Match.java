@@ -151,7 +151,9 @@ public final class Match {
     initializeShips(Util.MIN_SHIP);
     System.out.println(attackGrid);
   }
-
+  public void showDefenseGrid() {
+    System.out.println(defenseGrid);
+  }
   /**
    * <h3> initializeShips </h3>
    * <p>
