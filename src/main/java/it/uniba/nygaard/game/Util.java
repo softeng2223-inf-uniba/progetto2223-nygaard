@@ -1,6 +1,7 @@
 package it.uniba.nygaard.game;
 
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -128,7 +129,7 @@ public final class Util {
    * </p>
    */
   public static void exit() {
-    Scanner in = new Scanner(System.in);
+    Scanner in = new Scanner(System.in, StandardCharsets.UTF_8);
     String command;
     System.out.print("Cliccare 's' per confermare l'uscita: ");
     command = in.nextLine().toLowerCase();
