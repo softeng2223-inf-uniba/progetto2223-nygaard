@@ -121,6 +121,12 @@ public final class Util {
       e.printStackTrace();
     }
   }
+  /**
+   * <h3> exit </h3>
+   * <p>
+   * Metodo usato per effettuare la conferma dell'uscita dal programma e in caso affermativo eseguirla.
+   * </p>
+   */
   public static void exit() {
     Scanner in = new Scanner(System.in);
     String command;
