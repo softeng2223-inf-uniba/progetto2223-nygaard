@@ -121,10 +121,15 @@ public final class Util {
       e.printStackTrace();
     }
   }
-
   static void exit() {
+    Scanner in = new Scanner(System.in);
+    String command;
+    System.out.print("Cliccare 's' per confermare l'uscita: ");
+    command = in.nextLine().toLowerCase();
+    if (command.equals("s")) {
+      System.exit(0);
 
   }
-
+  }
 
 }
