@@ -7,29 +7,29 @@ Iniziamo con le presentazioni:
 
 ## Gruppo Nygaard
 
-<img src="./img/membri/cirilli.jpg" alt="Davy592">
+<img style="width: 128px; height: auto;" src="./img/membri/cirilli.jpg" alt="Davy592">
 
 Davide Cirilli
 20 anni, Molfetta (BA)
 d.cirilli2@studenti.uniba.it 
 
-<img style="width: 100%; height: 100%;" src="./img/membri/curri.png" alt="mattiacurri">
+<img style="width: 128px; height: auto;" src="./img/membri/curri.png" alt="mattiacurri">
 Mattia Curri 
 20 anni, Ceglie Messapica (BR) 
 m.curri8@studenti.uniba.it 
 
-<img style="width: 100%; height: 100%;" src="./img/membri/fontana.jpg" alt="Fonty02">
+<img style="width: 128px; height: auto;" src="./img/membri/fontana.jpg" alt="Fonty02">
 Emanuele Fontana 
 20 anni, Matera (MT) 
 e.fontana7@studenti.uniba.it 
 
 
-<img style="width: 100%; height: 100%;" src="./img/membri/labianca.jpg" alt="Stefano-Labianca">
+<img style="width: 128px; height: auto;" src="./img/membri/labianca.jpg" alt="Stefano-Labianca">
 Stefano Labianca
 20 anni, Corato (BA) 
 s.labianca10@studenti.uniba.it
       
-<img style="width: 100%; height: 100%;" src="./img/membri/izzo.jpg" alt="GiudittaIzzo">
+<img style="width: 128px; height: auto;" src="./img/membri/izzo.jpg" alt="GiudittaIzzo">
 Giuditta Izzo 
 21 anni, Bari (BA) 
 g.izzo2@studenti.uniba.it 
