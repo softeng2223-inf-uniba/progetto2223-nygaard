@@ -7,60 +7,32 @@ Iniziamo con le presentazioni:
 
 ## Gruppo Nygaard
 
-<div style=" display: grid; gap: 16px;">
-    <div style="display: flex; flex-direction: row; align-items: center;">
-        <div style="width: 128px; height: auto;">
-            <img style="width: 100%; height: 100%;" src="./img/membri/cirilli.jpg" alt="Davy592">
-        </div>
-        <div style="margin-left: 1rem; color: #e2e2e2;">
-            <p style="font-size: 18px; font-weight: 700; line-height: 16px;"> Davide Cirilli</p>
-            <p style="font-size: 14px; font-weight: 400; line-height: 8px;"> 20 anni, Molfetta (BA) </p>
-            <p style="font-size: 14px; font-weight: 400; line-height: 8px;"> d.cirilli2@studenti.uniba.it </p>
-        </div>
-    </div>
-    <div style="display: flex; flex-direction: row; align-items: center;">
-        <div style="width: 128px; height: auto;">
-            <img style="width: 100%; height: 100%;" src="./img/membri/curri.png" alt="mattiacurri">
-        </div>
-        <div style="margin-left: 1rem; color: #e2e2e2;">
-            <p style="font-size: 18px; font-weight: 700; line-height: 16px;"> Mattia Curri </p>
-            <p style="font-size: 14px; font-weight: 400; line-height: 8px;"> 20 anni, Ceglie Messapica (BR) </p>
-            <p style="font-size: 14px; font-weight: 400;
-         height: 8px;"> m.curri8@studenti.uniba.it </p>
-        </div>
-    </div>
-    <div style="display: flex; flex-direction: row; align-items: center;">
-        <div style="width: 128px; height: auto;">
-            <img style="width: 100%; height: 100%;" src="./img/membri/fontana.jpg" alt="Fonty02">
-        </div>
-        <div style="margin-left: 1rem; color: #e2e2e2;">
-            <p style="font-size: 18px; font-weight: 700; line-height: 16px;"> Emanuele Fontana </p>
-            <p style="font-size: 14px; font-weight: 400; line-height: 8px;"> 20 anni, Matera (MT) </p>
-            <p style="font-size: 14px; font-weight: 400; line-height: 8px;"> e.fontana7@studenti.uniba.it </p>
-        </div>
-    </div>
-    <div style="display: flex; flex-direction: row; align-items: center;">
-        <div style="width: 128px; height: auto;">
-            <img style="width: 100%; height: 100%;" src="./img/membri/labianca.jpg" alt="Stefano-Labianca">
-        </div>
-        <div style="margin-left: 1rem; color: #e2e2e2;">
-            <p style="font-size: 18px; font-weight: 700; line-height: 16px;"> Stefano Labianca</p>
-            <p style="font-size: 14px; font-weight: 400; line-height: 8px;"> 20 anni, Corato (BA) </p>
-            <p style="font-size: 14px; font-weight: 400; line-height: 8px;"> s.labianca10@studenti.uniba.it </p>
-        </div>
-    </div>
-    <div style="display: flex; flex-direction: row; align-items: center;">
-        <div style="width: 128px; height: auto;">
-             <img style="width: 100%; height: 100%;" src="./img/membri/izzo.jpg" alt="GiudittaIzzo">
-        </div>
-        <div style="margin-left: 1rem; color: #e2e2e2;">
-            <p style="font-size: 18px; font-weight: 700; line-height: 16px;"> Giuditta Izzo </p>
-            <p style="font-size: 14px; font-weight: 400; line-height: 8px;"> 21 anni, Bari (BA) </p>
-            <p style="font-size: 14px; font-weight: 400;
-         height: 8px;"> g.izzo2@studenti.uniba.it </p>
-        </div>
-    </div>
-</div>
+<img src="./img/membri/cirilli.jpg" alt="Davy592">
+
+Davide Cirilli
+20 anni, Molfetta (BA)
+d.cirilli2@studenti.uniba.it 
+
+<img style="width: 100%; height: 100%;" src="./img/membri/curri.png" alt="mattiacurri">
+Mattia Curri 
+20 anni, Ceglie Messapica (BR) 
+m.curri8@studenti.uniba.it 
+
+<img style="width: 100%; height: 100%;" src="./img/membri/fontana.jpg" alt="Fonty02">
+Emanuele Fontana 
+20 anni, Matera (MT) 
+e.fontana7@studenti.uniba.it 
+
+
+<img style="width: 100%; height: 100%;" src="./img/membri/labianca.jpg" alt="Stefano-Labianca">
+Stefano Labianca
+20 anni, Corato (BA) 
+s.labianca10@studenti.uniba.it
+      
+<img style="width: 100%; height: 100%;" src="./img/membri/izzo.jpg" alt="GiudittaIzzo">
+Giuditta Izzo 
+21 anni, Bari (BA) 
+g.izzo2@studenti.uniba.it 
 
 ---
 
