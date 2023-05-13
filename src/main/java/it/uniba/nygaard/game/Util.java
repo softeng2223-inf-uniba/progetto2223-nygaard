@@ -121,7 +121,7 @@ public final class Util {
       e.printStackTrace();
     }
   }
-  static void exit() {
+  public static void exit() {
     Scanner in = new Scanner(System.in);
     String command;
     System.out.print("Cliccare 's' per confermare l'uscita: ");
