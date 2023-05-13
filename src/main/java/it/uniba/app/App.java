@@ -47,8 +47,9 @@ public final class App {
       if (argument.equals("--help") || argument.equals("-h")) {
         Util.printHelp();
       } else {
-        System.out.println("Parametro " + argument + " non riconosciuto");
-        //esci
+        System.out.println("Parametro " + argument + " non riconosciuto.Premere invio per uscire");
+        in.nextLine();
+        System.exit(0);
       }
     } else {
       Util.printDescription();
@@ -60,7 +61,7 @@ public final class App {
 
       switch (command) {
         case "/help" -> Util.printHelp();
-        //case "/esci" -> l'app chiede conferma, in caso affermativo l'app si chiude
+        case "/esci" -> Util.exit();
         case "/facile" -> p.setDifficulty(Util.DIFFICULTY_EASY);
         case "/medio" -> p.setDifficulty(Util.DIFFICULTY_MEDIUM);
         case "/difficile" -> p.setDifficulty(Util.DIFFICULTY_HARD);

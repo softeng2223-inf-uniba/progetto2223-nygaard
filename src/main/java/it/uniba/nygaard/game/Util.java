@@ -1,9 +1,11 @@
 package it.uniba.nygaard.game;
 
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.Scanner;
 
 /**
  * <h2> Util </h2>
@@ -119,6 +121,22 @@ public final class Util {
     } catch (IOException e) {
       e.printStackTrace();
     }
+  }
+  /**
+   * <h3> exit </h3>
+   * <p>
+   * Metodo usato per effettuare la conferma dell'uscita dal programma e in caso affermativo eseguirla.
+   * </p>
+   */
+  public static void exit() {
+    Scanner in = new Scanner(System.in, StandardCharsets.UTF_8);
+    String command;
+    System.out.print("Cliccare 's' per confermare l'uscita: ");
+    command = in.nextLine().toLowerCase();
+    if (command.equals("s")) {
+      System.exit(0);
+
+  }
   }
 
 }
