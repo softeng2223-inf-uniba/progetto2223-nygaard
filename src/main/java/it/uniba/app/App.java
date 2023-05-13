@@ -47,8 +47,9 @@ public final class App {
       if (argument.equals("--help") || argument.equals("-h")) {
         Util.printHelp();
       } else {
-        System.out.println("Parametro " + argument + " non riconosciuto");
-        //esci
+        System.out.println("Parametro " + argument + " non riconosciuto.Premere invio per uscire");
+        in.nextLine();
+        System.exit(0);
       }
     } else {
       Util.printDescription();
