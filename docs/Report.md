@@ -13,11 +13,15 @@ Iniziamo con le presentazioni:
 20 anni, Molfetta (BA) <br>
 d.cirilli2@studenti.uniba.it 
 
+<br>
+
 <img style="width: 128px; height: auto;" src="./img/membri/curri.png" alt="mattiacurri">
 
 ### **Mattia Curri** 
 20 anni, Ceglie Messapica (BR) <br>
 m.curri8@studenti.uniba.it 
+
+<br>
 
 <img style="width: 128px; height: auto;" src="./img/membri/fontana.jpg" alt="Fonty02">
 
@@ -25,13 +29,16 @@ m.curri8@studenti.uniba.it
 20 anni, Matera (MT) <br>
 e.fontana7@studenti.uniba.it 
 
+<br>
 
 <img style="width: 128px; height: auto;" src="./img/membri/labianca.jpg" alt="Stefano-Labianca">
 
 ### **Stefano Labianca**
 20 anni, Corato (BA)  <br>
 s.labianca10@studenti.uniba.it
-      
+
+<br>
+
 <img style="width: 128px; height: auto;" src="./img/membri/izzo.jpg" alt="GiudittaIzzo">
 
 ### **Giuditta Izzo** 
