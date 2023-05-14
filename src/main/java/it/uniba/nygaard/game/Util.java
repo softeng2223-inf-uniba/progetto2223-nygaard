@@ -51,14 +51,6 @@ public final class Util {
   public static final boolean VERTICAL = true;
   public static final boolean HORIZONTAL = false;
 
-   /**
-   * <h3> DESCRIPTION_PATH </h3>
-   * <p>
-   * Costante che contiene il percorso del file che contiene
-   * una breve descrizione del programma.
-   * </p>
-   */
-
   /**
    * <h3> Costruttore </h3>
    * <p>
