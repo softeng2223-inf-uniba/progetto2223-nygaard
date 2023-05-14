@@ -82,7 +82,7 @@ public final class Util {
   /**
    * <h3> printDescription </h3>
    * <p>
-   * Mostra una descrizione coincisa del programma.
+   * Mostra una descrizione concisa del programma.
    * </p>
    */
   public static void printDescription() {
