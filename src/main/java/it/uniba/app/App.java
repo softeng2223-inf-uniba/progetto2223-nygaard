@@ -52,6 +52,7 @@ public final class App {
         System.exit(0);
       }
     } else {
+      Util.printLogo();
       Util.printDescription();
     }
 
