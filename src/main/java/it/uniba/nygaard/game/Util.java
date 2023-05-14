@@ -82,21 +82,7 @@ public final class Util {
     Util.printFile(Util.DESCRIPTION_PATH);
   }
 
-  /**
-   * <h3> printFile </h3>
-   * <p>
-   * Metodo usato per la lettura di tutto il contenuto
-   * di un file posizionato in un certo percorso.
-   * </p>
-   * <p>
-   * Una volta letto tutto il contenuto del file, lo
-   * mostra a video.
-   * </p>
-   *
-   * @param path Percorso del file
-   */
-  
-  /**
+   /**
    * <h3> exit </h3>
    * <p>
    * Metodo usato per effettuare la conferma dell'uscita dal programma e in caso affermativo eseguirla.
