@@ -1,10 +1,6 @@
 package it.uniba.nygaard.game;
 
-import java.io.IOException;
 import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.Scanner;
 
 /**
@@ -52,24 +48,6 @@ public final class Util {
   public static final boolean HORIZONTAL = false;
 
   /**
-   * <h3> HELP_PATH </h3>
-   * <p>
-   * Costante che contiene il percorso del file che contiene
-   * le informazioni mostrate quando si digita il comando "/help".
-   * </p>
-   */
-  private static final String HELP_PATH = "src/main/java/it/uniba/nygaard/help/help.txt";
-
-  /**
-   * <h3> DESCRIPTION_PATH </h3>
-   * <p>
-   * Costante che contiene il percorso del file che contiene
-   * una breve descrizione del programma.
-   * </p>
-   */
-  private static final String DESCRIPTION_PATH = "src/main/java/it/uniba/nygaard/description/description.txt";
-
-  /**
    * <h3> Costruttore </h3>
    * <p>
    * Costruttore della classe Util.
@@ -86,43 +64,43 @@ public final class Util {
    * </p>
    */
   public static void printHelp() {
-    Util.printFile(Util.DESCRIPTION_PATH);
-    Util.printFile(Util.HELP_PATH);
+    Util.printDescription();
+    String help =
+        "> COMANDI\n"
+        + "    * /help             Vengono visualizzate le regole di gioco e i comandi disponibili\n"
+        + "    * /esci             Ti permette di uscire dal gioco\n"
+        + "    * /facile           Imposta la difficolta' della partita a \"Facile\"\n"
+        + "    * /medio            Imposta la difficolta' della partita a \"Medio\"\n"
+        + "    * /difficile        Imposta la difficolta' della partita a \"Difficile\"\n"
+        + "    * /mostralivello    Mostra il livello della partita\n"
+        + "    * /mostranavi       Mostra le navi ancora in gioco e il loro numero\n"
+        + "    * /gioca            Ti fa iniziare una partita\n"
+        + "    * /svelagriglia     Mostra la griglia generata dal computer\n";
+    System.out.println(help);
   }
 
   /**
    * <h3> printDescription </h3>
    * <p>
-   * Mostra una descrizione coincisa del programma.
+   * Mostra una descrizione concisa del programma.
    * </p>
    */
   public static void printDescription() {
-    Util.printFile(Util.DESCRIPTION_PATH);
+    String description =
+        "Benvenuti nel gioco della battaglia navale!\n"
+        + "Prima di iniziare vi andiamo a presentare una breve introduzione al gioco con\n"
+        + "i suoi relativi comandi.\n\n"
+        + "> INTRODUZIONE\n"
+        + "    In questa realizzazione della battaglia navale, giocherete voi contro il vostro\n"
+        + "    computer che posizionera' le navi in automatico prima dell'inizio della partita.\n\n"
+        + "    Come giocatore, dovete individuare le posizioni delle navi e affondarle\n"
+        + "    tutte, dalla prima all'ultima.\n\n"
+        + "    Vincerete la partita solamente se affonderete tutte le navi prima di raggiungere\n"
+        + "    il numero massimo di tentativi falliti, che cambia in base alla difficolta' scelta.\n";
+    System.out.println(description);
   }
 
-  /**
-   * <h3> printFile </h3>
-   * <p>
-   * Metodo usato per la lettura di tutto il contenuto
-   * di un file posizionato in un certo percorso.
-   * </p>
-   * <p>
-   * Una volta letto tutto il contenuto del file, lo
-   * mostra a video.
-   * </p>
-   *
-   * @param path Percorso del file
-   */
-  private static void printFile(final String path) {
-    Path filePath = Paths.get(path);
-    try {
-      String content = Files.readString(filePath);
-      System.out.println(content);
-    } catch (IOException e) {
-      e.printStackTrace();
-    }
-  }
-  /**
+   /**
    * <h3> exit </h3>
    * <p>
    * Metodo usato per effettuare la conferma dell'uscita dal programma e in caso affermativo eseguirla.
