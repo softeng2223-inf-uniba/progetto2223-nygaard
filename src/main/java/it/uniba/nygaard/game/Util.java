@@ -58,7 +58,6 @@ public final class Util {
    * una breve descrizione del programma.
    * </p>
    */
-  private static final String DESCRIPTION_PATH = "src/main/java/it/uniba/nygaard/description/description.txt";
 
   /**
    * <h3> Costruttore </h3>
