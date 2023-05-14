@@ -51,15 +51,7 @@ public final class Util {
   public static final boolean VERTICAL = true;
   public static final boolean HORIZONTAL = false;
 
-  /**
-   * <h3> HELP_PATH </h3>
-   * <p>
-   * Costante che contiene il percorso del file che contiene
-   * le informazioni mostrate quando si digita il comando "/help".
-   * </p>
-   */
-
-  /**
+   /**
    * <h3> DESCRIPTION_PATH </h3>
    * <p>
    * Costante che contiene il percorso del file che contiene
