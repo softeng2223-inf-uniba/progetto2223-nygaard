@@ -95,15 +95,7 @@ public final class Util {
    *
    * @param path Percorso del file
    */
-  private static void printFile(final String path) {
-    Path filePath = Paths.get(path);
-    try {
-      String content = Files.readString(filePath);
-      System.out.println(content);
-    } catch (IOException e) {
-      e.printStackTrace();
-    }
-  }
+  
   /**
    * <h3> exit </h3>
    * <p>
