@@ -1,5 +1,67 @@
 # Report
 
+# 1. Introduzione
+Nella seguente documentazione verrà descritta la relazione tecnica del progetto di **Ingegneria del Software Anno Accademico 2022-2023**.
+
+Iniziamo con le presentazioni:
+
+
+## Gruppo Nygaard 
+
+<br>
+
+<img style="width: 128px; height: auto;" src="./img/membri/cirilli.jpg" alt="Davy592">
+
+### **Davide Cirilli**
+20 anni, Molfetta (BA) <br>
+d.cirilli2@studenti.uniba.it 
+
+<br>
+
+<img style="width: 128px; height: auto;" src="./img/membri/curri.png" alt="mattiacurri">
+
+### **Mattia Curri** 
+20 anni, Ceglie Messapica (BR) <br>
+m.curri8@studenti.uniba.it 
+
+<br>
+
+<img style="width: 128px; height: auto;" src="./img/membri/fontana.jpg" alt="Fonty02">
+
+### **Emanuele Fontana** 
+20 anni, Matera (MT) <br>
+e.fontana7@studenti.uniba.it 
+
+<br>
+
+<img style="width: 128px; height: auto;" src="./img/membri/labianca.jpg" alt="Stefano-Labianca">
+
+### **Stefano Labianca**
+20 anni, Corato (BA)  <br>
+s.labianca10@studenti.uniba.it
+
+<br>
+
+<img style="width: 128px; height: auto;" src="./img/membri/izzo.jpg" alt="GiudittaIzzo">
+
+### **Giuditta Izzo** 
+21 anni, Bari (BA)  <br>
+g.izzo2@studenti.uniba.it 
+
+---
+
+<br>
+
+Il progetto svolto, consiste nella realizzazione della **Battaglia Navale**, sotto forma di applicazione eseguibile da riga di comando (*CLI*).
+
+In questa realizzazione, il giocatore si scontrerà contro il proprio computer che, ad inizio partita, genererà casualmente le posizioni delle navi. 
+Spetterà quindi al giocatore trovarle tutte e affondarle prima di esaurire il numero massimo di tentaviti falliti dati.
+
+Il numero massimo di tentativi falliti consentiti, dipende dalla difficoltà scelta:
+* **Facile**: Massimo 50;
+* **Medio**: Massimo 30;
+* **Difficile**: Massimo 10;
+
 # 2. Modello Di Dominio
 
 *I diagrammi che verranno mostrati, all'interno della relazione, sono stati realizzati
