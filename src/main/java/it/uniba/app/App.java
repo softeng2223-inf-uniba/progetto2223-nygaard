@@ -68,7 +68,7 @@ public final class App {
         case "/mostralivello" -> p.showLevel();
         case "/mostranavi" -> p.showShips();
         case "/gioca" -> p.play();
-        // case "/svelagriglia" -> Svela la griglia con tanto di navi
+        case "/svelagriglia" -> p.showDefenseGrid();
         default -> System.out.println("Comando non riconosciuto");
       }
     }

@@ -153,6 +153,19 @@ public final class Match {
   }
 
   /**
+   * <h3> showDefenseGrid </h3>
+   * <p>
+   * Il metodo effettua la stampa della griglia delle navi posizionate.
+   * </p>
+   */
+  public void showDefenseGrid() {
+    if (!this.inGame) {
+      System.out.println("Non sei in partita");
+      return;
+    }
+    System.out.println(defenseGrid);
+  }
+  /**
    * <h3> initializeShips </h3>
    * <p>
    * Il metodo initializeShips inizializza le navi in posizioni casuali.
