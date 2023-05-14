@@ -5,7 +5,8 @@ Nella seguente documentazione verrà descritta la relazione tecnica del progetto
 
 Iniziamo con le presentazioni:
 
-## Gruppo Nygaard
+
+<div align="center"> <h2> Gruppo Nygaard </h2> </div>
 
 <img style="width: 128px; height: auto;" src="./img/membri/cirilli.jpg" alt="Davy592">
 
