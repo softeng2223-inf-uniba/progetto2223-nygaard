@@ -182,3 +182,10 @@ Il funzionamento del software richiede:
 <br/>
 
 # 9. Analisi retrospettiva
+
+All'interno di questa sezione, verranno riportate le ***analisi retrospettive*** fatte dal **Team**, nel corso del
+tempo, ad ogni ***Sprint Feedback***, seguendo questo *schema* strutturato:
+
+- *cosa ci ha soddisfatto*
+- *cosa ci ha deluso*
+- *cosa abbiamo imparato*
