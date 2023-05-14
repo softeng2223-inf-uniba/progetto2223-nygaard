@@ -56,6 +56,12 @@ public final class Util {
   private Util() {
   }
 
+  /**
+   * <h3> printLogo </h3>
+   * <p>
+   *   Metodo che stampa il logo dell'applicazione.
+   * </p>
+   */
   public static void printLogo() {
     String logo = "  ____        _   _   _           _     _       \n" +
                   " |  _ \\      | | | | | |         | |   (_)      \n" +
