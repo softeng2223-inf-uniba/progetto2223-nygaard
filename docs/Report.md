@@ -190,8 +190,6 @@ tempo, ad ogni ***Sprint Feedback***, seguendo questo *schema* strutturato:
 - *cosa ci ha deluso*
 - *cosa abbiamo imparato*
 
-## 3.1 Requisiti Funzionali
-
-### **Sprint 0**: *dimostrare familiarità con GitHub e il processo agile*
+## 9.1 **Sprint 0**: *dimostrare familiarità con GitHub e il processo agile*
 
 
