@@ -8,6 +8,8 @@ Iniziamo con le presentazioni:
 
 ## Gruppo Nygaard 
 
+<br>
+
 <img style="width: 128px; height: auto;" src="./img/membri/cirilli.jpg" alt="Davy592">
 
 ### **Davide Cirilli**
