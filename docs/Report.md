@@ -180,3 +180,5 @@ Il funzionamento del software richiede:
 - il container docker dell’app deve essere eseguito da terminali che supportano Unicode con encoding UTF-8 o UTF-16.
 
 <br/>
+
+# 9. Analisi retrospettiva
