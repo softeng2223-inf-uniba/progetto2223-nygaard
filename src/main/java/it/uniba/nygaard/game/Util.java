@@ -64,8 +64,8 @@ public final class Util {
    * </p>
    */
   public static void printHelp() {
-    Util.printFile(Util.DESCRIPTION_PATH);
-    Util.printFile(Util.HELP_PATH);
+    Util.printDescription();
+    // Stampa comandi
   }
 
   /**
@@ -75,7 +75,18 @@ public final class Util {
    * </p>
    */
   public static void printDescription() {
-    Util.printFile(Util.DESCRIPTION_PATH);
+    String description =
+        "Benvenuti nel gioco della battaglia navale!\n"
+        + "Prima di iniziare vi andiamo a presentare una breve introduzione al gioco con\n"
+        + "i suoi relativi comandi.\n\n"
+        + "> INTRODUZIONE\n"
+        + "    In questa realizzazione della battaglia navale, giocherete voi contro il vostro\n"
+        + "    computer che posizionera' le navi in automatico prima dell'inizio della partita.\n\n"
+        + "    Come giocatore, dovete individuare le posizioni delle navi e affondarle\n"
+        + "    tutte, dalla prima all'ultima.\n\n"
+        + "    Vincerete la partita solamente se affonderete tutte le navi prima di raggiungere\n"
+        + "    il numero massimo di tentativi falliti, che cambia in base alla difficolta' scelta.\n";
+    System.out.println(description);
   }
 
    /**
