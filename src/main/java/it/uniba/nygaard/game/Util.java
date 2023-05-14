@@ -65,7 +65,18 @@ public final class Util {
    */
   public static void printHelp() {
     Util.printDescription();
-    // Stampa comandi
+    String help =
+        "> COMANDI\n"
+        + "    * /help             Vengono visualizzate le regole di gioco e i comandi disponibili\n"
+        + "    * /esci             Ti permette di uscire dal gioco\n"
+        + "    * /facile           Imposta la difficolta' della partita a \"Facile\"\n"
+        + "    * /medio            Imposta la difficolta' della partita a \"Medio\"\n"
+        + "    * /difficile        Imposta la difficolta' della partita a \"Difficile\"\n"
+        + "    * /mostralivello    Mostra il livello della partita\n"
+        + "    * /mostranavi       Mostra le navi ancora in gioco e il loro numero\n"
+        + "    * /gioca            Ti fa iniziare una partita\n"
+        + "    * /svelagriglia     Mostra la griglia generata dal computer\n";
+    System.out.println(help);
   }
 
   /**
