@@ -195,6 +195,8 @@ Il funzionamento del software richiede:
     Se l'installazione è avvenuta con successo, e Docker viene eseguito correttamente, si avrà un risultato del genere:
 ![docker_info.png](img%2FManualeUtente%2Fdocker_info.png)
 
+### Autenticazione con Github
+
 
 # 9. Analisi retrospettiva
 
