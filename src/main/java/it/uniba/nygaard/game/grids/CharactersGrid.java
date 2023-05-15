@@ -72,7 +72,7 @@ public final class CharactersGrid extends Grid {
     String str = "";
     char c;
     str += "-".repeat(Util.HEADING_EDGE_WIDTH);
-    str += Util.PURPLE + "Attacco" + Util.RESET;
+    str += Util.PURPLE + Util.BOLD + "Attacco" + Util.RESET;
     str += "-".repeat(Util.HEADING_EDGE_WIDTH);
     str += "\n\n";
     str += " ".repeat(Util.COLUMNS_EDGE_WIDTH);
@@ -113,7 +113,7 @@ public final class CharactersGrid extends Grid {
     str += " ".repeat(Util.COLUMNS_EDGE_WIDTH - 1);
     str += "\n\n";
     str += "-".repeat(Util.HEADING_EDGE_WIDTH);
-    str += Util.PURPLE + "Attacco" + Util.RESET;
+    str += Util.PURPLE + Util.BOLD + "Attacco" + Util.RESET;
     str += "-".repeat(Util.HEADING_EDGE_WIDTH);
     str += "\n";
     return str;
