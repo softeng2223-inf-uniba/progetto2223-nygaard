@@ -192,4 +192,4 @@ tempo, ad ogni ***Sprint Feedback***, seguendo questo *schema* strutturato:
 
 ## 9.1 **Sprint 0**: *dimostrare familiarità con GitHub e il processo agile*
 
-
+Il seguente diagramma è relativo agli stati emotivi,e alle ragioni che li hanno scatenati, provati durante l'esecuzione dello Sprint 0:
