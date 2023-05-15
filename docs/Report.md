@@ -204,3 +204,4 @@ Il seguente diagramma, definito **Diagramma di affinità** raggruppa gli stati d
 
 ![DiagrammaDiAffinità](img/AnalisiRetrospettivaSprint0/DiagrammaDiAffinita'.png)
 
+Infine consideriamo il diagramma relativo a ciò che vorremmo mantenere, smettere o incomiciare a fare:
