@@ -141,10 +141,10 @@ public final class Match {
    * </p>
    */
   public void showShips() {
-    System.out.println("\tCacciatorpediniere \t■■ \tEsemplari: " + Util.DESTROYER_NO);
-    System.out.println("\tIncrociatore \t\t■■■ \tEsemplari: " + Util.CRUISER_NO);
-    System.out.println("\tCorazzata \t\t■■■■ \tEsemplari: " + Util.BATTLESHIP_NO);
-    System.out.println("\tPortaerei \t\t■■■■■ \tEsemplari: " + Util.AIRCRAFT_NO);
+    System.out.println("\tCacciatorpediniere \t■■ \t" + Util.RED + "Esemplari: " + Util.DESTROYER_NO + Util.RESET);
+    System.out.println("\tIncrociatore \t\t■■■ \t" + Util.YELLOW + "Esemplari: " + Util.CRUISER_NO + Util.RESET);
+    System.out.println("\tCorazzata \t\t■■■■ \t" + Util.GREEN + "Esemplari: " + Util.BATTLESHIP_NO + Util.RESET);
+    System.out.println("\tPortaerei \t\t■■■■■ \t" + Util.CYAN + "Esemplari: " + Util.AIRCRAFT_NO + Util.RESET);
   }
 
   /**
