@@ -123,7 +123,7 @@ public final class Util {
    * </p>
    */
   public static void printDescription() {
-    String description = Util.PURPLE
+    String description = Util.BOLD + Util.PURPLE
         + "Benvenuti nel gioco della battaglia navale!\n"
         + Util.RESET
         + "Prima di iniziare vi andiamo a presentare una breve introduzione al gioco con\n"
