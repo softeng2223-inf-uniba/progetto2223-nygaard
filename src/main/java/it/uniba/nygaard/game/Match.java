@@ -111,11 +111,25 @@ public final class Match {
    */
   public void showLevel() {
     if (this.difficulty != Util.DIFFICULTY_NOT_SETTED) {
-      System.out.println("Livello di difficoltà scelto: " + this.difficultyNames[this.difficulty] + "\n"
-          + "Numero massimo di tentativi falliti: " + this.attempts[this.difficulty]);
+      System.out.print("Livello di difficoltà scelto: ");
+      switch (this.difficultyNames[this.difficulty]) {
+        case Util.EASY_NAME -> System.out.print(Util.GREEN);
+        case Util.MEDIUM_NAME -> System.out.print(Util.YELLOW);
+        case Util.HARD_NAME -> System.out.print(Util.RED);
+        default -> System.out.print(Util.RESET);
+      }
+      System.out.print(this.difficultyNames[this.difficulty] + Util.RESET + "\n"
+              + "Numero massimo di tentativi falliti: ");
+      switch (this.difficultyNames[this.difficulty]) {
+        case Util.EASY_NAME -> System.out.print(Util.GREEN);
+        case Util.MEDIUM_NAME -> System.out.print(Util.YELLOW);
+        case Util.HARD_NAME -> System.out.print(Util.RED);
+        default -> System.out.print(Util.RESET);
+      }
+      System.out.println(this.attempts[this.difficulty] + Util.RESET);
     } else {
-      System.out.println("Difficoltà non ancora scelta" + "\n" + "Per scegliere la difficoltà utilizzare "
-          + "il comando /facile, /medio o /difficile");
+      System.out.println(Util.RED + "Difficoltà non ancora scelta\nPer scegliere la difficoltà utilizzare "
+              + "il comando /facile, /medio o /difficile" + Util.RESET);
     }
   }
 
