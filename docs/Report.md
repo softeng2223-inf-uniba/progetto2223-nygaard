@@ -205,6 +205,8 @@ Il funzionamento del software richiede:
   ```
     sostituendo il vostro username di GitHub alla voce `<USERNAME>`.
 
+### Avvio dell'applicazione
+
 # 9. Analisi retrospettiva
 
 All'interno di questa sezione, verranno riportate le ***analisi retrospettive*** fatte dal **Team**, nel corso del
