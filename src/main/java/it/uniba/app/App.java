@@ -58,9 +58,9 @@ public final class App {
     }
 
     while (true) {
-      System.out.print("Inserire un comando: ");
+      System.out.print("Inserire un comando: " + Util.CYAN);
       command = in.nextLine().toLowerCase();
-
+      System.out.print(Util.RESET);
       switch (command) {
         case "/help" -> Util.printHelp();
         case "/esci" -> Util.exit();
