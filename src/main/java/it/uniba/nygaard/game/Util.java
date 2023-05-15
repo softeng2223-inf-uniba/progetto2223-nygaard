@@ -91,17 +91,26 @@ public final class Util {
    */
   public static void printHelp() {
     Util.printDescription();
-    String help =
-        "> COMANDI\n"
-        + "    * /help             Vengono visualizzate le regole di gioco e i comandi disponibili\n"
-        + "    * /esci             Ti permette di uscire dal gioco\n"
-        + "    * /facile           Imposta la difficolta' della partita a \"Facile\"\n"
-        + "    * /medio            Imposta la difficolta' della partita a \"Medio\"\n"
-        + "    * /difficile        Imposta la difficolta' della partita a \"Difficile\"\n"
-        + "    * /mostralivello    Mostra il livello della partita\n"
-        + "    * /mostranavi       Mostra le navi ancora in gioco e il loro numero\n"
-        + "    * /gioca            Ti fa iniziare una partita\n"
-        + "    * /svelagriglia     Mostra la griglia generata dal computer\n";
+    String help = Util.YELLOW
+        + "> COMANDI\n"
+        + Util.CYAN + "    * /help             " + Util.RESET
+            + "Vengono visualizzate le regole " + "di gioco e i comandi disponibili\n"
+        + Util.CYAN + "    * /esci             " + Util.RESET
+            + "Ti permette di uscire dal gioco\n"
+        + Util.CYAN + "    * /facile           " + Util.RESET
+            + "Imposta la difficolta' della partita a \"Facile\"\n"
+        + Util.CYAN +  "    * /medio            " + Util.RESET
+            + "Imposta la difficolta' della partita a \"Medio\"\n"
+        + Util.CYAN + "    * /difficile        " + Util.RESET
+            + "Imposta la difficolta' della partita a \"Difficile\"\n"
+        + Util.CYAN + "    * /mostralivello    " + Util.RESET
+            + "Mostra il livello della partita\n"
+        + Util.CYAN + "    * /mostranavi       " + Util.RESET
+            + "Mostra le navi ancora in gioco e il loro numero\n"
+        + Util.CYAN + "    * /gioca            " + Util.RESET
+            + "Ti fa iniziare una partita\n"
+        + Util.CYAN + "    * /svelagriglia     " + Util.RESET
+            + "Mostra la griglia generata dal computer\n";
     System.out.println(help);
   }
 
