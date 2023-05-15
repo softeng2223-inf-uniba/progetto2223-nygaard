@@ -162,7 +162,7 @@ public final class CellsGrid extends Grid {
           default:
             str += Util.RESET;
         }
-        str += c + " ";
+        str += c + " " + Util.RESET;
       }
       str += "  " + x + "\n";
     }
