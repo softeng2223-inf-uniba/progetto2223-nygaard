@@ -74,11 +74,11 @@ public final class Match {
    */
   public void setDifficulty(final int newDifficulty) {
     if (this.inGame) {
-      System.out.println("Non puoi cambiare difficoltà durante una partita");
+      System.out.println(Util.RED + "Non puoi cambiare difficoltà durante una partita" + Util.RESET);
       return;
     }
     if (this.difficulty == newDifficulty) {
-      System.out.println("Hai già impostato questa difficoltà");
+      System.out.println(Util.RED + "Hai già impostato questa difficoltà" + Util.RESET);
       return;
     }
     if (this.difficulty != Util.DIFFICULTY_NOT_SETTED) {
@@ -86,19 +86,20 @@ public final class Match {
       Scanner in = new Scanner(System.in, StandardCharsets.UTF_8);
       do {
         System.out.print("Il livello attuale è " + difficultyNames[this.difficulty] + ". Confermare cambio in "
-            + difficultyNames[newDifficulty] + "? (y/n) ");
+                + difficultyNames[newDifficulty] + "? (" + Util.GREEN + "y" + Util.RESET
+                + "/" + Util.RED + "n" + Util.RESET + ") ");
         choice = in.nextLine().toLowerCase();
         if (!choice.equals("y") && !choice.equals("n")) {
-          System.out.println("Scelta non valida");
+          System.out.println(Util.RED + "Scelta non valida" + Util.RESET);
         }
       } while (!choice.equals("y") && !choice.equals("n"));
       if (choice.equals("n")) {
-        System.out.println("Operazione annullata");
+        System.out.println(Util.RED + "Operazione annullata" + Util.RESET);
         return;
       }
     }
     this.difficulty = newDifficulty;
-    System.out.println("OK");
+    System.out.println(Util.GREEN + "OK" + Util.RESET);
   }
 
   /**
