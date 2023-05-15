@@ -180,3 +180,32 @@ Il funzionamento del software richiede:
 - il container docker dell’app deve essere eseguito da terminali che supportano Unicode con encoding UTF-8 o UTF-16.
 
 <br/>
+
+# 9. Analisi retrospettiva
+
+All'interno di questa sezione, verranno riportate le ***analisi retrospettive*** fatte dal **Team**, nel corso del
+tempo, ad ogni ***Sprint Feedback***, seguendo questo *schema* strutturato:
+
+- *cosa ci ha soddisfatto*
+- *cosa ci ha deluso*
+- *cosa abbiamo imparato*
+
+## 9.1 **Sprint 0**: *dimostrare familiarità con GitHub e il processo agile*
+
+Il seguente *diagramma* è relativo agli **stati emotivi** e alle ragioni che li hanno scatenati provati durante l'esecuzione dello Sprint 0:
+
+![ArrabbiatoTristeFelice](img/AnalisiRetrospettivaSprint0/ArrabbiatoTristeFelice.jpg)
+
+Il seguente *diagramma*, definito **Diagramma di affinità** raggruppa gli stati d'animo, precedentemente elencati, rispetto ai seguenti ambiti di lavoro:
+
+- *collaborazione*
+- *strumenti*
+- *problemi individuali*
+
+![DiagrammaDiAffinità](img/AnalisiRetrospettivaSprint0/DiagrammaDiAffinita'.png)
+
+Infine consideriamo il *diagramma* relativo a ciò che vorremmo **mantenere**, **smettere** o **incomiciare** a fare:
+
+![AvviaArrestaContinua](img/AnalisiRetrospettivaSprint0/AvviaArrestaContinua.jpg)
+
+<br/>
