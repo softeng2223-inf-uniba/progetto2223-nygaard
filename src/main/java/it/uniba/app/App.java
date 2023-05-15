@@ -71,7 +71,7 @@ public final class App {
         case "/mostranavi" -> p.showShips();
         case "/gioca" -> p.play();
         case "/svelagriglia" -> p.showDefenseGrid();
-        default -> System.out.println("Comando non riconosciuto");
+        default -> System.out.println(Util.RED + "Comando non riconosciuto" + Util.RESET);
       }
     }
   }
