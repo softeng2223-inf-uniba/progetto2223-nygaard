@@ -143,10 +143,14 @@ public final class Match {
    * </p>
    */
   public void showShips() {
-    System.out.println("\tCacciatorpediniere \t■■ \t" + Util.RED + "Esemplari: " + Util.DESTROYER_NO + Util.RESET);
-    System.out.println("\tIncrociatore \t\t■■■ \t" + Util.YELLOW + "Esemplari: " + Util.CRUISER_NO + Util.RESET);
-    System.out.println("\tCorazzata \t\t■■■■ \t" + Util.GREEN + "Esemplari: " + Util.BATTLESHIP_NO + Util.RESET);
-    System.out.println("\tPortaerei \t\t■■■■■ \t" + Util.CYAN + "Esemplari: " + Util.AIRCRAFT_NO + Util.RESET);
+    System.out.println(Util.CYAN + Util.ITALIC + "\tCacciatorpediniere \t" + Util.RESET + "■■ \t"
+            + Util.CYAN + Util.BOLD + "Esemplari: " + Util.DESTROYER_NO + Util.RESET);
+    System.out.println(Util.CYAN + Util.ITALIC + "\tIncrociatore \t\t" + Util.RESET + "■■■ \t"
+            + Util.CYAN + Util.BOLD + "Esemplari: " + Util.CRUISER_NO + Util.RESET);
+    System.out.println(Util.CYAN + Util.ITALIC + "\tCorazzata \t\t" + Util.RESET + "■■■■ \t"
+            + Util.CYAN + Util.BOLD + "Esemplari: " + Util.BATTLESHIP_NO + Util.RESET);
+    System.out.println(Util.CYAN + Util.ITALIC + "\tPortaerei \t\t" + Util.RESET + "■■■■■ \t"
+            + Util.CYAN + Util.BOLD + "Esemplari: " + Util.AIRCRAFT_NO + Util.RESET);
   }
 
   /**
