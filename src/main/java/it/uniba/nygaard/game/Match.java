@@ -113,7 +113,7 @@ public final class Match {
    */
   public void showLevel() {
     if (this.difficulty != Util.DIFFICULTY_NOT_SETTED) {
-      System.out.print("Livello di difficoltà scelto: ");
+      System.out.print("Livello di difficoltà scelto: " + Util.BOLD);
       switch (this.difficultyNames[this.difficulty]) {
         case Util.EASY_NAME -> System.out.print(Util.GREEN);
         case Util.MEDIUM_NAME -> System.out.print(Util.YELLOW);
@@ -121,7 +121,7 @@ public final class Match {
         default -> System.out.print(Util.RESET);
       }
       System.out.print(this.difficultyNames[this.difficulty] + Util.RESET + "\n"
-              + "Numero massimo di tentativi falliti: ");
+              + "Numero massimo di tentativi falliti: " + Util.BOLD);
       switch (this.difficultyNames[this.difficulty]) {
         case Util.EASY_NAME -> System.out.print(Util.GREEN);
         case Util.MEDIUM_NAME -> System.out.print(Util.YELLOW);
