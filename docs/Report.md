@@ -187,6 +187,15 @@ Il funzionamento del software richiede:
 
 ### Installazione e configurazione di Docker
 
+- Scaricare ed installare **Docker Desktop** dal sito ufficiale (*https://www.docker.com/products/docker-desktop/*)
+- Assicurarsi che l'installazione sia andata a buon fine
+  - Avviare il programma **con privilegi elevati**
+  - Utilizzare un prompt dei comandi e digitare il seguente comando: ``` docker info ```
+
+    Se l'installazione è avvenuta con successo, e Docker viene eseguito correttamente, si avrà un risultato del genere:
+![docker_info.png](img%2FManualeUtente%2Fdocker_info.png)
+
+
 # 9. Analisi retrospettiva
 
 All'interno di questa sezione, verranno riportate le ***analisi retrospettive*** fatte dal **Team**, nel corso del
