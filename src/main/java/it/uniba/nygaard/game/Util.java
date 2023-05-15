@@ -72,7 +72,7 @@ public final class Util {
    * </p>
    */
   public static void printLogo() {
-    String logo = Util.RED
+    String logo = Util.BOLD + Util.RED
         + "    ____   ___   ______ ______ __     ______ _____  __  __ ____ ____ \n"
         + "   / __ ) /   | /_  __//_  __// /    / ____// ___/ / / / //  _// __ \\\n"
         + "  / __  |/ /| |  / /    / /  / /    / __/   \\__ \\ / /_/ / / / / /_/ /\n"
