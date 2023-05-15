@@ -112,11 +112,12 @@ public final class Util {
    * </p>
    */
   public static void printDescription() {
-    String description =
-        "Benvenuti nel gioco della battaglia navale!\n"
+    String description = Util.PURPLE
+        + "Benvenuti nel gioco della battaglia navale!\n"
+        + Util.RESET
         + "Prima di iniziare vi andiamo a presentare una breve introduzione al gioco con\n"
         + "i suoi relativi comandi.\n\n"
-        + "> INTRODUZIONE\n"
+        + Util.YELLOW +  "> INTRODUZIONE\n" + Util.RESET
         + "    In questa realizzazione della battaglia navale, giocherete voi contro il vostro\n"
         + "    computer che posizionera' le navi in automatico prima dell'inizio della partita.\n\n"
         + "    Come giocatore, dovete individuare le posizioni delle navi e affondarle\n"
