@@ -196,7 +196,14 @@ Il funzionamento del software richiede:
 ![docker_info.png](img%2FManualeUtente%2Fdocker_info.png)
 
 ### Autenticazione con Github
-
+- Eseguire il login con l'account GitHub in modo tale da poter ottenere l'applicazione
+  - Se non si ha a disposizione un *Personal Access Token*, crearne uno seguendo le direttive ufficiali (*https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token#creating-a-personal-access-token-classic*)
+  - Salvare il token in un file di testo, chiamando il file ad esempio `TOKEN.txt`
+  - Portarsi in un prompt dei comandi nella cartella dove è stato salvato il precedente file ed eseguire il seguente comando:
+  ```bash
+    cat ./TOKEN.txt | docker login ghcr.io -u <USERNAME> --password-stdin
+  ```
+    sostituendo il vostro username di GitHub alla voce `<USERNAME>`.
 
 # 9. Analisi retrospettiva
 
