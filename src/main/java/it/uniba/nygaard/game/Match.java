@@ -155,11 +155,11 @@ public final class Match {
    */
   public void play() {
     if (this.difficulty == Util.DIFFICULTY_NOT_SETTED) {
-      System.out.println("Non hai ancora impostato il livello");
+      System.out.println(Util.RED + "Non hai ancora impostato il livello" + Util.RESET);
       return;
     }
     if (this.inGame) {
-      System.out.println("Sei gia in partita");
+      System.out.println(Util.RED + "Sei gia in partita" + Util.RESET);
       return;
     }
     this.inGame = true;
