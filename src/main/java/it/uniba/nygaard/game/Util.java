@@ -145,7 +145,7 @@ public final class Util {
   public static void exit() {
     Scanner in = new Scanner(System.in, StandardCharsets.UTF_8);
     String command;
-    System.out.print("Cliccare 's' per confermare l'uscita: ");
+    System.out.print("Cliccare '" + Util.GREEN + "s" + Util.RESET + "' per confermare l'uscita: ");
     command = in.nextLine().toLowerCase();
     if (command.equals("s")) {
       System.exit(0);
