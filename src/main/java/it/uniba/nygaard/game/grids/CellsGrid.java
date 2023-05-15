@@ -130,7 +130,7 @@ public final class CellsGrid extends Grid {
     String str = "";
     char c;
     str += "-".repeat(Util.HEADING_EDGE_WIDTH);
-    str += Util.PURPLE + "Difesa" + Util.RESET;
+    str += Util.PURPLE + Util.BOLD + "Difesa" + Util.RESET;
     str += "-".repeat(Util.HEADING_EDGE_WIDTH);
     str += "\n\n";
     str += " ".repeat(Util.COLUMNS_EDGE_WIDTH);
@@ -174,7 +174,7 @@ public final class CellsGrid extends Grid {
     str += " ".repeat(Util.COLUMNS_EDGE_WIDTH - 1);
     str += "\n\n";
     str += "-".repeat(Util.HEADING_EDGE_WIDTH);
-    str += Util.PURPLE + "Difesa" + Util.RESET;
+    str += Util.PURPLE + Util.BOLD + "Difesa" + Util.RESET;
     str += "-".repeat(Util.HEADING_EDGE_WIDTH);
     str += "\n";
     return str;
