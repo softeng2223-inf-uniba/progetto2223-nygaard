@@ -46,9 +46,8 @@ public final class Util {
   public static final int FIRST_TWO_DIGITS = 10;
   public static final boolean VERTICAL = true;
   public static final boolean HORIZONTAL = false;
-
   public static final String RED = "\u001B[31m";
-  
+  public static final String GREEN = "\u001B[32m";
 
   /**
    * <h3> Costruttore </h3>
