@@ -185,6 +185,8 @@ Il funzionamento del software richiede:
 
 ## Passi preliminari
 
+### Installazione e configurazione di Docker
+
 # 9. Analisi retrospettiva
 
 All'interno di questa sezione, verranno riportate le ***analisi retrospettive*** fatte dal **Team**, nel corso del
