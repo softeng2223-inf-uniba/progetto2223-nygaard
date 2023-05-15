@@ -175,7 +175,7 @@ public final class Match {
    */
   public void showDefenseGrid() {
     if (!this.inGame) {
-      System.out.println("Non sei in partita");
+      System.out.println(Util.RED + "Non sei in partita" + Util.RESET);
       return;
     }
     System.out.println(defenseGrid);
