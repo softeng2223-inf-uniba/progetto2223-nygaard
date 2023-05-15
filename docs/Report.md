@@ -192,11 +192,11 @@ tempo, ad ogni ***Sprint Feedback***, seguendo questo *schema* strutturato:
 
 ## 9.1 **Sprint 0**: *dimostrare familiarità con GitHub e il processo agile*
 
-Il seguente diagramma è relativo agli stati emotivi,e alle ragioni che li hanno scatenati, provati durante l'esecuzione dello Sprint 0:
+Il seguente *diagramma* è relativo agli **stati emotivi** e alle ragioni che li hanno scatenati provati durante l'esecuzione dello Sprint 0:
 
 ![ArrabbiatoTristeFelice](img/AnalisiRetrospettivaSprint0/ArrabbiatoTristeFelice.jpg)
 
-Il seguente diagramma, definito **Diagramma di affinità** raggruppa gli stati d'animo, precedentemente elencati, rispetto ai seguenti ambiti di lavoro:
+Il seguente *diagramma*, definito **Diagramma di affinità** raggruppa gli stati d'animo, precedentemente elencati, rispetto ai seguenti ambiti di lavoro:
 
 - *collaborazione*
 - *strumenti*
@@ -204,6 +204,8 @@ Il seguente diagramma, definito **Diagramma di affinità** raggruppa gli stati d
 
 ![DiagrammaDiAffinità](img/AnalisiRetrospettivaSprint0/DiagrammaDiAffinita'.png)
 
-Infine consideriamo il diagramma relativo a ciò che vorremmo mantenere, smettere o incomiciare a fare:
+Infine consideriamo il *diagramma* relativo a ciò che vorremmo **mantenere**, **smettere** o **incomiciare** a fare:
 
 ![AvviaArrestaContinua](img/AnalisiRetrospettivaSprint0/AvviaArrestaContinua.jpg)
+
+<br/>
