@@ -47,6 +47,9 @@ public final class Util {
   public static final boolean VERTICAL = true;
   public static final boolean HORIZONTAL = false;
 
+  public static final String RED = "\u001B[31m";
+  
+
   /**
    * <h3> Costruttore </h3>
    * <p>
