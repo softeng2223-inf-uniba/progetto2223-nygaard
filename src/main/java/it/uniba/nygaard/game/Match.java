@@ -85,8 +85,10 @@ public final class Match {
       String choice;
       Scanner in = new Scanner(System.in, StandardCharsets.UTF_8);
       do {
-        System.out.print("Il livello attuale è " + difficultyNames[this.difficulty] + ". Confermare cambio in "
-                + difficultyNames[newDifficulty] + "? (" + Util.GREEN + "y" + Util.RESET
+        System.out.print("Il livello attuale è " + Util.BOLD
+                + difficultyNames[this.difficulty] + Util.RESET + ". Confermare cambio in "
+                + Util.BOLD + difficultyNames[newDifficulty] + Util.RESET
+                + "? (" + Util.GREEN + "y" + Util.RESET
                 + "/" + Util.RED + "n" + Util.RESET + ") ");
         choice = in.nextLine().toLowerCase();
         if (!choice.equals("y") && !choice.equals("n")) {
