@@ -201,3 +201,6 @@ Il seguente diagramma, definito **Diagramma di affinità** raggruppa gli stati d
 - *collaborazione*
 - *strumenti*
 - *problemi individuali*
+
+![DiagrammaDiAffinità](img/AnalisiRetrospettivaSprint0/DiagrammaDiAffinita'.png)
+
