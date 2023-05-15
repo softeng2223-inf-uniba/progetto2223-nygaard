@@ -94,24 +94,24 @@ public final class Util {
   public static void printHelp() {
     Util.printDescription();
     String help = Util.YELLOW
-        + "> COMANDI\n"
-        + Util.CYAN + "    * /help             " + Util.RESET
+        + Util.BOLD + "> COMANDI\n" + Util.RESET
+        + Util.ITALIC + Util.CYAN + "    * /help             " + Util.RESET
             + "Vengono visualizzate le regole " + "di gioco e i comandi disponibili\n"
-        + Util.CYAN + "    * /esci             " + Util.RESET
+        + Util.ITALIC + Util.CYAN + "    * /esci             " + Util.RESET
             + "Ti permette di uscire dal gioco\n"
-        + Util.CYAN + "    * /facile           " + Util.RESET
+        + Util.ITALIC + Util.CYAN + "    * /facile           " + Util.RESET
             + "Imposta la difficolta' della partita a \"Facile\"\n"
-        + Util.CYAN +  "    * /medio            " + Util.RESET
+        + Util.ITALIC + Util.CYAN +  "    * /medio            " + Util.RESET
             + "Imposta la difficolta' della partita a \"Medio\"\n"
-        + Util.CYAN + "    * /difficile        " + Util.RESET
+        + Util.ITALIC +  Util.CYAN + "    * /difficile        " + Util.RESET
             + "Imposta la difficolta' della partita a \"Difficile\"\n"
-        + Util.CYAN + "    * /mostralivello    " + Util.RESET
+        + Util.ITALIC + Util.CYAN + "    * /mostralivello    " + Util.RESET
             + "Mostra il livello della partita\n"
-        + Util.CYAN + "    * /mostranavi       " + Util.RESET
+        + Util.ITALIC + Util.CYAN + "    * /mostranavi       " + Util.RESET
             + "Mostra le navi ancora in gioco e il loro numero\n"
-        + Util.CYAN + "    * /gioca            " + Util.RESET
+        + Util.ITALIC + Util.CYAN + "    * /gioca            " + Util.RESET
             + "Ti fa iniziare una partita\n"
-        + Util.CYAN + "    * /svelagriglia     " + Util.RESET
+        + Util.ITALIC + Util.CYAN + "    * /svelagriglia     " + Util.RESET
             + "Mostra la griglia generata dal computer\n";
     System.out.println(help);
   }
