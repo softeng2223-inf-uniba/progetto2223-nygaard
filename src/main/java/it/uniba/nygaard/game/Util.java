@@ -128,7 +128,7 @@ public final class Util {
         + Util.RESET
         + "Prima di iniziare vi andiamo a presentare una breve introduzione al gioco con\n"
         + "i suoi relativi comandi.\n\n"
-        + Util.YELLOW +  "> INTRODUZIONE\n" + Util.RESET
+        + Util.YELLOW + Util.BOLD + "> INTRODUZIONE\n" + Util.RESET
         + "    In questa realizzazione della battaglia navale, giocherete voi contro il vostro\n"
         + "    computer che posizionera' le navi in automatico prima dell'inizio della partita.\n\n"
         + "    Come giocatore, dovete individuare le posizioni delle navi e affondarle\n"
