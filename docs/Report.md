@@ -207,15 +207,34 @@ Il funzionamento del software richiede:
 
 ### Avvio dell'applicazione
 
-Per poter eseguire il programma ed avviarlo, assicurandosi di avere *Docker Desktop* in esecuzione, eseguire i seguenti due comandi:
+Per poter eseguire il programma ed avviarlo, assicurandosi di avere *Docker Desktop* in esecuzione, eseguire il seguente comando:
 ```shell
 docker pull ghcr.io/softeng2223-inf-uniba/battleship-nygaard:latest
 ```
+
+Successivamente, per avviare l'applicazione, è possibile eseguire il seguente comando senza argomenti:
 
 ```shell
 docker run --rm -it ghcr.io/softeng2223-inf-uniba/battleship-nygaard:latest
 ```
 
+In alternativa, se si vuole avviare l'applicazione con argomenti, è possibile eseguire il seguente comando:
+
+```shell
+docker run --rm -it ghcr.io/softeng2223-inf-uniba/battleship-nygaard:latest <ARGOMENTO>
+```
+
+sostituendo `<ARGOMENTO>` con gli argomenti che si vogliono passare all'applicazione (ricordiamo che al momento sono ammessi `--help` o la versione compatta `-h`)
+
+**Attenzione!** Eseguire i comandi in un terminale che soddisfa il Requisito non Funzionale riportato nella sezione dedicata.
+
+Se tutto è andato a buon fine, l'applicazione verrà avviata e verrà eseguita la schermata di benvenuto:
+
+- **Esecuzione senza argomenti**
+![esempio_esecuzione_noargs.png](img%2FManualeUtente%2Fesempio_esecuzione_noargs.png)
+
+- **Esecuzione senza argomenti**
+- ![esempio_esecuzione_withargs.png](img%2FManualeUtente%2Fesempio_esecuzione_withargs.png)
 # 9. Analisi retrospettiva
 
 All'interno di questa sezione, verranno riportate le ***analisi retrospettive*** fatte dal **Team**, nel corso del
