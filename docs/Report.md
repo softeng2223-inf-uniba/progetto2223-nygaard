@@ -248,6 +248,10 @@ Per iniziare una nuova partita, impostare la difficoltà utilizzando uno dei com
 
 ### Comandi in gioco
 
+Una volta avviata la partita è possibile visualizzare la griglia con le navi posizionate utilizzando il comando ***/svelagriglia***:
+
+![svela_griglia.png](img%2FManualeUtente%2Fsvela_griglia.png)
+
 # 9. Analisi retrospettiva
 
 All'interno di questa sezione, verranno riportate le ***analisi retrospettive*** fatte dal **Team**, nel corso del
