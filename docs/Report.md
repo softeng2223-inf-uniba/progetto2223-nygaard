@@ -235,6 +235,9 @@ Se tutto è andato a buon fine, l'applicazione verrà avviata e verrà eseguita 
 
 - **Esecuzione senza argomenti**
 - ![esempio_esecuzione_withargs.png](img%2FManualeUtente%2Fesempio_esecuzione_withargs.png)
+
+### Esecuzione dell'applicazione
+
 # 9. Analisi retrospettiva
 
 All'interno di questa sezione, verranno riportate le ***analisi retrospettive*** fatte dal **Team**, nel corso del
