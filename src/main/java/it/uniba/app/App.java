@@ -47,7 +47,8 @@ public final class App {
       if (argument.equals("--help") || argument.equals("-h")) {
         Util.printHelp();
       } else {
-        System.out.println("Parametro " + argument + " non riconosciuto.Premere invio per uscire");
+        System.out.println(Util.RED + "Parametro" + argument + " non riconosciuto.Premere invio per uscire"
+                + Util.RESET);
         in.nextLine();
         System.exit(0);
       }
@@ -57,9 +58,9 @@ public final class App {
     }
 
     while (true) {
-      System.out.print("Inserire un comando: ");
+      System.out.print("Inserire un comando: " + Util.CYAN);
       command = in.nextLine().toLowerCase();
-
+      System.out.print(Util.RESET);
       switch (command) {
         case "/help" -> Util.printHelp();
         case "/esci" -> Util.exit();
@@ -70,7 +71,7 @@ public final class App {
         case "/mostranavi" -> p.showShips();
         case "/gioca" -> p.play();
         case "/svelagriglia" -> p.showDefenseGrid();
-        default -> System.out.println("Comando non riconosciuto");
+        default -> System.out.println(Util.RED + "Comando non riconosciuto" + Util.RESET);
       }
     }
   }

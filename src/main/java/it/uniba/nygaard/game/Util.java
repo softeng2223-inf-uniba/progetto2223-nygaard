@@ -46,6 +46,15 @@ public final class Util {
   public static final int FIRST_TWO_DIGITS = 10;
   public static final boolean VERTICAL = true;
   public static final boolean HORIZONTAL = false;
+  public static final String RED = "\u001B[31m";
+  public static final String GREEN = "\u001B[32m";
+  public static final String YELLOW = "\u001B[33m";
+  public static final String BLUE = "\u001B[34m";
+  public static final String PURPLE = "\u001B[35m";
+  public static final String CYAN = "\u001B[36m";
+  public static final String RESET = "\u001B[0m";
+  public static final String BOLD = "\u001B[1m";
+  public static final String ITALIC = "\u001B[3m";
 
   /**
    * <h3> Costruttore </h3>
@@ -63,11 +72,14 @@ public final class Util {
    * </p>
    */
   public static void printLogo() {
-    String logo = "    ____   ___   ______ ______ __     ______ _____  __  __ ____ ____ \n"
+    String logo = Util.BOLD + Util.RED
+        + "    ____   ___   ______ ______ __     ______ _____  __  __ ____ ____ \n"
         + "   / __ ) /   | /_  __//_  __// /    / ____// ___/ / / / //  _// __ \\\n"
         + "  / __  |/ /| |  / /    / /  / /    / __/   \\__ \\ / /_/ / / / / /_/ /\n"
+        + Util.BLUE
         + " / /_/ // ___ | / /    / /  / /___ / /___  ___/ // __  /_/ / / ____/ \n"
-        + "/_____//_/  |_|/_/    /_/  /_____//_____/ /____//_/ /_//___//_/      \n";
+        + "/_____//_/  |_|/_/    /_/  /_____//_____/ /____//_/ /_//___//_/      \n"
+        + Util.RESET;
     System.out.println(logo);
   }
 
@@ -81,17 +93,26 @@ public final class Util {
    */
   public static void printHelp() {
     Util.printDescription();
-    String help =
-        "> COMANDI\n"
-        + "    * /help             Vengono visualizzate le regole di gioco e i comandi disponibili\n"
-        + "    * /esci             Ti permette di uscire dal gioco\n"
-        + "    * /facile           Imposta la difficolta' della partita a \"Facile\"\n"
-        + "    * /medio            Imposta la difficolta' della partita a \"Medio\"\n"
-        + "    * /difficile        Imposta la difficolta' della partita a \"Difficile\"\n"
-        + "    * /mostralivello    Mostra il livello della partita\n"
-        + "    * /mostranavi       Mostra le navi ancora in gioco e il loro numero\n"
-        + "    * /gioca            Ti fa iniziare una partita\n"
-        + "    * /svelagriglia     Mostra la griglia generata dal computer\n";
+    String help = Util.YELLOW
+        + Util.BOLD + "> COMANDI\n" + Util.RESET
+        + Util.ITALIC + Util.CYAN + "    * /help             " + Util.RESET
+            + "Vengono visualizzate le regole " + "di gioco e i comandi disponibili\n"
+        + Util.ITALIC + Util.CYAN + "    * /esci             " + Util.RESET
+            + "Ti permette di uscire dal gioco\n"
+        + Util.ITALIC + Util.CYAN + "    * /facile           " + Util.RESET
+            + "Imposta la difficolta' della partita a \"Facile\"\n"
+        + Util.ITALIC + Util.CYAN +  "    * /medio            " + Util.RESET
+            + "Imposta la difficolta' della partita a \"Medio\"\n"
+        + Util.ITALIC +  Util.CYAN + "    * /difficile        " + Util.RESET
+            + "Imposta la difficolta' della partita a \"Difficile\"\n"
+        + Util.ITALIC + Util.CYAN + "    * /mostralivello    " + Util.RESET
+            + "Mostra il livello della partita\n"
+        + Util.ITALIC + Util.CYAN + "    * /mostranavi       " + Util.RESET
+            + "Mostra le navi ancora in gioco e il loro numero\n"
+        + Util.ITALIC + Util.CYAN + "    * /gioca            " + Util.RESET
+            + "Ti fa iniziare una partita\n"
+        + Util.ITALIC + Util.CYAN + "    * /svelagriglia     " + Util.RESET
+            + "Mostra la griglia generata dal computer\n";
     System.out.println(help);
   }
 
@@ -102,11 +123,12 @@ public final class Util {
    * </p>
    */
   public static void printDescription() {
-    String description =
-        "Benvenuti nel gioco della battaglia navale!\n"
+    String description = Util.BOLD + Util.PURPLE
+        + "Benvenuti nel gioco della battaglia navale!\n"
+        + Util.RESET
         + "Prima di iniziare vi andiamo a presentare una breve introduzione al gioco con\n"
         + "i suoi relativi comandi.\n\n"
-        + "> INTRODUZIONE\n"
+        + Util.YELLOW + Util.BOLD + "> INTRODUZIONE\n" + Util.RESET
         + "    In questa realizzazione della battaglia navale, giocherete voi contro il vostro\n"
         + "    computer che posizionera' le navi in automatico prima dell'inizio della partita.\n\n"
         + "    Come giocatore, dovete individuare le posizioni delle navi e affondarle\n"
@@ -125,7 +147,7 @@ public final class Util {
   public static void exit() {
     Scanner in = new Scanner(System.in, StandardCharsets.UTF_8);
     String command;
-    System.out.print("Cliccare 's' per confermare l'uscita: ");
+    System.out.print("Cliccare '" + Util.GREEN + "s" + Util.RESET + "' per confermare l'uscita: ");
     command = in.nextLine().toLowerCase();
     if (command.equals("s")) {
       System.exit(0);

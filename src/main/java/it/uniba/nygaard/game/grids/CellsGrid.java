@@ -130,7 +130,7 @@ public final class CellsGrid extends Grid {
     String str = "";
     char c;
     str += "-".repeat(Util.HEADING_EDGE_WIDTH);
-    str += "Difesa";
+    str += Util.PURPLE + Util.BOLD + "Difesa" + Util.RESET;
     str += "-".repeat(Util.HEADING_EDGE_WIDTH);
     str += "\n\n";
     str += " ".repeat(Util.COLUMNS_EDGE_WIDTH);
@@ -146,7 +146,23 @@ public final class CellsGrid extends Grid {
       str += x + "   ";
       for (char y = Util.MIN_COLUMN; y <= Util.MAX_COLUMN; y++) {
         c = this.getCellCharacter(x - 1, y - Util.MIN_COLUMN);
-        str += c + " ";
+        switch (c) {
+          case 'X':
+            str += Util.YELLOW;
+            break;
+          case '#':
+            str += Util.RED;
+            break;
+          case '~':
+            str += Util.CYAN;
+            break;
+          case '*':
+            str += Util.GREEN;
+            break;
+          default:
+            str += Util.RESET;
+        }
+        str += c + " " + Util.RESET;
       }
       str += "  " + x + "\n";
     }
@@ -158,7 +174,7 @@ public final class CellsGrid extends Grid {
     str += " ".repeat(Util.COLUMNS_EDGE_WIDTH - 1);
     str += "\n\n";
     str += "-".repeat(Util.HEADING_EDGE_WIDTH);
-    str += "Difesa";
+    str += Util.PURPLE + Util.BOLD + "Difesa" + Util.RESET;
     str += "-".repeat(Util.HEADING_EDGE_WIDTH);
     str += "\n";
     return str;

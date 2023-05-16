@@ -74,31 +74,34 @@ public final class Match {
    */
   public void setDifficulty(final int newDifficulty) {
     if (this.inGame) {
-      System.out.println("Non puoi cambiare difficoltà durante una partita");
+      System.out.println(Util.RED + "Non puoi cambiare difficoltà durante una partita" + Util.RESET);
       return;
     }
     if (this.difficulty == newDifficulty) {
-      System.out.println("Hai già impostato questa difficoltà");
+      System.out.println(Util.RED + "Hai già impostato questa difficoltà" + Util.RESET);
       return;
     }
     if (this.difficulty != Util.DIFFICULTY_NOT_SETTED) {
       String choice;
       Scanner in = new Scanner(System.in, StandardCharsets.UTF_8);
       do {
-        System.out.print("Il livello attuale è " + difficultyNames[this.difficulty] + ". Confermare cambio in "
-            + difficultyNames[newDifficulty] + "? (y/n) ");
+        System.out.print("Il livello attuale è " + Util.BOLD
+                + difficultyNames[this.difficulty] + Util.RESET + ". Confermare cambio in "
+                + Util.BOLD + difficultyNames[newDifficulty] + Util.RESET
+                + "? (" + Util.GREEN + "y" + Util.RESET
+                + "/" + Util.RED + "n" + Util.RESET + ") ");
         choice = in.nextLine().toLowerCase();
         if (!choice.equals("y") && !choice.equals("n")) {
-          System.out.println("Scelta non valida");
+          System.out.println(Util.RED + "Scelta non valida" + Util.RESET);
         }
       } while (!choice.equals("y") && !choice.equals("n"));
       if (choice.equals("n")) {
-        System.out.println("Operazione annullata");
+        System.out.println(Util.RED + "Operazione annullata" + Util.RESET);
         return;
       }
     }
     this.difficulty = newDifficulty;
-    System.out.println("OK");
+    System.out.println(Util.GREEN + "OK" + Util.RESET);
   }
 
   /**
@@ -110,11 +113,25 @@ public final class Match {
    */
   public void showLevel() {
     if (this.difficulty != Util.DIFFICULTY_NOT_SETTED) {
-      System.out.println("Livello di difficoltà scelto: " + this.difficultyNames[this.difficulty] + "\n"
-          + "Numero massimo di tentativi falliti: " + this.attempts[this.difficulty]);
+      System.out.print("Livello di difficoltà scelto: " + Util.BOLD);
+      switch (this.difficultyNames[this.difficulty]) {
+        case Util.EASY_NAME -> System.out.print(Util.GREEN);
+        case Util.MEDIUM_NAME -> System.out.print(Util.YELLOW);
+        case Util.HARD_NAME -> System.out.print(Util.RED);
+        default -> System.out.print(Util.RESET);
+      }
+      System.out.print(this.difficultyNames[this.difficulty] + Util.RESET + "\n"
+              + "Numero massimo di tentativi falliti: " + Util.BOLD);
+      switch (this.difficultyNames[this.difficulty]) {
+        case Util.EASY_NAME -> System.out.print(Util.GREEN);
+        case Util.MEDIUM_NAME -> System.out.print(Util.YELLOW);
+        case Util.HARD_NAME -> System.out.print(Util.RED);
+        default -> System.out.print(Util.RESET);
+      }
+      System.out.println(this.attempts[this.difficulty] + Util.RESET);
     } else {
-      System.out.println("Difficoltà non ancora scelta" + "\n" + "Per scegliere la difficoltà utilizzare "
-          + "il comando /facile, /medio o /difficile");
+      System.out.println(Util.RED + "Difficoltà non ancora scelta\nPer scegliere la difficoltà utilizzare "
+              + "il comando /facile, /medio o /difficile" + Util.RESET);
     }
   }
 
@@ -126,10 +143,14 @@ public final class Match {
    * </p>
    */
   public void showShips() {
-    System.out.println("\tCacciatorpediniere \t■■ \tEsemplari: " + Util.DESTROYER_NO);
-    System.out.println("\tIncrociatore \t\t■■■ \tEsemplari: " + Util.CRUISER_NO);
-    System.out.println("\tCorazzata \t\t■■■■ \tEsemplari: " + Util.BATTLESHIP_NO);
-    System.out.println("\tPortaerei \t\t■■■■■ \tEsemplari: " + Util.AIRCRAFT_NO);
+    System.out.println(Util.CYAN + Util.ITALIC + "\tCacciatorpediniere \t" + Util.RESET + "■■ \t"
+            + Util.CYAN + Util.BOLD + "Esemplari: " + Util.DESTROYER_NO + Util.RESET);
+    System.out.println(Util.CYAN + Util.ITALIC + "\tIncrociatore \t\t" + Util.RESET + "■■■ \t"
+            + Util.CYAN + Util.BOLD + "Esemplari: " + Util.CRUISER_NO + Util.RESET);
+    System.out.println(Util.CYAN + Util.ITALIC + "\tCorazzata \t\t" + Util.RESET + "■■■■ \t"
+            + Util.CYAN + Util.BOLD + "Esemplari: " + Util.BATTLESHIP_NO + Util.RESET);
+    System.out.println(Util.CYAN + Util.ITALIC + "\tPortaerei \t\t" + Util.RESET + "■■■■■ \t"
+            + Util.CYAN + Util.BOLD + "Esemplari: " + Util.AIRCRAFT_NO + Util.RESET);
   }
 
   /**
@@ -140,11 +161,11 @@ public final class Match {
    */
   public void play() {
     if (this.difficulty == Util.DIFFICULTY_NOT_SETTED) {
-      System.out.println("Non hai ancora impostato il livello");
+      System.out.println(Util.RED + "Non hai ancora impostato il livello" + Util.RESET);
       return;
     }
     if (this.inGame) {
-      System.out.println("Sei gia in partita");
+      System.out.println(Util.RED + "Sei gia in partita" + Util.RESET);
       return;
     }
     this.inGame = true;
@@ -160,7 +181,7 @@ public final class Match {
    */
   public void showDefenseGrid() {
     if (!this.inGame) {
-      System.out.println("Non sei in partita");
+      System.out.println(Util.RED + "Non sei in partita" + Util.RESET);
       return;
     }
     System.out.println(defenseGrid);
