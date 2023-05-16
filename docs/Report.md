@@ -233,8 +233,8 @@ Se tutto è andato a buon fine, l'applicazione verrà avviata e verrà eseguita 
 - **Esecuzione senza argomenti**
 ![esempio_esecuzione_noargs.png](img%2FManualeUtente%2Fesempio_esecuzione_noargs.png)
 
-- **Esecuzione senza argomenti**
-- ![esempio_esecuzione_withargs.png](img%2FManualeUtente%2Fesempio_esecuzione_withargs.png)
+- **Esecuzione con argomenti**
+![esempio_esecuzione_withargs.png](img%2FManualeUtente%2Fesempio_esecuzione_withargs.png)
 
 ### Avvio dell'applicazione
 
