@@ -236,7 +236,7 @@ Se tutto è andato a buon fine, l'applicazione verrà avviata e verrà eseguita 
 - **Esecuzione senza argomenti**
 - ![esempio_esecuzione_withargs.png](img%2FManualeUtente%2Fesempio_esecuzione_withargs.png)
 
-### Esecuzione dell'applicazione
+### Avvio dell'applicazione
 
 All'avvio dell'applicazione, verrà eseguita la schermata di benvenuto, con la scritta *Inserire un comando: * che viene visualizzata ogni qualvolta si richiede un comando all'utente.
 
