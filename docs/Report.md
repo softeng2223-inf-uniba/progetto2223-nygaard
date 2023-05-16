@@ -246,6 +246,8 @@ Per avere informazioni su tutti i comandi disponibili nel gioco, utilizzare il c
 
 Per iniziare una nuova partita, impostare la difficoltà utilizzando uno dei comandi tra ***/facile***, ***/medio*** o ***/difficile***, ed eseguire il comando ***/gioca***.
 
+### Comandi in gioco
+
 # 9. Analisi retrospettiva
 
 All'interno di questa sezione, verranno riportate le ***analisi retrospettive*** fatte dal **Team**, nel corso del
