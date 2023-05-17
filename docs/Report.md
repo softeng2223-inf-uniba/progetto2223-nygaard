@@ -188,7 +188,7 @@ Il funzionamento del software richiede:
 - [Passi preliminari](#passi-preliminari)
   - [Installazione e configurazione di Docker](#installazione-e-configurazione-di-docker)
   - [Autenticazione con Github](#autenticazione-con-github)
-  - [Avvio dell'applicazione](#avvio-dellapplicazione)
+- [Avvio dell'applicazione](#avvio-dellapplicazione)
   - [Comandi in gioco](#comandi-in-gioco)
 
 ## Passi preliminari
