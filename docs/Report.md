@@ -181,6 +181,83 @@ Il funzionamento del software richiede:
 
 <br/>
 
+# 7. Manuale utente
+
+## Indice
+
+- [Passi preliminari](#passi-preliminari)
+  - [Installazione e configurazione di Docker](#installazione-e-configurazione-di-docker)
+  - [Autenticazione con Github](#autenticazione-con-github)
+- [Avvio dell'applicazione](#avvio-dellapplicazione)
+  - [Comandi in gioco](#comandi-in-gioco)
+
+## Passi preliminari
+
+### Installazione e configurazione di Docker
+
+- Scaricare ed installare **Docker Desktop** dal sito ufficiale (*https://www.docker.com/products/docker-desktop/*)
+- Assicurarsi che l'installazione sia andata a buon fine
+  - Avviare il programma **con privilegi elevati**
+  - Utilizzare un prompt dei comandi e digitare il seguente comando: ``` docker info ```
+
+    Se l'installazione è avvenuta con successo, e Docker viene eseguito correttamente, si avrà un risultato del genere:
+![docker_info.png](img%2FManualeUtente%2Fdocker_info.png)
+
+### Autenticazione con Github
+- Eseguire il login con l'account GitHub in modo tale da poter ottenere l'applicazione
+  - Se non si ha a disposizione un *Personal Access Token*, crearne uno seguendo le direttive ufficiali (*https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token#creating-a-personal-access-token-classic*)
+  - Salvare il token in un file di testo, chiamando il file ad esempio `TOKEN.txt`
+  - Portarsi in un prompt dei comandi nella cartella dove è stato salvato il precedente file ed eseguire il seguente comando:
+  ```bash
+    cat ./TOKEN.txt | docker login ghcr.io -u <USERNAME> --password-stdin
+  ```
+    sostituendo il vostro username di GitHub alla voce `<USERNAME>`.
+
+## Avvio dell'applicazione
+
+Per poter eseguire il programma ed avviarlo, assicurandosi di avere *Docker Desktop* in esecuzione, eseguire il seguente comando:
+```shell
+docker pull ghcr.io/softeng2223-inf-uniba/battleship-nygaard:latest
+```
+
+Successivamente, per avviare l'applicazione, è possibile eseguire il seguente comando senza argomenti:
+
+```shell
+docker run --rm -it ghcr.io/softeng2223-inf-uniba/battleship-nygaard:latest
+```
+
+In alternativa, se si vuole avviare l'applicazione con argomenti, è possibile eseguire il seguente comando:
+
+```shell
+docker run --rm -it ghcr.io/softeng2223-inf-uniba/battleship-nygaard:latest <ARGOMENTO>
+```
+
+sostituendo `<ARGOMENTO>` con gli argomenti che si vogliono passare all'applicazione (ricordiamo che al momento sono ammessi `--help` o la versione compatta `-h`)
+
+**Attenzione!** Eseguire i comandi in un terminale che soddisfa il Requisito non Funzionale riportato nella sezione dedicata.
+
+Se tutto è andato a buon fine, l'applicazione verrà avviata e verrà eseguita la schermata di benvenuto:
+
+- **Esecuzione senza argomenti**
+![esempio_esecuzione_noargs.png](img%2FManualeUtente%2Fesempio_esecuzione_noargs.png)
+
+- **Esecuzione con argomenti**
+![esempio_esecuzione_withargs.png](img%2FManualeUtente%2Fesempio_esecuzione_withargs.png)
+
+All'avvio dell'applicazione, verrà eseguita la schermata di benvenuto, con la scritta *Inserire un comando: * che viene visualizzata ogni qualvolta si richiede un comando all'utente.
+
+Per avere informazioni su tutti i comandi disponibili nel gioco, utilizzare il comando ***/help*** che mostrerà la lista dei comandi a disposizione seguiti da una breve descrizione del loro funzionamento:
+
+![esecuzione_help.png](img%2FManualeUtente%2Fesecuzione_help.png)
+
+Per iniziare una nuova partita, impostare la difficoltà utilizzando uno dei comandi tra ***/facile***, ***/medio*** o ***/difficile***, ed eseguire il comando ***/gioca***.
+
+### Comandi in gioco
+
+Una volta avviata la partita è possibile visualizzare la griglia con le navi posizionate utilizzando il comando ***/svelagriglia***:
+
+![svela_griglia.png](img%2FManualeUtente%2Fsvela_griglia.png)
+
 # 9. Analisi retrospettiva
 
 All'interno di questa sezione, verranno riportate le ***analisi retrospettive*** fatte dal **Team**, nel corso del
