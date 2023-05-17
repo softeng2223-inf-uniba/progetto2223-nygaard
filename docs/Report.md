@@ -213,7 +213,7 @@ Il funzionamento del software richiede:
   ```
     sostituendo il vostro username di GitHub alla voce `<USERNAME>`.
 
-### Avvio dell'applicazione
+## Avvio dell'applicazione
 
 Per poter eseguire il programma ed avviarlo, assicurandosi di avere *Docker Desktop* in esecuzione, eseguire il seguente comando:
 ```shell
