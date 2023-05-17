@@ -1,5 +1,16 @@
 # Report
 
+## Indice
+
+- [Introduzione](#1-introduzione)
+- [Modello di Dominio](#2-modello-di-dominio)
+- [Requisiti specifici](#3-requisiti-specifici)
+  - [Requisiti funzionali](#31-requisiti-funzionali)
+  - [Requisiti non funzionali](#32-requisiti-non-funzionali)
+- [Manuale Utente](#7-manuale-utente)
+- [Analisi retrospettiva](#9-analisi-retrospettiva)
+  - [Sprint 0](#91-sprint-0-dimostrare-familiarità-con-github-e-il-processo-agile)
+
 # 1. Introduzione
 Nella seguente documentazione verrà descritta la relazione tecnica del progetto di **Ingegneria del Software Anno Accademico 2022-2023**.
 
