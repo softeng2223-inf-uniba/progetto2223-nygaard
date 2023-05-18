@@ -151,8 +151,6 @@ public final class Util {
     command = in.nextLine().toLowerCase();
     if (command.equals("s")) {
       System.exit(0);
-
+    }
   }
-  }
-
 }
