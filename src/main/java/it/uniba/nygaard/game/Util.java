@@ -162,6 +162,6 @@ public final class Util {
         System.out.println(Util.RED + "Scelta non valida" + Util.RESET);
       }
     } while (!command.equals("n") && !command.equals("y"));
-    }
   }
+}
 
