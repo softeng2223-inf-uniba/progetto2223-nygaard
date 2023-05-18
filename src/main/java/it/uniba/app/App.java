@@ -43,6 +43,11 @@ public final class App {
     Match p = new Match();
 
     if (args.length > 0) {
+      if (args.length > 1) {
+        System.out.println(Util.RED + "Troppi parametri inseriti.\nPremere invio per uscire" + Util.RESET);
+        in.nextLine();
+        System.exit(0);
+      }
       String argument = args[0].toLowerCase();
       if (argument.equals("--help") || argument.equals("-h")) {
         Util.printHelp();
