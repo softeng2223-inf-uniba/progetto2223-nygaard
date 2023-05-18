@@ -112,23 +112,25 @@ public final class Match {
    * </p>
    */
   public void showLevel() {
+    String actualColor = Util.RESET;
     if (this.difficulty != Util.DIFFICULTY_NOT_SETTED) {
       System.out.print("Livello di difficoltà scelto: " + Util.BOLD);
       switch (this.difficultyNames[this.difficulty]) {
-        case Util.EASY_NAME -> System.out.print(Util.GREEN);
-        case Util.MEDIUM_NAME -> System.out.print(Util.YELLOW);
-        case Util.HARD_NAME -> System.out.print(Util.RED);
+        case Util.EASY_NAME -> {
+          actualColor = Util.GREEN;
+        }
+        case Util.MEDIUM_NAME -> {
+          actualColor = Util.YELLOW;
+        }
+        case Util.HARD_NAME -> {
+          actualColor = Util.RED;
+        }
         default -> System.out.print(Util.RESET);
       }
+      System.out.print(actualColor);
       System.out.print(this.difficultyNames[this.difficulty] + Util.RESET + "\n"
               + "Numero massimo di tentativi falliti: " + Util.BOLD);
-      switch (this.difficultyNames[this.difficulty]) {
-        case Util.EASY_NAME -> System.out.print(Util.GREEN);
-        case Util.MEDIUM_NAME -> System.out.print(Util.YELLOW);
-        case Util.HARD_NAME -> System.out.print(Util.RED);
-        default -> System.out.print(Util.RESET);
-      }
-      System.out.println(this.attempts[this.difficulty] + Util.RESET);
+      System.out.println(actualColor + this.attempts[this.difficulty] + Util.RESET);
     } else {
       System.out.println(Util.RED + "Difficoltà non ancora scelta\nPer scegliere la difficoltà utilizzare "
               + "il comando /facile, /medio o /difficile" + Util.RESET);

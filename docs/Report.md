@@ -255,7 +255,7 @@ Se tutto è andato a buon fine, l'applicazione verrà avviata e verrà eseguita 
 - **Esecuzione con argomenti**
 ![esempio_esecuzione_withargs.png](img%2FManualeUtente%2Fesempio_esecuzione_withargs.png)
 
-All'avvio dell'applicazione, verrà eseguita la schermata di benvenuto, con la scritta *Inserire un comando: * che viene visualizzata ogni qualvolta si richiede un comando all'utente.
+All'avvio dell'applicazione, verrà eseguita la schermata di benvenuto, con la scritta *Inserire un comando:* che viene visualizzata ogni qualvolta si richiede un comando all'utente.
 
 Per avere informazioni su tutti i comandi disponibili nel gioco, utilizzare il comando ***/help*** che mostrerà la lista dei comandi a disposizione seguiti da una breve descrizione del loro funzionamento:
 

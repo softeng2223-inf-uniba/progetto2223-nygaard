@@ -147,12 +147,21 @@ public final class Util {
   public static void exit() {
     Scanner in = new Scanner(System.in, StandardCharsets.UTF_8);
     String command;
-    System.out.print("Cliccare '" + Util.GREEN + "s" + Util.RESET + "' per confermare l'uscita: ");
-    command = in.nextLine().toLowerCase();
-    if (command.equals("s")) {
-      System.exit(0);
-
+    do {
+      System.out.print("Vuoi veramente uscire? "
+              + "(" + Util.GREEN + "y" + Util.RESET
+              + "/" + Util.RED + "n" + Util.RESET + ") ");
+      command = in.nextLine().toLowerCase();
+      if (command.equals("y")) {
+        System.out.println(Util.YELLOW + Util.BOLD +  "GRAZIE PER AVER GIOCATO!" + Util.RESET);
+        System.exit(0);
+      }
+      if (command.equals("n")) {
+        System.out.println(Util.RED + "Operazione annullata" + Util.RESET);
+      } else {
+        System.out.println(Util.RED + "Scelta non valida" + Util.RESET);
+      }
+    } while (!command.equals("n") && !command.equals("y"));
   }
-  }
-
 }
+
