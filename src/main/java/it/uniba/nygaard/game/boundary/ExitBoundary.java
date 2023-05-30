@@ -25,4 +25,9 @@ public class ExitBoundary {
         return command;
     }
 
+    public static void operationCancelled()
+    {
+        System.out.println(Util.RED + "Operazione annullata" + Util.RESET);
+    }
+
 }
