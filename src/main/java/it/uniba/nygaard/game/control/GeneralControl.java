@@ -64,6 +64,7 @@ public final class GeneralControl {
     availableCommands.put("/svelagriglia", RevealGridCommand.getInstance());
     availableCommands.put("/help", HelpCommand.getInstance());
     availableCommands.put("/tempo", SetTimeCommand.getInstance());
+    availableCommands.put("/mostratempo", ShowTimeCommand.getInstance());
     ParamControl.initUI();
     while (!shutDown) {
       String[] command = InputBoundary.getCommand().trim().replaceAll(" +", " ").split(" ");

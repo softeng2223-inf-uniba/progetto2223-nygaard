@@ -125,5 +125,15 @@ public final class GameManager {
     public static String newDifficultyName(final int newDifficulty) {
         return match.getDifficultyNames(newDifficulty);
     }
+    /**
+     * <h3> getMatchTime </h3>
+     * <p>
+     * Restituisce il tempo massimo della partita in corso.
+     * </p>
+     * @return Tempo massimo della partita.
+     */
+    public static long getMatchTime() {
+        return match.getMaxTime();
+    }
 
 }
