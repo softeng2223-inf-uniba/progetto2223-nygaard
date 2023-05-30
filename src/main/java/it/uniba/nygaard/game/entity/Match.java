@@ -13,7 +13,7 @@ import java.util.Random;
 
 
 /**
- * <<Entity>>
+ * << Entity >>
  * <h2> Match </h2>
  * <p>
  * La classe Match si occupa della partita.
