@@ -1,4 +1,4 @@
-package it.uniba.nygaard.game.grids;
+package it.uniba.nygaard.game.entity.grids;
 
 /**
  * <h2> Grid </h2>
@@ -8,6 +8,12 @@ package it.uniba.nygaard.game.grids;
  */
 public abstract class Grid {
 
+    /**
+     * <h3> dimension </h3>
+     * <p>
+     * Dimensione della griglia.
+     * </p>
+     */
   private int dimension;
 
   /**
