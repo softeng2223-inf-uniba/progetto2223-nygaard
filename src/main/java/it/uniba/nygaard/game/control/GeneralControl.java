@@ -15,7 +15,7 @@ import java.util.HashMap;
 public final class GeneralControl {
 
   /**
-   * <h3> shutdown </h3>
+   * <h3> shutDown </h3>
    * <p>
    * Termina il gioco se true.
    * </p>
