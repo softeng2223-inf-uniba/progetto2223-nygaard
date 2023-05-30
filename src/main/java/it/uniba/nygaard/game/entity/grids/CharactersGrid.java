@@ -1,4 +1,4 @@
-package it.uniba.nygaard.game.grids;
+package it.uniba.nygaard.game.entity.grids;
 
 import it.uniba.nygaard.game.Util;
 

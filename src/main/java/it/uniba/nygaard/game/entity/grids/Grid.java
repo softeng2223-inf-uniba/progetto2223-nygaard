@@ -1,4 +1,4 @@
-package it.uniba.nygaard.game.grids;
+package it.uniba.nygaard.game.entity.grids;
 
 /**
  * <h2> Grid </h2>

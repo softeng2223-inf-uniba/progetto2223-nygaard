@@ -1,7 +1,7 @@
-package it.uniba.nygaard.game.ships;
+package it.uniba.nygaard.game.entity.ships;
 
 import it.uniba.nygaard.game.Util;
-import it.uniba.nygaard.game.grids.CellsGrid;
+import it.uniba.nygaard.game.entity.grids.CellsGrid;
 
 /**
  * <h2> Ship </h2>

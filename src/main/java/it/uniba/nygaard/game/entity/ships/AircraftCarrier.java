@@ -1,4 +1,4 @@
-package it.uniba.nygaard.game.ships;
+package it.uniba.nygaard.game.entity.ships;
 
 import it.uniba.nygaard.game.Util;
 

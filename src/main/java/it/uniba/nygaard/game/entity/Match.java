@@ -1,13 +1,14 @@
-package it.uniba.nygaard.game;
+package it.uniba.nygaard.game.entity;
 
-import it.uniba.nygaard.game.ships.Coordinate;
-import it.uniba.nygaard.game.ships.Ship;
-import it.uniba.nygaard.game.ships.AircraftCarrier;
-import it.uniba.nygaard.game.ships.Battleship;
-import it.uniba.nygaard.game.ships.Cruiser;
-import it.uniba.nygaard.game.ships.Destroyer;
-import it.uniba.nygaard.game.grids.CellsGrid;
-import it.uniba.nygaard.game.grids.CharactersGrid;
+import it.uniba.nygaard.game.Util;
+import it.uniba.nygaard.game.entity.ships.Coordinate;
+import it.uniba.nygaard.game.entity.ships.Ship;
+import it.uniba.nygaard.game.entity.ships.AircraftCarrier;
+import it.uniba.nygaard.game.entity.ships.Battleship;
+import it.uniba.nygaard.game.entity.ships.Cruiser;
+import it.uniba.nygaard.game.entity.ships.Destroyer;
+import it.uniba.nygaard.game.entity.grids.CellsGrid;
+import it.uniba.nygaard.game.entity.grids.CharactersGrid;
 
 import java.nio.charset.StandardCharsets;
 import java.util.Random;

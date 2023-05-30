@@ -1,4 +1,4 @@
-package it.uniba.nygaard.game.ships;
+package it.uniba.nygaard.game.entity.ships;
 
 /**
  * <h2> Coordinate </h2>

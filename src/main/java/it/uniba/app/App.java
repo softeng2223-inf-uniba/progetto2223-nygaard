@@ -1,6 +1,6 @@
 package it.uniba.app;
 
-import it.uniba.nygaard.game.Match;
+import it.uniba.nygaard.game.entity.Match;
 import it.uniba.nygaard.game.Util;
 
 import java.nio.charset.StandardCharsets;
