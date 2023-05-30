@@ -57,15 +57,15 @@ public final class HelpBoundary {
         String subDifficulty = Util.YELLOW
             + Util.BOLD + "> DIFFICOLTA' PERSONALIZZATE\n" + Util.RESET
             + Util.ITALIC + Util.CYAN + "    * /facile numero       " + Util.RESET
-            + "Imposta il numero massimo di tentativi, per la \n"
+            + "Imposta il numero massimo di tentativi falliti, per la \n"
             + "                           difficolta' \"Facile\", ad un valore pari a"
             + Util.ITALIC + " numero \n" + Util.RESET
             + Util.ITALIC + Util.CYAN + "    * /medio numero        " + Util.RESET
-            + "Imposta il numero massimo di tentativi, per la \n"
+            + "Imposta il numero massimo di tentativi falliti, per la \n"
             + "                           difficolta' \"Medio\", ad un valore pari a"
             + Util.ITALIC + " numero \n" + Util.RESET
             + Util.ITALIC + Util.CYAN + "    * /difficile numero    " + Util.RESET
-            + "Imposta il numero massimo di tentativi, per la \n"
+            + "Imposta il numero massimo di tentativi falliti, per la \n"
             + "                           difficolta' \"Difficile\", ad un valore pari a"
             + Util.ITALIC + " numero \n" + Util.RESET;
 
