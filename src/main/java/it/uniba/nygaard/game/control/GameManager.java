@@ -25,6 +25,13 @@ public final class GameManager {
      */
     private static int nextDifficulty;
     /**
+     * <h3> nextAttempts </h3>
+     * <p>
+     * Numero di tentativi della prossima partita.
+     * </p>
+     */
+    private static int nextAttempts;
+    /**
      * <h3> args </h3>
      * <p>
      * Argomenti passati al programma.
