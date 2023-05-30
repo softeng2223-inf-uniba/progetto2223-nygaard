@@ -12,6 +12,9 @@ public class InputBoundary {
     public static String getCommand() {
         System.out.print("Inserire un comando: " + Util.CYAN);
         return new Scanner(System.in, StandardCharsets.UTF_8).nextLine().toLowerCase();
-
+    }
+    public static void notRecognisedCommand(String command)
+    {
+        System.out.println(Util.RED + "Comando non riconosciuto: " + command + Util.RESET);
     }
 }
