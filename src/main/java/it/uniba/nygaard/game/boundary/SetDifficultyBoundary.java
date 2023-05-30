@@ -2,20 +2,56 @@ package it.uniba.nygaard.game.boundary;
 
 import it.uniba.nygaard.game.Util;
 import it.uniba.nygaard.game.entity.Match;
+import java.nio.charset.StandardCharsets;
+import java.util.Scanner;
 
+/**
+ * <<Boundary>>
+ * <h2> SetDifficultyBoundary </h2>
+ * <p>
+ * La classe SetDifficultyBoundary stampa i messaggi
+ * relativi al cambio di difficoltà.
+ * </p>
+ */
 public class SetDifficultyBoundary {
+    /**
+     * <h3> Costruttore </h3>
+     * <p>
+     * Costruttore della classe SetDifficultyBoundary.
+     * </p>
+     */
     private SetDifficultyBoundary() {
     }
+    /**
+     * <h3> alreadyInGame </h3>
+     * <p>
+     * Stampa il messaggio di errore relativo al cambio
+     * di difficoltà durante una partita.
+     * </p>
+     */
     public static void alreadyInGame() {
         System.out.println(Util.RED + "Non puoi cambiare difficoltà durante una partita" + Util.RESET);
     }
-
-    public static void sameDifficulty()
-    {
+    /**
+     * <h3> sameDifficulty </h3>
+     * <p>
+     *     Stampa il messaggio relativo al fatto che la difficoltà scelta
+     *     è già quella attuale.
+     * </p>
+     */
+    public static void sameDifficulty() {
         System.out.println(Util.RED + "Hai già impostato questa difficoltà" + Util.RESET);
     }
-    public static String ask(Match p, int newDifficulty)
-    {
+    /**
+     * <h3> ask </h3>
+     * <p>
+     *     Stampa il messaggio relativo alla conferma del cambio di difficoltà.
+     * </p>
+     * @param p Partita
+     * @param newDifficulty Nuova difficoltà
+     * @return Risposta dell'utente
+     */
+    public static String ask(Match p, int newDifficulty) {
         System.out.println("Il livello attuale è " + Util.BOLD
                 + p.getDifficultyNames()[p.getDifficulty()] + Util.RESET + ". Confermare cambio in "
                 + Util.BOLD + p.getDifficultyNames()[newDifficulty] + Util.RESET
@@ -23,14 +59,22 @@ public class SetDifficultyBoundary {
                 + "/" + Util.RED + "n" + Util.RESET + ") ");
         return new Scanner(System.in, StandardCharsets.UTF_8).next().toLowerCase();
     }
-
-    public static void operationCancelled()
-    {
+    /**
+     * <h3> operationCancelled </h3>
+     * <p>
+     *     Stampa il messaggio relativo all'annullamento del cambio di difficoltà.
+     * </p>
+     */
+    public static void operationCancelled() {
         System.out.println(Util.RED + "Cambio difficoltà annullato" + Util.RESET);
     }
-
-    public static void operationDone()
-    {
+    /**
+     * <h3> operationDone </h3>
+     * <p>
+     *     Stampa il messaggio relativo al cambio di difficoltà avvenuto con successo.
+     * </p>
+     */
+    public static void operationDone() {
         System.out.println(Util.GREEN + "OK" + Util.RESET);
     }
 }
