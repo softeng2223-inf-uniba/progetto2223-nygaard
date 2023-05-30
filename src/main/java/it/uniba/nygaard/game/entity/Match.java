@@ -1,7 +1,6 @@
 package it.uniba.nygaard.game.entity;
 
 import it.uniba.nygaard.game.Util;
-import it.uniba.nygaard.game.entity.ships.Coordinate;
 import it.uniba.nygaard.game.entity.ships.Ship;
 import it.uniba.nygaard.game.entity.ships.AircraftCarrier;
 import it.uniba.nygaard.game.entity.ships.Battleship;
@@ -10,11 +9,9 @@ import it.uniba.nygaard.game.entity.ships.Destroyer;
 import it.uniba.nygaard.game.entity.grids.CellsGrid;
 import it.uniba.nygaard.game.entity.grids.CharactersGrid;
 
-import java.nio.charset.StandardCharsets;
-import java.util.Random;
-import java.util.Scanner;
 
 /**
+ * <<Entity>>
  * <h2> Match </h2>
  * <p>
  * La classe Match si occupa della partita.
@@ -30,6 +27,7 @@ public final class Match {
   private final Ship[] ships;
   private final CellsGrid defenseGrid;
   private final CharactersGrid attackGrid;
+  private static Match instance = new Match();
 
   /**
    * <h3> Costruttore </h3>
@@ -38,7 +36,7 @@ public final class Match {
    * Inizializza tutti i suoi attributi ai valori di default prefissati.
    * </p>
    */
-  public Match() {
+  private Match() {
     this.inGame = false;
     this.difficulty = Util.DIFFICULTY_NOT_SETTED;
     this.difficultyNames = new String[]{Util.EASY_NAME, Util.MEDIUM_NAME, Util.HARD_NAME};
@@ -66,6 +64,78 @@ public final class Match {
   }
 
   /**
+   * <h3>getInstance</h3>
+   * <p>
+   * Metodo che restituisce l'istanza di Match.
+   * </p>
+   * @return instance Istanza di Match.
+   */
+  public static Match getInstance() {
+    return instance;
+  }
+
+  /**
+   * <h3> getInGame </h3>
+   * <p>
+   *     Restituisce lo stato della partita.
+   * </p>
+   * @return inGame Stato della partita.
+   */
+  public boolean getInGame() {
+    return this.inGame;
+  }
+    /**
+     * <h3> getDifficulty </h3>
+     * <p>
+     *     Restituisce la difficoltà della partita.
+     * </p>
+     * @return difficulty Difficoltà della partita.
+     */
+  public int getDifficulty() {
+    return this.difficulty;
+  }
+
+  /**
+   * <h3> getDifficultyNames </h3>
+   * <p>
+   *     Restituisce i nomi delle difficoltà.
+   * </p>
+   * @return difficultyNames Nomi delle difficoltà.
+   */
+  public String[] getDifficultyNames() {
+    return this.difficultyNames;
+  }
+    /**
+     * <h3> getAttempts </h3>
+     * <p>
+     *     Restituisce il numero di tentativi per ogni difficoltà.
+     * </p>
+     * @return attempts Tentativi per ogni difficoltà.
+     */
+  public int[] getAttempts() {
+    return this.attempts;
+  }
+    /**
+     * <h3> getDefenseGrid </h3>
+     * <p>
+     *     Restituisce la griglia di difesa della partita.
+     * </p>
+     * @return defenseGrid Griglia di difesa della partita.
+     */
+  public CellsGrid getDefenseGrid() {
+    return this.defenseGrid;
+  }
+    /**
+     * <h3> getAttackGrid </h3>
+     * <p>
+     *     Restituisce la griglia di attacco della partita.
+     * </p>
+     * @return attackGrid Griglia di attacco della partita.
+     */
+  public CharactersGrid getAttackGrid() {
+    return this.attackGrid;
+  }
+  /**
    * <h3> setDifficulty </h3>
    * <p>
    * Imposta la difficoltà della partita.
@@ -74,206 +144,29 @@ public final class Match {
    * @param newDifficulty Difficoltà della partita.
    */
   public void setDifficulty(final int newDifficulty) {
-    if (this.inGame) {
-      System.out.println(Util.RED + "Non puoi cambiare difficoltà durante una partita" + Util.RESET);
-      return;
-    }
-    if (this.difficulty == newDifficulty) {
-      System.out.println(Util.RED + "Hai già impostato questa difficoltà" + Util.RESET);
-      return;
-    }
-    if (this.difficulty != Util.DIFFICULTY_NOT_SETTED) {
-      String choice;
-      Scanner in = new Scanner(System.in, StandardCharsets.UTF_8);
-      do {
-        System.out.print("Il livello attuale è " + Util.BOLD
-                + difficultyNames[this.difficulty] + Util.RESET + ". Confermare cambio in "
-                + Util.BOLD + difficultyNames[newDifficulty] + Util.RESET
-                + "? (" + Util.GREEN + "y" + Util.RESET
-                + "/" + Util.RED + "n" + Util.RESET + ") ");
-        choice = in.nextLine().toLowerCase();
-        if (!choice.equals("y") && !choice.equals("n")) {
-          System.out.println(Util.RED + "Scelta non valida" + Util.RESET);
-        }
-      } while (!choice.equals("y") && !choice.equals("n"));
-      if (choice.equals("n")) {
-        System.out.println(Util.RED + "Operazione annullata" + Util.RESET);
-        return;
-      }
-    }
     this.difficulty = newDifficulty;
-    System.out.println(Util.GREEN + "OK" + Util.RESET);
   }
-
-  /**
-   * <h3> showLevel </h3>
-   * <p>
-   * Il metodo showLevel mostra il livello di gioco impostato
-   * e il numero massimo di tentativi che possono essere falliti.
-   * </p>
-   */
-  public void showLevel() {
-    String actualColor = Util.RESET;
-    if (this.difficulty != Util.DIFFICULTY_NOT_SETTED) {
-      System.out.print("Livello di difficoltà scelto: " + Util.BOLD);
-      switch (this.difficultyNames[this.difficulty]) {
-        case Util.EASY_NAME -> {
-          actualColor = Util.GREEN;
-        }
-        case Util.MEDIUM_NAME -> {
-          actualColor = Util.YELLOW;
-        }
-        case Util.HARD_NAME -> {
-          actualColor = Util.RED;
-        }
-        default -> System.out.print(Util.RESET);
-      }
-      System.out.print(actualColor);
-      System.out.print(this.difficultyNames[this.difficulty] + Util.RESET + "\n"
-              + "Numero massimo di tentativi falliti: " + Util.BOLD);
-      System.out.println(actualColor + this.attempts[this.difficulty] + Util.RESET);
-    } else {
-      System.out.println(Util.RED + "Difficoltà non ancora scelta\nPer scegliere la difficoltà utilizzare "
-              + "il comando /facile, /medio o /difficile" + Util.RESET);
-    }
+    /**
+     * <h3> setInGame </h3>
+     * <p>
+     * Imposta lo stato della partita.
+     * </p>
+     *
+     * @param newInGame Stato della partita.
+     */
+  public void setInGame(final boolean newInGame) {
+    this.inGame = newInGame;
   }
-
-  /**
-   * <h3> showShips </h3>
-   * <p>
-   * Il metodo showShips mostra, per ogni tipo di nave presente nel gioco,
-   * la dimensione in quadrati e il numero di esemplari da affondare.
-   * </p>
-   */
-  public void showShips() {
-    System.out.println(Util.CYAN + Util.ITALIC + "\tCacciatorpediniere \t" + Util.RESET + "■■ \t"
-            + Util.CYAN + Util.BOLD + "Esemplari: " + Util.DESTROYER_NO + Util.RESET);
-    System.out.println(Util.CYAN + Util.ITALIC + "\tIncrociatore \t\t" + Util.RESET + "■■■ \t"
-            + Util.CYAN + Util.BOLD + "Esemplari: " + Util.CRUISER_NO + Util.RESET);
-    System.out.println(Util.CYAN + Util.ITALIC + "\tCorazzata \t\t" + Util.RESET + "■■■■ \t"
-            + Util.CYAN + Util.BOLD + "Esemplari: " + Util.BATTLESHIP_NO + Util.RESET);
-    System.out.println(Util.CYAN + Util.ITALIC + "\tPortaerei \t\t" + Util.RESET + "■■■■■ \t"
-            + Util.CYAN + Util.BOLD + "Esemplari: " + Util.AIRCRAFT_NO + Util.RESET);
-  }
-
-  /**
-   * <h3> play </h3>
-   * <p>
-   * Il metodo play inizia una nuova partita.
-   * </p>
-   */
-  public void play() {
-    if (this.difficulty == Util.DIFFICULTY_NOT_SETTED) {
-      System.out.println(Util.RED + "Non hai ancora impostato il livello" + Util.RESET);
-      return;
-    }
-    if (this.inGame) {
-      System.out.println(Util.RED + "Sei gia in partita" + Util.RESET);
-      return;
-    }
-    this.inGame = true;
-    initializeShips(Util.MIN_SHIP);
-    System.out.println(attackGrid);
-  }
-
-  /**
-   * <h3> showDefenseGrid </h3>
-   * <p>
-   * Il metodo effettua la stampa della griglia delle navi posizionate.
-   * </p>
-   */
-  public void showDefenseGrid() {
-    if (!this.inGame) {
-      System.out.println(Util.RED + "Non sei in partita" + Util.RESET);
-      return;
-    }
-    System.out.println(defenseGrid);
-  }
-  /**
-   * <h3> initializeShips </h3>
-   * <p>
-   * Il metodo initializeShips inizializza le navi in posizioni casuali.
-   * </p>
-   *
-   * @param i Indice della nave da inizializzare.
-   * @return true se tutte le navi sono state inizializzate, false altrimenti.
-   */
-  private boolean initializeShips(final int i) {
-    if (i > Util.MAX_SHIP) {
-      return true;
-    }
-    boolean direction;
-    Random rnd = new Random();
-    Coordinate coord = new Coordinate();
-    for (int j = Util.MIN_GENERATIONS; j <= Util.MAX_GENERATIONS; j++) {
-      if (rnd.nextInt(2) == 1) {
-        direction = Util.VERTICAL;
-      } else {
-        direction = Util.HORIZONTAL;
-      }
-      coord.setRow(rnd.nextInt(Util.MAX_ROWS) + 1);
-      coord.setColumn((char) (rnd.nextInt(Util.MAX_COLUMN - Util.MIN_COLUMN + 1) + Util.MIN_COLUMN));
-      this.ships[i - 1].setDirection(direction);
-      this.ships[i - 1].setCoord(coord);
-      if (this.ships[i - 1].outOfMap()) {
-        j--;
-        continue;
-      }
-      if (this.ships[i - 1].intersects(defenseGrid)) {
-        continue;
-      }
-      placeShip(i - 1);
-      if (initializeShips(i + 1)) {
-        return true;
-      }
-      removeShip(i - 1);
-    }
-    return false;
-  }
-
-  /**
-   * <h3> placeShip </h3>
-   * <p>
-   * Il metodo placeShip posiziona la nave i-esima sulla griglia di difesa.
-   * </p>
-   *
-   * @param i Indice della nave da posizionare.
-   */
-  private void placeShip(final int i) {
-    if (ships[i].getDirection() == Util.VERTICAL) {
-      for (int j = 0; j < ships[i].getHp(); j++) {
-        defenseGrid.setCellCharacter(ships[i].getCoordRow() - 1 + j,
-            ships[i].getCoordColumn() - Util.MIN_COLUMN, Util.SHIP_CHARACTER);
-        defenseGrid.setCellShipIndex(ships[i].getCoordRow() - 1 + j,
-            ships[i].getCoordColumn() - Util.MIN_COLUMN, i);
-      }
-    } else {
-      for (int j = 0; j < ships[i].getHp(); j++) {
-        defenseGrid.setCellCharacter(ships[i].getCoordRow() - 1,
-            ships[i].getCoordColumn() - Util.MIN_COLUMN + j, Util.SHIP_CHARACTER);
-        defenseGrid.setCellShipIndex(ships[i].getCoordRow() - 1,
-            ships[i].getCoordColumn() - Util.MIN_COLUMN + j, i);
-      }
-    }
-  }
-
-  /**
-   * <h3> removeShip </h3>
-   * <p>
-   * Il metodo removeShip rimuove la nave i-esima dalla griglia di difesa.
-   * </p>
-   *
-   * @param i Indice della nave da rimuovere.
-   */
-  private void removeShip(final int i) {
-    for (int j = Util.MIN_ROWS; j <= Util.MAX_ROWS; j++) {
-      for (int k = Util.MIN_ROWS; k <= Util.MAX_ROWS; k++) {
-        if (defenseGrid.getCellShipIndex(j - 1, k - 1) == i) {
-          defenseGrid.setCellCharacter(j - 1, k - 1, Util.SEA_CHARACTER);
-          defenseGrid.setCellShipIndex(j - 1, k - 1, Util.SEA_INDEX);
-        }
-      }
-    }
+    /**
+     * <h3> getShip </h3>
+     * <p>
+     *     Restituisce la nave in posizione index.
+     * </p>
+     * @param index Indice della nave.
+     * @return ships[index] Nave in posizione index.
+     */
+  public Ship getShip(int index) {
+    return this.ships[index];
   }
 
 }
