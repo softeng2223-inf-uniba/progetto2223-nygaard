@@ -2,7 +2,28 @@ package it.uniba.nygaard.game.boundary;
 
 import it.uniba.nygaard.game.Util;
 
+/**
+ * <<Boundary>>
+ * <h2> DescriptionBoundary </h2>
+ * <p>
+ * La classe DescriptionBoundary rappresenta la boundary per la descrizione del gioco.
+ * </p>
+ */
 public class DescriptionBoundary {
+    /**
+     * <h3> Costruttore </h3>
+     * <p>
+     * Costruttore della classe DescriptionBoundary.
+     * </p>
+     */
+    private DescriptionBoundary() {
+    }
+    /**
+     * <h3> getDescription </h3>
+     * <p>
+     * Metodo che stampa la descrizione del gioco.
+     * </p>
+     */
     public static void getDescription() {
         String description = Util.BOLD + Util.PURPLE
                 + "Benvenuti nel gioco della battaglia navale!\n"
