@@ -27,7 +27,7 @@ public final class TimeBoundary {
      */
    public static void errorTime() {
      System.out.println(Util.RED + "Errore: il tempo inserito non è valido.\n Inserire un intero"
-             + "rappresentante i minuti di gioco" + Util.RESET);
+             + " rappresentante i minuti di gioco" + Util.RESET);
    }
   /**
    * <h3> operationDone </h3>
