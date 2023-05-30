@@ -41,14 +41,20 @@ public final class HelpBoundary {
                 + Util.ITALIC + Util.CYAN + "    * /gioca            " + Util.RESET
                 + "Ti fa iniziare una partita\n"
                 + Util.ITALIC + Util.CYAN + "    * /svelagriglia     " + Util.RESET
-                + "Mostra la griglia generata dal computer\n";
+                + "Mostra la griglia generata dal computer\n\n"
+                + HelpBoundary.subCommandsDifficulty();
         System.out.println(help);
     }
 
 
 
-
     private static String subCommandsDifficulty() {
-        return "";
+        String subDifficulty = Util.YELLOW
+            + Util.BOLD + "> DIFFICOLTA' CUSTOM\n" + Util.RESET
+            + Util.ITALIC + Util.CYAN + "    * /facile numero    " + Util.RESET
+            + "Imposta il numero massimo di tentativi, per la difficolta' facile, ad un valore pari a"
+            + Util.ITALIC + " numero " + Util.RESET;
+
+        return subDifficulty;
     }
 }
