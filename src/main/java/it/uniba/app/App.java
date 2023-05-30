@@ -1,10 +1,5 @@
 package it.uniba.app;
 
-import it.uniba.nygaard.game.entity.Match;
-import it.uniba.nygaard.game.Util;
-
-import java.nio.charset.StandardCharsets;
-import java.util.Scanner;
 
 /**
  * <h2> App </h2>
@@ -37,47 +32,6 @@ public final class App {
    * @param args Parametri d'ingresso da linea di comando
    */
   public static void main(final String[] args) {
-    Scanner in = new Scanner(System.in, StandardCharsets.UTF_8);
-    String command;
-
-    Match p = new Match();
-
-    if (args.length > 0) {
-      if (args.length > 1) {
-        System.out.println(Util.RED + "Troppi parametri inseriti.\nPremere invio per uscire" + Util.RESET);
-        in.nextLine();
-        System.exit(0);
-      }
-      String argument = args[0].toLowerCase();
-      if (argument.equals("--help") || argument.equals("-h")) {
-        Util.printHelp();
-      } else {
-        System.out.println(Util.RED + "Parametro " + argument + " non riconosciuto.\nPremere invio per uscire"
-                + Util.RESET);
-        in.nextLine();
-        System.exit(0);
-      }
-    } else {
-      Util.printLogo();
-      Util.printDescription();
-    }
-
-    while (true) {
-      System.out.print("Inserire un comando: " + Util.CYAN);
-      command = in.nextLine().toLowerCase();
-      System.out.print(Util.RESET);
-      switch (command) {
-        case "/help" -> Util.printHelp();
-        case "/esci" -> Util.exit();
-        case "/facile" -> p.setDifficulty(Util.DIFFICULTY_EASY);
-        case "/medio" -> p.setDifficulty(Util.DIFFICULTY_MEDIUM);
-        case "/difficile" -> p.setDifficulty(Util.DIFFICULTY_HARD);
-        case "/mostralivello" -> p.showLevel();
-        case "/mostranavi" -> p.showShips();
-        case "/gioca" -> p.play();
-        case "/svelagriglia" -> p.showDefenseGrid();
-        default -> System.out.println(Util.RED + "Comando non riconosciuto" + Util.RESET);
-      }
-    }
+    GeneralControl.startGame(args);
   }
 }
