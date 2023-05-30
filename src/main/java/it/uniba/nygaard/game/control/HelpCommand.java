@@ -1,6 +1,6 @@
 package it.uniba.nygaard.game.control;
 import it.uniba.nygaard.game.boundary.HelpBoundary;
-import it.uniba.nygaard.game.boundary.InputBoundary;
+
 
 /**
  * << Control >>

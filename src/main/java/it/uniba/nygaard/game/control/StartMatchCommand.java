@@ -1,7 +1,7 @@
 package it.uniba.nygaard.game.control;
 
 import it.uniba.nygaard.game.Util;
-import it.uniba.nygaard.game.boundary.InputBoundary;
+
 import it.uniba.nygaard.game.boundary.MatchBoundary;
 import it.uniba.nygaard.game.boundary.ShowGridBoundary;
 import it.uniba.nygaard.game.entity.Match;
