@@ -65,7 +65,7 @@ public final class GeneralControl {
     availableCommands.put("/help", HelpCommand.getInstance());
     ParamControl.initUI();
     while (!shutDown) {
-      String[] command = InputBoundary.getCommand().split(" ");
+      String[] command = InputBoundary.getCommand().trim().replaceAll(" +", " ").split(" ");
       InputBoundary.resetColor();
       if (availableCommands.containsKey(command[0])) {
         availableCommands.get(command[0]).executeCommand(command);
