@@ -37,7 +37,7 @@ abstract class Command {
 /**
      * <h3> executeCommand </h3>
      * <p>
-     *     Esegye il comando.
+     *     Esegue il comando.
      * </p>
      * @param command Comando da eseguire.
      */
