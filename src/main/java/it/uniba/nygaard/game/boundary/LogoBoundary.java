@@ -3,7 +3,7 @@ package it.uniba.nygaard.game.boundary;
 import it.uniba.nygaard.game.Util;
 
 /**
- * <<Boundary>>
+ * << Boundary >>
  * <h2> LogoBoundary </h2>
  * <p>
  * La classe LogoBoundary stampa il logo del gioco.

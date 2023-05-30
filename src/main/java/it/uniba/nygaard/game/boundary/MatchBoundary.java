@@ -3,7 +3,7 @@ package it.uniba.nygaard.game.boundary;
 import it.uniba.nygaard.game.Util;
 
 /**
- * <<Boundary>>
+ * << Boundary >>
  * <h2> MatchBoundary </h2>
  * <p>
  * La classe MatchBoundary stampa messaggi relativi alla partita.

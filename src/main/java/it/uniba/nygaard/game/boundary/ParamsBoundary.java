@@ -6,7 +6,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
 
 /**
- * <<Boundary>>
+ * << Boundary >>
  * <h2> ParamsBoundary </h2>
  * <p>
  * La classe ParamsBoundary stampa i messaggi di errore

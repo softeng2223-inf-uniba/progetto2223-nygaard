@@ -6,27 +6,27 @@ import it.uniba.nygaard.game.entity.Match;
 
 /**
  * << Control >>
- * <h2> UnveilGridCommand </h2>
+ * <h2> RevealGridCommand </h2>
  * <p>
- *     La classe UnveilGridCommand rappresenta il comando per mostrare la griglia.
+ *     La classe RevealGridCommand rappresenta il comando per mostrare la griglia.
  * </p>
  * @see Command
  */
-final class UnveilGridCommand extends Command {
+final class RevealGridCommand extends Command {
   /**
    * <h3> instance </h3>
    * <p>
-   *     Istanza di UnveilGridCommand.
+   *     Istanza di RevealGridCommand.
    * </p>
    */
-  private static UnveilGridCommand instance = new UnveilGridCommand();
+  private static RevealGridCommand instance = new RevealGridCommand();
   /**
    * <h3> Costruttore </h3>
    * <p>
-   *     Costruttore della classe UnveilGridCommand.
+   *     Costruttore della classe RevealGridCommand.
    * </p>
    */
-  private UnveilGridCommand() {
+  private RevealGridCommand() {
     setParamNumber(1);
   }
   /**
@@ -51,10 +51,10 @@ final class UnveilGridCommand extends Command {
   /**
    * <h3> getInstance </h3>
    * <p>
-   *    Restituisce l'istanza di UnveilGridCommand.
+   *    Restituisce l'istanza di RevealGridCommand.
    * </p>
    */
-  static UnveilGridCommand getInstance() {
+  static RevealGridCommand getInstance() {
     return instance;
   }
 }

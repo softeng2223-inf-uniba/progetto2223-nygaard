@@ -3,7 +3,7 @@ package it.uniba.nygaard.game.boundary;
 import it.uniba.nygaard.game.Util;
 
 /**
- * <<Boundary>>
+ * << Boundary >>
  * <h2> ShowGridBoundary </h2>
  * <p>
  * La classe ShowGridBoundary stampa la griglia di gioco.

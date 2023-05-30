@@ -6,7 +6,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
 
 /**
- * <<Boundary>>
+ * << Boundary >>
  * <h2> SetDifficultyBoundary </h2>
  * <p>
  * La classe SetDifficultyBoundary stampa i messaggi

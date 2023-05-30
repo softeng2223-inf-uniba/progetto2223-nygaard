@@ -3,7 +3,7 @@ package it.uniba.nygaard.game.boundary;
 import it.uniba.nygaard.game.Util;
 
 /**
- * <<Boundary>>
+ * << Boundary >>
  * <h2> DescriptionBoundary </h2>
  * <p>
  * La classe DescriptionBoundary rappresenta la boundary per la descrizione del gioco.

@@ -61,7 +61,7 @@ public final class GeneralControl {
     availableCommands.put("/mostralivello", ShowLevelCommand.getInstance());
     availableCommands.put("/mostranavi", ShowShipCommand.getInstance());
     availableCommands.put("/gioca", StartMatchCommand.getInstance());
-    availableCommands.put("/svelagriglia", UnveilGridCommand.getInstance());
+    availableCommands.put("/svelagriglia", RevealGridCommand.getInstance());
     availableCommands.put("/help", HelpCommand.getInstance());
     ParamControl.executeCommand();
     while (true) {

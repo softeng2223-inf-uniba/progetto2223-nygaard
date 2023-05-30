@@ -3,7 +3,7 @@ package it.uniba.nygaard.game.boundary;
 import it.uniba.nygaard.game.Util;
 
 /**
- * <<Boundary>>
+ * << Boundary >>
  *<h2> ShowShipsBoundary </h2>
  *<p>
  *La classe ShowShipsBoundary stampa le navi disponibili.
