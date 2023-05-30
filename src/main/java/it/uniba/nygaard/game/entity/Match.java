@@ -19,13 +19,64 @@ import it.uniba.nygaard.game.entity.grids.CharactersGrid;
  * </p>
  */
 public final class Match {
+  /**
+   * <h3> inGame </h3>
+   * <p>
+   *     Indica se il giocatore è in partita.
+   * </p>
+   */
   private boolean inGame;
+    /**
+     * <h3> difficulty </h3>
+     * <p>
+     *     Difficoltà della partita.
+     * </p>
+     */
   private int difficulty;
+  /**
+   * <h3> difficultyNames </h3>
+   * <p>
+   *     Nomi delle difficoltà.
+   * </p>
+   */
   private final String[] difficultyNames;
+    /**
+     * <h3> attempts </h3>
+     * <p>
+     *     Tentativi per ogni difficoltà.
+     * </p>
+     */
   private final int[] attempts;
+    /**
+     * <h3> ships </h3>
+     * <p>
+     *     Navi della partita.
+     * </p>
+     * @see Ship
+     */
   private final Ship[] ships;
+    /**
+     * <h3> defenseGrid </h3>
+     * <p>
+     *     Griglia di difesa.
+     * </p>
+     * @see CellsGrid
+     */
   private final CellsGrid defenseGrid;
+    /**
+     * <h3> attackGrid </h3>
+     * <p>
+     *     Griglia di attacco.
+     * </p>
+     * @see CharactersGrid
+     */
   private final CharactersGrid attackGrid;
+    /**
+     * <h3> instance </h3>
+     * <p>
+     *     Istanza di Match.
+     * </p>
+     */
   private static Match instance = new Match();
 
   /**
@@ -164,7 +215,7 @@ public final class Match {
      * @param index Indice della nave.
      * @return ships[index] Nave in posizione index.
      */
-  public Ship getShip(int index) {
+  public Ship getShip(final int index) {
     return this.ships[index];
   }
 
