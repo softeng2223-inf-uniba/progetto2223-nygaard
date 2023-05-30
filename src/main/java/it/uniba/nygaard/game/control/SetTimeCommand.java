@@ -51,15 +51,19 @@ final class SetTimeCommand extends Command {
         return;
       }
        int maxTime = 0;
-        if (invalidNumber(command, " <numero>")) {
+        if (invalidNumber(command, " <numero> (intero positivo)")) {
             return;
         }
         if (command.length < 2) {
-          InputBoundary.howToUse("/tempo", " <numero>");
+          InputBoundary.howToUse("/tempo", " <numero> (intero positivo)");
           return;
         }
         try {
             maxTime = Integer.parseInt(command[1]);
+            if (maxTime <= 0) {
+                TimeBoundary.errorTime();
+                return;
+            }
         } catch (NumberFormatException e) {
           TimeBoundary.errorTime();
         }
