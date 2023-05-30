@@ -56,4 +56,19 @@ final class SetDifficultyControl {
     p.setDifficulty(difficulty);
     SetDifficultyBoundary.operationDone();
   }
+
+  static void setAttempts() {
+    int attempts = GameManager.getGameAttempts();
+    Match p = GameManager.getMatch();
+    if (p.getInGame()) {
+      SetDifficultyBoundary.alreadyInGame();
+      return;
+    }
+    if (p.getAttempts(p.getDifficulty()) == attempts) {
+      SetDifficultyBoundary.sameAttempts();
+      return;
+    }
+    p.setAttempts(p.getDifficulty(), attempts);
+    SetDifficultyBoundary.operationDone();
+  }
 }
