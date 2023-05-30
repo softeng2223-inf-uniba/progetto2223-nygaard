@@ -9,7 +9,7 @@ import it.uniba.nygaard.game.Util;
  * La classe MatchBoundary stampa messaggi relativi alla partita.
  * </p>
  */
-public class MatchBoundary {
+public final class MatchBoundary {
     /**
      * <h3> Costruttore </h3>
      * <p>
@@ -27,7 +27,8 @@ public class MatchBoundary {
      * </p>
      */
     public static void noDifficulty() {
-        System.out.println(Util.RED + "Non puoi iniziare una partita senza impostare il livello di difficoltà" + Util.RESET);
+        System.out.println(Util.RED + "Non puoi iniziare una partita senza impostare il livello di difficoltà"
+                + Util.RESET);
     }
 
     /**
@@ -38,6 +39,7 @@ public class MatchBoundary {
      * </p>
      */
     public static void alreadyInGame() {
-        System.out.println(Util.RED + "Partita in corso\nPer cominciare una nuova partita abbandona la corrente" + Util.RESET);
+        System.out.println(Util.RED + "Partita in corso\nPer cominciare una nuova partita abbandona la corrente"
+                + Util.RESET);
     }
 }

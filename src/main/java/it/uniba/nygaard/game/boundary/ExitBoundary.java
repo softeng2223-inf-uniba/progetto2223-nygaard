@@ -12,7 +12,7 @@ import java.util.Scanner;
  * l'uscita dal gioco.
  * </p>
  */
-public class ExitBoundary {
+public final class ExitBoundary {
 
     /**
      * <h3> Costruttore </h3>

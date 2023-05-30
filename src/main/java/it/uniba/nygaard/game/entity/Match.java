@@ -1,12 +1,15 @@
 package it.uniba.nygaard.game.entity;
 import it.uniba.nygaard.game.Util;
-import it.uniba.nygaard.game.entity.ships.Ship;
-import it.uniba.nygaard.game.entity.ships.AircraftCarrier;
-import it.uniba.nygaard.game.entity.ships.Battleship;
-import it.uniba.nygaard.game.entity.ships.Cruiser;
-import it.uniba.nygaard.game.entity.ships.Destroyer;
 import it.uniba.nygaard.game.entity.grids.CellsGrid;
 import it.uniba.nygaard.game.entity.grids.CharactersGrid;
+import it.uniba.nygaard.game.entity.ships.AircraftCarrier;
+import it.uniba.nygaard.game.entity.ships.Battleship;
+import it.uniba.nygaard.game.entity.ships.Coordinate;
+import it.uniba.nygaard.game.entity.ships.Cruiser;
+import it.uniba.nygaard.game.entity.ships.Destroyer;
+import it.uniba.nygaard.game.entity.ships.Ship;
+
+import java.util.Random;
 
 
 /**
@@ -71,22 +74,16 @@ public final class Match {
      * @see CharactersGrid
      */
   private final CharactersGrid attackGrid;
-    /**
-     * <h3> instance </h3>
-     * <p>
-     *     Istanza di Match.
-     * </p>
-     */
-  private static Match instance = new Match();
+
 
   /**
    * <h3> Costruttore </h3>
    * <p>
-   * Metodo costruttore di Match.
+   * Metodo costruttore di this.
    * Inizializza tutti i suoi attributi ai valori di default prefissati.
    * </p>
    */
-  private Match() {
+  public Match() {
     this.inGame = false;
     this.difficulty = Util.DIFFICULTY_NOT_SETTED;
     this.difficultyNames = new String[]{Util.EASY_NAME, Util.MEDIUM_NAME, Util.HARD_NAME};
@@ -112,18 +109,6 @@ public final class Match {
     this.defenseGrid = new CellsGrid(Util.MAX_ROWS);
     this.attackGrid = new CharactersGrid(Util.MAX_ROWS);
   }
-
-  /**
-   * <h3>getInstance</h3>
-   * <p>
-   * Metodo che restituisce l'istanza di Match.
-   * </p>
-   * @return instance Istanza di Match.
-   */
-  public static Match getInstance() {
-    return instance;
-  }
-
   /**
    * <h3> getInGame </h3>
    * <p>
@@ -150,20 +135,22 @@ public final class Match {
    * <p>
    *     Restituisce i nomi delle difficoltà.
    * </p>
+   * @param index Indice della difficoltà.
    * @return difficultyNames Nomi delle difficoltà.
    */
-  public String[] getDifficultyNames() {
-    return this.difficultyNames;
+  public String getDifficultyNames(final int index) {
+    return this.difficultyNames[index];
   }
     /**
      * <h3> getAttempts </h3>
      * <p>
      *     Restituisce il numero di tentativi per ogni difficoltà.
      * </p>
+     * @param index Indice dei tentativi.
      * @return attempts Tentativi per ogni difficoltà.
      */
-  public int[] getAttempts() {
-    return this.attempts;
+  public int getAttempts(final int index) {
+    return this.attempts[index];
   }
     /**
      * <h3> getDefenseGrid </h3>
@@ -172,8 +159,8 @@ public final class Match {
      * </p>
      * @return defenseGrid Griglia di difesa della partita.
      */
-  public CellsGrid getDefenseGrid() {
-    return this.defenseGrid;
+  public String getDefenseGrid() {
+    return this.defenseGrid.toString();
   }
     /**
      * <h3> getAttackGrid </h3>
@@ -182,8 +169,8 @@ public final class Match {
      * </p>
      * @return attackGrid Griglia di attacco della partita.
      */
-  public CharactersGrid getAttackGrid() {
-    return this.attackGrid;
+  public String getAttackGrid() {
+    return this.attackGrid.toString();
   }
   /**
    * <h3> setDifficulty </h3>
@@ -218,5 +205,90 @@ public final class Match {
   public Ship getShip(final int index) {
     return this.ships[index];
   }
+  /**
+   * <h3> initializeShips </h3>
+   * <p>
+   * Il metodo initializeShips inizializza le navi in posizioni casuali.
+   * </p>
+   *
+   * @param i Indice della nave da inizializzare.
+   * @return true se tutte le navi sono state inizializzate, false altrimenti.
+   */
+  public boolean initializeShips(final int i) {
+    if (i > Util.MAX_SHIP) {
+      return true;
+    }
+    boolean direction;
+    Random rnd = new Random();
+    Coordinate coord = new Coordinate();
+    for (int j = Util.MIN_GENERATIONS; j <= Util.MAX_GENERATIONS; j++) {
+      if (rnd.nextInt(2) == 1) {
+        direction = Util.VERTICAL;
+      } else {
+        direction = Util.HORIZONTAL;
+      }
+      coord.setRow(rnd.nextInt(Util.MAX_ROWS) + 1);
+      coord.setColumn((char) (rnd.nextInt(Util.MAX_COLUMN - Util.MIN_COLUMN + 1) + Util.MIN_COLUMN));
+      this.ships[i - 1].setDirection(direction);
+      this.ships[i - 1].setCoord(coord);
+      if (this.ships[i - 1].outOfMap()) {
+        j--;
+        continue;
+      }
+      if (this.ships[i - 1].intersects(defenseGrid)) {
+        continue;
+      }
+      placeShip(i - 1);
+      if (initializeShips(i + 1)) {
+        return true;
+      }
+      removeShip(i - 1);
+    }
+    return false;
+  }
 
+  /**
+   * <h3> placeShip </h3>
+   * <p>
+   * Il metodo placeShip posiziona la nave i-esima sulla griglia di difesa.
+   * </p>
+   *
+   * @param i Indice della nave da posizionare.
+   */
+  private void placeShip(final int i) {
+    if (ships[i].getDirection() == Util.VERTICAL) {
+      for (int j = 0; j < ships[i].getHp(); j++) {
+        defenseGrid.setCellCharacter(ships[i].getCoordRow() - 1 + j,
+                ships[i].getCoordColumn() - Util.MIN_COLUMN, Util.SHIP_CHARACTER);
+        defenseGrid.setCellShipIndex(ships[i].getCoordRow() - 1 + j,
+                ships[i].getCoordColumn() - Util.MIN_COLUMN, i);
+      }
+    } else {
+      for (int j = 0; j < ships[i].getHp(); j++) {
+        defenseGrid.setCellCharacter(ships[i].getCoordRow() - 1,
+                ships[i].getCoordColumn() - Util.MIN_COLUMN + j, Util.SHIP_CHARACTER);
+        defenseGrid.setCellShipIndex(ships[i].getCoordRow() - 1,
+                ships[i].getCoordColumn() - Util.MIN_COLUMN + j, i);
+      }
+    }
+  }
+
+  /**
+   * <h3> removeShip </h3>
+   * <p>
+   * Il metodo removeShip rimuove la nave i-esima dalla griglia di difesa.
+   * </p>
+   *
+   * @param i Indice della nave da rimuovere.
+   */
+  private void removeShip(final int i) {
+    for (int j = Util.MIN_ROWS; j <= Util.MAX_ROWS; j++) {
+      for (int k = Util.MIN_ROWS; k <= Util.MAX_ROWS; k++) {
+        if (defenseGrid.getCellShipIndex(j - 1, k - 1) == i) {
+          defenseGrid.setCellCharacter(j - 1, k - 1, Util.SEA_CHARACTER);
+          defenseGrid.setCellShipIndex(j - 1, k - 1, Util.SEA_INDEX);
+        }
+      }
+    }
+  }
 }

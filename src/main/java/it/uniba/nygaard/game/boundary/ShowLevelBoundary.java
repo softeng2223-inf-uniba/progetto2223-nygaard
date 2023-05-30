@@ -8,7 +8,7 @@ package it.uniba.nygaard.game.boundary;
  * scelto dall'utente.
  * </p>
  */
-public class ShowLevelBoundary {
+public final class ShowLevelBoundary {
     /**
      * <h3> Costruttore </h3>
      * <p>
@@ -24,7 +24,7 @@ public class ShowLevelBoundary {
      * </p>
      * @param s Livello di difficoltà
      */
-    public static void printActualDifficulty(String s) {
+    public static void printActualDifficulty(final String s) {
         System.out.println(s);
     }
 }

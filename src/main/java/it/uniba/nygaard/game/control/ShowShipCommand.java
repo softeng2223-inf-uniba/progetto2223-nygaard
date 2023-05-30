@@ -40,8 +40,9 @@ final class ShowShipCommand extends Command {
   /**
    * <h3> executeCommand </h3>
    * <p>
-   *     Esegue il comando.
+   *     Esegue il comando di visualizzazione delle navi.
    * </p>
+   * @param command Comando da eseguire.
    */
   public  void executeCommand(final String[] command) {
     if (command.length > getParamNumber()) {

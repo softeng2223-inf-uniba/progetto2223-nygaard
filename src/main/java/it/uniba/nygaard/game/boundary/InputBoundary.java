@@ -3,7 +3,6 @@ package it.uniba.nygaard.game.boundary;
 import it.uniba.nygaard.game.Util;
 
 import java.nio.charset.StandardCharsets;
-import java.util.Arrays;
 import java.util.Scanner;
 
 /**
@@ -45,9 +44,7 @@ public final class InputBoundary {
      */
     public static void notRecognisedCommand(final String[] command) {
         String commandString = "";
-        for (String s : command) {
-            commandString += s + " ";
-        }
+        commandString = String.join(" ", command);
         System.out.println(Util.RED + "Comando non riconosciuto: " + commandString + Util.RESET);
     }
     /**

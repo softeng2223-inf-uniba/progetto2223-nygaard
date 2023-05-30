@@ -5,43 +5,44 @@ import it.uniba.nygaard.game.boundary.InputBoundary;
 
 /**
  * << Control >>
- * <h2> SetHardDifficulty </h2>
+ * <h2> SetHard </h2>
  * <p>
- *     La classe SetHardDifficulty rappresenta il comando di impostazione della difficoltà difficile.
+ *     La classe SetHard rappresenta il comando di impostazione della difficoltà difficile.
  * </p>
  * @see Command
  */
-final class SetEasyDifficulty extends Command {
+final class SetHard extends Command {
   /**
    * <h3> instance </h3>
    * <p>
-   *   Istanza di SetEasyDifficulty.
+   *   Istanza di SetHard.
    *  </p>
    */
-  private static SetEasyDifficulty instance = new SetEasyDifficulty();
+  private static SetHard instance = new SetHard();
   /**
    * <h3> getInstance </h3>
    * <p>
-   *   Restituisce l'istanza di SetHardDifficulty.
+   *   Restituisce l'istanza di SetHard.
    * </p>
    */
-  static SetEasyDifficulty getInstance() {
+  static SetHard getInstance() {
     return instance;
   }
   /**
    * <h3> Costruttore </h3>
    * <p>
-   *   Costruttore della classe SetHardDifficulty.
+   *   Costruttore della classe SetHard.
    * </p>
    */
-  private SetEasyDifficulty() {
+  private SetHard() {
     setParamNumber(2);
   }
   /**
    * <h3> executeCommand </h3>
    * <p>
-   *   Esegue il comando.
+   *   Esegue il comando per impostare la difficoltà difficile.
    * </p>
+   * @param command Comando da eseguire.
    */
   public void executeCommand(final String[] command) {
     if (command.length > getParamNumber()) {
@@ -50,7 +51,7 @@ final class SetEasyDifficulty extends Command {
     }
     GameManager.setNextDifficulty(Util.DIFFICULTY_HARD);
         /*
-      TO DO -> GESTIRE IL CASO CON PARAMETREI
+      TO DO -> GESTIRE IL CASO CON PARAMETRI
     }*/
     SetDifficultyControl.setDifficulty();
   }

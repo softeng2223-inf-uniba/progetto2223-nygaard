@@ -14,7 +14,7 @@ import java.util.Scanner;
  * del gioco.
  * </p>
  */
-public class ParamsBoundary {
+public final class ParamsBoundary {
     /**
      * <h3> Costruttore </h3>
      * <p>
@@ -44,7 +44,7 @@ public class ParamsBoundary {
      * </p>
      * @param argument Parametro non riconosciuto
      */
-    public static void notRecogniseArg(String argument) {
+    public static void notRecogniseArg(final String argument) {
         System.out.println(Util.RED + "Parametro " + argument + " non riconosciuto.\nPremere invio per uscire"
                 + Util.RESET);
         new Scanner(System.in, StandardCharsets.UTF_8).nextLine();

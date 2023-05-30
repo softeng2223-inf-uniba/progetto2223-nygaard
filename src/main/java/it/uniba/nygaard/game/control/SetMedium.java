@@ -5,36 +5,36 @@ import it.uniba.nygaard.game.boundary.InputBoundary;
 
 /**
  * << Control >>
- * <h2> SetMediumDifficulty </h2>
+ * <h2> SetMedium </h2>
  * <p>
- *     La classe SetMediumDifficulty rappresenta il comando di impostazione della difficoltà media.
+ *     La classe SetMedium rappresenta il comando di impostazione della difficoltà media.
  * </p>
  * @see Command
  */
-final class SetMediumDifficulty extends Command {
+final class SetMedium extends Command {
   /**
    * <h3> instance </h3>
    * <p>
-   *   Istanza di SetMediumDifficulty.
+   *   Istanza di SetMedium.
    *  </p>
    */
-  private static SetMediumDifficulty instance = new SetMediumDifficulty();
+  private static SetMedium instance = new SetMedium();
   /**
    * <h3> getInstance </h3>
    * <p>
-   *   Restituisce l'istanza di SetMediumDifficulty.
+   *   Restituisce l'istanza di SetMedium.
    * </p>
    */
-  static SetMediumDifficulty getInstance() {
+  static SetMedium getInstance() {
     return instance;
   }
   /**
    * <h3> Costruttore </h3>
    * <p>
-   *   Costruttore della classe SetMediumDifficulty.
+   *   Costruttore della classe SetMedium.
    * </p>
    */
-  private SetMediumDifficulty() {
+  private SetMedium() {
     setParamNumber(2);
   }
   /**
@@ -42,6 +42,7 @@ final class SetMediumDifficulty extends Command {
    * <p>
    *   Esegue il comando impostando la difficoltà media.
    * </p>
+   * @param command Comando da eseguire.
    */
   public void executeCommand(final String[] command) {
     if (command.length > getParamNumber()) {

@@ -32,6 +32,7 @@ public final class HelpCommand extends Command {
    * <p>
    *     Esegue il comando di aiuto.
    * </p>
+   * @param command Comando da eseguire.
    */
   public void executeCommand(final String[] command) {
     if (command.length > getParamNumber()) {

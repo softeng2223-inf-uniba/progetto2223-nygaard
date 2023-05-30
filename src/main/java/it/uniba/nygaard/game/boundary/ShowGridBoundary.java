@@ -1,7 +1,6 @@
 package it.uniba.nygaard.game.boundary;
 
 import it.uniba.nygaard.game.Util;
-import it.uniba.nygaard.game.entity.grids.Grid;
 
 /**
  * <<Boundary>>
@@ -10,7 +9,7 @@ import it.uniba.nygaard.game.entity.grids.Grid;
  * La classe ShowGridBoundary stampa la griglia di gioco.
  * </p>
  */
-public class ShowGridBoundary {
+public final class ShowGridBoundary {
     /**
      * <h3> Costruttore </h3>
      * <p>
@@ -36,7 +35,7 @@ public class ShowGridBoundary {
      * </p>
      * @param grid Griglia di gioco
      */
-    public static void printGrid(Grid grid) {
+    public static void printGrid(final String grid) {
         System.out.println(grid);
     }
 }

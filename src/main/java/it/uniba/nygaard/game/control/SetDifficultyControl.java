@@ -24,7 +24,8 @@ final class SetDifficultyControl {
   /**
    * <h3> setDifficulty </h3>
    * <p>
-   *     Imposta la difficoltà.
+   *     Imposta la difficoltà se questa non è già impostata,
+   *     altrimenti chiede all'utente se vuole cambiare difficoltà.
    * </p>
    */
   static void setDifficulty() {

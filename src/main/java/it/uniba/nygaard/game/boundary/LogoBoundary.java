@@ -9,7 +9,7 @@ import it.uniba.nygaard.game.Util;
  * La classe LogoBoundary stampa il logo del gioco.
  * </p>
  */
-public class LogoBoundary {
+public final class LogoBoundary {
     /**
      * <h3> Costruttore </h3>
      * <p>

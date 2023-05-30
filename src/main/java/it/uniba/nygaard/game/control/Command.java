@@ -39,6 +39,7 @@ abstract class Command {
      * <p>
      *     Esegye il comando.
      * </p>
+     * @param command Comando da eseguire.
      */
     abstract void executeCommand(String[] command);
 }

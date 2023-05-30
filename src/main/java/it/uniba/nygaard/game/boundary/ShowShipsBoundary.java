@@ -9,7 +9,7 @@ import it.uniba.nygaard.game.Util;
  *La classe ShowShipsBoundary stampa le navi disponibili.
  *</p>
  */
-public class ShowShipsBoundary {
+public final class ShowShipsBoundary {
     /**
      * <h3> Costruttore </h3>
      * <p>

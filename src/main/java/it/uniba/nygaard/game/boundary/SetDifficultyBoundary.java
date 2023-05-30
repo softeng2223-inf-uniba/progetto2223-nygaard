@@ -13,7 +13,7 @@ import java.util.Scanner;
  * relativi al cambio di difficoltà.
  * </p>
  */
-public class SetDifficultyBoundary {
+public final class SetDifficultyBoundary {
     /**
      * <h3> Costruttore </h3>
      * <p>
@@ -51,10 +51,10 @@ public class SetDifficultyBoundary {
      * @param newDifficulty Nuova difficoltà
      * @return Risposta dell'utente
      */
-    public static String ask(Match p, int newDifficulty) {
+    public static String ask(final Match p, final int newDifficulty) {
         System.out.println("Il livello attuale è " + Util.BOLD
-                + p.getDifficultyNames()[p.getDifficulty()] + Util.RESET + ". Confermare cambio in "
-                + Util.BOLD + p.getDifficultyNames()[newDifficulty] + Util.RESET
+                + p.getDifficultyNames(p.getDifficulty()) + Util.RESET + ". Confermare cambio in "
+                + Util.BOLD + p.getDifficultyNames(newDifficulty) + Util.RESET
                 + "? (" + Util.GREEN + "y" + Util.RESET
                 + "/" + Util.RED + "n" + Util.RESET + ") ");
         return new Scanner(System.in, StandardCharsets.UTF_8).next().toLowerCase();

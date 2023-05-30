@@ -25,7 +25,9 @@ final class ParamControl {
   /**
    * <h3> executeCommand </h3>
    * <p>
-   *     Esegue il comando.
+   *     Controlla se l'applicazione è stava avviata con dei parametri.
+   *     In caso positivo controlla se i parametri sono validi e, se lo sono,
+   *     esegue i comandi corrispondenti.
    * </p>
    */
   public static void executeCommand() {

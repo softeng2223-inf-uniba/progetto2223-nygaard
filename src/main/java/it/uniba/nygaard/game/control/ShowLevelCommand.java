@@ -42,8 +42,9 @@ final class ShowLevelCommand extends Command {
   /**
    * <h3> executeCommand </h3>
    * <p>
-   *     Esegue il comando.
+   *     Esegue il comando per mostrare il livello di difficoltà con relativo numero di tentativi.
    * </p>
+   * @param command comando da eseguire
    */
   public void executeCommand(final String[] command) {
     if (command.length > getParamNumber()) {
@@ -55,7 +56,7 @@ final class ShowLevelCommand extends Command {
     String s = "";
     if (p.getDifficulty() != Util.DIFFICULTY_NOT_SETTED) {
       s = "Livello di difficoltà scelto: " + Util.BOLD;
-      switch (p.getDifficultyNames()[p.getDifficulty()]) {
+      switch (p.getDifficultyNames(p.getDifficulty())) {
         case Util.EASY_NAME -> {
           actualColor = Util.GREEN;
         }
@@ -70,9 +71,9 @@ final class ShowLevelCommand extends Command {
         }
       }
       s += (actualColor);
-      s += p.getDifficultyNames()[p.getDifficulty()] + Util.RESET + "\n"
+      s += p.getDifficultyNames(p.getDifficulty()) + Util.RESET + "\n"
               + "Numero massimo di tentativi falliti: " + Util.BOLD;
-      s += actualColor + p.getAttempts()[p.getDifficulty()] + Util.RESET;
+      s += actualColor + p.getAttempts(p.getDifficulty()) + Util.RESET;
     } else {
       s += Util.RED + "Difficoltà non ancora scelta\nPer scegliere la difficoltà utilizzare "
               + "il comando /facile, /medio o /difficile" + Util.RESET;
