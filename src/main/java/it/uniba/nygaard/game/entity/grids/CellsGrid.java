@@ -12,6 +12,12 @@ import it.uniba.nygaard.game.Util;
  */
 public final class CellsGrid extends Grid {
 
+    /**
+     * <h3> grid </h3>
+     * <p>
+     * Griglia di celle carattere-intero.
+     * </p>
+     */
   private final Cell[][] grid;
 
   /**

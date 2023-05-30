@@ -12,7 +12,7 @@ class Cell {
   /**
    * <h3> character </h3>
    * <p>
-   * Carattere della cella
+   * Carattere della cella.
    * </p>
    */
   private char character;
