@@ -79,7 +79,7 @@ public final class Match {
   /**
    * <h3> Costruttore </h3>
    * <p>
-   * Metodo costruttore di this.
+   * Metodo costruttore di Match.
    * Inizializza tutti i suoi attributi ai valori di default prefissati.
    * </p>
    */
