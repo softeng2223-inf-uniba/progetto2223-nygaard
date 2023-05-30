@@ -1,7 +1,7 @@
 package it.uniba.nygaard.game.control;
 
 /**
- * <h2> CommandInterface </h2>
+ * <h2> Command </h2>
  * <p>
  * La classe Command rappresenta un generico comando.
  * </p>
