@@ -17,7 +17,7 @@ final class ParamControl {
   /**
    * <h3> ParamControl </h3>
    * <p>
-   *     Cosruttore della classe ParamControl.
+   *     Costruttore della classe ParamControl.
    * </p>
    */
   private ParamControl() {
