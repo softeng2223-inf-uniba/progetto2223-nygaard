@@ -4,19 +4,19 @@ import it.uniba.nygaard.game.Util;
 
 /**
  * <<Boundary>>
- *<h2> ShowShipBoundary </h2>
+ *<h2> ShowShipsBoundary </h2>
  *<p>
- *La classe ShowShipBoundary stampa le navi disponibili.
+ *La classe ShowShipsBoundary stampa le navi disponibili.
  *</p>
  */
-public class ShowShipBoundary {
+public class ShowShipsBoundary {
     /**
      * <h3> Costruttore </h3>
      * <p>
      * Costruttore della classe ShowShipBoundary.
      * </p>
      */
-    private ShowShipBoundary() {
+    private ShowShipsBoundary() {
     }
     /**
      * <h3> showShips </h3>
