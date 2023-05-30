@@ -74,7 +74,13 @@ public final class Match {
      * @see CharactersGrid
      */
   private final CharactersGrid attackGrid;
-
+    /**
+     * <h3> maxTime </h3>
+     * <p>
+     *     Tempo massimo per la partita.
+     * </p>
+     */
+  private int maxTime;
 
   /**
    * <h3> Costruttore </h3>
@@ -108,6 +114,7 @@ public final class Match {
     }
     this.defenseGrid = new CellsGrid(Util.MAX_ROWS);
     this.attackGrid = new CharactersGrid(Util.MAX_ROWS);
+    maxTime = Util.DEFAULT_TIME;
   }
   /**
    * <h3> getInGame </h3>
@@ -205,6 +212,28 @@ public final class Match {
   public Ship getShip(final int index) {
     return this.ships[index];
   }
+  /**
+     * <h3> getMaxTime </h3>
+     * <p>
+     *     Restituisce il tempo massimo per la partita.
+     * </p>
+     * @return maxTime Tempo massimo per la partita.
+     */
+  public int getMaxTime() {
+    return maxTime;
+  }
+  /**
+   * <h3> setMaxTime </h3>
+   * <p>
+   * Imposta il tempo massimo per la partita.
+   * </p>
+   *
+   * @param newMaxTime Tempo massimo per la partita.
+   */
+  public void setMaxTime(final int newMaxTime) {
+    this.maxTime = newMaxTime;
+  }
+
   /**
    * <h3> initializeShips </h3>
    * <p>
