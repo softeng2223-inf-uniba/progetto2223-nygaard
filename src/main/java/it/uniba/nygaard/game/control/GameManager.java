@@ -90,6 +90,22 @@ public final class GameManager {
     static void setNextDifficulty(final int newNextDifficulty) {
         GameManager.nextDifficulty = newNextDifficulty;
     }
+
+    /**
+     * <h3> setNextAttempts </h3>
+     * <p>
+     * Imposta il numero di tentativi della prossima partita.
+     * </p>
+     * @param newAttempts Numero di tentativi della prossima partita.
+     */
+    static void setNextAttempts(final int newAttempts) {
+        GameManager.nextAttempts = newAttempts;
+    }
+
+    static int getGameAttempts() {
+        return nextAttempts;
+    }
+
     /**
      * <h3> getArgs </h3>
      * <p>
