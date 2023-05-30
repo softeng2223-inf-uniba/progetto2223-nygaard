@@ -28,4 +28,9 @@ public class SetDifficultyBoundary {
     {
         System.out.println(Util.RED + "Cambio difficoltà annullato" + Util.RESET);
     }
+
+    public static void operationDone()
+    {
+        System.out.println(Util.GREEN + "OK" + Util.RESET);
+    }
 }
