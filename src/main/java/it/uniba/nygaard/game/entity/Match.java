@@ -1,5 +1,4 @@
 package it.uniba.nygaard.game.entity;
-
 import it.uniba.nygaard.game.Util;
 import it.uniba.nygaard.game.entity.ships.Ship;
 import it.uniba.nygaard.game.entity.ships.AircraftCarrier;

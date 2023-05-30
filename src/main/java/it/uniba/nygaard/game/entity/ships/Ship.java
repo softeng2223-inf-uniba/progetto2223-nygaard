@@ -1,7 +1,5 @@
 package it.uniba.nygaard.game.entity.ships;
-
 import it.uniba.nygaard.game.Util;
-import it.uniba.nygaard.game.entity.grids.CellsGrid;
 
 /**
  * <h2> Ship </h2>
@@ -10,9 +8,27 @@ import it.uniba.nygaard.game.entity.grids.CellsGrid;
  * </p>
  */
 public abstract class Ship {
-
+  /**
+   * <h3> coord </h3>
+   * <p>
+   * Coordinate della nave.
+   * </p>
+   * @see Coordinate
+   */
   private final Coordinate coord;
+    /**
+     * <h3> direction </h3>
+     * <p>
+     * Direzione della nave.
+     * </p>
+     */
   private boolean direction;
+    /**
+     * <h3> hp </h3>
+     * <p>
+     * Hp della nave.
+     * </p>
+     */
   private int hp;
 
   /**
@@ -113,52 +129,4 @@ public abstract class Ship {
   public int getHp() {
     return hp;
   }
-
-  /**
-   * <h3> outOfMap </h3>
-   * <p>
-   * Verifica se la nave è fuori dalla griglia.
-   * </p>
-   *
-   * @return True se la nave è fuori dalla griglia, false altrimenti.
-   */
-  public boolean outOfMap() {
-    if (this.direction == Util.VERTICAL) {
-      return this.coord.getRow() + this.hp > Util.MAX_ROWS;
-    } else {
-      return this.coord.getColumn() + this.hp > Util.MAX_COLUMN;
-    }
-  }
-
-  /**
-   * <h3> intersects </h3>
-   * <p>
-   * Verifica se la nave interseca altre navi.
-   * </p>
-   *
-   * @param grid Griglia di gioco.
-   * @return True se la nave interseca altre navi, false altrimenti.
-   */
-  public boolean intersects(final CellsGrid grid) {
-    int startx = Math.max(this.coord.getRow() - 2, Util.MIN_ROWS - 1);
-    int starty = Math.max(this.coord.getColumn() - Util.MIN_COLUMN - 1, Util.MIN_ROWS - 1);
-    int endx;
-    int endy;
-    if (this.direction == Util.VERTICAL) {
-      endx = Math.min(this.coord.getRow() + this.hp - 1, Util.MAX_ROWS - 1);
-      endy = Math.min(this.coord.getColumn() - Util.MIN_COLUMN + 1, Util.MAX_ROWS - 1);
-    } else {
-      endx = Math.min(this.coord.getRow(), Util.MAX_ROWS - 1);
-      endy = Math.min(this.coord.getColumn() - Util.MIN_COLUMN + this.hp, Util.MAX_ROWS - 1);
-    }
-    for (int i = startx; i <= endx; i++) {
-      for (int j = starty; j <= endy; j++) {
-        if (grid.getCellCharacter(i, j) != Util.SEA_CHARACTER) {
-          return true;
-        }
-      }
-    }
-    return false;
-  }
-
 }
