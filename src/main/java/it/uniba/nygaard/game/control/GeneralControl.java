@@ -64,14 +64,12 @@ public final class GeneralControl {
     availableCommands.put("/svelagriglia", RevealGridCommand.getInstance());
     availableCommands.put("/help", HelpCommand.getInstance());
     ParamControl.executeCommand();
-    while (true) {
+    while (!shutdown) {
       String[] command = InputBoundary.getCommand().split(" ");
       InputBoundary.reset();
       if (availableCommands.containsKey(command[0])) {
         availableCommands.get(command[0]).executeCommand(command);
-        if (shutDown) {
-          return;
-        }
+       
       } else {
         InputBoundary.notRecognisedCommand(command);
       }
