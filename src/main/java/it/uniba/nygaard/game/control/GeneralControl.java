@@ -51,7 +51,7 @@ public final class GeneralControl {
    */
   public static void startGame(final String[] args) {
     GameManager.setMatch(new Match());
-    GameManager.setNextDifficulty(Util.EASY_ATTEMPTS);
+    GameManager.setNextDifficulty(Util.DIFFICULTY_EASY);
     GameManager.setArgs(args);
     HashMap<String, Command> availableCommands = new HashMap<>();
     availableCommands.put("/esci", ExitCommand.getInstance());
