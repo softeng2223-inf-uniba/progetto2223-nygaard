@@ -1,8 +1,5 @@
 package it.uniba.nygaard.game;
 
-import java.nio.charset.StandardCharsets;
-import java.util.Scanner;
-
 /**
  * <h2> Util </h2>
  * <p>
@@ -63,105 +60,6 @@ public final class Util {
    * </p>
    */
   private Util() {
-  }
-
-  /**
-   * <h3> printLogo </h3>
-   * <p>
-   *   Metodo che stampa il logo dell'applicazione.
-   * </p>
-   */
-  public static void printLogo() {
-    String logo = Util.BOLD + Util.RED
-        + "    ____   ___   ______ ______ __     ______ _____  __  __ ____ ____ \n"
-        + "   / __ ) /   | /_  __//_  __// /    / ____// ___/ / / / //  _// __ \\\n"
-        + "  / __  |/ /| |  / /    / /  / /    / __/   \\__ \\ / /_/ / / / / /_/ /\n"
-        + Util.BLUE
-        + " / /_/ // ___ | / /    / /  / /___ / /___  ___/ // __  /_/ / / ____/ \n"
-        + "/_____//_/  |_|/_/    /_/  /_____//_____/ /____//_/ /_//___//_/      \n"
-        + Util.RESET;
-    System.out.println(logo);
-  }
-
-
-  /**
-   * <h3> printHelp </h3>
-   * <p>
-   * Mostra una descrizione del programma insieme a tutti
-   * i comandi disponibili che si possono eseguire.
-   * </p>
-   */
-  public static void printHelp() {
-    Util.printDescription();
-    String help = Util.YELLOW
-        + Util.BOLD + "> COMANDI\n" + Util.RESET
-        + Util.ITALIC + Util.CYAN + "    * /help             " + Util.RESET
-            + "Vengono visualizzate le regole " + "di gioco e i comandi disponibili\n"
-        + Util.ITALIC + Util.CYAN + "    * /esci             " + Util.RESET
-            + "Ti permette di uscire dal gioco\n"
-        + Util.ITALIC + Util.CYAN + "    * /facile           " + Util.RESET
-            + "Imposta la difficolta' della partita a \"Facile\"\n"
-        + Util.ITALIC + Util.CYAN +  "    * /medio            " + Util.RESET
-            + "Imposta la difficolta' della partita a \"Medio\"\n"
-        + Util.ITALIC +  Util.CYAN + "    * /difficile        " + Util.RESET
-            + "Imposta la difficolta' della partita a \"Difficile\"\n"
-        + Util.ITALIC + Util.CYAN + "    * /mostralivello    " + Util.RESET
-            + "Mostra il livello della partita\n"
-        + Util.ITALIC + Util.CYAN + "    * /mostranavi       " + Util.RESET
-            + "Mostra le navi ancora in gioco e il loro numero\n"
-        + Util.ITALIC + Util.CYAN + "    * /gioca            " + Util.RESET
-            + "Ti fa iniziare una partita\n"
-        + Util.ITALIC + Util.CYAN + "    * /svelagriglia     " + Util.RESET
-            + "Mostra la griglia generata dal computer\n";
-    System.out.println(help);
-  }
-
-  /**
-   * <h3> printDescription </h3>
-   * <p>
-   * Mostra una descrizione concisa del programma.
-   * </p>
-   */
-  public static void printDescription() {
-    String description = Util.BOLD + Util.PURPLE
-        + "Benvenuti nel gioco della battaglia navale!\n"
-        + Util.RESET
-        + "Prima di iniziare vi andiamo a presentare una breve introduzione al gioco con\n"
-        + "i suoi relativi comandi.\n\n"
-        + Util.YELLOW + Util.BOLD + "> INTRODUZIONE\n" + Util.RESET
-        + "    In questa realizzazione della battaglia navale, giocherete voi contro il vostro\n"
-        + "    computer che posizionera' le navi in automatico prima dell'inizio della partita.\n\n"
-        + "    Come giocatore, dovete individuare le posizioni delle navi e affondarle\n"
-        + "    tutte, dalla prima all'ultima.\n\n"
-        + "    Vincerete la partita solamente se affonderete tutte le navi prima di raggiungere\n"
-        + "    il numero massimo di tentativi falliti, che cambia in base alla difficolta' scelta.\n";
-    System.out.println(description);
-  }
-
-   /**
-   * <h3> exit </h3>
-   * <p>
-   * Metodo usato per effettuare la conferma dell'uscita dal programma e in caso affermativo eseguirla.
-   * </p>
-   */
-  public static void exit() {
-    Scanner in = new Scanner(System.in, StandardCharsets.UTF_8);
-    String command;
-    do {
-      System.out.print("Vuoi veramente uscire? "
-              + "(" + Util.GREEN + "y" + Util.RESET
-              + "/" + Util.RED + "n" + Util.RESET + ") ");
-      command = in.nextLine().toLowerCase();
-      if (command.equals("y")) {
-        System.out.println(Util.YELLOW + Util.BOLD +  "GRAZIE PER AVER GIOCATO!" + Util.RESET);
-        System.exit(0);
-      }
-      if (command.equals("n")) {
-        System.out.println(Util.RED + "Operazione annullata" + Util.RESET);
-      } else {
-        System.out.println(Util.RED + "Scelta non valida" + Util.RESET);
-      }
-    } while (!command.equals("n") && !command.equals("y"));
   }
 }
 
