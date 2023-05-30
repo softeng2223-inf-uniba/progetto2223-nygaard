@@ -14,4 +14,11 @@ public class ParamsBoundary {
         System.out.println(Util.RED + "Troppi parametri inseriti.\nPremere invio per uscire" + Util.RESET);
         new Scanner(System.in, StandardCharsets.UTF_8).nextLine();
     }
+
+    public static void notRecogniseArg(String argument)
+    {
+        System.out.println(Util.RED + "Parametro " + argument + " non riconosciuto.\nPremere invio per uscire"
+                + Util.RESET);
+        new Scanner(System.in, StandardCharsets.UTF_8).nextLine();
+    }
 }
