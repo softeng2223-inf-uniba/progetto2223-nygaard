@@ -66,6 +66,7 @@ final class SetTimeCommand extends Command {
             }
         } catch (NumberFormatException e) {
           TimeBoundary.errorTime();
+          return;
         }
         GameManager.getMatch().setMaxTime(maxTime);
         TimeBoundary.operationDone();
