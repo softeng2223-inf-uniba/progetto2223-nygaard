@@ -30,4 +30,9 @@ public class ExitBoundary {
         System.out.println(Util.RED + "Operazione annullata" + Util.RESET);
     }
 
+    public static void invalidChoice()
+    {
+        System.out.println(Util.RED + "Scelta non valida" + Util.RESET);
+    }
+
 }
