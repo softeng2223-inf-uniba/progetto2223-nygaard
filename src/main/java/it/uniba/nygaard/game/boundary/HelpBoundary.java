@@ -56,12 +56,15 @@ public final class HelpBoundary {
     private static String subCommandsDifficulty() {
         String subDifficulty = Util.YELLOW
             + Util.BOLD + "> DIFFICOLTA' PERSONALIZZATE\n" + Util.RESET
-            + Util.ITALIC + Util.CYAN + "    * /facile numero    " + Util.RESET
-            + "Imposta il numero massimo di tentativi, per la difficolta' facile, ad un valore pari a"
+            + Util.ITALIC + Util.CYAN + "    * /facile numero       " + Util.RESET
+            + "Imposta il numero massimo di tentativi, per la difficolta' \"Facile\", ad un valore pari a"
             + Util.ITALIC + " numero \n" + Util.RESET
-            + Util.ITALIC + Util.CYAN + "    * /medio numero     " + Util.RESET
-            + "Imposta il numero massimo di tentativi, per la difficolta' medio, ad un valore pari a"
-            + Util.ITALIC + " numero " + Util.RESET;
+            + Util.ITALIC + Util.CYAN + "    * /medio numero        " + Util.RESET
+            + "Imposta il numero massimo di tentativi, per la difficolta' \"Medio\", ad un valore pari a"
+            + Util.ITALIC + " numero \n" + Util.RESET
+            + Util.ITALIC + Util.CYAN + "    * /difficile numero    " + Util.RESET
+            + "Imposta il numero massimo di tentativi, per la difficolta' \"Difficile\", ad un valore pari a"
+            + Util.ITALIC + " numero \n" + Util.RESET;
 
         return subDifficulty;
     }
