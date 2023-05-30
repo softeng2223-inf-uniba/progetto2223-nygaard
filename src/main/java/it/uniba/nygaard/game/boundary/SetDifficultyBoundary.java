@@ -4,6 +4,7 @@ import it.uniba.nygaard.game.Util;
 import it.uniba.nygaard.game.entity.Match;
 import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
+import it.uniba.nygaard.game.control.GameManager;
 
 /**
  * << Boundary >>
@@ -53,8 +54,8 @@ public final class SetDifficultyBoundary {
      */
     public static String ask(final Match p, final int newDifficulty) {
         System.out.println("Il livello attuale è " + Util.BOLD
-                + p.getDifficultyNames(p.getDifficulty()) + Util.RESET + ". Confermare cambio in "
-                + Util.BOLD + p.getDifficultyNames(newDifficulty) + Util.RESET
+                + GameManager.actualDifficultyName() + Util.RESET + ". Confermare cambio in "
+                + Util.BOLD + GameManager.newDifficultyName(newDifficulty) + Util.RESET
                 + "? (" + Util.GREEN + "y" + Util.RESET
                 + "/" + Util.RED + "n" + Util.RESET + ") ");
         return new Scanner(System.in, StandardCharsets.UTF_8).next().toLowerCase();
@@ -76,5 +77,14 @@ public final class SetDifficultyBoundary {
      */
     public static void operationDone() {
         System.out.println(Util.GREEN + "OK" + Util.RESET);
+    }
+    /**
+     * <h3> notValideChoice </h3>
+     * <p>
+     *     Stampa il messaggio relativo alla scelta non valida.
+     * </p>
+     */
+    public static void notValidChoice() {
+        System.out.println(Util.RED + "Scelta non valida" + Util.RESET);
     }
 }

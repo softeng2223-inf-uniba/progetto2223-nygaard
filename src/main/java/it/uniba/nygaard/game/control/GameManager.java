@@ -9,7 +9,7 @@ import it.uniba.nygaard.game.entity.Match;
  * La classe GameManager rappresenta il gestore del gioco.
  * </p>
  */
-final class GameManager {
+public final class GameManager {
     /**
      * <h3> match </h3>
      * <p>
@@ -69,7 +69,7 @@ final class GameManager {
      * </p>
      * @return Difficoltà della prossima partita.
      */
-    static int getNextDifficulty() {
+    static int getGameDifficulty() {
         return nextDifficulty;
     }
 
@@ -103,4 +103,26 @@ final class GameManager {
     static void setArgs(final String[] actualArgs) {
         GameManager.args = actualArgs;
     }
+    /**
+     * <h3> actualDifficultyName </h3>
+     * <p>
+     * Restituisce il nome della difficoltà attuale.
+     * </p>
+     * @return Nome della difficoltà attuale.
+     */
+    public static String actualDifficultyName() {
+        return match.getDifficultyNames(match.getDifficulty());
+    }
+    /**
+     * <h3> newDifficultyName </h3>
+     * <p>
+     * Restituisce il nome della difficoltà passata come parametro.
+     * </p>
+     * @param newDifficulty Difficoltà della prossima partita.
+     * @return Nome della difficoltà della prossima partita.
+     */
+    public static String newDifficultyName(final int newDifficulty) {
+        return match.getDifficultyNames(newDifficulty);
+    }
+
 }

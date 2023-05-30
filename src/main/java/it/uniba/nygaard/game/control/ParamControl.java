@@ -30,7 +30,7 @@ final class ParamControl {
    *     esegue i comandi corrispondenti.
    * </p>
    */
-  public static void executeCommand() {
+  public static void initUI() {
     String[] args = GameManager.getArgs();
     if (args.length > 0) {
       if (args.length > 1) {
@@ -41,7 +41,7 @@ final class ParamControl {
       if (argument.equals("--help") || argument.equals("-h")) {
         HelpBoundary.getHelp();
       } else {
-        ParamsBoundary.notRecogniseArg(argument);
+        ParamsBoundary.notRecognisedArg(argument);
         System.exit(0);
       }
     } else {

@@ -29,7 +29,7 @@ final class SetDifficultyControl {
    * </p>
    */
   static void setDifficulty() {
-    int difficulty = GameManager.getNextDifficulty();
+    int difficulty = GameManager.getGameDifficulty();
     Match p = GameManager.getMatch();
     if (p.getInGame()) {
       SetDifficultyBoundary.alreadyInGame();
@@ -43,6 +43,9 @@ final class SetDifficultyControl {
       String choice;
       do {
         choice = SetDifficultyBoundary.ask(p, difficulty);
+        if (!choice.equals("n") && !choice.equals("y")) {
+          SetDifficultyBoundary.notValidChoice();
+        }
       }
       while (!choice.equals("y") && !choice.equals("n"));
       if (choice.equals("n")) {

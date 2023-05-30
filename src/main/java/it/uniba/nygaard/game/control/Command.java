@@ -1,5 +1,7 @@
 package it.uniba.nygaard.game.control;
 
+import it.uniba.nygaard.game.boundary.InputBoundary;
+
 /**
  * <h2> Command </h2>
  * <p>
@@ -42,4 +44,19 @@ abstract class Command {
      * @param command Comando da eseguire.
      */
     abstract void executeCommand(String[] command);
+    /**
+     * <h3> invalidNumber </h3>
+     * <p>
+     *     Controlla se il numero di parametri è valido.
+     * </p>
+     * @param command Comando da eseguire.
+     * @return true se il numero di parametri è valido, false altrimenti.
+     */
+    boolean invalidNumber(final String[] command) {
+        if (command.length > paramNumber) {
+            InputBoundary.howToUse(command[0]);
+            return true;
+        }
+        return false;
+    }
 }

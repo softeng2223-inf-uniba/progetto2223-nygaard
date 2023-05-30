@@ -53,7 +53,7 @@ public final class InputBoundary {
      *     Metodo che resetta il colore del testo a quello di default.
      * </p>
      */
-    public static void reset() {
+    public static void resetColor() {
         System.out.print(Util.RESET);
     }
     /**

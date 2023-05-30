@@ -63,13 +63,12 @@ public final class GeneralControl {
     availableCommands.put("/gioca", StartMatchCommand.getInstance());
     availableCommands.put("/svelagriglia", RevealGridCommand.getInstance());
     availableCommands.put("/help", HelpCommand.getInstance());
-    ParamControl.executeCommand();
-    while (!shutdown) {
+    ParamControl.initUI();
+    while (!shutDown) {
       String[] command = InputBoundary.getCommand().split(" ");
-      InputBoundary.reset();
+      InputBoundary.resetColor();
       if (availableCommands.containsKey(command[0])) {
         availableCommands.get(command[0]).executeCommand(command);
-       
       } else {
         InputBoundary.notRecognisedCommand(command);
       }

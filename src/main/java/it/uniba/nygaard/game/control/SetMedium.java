@@ -45,8 +45,7 @@ final class SetMedium extends Command {
    * @param command Comando da eseguire.
    */
   public void executeCommand(final String[] command) {
-    if (command.length > getParamNumber()) {
-      InputBoundary.howToUse(command[0]);
+    if (invalidNumber(command)) {
       return;
     }
     GameManager.setNextDifficulty(Util.DIFFICULTY_MEDIUM);

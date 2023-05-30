@@ -47,8 +47,7 @@ final class ShowLevelCommand extends Command {
    * @param command comando da eseguire
    */
   public void executeCommand(final String[] command) {
-    if (command.length > getParamNumber()) {
-      InputBoundary.howToUse(command[0]);
+    if (invalidNumber(command)) {
       return;
     }
     Match p = GameManager.getMatch();
