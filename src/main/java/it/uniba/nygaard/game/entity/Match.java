@@ -8,7 +8,6 @@ import it.uniba.nygaard.game.entity.ships.Coordinate;
 import it.uniba.nygaard.game.entity.ships.Cruiser;
 import it.uniba.nygaard.game.entity.ships.Destroyer;
 import it.uniba.nygaard.game.entity.ships.Ship;
-
 import java.util.Random;
 
 
@@ -81,6 +80,13 @@ public final class Match {
      * </p>
      */
   private int maxTime;
+    /**
+     * <h3> startTime </h3>
+     * <p>
+     *     Tempo di inizio della partita espresso in millisecondi.
+     * </p>
+     */
+  private long startTime;
 
   /**
    * <h3> Costruttore </h3>
@@ -232,6 +238,29 @@ public final class Match {
    */
   public void setMaxTime(final int newMaxTime) {
     this.maxTime = newMaxTime;
+  }
+
+  /**
+   * <h3> getStartTime </h3>
+   * <p>
+   *     Restituisce il tempo di inizio della partita.
+   * </p>
+   * @return startTime Tempo di inizio della partita.
+   */
+  public long getStartTime() {
+    return startTime;
+  }
+
+  /**
+   * <h3> setStartTime </h3>
+   * <p>
+   * Imposta il tempo di inizio della partita.
+   * </p>
+   *
+   * @param newStartTime Tempo di inizio della partita.
+   */
+  public void setStartTime(final long newStartTime) {
+    this.startTime = newStartTime;
   }
 
   /**

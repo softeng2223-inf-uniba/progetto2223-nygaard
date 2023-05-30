@@ -53,6 +53,7 @@ public final class Util {
   public static final String BOLD = "\u001B[1m";
   public static final String ITALIC = "\u001B[3m";
   public static final int  DEFAULT_TIME = -1;
+  public static final long ONE_MINUTE = 60000;
 
   /**
    * <h3> Costruttore </h3>
