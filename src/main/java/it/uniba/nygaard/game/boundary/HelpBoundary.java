@@ -71,4 +71,9 @@ public final class HelpBoundary {
 
         return subDifficulty;
     }
+
+
+    private static String subCommandsGrid() {
+        return "";
+    }
 }
