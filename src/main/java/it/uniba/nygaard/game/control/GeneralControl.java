@@ -63,6 +63,7 @@ public final class GeneralControl {
     availableCommands.put("/gioca", StartMatchCommand.getInstance());
     availableCommands.put("/svelagriglia", RevealGridCommand.getInstance());
     availableCommands.put("/help", HelpCommand.getInstance());
+    //availableCommands.put("/tempo", SetTimeCommand.getInstance());
     ParamControl.initUI();
     while (!shutDown) {
       String[] command = InputBoundary.getCommand().trim().replaceAll(" +", " ").split(" ");
