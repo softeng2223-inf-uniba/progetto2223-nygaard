@@ -43,6 +43,17 @@ public final class SetDifficultyBoundary {
     public static void sameDifficulty() {
         System.out.println(Util.RED + "Hai già impostato questa difficoltà" + Util.RESET);
     }
+
+    /**
+     * <h3> sameAttempts</h3>
+     * <p>
+     *     Stampa il messaggio relativo al fatto che il numero di tentativi
+     *     che si vuole inserire per una certa difficoltà è già quello impostato.
+     * </p>
+     */
+    public static void sameAttempts() {
+        System.out.println(Util.RED + "Questo numero di tentativi è uguale a quello giò impostato" + Util.RESET);
+    }
     /**
      * <h3> ask </h3>
      * <p>
