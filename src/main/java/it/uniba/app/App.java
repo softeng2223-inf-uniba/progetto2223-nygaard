@@ -1,6 +1,8 @@
 package it.uniba.app;
 
 
+import it.uniba.nygaard.game.control.GeneralControl;
+
 /**
  * <h2> App </h2>
  * <p>

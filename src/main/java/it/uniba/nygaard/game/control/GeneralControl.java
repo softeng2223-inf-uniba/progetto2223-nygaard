@@ -36,7 +36,7 @@ public final class GeneralControl {
     availableCommands.put("/gioca", StartMatchCommand.getInstance());
     availableCommands.put("/svelagriglia", UnveilGridCommand.getInstance());
     availableCommands.put("/help", HelpCommand.getInstance());
-    ParamControl.getInstance().executeCommand();
+    ParamControl.getInstance().executeCommand(null);
     while (true) {
           String[] command = InputBoundary.getCommand().split(" ");
         InputBoundary.reset();
