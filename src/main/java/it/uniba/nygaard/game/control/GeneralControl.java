@@ -31,7 +31,7 @@ public final class GeneralControl {
   }
 
   /**
-   * <h3> SetShutDown </h3>
+   * <h3> setShutDown </h3>
    * <p>
    * Imposta il valore di shutDown.
    * </p>
