@@ -47,6 +47,10 @@ public final class HelpBoundary {
     }
 
 
+    private static String mainCommands() {
+        return "";
+    }
+
 
     private static String subCommandsDifficulty() {
         String subDifficulty = Util.YELLOW
