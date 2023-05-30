@@ -3,6 +3,7 @@ package it.uniba.nygaard.game.boundary;
 import it.uniba.nygaard.game.Util;
 
 import java.nio.charset.StandardCharsets;
+import java.util.Arrays;
 import java.util.Scanner;
 
 /**
@@ -13,7 +14,7 @@ import java.util.Scanner;
  * l'input da tastiera.
  * </p>
  */
-public class InputBoundary {
+public final class InputBoundary {
     /**
      * <h3> Costruttore </h3>
      * <p>
@@ -40,10 +41,14 @@ public class InputBoundary {
      * <p>
      *     Metodo che stampa a video il messaggio di comando non riconosciuto.
      * </p>
-     * @param command Stringa che rappresenta il comando non riconosciuto.
+     * @param command Vettore di stringhe che rappresenta il comando non riconosciuto.
      */
-    public static void notRecognisedCommand(String command) {
-        System.out.println(Util.RED + "Comando non riconosciuto: " + command + Util.RESET);
+    public static void notRecognisedCommand(final String[] command) {
+        String commandString = "";
+        for (String s : command) {
+            commandString += s + " ";
+        }
+        System.out.println(Util.RED + "Comando non riconosciuto: " + commandString + Util.RESET);
     }
     /**
      * <h3> reset </h3>
@@ -53,5 +58,15 @@ public class InputBoundary {
      */
     public static void reset() {
         System.out.print(Util.RESET);
+    }
+    /**
+     * <h3> howToUse </h3>
+     * <p>
+     *     Metodo che stampa a video il messaggio di come usare un comando.
+     * </p>
+     * @param command Stringa che rappresenta il comando.
+     */
+    public static void howToUse(final String command) {
+        System.out.println(Util.CYAN + "Il comando dovrebbe essere usato come segue: " + command + Util.RESET);
     }
 }

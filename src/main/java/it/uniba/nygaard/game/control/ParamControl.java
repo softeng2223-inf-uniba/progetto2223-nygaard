@@ -11,42 +11,24 @@ import it.uniba.nygaard.game.boundary.ParamsBoundary;
  * <p>
  *     La classe ParamControl rappresenta il controllo dei parametri.
  * </p>
- * @see CommandInterface
+ * @see Command
  */
-final class ParamControl implements CommandInterface {
+final class ParamControl {
   /**
-   * <h3> instance </h3>
+   * <h3> ParamaControl </h3>
    * <p>
-   *     Istanza di ParamControl.
-   * </p>
-   */
-  private static ParamControl instance = new ParamControl();
-  /**
-   * <h3> Costruttore </h3>
-   * <p>
-   *     Costruttore della classe ParamControl.
+   *     Cosruttore della classe ParamControl.
    * </p>
    */
   private ParamControl() {
-  }
-  /**
-   * <h3> getInstance </h3>
-   * <p>
-   *     Restituisce l'istanza di ParamControl.
-   * </p>
-   * @return Istanza di ParamControl.
-   */
-  static ParamControl getInstance() {
-    return instance;
   }
   /**
    * <h3> executeCommand </h3>
    * <p>
    *     Esegue il comando.
    * </p>
-   * @param command Comando da eseguire.
    */
-  public void executeCommand(final String[] command) {
+  public static void executeCommand() {
     String[] args = GameManager.getArgs();
     if (args.length > 0) {
       if (args.length > 1) {

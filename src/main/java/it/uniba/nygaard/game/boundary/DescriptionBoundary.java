@@ -9,7 +9,7 @@ import it.uniba.nygaard.game.Util;
  * La classe DescriptionBoundary rappresenta la boundary per la descrizione del gioco.
  * </p>
  */
-public class DescriptionBoundary {
+public final class DescriptionBoundary {
     /**
      * <h3> Costruttore </h3>
      * <p>

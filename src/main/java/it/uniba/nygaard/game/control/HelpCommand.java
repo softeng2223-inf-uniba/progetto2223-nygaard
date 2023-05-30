@@ -1,5 +1,6 @@
 package it.uniba.nygaard.game.control;
 import it.uniba.nygaard.game.boundary.HelpBoundary;
+import it.uniba.nygaard.game.boundary.InputBoundary;
 
 /**
  * << Control >>
@@ -7,9 +8,9 @@ import it.uniba.nygaard.game.boundary.HelpBoundary;
  * <p>
  *     La classe HelpCommand rappresenta il comando di aiuto.
  * </p>
- * @see CommandInterface
+ * @see Command
  */
-public final class HelpCommand implements CommandInterface {
+public final class HelpCommand extends Command {
   /**
    * <h3> instance </h3>
    * <p>
@@ -24,14 +25,19 @@ public final class HelpCommand implements CommandInterface {
    * </p>
    */
   private HelpCommand() {
+    setParamNumber(1);
   }
   /**
    * <h3> executeCommand </h3>
    * <p>
-   *     Esegue il comando.
+   *     Esegue il comando di aiuto.
    * </p>
    */
   public void executeCommand(final String[] command) {
+    if (command.length > getParamNumber()) {
+      InputBoundary.howToUse(command[0]);
+      return;
+    }
     HelpBoundary.getHelp();
   }
   /**

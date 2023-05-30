@@ -1,6 +1,7 @@
 package it.uniba.nygaard.game.control;
 
 import it.uniba.nygaard.game.Util;
+import it.uniba.nygaard.game.boundary.InputBoundary;
 import it.uniba.nygaard.game.boundary.MatchBoundary;
 import it.uniba.nygaard.game.boundary.ShowGridBoundary;
 import it.uniba.nygaard.game.entity.Match;
@@ -15,9 +16,9 @@ import java.util.Random;
  * <p>
  *     La classe StartMatchCommand rappresenta il comando per iniziare la partita.
  * </p>
- * @see CommandInterface
+ * @see Command
  */
-final class StartMatchCommand implements CommandInterface {
+final class StartMatchCommand extends Command {
   /**
    * <h3> instance </h3>
    * <p>
@@ -32,6 +33,7 @@ final class StartMatchCommand implements CommandInterface {
    * </p>
    */
   private StartMatchCommand() {
+    setParamNumber(1);
   }
   /**
    * <h3> getInstance </h3>
@@ -49,6 +51,10 @@ final class StartMatchCommand implements CommandInterface {
    * </p>
    */
   public void executeCommand(final String[] command) {
+    if (command.length > getParamNumber()) {
+      InputBoundary.howToUse(command[0]);
+      return;
+    }
     Match p = GameManager.getMatch();
     if (p.getDifficulty() == Util.DIFFICULTY_NOT_SETTED) {
       MatchBoundary.noDifficulty();

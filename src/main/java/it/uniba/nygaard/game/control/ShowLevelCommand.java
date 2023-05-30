@@ -1,6 +1,7 @@
 package it.uniba.nygaard.game.control;
 
 import it.uniba.nygaard.game.Util;
+import it.uniba.nygaard.game.boundary.InputBoundary;
 import it.uniba.nygaard.game.boundary.ShowLevelBoundary;
 import it.uniba.nygaard.game.entity.Match;
 
@@ -10,9 +11,9 @@ import it.uniba.nygaard.game.entity.Match;
  * <p>
  *     La classe ShowLevelCommand rappresenta il comando per mostrare il livello di difficoltà.
  * </p>
- * @see CommandInterface
+ * @see Command
  */
-final class ShowLevelCommand implements CommandInterface {
+final class ShowLevelCommand extends Command {
   /**
    * <h3> instance </h3>
    * <p>
@@ -36,6 +37,7 @@ final class ShowLevelCommand implements CommandInterface {
    * </p>
    */
   private ShowLevelCommand() {
+    setParamNumber(1);
   }
   /**
    * <h3> executeCommand </h3>
@@ -44,6 +46,10 @@ final class ShowLevelCommand implements CommandInterface {
    * </p>
    */
   public void executeCommand(final String[] command) {
+    if (command.length > getParamNumber()) {
+      InputBoundary.howToUse(command[0]);
+      return;
+    }
     Match p = GameManager.getMatch();
     String actualColor = Util.RESET;
     String s = "";

@@ -11,21 +11,21 @@ import it.uniba.nygaard.game.boundary.InputBoundary;
  * </p>
  * @see Command
  */
-final class SetHardDifficulty extends Command {
+final class SetEasyDifficulty extends Command {
   /**
    * <h3> instance </h3>
    * <p>
-   *   Istanza di SetHardDifficulty.
+   *   Istanza di SetEasyDifficulty.
    *  </p>
    */
-  private static SetHardDifficulty instance = new SetHardDifficulty();
+  private static SetEasyDifficulty instance = new SetEasyDifficulty();
   /**
    * <h3> getInstance </h3>
    * <p>
    *   Restituisce l'istanza di SetHardDifficulty.
    * </p>
    */
-  static SetHardDifficulty getInstance() {
+  static SetEasyDifficulty getInstance() {
     return instance;
   }
   /**
@@ -34,7 +34,7 @@ final class SetHardDifficulty extends Command {
    *   Costruttore della classe SetHardDifficulty.
    * </p>
    */
-  private SetHardDifficulty() {
+  private SetEasyDifficulty() {
     setParamNumber(2);
   }
   /**

@@ -1,5 +1,6 @@
 package it.uniba.nygaard.game.control;
 
+import it.uniba.nygaard.game.boundary.InputBoundary;
 import it.uniba.nygaard.game.boundary.ShowGridBoundary;
 import it.uniba.nygaard.game.entity.Match;
 
@@ -9,9 +10,9 @@ import it.uniba.nygaard.game.entity.Match;
  * <p>
  *     La classe UnveilGridCommand rappresenta il comando per mostrare la griglia.
  * </p>
- * @see CommandInterface
+ * @see Command
  */
-final class UnveilGridCommand implements CommandInterface {
+final class UnveilGridCommand extends Command {
   /**
    * <h3> instance </h3>
    * <p>
@@ -26,6 +27,7 @@ final class UnveilGridCommand implements CommandInterface {
    * </p>
    */
   private UnveilGridCommand() {
+    setParamNumber(1);
   }
   /**
    * <h3> executeCommand </h3>
@@ -34,6 +36,10 @@ final class UnveilGridCommand implements CommandInterface {
    * </p>
    */
   public void executeCommand(final String[] command) {
+    if (command.length > getParamNumber()) {
+      InputBoundary.howToUse(command[0]);
+      return;
+    }
     Match p = GameManager.getMatch();
     if (!p.getInGame()) {
       ShowGridBoundary.notInGame();

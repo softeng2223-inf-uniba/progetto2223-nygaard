@@ -1,14 +1,16 @@
 package it.uniba.nygaard.game.control;
 import it.uniba.nygaard.game.boundary.ExitBoundary;
+import it.uniba.nygaard.game.boundary.InputBoundary;
+
 /**
  * << Control >>
  * <h2> ExitCommand </h2>
  * <p>
  *     La classe ExitCommand rappresenta il comando di uscita dal gioco.
  * </p>
- * @see CommandInterface
+ * @see Command
  */
-final class ExitCommand implements CommandInterface {
+final class ExitCommand extends Command {
     /**
      * <h3> instance </h3>
      * <p>
@@ -23,6 +25,7 @@ final class ExitCommand implements CommandInterface {
      * </p>
      */
     private ExitCommand() {
+        setParamNumber(1);
     }
     /**
      * <h3> getInstance </h3>
@@ -37,11 +40,18 @@ final class ExitCommand implements CommandInterface {
     /**
      * <h3> executeCommand </h3>
      * <p>
-     *     Esegue il comando.
+     *     Esegue il comando di uscita dal gioco
+     *     chiedendo all'utente se è sicuro di voler uscire.
+     *     Se l'utente conferma l'uscita, il gioco termina
+     *     altrimenti viene annullata l'operazione.
      * </p>
      * @param command Comando da eseguire.
      */
     public void executeCommand(final String[] command) {
+        if (command.length > getParamNumber()) {
+            InputBoundary.howToUse(command[0]);
+            return;
+        }
         String choice;
         do {
             choice = ExitBoundary.ask();

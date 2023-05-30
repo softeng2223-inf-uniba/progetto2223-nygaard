@@ -11,7 +11,7 @@ import it.uniba.nygaard.game.Util;
  *
  * @see DescriptionBoundary
  */
-public class HelpBoundary {
+public final class HelpBoundary {
     private HelpBoundary() {
     }
     /**

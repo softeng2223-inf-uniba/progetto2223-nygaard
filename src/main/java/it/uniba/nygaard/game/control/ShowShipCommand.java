@@ -1,5 +1,6 @@
 package it.uniba.nygaard.game.control;
 
+import it.uniba.nygaard.game.boundary.InputBoundary;
 import it.uniba.nygaard.game.boundary.ShowShipsBoundary;
 
 /**
@@ -8,9 +9,9 @@ import it.uniba.nygaard.game.boundary.ShowShipsBoundary;
  * <p>
  *     La classe ShowShipCommand rappresenta il comando di visualizzazione delle navi.
  * </p>
- * @see CommandInterface
+ * @see Command
  */
-final class ShowShipCommand implements CommandInterface {
+final class ShowShipCommand extends Command {
   /**
    * <h3> instance </h3>
    * <p>
@@ -25,6 +26,7 @@ final class ShowShipCommand implements CommandInterface {
    * </p>
    */
   private ShowShipCommand() {
+    setParamNumber(1);
   }
   /**
    * <h3> getInstance </h3>
@@ -42,6 +44,10 @@ final class ShowShipCommand implements CommandInterface {
    * </p>
    */
   public  void executeCommand(final String[] command) {
+    if (command.length > getParamNumber()) {
+      InputBoundary.howToUse(command[0]);
+      return;
+    }
     ShowShipsBoundary.showShips();
   }
 }
