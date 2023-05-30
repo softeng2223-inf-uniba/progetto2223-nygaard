@@ -1,5 +1,6 @@
 package it.uniba.nygaard.game.control;
 
+import it.uniba.nygaard.game.boundary.InputBoundary;
 import it.uniba.nygaard.game.boundary.TimeBoundary;
 
 /**
@@ -46,8 +47,12 @@ final class SetTimeCommand extends Command {
      */
     public void executeCommand(final String[] command) {
        int maxTime = 0;
-        if (invalidNumber(command)) {
+        if (invalidNumber(command, " <numero>")) {
             return;
+        }
+        if (command.length < 2) {
+          InputBoundary.howToUse("/tempo", " <numero>");
+          return;
         }
         try {
             maxTime = Integer.parseInt(command[1]);
@@ -55,5 +60,6 @@ final class SetTimeCommand extends Command {
           TimeBoundary.errorTime();
         }
         GameManager.getMatch().setMaxTime(maxTime);
+        TimeBoundary.operationDone();
         }
 }

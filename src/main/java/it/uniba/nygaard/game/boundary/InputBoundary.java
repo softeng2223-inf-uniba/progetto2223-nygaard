@@ -66,4 +66,16 @@ public final class InputBoundary {
     public static void howToUse(final String command) {
         System.out.println(Util.CYAN + "Il comando dovrebbe essere usato come segue: " + command + Util.RESET);
     }
+
+    /**
+     * <h3> howToUse </h3>
+     * <p>
+     *     Metodo che stampa a video il messaggio di come usare un comando.
+     * </p>
+     * @param command Stringa che rappresenta il comando.
+     */
+    public static void howToUse(final String command, final String command2) {
+        System.out.println(Util.CYAN + "Il comando dovrebbe essere usato come segue: " + command + command2
+                + Util.RESET);
+    }
 }
