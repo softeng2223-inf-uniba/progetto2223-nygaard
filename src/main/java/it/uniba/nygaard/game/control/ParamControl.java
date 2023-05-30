@@ -15,7 +15,7 @@ import it.uniba.nygaard.game.boundary.ParamsBoundary;
  */
 final class ParamControl {
   /**
-   * <h3> ParamaControl </h3>
+   * <h3> ParamControl </h3>
    * <p>
    *     Cosruttore della classe ParamControl.
    * </p>
