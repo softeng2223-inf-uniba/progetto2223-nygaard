@@ -17,4 +17,8 @@ public class InputBoundary {
     {
         System.out.println(Util.RED + "Comando non riconosciuto: " + command + Util.RESET);
     }
+    public static void reset()
+    {
+        System.out.print(Util.RESET);
+    }
 }
