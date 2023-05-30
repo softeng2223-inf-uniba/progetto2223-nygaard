@@ -8,6 +8,7 @@ import it.uniba.nygaard.game.entity.Match;
  * <p>
  * La classe GameManager rappresenta il gestore del gioco.
  * </p>
+ *
  */
 public final class GameManager {
     /**
