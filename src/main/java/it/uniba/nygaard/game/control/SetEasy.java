@@ -47,10 +47,14 @@ final class SetEasy extends Command {
     if (invalidNumber(command)) {
       return;
     }
-    GameManager.setNextDifficulty(Util.DIFFICULTY_EASY);
-        /*
-      TO DO -> GESTIRE IL CASO CON PARAMETREI
-    }*/
-    SetDifficultyControl.setDifficulty();
+
+    if (command.length == 1) {
+      GameManager.setNextDifficulty(Util.DIFFICULTY_EASY);
+      SetDifficultyControl.setDifficulty();
+    } else {
+      GameManager.setNextAttempts(Integer.parseInt(command[1]));
+      SetDifficultyControl.setAttempts();
+    }
+
   }
 }
