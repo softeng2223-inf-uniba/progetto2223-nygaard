@@ -1,6 +1,7 @@
 package it.uniba.nygaard.game.control;
 
 import it.uniba.nygaard.game.Util;
+import it.uniba.nygaard.game.boundary.MatchBoundary;
 import it.uniba.nygaard.game.boundary.ShowGridBoundary;
 import it.uniba.nygaard.game.entity.Match;
 import it.uniba.nygaard.game.entity.grids.CellsGrid;
@@ -50,11 +51,11 @@ final class StartMatchCommand implements CommandInterface {
   public void executeCommand(final String[] command) {
     Match p = GameManager.getMatch();
     if (p.getDifficulty() == Util.DIFFICULTY_NOT_SETTED) {
-      StartMatchBoundary.noDifficulty();
+      MatchBoundary.noDifficulty();
       return;
     }
     if (p.getInGame()) {
-      StartMatchBoundary.alreadyInGame();
+      MatchBoundary.alreadyInGame();
       return;
     }
     p.setInGame(true);
