@@ -8,24 +8,26 @@ import it.uniba.nygaard.game.entity.Match;
  * << Control >>
  * <h2> SetDifficultyControl </h2>
  * <p>
- *     La classe SetDifficultyControl rappresenta il controllo per impostare la difficoltà.
+ * La classe SetDifficultyControl rappresenta il controllo per impostare la difficoltà.
  * </p>
+ *
  * @see Command
  */
 final class SetDifficultyControl {
   /**
    * <h3> Costruttore </h3>
    * <p>
-   *     Costruttore della classe SetDifficultyControl.
+   * Costruttore della classe SetDifficultyControl.
    * </p>
    */
   private SetDifficultyControl() {
   }
+
   /**
    * <h3> setDifficulty </h3>
    * <p>
-   *     Imposta la difficoltà se questa non è già impostata,
-   *     altrimenti chiede all'utente se vuole cambiare difficoltà.
+   * Imposta la difficoltà se questa non è già impostata,
+   * altrimenti chiede all'utente se vuole cambiare difficoltà.
    * </p>
    */
   static void setDifficulty() {
