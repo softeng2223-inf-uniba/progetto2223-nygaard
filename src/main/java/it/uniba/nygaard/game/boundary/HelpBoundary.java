@@ -58,6 +58,9 @@ public final class HelpBoundary {
             + Util.BOLD + "> DIFFICOLTA' PERSONALIZZATE\n" + Util.RESET
             + Util.ITALIC + Util.CYAN + "    * /facile numero    " + Util.RESET
             + "Imposta il numero massimo di tentativi, per la difficolta' facile, ad un valore pari a"
+            + Util.ITALIC + " numero \n" + Util.RESET
+            + Util.ITALIC + Util.CYAN + "    * /medio numero     " + Util.RESET
+            + "Imposta il numero massimo di tentativi, per la difficolta' medio, ad un valore pari a"
             + Util.ITALIC + " numero " + Util.RESET;
 
         return subDifficulty;
