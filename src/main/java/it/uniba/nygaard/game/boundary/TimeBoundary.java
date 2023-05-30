@@ -38,4 +38,14 @@ public final class TimeBoundary {
   public static void operationDone() {
     System.out.println(Util.GREEN + "OK" + Util.RESET);
   }
+  /**
+   * <h3> notInGame </h3>
+   * <p>
+   *     Stampa il messaggio relativo al fatto che non si può cambiare il tempo di gioco
+   *     se si è in partita.
+   * </p>
+   */
+  public static void notInGame() {
+    System.out.println(Util.RED + "Non puoi cambiare il tempo di gioco se sei in partita" + Util.RESET);
+  }
 }

@@ -40,12 +40,16 @@ final class SetTimeCommand extends Command {
     /**
      * <h3> executeCommand </h3>
      * <p>
-     *     Esegue il comando di impostazione del tempo.
+     *     Esegue il comando di impostazione del tempo se non si è in partita.
      *     Se il tempo non è valido verrà mostrato un messaggio di errore.
      * </p>
      * @param command Comando da eseguire.
      */
     public void executeCommand(final String[] command) {
+      if (GameManager.getMatch().getInGame()) {
+        TimeBoundary.notInGame();
+        return;
+      }
        int maxTime = 0;
         if (invalidNumber(command, " <numero>")) {
             return;
