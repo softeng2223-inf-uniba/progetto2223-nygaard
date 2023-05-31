@@ -57,6 +57,8 @@ public final class SetGridSizeCommand extends Command {
         }
 
         p.setGridSize(sizeCommand);
+        p.resizeGrids(sizeCommand);
+        setNewUpperLimit(sizeCommand);
         GridSizeBoundary.operationDone();
     }
 
@@ -71,5 +73,12 @@ public final class SetGridSizeCommand extends Command {
         }
 
         return size;
+    }
+
+
+    private void setNewUpperLimit(int newUpperLimit) {
+        Util.maxRows = newUpperLimit;
+        Util.maxColumn = (char) (newUpperLimit + 64);
+        Util.headingEdgeWidth = newUpperLimit + 9;
     }
 }

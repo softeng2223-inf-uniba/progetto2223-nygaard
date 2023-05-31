@@ -8,7 +8,6 @@ package it.uniba.nygaard.game;
  * </p>
  */
 public final class Util {
-  public static final int HEADING_EDGE_WIDTH = 19;
   public static final int COLUMNS_EDGE_WIDTH = 13;
   public static final int ROWS_EDGE_WIDTH = 8;
   public static final int MIN_SHIP = 1;
@@ -60,8 +59,7 @@ public final class Util {
 
   public static int maxRows = 10;
   public static char maxColumn = 'J';
-
-
+  public static int headingEdgeWidth = 19;
 
 
   /**
