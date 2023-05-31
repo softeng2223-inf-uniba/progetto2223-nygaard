@@ -1,13 +1,10 @@
 package it.uniba.nygaard.game.entity;
+
 import it.uniba.nygaard.game.Util;
 import it.uniba.nygaard.game.entity.grids.CellsGrid;
 import it.uniba.nygaard.game.entity.grids.CharactersGrid;
-import it.uniba.nygaard.game.entity.ships.AircraftCarrier;
-import it.uniba.nygaard.game.entity.ships.Battleship;
-import it.uniba.nygaard.game.entity.ships.Coordinate;
-import it.uniba.nygaard.game.entity.ships.Cruiser;
-import it.uniba.nygaard.game.entity.ships.Destroyer;
-import it.uniba.nygaard.game.entity.ships.Ship;
+import it.uniba.nygaard.game.entity.ships.*;
+
 import java.util.Random;
 
 
@@ -97,7 +94,7 @@ public final class Match {
    */
   public Match() {
     this.inGame = false;
-    this.difficulty = Util.DIFFICULTY_NOT_SETTED;
+    this.difficulty = Util.DIFFICULTY_MEDIUM;
     this.difficultyNames = new String[]{Util.EASY_NAME, Util.MEDIUM_NAME, Util.HARD_NAME};
     this.attempts = new int[]{Util.EASY_ATTEMPTS, Util.MEDIUM_ATTEMPTS, Util.HARD_ATTEMPTS};
     this.ships = new Ship[Util.MAX_SHIP];
