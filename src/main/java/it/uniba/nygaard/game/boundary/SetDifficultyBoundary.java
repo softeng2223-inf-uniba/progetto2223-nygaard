@@ -32,7 +32,7 @@ public final class SetDifficultyBoundary {
      *             false se si vuole cambiare il numero di tentativi mentre si è in partita.
      */
     public static void alreadyInGame(final boolean diff) {
-        if (diff == true) {
+        if (diff) {
             System.out.println(Util.RED + "Non puoi cambiare difficoltà durante una partita" + Util.RESET);
         } else {
             System.out.println(Util.RED + "Non puoi cambiare il numero di tentativi durante una partita" + Util.RESET);
