@@ -269,7 +269,31 @@ Di seguito, i ***Requisiti Funzionali*** del progetto, facenti parte della *User
 
   Al comando ```/mostratempo```
 
-  - l’applicazione risponde visualizzando il numero di minuti trascorsi nel gioco e il numero di minuti ancora disponibili 
+  - l’applicazione risponde visualizzando il numero di minuti trascorsi nel gioco e il numero di minuti ancora disponibili
+
+<br/>
+
+- *effettuare un colpo*
+
+  Come giocatore voglio effettuare un tentativo per colpire una nave
+
+  **Criteri di accettazione**
+
+  - Digitando una coppia di caratteri separati da un trattino, corrispondenti rispettivamente al numero di riga e alla lettera della colonna, (es. B-4), l’applicazione risponde  
+
+    - “acqua” se sulla cella non è posizionata nessuna nave; 
+
+    - "colpito" se sulla cella è posizionata una nave; 
+
+    - colpito e affondato" se sulla cella è posizionata una nave ed è l’ultima cella non colpita della nave. 
+  
+  - Qualunque sia l’esito del tentativo, l’applicazione mostra la griglia con le navi colpite parzialmente o affondate, il numero di tentativi già effettuati, e il tempo trascorso.  
+
+  - La partita termina con successo se il tentativo ha affondato l’ultima nave. 
+
+  - La partita termina con insuccesso se è stato raggiunto il numero massimo di tentativi falliti o se è scaduto il tempo di gioco.  
+
+<br/>
 
 ## 3.2 Requisiti non Funzionali
 
