@@ -13,7 +13,7 @@ import it.uniba.nygaard.game.entity.Match;
  *  </p>
  * @see Command
  */
-public final class SetGridSizeCommand extends Command {
+final class SetGridSizeCommand extends Command {
     /**
      * Istanza della classe.
      */
@@ -26,7 +26,7 @@ public final class SetGridSizeCommand extends Command {
         setParamNumber(1);
     }
     /**
-     * <h2> Metodo getInstance() </h2>
+     * <h2> getInstance </h2>
      * <p>
      *     Ritorna l'istanza della classe.
      * </p>
@@ -36,7 +36,7 @@ public final class SetGridSizeCommand extends Command {
         return instance;
     }
     /**
-     * <h2> Metodo executeCommand() </h2>
+     * <h2> executeCommand </h2>
      * <p>
      *     Esegue il comando per impostare la dimensione della griglia.
      * </p>
@@ -81,7 +81,7 @@ public final class SetGridSizeCommand extends Command {
         GridSizeBoundary.operationDone();
     }
     /**
-     * <h2> Metodo getMappedCommand() </h2>
+     * <h2> getMappedCommand </h2>
      * <p>
      *     Ritorna la dimensione della griglia mappata al comando.
      * </p>
