@@ -13,7 +13,7 @@ import it.uniba.nygaard.game.Util;
  */
 public final class HelpBoundary {
     /**
-     * Costruttore per la classe HelpBoundary
+     * Costruttore per la classe HelpBoundary.
      */
     private HelpBoundary() {
     }
@@ -25,7 +25,10 @@ public final class HelpBoundary {
      */
     public static void getHelp() {
         DescriptionBoundary.getDescription();
-        String help = mainCommands() + subCommandsDifficulty();
+        String help = mainCommands()
+            + subCommandsDifficulty()
+            + subCommandsGrid();
+
         System.out.println(help);
     }
 
@@ -77,6 +80,13 @@ public final class HelpBoundary {
 
 
     private static String subCommandsGrid() {
-        return "";
+        String subGrid = Util.YELLOW
+            + Util.BOLD + "> GRIGLIA PERSONALIZZATA\n" + Util.RESET
+            + Util.ITALIC + Util.CYAN + "    * /standard            " + Util.RESET
+            + "Imposta una griglia 10x10 \n"
+
+            ;
+
+        return subGrid;
     }
 }
