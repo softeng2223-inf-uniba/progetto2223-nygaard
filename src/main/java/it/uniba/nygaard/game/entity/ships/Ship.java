@@ -130,6 +130,10 @@ public abstract class Ship {
   public int getHp() {
     return hp;
   }
+
+  public void hit() {
+    this.hp--;
+  }
   /**
    * <h3> outOfMap </h3>
    * <p>
