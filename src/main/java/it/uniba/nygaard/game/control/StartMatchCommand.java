@@ -1,7 +1,6 @@
 package it.uniba.nygaard.game.control;
 
 import it.uniba.nygaard.game.Util;
-
 import it.uniba.nygaard.game.boundary.MatchBoundary;
 import it.uniba.nygaard.game.boundary.ShowGridBoundary;
 import it.uniba.nygaard.game.entity.Match;
@@ -53,10 +52,6 @@ final class StartMatchCommand extends Command {
       return;
     }
     Match p = GameManager.getMatch();
-    if (p.getDifficulty() == Util.DIFFICULTY_NOT_SETTED) {
-      MatchBoundary.noDifficulty();
-      return;
-    }
     if (p.getInGame()) {
       MatchBoundary.alreadyInGame();
       return;

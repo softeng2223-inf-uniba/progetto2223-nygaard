@@ -1,12 +1,13 @@
 package it.uniba.nygaard.game.entity;
+
 import it.uniba.nygaard.game.Util;
 import it.uniba.nygaard.game.entity.grids.CellsGrid;
 import it.uniba.nygaard.game.entity.grids.CharactersGrid;
+import it.uniba.nygaard.game.entity.ships.Coordinate;
+import it.uniba.nygaard.game.entity.ships.Destroyer;
 import it.uniba.nygaard.game.entity.ships.AircraftCarrier;
 import it.uniba.nygaard.game.entity.ships.Battleship;
-import it.uniba.nygaard.game.entity.ships.Coordinate;
 import it.uniba.nygaard.game.entity.ships.Cruiser;
-import it.uniba.nygaard.game.entity.ships.Destroyer;
 import it.uniba.nygaard.game.entity.ships.Ship;
 
 import java.util.Random;
@@ -50,13 +51,16 @@ public final class Match {
      * </p>
      */
   private final int[] attempts;
-    /**
-     * <h3> ships </h3>
-     * <p>
-     *     Navi della partita.
-     * </p>
-     * @see Ship
-     */
+  private final int failedAttempts;
+  private final int usedAttempts;
+  /**
+   * <h3> ships </h3>
+   * <p>
+   * Navi della partita.
+   * </p>
+   *
+   * @see Ship
+   */
   private final Ship[] ships;
     /**
      * <h3> defenseGrid </h3>
@@ -74,7 +78,20 @@ public final class Match {
      * @see CharactersGrid
      */
   private final CharactersGrid attackGrid;
-
+    /**
+     * <h3> maxTime </h3>
+     * <p>
+     *     Tempo massimo per la partita.
+     * </p>
+     */
+  private int maxTime;
+    /**
+     * <h3> startTime </h3>
+     * <p>
+     *     Tempo di inizio della partita espresso in millisecondi.
+     * </p>
+     */
+  private long startTime;
 
   /**
    * <h3> Costruttore </h3>
@@ -85,9 +102,11 @@ public final class Match {
    */
   public Match() {
     this.inGame = false;
-    this.difficulty = Util.DIFFICULTY_EASY;
+    this.difficulty = Util.DIFFICULTY_MEDIUM;
     this.difficultyNames = new String[]{Util.EASY_NAME, Util.MEDIUM_NAME, Util.HARD_NAME};
     this.attempts = new int[]{Util.EASY_ATTEMPTS, Util.MEDIUM_ATTEMPTS, Util.HARD_ATTEMPTS};
+    this.failedAttempts = 0;
+    this.usedAttempts = 0;
     this.ships = new Ship[Util.MAX_SHIP];
     int i = Util.MIN_SHIP;
     for (int j = 0; j < Util.AIRCRAFT_NO; j++) {
@@ -108,6 +127,7 @@ public final class Match {
     }
     this.defenseGrid = new CellsGrid(Util.MAX_ROWS);
     this.attackGrid = new CharactersGrid(Util.MAX_ROWS);
+    maxTime = Util.DEFAULT_TIME;
   }
   /**
    * <h3> getInGame </h3>
@@ -141,30 +161,26 @@ public final class Match {
   public String getDifficultyNames(final int index) {
     return this.difficultyNames[index];
   }
-    /**
-     * <h3> getAttempts </h3>
-     * <p>
-     *     Restituisce il numero di tentativi per ogni difficoltà.
-     * </p>
-     * @param index Indice dei tentativi.
-     * @return attempts Tentativi per ogni difficoltà.
-     */
+
+  /**
+   * <h3> getAttempts </h3>
+   * <p>
+   *     Restituisce il numero di tentativi per ogni difficoltà.
+   * </p>
+   * @param index Indice dei tentativi.
+   * @return attempts Tentativi per ogni difficoltà.
+   */
   public int getAttempts(final int index) {
     return this.attempts[index];
   }
 
-  /**
-   * <h3> setAttempts </h3>
-   * <p>
-   *     Imposta il numero di tentativi per una specifica difficoltà.
-   * </p>
-   * @param index Indice dei tentativi
-   * @param value Nuovo numero di tentativi falliti per la difficoltà.
-   */
-  public void setAttempts(final int index, final int value) {
-    this.attempts[index] = value;
+  public int getFailedAttempts() {
+    return this.failedAttempts;
   }
 
+  public int getUsedAttempts() {
+    return this.usedAttempts;
+  }
 
     /**
      * <h3> getDefenseGrid </h3>
@@ -219,6 +235,51 @@ public final class Match {
   public Ship getShip(final int index) {
     return this.ships[index];
   }
+  /**
+     * <h3> getMaxTime </h3>
+     * <p>
+     *     Restituisce il tempo massimo per la partita.
+     * </p>
+     * @return maxTime Tempo massimo per la partita.
+     */
+  public int getMaxTime() {
+    return maxTime;
+  }
+  /**
+   * <h3> setMaxTime </h3>
+   * <p>
+   * Imposta il tempo massimo per la partita.
+   * </p>
+   *
+   * @param newMaxTime Tempo massimo per la partita.
+   */
+  public void setMaxTime(final int newMaxTime) {
+    this.maxTime = newMaxTime;
+  }
+
+  /**
+   * <h3> getStartTime </h3>
+   * <p>
+   *     Restituisce il tempo di inizio della partita.
+   * </p>
+   * @return startTime Tempo di inizio della partita.
+   */
+  public long getStartTime() {
+    return startTime;
+  }
+
+  /**
+   * <h3> setStartTime </h3>
+   * <p>
+   * Imposta il tempo di inizio della partita.
+   * </p>
+   *
+   * @param newStartTime Tempo di inizio della partita.
+   */
+  public void setStartTime(final long newStartTime) {
+    this.startTime = newStartTime;
+  }
+
   /**
    * <h3> initializeShips </h3>
    * <p>
