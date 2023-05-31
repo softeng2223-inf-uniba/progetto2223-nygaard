@@ -213,7 +213,21 @@ Di seguito, i ***Requisiti Funzionali*** del progetto, facenti parte della *User
 
   Al comando ```/tentativi <numero> ```
   
-  l’applicazione risponde con OK e imposta a numero il numero massimo di tentativi falliti 
+  - l’applicazione risponde con OK e imposta a numero il numero massimo di tentativi falliti
+
+<br/>
+
+- *mostrare i tentativi*
+
+  Come giocatore voglio mostrare il numero massimo di tentativi falliti
+
+  **Criteri di accettazione**
+
+  Al comando ```/mostratentativi```
+
+  - l’applicazione risponde visualizzando il numero di massimo di tentativi falliti 
+
+<br/>
 
 ## 3.2 Requisiti non Funzionali
 
