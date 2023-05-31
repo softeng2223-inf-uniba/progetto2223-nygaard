@@ -47,6 +47,10 @@ public final class HelpBoundary {
             + "Imposta la difficolta' della partita a \"Medio\"\n"
             + Util.ITALIC + Util.CYAN + "    * /difficile           " + Util.RESET
             + "Imposta la difficolta' della partita a \"Difficile\"\n"
+            + Util.ITALIC + Util.CYAN + "    * /tentativi numero    " + Util.RESET
+            + "Imposta un numero massimo di tentativi fallibili, pari a \n"
+            + Util.ITALIC + "                           numero" + Util.RESET + ", per tutti i"
+            +  " livelli di difficolta'\n"
             + Util.ITALIC + Util.CYAN + "    * /mostralivello       " + Util.RESET
             + "Mostra il livello della partita\n"
             + Util.ITALIC + Util.CYAN + "    * /mostratentativi     " + Util.RESET
