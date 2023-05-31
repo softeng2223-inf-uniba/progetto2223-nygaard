@@ -19,4 +19,8 @@ public class HitBoundary {
         System.out.println(Util.CYAN + "Acqua!" + Util.RESET);
     }
 
+    public static void hit(){
+        System.out.println(Util.YELLOW + "Colpito!" + Util.RESET);
+    }
+
 }
