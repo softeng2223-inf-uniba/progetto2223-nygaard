@@ -13,15 +13,14 @@ import it.uniba.nygaard.game.entity.Match;
  *
  * @see Command
  */
-public class ShowAttemptsCommand extends Command {
+public final class ShowAttemptsCommand extends Command {
     /**
      * <h3> instance </h3>
      * <p>
      *     Istanza di ShowAttemptsCommand.
      * </p>
      */
-    private static final ShowAttemptsCommand instance = new ShowAttemptsCommand();
-
+    private static ShowAttemptsCommand instance = new ShowAttemptsCommand();
     /**
      * <h3> Costruttore </h3>
      * <p>
@@ -31,7 +30,6 @@ public class ShowAttemptsCommand extends Command {
     private ShowAttemptsCommand() {
         setParamNumber(1);
     }
-
     /**
      * <h3> getInstance </h3>
      * <p>
@@ -41,7 +39,6 @@ public class ShowAttemptsCommand extends Command {
     public static ShowAttemptsCommand getInstance() {
         return instance;
     }
-
     /**
      * <h3> executeCommand </h3>
      * <p>
@@ -56,13 +53,14 @@ public class ShowAttemptsCommand extends Command {
         Match p = GameManager.getMatch();
         if (p.getInGame()) {
             if (p.getAttempts(Util.CUSTOM_DIFFICULTY) != -1) {
-                ShowAttemptsBoundary.showAttempts(p.getUsedAttempts(), p.getFailedAttempts(), p.getAttempts(Util.CUSTOM_DIFFICULTY));
+                ShowAttemptsBoundary.showAttempts(p.getUsedAttempts(), p.getFailedAttempts(),
+                        p.getAttempts(Util.CUSTOM_DIFFICULTY));
             } else {
-                ShowAttemptsBoundary.showAttempts(p.getUsedAttempts(), p.getFailedAttempts(), p.getAttempts(p.getDifficulty()));
+                ShowAttemptsBoundary.showAttempts(p.getUsedAttempts(), p.getFailedAttempts(),
+                        p.getAttempts(p.getDifficulty()));
             }
-        } else {
-            //TODO: Versione fuori dal gioco
         }
+        //todo: altrimenti versione fuori dal gioco
     }
 
 }

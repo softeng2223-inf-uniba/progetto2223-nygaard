@@ -21,7 +21,7 @@ final class StartMatchCommand extends Command {
    *     Istanza di StartMatchCommand.
    * </p>
    */
-  private static final StartMatchCommand instance = new StartMatchCommand();
+  private static StartMatchCommand instance = new StartMatchCommand();
   /**
    * <h3> Costruttore </h3>
    * <p>

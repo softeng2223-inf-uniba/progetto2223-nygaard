@@ -19,7 +19,7 @@ final class ShowLevelCommand extends Command {
    *     Istanza di ShowLevelCommand.
    * </p>
    */
-  private static final ShowLevelCommand instance = new ShowLevelCommand();
+  private static ShowLevelCommand instance = new ShowLevelCommand();
   /**
    * <h3> getInstance </h3>
    * <p>
