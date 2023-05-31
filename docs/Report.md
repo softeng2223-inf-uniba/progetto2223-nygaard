@@ -193,15 +193,15 @@ Di seguito, i ***Requisiti Funzionali*** del progetto, facenti parte della *User
 
   - Al comando ```/facile <numero>```
 
-    - l’applicazione risponde con OK e imposta il numero massimo di tentativi falliti
+    - ’applicazione risponde con OK e imposta a numero il numero massimo di tentativi falliti 
   
   - Al comando ```/medio <numero>```
 
-    - l’applicazione risponde con OK e imposta il numero massimo di tentativi falliti
+    - ’applicazione risponde con OK e imposta a numero il numero massimo di tentativi falliti 
 
   - Al comando ```/difficile <numero>```
   
-      - l’applicazione risponde con OK e imposta il numero massimo di tentativi falliti
+      - ’applicazione risponde con OK e imposta a numero il numero massimo di tentativi falliti 
 
 <br/>
 
@@ -225,7 +225,7 @@ Di seguito, i ***Requisiti Funzionali*** del progetto, facenti parte della *User
 
   Al comando ```/mostratentativi``` (quando non si è in partita)
 
-  - l’applicazione risponde visualizzando il numero di massimo di tentativi falliti 
+  - l’applicazione risponde visualizzando il numero di tentativi già effettuati, il numero di tentativi falliti e il numero massimo di tentativi falliti  
 
 <br/>
 
