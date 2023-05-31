@@ -191,17 +191,17 @@ Di seguito, i ***Requisiti Funzionali*** del progetto, facenti parte della *User
   
   **Criteri di accettazione**
 
-  - Al comando ```/facile <numero>```
+  - Al comando ```/facile numero```
 
-    - ’applicazione risponde con OK e imposta a numero il numero massimo di tentativi falliti 
+    - l’applicazione risponde con OK e imposta a *numero* il numero massimo di tentativi falliti 
   
-  - Al comando ```/medio <numero>```
+  - Al comando ```/medio numero```
 
-    - ’applicazione risponde con OK e imposta a numero il numero massimo di tentativi falliti 
+    - l’applicazione risponde con OK e imposta a *numero* il numero massimo di tentativi falliti 
 
-  - Al comando ```/difficile <numero>```
+  - Al comando ```/difficile numero```
   
-      - ’applicazione risponde con OK e imposta a numero il numero massimo di tentativi falliti 
+      - l’applicazione risponde con OK e imposta a *numero* il numero massimo di tentativi falliti 
 
 <br/>
 
@@ -211,9 +211,9 @@ Di seguito, i ***Requisiti Funzionali*** del progetto, facenti parte della *User
 
   **Criteri di accettazione**
 
-  Al comando ```/tentativi <numero> ```
+  Al comando ```/tentativi numero ```
   
-  - l’applicazione risponde con OK e imposta a numero il numero massimo di tentativi falliti
+  - l’applicazione risponde con OK e imposta a *numero* il numero massimo di tentativi falliti
 
 <br/>
 
@@ -255,9 +255,9 @@ Di seguito, i ***Requisiti Funzionali*** del progetto, facenti parte della *User
 
   **Criteri di accettazione**
 
-  Al comando ```/tempo <numero>```
+  Al comando ```/tempo numero```
 
-  - l’applicazione risponde con OK e imposta a numero il numero di minuti a disposizione per giocare
+  - l’applicazione risponde con OK e imposta a *numero* il numero di minuti a disposizione per giocare
 
 <br/>
 
