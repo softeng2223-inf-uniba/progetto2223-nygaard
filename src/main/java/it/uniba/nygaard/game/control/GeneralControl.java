@@ -71,6 +71,7 @@ public final class GeneralControl {
     availableCommands.put("/standard", SetGridSizeCommand.getInstance());
     availableCommands.put("/large", SetGridSizeCommand.getInstance());
     availableCommands.put("/extralarge", SetGridSizeCommand.getInstance());
+    availableCommands.put("/tentativi", AttemptsCommand.getInstance());
     ParamControl.initUI();
     while (!shutDown) {
       String[] command = InputBoundary.getCommand().trim().replaceAll(" +", " ").split(" ");
