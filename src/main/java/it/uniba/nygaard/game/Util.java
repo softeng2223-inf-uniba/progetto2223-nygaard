@@ -54,6 +54,11 @@ public final class Util {
   public static final int  DEFAULT_TIME = -1;
   public static final long ONE_MINUTE = 60000;
 
+  public static final int STANDARD_GRID_SIZE = 10;
+  public static final int LARGE_GRID_SIZE = 18;
+  public static final int EXTRA_LARGE_GRID_SIZE = 26;
+
+
   /**
    * <h3> Costruttore </h3>
    * <p>
