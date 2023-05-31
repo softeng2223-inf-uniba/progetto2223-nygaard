@@ -93,7 +93,7 @@ con **StarUML**.* (https://staruml.io/)
 
 Di seguito, i ***Requisiti Funzionali*** del progetto, facenti parte della *User Story*.
 
-- *mostrare l'help con elenco comandi e regole del gioco*
+- ***RF1**: mostrare l'help con elenco comandi e regole del gioco*
 
   Come giocatore voglio mostrare l'help con elenco comandi.
 
@@ -112,7 +112,7 @@ Di seguito, i ***Requisiti Funzionali*** del progetto, facenti parte della *User
 
 <br/>
 
-- *chiudere il gioco*
+- ***RF2**: chiudere il gioco*
 
   Come giocatore voglio chiudere il gioco.
 
@@ -126,7 +126,7 @@ Di seguito, i ***Requisiti Funzionali*** del progetto, facenti parte della *User
 
 <br/>
 
-- *impostare il livello di gioco per variare il numero massimo di tentativi falliti*
+- ***RF3**: impostare il livello di gioco per variare il numero massimo di tentativi falliti*
 
   Come giocatore voglio impostare il livello di gioco per variare il numero massimo di tentativi sbagliati.
 
@@ -145,7 +145,7 @@ Di seguito, i ***Requisiti Funzionali*** del progetto, facenti parte della *User
 
 <br/>
 
-- *mostrare i tipi di nave e il numero*
+- ***RF4**: mostrare i tipi di nave e il numero*
 
   Come giocatore voglio mostrare i tipi di nave e il numero
   
@@ -160,7 +160,7 @@ Di seguito, i ***Requisiti Funzionali*** del progetto, facenti parte della *User
 
 <br/>
 
-- *iniziare una nuova partita*
+- ***RF5**: iniziare una nuova partita*
 
   Come giocatore voglio iniziare una nuova partita
 
@@ -172,7 +172,7 @@ Di seguito, i ***Requisiti Funzionali*** del progetto, facenti parte della *User
 
 <br/>
 
-- *svelare la griglia con le navi posizionate*
+- ***RF6**: svelare la griglia con le navi posizionate*
 
   Come giocatore voglio svelare la griglia con le navi posizionate
 
@@ -181,14 +181,165 @@ Di seguito, i ***Requisiti Funzionali*** del progetto, facenti parte della *User
   Al comando ```/svelagriglia```
 
     - l’applicazione risponde visualizzando, una griglia 10x10, con le righe numerate da 1 a 10 e le colonne numerate da A a J, e tutte le navi posizionate
+ 
+<br/>
+
+
+- ***RF7**: impostare il numero di tentativi per difficoltà*
+
+  Come giocatore voglio impostare il numero massimo di tentativi falliti per livello di gioco 
+  
+  **Criteri di accettazione**
+
+  - Al comando ```/facile numero```
+
+    - l’applicazione risponde con OK e imposta a *numero* il numero massimo di tentativi falliti 
+  
+  - Al comando ```/medio numero```
+
+    - l’applicazione risponde con OK e imposta a *numero* il numero massimo di tentativi falliti 
+
+  - Al comando ```/difficile numero```
+  
+      - l’applicazione risponde con OK e imposta a *numero* il numero massimo di tentativi falliti 
 
 <br/>
+
+- ***RF8**: impostare direttamente il numero di tentativi*
+
+  Come giocatore voglio impostare direttamente il numero massimo di tentativi che si possono fallire
+
+  **Criteri di accettazione**
+
+  Al comando ```/tentativi numero ```
+  
+  - l’applicazione risponde con OK e imposta a *numero* il numero massimo di tentativi falliti
+
+<br/>
+
+- ***RF9**: mostrare i tentativi*
+
+  Come giocatore voglio mostrare il numero massimo di tentativi falliti
+
+  **Criteri di accettazione**
+
+  Al comando ```/mostratentativi``` (quando non si è in partita)
+
+  - l’applicazione risponde visualizzando il numero di tentativi già effettuati, il numero di tentativi falliti e il numero massimo di tentativi falliti  
+
+<br/>
+
+- ***RF10**: impostare la dimensione della griglia*
+
+  Come giocatore voglio impostare la taglia della griglia
+
+  **Criteri di accettazione**
+
+  - Al comando ```/standard```
+
+    - l’applicazione risponde con OK e imposta a 10x10 la dimensione della griglia (è il default)
+
+  - Al comando ```/large```
+
+    - l’applicazione risponde con OK e imposta a 18x18 la dimensione della griglia
+
+  - Al comando ```/extralarge```
+
+    - l’applicazione risponde con OK e imposta a 26x26 la dimensione della griglia
+
+<br/>
+
+- ***RF11**: impostare il tempo di gioco*
+
+  Come giocatore voglio impostare il tempo di gioco
+
+  **Criteri di accettazione**
+
+  Al comando ```/tempo numero```
+
+  - l’applicazione risponde con OK e imposta a *numero* il numero di minuti a disposizione per giocare
+
+<br/>
+
+- ***RF12**: mostrare il tempo di gioco*
+
+  Come giocatore voglio mostrare il tempo di gioco
+
+  **Criteri di accettazione**
+
+  Al comando ```/mostratempo```
+
+  - l’applicazione risponde visualizzando il numero di minuti trascorsi nel gioco e il numero di minuti ancora disponibili
+
+<br/>
+
+- ***RF13**: effettuare un colpo*
+
+  Come giocatore voglio effettuare un tentativo per colpire una nave
+
+  **Criteri di accettazione**
+
+  - Digitando una coppia di caratteri separati da un trattino, corrispondenti rispettivamente al numero di riga e alla lettera della colonna, (es. B-4), l’applicazione risponde  
+
+    - “acqua” se sulla cella non è posizionata nessuna nave; 
+
+    - "colpito" se sulla cella è posizionata una nave; 
+
+    - colpito e affondato" se sulla cella è posizionata una nave ed è l’ultima cella non colpita della nave. 
+  
+  - Qualunque sia l’esito del tentativo, l’applicazione mostra la griglia con le navi colpite parzialmente o affondate, il numero di tentativi già effettuati, e il tempo trascorso.  
+
+  - La partita termina con successo se il tentativo ha affondato l’ultima nave. 
+
+  - La partita termina con insuccesso se è stato raggiunto il numero massimo di tentativi falliti o se è scaduto il tempo di gioco.  
+
+<br/>
+
+- ***RF14**: mostrare la griglia di conoscenza*
+
+  Come giocatore voglio mostrare la griglia con le navi colpite e affondate
+
+  **Criteri di accettazione**
+
+  Al comando ```/mostragriglia```
+
+   - l’applicazione risponde visualizzando, una griglia delle dimensioni impostate, con le navi affondate e le sole parti già colpite delle navi non affondate.
+
+<br/>
+
+- ***RF15**: mostrare i tentativi effettuati*
+
+  Come giocatore voglio mostrare i tentativi effettuati
+
+  **Criteri di accettazione**
+
+  Al comando ```/mostratentativi``` (quando si è in partita)
+
+  - l’applicazione risponde visualizzando il numero di tentativi già effettuati, il numero di tentativi falliti e il numero massimo di tentativi falliti 
+
+<br/>
+
+- ***RF16**: abbandonare la partita*
+
+  Come giocatore voglio abbandonare la partita
+
+  **Criteri di accettazione**
+
+  Al comando ```/abbandona```
+
+  - l'applicazione chiede conferma
+
+    - se la conferma è positiva, l’applicazione risponde visualizzando sulla griglia la posizione di tutte le navi e si predispone a ricevere nuovi comandi
+
+    - se la conferma è negativa, l'applicazione si predispone a ricevere nuovi tentativi o comandi
+
+</br>
 
 ## 3.2 Requisiti non Funzionali
 
 Il funzionamento del software richiede:
 
-- il container docker dell’app deve essere eseguito da terminali che supportano Unicode con encoding UTF-8 o UTF-16.
+- ***RNF1***: il container docker dell’app deve essere eseguito da terminali che supportano Unicode con encoding UTF-8 o UTF-16.
 
 <br/>
 
