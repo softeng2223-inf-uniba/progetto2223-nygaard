@@ -84,9 +84,8 @@ public final class GeneralControl {
       Pattern pattern = Pattern.compile(regex);
       Matcher matcher = pattern.matcher(command[0]);
       if (matcher.matches()) {
-        ArrayList<String> list = new ArrayList<>(Arrays.asList(command));
-        list.add(0, "/colpo");
-        //System.out.println(list);
+        HitCommand.getInstance().executeCommand(command);
+        continue;
       }
       if (availableCommands.containsKey(command[0])) {
         availableCommands.get(command[0]).executeCommand(command);
