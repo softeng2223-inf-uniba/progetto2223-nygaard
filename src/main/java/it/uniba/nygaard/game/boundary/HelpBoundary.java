@@ -87,8 +87,7 @@ public final class HelpBoundary {
             + Util.ITALIC + Util.CYAN + "    * /large               " + Util.RESET
             + "Imposta una griglia 18x18 \n"
             + Util.ITALIC + Util.CYAN + "    * /extralarge          " + Util.RESET
-            + "Imposta una griglia 26x26 \n"
-            ;
+            + "Imposta una griglia 26x26 \n";
 
         return subGrid;
     }
