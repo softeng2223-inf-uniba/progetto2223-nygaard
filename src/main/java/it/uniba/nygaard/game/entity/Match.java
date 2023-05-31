@@ -69,7 +69,7 @@ public final class Match {
      * </p>
      * @see CellsGrid
      */
-  private final CellsGrid defenseGrid;
+  private CellsGrid defenseGrid;
     /**
      * <h3> attackGrid </h3>
      * <p>
@@ -77,7 +77,7 @@ public final class Match {
      * </p>
      * @see CharactersGrid
      */
-  private final CharactersGrid attackGrid;
+  private CharactersGrid attackGrid;
     /**
      * <h3> maxTime </h3>
      * <p>
@@ -105,10 +105,7 @@ public final class Match {
     this.inGame = false;
     this.difficulty = Util.DIFFICULTY_MEDIUM;
     this.difficultyNames = new String[]{Util.EASY_NAME, Util.MEDIUM_NAME, Util.HARD_NAME};
-
     this.gridSize = Util.STANDARD_GRID_SIZE;
-
-
     this.attempts = new int[]{Util.EASY_ATTEMPTS, Util.MEDIUM_ATTEMPTS, Util.HARD_ATTEMPTS};
     this.failedAttempts = 0;
     this.usedAttempts = 0;
@@ -131,7 +128,6 @@ public final class Match {
       i++;
     }
 
-    // TODO: Creazione delle griglie con assegnazione delle dimensioni
     this.defenseGrid = new CellsGrid(Util.maxRows);
     this.attackGrid = new CharactersGrid(Util.maxRows);
     maxTime = Util.DEFAULT_TIME;
@@ -164,6 +160,12 @@ public final class Match {
   public void setGridSize(final int newGridSize) {
     this.gridSize = newGridSize;
   }
+
+  public void resizeGrids(final int newSize) {
+    this.defenseGrid = new CellsGrid(newSize);
+    this.attackGrid = new CharactersGrid(newSize);
+  }
+
 
   /**
    * <h3> getDifficultyNames </h3>
