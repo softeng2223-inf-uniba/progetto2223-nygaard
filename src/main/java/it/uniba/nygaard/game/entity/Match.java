@@ -39,23 +39,26 @@ public final class Match {
    * </p>
    */
   private final String[] difficultyNames;
-    /**
-     * <h3> attempts </h3>
-     * <p>
-     *     Tentativi per ogni difficoltà.
-     * </p>
-     */
+  /**
+   * <h3> attempts </h3>
+   * <p>
+   * Tentativi per ogni difficoltà.
+   * </p>
+   */
   private final int[] attempts;
-    /**
-     * <h3> ships </h3>
-     * <p>
-     *     Navi della partita.
-     * </p>
-     * @see Ship
-     */
+  private final int failedAttempts;
+  private final int usedAttempts;
+  /**
+   * <h3> ships </h3>
+   * <p>
+   * Navi della partita.
+   * </p>
+   *
+   * @see Ship
+   */
   private final Ship[] ships;
-    /**
-     * <h3> defenseGrid </h3>
+  /**
+   * <h3> defenseGrid </h3>
      * <p>
      *     Griglia di difesa.
      * </p>
@@ -97,6 +100,8 @@ public final class Match {
     this.difficulty = Util.DIFFICULTY_MEDIUM;
     this.difficultyNames = new String[]{Util.EASY_NAME, Util.MEDIUM_NAME, Util.HARD_NAME, Util.CUSTOM_NAME};
     this.attempts = new int[]{Util.EASY_ATTEMPTS, Util.MEDIUM_ATTEMPTS, Util.HARD_ATTEMPTS, Util.CUSTOM_ATTEMPTS};
+    this.failedAttempts = 0;
+    this.usedAttempts = 0;
     this.ships = new Ship[Util.MAX_SHIP];
     int i = Util.MIN_SHIP;
     for (int j = 0; j < Util.AIRCRAFT_NO; j++) {
