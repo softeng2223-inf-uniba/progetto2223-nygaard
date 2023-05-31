@@ -44,12 +44,12 @@ public final class Match {
    * </p>
    */
   private final String[] difficultyNames;
-  /**
-   * <h3> attempts </h3>
-   * <p>
-   * Tentativi per ogni difficoltà.
-   * </p>
-   */
+    /**
+     * <h3> attempts </h3>
+     * <p>
+     *     Tentativi per ogni difficoltà.
+     * </p>
+     */
   private final int[] attempts;
     /**
      * <h3> failedAttempts </h3>
@@ -74,8 +74,8 @@ public final class Match {
    * @see Ship
    */
   private final Ship[] ships;
-  /**
-   * <h3> defenseGrid </h3>
+    /**
+     * <h3> defenseGrid </h3>
      * <p>
      *     Griglia di difesa.
      * </p>
@@ -232,13 +232,19 @@ public final class Match {
   public int getAttempts(final int index) {
     return this.attempts[index];
   }
+
   /**
-   * <h3> getFailedAttempts </h3>
+   * <h3> setAttempts </h3>
    * <p>
-   *     Restituisce il numero di tentativi falliti.
+   *     Imposta il numero di tentativi per una specifica difficoltà.
    * </p>
-   * @return failedAttempts Tentativi falliti.
+   * @param index Indice dei tentativi
+   * @param value Nuovo numero di tentativi falliti per la difficoltà.
    */
+  public void setAttempts(final int index, final int value) {
+    this.attempts[index] = value;
+  }
+
   public int getFailedAttempts() {
     return this.failedAttempts;
   }
@@ -255,9 +261,8 @@ public final class Match {
   /**
    * <h3> getDefenseGrid </h3>
    * <p>
-   * Restituisce la griglia di difesa della partita.
+   *     Restituisce la griglia di difesa della partita.
    * </p>
-   *
    * @return defenseGrid Griglia di difesa della partita.
    */
   public String getDefenseGrid() {
@@ -316,7 +321,6 @@ public final class Match {
   public void setMaxTime(final int newMaxTime) {
     this.maxTime = newMaxTime;
   }
-
   /**
    * <h3> getStartTime </h3>
    * <p>
@@ -327,7 +331,6 @@ public final class Match {
   public long getStartTime() {
     return startTime;
   }
-
   /**
    * <h3> setStartTime </h3>
    * <p>
@@ -339,7 +342,6 @@ public final class Match {
   public void setStartTime(final long newStartTime) {
     this.startTime = newStartTime;
   }
-
   /**
    * <h3> initializeShips </h3>
    * <p>
@@ -381,7 +383,6 @@ public final class Match {
     }
     return false;
   }
-
   /**
    * <h3> placeShip </h3>
    * <p>
@@ -407,7 +408,6 @@ public final class Match {
       }
     }
   }
-
   /**
    * <h3> removeShip </h3>
    * <p>

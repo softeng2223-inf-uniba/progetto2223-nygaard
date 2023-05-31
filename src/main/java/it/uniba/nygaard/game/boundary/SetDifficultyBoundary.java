@@ -28,9 +28,15 @@ public final class SetDifficultyBoundary {
      * Stampa il messaggio di errore relativo al cambio
      * di difficoltà durante una partita.
      * </p>
+     * @param diff True se si vuole cambiare la difficoltà mentre si è in partita,
+     *             false se si vuole cambiare il numero di tentativi mentre si è in partita.
      */
-    public static void alreadyInGame() {
-        System.out.println(Util.RED + "Non puoi cambiare difficoltà durante una partita" + Util.RESET);
+    public static void alreadyInGame(final boolean diff) {
+        if (diff) {
+            System.out.println(Util.RED + "Non puoi cambiare difficoltà durante una partita" + Util.RESET);
+        } else {
+            System.out.println(Util.RED + "Non puoi cambiare il numero di tentativi durante una partita" + Util.RESET);
+        }
     }
     /**
      * <h3> sameDifficulty </h3>
@@ -41,6 +47,17 @@ public final class SetDifficultyBoundary {
      */
     public static void sameDifficulty() {
         System.out.println(Util.RED + "Hai già impostato questa difficoltà" + Util.RESET);
+    }
+
+    /**
+     * <h3> sameAttempts</h3>
+     * <p>
+     *     Stampa il messaggio relativo al fatto che il numero di tentativi
+     *     che si vuole inserire per una certa difficoltà è già quello impostato.
+     * </p>
+     */
+    public static void sameAttempts() {
+        System.out.println(Util.RED + "Questo numero di tentativi è uguale a quello già impostato" + Util.RESET);
     }
     /**
      * <h3> ask </h3>

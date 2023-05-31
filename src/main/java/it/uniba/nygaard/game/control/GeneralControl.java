@@ -52,14 +52,14 @@ public final class GeneralControl {
    */
   public static void startGame(final String[] args) {
     GameManager.setMatch(new Match());
-    GameManager.setNextDifficulty(Util.DIFFICULTY_MEDIUM);
+    GameManager.setMatchDifficulty(Util.DIFFICULTY_MEDIUM);
     GameManager.setNextGridSizeName(Util.STANDARD_GRID_SIZE);
     GameManager.setArgs(args);
     HashMap<String, Command> availableCommands = new HashMap<>();
     availableCommands.put("/esci", ExitCommand.getInstance());
-    availableCommands.put("/facile", SetEasy.getInstance());
-    availableCommands.put("/medio", SetMedium.getInstance());
-    availableCommands.put("/difficile", SetHard.getInstance());
+    availableCommands.put("/facile", SetDifficultyCommand.getInstance());
+    availableCommands.put("/medio", SetDifficultyCommand.getInstance());
+    availableCommands.put("/difficile", SetDifficultyCommand.getInstance());
     availableCommands.put("/mostralivello", ShowLevelCommand.getInstance());
     availableCommands.put("/mostranavi", ShowShipCommand.getInstance());
     availableCommands.put("/gioca", StartMatchCommand.getInstance());

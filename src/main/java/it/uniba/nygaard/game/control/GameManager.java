@@ -19,12 +19,19 @@ public final class GameManager {
      */
     private static Match match;
     /**
-     * <h3> nextDifficulty </h3>
+     * <h3> matchDifficulty </h3>
      * <p>
      * Difficoltà della prossima partita.
      * </p>
      */
-    private static int nextDifficulty;
+    private static int matchDifficulty;
+    /**
+     * <h3> matchAttempts </h3>
+     * <p>
+     * Numero di tentativi della prossima partita.
+     * </p>
+     */
+    private static int matchAttempts;
     /**
      * <h3> nextGridSize </h3>
      * <p>
@@ -68,25 +75,41 @@ public final class GameManager {
         GameManager.match = newMatch;
     }
     /**
-     * <h3> getNextDifficulty </h3>
+     * <h3> getMatchDifficulty </h3>
      * <p>
      * Restituisce la difficoltà della prossima partita.
      * </p>
      * @return Difficoltà della prossima partita.
      */
-    static int getGameDifficulty() {
-        return nextDifficulty;
+    static int getMatchDifficulty() {
+        return matchDifficulty;
     }
     /**
-     * <h3> setNextDifficulty </h3>
+     * <h3> setMatchDifficulty </h3>
      * <p>
      * Imposta la difficoltà della prossima partita.
      * </p>
-     * @param newNextDifficulty Difficoltà della prossima partita.
+     * @param newMatchDifficulty Difficoltà della prossima partita.
      */
-    static void setNextDifficulty(final int newNextDifficulty) {
-        GameManager.nextDifficulty = newNextDifficulty;
+    static void setMatchDifficulty(final int newMatchDifficulty) {
+        GameManager.matchDifficulty = newMatchDifficulty;
     }
+
+    /**
+     * <h3> setMatchAttempts </h3>
+     * <p>
+     * Imposta il numero di tentativi della prossima partita.
+     * </p>
+     * @param newMatchAttempts Numero di tentativi della prossima partita.
+     */
+    static void setMatchAttempts(final int newMatchAttempts) {
+        GameManager.matchAttempts = newMatchAttempts;
+    }
+
+    static int getMatchAttempts() {
+        return matchAttempts;
+    }
+
     /**
      * <h3> setNextGridSizeName </h3>
      * <p>
