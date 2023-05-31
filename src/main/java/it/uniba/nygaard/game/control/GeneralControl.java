@@ -53,6 +53,7 @@ public final class GeneralControl {
   public static void startGame(final String[] args) {
     GameManager.setMatch(new Match());
     GameManager.setMatchDifficulty(Util.DIFFICULTY_MEDIUM);
+    GameManager.setNextGridSizeName(Util.STANDARD_GRID_SIZE);
     GameManager.setArgs(args);
     HashMap<String, Command> availableCommands = new HashMap<>();
     availableCommands.put("/esci", ExitCommand.getInstance());
@@ -67,6 +68,9 @@ public final class GeneralControl {
     availableCommands.put("/tempo", SetTimeCommand.getInstance());
     availableCommands.put("/mostratempo", ShowTimeCommand.getInstance());
     availableCommands.put("/mostratentativi", ShowAttemptsCommand.getInstance());
+    availableCommands.put("/standard", SetGridSizeCommand.getInstance());
+    availableCommands.put("/large", SetGridSizeCommand.getInstance());
+    availableCommands.put("/extralarge", SetGridSizeCommand.getInstance());
     ParamControl.initUI();
     while (!shutDown) {
       String[] command = InputBoundary.getCommand().trim().replaceAll(" +", " ").split(" ");

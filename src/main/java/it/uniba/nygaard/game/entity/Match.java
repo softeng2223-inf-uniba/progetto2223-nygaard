@@ -51,7 +51,19 @@ public final class Match {
      * </p>
      */
   private final int[] attempts;
+    /**
+     * <h3> failedAttempts </h3>
+     * <p>
+     * Tentativi falliti.
+     * </p>
+     */
   private final int failedAttempts;
+  /**
+   * <h3> usedAttempts </h3>
+   * <p>
+   * Tentativi usati.
+   * </p>
+   */
   private final int usedAttempts;
   /**
    * <h3> ships </h3>
@@ -69,7 +81,7 @@ public final class Match {
      * </p>
      * @see CellsGrid
      */
-  private final CellsGrid defenseGrid;
+  private CellsGrid defenseGrid;
     /**
      * <h3> attackGrid </h3>
      * <p>
@@ -77,7 +89,7 @@ public final class Match {
      * </p>
      * @see CharactersGrid
      */
-  private final CharactersGrid attackGrid;
+  private CharactersGrid attackGrid;
     /**
      * <h3> maxTime </h3>
      * <p>
@@ -92,6 +104,13 @@ public final class Match {
      * </p>
      */
   private long startTime;
+    /**
+     * <h3> gridSize </h3>
+     * <p>
+     *     Dimensione della griglia.
+     * </p>
+     */
+  private int gridSize;
 
   /**
    * <h3> Costruttore </h3>
@@ -104,6 +123,7 @@ public final class Match {
     this.inGame = false;
     this.difficulty = Util.DIFFICULTY_MEDIUM;
     this.difficultyNames = new String[]{Util.EASY_NAME, Util.MEDIUM_NAME, Util.HARD_NAME};
+    this.gridSize = Util.STANDARD_GRID_SIZE;
     this.attempts = new int[]{Util.EASY_ATTEMPTS, Util.MEDIUM_ATTEMPTS, Util.HARD_ATTEMPTS};
     this.failedAttempts = 0;
     this.usedAttempts = 0;
@@ -125,8 +145,9 @@ public final class Match {
       this.ships[i - 1] = new Destroyer();
       i++;
     }
-    this.defenseGrid = new CellsGrid(Util.MAX_ROWS);
-    this.attackGrid = new CharactersGrid(Util.MAX_ROWS);
+
+    this.defenseGrid = new CellsGrid(Util.STANDARD_GRID_SIZE);
+    this.attackGrid = new CharactersGrid(Util.STANDARD_GRID_SIZE);
     maxTime = Util.DEFAULT_TIME;
   }
   /**
@@ -149,7 +170,46 @@ public final class Match {
   public int getDifficulty() {
     return this.difficulty;
   }
+  /**
+   * <h3> getGridSize </h3>
+   * <p>
+   *     Restituisce la dimensione delle griglie.
+   * </p>
+   * @return Dimensione delle griglie.
+   */
+  public int getGridSize() {
+    return this.gridSize;
+  }
+  /**
+   * <h3> setGridSize </h3>
+   * <p>
+   *     Imposta la dimensione delle griglie.
+   * </p>
+   * @param newGridSize Dimensione delle griglie.
+   */
+  public void setGridSize(final int newGridSize) {
+    this.gridSize = newGridSize;
+  }
+  /**
+   * <h3> resizeGrids </h3>
+   * <p>
+   *     Ridimensiona le griglie di gioco.
+   * </p>
+   * @param newSize Nuova dimensione delle griglie.
+   */
+  public void resizeGrids(final int newSize) {
+    this.defenseGrid = new CellsGrid(newSize);
+    this.attackGrid = new CharactersGrid(newSize);
 
+    this.defenseGrid.setMaxColumn((char) (newSize + Util.INT_TO_CHAR));
+    this.attackGrid.setMaxColumn((char) (newSize + Util.INT_TO_CHAR));
+
+    this.defenseGrid.setMaxRows(newSize);
+    this.attackGrid.setMaxRows(newSize);
+
+    this.attackGrid.setHeadingEdgeWidth(newSize + Util.BORDER_ADDER);
+    this.defenseGrid.setHeadingEdgeWidth(newSize + Util.BORDER_ADDER);
+  }
   /**
    * <h3> getDifficultyNames </h3>
    * <p>
@@ -161,7 +221,6 @@ public final class Match {
   public String getDifficultyNames(final int index) {
     return this.difficultyNames[index];
   }
-
   /**
    * <h3> getAttempts </h3>
    * <p>
@@ -189,18 +248,23 @@ public final class Match {
   public int getFailedAttempts() {
     return this.failedAttempts;
   }
-
+ /**
+  * <h3> getUsedAttempts </h3>
+  * <p>
+  *     Restituisce il numero di tentativi usati.
+  * </p>
+  * @return usedAttempts Tentativi usati.
+  */
   public int getUsedAttempts() {
     return this.usedAttempts;
   }
-
-    /**
-     * <h3> getDefenseGrid </h3>
-     * <p>
-     *     Restituisce la griglia di difesa della partita.
-     * </p>
-     * @return defenseGrid Griglia di difesa della partita.
-     */
+  /**
+   * <h3> getDefenseGrid </h3>
+   * <p>
+   *     Restituisce la griglia di difesa della partita.
+   * </p>
+   * @return defenseGrid Griglia di difesa della partita.
+   */
   public String getDefenseGrid() {
     return this.defenseGrid.toString();
   }
@@ -236,17 +300,6 @@ public final class Match {
   public void setInGame(final boolean newInGame) {
     this.inGame = newInGame;
   }
-    /**
-     * <h3> getShip </h3>
-     * <p>
-     *     Restituisce la nave in posizione index.
-     * </p>
-     * @param index Indice della nave.
-     * @return ships[index] Nave in posizione index.
-     */
-  public Ship getShip(final int index) {
-    return this.ships[index];
-  }
   /**
      * <h3> getMaxTime </h3>
      * <p>
@@ -268,7 +321,6 @@ public final class Match {
   public void setMaxTime(final int newMaxTime) {
     this.maxTime = newMaxTime;
   }
-
   /**
    * <h3> getStartTime </h3>
    * <p>
@@ -279,7 +331,6 @@ public final class Match {
   public long getStartTime() {
     return startTime;
   }
-
   /**
    * <h3> setStartTime </h3>
    * <p>
@@ -291,7 +342,6 @@ public final class Match {
   public void setStartTime(final long newStartTime) {
     this.startTime = newStartTime;
   }
-
   /**
    * <h3> initializeShips </h3>
    * <p>
@@ -314,11 +364,11 @@ public final class Match {
       } else {
         direction = Util.HORIZONTAL;
       }
-      coord.setRow(rnd.nextInt(Util.MAX_ROWS) + 1);
-      coord.setColumn((char) (rnd.nextInt(Util.MAX_COLUMN - Util.MIN_COLUMN + 1) + Util.MIN_COLUMN));
+      coord.setRow(rnd.nextInt(this.attackGrid.getMaxRows()) + 1);
+      coord.setColumn((char) (rnd.nextInt(this.attackGrid.getMaxColumn() - Util.MIN_COLUMN + 1) + Util.MIN_COLUMN));
       this.ships[i - 1].setDirection(direction);
       this.ships[i - 1].setCoord(coord);
-      if (this.ships[i - 1].outOfMap()) {
+      if (this.ships[i - 1].outOfMap(this.defenseGrid)) {
         j--;
         continue;
       }
@@ -333,7 +383,6 @@ public final class Match {
     }
     return false;
   }
-
   /**
    * <h3> placeShip </h3>
    * <p>
@@ -359,7 +408,6 @@ public final class Match {
       }
     }
   }
-
   /**
    * <h3> removeShip </h3>
    * <p>
@@ -369,8 +417,8 @@ public final class Match {
    * @param i Indice della nave da rimuovere.
    */
   private void removeShip(final int i) {
-    for (int j = Util.MIN_ROWS; j <= Util.MAX_ROWS; j++) {
-      for (int k = Util.MIN_ROWS; k <= Util.MAX_ROWS; k++) {
+    for (int j = Util.MIN_ROWS; j <= this.attackGrid.getMaxRows(); j++) {
+      for (int k = Util.MIN_ROWS; k <= this.attackGrid.getMaxRows(); k++) {
         if (defenseGrid.getCellShipIndex(j - 1, k - 1) == i) {
           defenseGrid.setCellCharacter(j - 1, k - 1, Util.SEA_CHARACTER);
           defenseGrid.setCellShipIndex(j - 1, k - 1, Util.SEA_INDEX);

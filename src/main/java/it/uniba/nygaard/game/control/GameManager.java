@@ -33,6 +33,13 @@ public final class GameManager {
      */
     private static int matchAttempts;
     /**
+     * <h3> nextGridSize </h3>
+     * <p>
+     * Dimensione della griglia della prossima partita.
+     * </p>
+     */
+    private static int nextGridSize;
+    /**
      * <h3> args </h3>
      * <p>
      * Argomenti passati al programma.
@@ -47,7 +54,6 @@ public final class GameManager {
      */
     private GameManager() {
     }
-
     /**
      * <h3> getMatch </h3>
      * <p>
@@ -58,7 +64,6 @@ public final class GameManager {
     static Match getMatch() {
         return match;
     }
-
     /**
      * <h3> setMatch </h3>
      * <p>
@@ -69,7 +74,6 @@ public final class GameManager {
     static void setMatch(final Match newMatch) {
         GameManager.match = newMatch;
     }
-
     /**
      * <h3> getMatchDifficulty </h3>
      * <p>
@@ -80,7 +84,6 @@ public final class GameManager {
     static int getMatchDifficulty() {
         return matchDifficulty;
     }
-
     /**
      * <h3> setMatchDifficulty </h3>
      * <p>
@@ -107,6 +110,16 @@ public final class GameManager {
         return matchAttempts;
     }
 
+    /**
+     * <h3> setNextGridSizeName </h3>
+     * <p>
+     * Imposta la difficoltà della prossima partita.
+     * </p>
+     * @param newNextDifficulty Difficoltà della prossima partita.
+     */
+    static void setNextGridSizeName(final int newNextDifficulty) {
+        GameManager.nextGridSize = newNextDifficulty;
+    }
     /**
      * <h3> getArgs </h3>
      * <p>
@@ -147,6 +160,16 @@ public final class GameManager {
      */
     public static String newDifficultyName(final int newDifficulty) {
         return match.getDifficultyNames(newDifficulty);
+    }
+    /**
+     * <h3> currentGridSize </h3>
+     * <p>
+     * Restituisce le dimensioni attuali della griglia.
+     * </p>
+     * @return dimensione attuale.
+     */
+    public static int currentGridSize() {
+        return match.getGridSize();
     }
     /**
      * <h3> getMatchTime </h3>

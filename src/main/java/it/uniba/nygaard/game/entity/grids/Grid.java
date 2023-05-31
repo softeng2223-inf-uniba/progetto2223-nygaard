@@ -1,5 +1,7 @@
 package it.uniba.nygaard.game.entity.grids;
 
+import it.uniba.nygaard.game.Util;
+
 /**
  * <h2> Grid </h2>
  * <p>
@@ -7,49 +9,99 @@ package it.uniba.nygaard.game.entity.grids;
  * </p>
  */
 public abstract class Grid {
-
-    /**
-     * <h3> dimension </h3>
-     * <p>
-     * Dimensione della griglia.
-     * </p>
-     */
-  private int dimension;
-
+  /**
+   * <h3> maxRows </h3>
+   * <p>
+   * Numero massimo di righe.
+   * </p>
+   */
+  private int maxRows;
+  /**
+   * <h3> maxColumn </h3>
+   * <p>
+   * Numero massimo di colonne.
+   * </p>
+   */
+  private char maxColumn;
+  /**
+   * <h3> headingEdgeWidth </h3>
+   * <p>
+   * Larghezza del bordo superiore.
+   * </p>
+   */
+  private int headingEdgeWidth;
   /**
    * <h3> Costruttore </h3>
    * <p>
    * Costruttore della classe Grid.
    * </p>
-   *
-   * @param newDimension Dimensione della griglia.
    */
-  Grid(final int newDimension) {
-    this.dimension = newDimension;
+  Grid() {
+    maxRows = Util.STANDARD_GRID_SIZE;
+    maxColumn = 'J';
   }
-
   /**
-   * <h3> setDimension </h3>
+   * <h3> getHeadingEdgeWidth </h3>
    * <p>
-   * Imposta la dimensione della griglia.
+   *  Restituisce la larghezza del bordo superiore.
+   * </p>
+   * @return Larghezza del bordo superiore.
+   */
+  public int getHeadingEdgeWidth() {
+    return headingEdgeWidth;
+  }
+  /**
+   * <h3> setHeadingEdgeWidth </h3>
+   * <p>
+   * Imposta la larghezza del bordo superiore.
+   * </p>
+   * @param newHeadingEdgeWidth Larghezza del bordo superiore.
+   */
+  public void setHeadingEdgeWidth(final int newHeadingEdgeWidth) {
+    this.headingEdgeWidth = newHeadingEdgeWidth;
+  }
+  /**
+   * <h3> getMaxRows </h3>
+   * <p>
+   * Restituisce il numero massimo di righe.
    * </p>
    *
-   * @param newDimension Dimensione della griglia.
+   * @return Numero massimo di righe.
    */
-  public void setDimension(final int newDimension) {
-    this.dimension = newDimension;
+  public int getMaxRows() {
+    return maxRows;
   }
-
   /**
-   * <h3> getDimension </h3>
+   * <h3> setMaxRows </h3>
    * <p>
-   * Restituisce la dimensione della griglia.
+   * Imposta il numero massimo di righe.
    * </p>
    *
-   * @return Dimensione della griglia.
+   * @param newMaxRows Numero massimo di righe.
    */
-  public int getDimension() {
-    return this.dimension;
+  public void setMaxRows(final int newMaxRows) {
+    maxRows = newMaxRows;
   }
-
+  /**
+   * <h3> getMaxColumn </h3>
+   * <p>
+   * Restituisce il numero massimo di colonne.
+   * </p>
+   *
+   * @return Numero massimo di colonne.
+   */
+  public char getMaxColumn() {
+    return maxColumn;
+  }
+  /**
+   * <h3> setMaxColumn </h3>
+   * <p>
+   * Imposta il numero massimo di colonne.
+   * </p>
+   *
+   * @param newMaxColumn Numero massimo di colonne.
+   */
+  public void setMaxColumn(final char newMaxColumn) {
+    maxColumn = newMaxColumn;
+  }
 }
