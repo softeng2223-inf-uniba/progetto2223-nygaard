@@ -315,6 +315,24 @@ Di seguito, i ***Requisiti Funzionali*** del progetto, facenti parte della *User
 
   - l’applicazione risponde visualizzando il numero di tentativi già effettuati, il numero di tentativi falliti e il numero massimo di tentativi falliti 
 
+<br/>
+
+- *abbandonare la partita*
+
+  Come giocatore voglio abbandonare la partita
+
+  **Criteri di accettazione**
+
+  Al comando ```/abbandona```
+
+  - l'applicazione chiede conferma
+
+    - se la conferma è positiva, l’applicazione risponde visualizzando sulla griglia la posizione di tutte le navi e si predispone a ricevere nuovi comandi
+
+    - se la conferma è negativa, l'applicazione si predispone a ricevere nuovi tentativi o comandi
+
+</br>
+
 ## 3.2 Requisiti non Funzionali
 
 Il funzionamento del software richiede:
