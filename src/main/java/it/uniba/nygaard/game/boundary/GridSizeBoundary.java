@@ -1,8 +1,8 @@
-package it.uniba.nygaard.game.control;
+package it.uniba.nygaard.game.boundary;
 
 import it.uniba.nygaard.game.Util;
 
-public class GridSizeBoundary {
+public final class GridSizeBoundary {
     private GridSizeBoundary() {
     }
 
