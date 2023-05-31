@@ -70,7 +70,13 @@ final class SetDifficultyCommand extends Command {
       Matcher matcher = pattern.matcher(command[1]);
 
       if (matcher.matches()) {
-        GameManager.setMatchAttempts(Integer.parseInt(command[1]));
+        try {
+          GameManager.setMatchAttempts(Integer.parseInt(command[1]));
+        }
+        catch (NumberFormatException e) {
+          SetDifficultyBoundary.notValidChoice();
+          return;
+        }
         setNewDiffAttempts(difficultyInvolved);
       } else {
         SetDifficultyBoundary.notValidChoice();
