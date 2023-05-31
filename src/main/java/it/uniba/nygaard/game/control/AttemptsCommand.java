@@ -20,7 +20,7 @@ public final class AttemptsCommand extends Command {
     /**
      * <h3> instance </h3>
      * <p>
-     * Istanza di SetEasy.
+     * Istanza di AttemptsCommand.
      * </p>
      */
     private static AttemptsCommand instance = new AttemptsCommand();
@@ -38,7 +38,7 @@ public final class AttemptsCommand extends Command {
     /**
      * <h3> getInstance </h3>
      * <p>
-     * Restituisce l'istanza di SetEasy.
+     * Restituisce l'istanza di AttemptsCommand.
      * </p>
      */
     static AttemptsCommand getInstance() {
