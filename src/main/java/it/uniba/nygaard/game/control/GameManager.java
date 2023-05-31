@@ -25,6 +25,9 @@ public final class GameManager {
      * </p>
      */
     private static int nextDifficulty;
+
+    private static int gridSize;
+
     /**
      * <h3> args </h3>
      * <p>
@@ -72,6 +75,10 @@ public final class GameManager {
      */
     static int getGameDifficulty() {
         return nextDifficulty;
+    }
+
+    static int getGridSize() {
+        return gridSize;
     }
 
     /**
