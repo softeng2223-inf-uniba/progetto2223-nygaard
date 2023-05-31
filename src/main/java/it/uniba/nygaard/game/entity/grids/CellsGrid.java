@@ -29,7 +29,7 @@ public final class CellsGrid extends Grid {
    * @param dimension Dimensione della griglia.
    */
   public CellsGrid(final int dimension) {
-    super(dimension);
+    super();
     grid = new Cell[dimension][dimension];
     for (int i = 0; i < dimension; i++) {
       for (int j = 0; j < dimension; j++) {

@@ -9,14 +9,6 @@ import it.uniba.nygaard.game.Util;
  * </p>
  */
 public abstract class Grid {
-
-  /**
-   * <h3> dimension </h3>
-   * <p>
-   * Dimensione della griglia.
-   * </p>
-   */
-  private int dimension;
   /**
    * <h3> maxRows </h3>
    * <p>
@@ -43,11 +35,8 @@ public abstract class Grid {
    * <p>
    * Costruttore della classe Grid.
    * </p>
-   *
-   * @param newDimension Dimensione della griglia.
    */
-  Grid(final int newDimension) {
-    this.dimension = newDimension;
+  Grid() {
     maxRows = Util.STANDARD_GRID_SIZE;
     maxColumn = 'J';
   }
