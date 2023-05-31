@@ -46,7 +46,7 @@ public final class CharactersGrid extends Grid {
    * @param column Colonna del carattere.
    * @return Carattere della griglia.
    */
-  private char getCharacter(final int row, final int column) {
+  public char getCharacter(final int row, final int column) {
     return grid[row][column];
   }
 
