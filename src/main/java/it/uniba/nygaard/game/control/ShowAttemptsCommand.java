@@ -4,7 +4,7 @@ import it.uniba.nygaard.game.Util;
 import it.uniba.nygaard.game.boundary.ShowAttemptsBoundary;
 import it.uniba.nygaard.game.entity.Match;
 
-public class ShowAttemptsCommand implements Command {
+public class ShowAttemptsCommand extends Command {
 
     private static final ShowAttemptsCommand instance = new ShowAttemptsCommand();
 
