@@ -96,19 +96,17 @@ final class SetDifficultyCommand extends Command {
       SetDifficultyBoundary.sameDifficulty();
       return;
     }
-    if (p.getDifficulty() != Util.DIFFICULTY_NOT_SETTED) {
-      String choice;
-      do {
-        choice = SetDifficultyBoundary.ask(actualDifficulty);
-        if (!choice.equals("n") && !choice.equals("y")) {
-          SetDifficultyBoundary.notValidChoice();
-        }
+    String choice;
+    do {
+      choice = SetDifficultyBoundary.ask(actualDifficulty);
+      if (!choice.equals("n") && !choice.equals("y")) {
+        SetDifficultyBoundary.notValidChoice();
       }
-      while (!choice.equals("y") && !choice.equals("n"));
-      if (choice.equals("n")) {
-        SetDifficultyBoundary.operationCancelled();
-        return;
-      }
+    }
+    while (!choice.equals("y") && !choice.equals("n"));
+    if (choice.equals("n")) {
+      SetDifficultyBoundary.operationCancelled();
+      return;
     }
     p.setDifficulty(actualDifficulty);
     SetDifficultyBoundary.operationDone();
