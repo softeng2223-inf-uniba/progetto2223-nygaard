@@ -56,7 +56,10 @@ final class SetDifficultyCommand extends Command {
     if (invalidNumber(command)) {
       return;
     }
-
+    if (GameManager.getMatch().getInGame()) {
+        SetDifficultyBoundary.alreadyInGame(command.length == 1);
+      return;
+    }
     int difficultyInvolved = command[0].equals("/facile") ? Util.DIFFICULTY_EASY
             : command[0].equals("/medio") ? Util.DIFFICULTY_MEDIUM
             : Util.DIFFICULTY_HARD;
@@ -70,7 +73,13 @@ final class SetDifficultyCommand extends Command {
       Matcher matcher = pattern.matcher(command[1]);
 
       if (matcher.matches()) {
-        GameManager.setMatchAttempts(Integer.parseInt(command[1]));
+        try {
+          GameManager.setMatchAttempts(Integer.parseInt(command[1]));
+        }
+        catch (NumberFormatException e) {
+          SetDifficultyBoundary.notValidChoice();
+          return;
+        }
         setNewDiffAttempts(difficultyInvolved);
       } else {
         SetDifficultyBoundary.notValidChoice();
@@ -88,10 +97,6 @@ final class SetDifficultyCommand extends Command {
   private void setNewMatchDifficulty() {
     int actualDifficulty = GameManager.getMatchDifficulty();
     Match p = GameManager.getMatch();
-    if (p.getInGame()) {
-      SetDifficultyBoundary.alreadyInGame();
-      return;
-    }
     if (p.getDifficulty() == actualDifficulty) {
       SetDifficultyBoundary.sameDifficulty();
       return;
@@ -115,10 +120,6 @@ final class SetDifficultyCommand extends Command {
   private void setNewDiffAttempts(final int difficultyToModify) {
     int attempts = GameManager.getMatchAttempts();
     Match p = GameManager.getMatch();
-    if (p.getInGame()) {
-      SetDifficultyBoundary.alreadyInGame();
-      return;
-    }
     if (p.getAttempts(difficultyToModify) == attempts) {
       SetDifficultyBoundary.sameAttempts();
       return;
