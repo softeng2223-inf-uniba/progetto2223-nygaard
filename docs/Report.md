@@ -339,7 +339,7 @@ Di seguito, i ***Requisiti Funzionali*** del progetto, facenti parte della *User
 
 Il funzionamento del software richiede:
 
-- **RNF1**: il container docker dell’app deve essere eseguito da terminali che supportano Unicode con encoding UTF-8 o UTF-16.
+- ***RNF1***: il container docker dell’app deve essere eseguito da terminali che supportano Unicode con encoding UTF-8 o UTF-16.
 
 <br/>
 
