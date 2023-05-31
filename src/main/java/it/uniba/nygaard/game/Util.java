@@ -11,10 +11,6 @@ public final class Util {
   public static final int HEADING_EDGE_WIDTH = 19;
   public static final int COLUMNS_EDGE_WIDTH = 13;
   public static final int ROWS_EDGE_WIDTH = 8;
-  public static final int MIN_ROWS = 1;
-  public static final int MAX_ROWS = 10;
-  public static final char MIN_COLUMN = 'A';
-  public static final char MAX_COLUMN = 'J';
   public static final int MIN_SHIP = 1;
   public static final int MAX_SHIP = 10;
   public static final int AIRCRAFT_CARRIER_HP = 5;
@@ -57,6 +53,15 @@ public final class Util {
   public static final int STANDARD_GRID_SIZE = 10;
   public static final int LARGE_GRID_SIZE = 18;
   public static final int EXTRA_LARGE_GRID_SIZE = 26;
+
+
+  public static final int MIN_ROWS = 1;
+  public static char MIN_COLUMN = 'A';
+
+  public static int maxRows = 10;
+  public static char maxColumn = 'J';
+
+
 
 
   /**

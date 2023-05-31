@@ -132,8 +132,8 @@ public final class Match {
     }
 
     // TODO: Creazione delle griglie con assegnazione delle dimensioni
-    this.defenseGrid = new CellsGrid(Util.MAX_ROWS);
-    this.attackGrid = new CharactersGrid(Util.MAX_ROWS);
+    this.defenseGrid = new CellsGrid(Util.maxRows);
+    this.attackGrid = new CharactersGrid(Util.maxRows);
     maxTime = Util.DEFAULT_TIME;
   }
   /**
@@ -317,8 +317,8 @@ public final class Match {
       } else {
         direction = Util.HORIZONTAL;
       }
-      coord.setRow(rnd.nextInt(Util.MAX_ROWS) + 1);
-      coord.setColumn((char) (rnd.nextInt(Util.MAX_COLUMN - Util.MIN_COLUMN + 1) + Util.MIN_COLUMN));
+      coord.setRow(rnd.nextInt(Util.maxRows) + 1);
+      coord.setColumn((char) (rnd.nextInt(Util.maxColumn - Util.MIN_COLUMN + 1) + Util.MIN_COLUMN));
       this.ships[i - 1].setDirection(direction);
       this.ships[i - 1].setCoord(coord);
       if (this.ships[i - 1].outOfMap()) {
@@ -372,8 +372,8 @@ public final class Match {
    * @param i Indice della nave da rimuovere.
    */
   private void removeShip(final int i) {
-    for (int j = Util.MIN_ROWS; j <= Util.MAX_ROWS; j++) {
-      for (int k = Util.MIN_ROWS; k <= Util.MAX_ROWS; k++) {
+    for (int j = Util.MIN_ROWS; j <= Util.maxRows; j++) {
+      for (int k = Util.MIN_ROWS; k <= Util.maxRows; k++) {
         if (defenseGrid.getCellShipIndex(j - 1, k - 1) == i) {
           defenseGrid.setCellCharacter(j - 1, k - 1, Util.SEA_CHARACTER);
           defenseGrid.setCellShipIndex(j - 1, k - 1, Util.SEA_INDEX);

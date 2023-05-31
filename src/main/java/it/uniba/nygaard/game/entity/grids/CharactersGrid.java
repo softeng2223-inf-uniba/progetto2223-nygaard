@@ -81,17 +81,17 @@ public final class CharactersGrid extends Grid {
     str += "-".repeat(Util.HEADING_EDGE_WIDTH);
     str += "\n\n";
     str += " ".repeat(Util.COLUMNS_EDGE_WIDTH);
-    for (char y = Util.MIN_COLUMN; y <= Util.MAX_COLUMN; y++) {
+    for (char y = Util.MIN_COLUMN; y <= Util.maxColumn; y++) {
       str += y + " ";
     }
     str += "\n\n";
-    for (int x = Util.MIN_ROWS; x <= Util.MAX_ROWS; x++) {
+    for (int x = Util.MIN_ROWS; x <= Util.maxRows; x++) {
       str += " ".repeat(Util.ROWS_EDGE_WIDTH);
       if (x < Util.FIRST_TWO_DIGITS) {
         str += " ";
       }
       str += x + "   ";
-      for (char y = Util.MIN_COLUMN; y <= Util.MAX_COLUMN; y++) {
+      for (char y = Util.MIN_COLUMN; y <= Util.maxColumn; y++) {
         c = this.getCharacter(x - 1, y - Util.MIN_COLUMN);
         switch (c) {
           case 'X':
@@ -112,7 +112,7 @@ public final class CharactersGrid extends Grid {
     }
     str += "\n";
     str += " ".repeat(Util.COLUMNS_EDGE_WIDTH);
-    for (char y = Util.MIN_COLUMN; y <= Util.MAX_COLUMN; y++) {
+    for (char y = Util.MIN_COLUMN; y <= Util.maxColumn; y++) {
       str += y + " ";
     }
     str += " ".repeat(Util.COLUMNS_EDGE_WIDTH - 1);

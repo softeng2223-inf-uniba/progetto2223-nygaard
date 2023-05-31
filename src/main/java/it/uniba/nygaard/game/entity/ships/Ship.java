@@ -140,9 +140,9 @@ public abstract class Ship {
    */
   public boolean outOfMap() {
     if (this.direction == Util.VERTICAL) {
-      return this.coord.getRow() + this.hp > Util.MAX_ROWS;
+      return this.coord.getRow() + this.hp > Util.maxRows;
     } else {
-      return this.coord.getColumn() + this.hp > Util.MAX_COLUMN;
+      return this.coord.getColumn() + this.hp > Util.maxColumn;
     }
   }
 
@@ -161,11 +161,11 @@ public abstract class Ship {
     int endx;
     int endy;
     if (this.direction == Util.VERTICAL) {
-      endx = Math.min(this.coord.getRow() + this.hp - 1, Util.MAX_ROWS - 1);
-      endy = Math.min(this.coord.getColumn() - Util.MIN_COLUMN + 1, Util.MAX_ROWS - 1);
+      endx = Math.min(this.coord.getRow() + this.hp - 1, Util.maxRows - 1);
+      endy = Math.min(this.coord.getColumn() - Util.MIN_COLUMN + 1, Util.maxRows - 1);
     } else {
-      endx = Math.min(this.coord.getRow(), Util.MAX_ROWS - 1);
-      endy = Math.min(this.coord.getColumn() - Util.MIN_COLUMN + this.hp, Util.MAX_ROWS - 1);
+      endx = Math.min(this.coord.getRow(), Util.maxRows - 1);
+      endy = Math.min(this.coord.getColumn() - Util.MIN_COLUMN + this.hp, Util.maxRows - 1);
     }
     for (int i = startx; i <= endx; i++) {
       for (int j = starty; j <= endy; j++) {
