@@ -60,9 +60,11 @@ public final class HelpBoundary {
             + Util.ITALIC + Util.CYAN + "    * /mostralivello       " + Util.RESET
             + "Mostra il livello della partita\n"
             + Util.ITALIC + Util.CYAN + "    * /mostratentativi     " + Util.RESET
-            + "Mostra il numero di tentativi effettuati, il numero \n"
-            + "                           di tentativi falliti e il numero massimo"
-            + " di tentativi falliti\n"
+            + "In base allo stato del gioco, il comando si comporta nei seguenti modi: \n"
+            + "                             - Se sei in partita mostra il numero di tentativi effettuati, il numero\n"
+            + "                               di tentativi falliti e il numero massimo\n"
+            + "                             - Se non sei in partita mostra il numero massimo di tentativi "
+            + "falliti effettuati\n"
             + Util.ITALIC + Util.CYAN + "    * /mostragriglia       " + Util.RESET
             + "Mostra la griglia contenente le navi affondate e le parti di \n"
             + "                           navi colpite ma non affondate\n"
