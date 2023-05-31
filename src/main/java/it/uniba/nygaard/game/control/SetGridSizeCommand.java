@@ -1,5 +1,7 @@
 package it.uniba.nygaard.game.control;
 
+import it.uniba.nygaard.game.boundary.GridSizeBoundary;
+
 /**
  * << Control >>
  *
@@ -19,15 +21,16 @@ final public class SetGridSizeCommand extends Command {
 
     void executeCommand(String[] command) {
         if (GameManager.getMatch().getInGame()) {
-            //TODO: Sei in game, quindi non puoi cambiare le dimensioni della griglia
+            GridSizeBoundary.inGameError();
             return;
         }
 
         if (command.length > getParamNumber() + 1) {
-            //TODO: Il comando non accetta parametri
+            GridSizeBoundary.tooManyArgs();
             return;
         }
 
         //TODO: Imposta dimensioni
+        GridSizeBoundary.operationDone();
     }
 }
