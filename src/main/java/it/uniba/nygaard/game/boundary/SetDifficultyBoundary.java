@@ -58,7 +58,6 @@ public final class SetDifficultyBoundary {
      * <p>
      *     Stampa il messaggio relativo alla conferma del cambio di difficoltà.
      * </p>
-     * @param p Partita
      * @param newDifficulty Nuova difficoltà
      * @return Risposta dell'utente
      */
