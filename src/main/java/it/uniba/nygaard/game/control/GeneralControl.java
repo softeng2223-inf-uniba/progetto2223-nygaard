@@ -67,6 +67,9 @@ public final class GeneralControl {
     availableCommands.put("/tempo", SetTimeCommand.getInstance());
     availableCommands.put("/mostratempo", ShowTimeCommand.getInstance());
     availableCommands.put("/mostratentativi", ShowAttemptsCommand.getInstance());
+    availableCommands.put("/standard", SetGridSizeCommand.getInstance());
+    availableCommands.put("/large", SetGridSizeCommand.getInstance());
+    availableCommands.put("/extralarge", SetGridSizeCommand.getInstance());
     ParamControl.initUI();
     while (!shutDown) {
       String[] command = InputBoundary.getCommand().trim().replaceAll(" +", " ").split(" ");
