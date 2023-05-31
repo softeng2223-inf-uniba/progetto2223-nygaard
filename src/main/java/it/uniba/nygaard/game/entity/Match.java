@@ -44,12 +44,12 @@ public final class Match {
    * </p>
    */
   private final String[] difficultyNames;
-  /**
-   * <h3> attempts </h3>
-   * <p>
-   * Tentativi per ogni difficoltà.
-   * </p>
-   */
+    /**
+     * <h3> attempts </h3>
+     * <p>
+     *     Tentativi per ogni difficoltà.
+     * </p>
+     */
   private final int[] attempts;
   private final int failedAttempts;
   private final int usedAttempts;
@@ -62,8 +62,8 @@ public final class Match {
    * @see Ship
    */
   private final Ship[] ships;
-  /**
-   * <h3> defenseGrid </h3>
+    /**
+     * <h3> defenseGrid </h3>
      * <p>
      *     Griglia di difesa.
      * </p>
@@ -161,17 +161,30 @@ public final class Match {
   public String getDifficultyNames(final int index) {
     return this.difficultyNames[index];
   }
-    /**
-     * <h3> getAttempts </h3>
-     * <p>
-     *     Restituisce il numero di tentativi per ogni difficoltà.
-     * </p>
-     * @param index Indice dei tentativi.
-     * @return attempts Tentativi per ogni difficoltà.
-     */
-    public int getAttempts(final int index) {
-      return this.attempts[index];
-    }
+
+  /**
+   * <h3> getAttempts </h3>
+   * <p>
+   *     Restituisce il numero di tentativi per ogni difficoltà.
+   * </p>
+   * @param index Indice dei tentativi.
+   * @return attempts Tentativi per ogni difficoltà.
+   */
+  public int getAttempts(final int index) {
+    return this.attempts[index];
+  }
+
+  /**
+   * <h3> setAttempts </h3>
+   * <p>
+   *     Imposta il numero di tentativi per una specifica difficoltà.
+   * </p>
+   * @param index Indice dei tentativi
+   * @param value Nuovo numero di tentativi falliti per la difficoltà.
+   */
+  public void setAttempts(final int index, final int value) {
+    this.attempts[index] = value;
+  }
 
   public int getFailedAttempts() {
     return this.failedAttempts;
@@ -181,14 +194,13 @@ public final class Match {
     return this.usedAttempts;
   }
 
-  /**
-   * <h3> getDefenseGrid </h3>
-   * <p>
-   * Restituisce la griglia di difesa della partita.
-   * </p>
-   *
-   * @return defenseGrid Griglia di difesa della partita.
-   */
+    /**
+     * <h3> getDefenseGrid </h3>
+     * <p>
+     *     Restituisce la griglia di difesa della partita.
+     * </p>
+     * @return defenseGrid Griglia di difesa della partita.
+     */
   public String getDefenseGrid() {
     return this.defenseGrid.toString();
   }
