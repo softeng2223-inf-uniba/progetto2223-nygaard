@@ -50,6 +50,10 @@ public final class CharactersGrid extends Grid {
     return grid[row][column];
   }
 
+  public void setCharacter(final int row, final int column, final char character) {
+    grid[row][column]=character;
+  }
+
   /**
    * <h3> toString </h3>
    * <p>
