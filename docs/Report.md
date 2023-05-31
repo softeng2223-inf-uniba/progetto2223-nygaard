@@ -93,7 +93,7 @@ con **StarUML**.* (https://staruml.io/)
 
 Di seguito, i ***Requisiti Funzionali*** del progetto, facenti parte della *User Story*.
 
-- *mostrare l'help con elenco comandi e regole del gioco*
+- ***RF1**: mostrare l'help con elenco comandi e regole del gioco*
 
   Come giocatore voglio mostrare l'help con elenco comandi.
 
@@ -112,7 +112,7 @@ Di seguito, i ***Requisiti Funzionali*** del progetto, facenti parte della *User
 
 <br/>
 
-- *chiudere il gioco*
+- ***RF2**: chiudere il gioco*
 
   Come giocatore voglio chiudere il gioco.
 
@@ -126,7 +126,7 @@ Di seguito, i ***Requisiti Funzionali*** del progetto, facenti parte della *User
 
 <br/>
 
-- *impostare il livello di gioco per variare il numero massimo di tentativi falliti*
+- ***RF3**: impostare il livello di gioco per variare il numero massimo di tentativi falliti*
 
   Come giocatore voglio impostare il livello di gioco per variare il numero massimo di tentativi sbagliati.
 
@@ -145,7 +145,7 @@ Di seguito, i ***Requisiti Funzionali*** del progetto, facenti parte della *User
 
 <br/>
 
-- *mostrare i tipi di nave e il numero*
+- ***RF4**: mostrare i tipi di nave e il numero*
 
   Come giocatore voglio mostrare i tipi di nave e il numero
   
@@ -160,7 +160,7 @@ Di seguito, i ***Requisiti Funzionali*** del progetto, facenti parte della *User
 
 <br/>
 
-- *iniziare una nuova partita*
+- ***RF5**: iniziare una nuova partita*
 
   Come giocatore voglio iniziare una nuova partita
 
@@ -172,7 +172,7 @@ Di seguito, i ***Requisiti Funzionali*** del progetto, facenti parte della *User
 
 <br/>
 
-- *svelare la griglia con le navi posizionate*
+- ***RF6**: svelare la griglia con le navi posizionate*
 
   Come giocatore voglio svelare la griglia con le navi posizionate
 
@@ -185,7 +185,7 @@ Di seguito, i ***Requisiti Funzionali*** del progetto, facenti parte della *User
 <br/>
 
 
-- *impostare il numero di tentativi per difficoltà*
+- ***RF7**: impostare il numero di tentativi per difficoltà*
 
   Come giocatore voglio impostare il numero massimo di tentativi falliti per livello di gioco 
   
@@ -205,7 +205,7 @@ Di seguito, i ***Requisiti Funzionali*** del progetto, facenti parte della *User
 
 <br/>
 
-- *impostare direttamente il numero di tentativi*
+- ***RF8**: impostare direttamente il numero di tentativi*
 
   Come giocatore voglio impostare direttamente il numero massimo di tentativi che si possono fallire
 
@@ -217,7 +217,7 @@ Di seguito, i ***Requisiti Funzionali*** del progetto, facenti parte della *User
 
 <br/>
 
-- *mostrare i tentativi*
+- ***RF9**: mostrare i tentativi*
 
   Come giocatore voglio mostrare il numero massimo di tentativi falliti
 
@@ -229,7 +229,7 @@ Di seguito, i ***Requisiti Funzionali*** del progetto, facenti parte della *User
 
 <br/>
 
-- *impostare la dimensione della griglia*
+- ***RF10**: impostare la dimensione della griglia*
 
   Come giocatore voglio impostare la taglia della griglia
 
@@ -249,7 +249,7 @@ Di seguito, i ***Requisiti Funzionali*** del progetto, facenti parte della *User
 
 <br/>
 
-- *impostare il tempo di gioco*
+- ***RF11**: impostare il tempo di gioco*
 
   Come giocatore voglio impostare il tempo di gioco
 
@@ -261,7 +261,7 @@ Di seguito, i ***Requisiti Funzionali*** del progetto, facenti parte della *User
 
 <br/>
 
-- *mostrare il tempo di gioco*
+- ***RF12**: mostrare il tempo di gioco*
 
   Come giocatore voglio mostrare il tempo di gioco
 
@@ -273,7 +273,7 @@ Di seguito, i ***Requisiti Funzionali*** del progetto, facenti parte della *User
 
 <br/>
 
-- *effettuare un colpo*
+- ***RF13**: effettuare un colpo*
 
   Come giocatore voglio effettuare un tentativo per colpire una nave
 
@@ -295,7 +295,7 @@ Di seguito, i ***Requisiti Funzionali*** del progetto, facenti parte della *User
 
 <br/>
 
-- *mostrare la griglia di conoscenza*
+- ***RF14**: mostrare la griglia di conoscenza*
 
   Come giocatore voglio mostrare la griglia con le navi colpite e affondate
 
@@ -305,7 +305,9 @@ Di seguito, i ***Requisiti Funzionali*** del progetto, facenti parte della *User
 
    - l’applicazione risponde visualizzando, una griglia delle dimensioni impostate, con le navi affondate e le sole parti già colpite delle navi non affondate.
 
-- *mostrare i tentativi effettuati*
+<br/>
+
+- ***RF15**: mostrare i tentativi effettuati*
 
   Come giocatore voglio mostrare i tentativi effettuati
 
@@ -317,7 +319,7 @@ Di seguito, i ***Requisiti Funzionali*** del progetto, facenti parte della *User
 
 <br/>
 
-- *abbandonare la partita*
+- ***RF16**: abbandonare la partita*
 
   Come giocatore voglio abbandonare la partita
 
@@ -337,7 +339,7 @@ Di seguito, i ***Requisiti Funzionali*** del progetto, facenti parte della *User
 
 Il funzionamento del software richiede:
 
-- il container docker dell’app deve essere eseguito da terminali che supportano Unicode con encoding UTF-8 o UTF-16.
+- **RNF1**: il container docker dell’app deve essere eseguito da terminali che supportano Unicode con encoding UTF-8 o UTF-16.
 
 <br/>
 
