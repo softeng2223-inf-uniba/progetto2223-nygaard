@@ -103,8 +103,8 @@ public final class Match {
   public Match() {
     this.inGame = false;
     this.difficulty = Util.DIFFICULTY_MEDIUM;
-    this.difficultyNames = new String[]{Util.EASY_NAME, Util.MEDIUM_NAME, Util.HARD_NAME, Util.CUSTOM_NAME};
-    this.attempts = new int[]{Util.EASY_ATTEMPTS, Util.MEDIUM_ATTEMPTS, Util.HARD_ATTEMPTS, Util.CUSTOM_ATTEMPTS};
+    this.difficultyNames = new String[]{Util.EASY_NAME, Util.MEDIUM_NAME, Util.HARD_NAME};
+    this.attempts = new int[]{Util.EASY_ATTEMPTS, Util.MEDIUM_ATTEMPTS, Util.HARD_ATTEMPTS};
     this.failedAttempts = 0;
     this.usedAttempts = 0;
     this.ships = new Ship[Util.MAX_SHIP];
