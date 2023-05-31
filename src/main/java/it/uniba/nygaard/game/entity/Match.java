@@ -128,8 +128,8 @@ public final class Match {
       i++;
     }
 
-    this.defenseGrid = new CellsGrid(Util.maxRows);
-    this.attackGrid = new CharactersGrid(Util.maxRows);
+    this.defenseGrid = new CellsGrid(Util.STANDARD_GRID_SIZE);
+    this.attackGrid = new CharactersGrid(Util.STANDARD_GRID_SIZE);
     maxTime = Util.DEFAULT_TIME;
   }
   /**
