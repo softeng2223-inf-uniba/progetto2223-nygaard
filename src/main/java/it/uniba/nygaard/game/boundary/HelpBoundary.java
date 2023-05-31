@@ -58,7 +58,6 @@ public final class HelpBoundary {
         return mainCommands;
     }
 
-
     private static String subCommandsDifficulty() {
         String subDifficulty = Util.YELLOW
             + Util.BOLD + "> DIFFICOLTA' PERSONALIZZATE\n" + Util.RESET
@@ -78,7 +77,6 @@ public final class HelpBoundary {
         return subDifficulty;
     }
 
-
     private static String subCommandsGrid() {
         String subGrid = Util.YELLOW
             + Util.BOLD + "> GRIGLIA PERSONALIZZATA\n" + Util.RESET
@@ -90,5 +88,9 @@ public final class HelpBoundary {
             + "Imposta una griglia 26x26 \n";
 
         return subGrid;
+    }
+
+    private static String subCommandsTime() {
+        return "";
     }
 }
