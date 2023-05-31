@@ -295,6 +295,16 @@ Di seguito, i ***Requisiti Funzionali*** del progetto, facenti parte della *User
 
 <br/>
 
+- *mostrare la griglia di conoscenza*
+
+  Come giocatore voglio mostrare la griglia con le navi colpite e affondate
+
+  **Criteri di accettazione**
+
+  Al comando ```/mostragriglia```
+
+   - l’applicazione risponde visualizzando, una griglia delle dimensioni impostate, con le navi affondate e le sole parti già colpite delle navi non affondate.
+
 ## 3.2 Requisiti non Funzionali
 
 Il funzionamento del software richiede:
