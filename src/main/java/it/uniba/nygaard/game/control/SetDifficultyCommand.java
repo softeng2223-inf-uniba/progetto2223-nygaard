@@ -52,5 +52,81 @@ final class SetDifficultyCommand extends Command {
    * </p>
    * @param command Comando da eseguire.
    */
-  public void executeCommand(final String[] command) {}
+  public void executeCommand(final String[] command) {
+    if (invalidNumber(command)) {
+      return;
+    }
+
+    int difficultyInvolved = command[0].equals("/facile") ? Util.DIFFICULTY_EASY
+            : command[0].equals("/medio") ? Util.DIFFICULTY_MEDIUM
+            : Util.DIFFICULTY_HARD;
+
+    if (command.length == 1) {
+      GameManager.setMatchDifficulty(difficultyInvolved);
+      setNewMatchDifficulty();
+    } else {
+      String regex = "^[1-9][0-9]+$";
+      Pattern pattern = Pattern.compile(regex);
+      Matcher matcher = pattern.matcher(command[1]);
+
+      if (matcher.matches()) {
+        GameManager.setMatchAttempts(Integer.parseInt(command[1]));
+        setNewDiffAttempts(difficultyInvolved);
+      } else {
+        SetDifficultyBoundary.notValidChoice();
+      }
+    }
+  }
+
+  /**
+   * <h3> setDifficulty </h3>
+   * <p>
+   *     Imposta la difficoltà se questa non è già impostata,
+   *     altrimenti chiede all'utente se vuole cambiare difficoltà.
+   * </p>
+   */
+  private void setNewMatchDifficulty() {
+    int actualDifficulty = GameManager.getMatchDifficulty();
+    Match p = GameManager.getMatch();
+    if (p.getInGame()) {
+      SetDifficultyBoundary.alreadyInGame();
+      return;
+    }
+    if (p.getDifficulty() == actualDifficulty) {
+      SetDifficultyBoundary.sameDifficulty();
+      return;
+    }
+    if (p.getDifficulty() != Util.DIFFICULTY_NOT_SETTED) {
+      String choice;
+      do {
+        choice = SetDifficultyBoundary.ask(p, actualDifficulty);
+        if (!choice.equals("n") && !choice.equals("y")) {
+          SetDifficultyBoundary.notValidChoice();
+        }
+      }
+      while (!choice.equals("y") && !choice.equals("n"));
+      if (choice.equals("n")) {
+        SetDifficultyBoundary.operationCancelled();
+        return;
+      }
+    }
+    p.setDifficulty(actualDifficulty);
+    SetDifficultyBoundary.operationDone();
+  }
+
+  private void setNewDiffAttempts(final int difficultyToModify) {
+    int attempts = GameManager.getMatchAttempts();
+    Match p = GameManager.getMatch();
+    if (p.getInGame()) {
+      SetDifficultyBoundary.alreadyInGame();
+      return;
+    }
+    if (p.getAttempts(difficultyToModify) == attempts) {
+      SetDifficultyBoundary.sameAttempts();
+      return;
+    }
+    p.setAttempts(difficultyToModify, attempts);
+    SetDifficultyBoundary.operationDone();
+  }
 }
+
