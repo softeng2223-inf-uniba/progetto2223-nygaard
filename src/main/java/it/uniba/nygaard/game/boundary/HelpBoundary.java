@@ -49,6 +49,9 @@ public final class HelpBoundary {
             + "Imposta la difficolta' della partita a \"Difficile\"\n"
             + Util.ITALIC + Util.CYAN + "    * /mostralivello       " + Util.RESET
             + "Mostra il livello della partita\n"
+            + Util.ITALIC + Util.CYAN + "    * /mostratentativi     " + Util.RESET
+            + "Mostra il numero di tentativi effettuati, il numero \n"
+            + "                           di tentativi falliti e il numero massimo di tentativi falliti\n"
             + Util.ITALIC + Util.CYAN + "    * /mostranavi          " + Util.RESET
             + "Mostra le navi ancora in gioco e il loro numero\n"
             + Util.ITALIC + Util.CYAN + "    * /gioca               " + Util.RESET
