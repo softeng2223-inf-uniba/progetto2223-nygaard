@@ -51,7 +51,7 @@ public final class SetDifficultyBoundary {
      * </p>
      */
     public static void sameAttempts() {
-        System.out.println(Util.RED + "Questo numero di tentativi è uguale a quello giò impostato" + Util.RESET);
+        System.out.println(Util.RED + "Questo numero di tentativi è uguale a quello già impostato" + Util.RESET);
     }
     /**
      * <h3> ask </h3>
