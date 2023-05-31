@@ -3,7 +3,6 @@ package it.uniba.nygaard.game.entity;
 import it.uniba.nygaard.game.Util;
 import it.uniba.nygaard.game.entity.grids.CellsGrid;
 import it.uniba.nygaard.game.entity.grids.CharactersGrid;
-import it.uniba.nygaard.game.entity.grids.Grid;
 import it.uniba.nygaard.game.entity.ships.Coordinate;
 import it.uniba.nygaard.game.entity.ships.Destroyer;
 import it.uniba.nygaard.game.entity.ships.AircraftCarrier;
@@ -52,7 +51,19 @@ public final class Match {
    * </p>
    */
   private final int[] attempts;
+    /**
+     * <h3> failedAttempts </h3>
+     * <p>
+     * Tentativi falliti.
+     * </p>
+     */
   private final int failedAttempts;
+  /**
+   * <h3> usedAttempts </h3>
+   * <p>
+   * Tentativi usati.
+   * </p>
+   */
   private final int usedAttempts;
   /**
    * <h3> ships </h3>
@@ -93,6 +104,12 @@ public final class Match {
      * </p>
      */
   private long startTime;
+    /**
+     * <h3> gridSize </h3>
+     * <p>
+     *     Dimensione della griglia.
+     * </p>
+     */
   private int gridSize;
 
   /**
@@ -153,15 +170,33 @@ public final class Match {
   public int getDifficulty() {
     return this.difficulty;
   }
-
+  /**
+   * <h3> getGridSize </h3>
+   * <p>
+   *     Restituisce la dimensione delle griglie.
+   * </p>
+   * @return Dimensione delle griglie.
+   */
   public int getGridSize() {
     return this.gridSize;
   }
-
+  /**
+   * <h3> setGridSize </h3>
+   * <p>
+   *     Imposta la dimensione delle griglie.
+   * </p>
+   * @param newGridSize Dimensione delle griglie.
+   */
   public void setGridSize(final int newGridSize) {
     this.gridSize = newGridSize;
   }
-
+  /**
+   * <h3> resizeGrids </h3>
+   * <p>
+   *     Ridimensiona le griglie di gioco.
+   * </p>
+   * @param newSize Nuova dimensione delle griglie.
+   */
   public void resizeGrids(final int newSize) {
     this.defenseGrid = new CellsGrid(newSize);
     this.attackGrid = new CharactersGrid(newSize);
@@ -175,8 +210,6 @@ public final class Match {
     this.attackGrid.setHeadingEdgeWidth(newSize + Util.BORDER_ADDER);
     this.defenseGrid.setHeadingEdgeWidth(newSize + Util.BORDER_ADDER);
   }
-
-
   /**
    * <h3> getDifficultyNames </h3>
    * <p>
@@ -188,26 +221,37 @@ public final class Match {
   public String getDifficultyNames(final int index) {
     return this.difficultyNames[index];
   }
-    /**
-     * <h3> getAttempts </h3>
-     * <p>
-     *     Restituisce il numero di tentativi per ogni difficoltà.
-     * </p>
-     * @param index Indice dei tentativi.
-     * @return attempts Tentativi per ogni difficoltà.
-     */
-    public int getAttempts(final int index) {
-      return this.attempts[index];
-    }
-
+  /**
+   * <h3> getAttempts </h3>
+   * <p>
+   *     Restituisce il numero di tentativi per ogni difficoltà.
+   * </p>
+   * @param index Indice dei tentativi.
+   * @return attempts Tentativi per ogni difficoltà.
+   */
+  public int getAttempts(final int index) {
+    return this.attempts[index];
+  }
+  /**
+   * <h3> getFailedAttempts </h3>
+   * <p>
+   *     Restituisce il numero di tentativi falliti.
+   * </p>
+   * @return failedAttempts Tentativi falliti.
+   */
   public int getFailedAttempts() {
     return this.failedAttempts;
   }
-
+ /**
+  * <h3> getUsedAttempts </h3>
+  * <p>
+  *     Restituisce il numero di tentativi usati.
+  * </p>
+  * @return usedAttempts Tentativi usati.
+  */
   public int getUsedAttempts() {
     return this.usedAttempts;
   }
-
   /**
    * <h3> getDefenseGrid </h3>
    * <p>

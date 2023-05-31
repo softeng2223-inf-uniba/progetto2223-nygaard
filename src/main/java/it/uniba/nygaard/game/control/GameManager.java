@@ -25,9 +25,13 @@ public final class GameManager {
      * </p>
      */
     private static int nextDifficulty;
-
+    /**
+     * <h3> nextGridSize </h3>
+     * <p>
+     * Dimensione della griglia della prossima partita.
+     * </p>
+     */
     private static int nextGridSize;
-
     /**
      * <h3> args </h3>
      * <p>
@@ -43,7 +47,6 @@ public final class GameManager {
      */
     private GameManager() {
     }
-
     /**
      * <h3> getMatch </h3>
      * <p>
@@ -54,7 +57,6 @@ public final class GameManager {
     static Match getMatch() {
         return match;
     }
-
     /**
      * <h3> setMatch </h3>
      * <p>
@@ -65,7 +67,6 @@ public final class GameManager {
     static void setMatch(final Match newMatch) {
         GameManager.match = newMatch;
     }
-
     /**
      * <h3> getNextDifficulty </h3>
      * <p>
@@ -76,11 +77,6 @@ public final class GameManager {
     static int getGameDifficulty() {
         return nextDifficulty;
     }
-
-    static int getGridSize() {
-        return nextGridSize;
-    }
-
     /**
      * <h3> setNextDifficulty </h3>
      * <p>
@@ -91,13 +87,16 @@ public final class GameManager {
     static void setNextDifficulty(final int newNextDifficulty) {
         GameManager.nextDifficulty = newNextDifficulty;
     }
-
-
+    /**
+     * <h3> setNextGridSizeName </h3>
+     * <p>
+     * Imposta la difficoltà della prossima partita.
+     * </p>
+     * @param newNextDifficulty Difficoltà della prossima partita.
+     */
     static void setNextGridSizeName(final int newNextDifficulty) {
         GameManager.nextGridSize = newNextDifficulty;
     }
-
-
     /**
      * <h3> getArgs </h3>
      * <p>
@@ -139,12 +138,16 @@ public final class GameManager {
     public static String newDifficultyName(final int newDifficulty) {
         return match.getDifficultyNames(newDifficulty);
     }
-
-
-    public static int currentGridSizeName() {
+    /**
+     * <h3> currentGridSize </h3>
+     * <p>
+     * Restituisce le dimensioni attuali della griglia.
+     * </p>
+     * @return dimensione attuale.
+     */
+    public static int currentGridSize() {
         return match.getGridSize();
     }
-
     /**
      * <h3> getMatchTime </h3>
      * <p>

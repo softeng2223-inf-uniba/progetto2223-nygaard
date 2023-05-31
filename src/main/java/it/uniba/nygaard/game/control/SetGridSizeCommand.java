@@ -6,21 +6,42 @@ import it.uniba.nygaard.game.entity.Match;
 
 /**
  * << Control >>
- *
+ * <h2> SetGridSizeCommand </h2>
+ * <p>
+ *     Classe che implementa il comando per impostare la dimensione della griglia.
+ *     Il comando è disponibile solo se non si è in partita.
+ *  </p>
+ * @see Command
  */
 public final class SetGridSizeCommand extends Command {
-
+    /**
+     * Istanza della classe.
+     */
     private static SetGridSizeCommand instance = new SetGridSizeCommand();
-
+    /**
+     * <h2> Costruttore </h2>
+     * Costruttore della classe SetGridSizeCommand.
+     */
     private SetGridSizeCommand() {
         setParamNumber(1);
     }
-
+    /**
+     * <h2> Metodo getInstance() </h2>
+     * <p>
+     *     Ritorna l'istanza della classe.
+     * </p>
+     * @return Istanza della classe
+     */
     public static SetGridSizeCommand getInstance() {
         return instance;
     }
-
-
+    /**
+     * <h2> Metodo executeCommand() </h2>
+     * <p>
+     *     Esegue il comando per impostare la dimensione della griglia.
+     * </p>
+     * @param command Comando da eseguire
+     */
     void executeCommand(final String[] command) {
         if (GameManager.getMatch().getInGame()) {
             GridSizeBoundary.inGameError();
@@ -59,7 +80,14 @@ public final class SetGridSizeCommand extends Command {
         p.resizeGrids(sizeCommand);
         GridSizeBoundary.operationDone();
     }
-
+    /**
+     * <h2> Metodo getMappedCommand() </h2>
+     * <p>
+     *     Ritorna la dimensione della griglia mappata al comando.
+     * </p>
+     * @param command Comando da mappare
+     * @return griglia mappata al comando
+     */
     private int getMappedCommand(final String command) {
         int size = 0;
 
@@ -80,6 +108,4 @@ public final class SetGridSizeCommand extends Command {
 
         return size;
     }
-
-
 }
