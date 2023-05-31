@@ -261,6 +261,16 @@ Di seguito, i ***Requisiti Funzionali*** del progetto, facenti parte della *User
 
 <br/>
 
+- *mostrare il tempo di gioco*
+
+  Come giocatore voglio mostrare il tempo di gioco
+
+  **Criteri di accettazione**
+
+  Al comando ```/mostratempo```
+
+  - l’applicazione risponde visualizzando il numero di minuti trascorsi nel gioco e il numero di minuti ancora disponibili 
+
 ## 3.2 Requisiti non Funzionali
 
 Il funzionamento del software richiede:
