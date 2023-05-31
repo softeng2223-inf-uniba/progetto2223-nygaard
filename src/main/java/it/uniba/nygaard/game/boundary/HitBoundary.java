@@ -11,4 +11,8 @@ public class HitBoundary {
         System.out.println(Util.RED + "Non puoi eseguire colpi se non sei in una partita!" + Util.RESET);
     }
 
+    public static void invalidCoordinates(){
+        System.out.println(Util.RED + "Coordinate non valide" + Util.RESET);
+    }
+
 }
