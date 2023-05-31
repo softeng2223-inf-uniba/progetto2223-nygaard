@@ -13,7 +13,7 @@ public final class SetGridSizeCommand extends Command {
     private static SetGridSizeCommand instance = new SetGridSizeCommand();
 
     private SetGridSizeCommand() {
-        setParamNumber(0);
+        setParamNumber(1);
     }
 
     public static SetGridSizeCommand getInstance() {
@@ -57,7 +57,6 @@ public final class SetGridSizeCommand extends Command {
 
         p.setGridSize(sizeCommand);
         p.resizeGrids(sizeCommand);
-        setNewUpperLimit(sizeCommand);
         GridSizeBoundary.operationDone();
     }
 
@@ -83,9 +82,4 @@ public final class SetGridSizeCommand extends Command {
     }
 
 
-    private void setNewUpperLimit(final int newUpperLimit) {
-        Util.maxRows = newUpperLimit;
-        Util.maxColumn = (char) (newUpperLimit + Util.INT_TO_CHAR);
-        Util.headingEdgeWidth = newUpperLimit + Util.BORDER_ADDER;
-    }
 }

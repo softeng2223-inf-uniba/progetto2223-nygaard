@@ -135,22 +135,25 @@ public final class CellsGrid extends Grid {
   public String toString() {
     String str = "";
     char c;
-    str += "-".repeat(Util.headingEdgeWidth);
+
+    int headingEdgeWidth = this.getMaxRows() + Util.BORDER_ADDER;
+
+    str += "-".repeat(headingEdgeWidth);
     str += Util.PURPLE + Util.BOLD + "Difesa" + Util.RESET;
-    str += "-".repeat(Util.headingEdgeWidth);
+    str += "-".repeat(headingEdgeWidth);
     str += "\n\n";
     str += " ".repeat(Util.COLUMNS_EDGE_WIDTH);
-    for (char y = Util.MIN_COLUMN; y <= Util.maxColumn; y++) {
+    for (char y = Util.MIN_COLUMN; y <= this.getMaxColumn(); y++) {
       str += y + " ";
     }
     str += "\n\n";
-    for (int x = Util.MIN_ROWS; x <= Util.maxRows; x++) {
+    for (int x = Util.MIN_ROWS; x <= getMaxRows(); x++) {
       str += " ".repeat(Util.ROWS_EDGE_WIDTH);
       if (x < Util.FIRST_TWO_DIGITS) {
         str += " ";
       }
       str += x + "   ";
-      for (char y = Util.MIN_COLUMN; y <= Util.maxColumn; y++) {
+      for (char y = Util.MIN_COLUMN; y <= this.getMaxColumn(); y++) {
         c = this.getCellCharacter(x - 1, y - Util.MIN_COLUMN);
         switch (c) {
           case 'X':
@@ -174,14 +177,14 @@ public final class CellsGrid extends Grid {
     }
     str += "\n";
     str += " ".repeat(Util.COLUMNS_EDGE_WIDTH);
-    for (char y = Util.MIN_COLUMN; y <= Util.maxColumn; y++) {
+    for (char y = Util.MIN_COLUMN; y <= this.getMaxColumn(); y++) {
       str += y + " ";
     }
     str += " ".repeat(Util.COLUMNS_EDGE_WIDTH - 1);
     str += "\n\n";
-    str += "-".repeat(Util.headingEdgeWidth);
+    str += "-".repeat(headingEdgeWidth);
     str += Util.PURPLE + Util.BOLD + "Difesa" + Util.RESET;
-    str += "-".repeat(Util.headingEdgeWidth);
+    str += "-".repeat(headingEdgeWidth);
     str += "\n";
     return str;
   }

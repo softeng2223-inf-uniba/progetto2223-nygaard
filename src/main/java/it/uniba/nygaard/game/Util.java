@@ -61,11 +61,6 @@ public final class Util {
   public static final int BORDER_ADDER = 9;
 
 
-  public static int maxRows = 10;
-  public static char maxColumn = 'J';
-  public static int headingEdgeWidth = 19;
-
-
   /**
    * <h3> Costruttore </h3>
    * <p>

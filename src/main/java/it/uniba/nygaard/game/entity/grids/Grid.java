@@ -18,25 +18,10 @@ public abstract class Grid {
      */
   private int dimension;
 
-  public int getMaxRows() {
-    return maxRows;
-  }
-
-  public void setMaxRows(int maxRows) {
-    this.maxRows = maxRows;
-  }
-
-  public char getMaxColumn() {
-    return maxColumn;
-  }
-
-  public void setMaxColumn(char maxColumn) {
-    this.maxColumn = maxColumn;
-  }
-
   private int maxRows;
   private char maxColumn;
 
+  private int headingEdgeWidth;
 
   /**
    * <h3> Costruttore </h3>
@@ -48,8 +33,32 @@ public abstract class Grid {
    */
   Grid(final int newDimension) {
     this.dimension = newDimension;
-    this.maxRows = Util.STANDARD_GRID_SIZE;
-    this.maxColumn = 'J';
+    maxRows = Util.STANDARD_GRID_SIZE;
+    maxColumn = 'J';
+  }
+
+  public int getHeadingEdgeWidth() {
+    return headingEdgeWidth;
+  }
+
+  public void setHeadingEdgeWidth(int newHeadingEdgeWidth) {
+    this.headingEdgeWidth = newHeadingEdgeWidth;
+  }
+
+  public int getMaxRows() {
+    return maxRows;
+  }
+
+  public void setMaxRows(int newMaxRows) {
+    maxRows = newMaxRows;
+  }
+
+  public char getMaxColumn() {
+    return maxColumn;
+  }
+
+  public void setMaxColumn(char newMaxColumn) {
+    maxColumn = newMaxColumn;
   }
 
   /**

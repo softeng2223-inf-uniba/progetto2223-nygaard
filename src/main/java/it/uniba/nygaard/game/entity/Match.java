@@ -3,6 +3,7 @@ package it.uniba.nygaard.game.entity;
 import it.uniba.nygaard.game.Util;
 import it.uniba.nygaard.game.entity.grids.CellsGrid;
 import it.uniba.nygaard.game.entity.grids.CharactersGrid;
+import it.uniba.nygaard.game.entity.grids.Grid;
 import it.uniba.nygaard.game.entity.ships.Coordinate;
 import it.uniba.nygaard.game.entity.ships.Destroyer;
 import it.uniba.nygaard.game.entity.ships.AircraftCarrier;
@@ -164,6 +165,15 @@ public final class Match {
   public void resizeGrids(final int newSize) {
     this.defenseGrid = new CellsGrid(newSize);
     this.attackGrid = new CharactersGrid(newSize);
+
+    this.defenseGrid.setMaxColumn((char) (newSize + Util.INT_TO_CHAR));
+    this.attackGrid.setMaxColumn((char) (newSize + Util.INT_TO_CHAR));
+
+    this.defenseGrid.setMaxRows(newSize);
+    this.attackGrid.setMaxRows(newSize);
+
+    this.attackGrid.setHeadingEdgeWidth(newSize + Util.BORDER_ADDER);
+    this.defenseGrid.setHeadingEdgeWidth(newSize + Util.BORDER_ADDER);
   }
 
 
@@ -319,11 +329,11 @@ public final class Match {
       } else {
         direction = Util.HORIZONTAL;
       }
-      coord.setRow(rnd.nextInt(Util.maxRows) + 1);
-      coord.setColumn((char) (rnd.nextInt(Util.maxColumn - Util.MIN_COLUMN + 1) + Util.MIN_COLUMN));
+      coord.setRow(rnd.nextInt(this.attackGrid.getMaxRows()) + 1);
+      coord.setColumn((char) (rnd.nextInt(this.attackGrid.getMaxColumn() - Util.MIN_COLUMN + 1) + Util.MIN_COLUMN));
       this.ships[i - 1].setDirection(direction);
       this.ships[i - 1].setCoord(coord);
-      if (this.ships[i - 1].outOfMap()) {
+      if (this.ships[i - 1].outOfMap(this.defenseGrid)) {
         j--;
         continue;
       }
@@ -374,8 +384,8 @@ public final class Match {
    * @param i Indice della nave da rimuovere.
    */
   private void removeShip(final int i) {
-    for (int j = Util.MIN_ROWS; j <= Util.maxRows; j++) {
-      for (int k = Util.MIN_ROWS; k <= Util.maxRows; k++) {
+    for (int j = Util.MIN_ROWS; j <= this.attackGrid.getMaxRows(); j++) {
+      for (int k = Util.MIN_ROWS; k <= this.attackGrid.getMaxRows(); k++) {
         if (defenseGrid.getCellShipIndex(j - 1, k - 1) == i) {
           defenseGrid.setCellCharacter(j - 1, k - 1, Util.SEA_CHARACTER);
           defenseGrid.setCellShipIndex(j - 1, k - 1, Util.SEA_INDEX);
