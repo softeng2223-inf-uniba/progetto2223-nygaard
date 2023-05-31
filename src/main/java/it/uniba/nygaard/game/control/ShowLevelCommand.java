@@ -19,7 +19,7 @@ final class ShowLevelCommand extends Command {
    *     Istanza di ShowLevelCommand.
    * </p>
    */
-  private static ShowLevelCommand instance = new ShowLevelCommand();
+  private static final ShowLevelCommand instance = new ShowLevelCommand();
   /**
    * <h3> getInstance </h3>
    * <p>
@@ -52,30 +52,25 @@ final class ShowLevelCommand extends Command {
     Match p = GameManager.getMatch();
     String actualColor = Util.RESET;
     String s = "";
-    if (p.getDifficulty() != Util.DIFFICULTY_NOT_SETTED) {
-      s = "Livello di difficoltà scelto: " + Util.BOLD;
-      switch (p.getDifficultyNames(p.getDifficulty())) {
-        case Util.EASY_NAME -> {
-          actualColor = Util.GREEN;
-        }
-        case Util.MEDIUM_NAME -> {
-          actualColor = Util.YELLOW;
-        }
-        case Util.HARD_NAME -> {
-          actualColor = Util.RED;
-        }
-        default -> {
-          actualColor = Util.RESET;
-        }
+    s = "Livello di difficoltà scelto: " + Util.BOLD;
+    switch (p.getDifficultyNames(p.getDifficulty())) {
+      case Util.EASY_NAME -> {
+        actualColor = Util.GREEN;
       }
-      s += (actualColor);
-      s += p.getDifficultyNames(p.getDifficulty()) + Util.RESET + "\n"
-              + "Numero massimo di tentativi falliti: " + Util.BOLD;
-      s += actualColor + p.getAttempts(p.getDifficulty()) + Util.RESET;
-    } else {
-      s += Util.RED + "Difficoltà non ancora scelta\nPer scegliere la difficoltà utilizzare "
-              + "il comando /facile, /medio o /difficile" + Util.RESET;
+      case Util.MEDIUM_NAME -> {
+        actualColor = Util.YELLOW;
+      }
+      case Util.HARD_NAME -> {
+        actualColor = Util.RED;
+      }
+      default -> {
+        actualColor = Util.RESET;
+      }
     }
+    s += (actualColor);
+    s += p.getDifficultyNames(p.getDifficulty()) + Util.RESET + "\n"
+            + "Numero massimo di tentativi falliti: " + Util.BOLD;
+    s += actualColor + p.getAttempts(p.getDifficulty()) + Util.RESET;
     ShowLevelBoundary.printActualDifficulty(s);
   }
 }
