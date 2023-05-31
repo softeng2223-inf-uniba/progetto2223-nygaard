@@ -55,7 +55,11 @@ public final class Util {
 
 
   public static final int MIN_ROWS = 1;
-  public static char MIN_COLUMN = 'A';
+  public static final char MIN_COLUMN = 'A';
+
+  public static final int INT_TO_CHAR = 64;
+  public static final int BORDER_ADDER = 9;
+
 
   public static int maxRows = 10;
   public static char maxColumn = 'J';
