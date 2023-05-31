@@ -85,7 +85,7 @@ public final class SetGridSizeCommand extends Command {
 
     private void setNewUpperLimit(final int newUpperLimit) {
         Util.maxRows = newUpperLimit;
-        Util.maxColumn = (char) (newUpperLimit + 64);
-        Util.headingEdgeWidth = newUpperLimit + 9;
+        Util.maxColumn = (char) (newUpperLimit + Util.INT_TO_CHAR);
+        Util.headingEdgeWidth = newUpperLimit + Util.BORDER_ADDER;
     }
 }
