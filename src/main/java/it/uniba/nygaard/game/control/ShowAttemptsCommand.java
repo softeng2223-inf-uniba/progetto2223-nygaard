@@ -36,7 +36,7 @@ public final class ShowAttemptsCommand extends Command {
      *    Restituisce l'istanza di ShowAttemptsCommand.
      * </p>
      */
-    public static ShowAttemptsCommand getInstance() {
+    static ShowAttemptsCommand getInstance() {
         return instance;
     }
     /**
