@@ -148,7 +148,6 @@ public final class CellsGrid extends Grid {
     for (char y = Util.MIN_COLUMN; y <= this.getMaxColumn(); y++) {
       str += y + " ";
     }
-    str += " ".repeat(Util.COLUMNS_EDGE_WIDTH - 1);
     str += "\n\n";
     str += "-".repeat(headingEdgeWidth);
     str += Util.PURPLE + Util.BOLD + "Difesa" + Util.RESET;
