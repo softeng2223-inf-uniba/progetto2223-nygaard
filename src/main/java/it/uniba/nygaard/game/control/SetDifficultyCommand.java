@@ -53,7 +53,7 @@ final class SetDifficultyCommand extends Command {
    * @param command Comando da eseguire.
    */
   public void executeCommand(final String[] command) {
-    if (invalidNumber(command)) {
+    if (invalidNumber(command, " [<numero intero positivo>]")) {
       return;
     }
     if (GameManager.getMatch().getInGame()) {
