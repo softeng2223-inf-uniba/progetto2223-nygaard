@@ -18,19 +18,19 @@ public final class GameManager {
      */
     private static Match match;
     /**
-     * <h3> nextDifficulty </h3>
+     * <h3> matchDifficulty </h3>
      * <p>
      * Difficoltà della prossima partita.
      * </p>
      */
-    private static int nextDifficulty;
+    private static int matchDifficulty;
     /**
-     * <h3> nextAttempts </h3>
+     * <h3> matchAttempts </h3>
      * <p>
      * Numero di tentativi della prossima partita.
      * </p>
      */
-    private static int nextAttempts;
+    private static int matchAttempts;
     /**
      * <h3> args </h3>
      * <p>
