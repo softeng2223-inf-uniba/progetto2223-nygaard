@@ -56,6 +56,7 @@ final class StartMatchCommand extends Command {
       MatchBoundary.alreadyInGame();
       return;
     }
+    p.setStartTime(System.currentTimeMillis());
     p.setInGame(true);
     p.initializeShips(Util.MIN_SHIP);
     ShowGridBoundary.printGrid(p.getAttackGrid());
