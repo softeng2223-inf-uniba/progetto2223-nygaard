@@ -66,6 +66,7 @@ public final class GeneralControl {
     availableCommands.put("/help", HelpCommand.getInstance());
     availableCommands.put("/tempo", SetTimeCommand.getInstance());
     availableCommands.put("/mostratempo", ShowTimeCommand.getInstance());
+    availableCommands.put("/mostratentativi", ShowAttemptsCommand.getInstance());
     ParamControl.initUI();
     while (!shutDown) {
       String[] command = InputBoundary.getCommand().trim().replaceAll(" +", " ").split(" ");
