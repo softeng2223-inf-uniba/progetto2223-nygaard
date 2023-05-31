@@ -15,4 +15,8 @@ public class HitBoundary {
         System.out.println(Util.RED + "Coordinate non valide" + Util.RESET);
     }
 
+    public static void miss(){
+        System.out.println(Util.CYAN + "Acqua!" + Util.RESET);
+    }
+
 }
