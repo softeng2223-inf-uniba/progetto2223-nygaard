@@ -34,6 +34,9 @@ public final class Util {
   public static final int SEA_INDEX = -1;
   public static final char SEA_CHARACTER = '~';
   public static final char SHIP_CHARACTER = '*';
+  public static final char HITTED_SEA_CHARACTER = 'O';
+  public static final char HITTED_SHIP_CHARACTER = 'X';
+  public static final char SUNK_SHIP_CHARACTER = '#';
   public static final int FIRST_TWO_DIGITS = 10;
   public static final boolean VERTICAL = true;
   public static final boolean HORIZONTAL = false;
