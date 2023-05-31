@@ -1,5 +1,7 @@
 package it.uniba.nygaard.game.entity.grids;
 
+import it.uniba.nygaard.game.Util;
+
 /**
  * <h2> Grid </h2>
  * <p>
@@ -16,6 +18,26 @@ public abstract class Grid {
      */
   private int dimension;
 
+  public int getMaxRows() {
+    return maxRows;
+  }
+
+  public void setMaxRows(int maxRows) {
+    this.maxRows = maxRows;
+  }
+
+  public char getMaxColumn() {
+    return maxColumn;
+  }
+
+  public void setMaxColumn(char maxColumn) {
+    this.maxColumn = maxColumn;
+  }
+
+  private int maxRows;
+  private char maxColumn;
+
+
   /**
    * <h3> Costruttore </h3>
    * <p>
@@ -26,6 +48,8 @@ public abstract class Grid {
    */
   Grid(final int newDimension) {
     this.dimension = newDimension;
+    this.maxRows = Util.STANDARD_GRID_SIZE;
+    this.maxColumn = 'J';
   }
 
   /**
@@ -51,5 +75,6 @@ public abstract class Grid {
   public int getDimension() {
     return this.dimension;
   }
+
 
 }
