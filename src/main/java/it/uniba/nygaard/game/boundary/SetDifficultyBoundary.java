@@ -1,7 +1,6 @@
 package it.uniba.nygaard.game.boundary;
 
 import it.uniba.nygaard.game.Util;
-import it.uniba.nygaard.game.entity.Match;
 import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
 import it.uniba.nygaard.game.control.GameManager;
@@ -63,7 +62,7 @@ public final class SetDifficultyBoundary {
      * @param newDifficulty Nuova difficoltà
      * @return Risposta dell'utente
      */
-    public static String ask(final Match p, final int newDifficulty) {
+    public static String ask(final int newDifficulty) {
         System.out.print("Il livello attuale è " + Util.BOLD
                 + GameManager.actualDifficultyName() + Util.RESET + ". Confermare cambio in "
                 + Util.BOLD + GameManager.newDifficultyName(newDifficulty) + Util.RESET

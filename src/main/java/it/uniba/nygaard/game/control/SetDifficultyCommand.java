@@ -99,7 +99,7 @@ final class SetDifficultyCommand extends Command {
     if (p.getDifficulty() != Util.DIFFICULTY_NOT_SETTED) {
       String choice;
       do {
-        choice = SetDifficultyBoundary.ask(p, actualDifficulty);
+        choice = SetDifficultyBoundary.ask(actualDifficulty);
         if (!choice.equals("n") && !choice.equals("y")) {
           SetDifficultyBoundary.notValidChoice();
         }
