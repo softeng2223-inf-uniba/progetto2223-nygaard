@@ -223,7 +223,7 @@ Di seguito, i ***Requisiti Funzionali*** del progetto, facenti parte della *User
 
   **Criteri di accettazione**
 
-  Al comando ```/mostratentativi```
+  Al comando ```/mostratentativi``` (quando non si è in partita)
 
   - l’applicazione risponde visualizzando il numero di massimo di tentativi falliti 
 
@@ -304,6 +304,16 @@ Di seguito, i ***Requisiti Funzionali*** del progetto, facenti parte della *User
   Al comando ```/mostragriglia```
 
    - l’applicazione risponde visualizzando, una griglia delle dimensioni impostate, con le navi affondate e le sole parti già colpite delle navi non affondate.
+
+- *mostrare i tentativi effettuati*
+
+  Come giocatore voglio mostrare i tentativi effettuati
+
+  **Criteri di accettazione**
+
+  Al comando ```/mostratentativi``` (quando si è in partita)
+
+  - l’applicazione risponde visualizzando il numero di tentativi già effettuati, il numero di tentativi falliti e il numero massimo di tentativi falliti 
 
 ## 3.2 Requisiti non Funzionali
 
