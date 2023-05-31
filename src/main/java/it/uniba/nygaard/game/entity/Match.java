@@ -174,6 +174,18 @@ public final class Match {
     return this.attempts[index];
   }
 
+  /**
+   * <h3> setAttempts </h3>
+   * <p>
+   *     Imposta il numero di tentativi per una specifica difficoltà.
+   * </p>
+   * @param index Indice dei tentativi
+   * @param value Nuovo numero di tentativi falliti per la difficoltà.
+   */
+  public void setAttempts(final int index, final int value) {
+    this.attempts[index] = value;
+  }
+
   public int getFailedAttempts() {
     return this.failedAttempts;
   }
