@@ -1,7 +1,6 @@
 package it.uniba.nygaard.game.boundary;
 
 import it.uniba.nygaard.game.Util;
-import it.uniba.nygaard.game.entity.Match;
 import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
 import it.uniba.nygaard.game.control.GameManager;
@@ -59,7 +58,6 @@ public final class SetDifficultyBoundary {
      * <p>
      *     Stampa il messaggio relativo alla conferma del cambio di difficoltà.
      * </p>
-     * @param p Partita
      * @param newDifficulty Nuova difficoltà
      * @return Risposta dell'utente
      */
