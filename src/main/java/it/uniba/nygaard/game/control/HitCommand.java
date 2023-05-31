@@ -8,4 +8,8 @@ public class HitCommand extends Command{
         setParamNumber(2);
     }
 
+    static HitCommand getInstance() {
+        return instance;
+    }
+
 }
