@@ -54,7 +54,8 @@ public final class HelpBoundary {
             + "                           di tentativi falliti e il numero massimo"
             + " di tentativi falliti\n"
             + Util.ITALIC + Util.CYAN + "    * /mostragriglia       " + Util.RESET
-            + "Mostra la griglia contenente le navi affondate e le parti di navi colpite\n"
+            + "Mostra la griglia contenente le navi affondate e le parti di \n"
+            + "                           navi colpite ma non affondate\n"
             + Util.ITALIC + Util.CYAN + "    * /mostranavi          " + Util.RESET
             + "Mostra le navi ancora in gioco e il loro numero\n"
             + Util.ITALIC + Util.CYAN + "    * /gioca               " + Util.RESET
