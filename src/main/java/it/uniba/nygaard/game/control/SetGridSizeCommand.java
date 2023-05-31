@@ -27,8 +27,7 @@ public final class SetGridSizeCommand extends Command {
             return;
         }
 
-        if (command.length > getParamNumber() + 1) {
-            GridSizeBoundary.tooManyArgs();
+        if (invalidNumber(command)) {
             return;
         }
 
@@ -66,17 +65,25 @@ public final class SetGridSizeCommand extends Command {
         int size = 0;
 
         switch (command) {
-            case "/standard" -> size = Util.STANDARD_GRID_SIZE;
-            case "/large" -> size = Util.LARGE_GRID_SIZE;
-            case "/extralarge" -> size = Util.EXTRA_LARGE_GRID_SIZE;
-            default -> size = Util.STANDARD_GRID_SIZE;
+            case "/standard" -> {
+                size = Util.STANDARD_GRID_SIZE;
+            }
+            case "/large" -> {
+                size = Util.LARGE_GRID_SIZE;
+            }
+            case "/extralarge" -> {
+                size = Util.EXTRA_LARGE_GRID_SIZE;
+            }
+            default -> {
+                size = Util.STANDARD_GRID_SIZE;
+            }
         }
 
         return size;
     }
 
 
-    private void setNewUpperLimit(int newUpperLimit) {
+    private void setNewUpperLimit(final int newUpperLimit) {
         Util.maxRows = newUpperLimit;
         Util.maxColumn = (char) (newUpperLimit + 64);
         Util.headingEdgeWidth = newUpperLimit + 9;

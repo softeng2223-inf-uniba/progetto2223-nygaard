@@ -17,10 +17,6 @@ public final class GridSizeBoundary {
             + "mentre sei in partita" + Util.RESET);
     }
 
-    public static void tooManyArgs() {
-        System.out.println(Util.RED + "Errore: il comando non accetta argomenti" + Util.RESET);
-    }
-
     public static void operationDone() {
         System.out.println(Util.GREEN + "OK" + Util.RESET);
     }
