@@ -181,6 +181,27 @@ Di seguito, i ***Requisiti Funzionali*** del progetto, facenti parte della *User
   Al comando ```/svelagriglia```
 
     - l’applicazione risponde visualizzando, una griglia 10x10, con le righe numerate da 1 a 10 e le colonne numerate da A a J, e tutte le navi posizionate
+ 
+<br/>
+
+
+- *impostare il numero di tentativi per difficoltà*
+
+  Come giocatore voglio impostare il numero massimo di tentativi falliti per livello di gioco 
+  
+  **Criteri di accettazione**
+
+  - Al comando ```/facile <numero>```
+
+    - l’applicazione risponde con OK e imposta il numero massimo di tentativi falliti
+  
+  - Al comando ```/medio <numero>```
+
+    - l’applicazione risponde con OK e imposta il numero massimo di tentativi falliti
+
+  - Al comando ```/difficile <numero>```
+  
+      - l’applicazione risponde con OK e imposta il numero massimo di tentativi falliti
 
 <br/>
 
