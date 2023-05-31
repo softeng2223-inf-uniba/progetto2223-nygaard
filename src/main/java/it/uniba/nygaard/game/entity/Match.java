@@ -1,13 +1,15 @@
 package it.uniba.nygaard.game.entity;
+
 import it.uniba.nygaard.game.Util;
 import it.uniba.nygaard.game.entity.grids.CellsGrid;
 import it.uniba.nygaard.game.entity.grids.CharactersGrid;
+import it.uniba.nygaard.game.entity.ships.Coordinate;
+import it.uniba.nygaard.game.entity.ships.Destroyer;
 import it.uniba.nygaard.game.entity.ships.AircraftCarrier;
 import it.uniba.nygaard.game.entity.ships.Battleship;
-import it.uniba.nygaard.game.entity.ships.Coordinate;
 import it.uniba.nygaard.game.entity.ships.Cruiser;
-import it.uniba.nygaard.game.entity.ships.Destroyer;
 import it.uniba.nygaard.game.entity.ships.Ship;
+
 import java.util.Random;
 
 
@@ -42,23 +44,26 @@ public final class Match {
    * </p>
    */
   private final String[] difficultyNames;
-    /**
-     * <h3> attempts </h3>
-     * <p>
-     *     Tentativi per ogni difficoltà.
-     * </p>
-     */
+  /**
+   * <h3> attempts </h3>
+   * <p>
+   * Tentativi per ogni difficoltà.
+   * </p>
+   */
   private final int[] attempts;
-    /**
-     * <h3> ships </h3>
-     * <p>
-     *     Navi della partita.
-     * </p>
-     * @see Ship
-     */
+  private final int failedAttempts;
+  private final int usedAttempts;
+  /**
+   * <h3> ships </h3>
+   * <p>
+   * Navi della partita.
+   * </p>
+   *
+   * @see Ship
+   */
   private final Ship[] ships;
-    /**
-     * <h3> defenseGrid </h3>
+  /**
+   * <h3> defenseGrid </h3>
      * <p>
      *     Griglia di difesa.
      * </p>
@@ -97,9 +102,11 @@ public final class Match {
    */
   public Match() {
     this.inGame = false;
-    this.difficulty = Util.DIFFICULTY_NOT_SETTED;
+    this.difficulty = Util.DIFFICULTY_MEDIUM;
     this.difficultyNames = new String[]{Util.EASY_NAME, Util.MEDIUM_NAME, Util.HARD_NAME};
     this.attempts = new int[]{Util.EASY_ATTEMPTS, Util.MEDIUM_ATTEMPTS, Util.HARD_ATTEMPTS};
+    this.failedAttempts = 0;
+    this.usedAttempts = 0;
     this.ships = new Ship[Util.MAX_SHIP];
     int i = Util.MIN_SHIP;
     for (int j = 0; j < Util.AIRCRAFT_NO; j++) {
@@ -162,16 +169,26 @@ public final class Match {
      * @param index Indice dei tentativi.
      * @return attempts Tentativi per ogni difficoltà.
      */
-  public int getAttempts(final int index) {
-    return this.attempts[index];
+    public int getAttempts(final int index) {
+      return this.attempts[index];
+    }
+
+  public int getFailedAttempts() {
+    return this.failedAttempts;
   }
-    /**
-     * <h3> getDefenseGrid </h3>
-     * <p>
-     *     Restituisce la griglia di difesa della partita.
-     * </p>
-     * @return defenseGrid Griglia di difesa della partita.
-     */
+
+  public int getUsedAttempts() {
+    return this.usedAttempts;
+  }
+
+  /**
+   * <h3> getDefenseGrid </h3>
+   * <p>
+   * Restituisce la griglia di difesa della partita.
+   * </p>
+   *
+   * @return defenseGrid Griglia di difesa della partita.
+   */
   public String getDefenseGrid() {
     return this.defenseGrid.toString();
   }

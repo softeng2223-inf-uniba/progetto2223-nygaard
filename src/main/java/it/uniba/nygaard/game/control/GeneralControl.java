@@ -3,6 +3,7 @@ package it.uniba.nygaard.game.control;
 import it.uniba.nygaard.game.Util;
 import it.uniba.nygaard.game.boundary.InputBoundary;
 import it.uniba.nygaard.game.entity.Match;
+
 import java.util.HashMap;
 
 /**
@@ -51,7 +52,7 @@ public final class GeneralControl {
    */
   public static void startGame(final String[] args) {
     GameManager.setMatch(new Match());
-    GameManager.setNextDifficulty(Util.DIFFICULTY_NOT_SETTED);
+    GameManager.setNextDifficulty(Util.DIFFICULTY_MEDIUM);
     GameManager.setArgs(args);
     HashMap<String, Command> availableCommands = new HashMap<>();
     availableCommands.put("/esci", ExitCommand.getInstance());
@@ -65,6 +66,7 @@ public final class GeneralControl {
     availableCommands.put("/help", HelpCommand.getInstance());
     availableCommands.put("/tempo", SetTimeCommand.getInstance());
     availableCommands.put("/mostratempo", ShowTimeCommand.getInstance());
+    availableCommands.put("/mostratentativi", ShowAttemptsCommand.getInstance());
     ParamControl.initUI();
     while (!shutDown) {
       String[] command = InputBoundary.getCommand().trim().replaceAll(" +", " ").split(" ");
