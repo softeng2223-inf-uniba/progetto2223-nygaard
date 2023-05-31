@@ -55,6 +55,34 @@ public final class AttemptsCommand extends Command {
      * @param command Comando da eseguire.
      */
     void executeCommand(final String[] command) {
-
+        if (invalidNumber(command, " <numero intero positivo>")) {
+            return;
+        }
+        if (command.length < 2) {
+            InputBoundary.howToUse(command[0], " <numero intero positivo>");
+            return;
+        }
+        if (GameManager.getMatch().getInGame()) {
+            AttemptsBoundary.alreadyInGame();
+            return;
+        }
+        String regex = "^[1-9][0-9]*$";
+        Pattern pattern = Pattern.compile(regex);
+        Matcher matcher = pattern.matcher(command[1]);
+        int newAttempts = 0;
+        if (matcher.matches()) {
+            try {
+                newAttempts = Integer.parseInt(command[1]);
+            } catch (NumberFormatException e) {
+                AttemptsBoundary.notValidChoice();
+                return;
+            }
+            for (int i = Util.DIFFICULTY_EASY; i <= Util.DIFFICULTY_HARD; i++) {
+                GameManager.getMatch().setAttempts(i, newAttempts);
+            }
+            AttemptsBoundary.operationDone();
+        } else {
+            AttemptsBoundary.notValidChoice();
+        }
     }
 }
