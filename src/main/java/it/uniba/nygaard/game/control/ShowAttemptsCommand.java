@@ -52,13 +52,8 @@ public final class ShowAttemptsCommand extends Command {
         }
         Match p = GameManager.getMatch();
         if (p.getInGame()) {
-            if (p.getAttempts(Util.CUSTOM_DIFFICULTY) != -1) {
-                ShowAttemptsBoundary.showAttempts(p.getUsedAttempts(), p.getFailedAttempts(),
-                        p.getAttempts(Util.CUSTOM_DIFFICULTY));
-            } else {
-                ShowAttemptsBoundary.showAttempts(p.getUsedAttempts(), p.getFailedAttempts(),
-                        p.getAttempts(p.getDifficulty()));
-            }
+            ShowAttemptsBoundary.showAttempts(p.getUsedAttempts(), p.getFailedAttempts(),
+                    p.getAttempts(p.getDifficulty()));
         }
         //todo: altrimenti versione fuori dal gioco
     }
