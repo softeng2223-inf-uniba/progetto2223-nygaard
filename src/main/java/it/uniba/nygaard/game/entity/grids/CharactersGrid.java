@@ -76,9 +76,9 @@ public final class CharactersGrid extends Grid {
   public String toString() {
     String str = "";
     char c;
-    str += "-".repeat(Util.HEADING_EDGE_WIDTH);
+    str += "-".repeat(Util.headingEdgeWidth);
     str += Util.PURPLE + Util.BOLD + "Attacco" + Util.RESET;
-    str += "-".repeat(Util.HEADING_EDGE_WIDTH);
+    str += "-".repeat(Util.headingEdgeWidth);
     str += "\n\n";
     str += " ".repeat(Util.COLUMNS_EDGE_WIDTH);
     for (char y = Util.MIN_COLUMN; y <= Util.maxColumn; y++) {
@@ -117,9 +117,9 @@ public final class CharactersGrid extends Grid {
     }
     str += " ".repeat(Util.COLUMNS_EDGE_WIDTH - 1);
     str += "\n\n";
-    str += "-".repeat(Util.HEADING_EDGE_WIDTH);
+    str += "-".repeat(Util.headingEdgeWidth);
     str += Util.PURPLE + Util.BOLD + "Attacco" + Util.RESET;
-    str += "-".repeat(Util.HEADING_EDGE_WIDTH);
+    str += "-".repeat(Util.headingEdgeWidth);
     str += "\n";
     return str;
   }
