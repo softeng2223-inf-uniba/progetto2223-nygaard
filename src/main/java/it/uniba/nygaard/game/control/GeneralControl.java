@@ -53,6 +53,7 @@ public final class GeneralControl {
   public static void startGame(final String[] args) {
     GameManager.setMatch(new Match());
     GameManager.setNextDifficulty(Util.DIFFICULTY_MEDIUM);
+    GameManager.setNextGridSizeName(Util.STANDARD_GRID_SIZE);
     GameManager.setArgs(args);
     HashMap<String, Command> availableCommands = new HashMap<>();
     availableCommands.put("/esci", ExitCommand.getInstance());

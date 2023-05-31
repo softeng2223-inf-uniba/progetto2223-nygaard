@@ -1,6 +1,11 @@
 package it.uniba.nygaard.game.boundary;
 
 import it.uniba.nygaard.game.Util;
+import it.uniba.nygaard.game.control.GameManager;
+import it.uniba.nygaard.game.entity.Match;
+
+import java.nio.charset.StandardCharsets;
+import java.util.Scanner;
 
 public final class GridSizeBoundary {
     private GridSizeBoundary() {
@@ -21,11 +26,22 @@ public final class GridSizeBoundary {
     }
 
     public static void sameSizeError() {
-        System.out.println(Util.RED + "Hai già impostato queste dimensioni" + Util.RESET);
+        System.out.println(Util.RED + "Dimensioni gia' impostate" + Util.RESET);
     }
 
     public static void invalidChoiceError() {
         System.out.println(Util.RED + "Scelta non valida" + Util.RESET);
+    }
+
+    public static String ask(final Match p, final int newSize) {
+        int cSize = GameManager.currentGridSizeName();
+
+        System.out.print("Le dimensioni attuali sono " + Util.BOLD
+            + cSize + "x" + cSize + Util.RESET + ". Confermare cambio in "
+            + Util.BOLD + newSize + "x" + newSize + Util.RESET
+            + "? (" + Util.GREEN + "y" + Util.RESET
+            + "/" + Util.RED + "n" + Util.RESET + ") ");
+        return new Scanner(System.in, StandardCharsets.UTF_8).next().toLowerCase();
     }
 
     public static void operationCancelled() {

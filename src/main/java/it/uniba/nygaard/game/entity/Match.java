@@ -92,6 +92,7 @@ public final class Match {
      * </p>
      */
   private long startTime;
+  private int gridSize;
 
   /**
    * <h3> Costruttore </h3>
@@ -104,6 +105,10 @@ public final class Match {
     this.inGame = false;
     this.difficulty = Util.DIFFICULTY_MEDIUM;
     this.difficultyNames = new String[]{Util.EASY_NAME, Util.MEDIUM_NAME, Util.HARD_NAME};
+
+    this.gridSize = Util.STANDARD_GRID_SIZE;
+
+
     this.attempts = new int[]{Util.EASY_ATTEMPTS, Util.MEDIUM_ATTEMPTS, Util.HARD_ATTEMPTS};
     this.failedAttempts = 0;
     this.usedAttempts = 0;
@@ -125,6 +130,8 @@ public final class Match {
       this.ships[i - 1] = new Destroyer();
       i++;
     }
+
+    // TODO: Creazione delle griglie con assegnazione delle dimensioni
     this.defenseGrid = new CellsGrid(Util.MAX_ROWS);
     this.attackGrid = new CharactersGrid(Util.MAX_ROWS);
     maxTime = Util.DEFAULT_TIME;
@@ -148,6 +155,14 @@ public final class Match {
      */
   public int getDifficulty() {
     return this.difficulty;
+  }
+
+  public int getGridSize() {
+    return this.gridSize;
+  }
+
+  public void setGridSize(final int newGridSize) {
+    this.gridSize = newGridSize;
   }
 
   /**

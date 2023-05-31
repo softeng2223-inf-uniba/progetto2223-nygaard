@@ -26,7 +26,7 @@ public final class GameManager {
      */
     private static int nextDifficulty;
 
-    private static int gridSize;
+    private static int nextGridSize;
 
     /**
      * <h3> args </h3>
@@ -78,7 +78,7 @@ public final class GameManager {
     }
 
     static int getGridSize() {
-        return gridSize;
+        return nextGridSize;
     }
 
     /**
@@ -91,6 +91,13 @@ public final class GameManager {
     static void setNextDifficulty(final int newNextDifficulty) {
         GameManager.nextDifficulty = newNextDifficulty;
     }
+
+
+    static void setNextGridSizeName(final int newNextDifficulty) {
+        GameManager.nextGridSize = newNextDifficulty;
+    }
+
+
     /**
      * <h3> getArgs </h3>
      * <p>
@@ -132,6 +139,12 @@ public final class GameManager {
     public static String newDifficultyName(final int newDifficulty) {
         return match.getDifficultyNames(newDifficulty);
     }
+
+
+    public static int currentGridSizeName() {
+        return match.getGridSize();
+    }
+
     /**
      * <h3> getMatchTime </h3>
      * <p>
