@@ -8,4 +8,8 @@ public class ShowAttemptsCommand implements Command {
         setParamNumber(1);
     }
 
+    public static ShowAttemptsCommand getInstance() {
+        return instance;
+    }
+
 }
