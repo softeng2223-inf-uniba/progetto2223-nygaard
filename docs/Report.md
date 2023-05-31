@@ -249,6 +249,18 @@ Di seguito, i ***Requisiti Funzionali*** del progetto, facenti parte della *User
 
 <br/>
 
+- *impostare il tempo di gioco*
+
+  Come giocatore voglio impostare il tempo di gioco
+
+  **Criteri di accettazione**
+
+  Al comando ```/tempo <numero>```
+
+  - l’applicazione risponde con OK e imposta a numero il numero di minuti a disposizione per giocare
+
+<br/>
+
 ## 3.2 Requisiti non Funzionali
 
 Il funzionamento del software richiede:
