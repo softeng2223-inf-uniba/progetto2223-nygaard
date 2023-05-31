@@ -65,7 +65,7 @@ final class SetDifficultyCommand extends Command {
       GameManager.setMatchDifficulty(difficultyInvolved);
       setNewMatchDifficulty();
     } else {
-      String regex = "^[1-9][0-9]+$";
+      String regex = "^[1-9][0-9]*$";
       Pattern pattern = Pattern.compile(regex);
       Matcher matcher = pattern.matcher(command[1]);
 
