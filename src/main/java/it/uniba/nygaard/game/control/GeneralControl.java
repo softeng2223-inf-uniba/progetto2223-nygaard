@@ -4,7 +4,11 @@ import it.uniba.nygaard.game.Util;
 import it.uniba.nygaard.game.boundary.InputBoundary;
 import it.uniba.nygaard.game.entity.Match;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * << Control >>
@@ -76,6 +80,14 @@ public final class GeneralControl {
     while (!shutDown) {
       String[] command = InputBoundary.getCommand().trim().replaceAll(" +", " ").split(" ");
       InputBoundary.resetColor();
+      String regex = "^[a-z]-[1-9][0-9]*$";
+      Pattern pattern = Pattern.compile(regex);
+      Matcher matcher = pattern.matcher(command[0]);
+      if (matcher.matches()) {
+        ArrayList<String> list = new ArrayList<>(Arrays.asList(command));
+        list.add(0, "/colpo");
+        //System.out.println(list);
+      }
       if (availableCommands.containsKey(command[0])) {
         availableCommands.get(command[0]).executeCommand(command);
       } else {
