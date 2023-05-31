@@ -24,7 +24,7 @@ public final class GridSizeBoundary {
         System.out.println(Util.RED + "Hai già impostato queste dimensioni" + Util.RESET);
     }
 
-    public static void notValidChoice() {
+    public static void invalidChoiceError() {
         System.out.println(Util.RED + "Scelta non valida" + Util.RESET);
     }
 }
