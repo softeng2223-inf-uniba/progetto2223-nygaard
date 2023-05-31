@@ -31,10 +31,10 @@ public final class ShowAttemptsBoundary {
      * @param maxAttempts    Tentativi massimi fallibili
      */
     public static void showAttempts(final int usedAttempts, final int failedAttempts, final int maxAttempts) {
-        System.out.println("Hai già effettuato " + Util.BOLD + Util.GREEN + usedAttempts + " tentativi " + Util.RESET
-                + "di cui " + Util.BOLD + Util.RED + failedAttempts + " falliti." + Util.RESET);
-        System.out.println("Puoi fallire al massimo " + Util.BOLD + Util.YELLOW + maxAttempts + " tentativi"
-                + Util.RESET + " prima di perdere la partita.");
+        System.out.println(Util.CYAN + "Hai già effettuato " + Util.BOLD + usedAttempts + " tentativi " + Util.RESET
+                + Util.CYAN + "di cui " + Util.BOLD + failedAttempts + " falliti." + Util.RESET);
+        System.out.println(Util.CYAN + "Puoi fallire al massimo " + Util.BOLD + maxAttempts + " tentativi"
+                + Util.RESET + Util.CYAN + " prima di perdere la partita." + Util.RESET);
     }
 
 }
