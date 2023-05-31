@@ -23,4 +23,8 @@ public class HitBoundary {
         System.out.println(Util.YELLOW + "Colpito!" + Util.RESET);
     }
 
+    public static void sunk(){
+        System.out.println(Util.RED + "Colpito e affondato!" + Util.RESET);
+    }
+
 }
