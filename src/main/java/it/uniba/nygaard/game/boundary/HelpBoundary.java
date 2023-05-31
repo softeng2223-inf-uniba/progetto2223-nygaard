@@ -54,7 +54,10 @@ public final class HelpBoundary {
             + Util.ITALIC + Util.CYAN + "    * /gioca               " + Util.RESET
             + "Ti fa iniziare una partita\n"
             + Util.ITALIC + Util.CYAN + "    * /svelagriglia        " + Util.RESET
-            + "Mostra la griglia generata dal computer\n\n";
+            + "Mostra la griglia generata dal computer\n"
+            + Util.ITALIC + Util.CYAN + "    * /abbandona           " + Util.RESET
+            + "Ti fa abbandonare una parita gia' in corso e, una volta \n"
+            + "                           confermato, ti mostra le posizioni generate di tutte le navi\n\n";
 
         return mainCommands;
     }
@@ -99,9 +102,10 @@ public final class HelpBoundary {
             + "                           una partita, ad un valore pari a "
             + Util.ITALIC + "numero \n" + Util.RESET
             + Util.ITALIC + Util.CYAN + "    * /mostratempo         " + Util.RESET
-            + "Mostra i minuti di gioco trascorsi e i minuti rimanenti"
-            ;
+            + "Mostra i minuti di gioco trascorsi e i minuti rimanenti";
 
         return subTime;
     }
+
+
 }
