@@ -53,7 +53,7 @@ public final class SetDifficultyBoundary {
      * @return Risposta dell'utente
      */
     public static String ask(final Match p, final int newDifficulty) {
-        System.out.println("Il livello attuale è " + Util.BOLD
+        System.out.print("Il livello attuale è " + Util.BOLD
                 + GameManager.actualDifficultyName() + Util.RESET + ". Confermare cambio in "
                 + Util.BOLD + GameManager.newDifficultyName(newDifficulty) + Util.RESET
                 + "? (" + Util.GREEN + "y" + Util.RESET
