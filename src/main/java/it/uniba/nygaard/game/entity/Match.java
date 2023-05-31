@@ -3,7 +3,12 @@ package it.uniba.nygaard.game.entity;
 import it.uniba.nygaard.game.Util;
 import it.uniba.nygaard.game.entity.grids.CellsGrid;
 import it.uniba.nygaard.game.entity.grids.CharactersGrid;
-import it.uniba.nygaard.game.entity.ships.*;
+import it.uniba.nygaard.game.entity.ships.Coordinate;
+import it.uniba.nygaard.game.entity.ships.Destroyer;
+import it.uniba.nygaard.game.entity.ships.AircraftCarrier;
+import it.uniba.nygaard.game.entity.ships.Battleship;
+import it.uniba.nygaard.game.entity.ships.Cruiser;
+import it.uniba.nygaard.game.entity.ships.Ship;
 
 import java.util.Random;
 
