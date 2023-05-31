@@ -205,6 +205,16 @@ Di seguito, i ***Requisiti Funzionali*** del progetto, facenti parte della *User
 
 <br/>
 
+- *impostare direttamente il numero di tentativi*
+
+  Come giocatore voglio impostare direttamente il numero massimo di tentativi che si possono fallire
+
+  **Criteri di accettazione**
+
+  Al comando ```/tentativi <numero> ```
+  
+  l’applicazione risponde con OK e imposta a numero il numero massimo di tentativi falliti 
+
 ## 3.2 Requisiti non Funzionali
 
 Il funzionamento del software richiede:
