@@ -32,8 +32,14 @@ public final class HelpBoundary {
 
         System.out.println(help);
     }
-
-
+    /**
+     * <h3> mainCommands </h3>
+     * <p>
+     * Restituisce una stringa contenente tutte le informazioni sui
+     * comandi principali del gioco.
+     * </p>
+     * @return Stringa contenente i comandi principali del gioco.
+     */
     private static String mainCommands() {
         String mainCommands = Util.YELLOW
             + Util.BOLD + "> COMANDI\n" + Util.RESET
@@ -72,7 +78,15 @@ public final class HelpBoundary {
 
         return mainCommands;
     }
-
+    /**
+     * <h3> subCommandsDifficulty </h3>
+     * <p>
+     * Restituisce una stringa contenente tutte le informazioni sui comandi
+     * di personalizzazione delle difficolta'.
+     * </p>
+     * @return Stringa contenente i comandi di personalizzazione
+     * delle difficolta'.
+     */
     private static String subCommandsDifficulty() {
         String subDifficulty = Util.YELLOW
             + Util.BOLD + "> DIFFICOLTA' PERSONALIZZATE\n" + Util.RESET
@@ -91,7 +105,15 @@ public final class HelpBoundary {
 
         return subDifficulty;
     }
-
+    /**
+     * <h3> subCommandsGrid </h3>
+     * <p>
+     * Restituisce una stringa contenente tutte le informazioni sui comandi
+     * di personalizzazione della griglia di gioco.
+     * </p>
+     * @return Stringa contenente i comandi di personalizzazione
+     * della griglia di gioco'.
+     */
     private static String subCommandsGrid() {
         String subGrid = Util.YELLOW
             + Util.BOLD + "> GRIGLIA PERSONALIZZATA\n" + Util.RESET
@@ -104,7 +126,15 @@ public final class HelpBoundary {
 
         return subGrid;
     }
-
+    /**
+     * <h3> subCommandsTime </h3>
+     * <p>
+     * Restituisce una stringa contenente tutte le informazioni sui comandi
+     * di visualizzazione del tempo di gioco.
+     * </p>
+     * @return Stringa contenente i comandi di visualizzazione
+     * del tempo di gioco.
+     */
     private static String subCommandsTime() {
         String subTime = Util.YELLOW
             + Util.BOLD + "> TEMPO DI GIOCO\n" + Util.RESET
@@ -117,6 +147,4 @@ public final class HelpBoundary {
 
         return subTime;
     }
-
-
 }
