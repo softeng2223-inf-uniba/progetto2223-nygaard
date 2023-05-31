@@ -97,8 +97,9 @@ public final class HelpBoundary {
             + Util.ITALIC + Util.CYAN + "    * /tempo numero        " + Util.RESET
             + "Imposta il tempo di gioco di \n"
             + "                           una partita, ad un valore pari a "
-            + Util.ITALIC + " numero \n" + Util.RESET;
-
+            + Util.ITALIC + "numero \n" + Util.RESET
+            + Util.ITALIC + Util.CYAN + "    * /mostratempo         " + Util.RESET
+            + "Mostra i minuti di gioco trascorsi e i minuti rimanenti"
             ;
 
         return subTime;
