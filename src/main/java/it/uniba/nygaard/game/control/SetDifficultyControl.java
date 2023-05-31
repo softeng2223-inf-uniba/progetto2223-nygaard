@@ -42,7 +42,7 @@ final class SetDifficultyControl {
     }
     String choice;
     do {
-      choice = SetDifficultyBoundary.ask(p, difficulty);
+      choice = SetDifficultyBoundary.ask(difficulty);
       if (!choice.equals("n") && !choice.equals("y")) {
         SetDifficultyBoundary.notValidChoice();
       }

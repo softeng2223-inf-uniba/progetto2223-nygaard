@@ -37,22 +37,6 @@ public final class CellsGrid extends Grid {
       }
     }
   }
-
-  /**
-   * <h3> setCell </h3>
-   * <p>
-   * Imposta una cella della griglia.
-   * </p>
-   *
-   * @param row    Riga della cella.
-   * @param column Colonna della cella.
-   * @param cell   Cella da impostare.
-   * @see Cell
-   */
-  public void setCell(final int row, final int column, final Cell cell) {
-    grid[row][column] = cell;
-  }
-
   /**
    * <h3> setCellCharacter </h3>
    * <p>
@@ -80,22 +64,6 @@ public final class CellsGrid extends Grid {
   public void setCellShipIndex(final int row, final int column, final int shipIndex) {
     grid[row][column].setShipIndex(shipIndex);
   }
-
-  /**
-   * <h3> getCell </h3>
-   * <p>
-   * Restituisce una cella della griglia.
-   * </p>
-   *
-   * @param row    Riga della cella.
-   * @param column Colonna della cella.
-   * @return Cella della griglia.
-   * @see Cell
-   */
-  public Cell getCell(final int row, final int column) {
-    return grid[row][column];
-  }
-
   /**
    * <h3> getCellCharacter </h3>
    * <p>

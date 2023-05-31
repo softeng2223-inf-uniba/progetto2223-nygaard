@@ -295,17 +295,6 @@ public final class Match {
   public void setInGame(final boolean newInGame) {
     this.inGame = newInGame;
   }
-    /**
-     * <h3> getShip </h3>
-     * <p>
-     *     Restituisce la nave in posizione index.
-     * </p>
-     * @param index Indice della nave.
-     * @return ships[index] Nave in posizione index.
-     */
-  public Ship getShip(final int index) {
-    return this.ships[index];
-  }
   /**
      * <h3> getMaxTime </h3>
      * <p>

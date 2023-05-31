@@ -36,21 +36,6 @@ public final class CharactersGrid extends Grid {
       }
     }
   }
-
-  /**
-   * <h3> setCharacter </h3>
-   * <p>
-   * Imposta un carattere della griglia.
-   * </p>
-   *
-   * @param row       Riga del carattere.
-   * @param column    Colonna del carattere.
-   * @param character Carattere da impostare.
-   */
-  public void setCharacter(final int row, final int column, final char character) {
-    grid[row][column] = character;
-  }
-
   /**
    * <h3> getCharacter </h3>
    * <p>
