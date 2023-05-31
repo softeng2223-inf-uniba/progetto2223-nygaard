@@ -164,16 +164,26 @@ public final class Match {
      * @param index Indice dei tentativi.
      * @return attempts Tentativi per ogni difficoltà.
      */
-  public int getAttempts(final int index) {
-    return this.attempts[index];
+    public int getAttempts(final int index) {
+      return this.attempts[index];
+    }
+
+  public int getFailedAttempts() {
+    return this.failedAttempts;
   }
-    /**
-     * <h3> getDefenseGrid </h3>
-     * <p>
-     *     Restituisce la griglia di difesa della partita.
-     * </p>
-     * @return defenseGrid Griglia di difesa della partita.
-     */
+
+  public int getUsedAttempts() {
+    return this.usedAttempts;
+  }
+
+  /**
+   * <h3> getDefenseGrid </h3>
+   * <p>
+   * Restituisce la griglia di difesa della partita.
+   * </p>
+   *
+   * @return defenseGrid Griglia di difesa della partita.
+   */
   public String getDefenseGrid() {
     return this.defenseGrid.toString();
   }
