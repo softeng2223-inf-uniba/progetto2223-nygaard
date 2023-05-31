@@ -20,4 +20,8 @@ public final class GridSizeBoundary {
         System.out.println(Util.GREEN + "OK" + Util.RESET);
     }
 
+
+    public static void notValidChoice() {
+        System.out.println(Util.RED + "Scelta non valida" + Util.RESET);
+    }
 }
