@@ -70,40 +70,40 @@ public final class GameManager {
     }
 
     /**
-     * <h3> getNextDifficulty </h3>
+     * <h3> getMatchDifficulty </h3>
      * <p>
      * Restituisce la difficoltà della prossima partita.
      * </p>
      * @return Difficoltà della prossima partita.
      */
-    static int getGameDifficulty() {
-        return nextDifficulty;
+    static int getMatchDifficulty() {
+        return matchDifficulty;
     }
 
     /**
-     * <h3> setNextDifficulty </h3>
+     * <h3> setMatchDifficulty </h3>
      * <p>
      * Imposta la difficoltà della prossima partita.
      * </p>
-     * @param newNextDifficulty Difficoltà della prossima partita.
+     * @param newMatchDifficulty Difficoltà della prossima partita.
      */
-    static void setNextDifficulty(final int newNextDifficulty) {
-        GameManager.nextDifficulty = newNextDifficulty;
+    static void setMatchDifficulty(final int newMatchDifficulty) {
+        GameManager.matchDifficulty = newMatchDifficulty;
     }
 
     /**
-     * <h3> setNextAttempts </h3>
+     * <h3> setMatchAttempts </h3>
      * <p>
      * Imposta il numero di tentativi della prossima partita.
      * </p>
-     * @param newAttempts Numero di tentativi della prossima partita.
+     * @param newMatchAttempts Numero di tentativi della prossima partita.
      */
-    static void setNextAttempts(final int newAttempts) {
-        GameManager.nextAttempts = newAttempts;
+    static void setMatchAttempts(final int newMatchAttempts) {
+        GameManager.matchAttempts = newMatchAttempts;
     }
 
-    static int getGameAttempts() {
-        return nextAttempts;
+    static int getMatchAttempts() {
+        return matchAttempts;
     }
 
     /**
