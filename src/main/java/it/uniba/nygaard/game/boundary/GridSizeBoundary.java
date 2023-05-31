@@ -30,7 +30,7 @@ public final class GridSizeBoundary {
      * </p>
      */
     public static void inGameError() {
-        System.out.println(Util.RED + "Errore: Non puoi impostare le dimensioni della griglia "
+        System.out.println(Util.RED + "Non puoi impostare le dimensioni della griglia"
             + "mentre sei in partita" + Util.RESET);
     }
     /**
