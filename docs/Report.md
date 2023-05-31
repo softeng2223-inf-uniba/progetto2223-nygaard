@@ -229,6 +229,26 @@ Di seguito, i ***Requisiti Funzionali*** del progetto, facenti parte della *User
 
 <br/>
 
+- *impostare la dimensione della griglia*
+
+  Come giocatore voglio impostare la taglia della griglia
+
+  **Criteri di accettazione**
+
+  - Al comando ```/standard```
+
+    - l’applicazione risponde con OK e imposta a 10x10 la dimensione della griglia (è il default)
+
+  - Al comando ```/large```
+
+    - l’applicazione risponde con OK e imposta a 18x18 la dimensione della griglia
+
+  - Al comando ```/extralarge```
+
+    - l’applicazione risponde con OK e imposta a 26x26 la dimensione della griglia
+
+<br/>
+
 ## 3.2 Requisiti non Funzionali
 
 Il funzionamento del software richiede:
