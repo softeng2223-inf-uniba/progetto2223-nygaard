@@ -23,7 +23,7 @@ final public class SetGridSizeCommand extends Command {
             return;
         }
 
-        if (command.length > 1) {
+        if (command.length > getParamNumber() + 1) {
             //TODO: Il comando non accetta parametri
             return;
         }
