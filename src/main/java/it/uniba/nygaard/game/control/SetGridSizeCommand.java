@@ -64,7 +64,7 @@ final class SetGridSizeCommand extends Command {
         }
 
         do {
-            choice = GridSizeBoundary.ask(p, sizeCommand);
+            choice = GridSizeBoundary.ask(sizeCommand);
             if (!choice.equals("n") && !choice.equals("y")) {
                 GridSizeBoundary.invalidChoiceError();
             }

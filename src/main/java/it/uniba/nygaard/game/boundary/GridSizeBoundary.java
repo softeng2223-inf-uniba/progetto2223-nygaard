@@ -2,7 +2,6 @@ package it.uniba.nygaard.game.boundary;
 
 import it.uniba.nygaard.game.Util;
 import it.uniba.nygaard.game.control.GameManager;
-import it.uniba.nygaard.game.entity.Match;
 
 import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
@@ -67,13 +66,11 @@ public final class GridSizeBoundary {
      * <p>
      *     Messaggio per chiedere conferma per il cambio di dimensione della griglia.
      * </p>
-     * @param p Partita corrente
      * @param newSize Nuova dimensione della griglia
      * @return Scelta dell'utente
      */
-    public static String ask(final Match p, final int newSize) {
+    public static String ask(final int newSize) {
         int cSize = GameManager.currentGridSize();
-
         System.out.print("Le dimensioni attuali sono " + Util.BOLD
             + cSize + "x" + cSize + Util.RESET + ". Confermare cambio in "
             + Util.BOLD + newSize + "x" + newSize + Util.RESET
