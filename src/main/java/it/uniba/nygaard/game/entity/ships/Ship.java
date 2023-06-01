@@ -134,6 +134,12 @@ public abstract class Ship {
     return hp;
   }
 
+  /**
+   * <h3> hit </h3>
+   * <p>
+   * Decrementa gli hp della nave.
+   * </p>
+   */
   public void hit() {
     this.hp--;
   }
