@@ -68,7 +68,7 @@ public final class GameManager {
    *
    * @return Partita in corso.
    */
-  public static Match getMatch() {
+  static Match getMatch() {
     return match;
   }
 
