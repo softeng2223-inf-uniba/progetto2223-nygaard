@@ -29,4 +29,9 @@ public final class MatchBoundary {
         System.out.println(Util.RED + "Partita in corso\nPer cominciare una nuova partita abbandona la corrente"
                 + Util.RESET);
     }
+
+    public static void win(){
+        System.out.println(Util.GREEN + Util.BOLD + "Hai vinto la partita!" + Util.RESET);
+    }
+
 }
