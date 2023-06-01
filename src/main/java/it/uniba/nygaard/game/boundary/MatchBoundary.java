@@ -79,6 +79,12 @@ public final class MatchBoundary {
     System.out.println(Util.CYAN + "Puoi inserire qualsiasi comando o iniziare una nuova partita.\n" + Util.RESET);
   }
 
+  /**
+   * <h3> printSolution </h3>
+   * <p>
+   * Stampa il messaggio relativo alla disposizione delle navi.
+   * </p>
+   */
   public static void printSolution() {
     System.out.println(Util.CYAN + "Questa era la disposizione delle navi!" + Util.RESET);
   }

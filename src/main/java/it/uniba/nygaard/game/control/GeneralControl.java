@@ -10,8 +10,6 @@ import java.util.HashMap;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import static java.lang.Thread.sleep;
-
 /**
  * << Control >>
  * <h2> GeneralControl </h2>
@@ -27,7 +25,7 @@ public final class GeneralControl {
    * Termina il gioco se true.
    * </p>
    */
-  private volatile static int shutDown = 0;
+  private static volatile int shutDown = 0;
 
   /**
    * <h3> Costruttore </h3>
@@ -123,7 +121,7 @@ public final class GeneralControl {
         }
       }
       if (shutDown != Util.QUIT_TERMINATION_CODE) {
-        if(shutDown != Util.WIN_TERMINATION_CODE){
+        if (shutDown != Util.WIN_TERMINATION_CODE) {
           MatchBoundary.printSolution();
           ShowGridBoundary.printGrid(GameManager.getMatch().getDefenseGrid());
         }
