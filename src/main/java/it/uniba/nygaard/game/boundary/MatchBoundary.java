@@ -38,8 +38,9 @@ public final class MatchBoundary {
         System.out.println(Util.RED + Util.BOLD + "Hai finito i tentativi disponibili!" + Util.RESET);
     }
 
-    public static void outOfTime(){
-        System.out.println(Util.RED + Util.BOLD + "E' finito il tempo!" + Util.RESET);
+    public static void timeOut(){
+        System.out.println(Util.RED + Util.BOLD + "Hai perso! Hai esaurito il tempo a tua disposizione!" + Util.RESET);
+        System.out.println(Util.CYAN + "Premere invio per continuare!" + Util.RESET);
     }
 
 }
