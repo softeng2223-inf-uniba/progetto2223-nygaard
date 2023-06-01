@@ -470,9 +470,9 @@ public final class Match {
    *
    * @param row    Riga della cella da colpire.
    * @param column Colonna della cella da colpire.
-   * @return 0 se la cella è vuota o è già stata colpita,
-   *         1 se la cella è stata colpita ma non affondata,
-   *         2 se la cella è stata colpita e affondata.
+   * @return Util.WATER_CODE se la cella è vuota o è già stata colpita,
+   *         Util.HITTED_CODE se la cella è stata colpita ma non affondata,
+   *         Util.SANK_CODE se la cella è stata colpita e affondata.
    */
   public int hit(final int row, final int column) {
     usedAttempts++;
