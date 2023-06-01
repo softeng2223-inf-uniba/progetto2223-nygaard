@@ -54,51 +54,59 @@ public final class GeneralControl {
    * @param args Argomenti passati al programma.
    */
   public static void startGame(final String[] args) {
-    GameManager.setMatch(new Match());
-    GameManager.setMatchDifficulty(Util.DIFFICULTY_MEDIUM);
-    GameManager.setNextGridSizeName(Util.STANDARD_GRID_SIZE);
-    GameManager.setArgs(args);
-    HashMap<String, Command> availableCommands = new HashMap<>();
-    availableCommands.put("/esci", ExitCommand.getInstance());
-    availableCommands.put("/facile", SetDifficultyCommand.getInstance());
-    availableCommands.put("/medio", SetDifficultyCommand.getInstance());
-    availableCommands.put("/difficile", SetDifficultyCommand.getInstance());
-    availableCommands.put("/mostralivello", ShowLevelCommand.getInstance());
-    availableCommands.put("/mostranavi", ShowShipCommand.getInstance());
-    availableCommands.put("/gioca", StartMatchCommand.getInstance());
-    availableCommands.put("/svelagriglia", RevealGridCommand.getInstance());
-    availableCommands.put("/help", HelpCommand.getInstance());
-    availableCommands.put("/tempo", SetTimeCommand.getInstance());
-    availableCommands.put("/mostratempo", ShowTimeCommand.getInstance());
-    availableCommands.put("/mostratentativi", ShowAttemptsCommand.getInstance());
-    availableCommands.put("/standard", SetGridSizeCommand.getInstance());
-    availableCommands.put("/large", SetGridSizeCommand.getInstance());
-    availableCommands.put("/extralarge", SetGridSizeCommand.getInstance());
-    availableCommands.put("/tentativi", AttemptsCommand.getInstance());
-    ParamControl.initUI();
-    while (shutDown==0) {
-      String[] command = InputBoundary.getCommand().trim().replaceAll(" +", " ").split(" ");
-      InputBoundary.resetColor();
-      String regex = "^[a-z]-[1-9][0-9]*$";
-      Pattern pattern = Pattern.compile(regex);
-      Matcher matcher = pattern.matcher(command[0]);
-      if (matcher.matches()) {
-        HitCommand.getInstance().executeCommand(command);
-        continue;
+    boolean firstTime = true;
+    do {
+      GameManager.setMatch(new Match());
+      GameManager.setMatchDifficulty(Util.DIFFICULTY_MEDIUM);
+      GameManager.setNextGridSizeName(Util.STANDARD_GRID_SIZE);
+      if(firstTime) {
+        GameManager.setArgs(args);
+        firstTime = false;
+      }else{
+        GameManager.setArgs(new String[]{});
       }
-      if (availableCommands.containsKey(command[0])) {
-        availableCommands.get(command[0]).executeCommand(command);
-      } else {
-        InputBoundary.notRecognisedCommand(command);
+      HashMap<String, Command> availableCommands = new HashMap<>();
+      availableCommands.put("/esci", ExitCommand.getInstance());
+      availableCommands.put("/facile", SetDifficultyCommand.getInstance());
+      availableCommands.put("/medio", SetDifficultyCommand.getInstance());
+      availableCommands.put("/difficile", SetDifficultyCommand.getInstance());
+      availableCommands.put("/mostralivello", ShowLevelCommand.getInstance());
+      availableCommands.put("/mostranavi", ShowShipCommand.getInstance());
+      availableCommands.put("/gioca", StartMatchCommand.getInstance());
+      availableCommands.put("/svelagriglia", RevealGridCommand.getInstance());
+      availableCommands.put("/help", HelpCommand.getInstance());
+      availableCommands.put("/tempo", SetTimeCommand.getInstance());
+      availableCommands.put("/mostratempo", ShowTimeCommand.getInstance());
+      availableCommands.put("/mostratentativi", ShowAttemptsCommand.getInstance());
+      availableCommands.put("/standard", SetGridSizeCommand.getInstance());
+      availableCommands.put("/large", SetGridSizeCommand.getInstance());
+      availableCommands.put("/extralarge", SetGridSizeCommand.getInstance());
+      availableCommands.put("/tentativi", AttemptsCommand.getInstance());
+      ParamControl.initUI();
+      shutDown = 0;
+      while (shutDown == 0) {
+        String[] command = InputBoundary.getCommand().trim().replaceAll(" +", " ").split(" ");
+        InputBoundary.resetColor();
+        String regex = "^[a-z]-[1-9][0-9]*$";
+        Pattern pattern = Pattern.compile(regex);
+        Matcher matcher = pattern.matcher(command[0]);
+        if (matcher.matches()) {
+          HitCommand.getInstance().executeCommand(command);
+          continue;
+        }
+        if (availableCommands.containsKey(command[0])) {
+          availableCommands.get(command[0]).executeCommand(command);
+        } else {
+          InputBoundary.notRecognisedCommand(command);
+        }
       }
-    }
-    switch (shutDown) {
-      case 1 -> MatchBoundary.win();
-      case 2 -> MatchBoundary.outOfAttempts();
-      case 3 -> MatchBoundary.outOfTime();
-      case 4 -> {/*todo: implementare abbandona partita*/}
-      //case 5 -> break;
-      default -> {}
-    }
+      switch (shutDown) {
+        case 1 -> MatchBoundary.win();
+        case 2 -> MatchBoundary.outOfAttempts();
+        case 3 -> MatchBoundary.outOfTime();
+        case 4 -> {/*todo: implementare abbandona partita*/}
+        default -> {}
+      }
+    } while (shutDown != 5);
   }
 }
