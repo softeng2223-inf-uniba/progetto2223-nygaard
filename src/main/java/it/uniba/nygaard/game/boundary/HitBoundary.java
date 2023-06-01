@@ -9,7 +9,7 @@ import it.uniba.nygaard.game.Util;
  * relativi ai colpi effettuati.
  * </p>
  */
-public class HitBoundary {
+public final class HitBoundary {
 
   /**
    * <h3> Costruttore </h3>
