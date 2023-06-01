@@ -475,9 +475,9 @@ public final class Match {
    *         Util.SANK_CODE se la cella è stata colpita e affondata.
    */
   public int hit(final int row, final int column) {
-    usedAttempts++;
     if (defenseGrid.getCellCharacter(row, column) == Util.SHIP_CHARACTER
         && attackGrid.getCharacter(row, column) == Util.SEA_CHARACTER) {
+      usedAttempts++;
       ships[defenseGrid.getCellShipIndex(row, column)].hit();
       if (ships[defenseGrid.getCellShipIndex(row, column)].getHp() == 0) {
         sunkShip(defenseGrid.getCellShipIndex(row, column));
@@ -487,6 +487,7 @@ public final class Match {
         return Util.HITTED_CODE;
       }
     } else {
+      usedAttempts++;
       failedAttempts++;
       if (defenseGrid.getCellCharacter(row, column) == Util.SEA_CHARACTER) {
         attackGrid.setCharacter(row, column, Util.HITTED_SEA_CHARACTER);
