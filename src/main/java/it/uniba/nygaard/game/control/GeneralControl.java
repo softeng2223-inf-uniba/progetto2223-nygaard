@@ -53,36 +53,33 @@ public final class GeneralControl {
    *
    * @param args Argomenti passati al programma.
    */
-  public static void startGame(final String[] args) {
-    boolean firstTime = true;
+  public static void startGame(String[] args) {
+    HashMap<String, Command> availableCommands = new HashMap<>();
+    availableCommands.put("/esci", ExitCommand.getInstance());
+    availableCommands.put("/facile", SetDifficultyCommand.getInstance());
+    availableCommands.put("/medio", SetDifficultyCommand.getInstance());
+    availableCommands.put("/difficile", SetDifficultyCommand.getInstance());
+    availableCommands.put("/mostralivello", ShowLevelCommand.getInstance());
+    availableCommands.put("/mostranavi", ShowShipCommand.getInstance());
+    availableCommands.put("/gioca", StartMatchCommand.getInstance());
+    availableCommands.put("/svelagriglia", RevealGridCommand.getInstance());
+    availableCommands.put("/help", HelpCommand.getInstance());
+    availableCommands.put("/tempo", SetTimeCommand.getInstance());
+    availableCommands.put("/mostratempo", ShowTimeCommand.getInstance());
+    availableCommands.put("/mostratentativi", ShowAttemptsCommand.getInstance());
+    availableCommands.put("/standard", SetGridSizeCommand.getInstance());
+    availableCommands.put("/large", SetGridSizeCommand.getInstance());
+    availableCommands.put("/extralarge", SetGridSizeCommand.getInstance());
+    availableCommands.put("/tentativi", AttemptsCommand.getInstance());
+    String regex = "^[a-z]-[1-9][0-9]*$";
+    Pattern pattern = Pattern.compile(regex);
+    Matcher matcher;
+    GameManager.setArgs(args);
+    ParamControl.initUI();
     do {
       GameManager.setMatch(new Match());
       GameManager.setMatchDifficulty(Util.DIFFICULTY_MEDIUM);
       GameManager.setNextGridSizeName(Util.STANDARD_GRID_SIZE);
-      if(firstTime) {
-        GameManager.setArgs(args);
-        firstTime = false;
-      }else{
-        GameManager.setArgs(new String[]{});
-      }
-      HashMap<String, Command> availableCommands = new HashMap<>();
-      availableCommands.put("/esci", ExitCommand.getInstance());
-      availableCommands.put("/facile", SetDifficultyCommand.getInstance());
-      availableCommands.put("/medio", SetDifficultyCommand.getInstance());
-      availableCommands.put("/difficile", SetDifficultyCommand.getInstance());
-      availableCommands.put("/mostralivello", ShowLevelCommand.getInstance());
-      availableCommands.put("/mostranavi", ShowShipCommand.getInstance());
-      availableCommands.put("/gioca", StartMatchCommand.getInstance());
-      availableCommands.put("/svelagriglia", RevealGridCommand.getInstance());
-      availableCommands.put("/help", HelpCommand.getInstance());
-      availableCommands.put("/tempo", SetTimeCommand.getInstance());
-      availableCommands.put("/mostratempo", ShowTimeCommand.getInstance());
-      availableCommands.put("/mostratentativi", ShowAttemptsCommand.getInstance());
-      availableCommands.put("/standard", SetGridSizeCommand.getInstance());
-      availableCommands.put("/large", SetGridSizeCommand.getInstance());
-      availableCommands.put("/extralarge", SetGridSizeCommand.getInstance());
-      availableCommands.put("/tentativi", AttemptsCommand.getInstance());
-      ParamControl.initUI();
       shutDown = 0;
       while (shutDown == 0) {
         String[] command = InputBoundary.getCommand().trim().replaceAll(" +", " ").split(" ");
@@ -104,10 +101,12 @@ public final class GeneralControl {
       switch (shutDown) {
         case 1 -> MatchBoundary.win();
         case 2 -> MatchBoundary.outOfAttempts();
-        case 3 -> MatchBoundary.outOfTime();
-        case 4 -> {/*todo: implementare abbandona partita*/}
+        case 3 -> {/*todo: implementare abbandona partita*/}
         default -> {}
       }
-    } while (shutDown != 5);
+      if(shutDown != -1) {
+        MatchBoundary.playAgain();
+      }
+    } while (shutDown != -1);
   }
 }
