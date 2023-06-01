@@ -3,7 +3,12 @@ package it.uniba.nygaard.game.entity;
 import it.uniba.nygaard.game.Util;
 import it.uniba.nygaard.game.entity.grids.CellsGrid;
 import it.uniba.nygaard.game.entity.grids.CharactersGrid;
-import it.uniba.nygaard.game.entity.ships.*;
+import it.uniba.nygaard.game.entity.ships.Coordinate;
+import it.uniba.nygaard.game.entity.ships.Destroyer;
+import it.uniba.nygaard.game.entity.ships.AircraftCarrier;
+import it.uniba.nygaard.game.entity.ships.Battleship;
+import it.uniba.nygaard.game.entity.ships.Cruiser;
+import it.uniba.nygaard.game.entity.ships.Ship;
 
 import java.util.Random;
 
@@ -465,11 +470,14 @@ public final class Match {
    *
    * @param row    Riga della cella da colpire.
    * @param column Colonna della cella da colpire.
-   * @return 0 se la cella è vuota o è già stata colpita, 1 se la cella è stata colpita ma non affondata, 2 se la cella è stata colpita e affondata.
+   * @return 0 se la cella è vuota o è già stata colpita,
+   *         1 se la cella è stata colpita ma non affondata,
+   *         2 se la cella è stata colpita e affondata.
    */
-  public int hit(int row, int column) {
+  public int hit(final int row, final int column) {
     usedAttempts++;
-    if (defenseGrid.getCellCharacter(row, column) == Util.SHIP_CHARACTER && attackGrid.getCharacter(row, column) == Util.SEA_CHARACTER) {
+    if (defenseGrid.getCellCharacter(row, column) == Util.SHIP_CHARACTER
+        && attackGrid.getCharacter(row, column) == Util.SEA_CHARACTER) {
       ships[defenseGrid.getCellShipIndex(row, column)].hit();
       if (ships[defenseGrid.getCellShipIndex(row, column)].getHp() == 0) {
         sunkShip(defenseGrid.getCellShipIndex(row, column));
@@ -496,7 +504,7 @@ public final class Match {
    *
    * @param index Indice della nave di cui cambiare i caratteri.
    */
-  private void sunkShip(int index) {
+  private void sunkShip(final int index) {
     for (int j = Util.MIN_ROWS; j <= this.attackGrid.getMaxRows(); j++) {
       for (int k = Util.MIN_COLUMN; k <= this.attackGrid.getMaxColumn(); k++) {
         if (defenseGrid.getCellShipIndex(j - 1, k - Util.INT_TO_CHAR - 1) == index) {
