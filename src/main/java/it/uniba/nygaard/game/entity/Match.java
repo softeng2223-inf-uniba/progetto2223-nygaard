@@ -460,4 +460,13 @@ public final class Match {
       }
     }
   }
+
+  public boolean win() {
+    for(int i = 0; i < Util.MAX_SHIP; i++){
+      if(ships[i].getHp() != 0){
+        return false;
+      }
+    }
+    return true;
+  }
 }
