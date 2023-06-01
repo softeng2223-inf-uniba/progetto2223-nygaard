@@ -55,7 +55,7 @@ public final class GeneralControl {
    *
    * @param args Argomenti passati al programma.
    */
-  public static void startGame(String[] args) {
+  public static void startGame(final String[] args) {
     HashMap<String, Command> availableCommands = new HashMap<>();
     availableCommands.put("/esci", ExitCommand.getInstance());
     availableCommands.put("/facile", SetDifficultyCommand.getInstance());
@@ -103,7 +103,7 @@ public final class GeneralControl {
       switch (shutDown) {
         case 1 -> MatchBoundary.win();
         case 2 -> MatchBoundary.outOfAttempts();
-        case 3 -> {/*todo: implementare abbandona partita*/}
+        case 3 -> { /*todo: implementare abbandona partita*/ }
         default -> {
         }
       }
