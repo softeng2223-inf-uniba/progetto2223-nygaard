@@ -4,6 +4,7 @@ import it.uniba.nygaard.game.Util;
 import it.uniba.nygaard.game.boundary.MatchBoundary;
 import it.uniba.nygaard.game.boundary.ShowGridBoundary;
 import it.uniba.nygaard.game.entity.Match;
+import it.uniba.nygaard.game.entity.TimeCounter;
 
 
 /**
@@ -56,7 +57,11 @@ final class StartMatchCommand extends Command {
       MatchBoundary.alreadyInGame();
       return;
     }
-    p.setStartTime(System.currentTimeMillis());
+    if(p.getMaxTime()!=Util.DEFAULT_TIME){
+      p.setStartTime(System.currentTimeMillis());
+      Thread t = new Thread(new TimeCounter());
+      t.start();
+    }
     p.setInGame(true);
     p.initializeShips(Util.MIN_SHIP);
     ShowGridBoundary.printGrid(p.getAttackGrid());
