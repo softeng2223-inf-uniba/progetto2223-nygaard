@@ -87,9 +87,10 @@ public final class GeneralControl {
       while (shutDown == 0) {
         String[] command = InputBoundary.getCommand().trim().replaceAll(" +", " ").split(" ");
         InputBoundary.resetColor();
-        String regex = "^[a-z]-[1-9][0-9]*$";
-        Pattern pattern = Pattern.compile(regex);
-        Matcher matcher = pattern.matcher(command[0]);
+        if(shutDown != 0) {
+          break;
+        }
+        matcher = pattern.matcher(command[0]);
         if (matcher.matches()) {
           HitCommand.getInstance().executeCommand(command);
           continue;
