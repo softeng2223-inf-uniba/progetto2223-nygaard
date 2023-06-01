@@ -51,11 +51,18 @@ public class HitCommand extends Command {
     }
     ShowAttemptsBoundary.showAttempts(GameManager.getMatch().getUsedAttempts(), GameManager.getMatch().getFailedAttempts(), GameManager.getMatch().getAttempts(GameManager.getMatch().getDifficulty()));
     if(GameManager.getMatch().getMaxTime() != Util.DEFAULT_TIME) {
-        TimeBoundary.showTime(GameManager.getMatch().getStartTime());
+      TimeBoundary.showTime(GameManager.getMatch().getStartTime());
     }else{
       TimeBoundary.infiniteTime();
     }
-
+    if(GameManager.getMatch().win()) {
+      GeneralControl.setShutDown(1);
+      return;
+    }
+    if(GameManager.getMatch().getFailedAttempts()==GameManager.getMatch().getAttempts(GameManager.getMatch().getDifficulty())) {
+      GeneralControl.setShutDown(2);
+      return;
+    }
   }
 
 }
