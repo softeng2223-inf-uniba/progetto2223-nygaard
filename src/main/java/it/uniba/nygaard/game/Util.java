@@ -58,6 +58,12 @@ public final class Util {
   public static final char MIN_COLUMN = 'A';
   public static final int INT_TO_CHAR = 64;
   public static final int BORDER_ADDER = 9;
+  public static final int NOT_TERMINATION_CODE = 0;
+  public static final int WIN_TERMINATION_CODE = 1;
+  public static final int OUT_OF_ATTEMPTS_TERMINATION_CODE = 2;
+  public static final int LEFT_TERMINATION_CODE = 3;
+  public static final int OUT_OF_TIME_TERMINATION_CODE = 4;
+  public static final int QUIT_TERMINATION_CODE = -1;
 
   /**
    * <h3> Costruttore </h3>
