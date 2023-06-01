@@ -15,7 +15,7 @@ import java.util.regex.Pattern;
  * il numero di tentativi indipendentemente dalla difficoltà.
  * </p>
  */
-public final class AttemptsCommand extends Command {
+final class AttemptsCommand extends Command {
 
     /**
      * <h3> instance </h3>

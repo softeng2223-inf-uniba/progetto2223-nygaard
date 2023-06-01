@@ -11,7 +11,7 @@ import it.uniba.nygaard.game.boundary.TimeBoundary;
  * </p>
  * @see Command
  */
-public final class ShowTimeCommand extends Command {
+final class ShowTimeCommand extends Command {
     private static ShowTimeCommand instance = new ShowTimeCommand();
     /**
      * <h3> Costruttore </h3>

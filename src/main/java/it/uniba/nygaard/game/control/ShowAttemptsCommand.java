@@ -12,7 +12,7 @@ import it.uniba.nygaard.game.entity.Match;
  *
  * @see Command
  */
-public final class ShowAttemptsCommand extends Command {
+final class ShowAttemptsCommand extends Command {
     /**
      * <h3> instance </h3>
      * <p>

@@ -11,7 +11,7 @@ import it.uniba.nygaard.game.control.GeneralControl;
  * e in tal caso esegue le funzioni associate.
  * </p>
  */
-public final class App {
+final class App {
 
   App() {
   }

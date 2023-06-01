@@ -10,7 +10,7 @@ import it.uniba.nygaard.game.boundary.HelpBoundary;
  * </p>
  * @see Command
  */
-public final class HelpCommand extends Command {
+final class HelpCommand extends Command {
   /**
    * <h3> instance </h3>
    * <p>

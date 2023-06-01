@@ -4,7 +4,7 @@ import it.uniba.nygaard.game.Util;
 import it.uniba.nygaard.game.control.GameManager;
 import it.uniba.nygaard.game.control.GeneralControl;
 
-public class TimeCounter extends Thread{
+class TimeCounter extends Thread {
   public void run() {
     while (true) {
       if (GameManager.getMatch().getInGame()) {

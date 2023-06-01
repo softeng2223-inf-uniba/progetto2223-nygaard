@@ -3,7 +3,7 @@ package it.uniba.nygaard.game.control;
 import it.uniba.nygaard.game.Util;
 import it.uniba.nygaard.game.boundary.*;
 
-public class HitCommand extends Command {
+class HitCommand extends Command {
 
   private static HitCommand instance = new HitCommand();
 
