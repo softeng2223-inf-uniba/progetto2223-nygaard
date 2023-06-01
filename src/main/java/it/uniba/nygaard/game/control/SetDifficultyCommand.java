@@ -11,11 +11,13 @@ import java.util.regex.Pattern;
  * << Control >>
  * <h2> SetDifficultyCommand </h2>
  * <p>
- *     La classe SetDifficultyCommand rappresenta il controllo per impostare la difficoltà.
+ * La classe SetDifficultyCommand rappresenta il controllo per impostare la difficoltà.
  * </p>
+ *
  * @see Command
  */
 final class SetDifficultyCommand extends Command {
+
   /**
    * <h3> Costruttore </h3>
    * <p>
@@ -47,9 +49,10 @@ final class SetDifficultyCommand extends Command {
   /**
    * <h3> executeCommand </h3>
    * <p>
-   *   Esegue il comando per impostare una difficoltà
-   *   o un nuovo numero di tentativi per una delle difficoltà.
+   * Esegue il comando per impostare una difficoltà
+   * o un nuovo numero di tentativi per una delle difficoltà.
    * </p>
+   *
    * @param command Comando da eseguire.
    */
   public void executeCommand(final String[] command) {
@@ -57,12 +60,12 @@ final class SetDifficultyCommand extends Command {
       return;
     }
     if (GameManager.getMatch().getInGame()) {
-        SetDifficultyBoundary.alreadyInGame(command.length == 1);
+      SetDifficultyBoundary.alreadyInGame(command.length == 1);
       return;
     }
     int difficultyInvolved = command[0].equals("/facile") ? Util.DIFFICULTY_EASY
-            : command[0].equals("/medio") ? Util.DIFFICULTY_MEDIUM
-            : Util.DIFFICULTY_HARD;
+        : command[0].equals("/medio") ? Util.DIFFICULTY_MEDIUM
+        : Util.DIFFICULTY_HARD;
 
     if (command.length == 1) {
       GameManager.setMatchDifficulty(difficultyInvolved);
@@ -89,8 +92,8 @@ final class SetDifficultyCommand extends Command {
   /**
    * <h3> setDifficulty </h3>
    * <p>
-   *     Imposta la difficoltà se questa non è già impostata,
-   *     altrimenti chiede all'utente se vuole cambiare difficoltà.
+   * Imposta la difficoltà se questa non è già impostata,
+   * altrimenti chiede all'utente se vuole cambiare difficoltà.
    * </p>
    */
   private void setNewMatchDifficulty() {

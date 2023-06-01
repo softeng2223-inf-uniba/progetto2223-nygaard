@@ -49,20 +49,15 @@ public final class Util {
   public static final String RESET = "\u001B[0m";
   public static final String BOLD = "\u001B[1m";
   public static final String ITALIC = "\u001B[3m";
-  public static final int  DEFAULT_TIME = -1;
+  public static final int DEFAULT_TIME = -1;
   public static final long ONE_MINUTE = 60000;
-
   public static final int STANDARD_GRID_SIZE = 10;
   public static final int LARGE_GRID_SIZE = 18;
   public static final int EXTRA_LARGE_GRID_SIZE = 26;
-
-
   public static final int MIN_ROWS = 1;
   public static final char MIN_COLUMN = 'A';
-
   public static final int INT_TO_CHAR = 64;
   public static final int BORDER_ADDER = 9;
-
 
   /**
    * <h3> Costruttore </h3>
@@ -72,5 +67,5 @@ public final class Util {
    */
   private Util() {
   }
-}
 
+}

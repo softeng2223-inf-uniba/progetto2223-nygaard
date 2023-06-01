@@ -12,12 +12,12 @@ import it.uniba.nygaard.game.Util;
  */
 public final class CellsGrid extends Grid {
 
-    /**
-     * <h3> grid </h3>
-     * <p>
-     * Griglia di celle carattere-intero.
-     * </p>
-     */
+  /**
+   * <h3> grid </h3>
+   * <p>
+   * Griglia di celle carattere-intero.
+   * </p>
+   */
   private final Cell[][] grid;
 
   /**
@@ -37,6 +37,7 @@ public final class CellsGrid extends Grid {
       }
     }
   }
+
   /**
    * <h3> setCellCharacter </h3>
    * <p>
@@ -64,6 +65,7 @@ public final class CellsGrid extends Grid {
   public void setCellShipIndex(final int row, final int column, final int shipIndex) {
     grid[row][column].setShipIndex(shipIndex);
   }
+
   /**
    * <h3> getCellCharacter </h3>
    * <p>

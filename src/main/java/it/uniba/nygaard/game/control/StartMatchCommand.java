@@ -10,41 +10,47 @@ import it.uniba.nygaard.game.entity.Match;
  * << Control >>
  * <h2> StartMatchCommand </h2>
  * <p>
- *     La classe StartMatchCommand rappresenta il comando per iniziare la partita.
+ * La classe StartMatchCommand rappresenta il comando per iniziare la partita.
  * </p>
+ *
  * @see Command
  */
 final class StartMatchCommand extends Command {
+
   /**
    * <h3> instance </h3>
    * <p>
-   *     Istanza di StartMatchCommand.
+   * Istanza di StartMatchCommand.
    * </p>
    */
   private static StartMatchCommand instance = new StartMatchCommand();
+
   /**
    * <h3> Costruttore </h3>
    * <p>
-   *     Costruttore della classe StartMatchCommand.
+   * Costruttore della classe StartMatchCommand.
    * </p>
    */
   private StartMatchCommand() {
     setParamNumber(1);
   }
+
   /**
    * <h3> getInstance </h3>
    * <p>
-   *    Restituisce l'istanza di StartMatchCommand.
+   * Restituisce l'istanza di StartMatchCommand.
    * </p>
    */
   static StartMatchCommand getInstance() {
     return instance;
   }
+
   /**
    * <h3> executeCommand </h3>
    * <p>
-   *     Esegue il comando per iniziare la partita.
+   * Esegue il comando per iniziare la partita.
    * </p>
+   *
    * @param command Comando da eseguire.
    */
   public void executeCommand(final String[] command) {
@@ -56,7 +62,7 @@ final class StartMatchCommand extends Command {
       MatchBoundary.alreadyInGame();
       return;
     }
-    if(p.getMaxTime()!=Util.DEFAULT_TIME){
+    if (p.getMaxTime() != Util.DEFAULT_TIME) {
       p.setStartTime(System.currentTimeMillis());
       new TimeCounter().start();
     }

@@ -43,23 +43,23 @@ class HitCommand extends Command {
     }
     ShowGridBoundary.printGrid(GameManager.getMatch().getAttackGrid());
     switch (res) {
-        case 0 -> HitBoundary.miss();
-        case 1 -> HitBoundary.hit();
-        case 2 -> HitBoundary.sunk();
-        default -> {
-        }
+      case 0 -> HitBoundary.miss();
+      case 1 -> HitBoundary.hit();
+      case 2 -> HitBoundary.sunk();
+      default -> {
+      }
     }
     ShowAttemptsBoundary.showAttempts(GameManager.getMatch().getUsedAttempts(), GameManager.getMatch().getFailedAttempts(), GameManager.getMatch().getAttempts(GameManager.getMatch().getDifficulty()));
-    if(GameManager.getMatch().getMaxTime() != Util.DEFAULT_TIME) {
+    if (GameManager.getMatch().getMaxTime() != Util.DEFAULT_TIME) {
       TimeBoundary.showTime(GameManager.getMatch().getStartTime());
-    }else{
+    } else {
       TimeBoundary.infiniteTime();
     }
-    if(GameManager.getMatch().win()) {
+    if (GameManager.getMatch().win()) {
       GeneralControl.setShutDown(1);
       return;
     }
-    if(GameManager.getMatch().getFailedAttempts()==GameManager.getMatch().getAttempts(GameManager.getMatch().getDifficulty())) {
+    if (GameManager.getMatch().getFailedAttempts() == GameManager.getMatch().getAttempts(GameManager.getMatch().getDifficulty())) {
       GeneralControl.setShutDown(2);
       return;
     }

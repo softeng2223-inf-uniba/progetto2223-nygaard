@@ -9,6 +9,7 @@ import it.uniba.nygaard.game.Util;
  * </p>
  */
 class Cell {
+
   /**
    * <h3> character </h3>
    * <p>
@@ -16,12 +17,12 @@ class Cell {
    * </p>
    */
   private char character;
-    /**
-     * <h3> shipIndex </h3>
-     * <p>
-     * Indice della nave della cella.
-     * </p>
-     */
+  /**
+   * <h3> shipIndex </h3>
+   * <p>
+   * Indice della nave della cella.
+   * </p>
+   */
   private int shipIndex;
 
   /**

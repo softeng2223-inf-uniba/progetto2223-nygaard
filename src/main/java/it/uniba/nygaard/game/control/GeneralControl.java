@@ -25,6 +25,7 @@ public final class GeneralControl {
    * </p>
    */
   private static int shutDown = 0;
+
   /**
    * <h3> Costruttore </h3>
    * <p>
@@ -40,11 +41,12 @@ public final class GeneralControl {
    * Imposta il valore di shutDown.
    * </p>
    *
-   * @param  value Nuovo valore di shutDown.
+   * @param value Nuovo valore di shutDown.
    */
   public static void setShutDown(final int value) {
     GeneralControl.shutDown = value;
   }
+
   /**
    * <h3> startGame </h3>
    * <p>
@@ -84,7 +86,7 @@ public final class GeneralControl {
       while (shutDown == 0) {
         String[] command = InputBoundary.getCommand().trim().replaceAll(" +", " ").split(" ");
         InputBoundary.resetColor();
-        if(shutDown != 0) {
+        if (shutDown != 0) {
           break;
         }
         matcher = pattern.matcher(command[0]);
@@ -102,9 +104,10 @@ public final class GeneralControl {
         case 1 -> MatchBoundary.win();
         case 2 -> MatchBoundary.outOfAttempts();
         case 3 -> {/*todo: implementare abbandona partita*/}
-        default -> {}
+        default -> {
+        }
       }
-      if(shutDown != -1) {
+      if (shutDown != -1) {
         MatchBoundary.playAgain();
       }
     } while (shutDown != -1);

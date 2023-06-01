@@ -7,68 +7,74 @@ import it.uniba.nygaard.game.boundary.TimeBoundary;
  * <<Control>>
  * <h2>SetTimeCommand</h2>
  * <p>
- *     La classe SetTimeCommand rappresenta il comando di impostazione del tempo.
+ * La classe SetTimeCommand rappresenta il comando di impostazione del tempo.
  * </p>
+ *
  * @see Command
  */
 final class SetTimeCommand extends Command {
+
   /**
    * <h3> instance </h3>
    * <p>
-   *     Istanza di SetTimeCommand.
+   * Istanza di SetTimeCommand.
    * </p>
    */
-    private static SetTimeCommand instance = new SetTimeCommand();
-    /**
-     * <h3> Costruttore </h3>
-     * <p>
-     *     Costruttore della classe SetTimeCommand.
-     * </p>
-     */
-    private SetTimeCommand() {
-        setParamNumber(2);
+  private static SetTimeCommand instance = new SetTimeCommand();
+
+  /**
+   * <h3> Costruttore </h3>
+   * <p>
+   * Costruttore della classe SetTimeCommand.
+   * </p>
+   */
+  private SetTimeCommand() {
+    setParamNumber(2);
+  }
+
+  /**
+   * <h3> getInstance </h3>
+   * <p>
+   * Restituisce l'istanza di SetTimeCommand.
+   * </p>
+   */
+  public static SetTimeCommand getInstance() {
+    return instance;
+  }
+
+  /**
+   * <h3> executeCommand </h3>
+   * <p>
+   * Esegue il comando di impostazione del tempo se non si è in partita.
+   * Se il tempo non è valido verrà mostrato un messaggio di errore.
+   * </p>
+   *
+   * @param command Comando da eseguire.
+   */
+  public void executeCommand(final String[] command) {
+    if (GameManager.getMatch().getInGame()) {
+      TimeBoundary.notInGame();
+      return;
     }
-    /**
-     * <h3> getInstance </h3>
-     * <p>
-     *     Restituisce l'istanza di SetTimeCommand.
-     * </p>
-     */
-    public static SetTimeCommand getInstance() {
-        return instance;
+    int maxTime = 0;
+    if (invalidNumber(command, " <numero> (intero positivo)")) {
+      return;
     }
-    /**
-     * <h3> executeCommand </h3>
-     * <p>
-     *     Esegue il comando di impostazione del tempo se non si è in partita.
-     *     Se il tempo non è valido verrà mostrato un messaggio di errore.
-     * </p>
-     * @param command Comando da eseguire.
-     */
-    public void executeCommand(final String[] command) {
-      if (GameManager.getMatch().getInGame()) {
-        TimeBoundary.notInGame();
+    if (command.length < 2) {
+      InputBoundary.howToUse("/tempo", " <numero> (intero positivo)");
+      return;
+    }
+    try {
+      maxTime = Integer.parseInt(command[1]);
+      if (maxTime <= 0) {
+        TimeBoundary.errorTime();
         return;
       }
-       int maxTime = 0;
-        if (invalidNumber(command, " <numero> (intero positivo)")) {
-            return;
-        }
-        if (command.length < 2) {
-          InputBoundary.howToUse("/tempo", " <numero> (intero positivo)");
-          return;
-        }
-        try {
-            maxTime = Integer.parseInt(command[1]);
-            if (maxTime <= 0) {
-                TimeBoundary.errorTime();
-                return;
-            }
-        } catch (NumberFormatException e) {
-          TimeBoundary.errorTime();
-          return;
-        }
-        GameManager.getMatch().setMaxTime(maxTime);
-        TimeBoundary.operationDone();
-        }
+    } catch (NumberFormatException e) {
+      TimeBoundary.errorTime();
+      return;
+    }
+    GameManager.getMatch().setMaxTime(maxTime);
+    TimeBoundary.operationDone();
+  }
 }

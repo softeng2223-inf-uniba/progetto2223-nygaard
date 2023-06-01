@@ -1,4 +1,5 @@
 package it.uniba.nygaard.game.entity.ships;
+
 import it.uniba.nygaard.game.Util;
 import it.uniba.nygaard.game.entity.grids.CellsGrid;
 
@@ -9,27 +10,29 @@ import it.uniba.nygaard.game.entity.grids.CellsGrid;
  * </p>
  */
 public abstract class Ship {
+
   /**
    * <h3> coord </h3>
    * <p>
    * Coordinate della nave.
    * </p>
+   *
    * @see Coordinate
    */
   private final Coordinate coord;
-    /**
-     * <h3> direction </h3>
-     * <p>
-     * Direzione della nave.
-     * </p>
-     */
+  /**
+   * <h3> direction </h3>
+   * <p>
+   * Direzione della nave.
+   * </p>
+   */
   private boolean direction;
-    /**
-     * <h3> hp </h3>
-     * <p>
-     * Hp della nave.
-     * </p>
-     */
+  /**
+   * <h3> hp </h3>
+   * <p>
+   * Hp della nave.
+   * </p>
+   */
   private int hp;
 
   /**
@@ -134,6 +137,7 @@ public abstract class Ship {
   public void hit() {
     this.hp--;
   }
+
   /**
    * <h3> outOfMap </h3>
    * <p>

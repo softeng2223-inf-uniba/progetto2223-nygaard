@@ -18,6 +18,7 @@ import java.util.Random;
  * </p>
  */
 public final class Match {
+
   /**
    * <h3> inGame </h3>
    * <p>
@@ -147,11 +148,13 @@ public final class Match {
     this.attackGrid = new CharactersGrid(Util.STANDARD_GRID_SIZE);
     maxTime = Util.DEFAULT_TIME;
   }
+
   /**
    * <h3> getInGame </h3>
    * <p>
    * Restituisce lo stato della partita.
    * </p>
+   *
    * @return inGame Stato della partita.
    */
   public boolean getInGame() {
@@ -163,36 +166,43 @@ public final class Match {
    * <p>
    * Restituisce la difficoltà della partita.
    * </p>
+   *
    * @return difficulty Difficoltà della partita.
    */
   public int getDifficulty() {
     return this.difficulty;
   }
+
   /**
    * <h3> getGridSize </h3>
    * <p>
    * Restituisce la dimensione delle griglie.
    * </p>
+   *
    * @return Dimensione delle griglie.
    */
   public int getGridSize() {
     return this.gridSize;
   }
+
   /**
    * <h3> setGridSize </h3>
    * <p>
    * Imposta la dimensione delle griglie.
    * </p>
+   *
    * @param newGridSize Dimensione delle griglie.
    */
   public void setGridSize(final int newGridSize) {
     this.gridSize = newGridSize;
   }
+
   /**
    * <h3> resizeGrids </h3>
    * <p>
    * Ridimensiona le griglie di gioco.
    * </p>
+   *
    * @param newSize Nuova dimensione delle griglie.
    */
   public void resizeGrids(final int newSize) {
@@ -208,22 +218,26 @@ public final class Match {
     this.attackGrid.setHeadingEdgeWidth(newSize + Util.BORDER_ADDER);
     this.defenseGrid.setHeadingEdgeWidth(newSize + Util.BORDER_ADDER);
   }
+
   /**
    * <h3> getDifficultyNames </h3>
    * <p>
    * Restituisce i nomi delle difficoltà.
    * </p>
+   *
    * @param index Indice della difficoltà.
    * @return difficultyNames Nomi delle difficoltà.
    */
   public String getDifficultyNames(final int index) {
     return this.difficultyNames[index];
   }
+
   /**
    * <h3> getAttempts </h3>
    * <p>
    * Restituisce il numero di tentativi per ogni difficoltà.
    * </p>
+   *
    * @param index Indice dei tentativi.
    * @return attempts Tentativi per ogni difficoltà.
    */
@@ -236,6 +250,7 @@ public final class Match {
    * <p>
    * Imposta il numero di tentativi per una specifica difficoltà.
    * </p>
+   *
    * @param index Indice dei tentativi
    * @param value Nuovo numero di tentativi falliti per la difficoltà.
    */
@@ -246,21 +261,25 @@ public final class Match {
   public int getFailedAttempts() {
     return this.failedAttempts;
   }
+
   /**
    * <h3> getUsedAttempts </h3>
    * <p>
    * Restituisce il numero di tentativi usati.
    * </p>
+   *
    * @return usedAttempts Tentativi usati.
    */
   public int getUsedAttempts() {
     return this.usedAttempts;
   }
+
   /**
    * <h3> getDefenseGrid </h3>
    * <p>
    * Restituisce la griglia di difesa della partita.
    * </p>
+   *
    * @return defenseGrid Griglia di difesa della partita.
    */
   public String getDefenseGrid() {
@@ -278,6 +297,7 @@ public final class Match {
   public String getAttackGrid() {
     return this.attackGrid.toString();
   }
+
   /**
    * <h3> setDifficulty </h3>
    * <p>
@@ -301,6 +321,7 @@ public final class Match {
   public void setInGame(final boolean newInGame) {
     this.inGame = newInGame;
   }
+
   /**
    * <h3> getMaxTime </h3>
    * <p>
@@ -312,6 +333,7 @@ public final class Match {
   public int getMaxTime() {
     return maxTime;
   }
+
   /**
    * <h3> setMaxTime </h3>
    * <p>
@@ -323,16 +345,19 @@ public final class Match {
   public void setMaxTime(final int newMaxTime) {
     this.maxTime = newMaxTime;
   }
+
   /**
    * <h3> getStartTime </h3>
    * <p>
    * Restituisce il tempo di inizio della partita.
    * </p>
+   *
    * @return startTime Tempo di inizio della partita.
    */
   public long getStartTime() {
     return startTime;
   }
+
   /**
    * <h3> setStartTime </h3>
    * <p>
@@ -344,6 +369,7 @@ public final class Match {
   public void setStartTime(final long newStartTime) {
     this.startTime = newStartTime;
   }
+
   /**
    * <h3> initializeShips </h3>
    * <p>
@@ -385,6 +411,7 @@ public final class Match {
     }
     return false;
   }
+
   /**
    * <h3> placeShip </h3>
    * <p>
@@ -410,6 +437,7 @@ public final class Match {
       }
     }
   }
+
   /**
    * <h3> removeShip </h3>
    * <p>
@@ -436,13 +464,13 @@ public final class Match {
       if (ships[defenseGrid.getCellShipIndex(row, column)].getHp() == 0) {
         sunkShip(defenseGrid.getCellShipIndex(row, column));
         return 2;
-      }else{
+      } else {
         attackGrid.setCharacter(row, column, Util.HITTED_SHIP_CHARACTER);
         return 1;
       }
     } else {
       failedAttempts++;
-      if(defenseGrid.getCellCharacter(row, column) == Util.SEA_CHARACTER){
+      if (defenseGrid.getCellCharacter(row, column) == Util.SEA_CHARACTER) {
         attackGrid.setCharacter(row, column, Util.HITTED_SEA_CHARACTER);
       }
       return 0;
@@ -460,8 +488,8 @@ public final class Match {
   }
 
   public boolean win() {
-    for(int i = 0; i < Util.MAX_SHIP; i++){
-      if(ships[i].getHp() != 0){
+    for (int i = 0; i < Util.MAX_SHIP; i++) {
+      if (ships[i].getHp() != 0) {
         return false;
       }
     }
