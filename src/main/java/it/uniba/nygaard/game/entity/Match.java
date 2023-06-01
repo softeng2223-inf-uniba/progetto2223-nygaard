@@ -481,17 +481,17 @@ public final class Match {
       ships[defenseGrid.getCellShipIndex(row, column)].hit();
       if (ships[defenseGrid.getCellShipIndex(row, column)].getHp() == 0) {
         sunkShip(defenseGrid.getCellShipIndex(row, column));
-        return 2;
+        return Util.SANK_CODE;
       } else {
         attackGrid.setCharacter(row, column, Util.HITTED_SHIP_CHARACTER);
-        return 1;
+        return Util.HITTED_CODE;
       }
     } else {
       failedAttempts++;
       if (defenseGrid.getCellCharacter(row, column) == Util.SEA_CHARACTER) {
         attackGrid.setCharacter(row, column, Util.HITTED_SEA_CHARACTER);
       }
-      return 0;
+      return Util.WATER_CODE;
     }
   }
 

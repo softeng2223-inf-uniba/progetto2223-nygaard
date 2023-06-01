@@ -49,9 +49,9 @@ final class HitCommand extends Command {
     }
     ShowGridBoundary.printGrid(p.getAttackGrid());
     switch (res) {
-      case 0 -> HitBoundary.miss();
-      case 1 -> HitBoundary.hit();
-      case 2 -> HitBoundary.sunk();
+      case Util.WATER_CODE -> HitBoundary.miss();
+      case Util.HITTED_CODE -> HitBoundary.hit();
+      case Util.SANK_CODE -> HitBoundary.sunk();
       default -> {
       }
     }
