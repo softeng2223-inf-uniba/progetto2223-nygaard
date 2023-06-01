@@ -78,7 +78,7 @@ public final class GameManager {
    * Imposta la partita in corso.
    * </p>
    *
-   * @param newMatch
+   * @param newMatch Nuova partita in corso.
    */
   static void setMatch(final Match newMatch) {
     GameManager.match = newMatch;
