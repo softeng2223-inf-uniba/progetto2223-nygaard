@@ -431,7 +431,6 @@ public final class Match {
 
   public int hit(int row, int column) {
     usedAttempts++;
-    System.out.println("row=" + row + " column=" + column);
     if (defenseGrid.getCellCharacter(row, column) == Util.SHIP_CHARACTER && attackGrid.getCharacter(row, column) == Util.SEA_CHARACTER) {
       ships[defenseGrid.getCellShipIndex(row, column)].hit();
       if (ships[defenseGrid.getCellShipIndex(row, column)].getHp() == 0) {
@@ -453,7 +452,6 @@ public final class Match {
   private void sunkShip(int index) {
     for (int j = Util.MIN_ROWS; j <= this.attackGrid.getMaxRows(); j++) {
       for (int k = Util.MIN_COLUMN; k <= this.attackGrid.getMaxColumn(); k++) {
-        System.out.println("j=" + j + " k=" + k);
         if (defenseGrid.getCellShipIndex(j - 1, k - Util.INT_TO_CHAR - 1) == index) {
           attackGrid.setCharacter(j - 1, k - Util.INT_TO_CHAR - 1, Util.SUNK_SHIP_CHARACTER);
         }
