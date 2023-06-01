@@ -457,6 +457,16 @@ public final class Match {
     }
   }
 
+  /**
+   * <h3> hit </h3>
+   * <p>
+   * Il metodo hit colpisce la cella di coordinate (row, column).
+   * </p>
+   *
+   * @param row    Riga della cella da colpire.
+   * @param column Colonna della cella da colpire.
+   * @return 0 se la cella è vuota o è già stata colpita, 1 se la cella è stata colpita ma non affondata, 2 se la cella è stata colpita e affondata.
+   */
   public int hit(int row, int column) {
     usedAttempts++;
     if (defenseGrid.getCellCharacter(row, column) == Util.SHIP_CHARACTER && attackGrid.getCharacter(row, column) == Util.SEA_CHARACTER) {
@@ -477,6 +487,15 @@ public final class Match {
     }
   }
 
+  /**
+   * <h3> sunkShip </h3>
+   * <p>
+   * Il metodo sunkShip cambia carattere a tutte le celle
+   * della i-esima nave sulla griglia di attacco.
+   * </p>
+   *
+   * @param index Indice della nave di cui cambiare i caratteri.
+   */
   private void sunkShip(int index) {
     for (int j = Util.MIN_ROWS; j <= this.attackGrid.getMaxRows(); j++) {
       for (int k = Util.MIN_COLUMN; k <= this.attackGrid.getMaxColumn(); k++) {
@@ -487,6 +506,14 @@ public final class Match {
     }
   }
 
+  /**
+   * <h3> win </h3>
+   * <p>
+   * Il metodo win controlla se tutte le navi sono state affondate.
+   * </p>
+   *
+   * @return true se tutte le navi sono state affondate, false altrimenti.
+   */
   public boolean win() {
     for (int i = 0; i < Util.MAX_SHIP; i++) {
       if (ships[i].getHp() != 0) {
