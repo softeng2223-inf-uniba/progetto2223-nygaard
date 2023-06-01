@@ -9,6 +9,8 @@ import java.util.HashMap;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import static java.lang.Thread.sleep;
+
 /**
  * << Control >>
  * <h2> GeneralControl </h2>
@@ -24,7 +26,7 @@ public final class GeneralControl {
    * Termina il gioco se true.
    * </p>
    */
-  private static int shutDown = 0;
+  private volatile static int shutDown = 0;
 
   /**
    * <h3> Costruttore </h3>

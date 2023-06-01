@@ -23,14 +23,10 @@ class TimeCounter extends Thread {
    */
   public void run() {
     Match p = GameManager.getMatch();
-    while (true) {
-      if (p.getInGame()) {
-        if (System.currentTimeMillis() - p.getStartTime() > p.getMaxTime() * Util.ONE_MINUTE) {
-          GeneralControl.setShutDown(Util.OUT_OF_TIME_TERMINATION_CODE);
-          MatchBoundary.timeOut();
-          break;
-        }
-      } else {
+    while (GeneralControl.getShutDown() == Util.NOT_TERMINATION_CODE) {
+      if (System.currentTimeMillis() - p.getStartTime() > p.getMaxTime() * Util.ONE_MINUTE) {
+        GeneralControl.setShutDown(Util.OUT_OF_TIME_TERMINATION_CODE);
+        MatchBoundary.timeOut();
         break;
       }
     }
