@@ -43,7 +43,7 @@ public final class GeneralControl {
    *
    * @param  value Nuovo valore di shutDown.
    */
-  static void setShutDown(final int value) {
+  public static void setShutDown(final int value) {
     GeneralControl.shutDown = value;
   }
   /**
