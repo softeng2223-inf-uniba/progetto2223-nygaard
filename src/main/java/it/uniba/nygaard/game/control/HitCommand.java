@@ -1,9 +1,14 @@
 package it.uniba.nygaard.game.control;
 
 import it.uniba.nygaard.game.Util;
-import it.uniba.nygaard.game.boundary.*;
+import it.uniba.nygaard.game.boundary.TimeBoundary;
+import it.uniba.nygaard.game.boundary.HitBoundary;
+import it.uniba.nygaard.game.boundary.InputBoundary;
+import it.uniba.nygaard.game.boundary.ShowAttemptsBoundary;
+import it.uniba.nygaard.game.boundary.ShowGridBoundary;
+import it.uniba.nygaard.game.entity.Match;
 
-class HitCommand extends Command {
+final class HitCommand extends Command {
 
   private static HitCommand instance = new HitCommand();
 
@@ -27,7 +32,8 @@ class HitCommand extends Command {
     if (invalidNumber(command)) {
       return;
     }
-    if (!GameManager.getMatch().getInGame()) {
+    Match p = GameManager.getMatch();
+    if (!p.getInGame()) {
       HitBoundary.notInGame();
       return;
     }
@@ -36,12 +42,12 @@ class HitCommand extends Command {
     try {
       int y = coordinates[0].charAt(0) - 'a';
       int x = Integer.parseInt(coordinates[1]) - 1;
-      res = GameManager.getMatch().hit(x, y);
+      res = p.hit(x, y);
     } catch (NumberFormatException | IndexOutOfBoundsException e) {
       HitBoundary.invalidCoordinates();
       return;
     }
-    ShowGridBoundary.printGrid(GameManager.getMatch().getAttackGrid());
+    ShowGridBoundary.printGrid(p.getAttackGrid());
     switch (res) {
       case 0 -> HitBoundary.miss();
       case 1 -> HitBoundary.hit();
@@ -49,17 +55,17 @@ class HitCommand extends Command {
       default -> {
       }
     }
-    ShowAttemptsBoundary.showAttempts(GameManager.getMatch().getUsedAttempts(), GameManager.getMatch().getFailedAttempts(), GameManager.getMatch().getAttempts(GameManager.getMatch().getDifficulty()));
-    if (GameManager.getMatch().getMaxTime() != Util.DEFAULT_TIME) {
-      TimeBoundary.showTime(GameManager.getMatch().getStartTime());
+    ShowAttemptsBoundary.showAttempts(p.getUsedAttempts(), p.getFailedAttempts(), p.getAttempts(p.getDifficulty()));
+    if (p.getMaxTime() != Util.DEFAULT_TIME) {
+      TimeBoundary.showTime(p.getStartTime());
     } else {
       TimeBoundary.infiniteTime();
     }
-    if (GameManager.getMatch().win()) {
+    if (p.win()) {
       GeneralControl.setShutDown(1);
       return;
     }
-    if (GameManager.getMatch().getFailedAttempts() == GameManager.getMatch().getAttempts(GameManager.getMatch().getDifficulty())) {
+    if (p.getFailedAttempts() == p.getAttempts(p.getDifficulty())) {
       GeneralControl.setShutDown(2);
       return;
     }
