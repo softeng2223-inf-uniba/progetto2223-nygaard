@@ -59,8 +59,7 @@ final class StartMatchCommand extends Command {
     }
     if(p.getMaxTime()!=Util.DEFAULT_TIME){
       p.setStartTime(System.currentTimeMillis());
-      Thread t = new Thread(new TimeCounter());
-      t.start();
+      new TimeCounter().start();
     }
     p.setInGame(true);
     p.initializeShips(Util.MIN_SHIP);
