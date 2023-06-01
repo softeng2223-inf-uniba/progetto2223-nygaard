@@ -12,23 +12,28 @@ import it.uniba.nygaard.game.Util;
  * @see DescriptionBoundary
  */
 public final class HelpBoundary {
-    /**
-     * Costruttore per la classe HelpBoundary.
-     */
-    private HelpBoundary() {
-    }
-    /**
-     * <h3> getHelp </h3>
-     * <p>
-     * Metodo che stampa a schermo la schermata di aiuto.
-     * </p>
-     */
-    public static void getHelp() {
-        DescriptionBoundary.getDescription();
-        String help = mainCommands()
-            + subCommandsDifficulty()
-            + subCommandsGrid()
-            + subCommandsTime();
+
+  /**
+   * <h2> Costruttore </h2>
+   * <p>
+   * Costruttore per la classe HelpBoundary.
+   * </p>
+   */
+  private HelpBoundary() {
+  }
+
+  /**
+   * <h3> getHelp </h3>
+   * <p>
+   * Metodo che stampa a schermo la schermata di aiuto.
+   * </p>
+   */
+  public static void getHelp() {
+    DescriptionBoundary.getDescription();
+    String help = mainCommands()
+        + subCommandsDifficulty()
+        + subCommandsGrid()
+        + subCommandsTime();
 
         System.out.println(help);
     }
