@@ -25,7 +25,7 @@ public final class GeneralControl {
    * Termina il gioco se true.
    * </p>
    */
-  private static boolean shutDown = false;
+  private static int shutDown = 0;
   /**
    * <h3> Costruttore </h3>
    * <p>
@@ -43,7 +43,7 @@ public final class GeneralControl {
    *
    * @param  value Nuovo valore di shutDown.
    */
-  static void setShutDown(final boolean value) {
+  static void setShutDown(final int value) {
     GeneralControl.shutDown = value;
   }
   /**
@@ -77,7 +77,7 @@ public final class GeneralControl {
     availableCommands.put("/extralarge", SetGridSizeCommand.getInstance());
     availableCommands.put("/tentativi", AttemptsCommand.getInstance());
     ParamControl.initUI();
-    while (!shutDown) {
+    while (shutDown==0) {
       String[] command = InputBoundary.getCommand().trim().replaceAll(" +", " ").split(" ");
       InputBoundary.resetColor();
       String regex = "^[a-z]-[1-9][0-9]*$";
