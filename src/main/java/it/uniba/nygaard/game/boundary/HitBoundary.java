@@ -16,15 +16,15 @@ public class HitBoundary {
     }
 
     public static void miss(){
-        System.out.println(Util.CYAN + "Acqua!" + Util.RESET);
+        System.out.println(Util.BOLD + "Acqua!" + Util.RESET);
     }
 
     public static void hit(){
-        System.out.println(Util.YELLOW + "Colpito!" + Util.RESET);
+        System.out.println(Util.YELLOW + Util.BOLD + "Colpito!" + Util.RESET);
     }
 
     public static void sunk(){
-        System.out.println(Util.RED + "Colpito e affondato!" + Util.RESET);
+        System.out.println(Util.RED + Util.BOLD + "Colpito e affondato!" + Util.RESET);
     }
 
 }
