@@ -36,6 +36,18 @@ public final class GeneralControl {
   }
 
   /**
+   * <h3> getShutDown </h3>
+   * <p>
+   * Restituisce il valore di shutDown.
+   * </p>
+   *
+   * @return Valore di shutDown.
+   */
+  public static int getShutDown() {
+    return GeneralControl.shutDown;
+  }
+
+  /**
    * <h3> setShutDown </h3>
    * <p>
    * Imposta il valore di shutDown.
