@@ -32,21 +32,50 @@ public final class MatchBoundary {
         + Util.RESET);
   }
 
+  /**
+   * <h3> win </h3>
+   * <p>
+   * Stampa il messaggio relativo al fatto che
+   * il giocatore ha vinto la partita.
+   * </p>
+   */
   public static void win() {
     System.out.println(Util.GREEN + Util.BOLD + "Hai vinto la partita!" + Util.RESET);
   }
 
+  /**
+   * <h3> outOfAttempts </h3>
+   * <p>
+   * Stampa il messaggio relativo al fatto che
+   * il giocatore ha esaurito i tentativi disponibili.
+   * </p>
+   */
   public static void outOfAttempts() {
     System.out.println(Util.RED + Util.BOLD + "Hai perso! Hai finito i tentativi disponibili!" + Util.RESET);
   }
 
+  /**
+   * <h3> timeOut </h3>
+   * <p>
+   * Stampa il messaggio relativo al fatto che
+   * il giocatore ha esaurito il tempo a disposizione.
+   * </p>
+   */
   public static void timeOut() {
     System.out.println(Util.RED + Util.BOLD + "Hai perso! Hai esaurito il tempo a tua disposizione!" + Util.RESET);
     System.out.println(Util.CYAN + "Premere invio per continuare!" + Util.RESET);
   }
 
+  /**
+   * <h3> playAgain </h3>
+   * <p>
+   * Stampa il messaggio relativo al fatto che
+   * il giocatore ha terminato la partita precedente.
+   * </p>
+   */
   public static void playAgain() {
-    System.out.println(Util.CYAN + "\nHai terminato la partita precedente, i parametri sono stati resettati." + Util.RESET);
+    System.out.println(Util.CYAN + "\nHai terminato la partita precedente, "
+        + "i parametri sono stati resettati." + Util.RESET);
     System.out.println(Util.CYAN + "Puoi inserire qualsiasi comando o iniziare una nuova partita.\n" + Util.RESET);
   }
 
