@@ -34,4 +34,8 @@ public final class MatchBoundary {
         System.out.println(Util.GREEN + Util.BOLD + "Hai vinto la partita!" + Util.RESET);
     }
 
+    public static void outOfAttempts(){
+        System.out.println(Util.RED + Util.BOLD + "Hai finito i tentativi disponibili!" + Util.RESET);
+    }
+
 }
