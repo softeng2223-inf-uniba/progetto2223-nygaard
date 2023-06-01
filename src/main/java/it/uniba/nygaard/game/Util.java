@@ -64,6 +64,9 @@ public final class Util {
   public static final int LEFT_TERMINATION_CODE = 3;
   public static final int OUT_OF_TIME_TERMINATION_CODE = 4;
   public static final int QUIT_TERMINATION_CODE = -1;
+  public static final int WATER_CODE = 0;
+  public static final int HITTED_CODE = 1;
+  public static final int SANK_CODE = 2;
 
   /**
    * <h3> Costruttore </h3>
