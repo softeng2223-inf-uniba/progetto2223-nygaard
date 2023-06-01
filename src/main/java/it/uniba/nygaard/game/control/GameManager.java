@@ -18,6 +18,7 @@ public final class GameManager {
    * </p>
    */
   private static Match match;
+
   /**
    * <h3> matchDifficulty </h3>
    * <p>
@@ -25,6 +26,7 @@ public final class GameManager {
    * </p>
    */
   private static int matchDifficulty;
+
   /**
    * <h3> matchAttempts </h3>
    * <p>
@@ -32,6 +34,7 @@ public final class GameManager {
    * </p>
    */
   private static int matchAttempts;
+
   /**
    * <h3> nextGridSize </h3>
    * <p>
@@ -39,6 +42,7 @@ public final class GameManager {
    * </p>
    */
   private static int nextGridSize;
+
   /**
    * <h3> args </h3>
    * <p>
