@@ -62,8 +62,8 @@ public final class MatchBoundary {
    * </p>
    */
   public static void timeOut() {
-    System.out.println(Util.RED + Util.BOLD + "Hai perso! Hai esaurito il tempo a tua disposizione!" + Util.RESET);
-    System.out.println(Util.CYAN + "Premere invio per continuare!" + Util.RESET);
+    System.out.println(Util.RED + Util.BOLD + "\nHai perso! Hai esaurito il tempo a tua disposizione!" + Util.RESET);
+    System.out.print(Util.CYAN + "Premere invio per continuare..." + Util.RESET);
   }
 
   /**
@@ -77,6 +77,10 @@ public final class MatchBoundary {
     System.out.println(Util.CYAN + "\nHai terminato la partita precedente, "
         + "i parametri sono stati resettati." + Util.RESET);
     System.out.println(Util.CYAN + "Puoi inserire qualsiasi comando o iniziare una nuova partita.\n" + Util.RESET);
+  }
+
+  public static void printSolution() {
+    System.out.println(Util.CYAN + "Questa era la disposizione delle navi!" + Util.RESET);
   }
 
 }

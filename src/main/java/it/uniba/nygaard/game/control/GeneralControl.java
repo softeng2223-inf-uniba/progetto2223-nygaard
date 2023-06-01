@@ -3,6 +3,7 @@ package it.uniba.nygaard.game.control;
 import it.uniba.nygaard.game.Util;
 import it.uniba.nygaard.game.boundary.InputBoundary;
 import it.uniba.nygaard.game.boundary.MatchBoundary;
+import it.uniba.nygaard.game.boundary.ShowGridBoundary;
 import it.uniba.nygaard.game.entity.Match;
 
 import java.util.HashMap;
@@ -122,6 +123,10 @@ public final class GeneralControl {
         }
       }
       if (shutDown != Util.QUIT_TERMINATION_CODE) {
+        if(shutDown != Util.WIN_TERMINATION_CODE){
+          MatchBoundary.printSolution();
+          ShowGridBoundary.printGrid(GameManager.getMatch().getDefenseGrid());
+        }
         MatchBoundary.playAgain();
       }
     } while (shutDown != Util.QUIT_TERMINATION_CODE);
