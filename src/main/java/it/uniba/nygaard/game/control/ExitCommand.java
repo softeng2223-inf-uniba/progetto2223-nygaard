@@ -62,6 +62,9 @@ final class ExitCommand extends Command {
     String choice;
     do {
       choice = ExitBoundary.ask();
+      if (GeneralControl.getShutDown() != Util.NOT_TERMINATION_CODE) {
+        return;
+      }
       if (choice.equals("y")) {
         ExitBoundary.exitString();
         GeneralControl.setShutDown(Util.QUIT_TERMINATION_CODE);
