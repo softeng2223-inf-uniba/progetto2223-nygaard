@@ -35,7 +35,7 @@ public final class MatchBoundary {
     }
 
     public static void outOfAttempts(){
-        System.out.println(Util.RED + Util.BOLD + "Hai finito i tentativi disponibili!" + Util.RESET);
+        System.out.println(Util.RED + Util.BOLD + "Hai perso! Hai finito i tentativi disponibili!" + Util.RESET);
     }
 
     public static void timeOut(){
