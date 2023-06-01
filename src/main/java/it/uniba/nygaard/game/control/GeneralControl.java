@@ -2,10 +2,9 @@ package it.uniba.nygaard.game.control;
 
 import it.uniba.nygaard.game.Util;
 import it.uniba.nygaard.game.boundary.InputBoundary;
+import it.uniba.nygaard.game.boundary.MatchBoundary;
 import it.uniba.nygaard.game.entity.Match;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -92,6 +91,14 @@ public final class GeneralControl {
       } else {
         InputBoundary.notRecognisedCommand(command);
       }
+    }
+    switch (shutDown) {
+      case 1 -> MatchBoundary.win();
+      case 2 -> MatchBoundary.outOfAttempts();
+      case 3 -> MatchBoundary.outOfTime();
+      case 4 -> {/*todo: implementare abbandona partita*/}
+      //case 5 -> break;
+      default -> {}
     }
   }
 }
