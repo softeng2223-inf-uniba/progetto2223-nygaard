@@ -82,11 +82,11 @@ public final class GeneralControl {
       GameManager.setMatch(new Match());
       GameManager.setMatchDifficulty(Util.DIFFICULTY_MEDIUM);
       GameManager.setNextGridSizeName(Util.STANDARD_GRID_SIZE);
-      shutDown = 0;
-      while (shutDown == 0) {
+      shutDown = Util.NOT_TERMINATION_CODE;
+      while (shutDown == Util.NOT_TERMINATION_CODE) {
         String[] command = InputBoundary.getCommand().trim().replaceAll(" +", " ").split(" ");
         InputBoundary.resetColor();
-        if (shutDown != 0) {
+        if (shutDown != Util.NOT_TERMINATION_CODE) {
           break;
         }
         matcher = pattern.matcher(command[0]);
@@ -101,15 +101,15 @@ public final class GeneralControl {
         }
       }
       switch (shutDown) {
-        case 1 -> MatchBoundary.win();
-        case 2 -> MatchBoundary.outOfAttempts();
-        case 3 -> { /*todo: implementare abbandona partita*/ }
+        case Util.WIN_TERMINATION_CODE -> MatchBoundary.win();
+        case Util.OUT_OF_ATTEMPTS_TERMINATION_CODE -> MatchBoundary.outOfAttempts();
+        case Util.LEFT_TERMINATION_CODE -> { /*todo: implementare abbandona partita*/ }
         default -> {
         }
       }
-      if (shutDown != -1) {
+      if (shutDown != Util.QUIT_TERMINATION_CODE) {
         MatchBoundary.playAgain();
       }
-    } while (shutDown != -1);
+    } while (shutDown != Util.QUIT_TERMINATION_CODE);
   }
 }

@@ -10,7 +10,7 @@ class TimeCounter extends Thread {
     while (true) {
       if (p.getInGame()) {
         if (System.currentTimeMillis() - p.getStartTime() > p.getMaxTime() * Util.ONE_MINUTE) {
-          GeneralControl.setShutDown(4);
+          GeneralControl.setShutDown(Util.OUT_OF_TIME_TERMINATION_CODE);
           MatchBoundary.timeOut();
           break;
         }

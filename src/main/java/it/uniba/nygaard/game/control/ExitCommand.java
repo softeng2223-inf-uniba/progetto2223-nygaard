@@ -1,5 +1,6 @@
 package it.uniba.nygaard.game.control;
 
+import it.uniba.nygaard.game.Util;
 import it.uniba.nygaard.game.boundary.ExitBoundary;
 
 /**
@@ -63,7 +64,7 @@ final class ExitCommand extends Command {
       choice = ExitBoundary.ask();
       if (choice.equals("y")) {
         ExitBoundary.exitString();
-        GeneralControl.setShutDown(-1);
+        GeneralControl.setShutDown(Util.QUIT_TERMINATION_CODE);
         return;
       }
       if (choice.equals("n")) {

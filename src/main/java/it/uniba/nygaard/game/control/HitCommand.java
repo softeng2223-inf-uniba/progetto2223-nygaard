@@ -62,11 +62,11 @@ final class HitCommand extends Command {
       TimeBoundary.infiniteTime();
     }
     if (p.win()) {
-      GeneralControl.setShutDown(1);
+      GeneralControl.setShutDown(Util.WIN_TERMINATION_CODE);
       return;
     }
     if (p.getFailedAttempts() == p.getAttempts(p.getDifficulty())) {
-      GeneralControl.setShutDown(2);
+      GeneralControl.setShutDown(Util.OUT_OF_ATTEMPTS_TERMINATION_CODE);
       return;
     }
   }
