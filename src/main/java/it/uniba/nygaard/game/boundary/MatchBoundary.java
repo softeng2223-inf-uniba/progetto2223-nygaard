@@ -43,4 +43,9 @@ public final class MatchBoundary {
         System.out.println(Util.CYAN + "Premere invio per continuare!" + Util.RESET);
     }
 
+    public static void playAgain(){
+        System.out.println(Util.CYAN + "\nHai terminato la partita precedente, i parametri sono stati resettati." + Util.RESET);
+        System.out.println(Util.CYAN + "Puoi inserire qualsiasi comando o iniziare una nuova partita.\n" + Util.RESET);
+    }
+
 }
