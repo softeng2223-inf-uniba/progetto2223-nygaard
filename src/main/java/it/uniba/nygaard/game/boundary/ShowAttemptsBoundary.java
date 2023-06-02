@@ -38,4 +38,17 @@ public final class ShowAttemptsBoundary {
         + Util.RESET + Util.CYAN + " prima di perdere la partita." + Util.RESET);
   }
 
+  /**
+   * <h3> showAttempts </h3>
+   * <p>
+   * Stampa il numero di tentativi massimi fallibili dall'utente.
+   * </p>
+   *
+   * @param maxAttempts Tentativi massimi fallibili
+   */
+  public static void showAttempts(final int maxAttempts) {
+    System.out.println(Util.CYAN + "Puoi fallire al massimo " + Util.BOLD + maxAttempts + " tentativi"
+        + Util.RESET);
+  }
+
 }
