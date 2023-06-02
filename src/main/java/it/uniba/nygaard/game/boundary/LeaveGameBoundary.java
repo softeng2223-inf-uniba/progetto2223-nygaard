@@ -13,6 +13,12 @@ public class LeaveGameBoundary {
      */
     private LeaveGameBoundary() {
     }
+    /**
+     * <h2> notInGame </h2>
+     * <p>
+     * Messaggio di errore per quando si tenta di abbandonare una partita non iniziata.
+     * </p>
+     */
     public static void notInGame() {
         System.out.println(Util.RED + "Non puoi usare il comando quando non sei in partita"
             + Util.RESET);
