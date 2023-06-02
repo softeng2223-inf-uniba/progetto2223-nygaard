@@ -116,7 +116,7 @@ public final class GeneralControl {
       switch (shutDown) {
         case Util.WIN_TERMINATION_CODE -> MatchBoundary.win();
         case Util.OUT_OF_ATTEMPTS_TERMINATION_CODE -> MatchBoundary.outOfAttempts();
-        case Util.LEFT_TERMINATION_CODE -> { /*todo: implementare abbandona partita*/ }
+        case Util.LEFT_TERMINATION_CODE -> MatchBoundary.leave();
         default -> {
         }
       }
