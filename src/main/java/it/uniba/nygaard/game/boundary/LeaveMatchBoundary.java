@@ -42,10 +42,10 @@ public class LeaveMatchBoundary {
      * @return Scelta dell'utente
      */
     public static String ask() {
-        System.out.print("Vuoi abbandonare la partita?"
+        System.out.print("Vuoi abbandonare la partita? "
             + "(" + Util.GREEN + "y" + Util.RESET
             + "/" + Util.RED + "n" + Util.RESET + ") ");
-        return new Scanner(System.in, StandardCharsets.UTF_8).next().toLowerCase();
+        return new Scanner(System.in, StandardCharsets.UTF_8).nextLine().toLowerCase();
     }
 
     /**
