@@ -32,6 +32,15 @@ public class LeaveGameBoundary {
     public static void invalidChoice() {
         System.out.println(Util.RED + "Scelta non valida" + Util.RESET);
     }
+
+    /**
+     * <h2> ask </h2>
+     * <p>
+     * Messaggio per chiedere conferma di abbandono delle partita.
+     * </p>
+     *
+     * @return Scelta dell'utente
+     */
     public static String ask() {
         System.out.print("Vuoi abbandonare la partita?"
             + "(" + Util.GREEN + "y" + Util.RESET
