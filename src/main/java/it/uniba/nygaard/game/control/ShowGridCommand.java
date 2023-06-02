@@ -42,6 +42,14 @@ final class ShowGridCommand extends Command {
     return instance;
   }
 
+  /**
+   * <h3> executeCommand </h3>
+   * <p>
+   * Esegue il comando per mostrare la griglia di attacco.
+   * </p>
+   *
+   * @param command Comando da eseguire.
+   */
   public void executeCommand(final String[] command) {
     if (invalidNumber(command)) {
       return;
