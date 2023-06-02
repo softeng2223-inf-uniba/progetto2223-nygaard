@@ -38,7 +38,7 @@ public final class LeaveMatchCommand extends Command {
    * Restituisce l'istanza di LeaveMatchCommand.
    * </p>
    */
-  public static LeaveMatchCommand getInstance() {
+  static LeaveMatchCommand getInstance() {
     return instance;
   }
 
