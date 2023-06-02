@@ -32,6 +32,12 @@ final class ShowGridCommand extends Command {
     setParamNumber(1);
   }
 
+  /**
+   * <h3> getInstance </h3>
+   * <p>
+   * Restituisce l'istanza di ShowGridCommand.
+   * </p>
+   */
   static ShowGridCommand getInstance() {
     return instance;
   }
