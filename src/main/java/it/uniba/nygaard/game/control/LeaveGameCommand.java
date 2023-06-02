@@ -40,7 +40,6 @@ public class LeaveGameCommand extends Command {
         return;
       }
       if (choice.equals("y")) {
-        //MatchBoundary.leave();
         GeneralControl.setShutDown(Util.LEFT_TERMINATION_CODE);
         return;
       }
