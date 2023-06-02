@@ -47,6 +47,13 @@ public class LeaveGameBoundary {
             + "/" + Util.RED + "n" + Util.RESET + ") ");
         return new Scanner(System.in, StandardCharsets.UTF_8).next().toLowerCase();
     }
+
+    /**
+     * <h2> operationCancelled </h2>
+     * <p>
+     * Messaggio di annullamento di abbandono della partita.
+     * </p>
+     */
     public static void operationCancelled() {
         System.out.println(Util.RED + "Operazione annullata" + Util.RESET);
     }
