@@ -4,6 +4,13 @@ import it.uniba.nygaard.game.Util;
 import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
 
+/**
+ * << Boundary >>
+ * <h2> LeaveMatchBoundary </h2>
+ * <p>
+ * Classe che implementa i messaggi per la gestione dell'abbandono della partita.
+ * </p>
+ */
 public class LeaveMatchBoundary {
     /**
      * <h2> Costruttore </h2>
