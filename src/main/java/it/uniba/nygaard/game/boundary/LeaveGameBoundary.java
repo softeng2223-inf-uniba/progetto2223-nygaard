@@ -32,6 +32,12 @@ public class LeaveGameBoundary {
     public static void invalidChoice() {
         System.out.println(Util.RED + "Scelta non valida" + Util.RESET);
     }
+    public static String ask() {
+        System.out.print("Vuoi abbandonare la partita?"
+            + "(" + Util.GREEN + "y" + Util.RESET
+            + "/" + Util.RED + "n" + Util.RESET + ") ");
+        return new Scanner(System.in, StandardCharsets.UTF_8).next().toLowerCase();
+    }
 
 
 
