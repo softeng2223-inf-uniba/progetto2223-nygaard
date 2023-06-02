@@ -11,7 +11,7 @@ import java.util.Scanner;
  * Classe che implementa i messaggi per la gestione dell'abbandono della partita.
  * </p>
  */
-public class LeaveMatchBoundary {
+public final class LeaveMatchBoundary {
     /**
      * <h2> Costruttore </h2>
      * <p>
