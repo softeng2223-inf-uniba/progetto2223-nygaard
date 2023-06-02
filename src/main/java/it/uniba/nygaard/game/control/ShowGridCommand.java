@@ -22,6 +22,12 @@ final class ShowGridCommand extends Command {
 
   private static ShowGridCommand instance = new ShowGridCommand();
 
+  /**
+   * <h3> Costruttore </h3>
+   * <p>
+   * Costruttore della classe ShowGridCommand.
+   * </p>
+   */
   private ShowGridCommand() {
     setParamNumber(1);
   }
