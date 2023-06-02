@@ -3,33 +3,33 @@ package it.uniba.nygaard.game.control;
 import it.uniba.nygaard.game.Util;
 import it.uniba.nygaard.game.boundary.LeaveGameBoundary;
 
-public class LeaveGameCommand extends Command {
+public class LeaveMatchCommand extends Command {
 
   /**
    * <h3> instance </h3>
    * <p>
-   * Istanza di LeaveGameCommand.
+   * Istanza di LeaveMatchCommand.
    * </p>
    */
-  private static LeaveGameCommand instance = new LeaveGameCommand();
+  private static LeaveMatchCommand instance = new LeaveMatchCommand();
 
   /**
    * <h2> Costruttore </h2>
    * <p>
-   * Costruttore  della classe LeaveGameCommand.
+   * Costruttore  della classe LeaveMatchCommand.
    * </p>
    */
-  private LeaveGameCommand() {
+  private LeaveMatchCommand() {
     setParamNumber(1);
   }
 
   /**
    * <h2> getInstance </h2>
    * <p>
-   * Restituisce l'istanza di LeaveGameCommand.
+   * Restituisce l'istanza di LeaveMatchCommand.
    * </p>
    */
-  public static LeaveGameCommand getInstance() {
+  public static LeaveMatchCommand getInstance() {
     return instance;
   }
 
