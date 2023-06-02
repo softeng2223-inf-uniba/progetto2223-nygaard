@@ -86,6 +86,7 @@ public final class GeneralControl {
     availableCommands.put("/large", SetGridSizeCommand.getInstance());
     availableCommands.put("/extralarge", SetGridSizeCommand.getInstance());
     availableCommands.put("/tentativi", AttemptsCommand.getInstance());
+    availableCommands.put("/abbandona", LeaveMatchCommand.getInstance());
     String regex = "^[a-z]-[1-9][0-9]*$";
     Pattern pattern = Pattern.compile(regex);
     Matcher matcher;
