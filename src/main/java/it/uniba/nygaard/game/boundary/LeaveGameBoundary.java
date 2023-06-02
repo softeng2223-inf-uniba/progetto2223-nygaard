@@ -23,6 +23,10 @@ public class LeaveGameBoundary {
         System.out.println(Util.RED + "Non puoi usare il comando quando non sei in partita"
             + Util.RESET);
     }
+    public static void invalidChoice() {
+        System.out.println(Util.RED + "Scelta non valida" + Util.RESET);
+    }
+
 
 
 }
