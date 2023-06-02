@@ -13,5 +13,10 @@ public class LeaveGameBoundary {
      */
     private LeaveGameBoundary() {
     }
+    public static void notInGame() {
+        System.out.println(Util.RED + "Non puoi usare il comando quando non sei in partita"
+            + Util.RESET);
+    }
+
 
 }
