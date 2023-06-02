@@ -4,14 +4,14 @@ import it.uniba.nygaard.game.Util;
 import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
 
-public class LeaveGameBoundary {
+public class LeaveMatchBoundary {
     /**
      * <h2> Costruttore </h2>
      * <p>
-     * Costruttore della classe LeaveGameBoundary.
+     * Costruttore della classe LeaveMatchBoundary.
      * </p>
      */
-    private LeaveGameBoundary() {
+    private LeaveMatchBoundary() {
     }
     /**
      * <h2> notInGame </h2>

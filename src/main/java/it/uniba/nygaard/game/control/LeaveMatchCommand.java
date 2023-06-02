@@ -1,7 +1,7 @@
 package it.uniba.nygaard.game.control;
 
 import it.uniba.nygaard.game.Util;
-import it.uniba.nygaard.game.boundary.LeaveGameBoundary;
+import it.uniba.nygaard.game.boundary.LeaveMatchBoundary;
 
 public class LeaveMatchCommand extends Command {
 
@@ -44,7 +44,7 @@ public class LeaveMatchCommand extends Command {
 
   void executeCommand(final String[] command) {
     if (!GameManager.getMatch().getInGame()) {
-      LeaveGameBoundary.notInGame();
+      LeaveMatchBoundary.notInGame();
       return;
     }
     if (invalidNumber(command)) {
@@ -52,7 +52,7 @@ public class LeaveMatchCommand extends Command {
     }
     String choice;
     do {
-      choice = LeaveGameBoundary.ask();
+      choice = LeaveMatchBoundary.ask();
       if (GeneralControl.getShutDown() != Util.NOT_TERMINATION_CODE) {
         return;
       }
@@ -61,9 +61,9 @@ public class LeaveMatchCommand extends Command {
         return;
       }
       if (choice.equals("n")) {
-        LeaveGameBoundary.operationCancelled();
+        LeaveMatchBoundary.operationCancelled();
       } else {
-        LeaveGameBoundary.invalidChoice();
+        LeaveMatchBoundary.invalidChoice();
       }
     } while (!choice.equals("n"));
   }
