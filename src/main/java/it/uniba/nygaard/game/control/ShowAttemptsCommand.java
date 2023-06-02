@@ -58,8 +58,9 @@ final class ShowAttemptsCommand extends Command {
     if (p.getInGame()) {
       ShowAttemptsBoundary.showAttempts(p.getUsedAttempts(), p.getFailedAttempts(),
           p.getAttempts(p.getDifficulty()));
+    } else {
+      ShowAttemptsBoundary.showAttempts(p.getAttempts(p.getDifficulty()));
     }
-    //todo: altrimenti versione fuori dal gioco
   }
 
 }
