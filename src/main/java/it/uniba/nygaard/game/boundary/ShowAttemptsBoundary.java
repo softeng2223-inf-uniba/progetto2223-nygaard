@@ -37,5 +37,9 @@ public final class ShowAttemptsBoundary {
     System.out.println(Util.CYAN + "Puoi fallire al massimo " + Util.BOLD + maxAttempts + " tentativi"
         + Util.RESET + Util.CYAN + " prima di perdere la partita." + Util.RESET);
   }
+  public static void showAttempts(final int maxAttempts) {
+    System.out.println(Util.CYAN + "Puoi fallire al massimo" + Util.BOLD + maxAttempts + " tentativi"
+        + Util.RESET);
+  }
 
 }
