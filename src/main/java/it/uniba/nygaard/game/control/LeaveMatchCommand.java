@@ -3,6 +3,15 @@ package it.uniba.nygaard.game.control;
 import it.uniba.nygaard.game.Util;
 import it.uniba.nygaard.game.boundary.LeaveMatchBoundary;
 
+/**
+ * << Control >>
+ * <h2> LeaveMatchCommand </h2>
+ * <p>
+ * La classe LeaveMatchCommand rappresenta il comando per decidere se abbandonare la partita.
+ * </p>
+ *
+ * @see Command
+ */
 public class LeaveMatchCommand extends Command {
 
   /**
