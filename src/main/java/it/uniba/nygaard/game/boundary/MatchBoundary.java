@@ -89,4 +89,9 @@ public final class MatchBoundary {
     System.out.println(Util.CYAN + "Questa era la disposizione delle navi!" + Util.RESET);
   }
 
+  public static void leave() {
+    System.out.println(Util.RED + Util.BOLD + "Hai perso! Hai abbandonato la partita!" + Util.RESET);
+  }
+
+
 }
