@@ -15,4 +15,17 @@ final class ShowGridCommand extends Command {
     return instance;
   }
 
+  public void executeCommand(final String[] command) {
+    if (invalidNumber(command)) {
+      return;
+    }
+    Match p = GameManager.getMatch();
+    if (!p.getInGame()) {
+      ShowGridBoundary.notInGame();
+      return;
+    }
+    ShowGridBoundary.printGrid(p.getAttackGrid());
+  }
+
+
 }
