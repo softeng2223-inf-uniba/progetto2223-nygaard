@@ -13,6 +13,12 @@ import it.uniba.nygaard.game.entity.Match;
  * @see Command
  */
 final class ShowGridCommand extends Command {
+  /**
+   * <h3> instance </h3>
+   * <p>
+   * Istanza di ShowGridCommand.
+   * </p>
+   */
 
   private static ShowGridCommand instance = new ShowGridCommand();
 
