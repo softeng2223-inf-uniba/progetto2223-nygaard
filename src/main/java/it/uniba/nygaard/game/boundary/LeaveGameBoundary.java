@@ -8,7 +8,7 @@ public class LeaveGameBoundary {
     /**
      * <h2> Costruttore </h2>
      * <p>
-     * Costruttore privato della classe.
+     * Costruttore della classe LeaveGameBoundary.
      * </p>
      */
     private LeaveGameBoundary() {
@@ -57,7 +57,5 @@ public class LeaveGameBoundary {
     public static void operationCancelled() {
         System.out.println(Util.RED + "Operazione annullata" + Util.RESET);
     }
-
-
 
 }
