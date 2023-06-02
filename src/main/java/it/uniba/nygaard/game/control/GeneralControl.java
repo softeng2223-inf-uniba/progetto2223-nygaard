@@ -86,6 +86,7 @@ public final class GeneralControl {
     availableCommands.put("/large", SetGridSizeCommand.getInstance());
     availableCommands.put("/extralarge", SetGridSizeCommand.getInstance());
     availableCommands.put("/tentativi", AttemptsCommand.getInstance());
+    availableCommands.put("/abbandona", LeaveMatchCommand.getInstance());
     String regex = "^[a-z]-[1-9][0-9]*$";
     Pattern pattern = Pattern.compile(regex);
     Matcher matcher;
@@ -116,7 +117,7 @@ public final class GeneralControl {
       switch (shutDown) {
         case Util.WIN_TERMINATION_CODE -> MatchBoundary.win();
         case Util.OUT_OF_ATTEMPTS_TERMINATION_CODE -> MatchBoundary.outOfAttempts();
-        case Util.LEFT_TERMINATION_CODE -> { /*todo: implementare abbandona partita*/ }
+        case Util.LEFT_TERMINATION_CODE -> MatchBoundary.leave();
         default -> {
         }
       }
