@@ -9,25 +9,28 @@ import it.uniba.nygaard.game.boundary.ParamsBoundary;
  * << Control >>
  * <h2> ParamControl </h2>
  * <p>
- *     La classe ParamControl rappresenta il controllo dei parametri.
+ * La classe ParamControl rappresenta il controllo dei parametri.
  * </p>
+ *
  * @see Command
  */
 final class ParamControl {
+
   /**
    * <h3> ParamControl </h3>
    * <p>
-   *     Costruttore della classe ParamControl.
+   * Costruttore della classe ParamControl.
    * </p>
    */
   private ParamControl() {
   }
+
   /**
    * <h3> executeCommand </h3>
    * <p>
-   *     Controlla se l'applicazione è stava avviata con dei parametri.
-   *     In caso positivo controlla se i parametri sono validi e, se lo sono,
-   *     esegue i comandi corrispondenti.
+   * Controlla se l'applicazione è stava avviata con dei parametri.
+   * In caso positivo controlla se i parametri sono validi e, se lo sono,
+   * esegue i comandi corrispondenti.
    * </p>
    */
   public static void initUI() {

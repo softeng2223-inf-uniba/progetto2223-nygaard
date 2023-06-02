@@ -9,6 +9,7 @@ import it.uniba.nygaard.game.Util;
  * </p>
  */
 public abstract class Grid {
+
   /**
    * <h3> maxRows </h3>
    * <p>
@@ -30,6 +31,7 @@ public abstract class Grid {
    * </p>
    */
   private int headingEdgeWidth;
+
   /**
    * <h3> Costruttore </h3>
    * <p>
@@ -40,26 +42,31 @@ public abstract class Grid {
     maxRows = Util.STANDARD_GRID_SIZE;
     maxColumn = 'J';
   }
+
   /**
    * <h3> getHeadingEdgeWidth </h3>
    * <p>
-   *  Restituisce la larghezza del bordo superiore.
+   * Restituisce la larghezza del bordo superiore.
    * </p>
+   *
    * @return Larghezza del bordo superiore.
    */
   public int getHeadingEdgeWidth() {
     return headingEdgeWidth;
   }
+
   /**
    * <h3> setHeadingEdgeWidth </h3>
    * <p>
    * Imposta la larghezza del bordo superiore.
    * </p>
+   *
    * @param newHeadingEdgeWidth Larghezza del bordo superiore.
    */
   public void setHeadingEdgeWidth(final int newHeadingEdgeWidth) {
     this.headingEdgeWidth = newHeadingEdgeWidth;
   }
+
   /**
    * <h3> getMaxRows </h3>
    * <p>
@@ -71,6 +78,7 @@ public abstract class Grid {
   public int getMaxRows() {
     return maxRows;
   }
+
   /**
    * <h3> setMaxRows </h3>
    * <p>
@@ -82,6 +90,7 @@ public abstract class Grid {
   public void setMaxRows(final int newMaxRows) {
     maxRows = newMaxRows;
   }
+
   /**
    * <h3> getMaxColumn </h3>
    * <p>
@@ -93,6 +102,7 @@ public abstract class Grid {
   public char getMaxColumn() {
     return maxColumn;
   }
+
   /**
    * <h3> setMaxColumn </h3>
    * <p>

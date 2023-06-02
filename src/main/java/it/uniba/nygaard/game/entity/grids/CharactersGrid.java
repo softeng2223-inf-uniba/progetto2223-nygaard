@@ -11,12 +11,13 @@ import it.uniba.nygaard.game.Util;
  * @see Grid
  */
 public final class CharactersGrid extends Grid {
-    /**
-     * <h3> grid </h3>
-     * <p>
-     * Griglia di caratteri.
-     * </p>
-     */
+
+  /**
+   * <h3> grid </h3>
+   * <p>
+   * Griglia di caratteri.
+   * </p>
+   */
   private final char[][] grid;
 
   /**
@@ -36,6 +37,7 @@ public final class CharactersGrid extends Grid {
       }
     }
   }
+
   /**
    * <h3> getCharacter </h3>
    * <p>
@@ -46,8 +48,22 @@ public final class CharactersGrid extends Grid {
    * @param column Colonna del carattere.
    * @return Carattere della griglia.
    */
-  private char getCharacter(final int row, final int column) {
+  public char getCharacter(final int row, final int column) {
     return grid[row][column];
+  }
+
+  /**
+   * <h3> setCharacter </h3>
+   * <p>
+   * Imposta un carattere della griglia.
+   * </p>
+   *
+   * @param row       Riga del carattere.
+   * @param column    Colonna del carattere.
+   * @param character Carattere da impostare.
+   */
+  public void setCharacter(final int row, final int column, final char character) {
+    grid[row][column] = character;
   }
 
   /**

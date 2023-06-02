@@ -8,41 +8,47 @@ import it.uniba.nygaard.game.entity.Match;
  * << Control >>
  * <h2> ShowLevelCommand </h2>
  * <p>
- *     La classe ShowLevelCommand rappresenta il comando per mostrare il livello di difficoltà.
+ * La classe ShowLevelCommand rappresenta il comando per mostrare il livello di difficoltà.
  * </p>
+ *
  * @see Command
  */
 final class ShowLevelCommand extends Command {
+
   /**
    * <h3> instance </h3>
    * <p>
-   *     Istanza di ShowLevelCommand.
+   * Istanza di ShowLevelCommand.
    * </p>
    */
   private static ShowLevelCommand instance = new ShowLevelCommand();
+
   /**
    * <h3> getInstance </h3>
    * <p>
-   *    Restituisce l'istanza di ShowLevelCommand.
+   * Restituisce l'istanza di ShowLevelCommand.
    * </p>
    */
   static ShowLevelCommand getInstance() {
     return instance;
   }
+
   /**
    * <h3> Costruttore </h3>
    * <p>
-   *     Costruttore della classe ShowLevelCommand.
+   * Costruttore della classe ShowLevelCommand.
    * </p>
    */
   private ShowLevelCommand() {
     setParamNumber(1);
   }
+
   /**
    * <h3> executeCommand </h3>
    * <p>
-   *     Esegue il comando per mostrare il livello di difficoltà con relativo numero di tentativi.
+   * Esegue il comando per mostrare il livello di difficoltà con relativo numero di tentativi.
    * </p>
+   *
    * @param command comando da eseguire
    */
   public void executeCommand(final String[] command) {
@@ -69,7 +75,7 @@ final class ShowLevelCommand extends Command {
     }
     s += (actualColor);
     s += p.getDifficultyNames(p.getDifficulty()) + Util.RESET + "\n"
-            + "Numero massimo di tentativi falliti: " + Util.BOLD;
+        + "Numero massimo di tentativi falliti: " + Util.BOLD;
     s += actualColor + p.getAttempts(p.getDifficulty()) + Util.RESET;
     ShowLevelBoundary.printActualDifficulty(s);
   }

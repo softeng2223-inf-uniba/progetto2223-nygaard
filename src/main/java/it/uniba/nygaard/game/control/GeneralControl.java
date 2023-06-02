@@ -2,9 +2,13 @@ package it.uniba.nygaard.game.control;
 
 import it.uniba.nygaard.game.Util;
 import it.uniba.nygaard.game.boundary.InputBoundary;
+import it.uniba.nygaard.game.boundary.MatchBoundary;
+import it.uniba.nygaard.game.boundary.ShowGridBoundary;
 import it.uniba.nygaard.game.entity.Match;
 
 import java.util.HashMap;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * << Control >>
@@ -21,7 +25,8 @@ public final class GeneralControl {
    * Termina il gioco se true.
    * </p>
    */
-  private static boolean shutDown = false;
+  private static volatile int shutDown = 0;
+
   /**
    * <h3> Costruttore </h3>
    * <p>
@@ -32,16 +37,29 @@ public final class GeneralControl {
   }
 
   /**
+   * <h3> getShutDown </h3>
+   * <p>
+   * Restituisce il valore di shutDown.
+   * </p>
+   *
+   * @return Valore di shutDown.
+   */
+  public static int getShutDown() {
+    return GeneralControl.shutDown;
+  }
+
+  /**
    * <h3> setShutDown </h3>
    * <p>
    * Imposta il valore di shutDown.
    * </p>
    *
-   * @param  value Nuovo valore di shutDown.
+   * @param value Nuovo valore di shutDown.
    */
-  static void setShutDown(final boolean value) {
+  public static void setShutDown(final int value) {
     GeneralControl.shutDown = value;
   }
+
   /**
    * <h3> startGame </h3>
    * <p>
@@ -51,10 +69,6 @@ public final class GeneralControl {
    * @param args Argomenti passati al programma.
    */
   public static void startGame(final String[] args) {
-    GameManager.setMatch(new Match());
-    GameManager.setMatchDifficulty(Util.DIFFICULTY_MEDIUM);
-    GameManager.setNextGridSizeName(Util.STANDARD_GRID_SIZE);
-    GameManager.setArgs(args);
     HashMap<String, Command> availableCommands = new HashMap<>();
     availableCommands.put("/esci", ExitCommand.getInstance());
     availableCommands.put("/facile", SetDifficultyCommand.getInstance());
@@ -72,15 +86,47 @@ public final class GeneralControl {
     availableCommands.put("/large", SetGridSizeCommand.getInstance());
     availableCommands.put("/extralarge", SetGridSizeCommand.getInstance());
     availableCommands.put("/tentativi", AttemptsCommand.getInstance());
+    String regex = "^[a-z]-[1-9][0-9]*$";
+    Pattern pattern = Pattern.compile(regex);
+    Matcher matcher;
+    GameManager.setArgs(args);
     ParamControl.initUI();
-    while (!shutDown) {
-      String[] command = InputBoundary.getCommand().trim().replaceAll(" +", " ").split(" ");
-      InputBoundary.resetColor();
-      if (availableCommands.containsKey(command[0])) {
-        availableCommands.get(command[0]).executeCommand(command);
-      } else {
-        InputBoundary.notRecognisedCommand(command);
+    do {
+      GameManager.setMatch(new Match());
+      GameManager.setMatchDifficulty(Util.DIFFICULTY_MEDIUM);
+      GameManager.setNextGridSizeName(Util.STANDARD_GRID_SIZE);
+      shutDown = Util.NOT_TERMINATION_CODE;
+      while (shutDown == Util.NOT_TERMINATION_CODE) {
+        String[] command = InputBoundary.getCommand().trim().replaceAll(" +", " ").split(" ");
+        InputBoundary.resetColor();
+        if (shutDown != Util.NOT_TERMINATION_CODE) {
+          break;
+        }
+        matcher = pattern.matcher(command[0]);
+        if (matcher.matches()) {
+          HitCommand.getInstance().executeCommand(command);
+          continue;
+        }
+        if (availableCommands.containsKey(command[0])) {
+          availableCommands.get(command[0]).executeCommand(command);
+        } else {
+          InputBoundary.notRecognisedCommand(command);
+        }
       }
-    }
+      switch (shutDown) {
+        case Util.WIN_TERMINATION_CODE -> MatchBoundary.win();
+        case Util.OUT_OF_ATTEMPTS_TERMINATION_CODE -> MatchBoundary.outOfAttempts();
+        case Util.LEFT_TERMINATION_CODE -> { /*todo: implementare abbandona partita*/ }
+        default -> {
+        }
+      }
+      if (shutDown != Util.QUIT_TERMINATION_CODE) {
+        if (shutDown != Util.WIN_TERMINATION_CODE) {
+          MatchBoundary.printSolution();
+          ShowGridBoundary.printGrid(GameManager.getMatch().getDefenseGrid());
+        }
+        MatchBoundary.playAgain();
+      }
+    } while (shutDown != Util.QUIT_TERMINATION_CODE);
   }
 }
