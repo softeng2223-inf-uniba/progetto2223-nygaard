@@ -93,6 +93,6 @@ public final class GridSizeBoundary {
    * </p>
    */
   public static void operationCancelled() {
-    System.out.println(Util.RED + "Cambio dimensioni annullato" + Util.RESET);
+    System.out.println(Util.RED + "Cambio dimensioni della griglia annullato" + Util.RESET);
   }
 }
