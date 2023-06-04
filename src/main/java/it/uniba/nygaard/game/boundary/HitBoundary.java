@@ -29,7 +29,7 @@ public final class HitBoundary {
    * </p>
    */
   public static void notInGame() {
-    System.out.println(Util.RED + "Non puoi eseguire colpi se non sei in una partita!" + Util.RESET);
+    System.out.println(Util.RED + "Non puoi eseguire colpi se non sei in una partita" + Util.RESET);
   }
 
   /**
@@ -40,7 +40,7 @@ public final class HitBoundary {
    * con coordinate non valide.
    * </p>
    */
-  public static void invalidCoordinates() {
+  public static void invalidChoice() {
     System.out.println(Util.RED + "Coordinate non valide" + Util.RESET);
   }
 

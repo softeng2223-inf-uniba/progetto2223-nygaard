@@ -89,7 +89,7 @@ final class HitCommand extends Command {
       int x = Integer.parseInt(coordinates[1]) - 1;
       res = p.hit(x, y);
     } catch (NumberFormatException | IndexOutOfBoundsException e) {
-      HitBoundary.invalidCoordinates();
+      HitBoundary.invalidChoice();
       return;
     }
     ShowGridBoundary.printGrid(p.getAttackGrid());
@@ -112,7 +112,6 @@ final class HitCommand extends Command {
     }
     if (p.getFailedAttempts() == p.getAttempts(p.getDifficulty())) {
       GeneralControl.setShutDown(Util.OUT_OF_ATTEMPTS_TERMINATION_CODE);
-      return;
     }
   }
 
