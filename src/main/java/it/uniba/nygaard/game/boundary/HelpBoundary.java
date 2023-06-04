@@ -48,7 +48,7 @@ public final class HelpBoundary {
    * @return Stringa contenente i comandi principali del gioco.
    */
   private static String mainCommands() {
-    String mainCommands = Util.YELLOW
+    return Util.YELLOW
         + Util.BOLD + "> COMANDI\n" + Util.RESET
         + Util.ITALIC + Util.CYAN + "    * /help                " + Util.RESET
         + "Vengono visualizzate le regole " + "di gioco e i comandi disponibili\n"
@@ -84,8 +84,6 @@ public final class HelpBoundary {
         + Util.ITALIC + Util.CYAN + "    * /abbandona           " + Util.RESET
         + "Ti fa abbandonare una parita gia' in corso e, una volta \n"
         + "                           confermato, ti mostra le posizioni generate di tutte le navi\n\n";
-
-    return mainCommands;
   }
 
   /**
@@ -99,7 +97,7 @@ public final class HelpBoundary {
    * delle difficolta'.
    */
   private static String subCommandsDifficulty() {
-    String subDifficulty = Util.YELLOW
+    return Util.YELLOW
         + Util.BOLD + "> DIFFICOLTA' PERSONALIZZATE\n" + Util.RESET
         + Util.ITALIC + Util.CYAN + "    * /facile numero       " + Util.RESET
         + "Imposta il numero massimo di tentativi falliti, per la \n"
@@ -113,8 +111,6 @@ public final class HelpBoundary {
         + "Imposta il numero massimo di tentativi falliti, per la \n"
         + "                           difficolta' \"Difficile\", ad un valore pari a"
         + Util.ITALIC + " numero \n" + Util.RESET;
-
-    return subDifficulty;
   }
 
   /**
@@ -128,7 +124,7 @@ public final class HelpBoundary {
    * della griglia di gioco'.
    */
   private static String subCommandsGrid() {
-    String subGrid = Util.YELLOW
+    return Util.YELLOW
         + Util.BOLD + "> GRIGLIA PERSONALIZZATA\n" + Util.RESET
         + Util.ITALIC + Util.CYAN + "    * /standard            " + Util.RESET
         + "Imposta una griglia 10x10 \n"
@@ -136,8 +132,6 @@ public final class HelpBoundary {
         + "Imposta una griglia 18x18 \n"
         + Util.ITALIC + Util.CYAN + "    * /extralarge          " + Util.RESET
         + "Imposta una griglia 26x26 \n\n";
-
-    return subGrid;
   }
 
   /**
@@ -151,7 +145,7 @@ public final class HelpBoundary {
    * del tempo di gioco.
    */
   private static String subCommandsTime() {
-    String subTime = Util.YELLOW
+    return Util.YELLOW
         + Util.BOLD + "> TEMPO DI GIOCO\n" + Util.RESET
         + Util.ITALIC + Util.CYAN + "    * /tempo numero        " + Util.RESET
         + "Imposta il tempo di gioco di \n"
@@ -159,7 +153,5 @@ public final class HelpBoundary {
         + Util.ITALIC + "numero \n" + Util.RESET
         + Util.ITALIC + Util.CYAN + "    * /mostratempo         " + Util.RESET
         + "Mostra i minuti di gioco trascorsi e i minuti rimanenti";
-
-    return subTime;
   }
 }
