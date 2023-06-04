@@ -9,7 +9,7 @@ import it.uniba.nygaard.game.entity.grids.CellsGrid;
  * La classe Ship rappresenta una generica nave.
  * </p>
  */
-public abstract class Ship {
+public class Ship {
 
   /**
    * <h3> coord </h3>
@@ -43,7 +43,7 @@ public abstract class Ship {
    *
    * @param newHp Hp della nave.
    */
-  Ship(final int newHp) {
+  public Ship(final int newHp) {
     this.coord = new Coordinate();
     this.direction = Util.HORIZONTAL;
     this.hp = newHp;
