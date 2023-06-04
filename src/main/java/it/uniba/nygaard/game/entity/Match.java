@@ -3,12 +3,7 @@ package it.uniba.nygaard.game.entity;
 import it.uniba.nygaard.game.Util;
 import it.uniba.nygaard.game.entity.grids.CellsGrid;
 import it.uniba.nygaard.game.entity.grids.CharactersGrid;
-import it.uniba.nygaard.game.entity.ships.Coordinate;
-import it.uniba.nygaard.game.entity.ships.Destroyer;
-import it.uniba.nygaard.game.entity.ships.AircraftCarrier;
-import it.uniba.nygaard.game.entity.ships.Battleship;
-import it.uniba.nygaard.game.entity.ships.Cruiser;
-import it.uniba.nygaard.game.entity.ships.Ship;
+import it.uniba.nygaard.game.entity.ships.*;
 
 import java.util.Random;
 
@@ -131,22 +126,13 @@ public final class Match {
     this.failedAttempts = 0;
     this.usedAttempts = 0;
     this.ships = new Ship[Util.MAX_SHIP];
+
     int i = Util.MIN_SHIP;
-    for (int j = 0; j < Util.AIRCRAFT_NO; j++) {
-      this.ships[i - 1] = new AircraftCarrier();
-      i++;
-    }
-    for (int j = 0; j < Util.BATTLESHIP_NO; j++) {
-      this.ships[i - 1] = new Battleship();
-      i++;
-    }
-    for (int j = 0; j < Util.CRUISER_NO; j++) {
-      this.ships[i - 1] = new Cruiser();
-      i++;
-    }
-    for (int j = 0; j < Util.DESTROYER_NO; j++) {
-      this.ships[i - 1] = new Destroyer();
-      i++;
+    for (ShipType ship : ShipType.values()) {
+      for (int j = 0; j < ship.getNumShips(); j++) {
+        this.ships[i - 1] = new Ship(ship.getHp());
+        i++;
+      }
     }
 
     this.defenseGrid = new CellsGrid(Util.STANDARD_GRID_SIZE);
