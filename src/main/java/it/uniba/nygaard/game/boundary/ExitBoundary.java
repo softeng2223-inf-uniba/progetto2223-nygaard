@@ -45,7 +45,7 @@ public final class ExitBoundary {
   public static String ask() {
     Scanner in = new Scanner(System.in, StandardCharsets.UTF_8);
     String command;
-    System.out.print("Vuoi veramente uscire? "
+    System.out.print("Vuoi veramente uscire dal gioco? "
         + "(" + Util.GREEN + "y" + Util.RESET
         + "/" + Util.RED + "n" + Util.RESET + ") ");
     command = in.nextLine().toLowerCase();
