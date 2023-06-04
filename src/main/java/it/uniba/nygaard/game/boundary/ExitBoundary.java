@@ -59,7 +59,7 @@ public final class ExitBoundary {
    * </p>
    */
   public static void operationCancelled() {
-    System.out.println(Util.RED + "Operazione annullata" + Util.RESET);
+    System.out.println(Util.RED + "Uscita dall'applicazione annullata" + Util.RESET);
   }
 
   /**
