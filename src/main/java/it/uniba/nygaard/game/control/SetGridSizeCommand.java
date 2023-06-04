@@ -114,7 +114,6 @@ final class SetGridSizeCommand extends Command {
         size = Util.EXTRA_LARGE_GRID_SIZE;
       }
       default -> {
-        size = Util.STANDARD_GRID_SIZE;
       }
     }
 
