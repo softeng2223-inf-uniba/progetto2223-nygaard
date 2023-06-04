@@ -54,7 +54,7 @@ final class SetGridSizeCommand extends Command {
    */
   void executeCommand(final String[] command) {
     if (GameManager.getMatch().getInGame()) {
-      GridSizeBoundary.inGameError();
+      GridSizeBoundary.alreadyInGame();
       return;
     }
 
@@ -69,14 +69,14 @@ final class SetGridSizeCommand extends Command {
     String choice;
 
     if (sizeCommand == currentSize) {
-      GridSizeBoundary.sameSizeError();
+      GridSizeBoundary.sameSize();
       return;
     }
 
     do {
       choice = GridSizeBoundary.ask(sizeCommand);
       if (!choice.equals("n") && !choice.equals("y")) {
-        GridSizeBoundary.invalidChoiceError();
+        GridSizeBoundary.invalidChoice();
       }
     }
     while (!choice.equals("y") && !choice.equals("n"));

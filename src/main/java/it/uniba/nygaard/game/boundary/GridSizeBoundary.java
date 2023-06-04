@@ -31,7 +31,7 @@ public final class GridSizeBoundary {
    * mentre si è in partita.
    * </p>
    */
-  public static void inGameError() {
+  public static void alreadyInGame() {
     System.out.println(Util.RED + "Non puoi impostare le dimensioni della griglia"
         + "mentre sei in partita" + Util.RESET);
   }
@@ -53,7 +53,7 @@ public final class GridSizeBoundary {
    * con le stesse dimensioni attuali.
    * </p>
    */
-  public static void sameSizeError() {
+  public static void sameSize() {
     System.out.println(Util.RED + "Dimensioni gia' impostate" + Util.RESET);
   }
 
@@ -63,7 +63,7 @@ public final class GridSizeBoundary {
    * Messaggio di errore per quando si inserisce una scelta non valida.
    * </p>
    */
-  public static void invalidChoiceError() {
+  public static void invalidChoice() {
     System.out.println(Util.RED + "Scelta non valida" + Util.RESET);
   }
 
