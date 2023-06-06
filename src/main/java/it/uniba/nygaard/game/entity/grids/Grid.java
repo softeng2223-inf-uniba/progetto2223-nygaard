@@ -44,18 +44,6 @@ public abstract class Grid {
   }
 
   /**
-   * <h3> getHeadingEdgeWidth </h3>
-   * <p>
-   * Restituisce la larghezza del bordo superiore.
-   * </p>
-   *
-   * @return Larghezza del bordo superiore.
-   */
-  public int getHeadingEdgeWidth() {
-    return headingEdgeWidth;
-  }
-
-  /**
    * <h3> setHeadingEdgeWidth </h3>
    * <p>
    * Imposta la larghezza del bordo superiore.

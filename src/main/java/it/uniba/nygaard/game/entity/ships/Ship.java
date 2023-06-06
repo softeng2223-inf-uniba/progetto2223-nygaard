@@ -76,18 +76,6 @@ public class Ship {
   }
 
   /**
-   * <h3> setHp </h3>
-   * <p>
-   * Imposta gli hp della nave.
-   * </p>
-   *
-   * @param newHp Hp della nave.
-   */
-  public void setHp(final int newHp) {
-    this.hp = newHp;
-  }
-
-  /**
    * <h3> getCoordRow </h3>
    * <p>
    * Restituisce la riga della coordinata iniziale della nave.

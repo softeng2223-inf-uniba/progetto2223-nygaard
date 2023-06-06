@@ -24,30 +24,6 @@ abstract class Command {
   private int maxParamNumber;
 
   /**
-   * <h3> getMinParamNumber </h3>
-   * <p>
-   * Restituisce il numero minimo di parametri per accettare il comando.
-   * </p>
-   *
-   * @return Numero minimo di parametri per accettare il comando.
-   */
-  int getMinParamNumber() {
-    return minParamNumber;
-  }
-
-  /**
-   * <h3> getMaxParamNumber </h3>
-   * <p>
-   * Restituisce il numero massimo di parametri passabili al comando.
-   * </p>
-   *
-   * @return Numero massimo di parametri passabili al comando.
-   */
-  int getMaxParamNumber() {
-    return maxParamNumber;
-  }
-
-  /**
    * <h3> setParamNumber </h3>
    * <p>
    * Imposta il numero minimo di parametri del comando.
