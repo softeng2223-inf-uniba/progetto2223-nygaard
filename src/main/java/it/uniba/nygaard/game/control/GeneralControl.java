@@ -124,9 +124,9 @@ public final class GeneralControl {
         }
       }
       switch (shutDown) {
-        case Util.WIN_TERMINATION_CODE -> MatchBoundary.win();
-        case Util.OUT_OF_ATTEMPTS_TERMINATION_CODE -> MatchBoundary.outOfAttempts();
-        case Util.LEFT_TERMINATION_CODE -> MatchBoundary.leave();
+        case UShutdown.WIN_TERMINATION_CODE -> MatchBoundary.win();
+        case UShutdown.OUT_OF_ATTEMPTS_TERMINATION_CODE -> MatchBoundary.outOfAttempts();
+        case UShutdown.LEFT_TERMINATION_CODE -> LeaveMatchBoundary.leave();
         default -> {
         }
       }
