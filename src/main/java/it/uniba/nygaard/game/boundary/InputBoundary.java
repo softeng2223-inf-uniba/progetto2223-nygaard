@@ -47,9 +47,8 @@ public final class InputBoundary {
    * @param command Vettore di stringhe che rappresenta il comando non riconosciuto.
    */
   public static void notRecognisedCommand(final String[] command) {
-    String commandString = "";
-    commandString = String.join(" ", command);
-    System.out.println(Util.RED + "Comando non riconosciuto: " + commandString + Util.RESET);
+    String commandString = String.join(" ", command);
+    System.out.println(UColor.RED + "Comando non riconosciuto: " + commandString + UColor.RESET);
   }
 
   /**
