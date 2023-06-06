@@ -1,7 +1,5 @@
 package it.uniba.nygaard.game.control;
 
-import it.uniba.nygaard.game.boundary.InputBoundary;
-
 /**
  * <h2> Command </h2>
  * <p>
@@ -11,35 +9,66 @@ import it.uniba.nygaard.game.boundary.InputBoundary;
 abstract class Command {
 
   /**
-   * <h3> paramNumber </h3>
+   * <h3> minParam </h3>
    * <p>
-   * Numero di parametri del comando.
+   * Numero minimo di parametri del comando.
    * </p>
    */
-  private int paramNumber;
+  private int minParamNumber;
+  /**
+   * <h3> maxParam </h3>
+   * <p>
+   * Numero massimo di parametri del comando.
+   * </p>
+   */
+  private int maxParamNumber;
 
   /**
-   * <h3> getParamNumber </h3>
+   * <h3> getMinParamNumber </h3>
    * <p>
-   * Restituisce il numero di parametri del comando.
+   * Restituisce il numero minimo di parametri per accettare il comando.
    * </p>
    *
-   * @return Numero di parametri del comando.
+   * @return Numero minimo di parametri per accettare il comando.
    */
-  int getParamNumber() {
-    return paramNumber;
+  int getMinParamNumber() {
+    return minParamNumber;
+  }
+
+  /**
+   * <h3> getMaxParamNumber </h3>
+   * <p>
+   * Restituisce il numero massimo di parametri passabili al comando.
+   * </p>
+   *
+   * @return Numero massimo di parametri passabili al comando.
+   */
+  int getMaxParamNumber() {
+    return maxParamNumber;
   }
 
   /**
    * <h3> setParamNumber </h3>
    * <p>
-   * Imposta il numero di parametri del comando.
+   * Imposta il numero minimo di parametri del comando.
    * </p>
    *
-   * @param newParamNumber Numero di parametri del comando.
+   * @param newParamNumber Numero minimo di parametri del comando.
    */
-  void setParamNumber(final int newParamNumber) {
-    this.paramNumber = newParamNumber;
+  void setMinParamNumber(final int newParamNumber) {
+    this.minParamNumber = newParamNumber;
+  }
+
+  /**
+   * <h3> setParamNumber </h3>
+   * <p>
+   * Imposta il numero massimo di parametri del comando.
+   * </p>
+   *
+   * @param newParamNumber Numero massimo di parametri del comando.
+   */
+  void setMaxParamNumber(final int newParamNumber) {
+    this.maxParamNumber = newParamNumber;
   }
 
   /**
