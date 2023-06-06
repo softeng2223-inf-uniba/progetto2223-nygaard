@@ -60,15 +60,7 @@ public final class GeneralControl {
     GeneralControl.shutDown = value;
   }
 
-  /**
-   * <h3> startGame </h3>
-   * <p>
-   * Avvia il gioco.
-   * </p>
-   *
-   * @param args Argomenti passati al programma.
-   */
-  public static void startGame(final String[] args) {
+  private static HashMap<String, Command> initCommands() {
     HashMap<String, Command> availableCommands = new HashMap<>();
     availableCommands.put("/esci", ExitCommand.getInstance());
     availableCommands.put("/facile", SetDifficultyCommand.getInstance());
@@ -88,6 +80,19 @@ public final class GeneralControl {
     availableCommands.put("/tentativi", AttemptsCommand.getInstance());
     availableCommands.put("/abbandona", LeaveMatchCommand.getInstance());
     availableCommands.put("/mostragriglia", ShowGridCommand.getInstance());
+    return availableCommands;
+  }
+
+  /**
+   * <h3> startGame </h3>
+   * <p>
+   * Avvia il gioco.
+   * </p>
+   *
+   * @param args Argomenti passati al programma.
+   */
+  public static void startGame(final String[] args) {
+    HashMap<String, Command> availableCommands = initCommands();
     String regex = "^[a-z]-[1-9][0-9]*$";
     Pattern pattern = Pattern.compile(regex);
     Matcher matcher;
