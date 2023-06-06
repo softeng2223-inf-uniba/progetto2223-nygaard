@@ -2,6 +2,13 @@ package it.uniba.nygaard.game.entity.ships;
 
 import it.uniba.nygaard.game.Util;
 
+/**
+ * <h2> ShipType </h2>
+ * <p>
+ *   La classe ShipType modella le tipologie di navi
+ *   presenti nel gioco, con i loro hp e il numero di occorrenze.
+ * </p>
+ */
 public enum ShipType {
   AIRCRAFT(Util.AIRCRAFT_NO, Util.AIRCRAFT_CARRIER_HP),
   BATTLESHIP(Util.BATTLESHIP_NO, Util.BATTLESHIP_HP),
