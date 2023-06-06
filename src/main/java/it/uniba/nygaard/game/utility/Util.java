@@ -11,6 +11,8 @@ public final class Util {
 
   public static final int FIRST_TWO_DIGITS = 10;
   public static final int INT_TO_CHAR = 64;
+  public static final int MIN_ARGS = 0;
+  public static final int MAX_ARGS = 1;
 
   /**
    * <h3> Costruttore </h3>

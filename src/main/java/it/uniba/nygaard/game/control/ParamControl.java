@@ -4,6 +4,7 @@ import it.uniba.nygaard.game.boundary.DescriptionBoundary;
 import it.uniba.nygaard.game.boundary.HelpBoundary;
 import it.uniba.nygaard.game.boundary.LogoBoundary;
 import it.uniba.nygaard.game.boundary.ParamsBoundary;
+import it.uniba.nygaard.game.utility.Util;
 
 /**
  * << Control >>
@@ -35,8 +36,8 @@ final class ParamControl {
    */
   public static void initUI() {
     String[] args = GameManager.getArgs();
-    if (args.length > 0) {
-      if (args.length > 1) {
+    if (args.length > Util.MIN_ARGS) {
+      if (args.length > Util.MAX_ARGS) {
         ParamsBoundary.tooManyArgs();
         System.exit(0);
       }
