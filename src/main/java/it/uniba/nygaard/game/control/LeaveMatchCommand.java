@@ -53,6 +53,10 @@ public final class LeaveMatchCommand extends Command {
    */
 
   void executeCommand(final String[] command) {
+    if (checkNoParams(command)) {
+      InputBoundary.howToUse(command[0]);
+      return;
+    }
     if (!GameManager.getMatch().getInGame()) {
       LeaveMatchBoundary.notInGame();
       return;

@@ -52,7 +52,8 @@ final class ShowGridCommand extends Command {
    * @param command Comando da eseguire.
    */
   public void executeCommand(final String[] command) {
-    if (invalidNumber(command)) {
+    if (checkNoParams(command)) {
+      InputBoundary.howToUse(command[0]);
       return;
     }
     Match p = GameManager.getMatch();

@@ -1,6 +1,7 @@
 package it.uniba.nygaard.game.control;
 
 
+import it.uniba.nygaard.game.boundary.InputBoundary;
 import it.uniba.nygaard.game.boundary.ShowShipsBoundary;
 
 /**
@@ -52,7 +53,8 @@ final class ShowShipCommand extends Command {
    * @param command Comando da eseguire.
    */
   public void executeCommand(final String[] command) {
-    if (invalidNumber(command)) {
+    if (checkNoParams(command)) {
+      InputBoundary.howToUse(command[0]);
       return;
     }
     ShowShipsBoundary.showShips();

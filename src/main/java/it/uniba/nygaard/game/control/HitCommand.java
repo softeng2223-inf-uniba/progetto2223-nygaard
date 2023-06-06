@@ -75,7 +75,8 @@ final class HitCommand extends Command {
    * @param command comando da eseguire
    */
   public void executeCommand(final String[] command) {
-    if (invalidNumber(command)) {
+    if (checkNoParams(command)) {
+      InputBoundary.howToUse("<lettera>-<numero>");
       return;
     }
     Match p = GameManager.getMatch();

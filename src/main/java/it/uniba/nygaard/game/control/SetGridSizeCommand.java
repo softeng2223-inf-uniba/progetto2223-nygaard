@@ -54,6 +54,11 @@ final class SetGridSizeCommand extends Command {
    * @param command Comando da eseguire
    */
   void executeCommand(final String[] command) {
+    if (checkNoParams(command)) {
+      InputBoundary.howToUse(command[0]);
+      return;
+    }
+
     if (GameManager.getMatch().getInGame()) {
       GridSizeBoundary.alreadyInGame();
       return;

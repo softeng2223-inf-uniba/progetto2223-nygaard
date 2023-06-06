@@ -57,7 +57,8 @@ final class SetDifficultyCommand extends Command {
    * @param command Comando da eseguire.
    */
   public void executeCommand(final String[] command) {
-    if (invalidNumber(command, " [<numero intero positivo>]")) {
+    if (checkNoParams(command)) {
+      InputBoundary.howToUse(command[0], " [<numero tentativi>]");
       return;
     }
     if (GameManager.getMatch().getInGame()) {

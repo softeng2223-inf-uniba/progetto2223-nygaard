@@ -53,6 +53,10 @@ final class SetTimeCommand extends Command {
    * @param command Comando da eseguire.
    */
   public void executeCommand(final String[] command) {
+    if (checkNoParams(command)) {
+      InputBoundary.howToUse("/tempo", " <tempo in minuti>");
+      return;
+    }
     if (GameManager.getMatch().getInGame()) {
       TimeBoundary.notInGame();
       return;

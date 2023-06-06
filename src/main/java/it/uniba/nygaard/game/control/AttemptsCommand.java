@@ -56,11 +56,8 @@ final class AttemptsCommand extends Command {
    * @param command Comando da eseguire.
    */
   void executeCommand(final String[] command) {
-    if (invalidNumber(command, " <numero intero positivo>")) {
-      return;
-    }
-    if (command.length < 2) {
-      InputBoundary.howToUse(command[0], " <numero intero positivo>");
+    if (checkNoParams(command)) {
+      InputBoundary.howToUse(command[0], " <numero tentativi>");
       return;
     }
     if (GameManager.getMatch().getInGame()) {

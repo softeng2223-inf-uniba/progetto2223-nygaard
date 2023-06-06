@@ -52,7 +52,8 @@ final class ShowAttemptsCommand extends Command {
    * @param command comando da eseguire
    */
   public void executeCommand(final String[] command) {
-    if (invalidNumber(command)) {
+    if (checkNoParams(command)) {
+      InputBoundary.howToUse(command[0]);
       return;
     }
     Match p = GameManager.getMatch();
