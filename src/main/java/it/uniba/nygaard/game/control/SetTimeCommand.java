@@ -3,6 +3,9 @@ package it.uniba.nygaard.game.control;
 import it.uniba.nygaard.game.boundary.InputBoundary;
 import it.uniba.nygaard.game.boundary.TimeBoundary;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 /**
  * <<Control>>
  * <h2>SetTimeCommand</h2>
@@ -61,21 +64,18 @@ final class SetTimeCommand extends Command {
       TimeBoundary.notInGame();
       return;
     }
-    int maxTime = 0;
-    if (invalidNumber(command, " <numero> (intero positivo)")) {
-      return;
-    }
-    if (command.length < 2) {
-      InputBoundary.howToUse("/tempo", " <numero> (intero positivo)");
-      return;
-    }
-    try {
-      maxTime = Integer.parseInt(command[1]);
-      if (maxTime <= 0) {
+    int maxTime;
+    String regex = "^[1-9][0-9]*$";
+    Pattern pattern = Pattern.compile(regex);
+    Matcher matcher = pattern.matcher(command[1]);
+    if (matcher.matches()) {
+      try {
+        maxTime = Integer.parseInt(command[1]);
+      } catch (NumberFormatException e) {
         TimeBoundary.errorTime();
         return;
       }
-    } catch (NumberFormatException e) {
+    } else {
       TimeBoundary.errorTime();
       return;
     }
