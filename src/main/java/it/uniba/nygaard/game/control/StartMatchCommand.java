@@ -32,7 +32,8 @@ final class StartMatchCommand extends Command {
    * </p>
    */
   private StartMatchCommand() {
-    setParamNumber(1);
+    setMinParamNumber(1);
+    setMaxParamNumber(1);
   }
 
   /**

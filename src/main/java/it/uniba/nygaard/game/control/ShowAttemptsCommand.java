@@ -29,7 +29,8 @@ final class ShowAttemptsCommand extends Command {
    * </p>
    */
   private ShowAttemptsCommand() {
-    setParamNumber(1);
+    setMinParamNumber(1);
+    setMaxParamNumber(1);
   }
 
   /**

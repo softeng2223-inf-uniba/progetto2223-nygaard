@@ -29,7 +29,8 @@ final class RevealGridCommand extends Command {
    * </p>
    */
   private RevealGridCommand() {
-    setParamNumber(1);
+    setMinParamNumber(1);
+    setMaxParamNumber(1);
   }
 
   /**

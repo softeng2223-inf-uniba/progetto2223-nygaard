@@ -29,7 +29,8 @@ final class ExitCommand extends Command {
    * </p>
    */
   private ExitCommand() {
-    setParamNumber(1);
+    setMinParamNumber(1);
+    setMaxParamNumber(1);
   }
 
   /**

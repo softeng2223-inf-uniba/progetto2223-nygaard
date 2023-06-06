@@ -25,7 +25,8 @@ final class SetDifficultyCommand extends Command {
    * </p>
    */
   private SetDifficultyCommand() {
-    setParamNumber(2);
+    setMinParamNumber(1);
+    setMaxParamNumber(2);
   }
 
   /**

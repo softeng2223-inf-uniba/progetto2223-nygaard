@@ -29,7 +29,8 @@ final class SetGridSizeCommand extends Command {
    * Costruttore della classe SetGridSizeCommand.
    */
   private SetGridSizeCommand() {
-    setParamNumber(1);
+    setMinParamNumber(1);
+    setMaxParamNumber(1);
   }
 
   /**

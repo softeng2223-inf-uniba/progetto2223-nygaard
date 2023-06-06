@@ -34,7 +34,8 @@ final class HitCommand extends Command {
    * </p>
    */
   private HitCommand() {
-    setParamNumber(1);
+    setMinParamNumber(1);
+    setMaxParamNumber(1);
   }
 
   /**

@@ -29,7 +29,8 @@ final class ShowGridCommand extends Command {
    * </p>
    */
   private ShowGridCommand() {
-    setParamNumber(1);
+    setMinParamNumber(1);
+    setMaxParamNumber(1);
   }
 
   /**

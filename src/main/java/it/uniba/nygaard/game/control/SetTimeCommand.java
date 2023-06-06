@@ -29,7 +29,8 @@ final class SetTimeCommand extends Command {
    * </p>
    */
   private SetTimeCommand() {
-    setParamNumber(2);
+    setMinParamNumber(2);
+    setMaxParamNumber(2);
   }
 
   /**

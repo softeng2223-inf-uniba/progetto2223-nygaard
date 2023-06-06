@@ -29,7 +29,8 @@ final class ShowTimeCommand extends Command {
    * </p>
    */
   private ShowTimeCommand() {
-    setParamNumber(1);
+    setMinParamNumber(1);
+    setMaxParamNumber(1);
   }
 
   /**

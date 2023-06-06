@@ -29,7 +29,8 @@ final class ShowShipCommand extends Command {
    * </p>
    */
   private ShowShipCommand() {
-    setParamNumber(1);
+    setMinParamNumber(1);
+    setMaxParamNumber(1);
   }
 
   /**

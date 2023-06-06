@@ -29,7 +29,8 @@ final class HelpCommand extends Command {
    * </p>
    */
   private HelpCommand() {
-    setParamNumber(1);
+    setMinParamNumber(1);
+    setMaxParamNumber(1);
   }
 
   /**

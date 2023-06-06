@@ -29,7 +29,8 @@ public final class LeaveMatchCommand extends Command {
    * </p>
    */
   private LeaveMatchCommand() {
-    setParamNumber(1);
+    setMinParamNumber(1);
+    setMaxParamNumber(1);
   }
 
   /**

@@ -32,7 +32,8 @@ final class AttemptsCommand extends Command {
    * </p>
    */
   private AttemptsCommand() {
-    setParamNumber(2);
+    setMinParamNumber(2);
+    setMaxParamNumber(2);
   }
 
   /**
