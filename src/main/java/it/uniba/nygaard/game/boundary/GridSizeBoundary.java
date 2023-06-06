@@ -33,7 +33,7 @@ public final class GridSizeBoundary {
    */
   public static void alreadyInGame() {
     System.out.println(UColor.RED + "Non puoi impostare le dimensioni della griglia"
-        + "mentre sei in partita" + UColor.RESET);
+        + " mentre sei in partita" + UColor.RESET);
   }
 
   /**
