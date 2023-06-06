@@ -135,7 +135,7 @@ public final class GeneralControl {
           MatchBoundary.printSolution();
           ShowGridBoundary.printGrid(GameManager.getMatch().getDefenseGrid());
         }
-        MatchBoundary.playAgain();
+        MatchBoundary.endMatch();
       }
     } while (shutDown != UShutdown.QUIT_TERMINATION_CODE);
   }

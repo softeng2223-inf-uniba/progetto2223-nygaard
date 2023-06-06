@@ -74,10 +74,10 @@ public final class MatchBoundary {
    * il giocatore ha terminato la partita precedente.
    * </p>
    */
-  public static void playAgain() {
-    System.out.println(Util.CYAN + "\nHai terminato la partita precedente, "
-        + "i parametri sono stati resettati." + Util.RESET);
-    System.out.println(Util.CYAN + "Puoi inserire qualsiasi comando o iniziare una nuova partita.\n" + Util.RESET);
+  public static void endMatch() {
+    System.out.println(UColor.CYAN + "\nHai terminato la partita precedente, "
+        + "i parametri sono stati resettati." + UColor.RESET);
+    System.out.println(UColor.CYAN + "Puoi inserire qualsiasi comando o iniziare una nuova partita.\n" + UColor.RESET);
   }
 
   /**
