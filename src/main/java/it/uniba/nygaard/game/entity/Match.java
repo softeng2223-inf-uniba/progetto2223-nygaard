@@ -378,7 +378,7 @@ public final class Match {
    * @return true se tutte le navi sono state inizializzate, false altrimenti.
    */
   public boolean initializeShips(final int i) {
-    if (i > Util.MAX_SHIP) {
+    if (i > UShip.MAX_SHIP) {
       return true;
     }
     boolean direction;
