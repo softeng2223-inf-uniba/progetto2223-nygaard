@@ -82,7 +82,7 @@ abstract class Command {
   abstract void executeCommand(String[] command);
 
   /**
-   * <h3> invalidNumber </h3>
+   * <h3> checkNoParams </h3>
    * <p>
    * Controlla se il numero di parametri è valido.
    * </p>
@@ -90,15 +90,7 @@ abstract class Command {
    * @param command Comando da eseguire.
    * @return true se il numero di parametri è valido, false altrimenti.
    */
-  boolean invalidNumber(final String[] command, final String... params) {
-    if (command.length > paramNumber) {
-      if (params.length == 0) {
-        InputBoundary.howToUse(command[0]);
-      } else {
-        InputBoundary.howToUse(command[0], String.join(" ", params));
-      }
-      return true;
-    }
-    return false;
+  boolean checkNoParams(final String[] command) {
+    return command.length > maxParamNumber || command.length < minParamNumber;
   }
 }
