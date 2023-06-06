@@ -1,6 +1,7 @@
 package it.uniba.nygaard.game.control;
 
 import it.uniba.nygaard.game.entity.Match;
+import it.uniba.nygaard.game.utility.UGrid;
 
 /**
  * << Control >>
@@ -34,14 +35,6 @@ public final class GameManager {
    * </p>
    */
   private static int matchAttempts;
-
-  /**
-   * <h3> nextGridSize </h3>
-   * <p>
-   * Dimensione della griglia della prossima partita.
-   * </p>
-   */
-  private static int nextGridSize;
 
   /**
    * <h3> args </h3>
@@ -122,18 +115,6 @@ public final class GameManager {
 
   static int getMatchAttempts() {
     return matchAttempts;
-  }
-
-  /**
-   * <h3> setNextGridSizeName </h3>
-   * <p>
-   * Imposta la difficoltà della prossima partita.
-   * </p>
-   *
-   * @param newNextDifficulty Difficoltà della prossima partita.
-   */
-  static void setNextGridSizeName(final int newNextDifficulty) {
-    GameManager.nextGridSize = newNextDifficulty;
   }
 
   /**

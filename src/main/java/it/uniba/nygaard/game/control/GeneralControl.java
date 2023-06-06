@@ -104,7 +104,6 @@ public final class GeneralControl {
     do {
       GameManager.setMatch(new Match());
       GameManager.setMatchDifficulty(UDifficulty.DIFFICULTY_MEDIUM);
-      GameManager.setNextGridSizeName(UGrid.STANDARD_GRID_SIZE);
       shutDown = UShutdown.NOT_TERMINATION_CODE;
       while (shutDown == UShutdown.NOT_TERMINATION_CODE) {
         String[] command = InputBoundary.getCommand().trim().replaceAll(" +", " ").split(" ");
