@@ -66,18 +66,20 @@ final class SetGridSizeCommand extends Command {
     }
 
     Match p = GameManager.getMatch();
-    int sizeCommand = this.getMappedCommand(command[0]);
+    int sizeInvolved = command[0].equals("/standard") ? UGrid.STANDARD_GRID_SIZE
+        : command[0].equals("/large") ? UGrid.LARGE_GRID_SIZE
+        : UGrid.EXTRA_LARGE_GRID_SIZE;
     int currentSize = p.getGridSize();
 
     String choice;
 
-    if (sizeCommand == currentSize) {
+    if (sizeInvolved == currentSize) {
       GridSizeBoundary.sameSize();
       return;
     }
 
     do {
-      choice = GridSizeBoundary.ask(sizeCommand);
+      choice = GridSizeBoundary.ask(sizeInvolved);
       if (!choice.equals("n") && !choice.equals("y")) {
         GridSizeBoundary.invalidChoice();
       }
@@ -89,8 +91,8 @@ final class SetGridSizeCommand extends Command {
       return;
     }
 
-    p.setGridSize(sizeCommand);
-    p.resizeGrids(sizeCommand);
+    p.setGridSize(sizeInvolved);
+    p.resizeGrids(sizeInvolved);
     GridSizeBoundary.operationDone();
   }
 }
