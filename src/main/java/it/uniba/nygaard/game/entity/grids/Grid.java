@@ -24,13 +24,6 @@ public abstract class Grid {
    * </p>
    */
   private char maxColumn;
-  /**
-   * <h3> headingEdgeWidth </h3>
-   * <p>
-   * Larghezza del bordo superiore.
-   * </p>
-   */
-  private int headingEdgeWidth;
 
   /**
    * <h3> Costruttore </h3>
@@ -41,18 +34,6 @@ public abstract class Grid {
   Grid() {
     maxRows = UGrid.STANDARD_GRID_SIZE;
     maxColumn = 'J';
-  }
-
-  /**
-   * <h3> setHeadingEdgeWidth </h3>
-   * <p>
-   * Imposta la larghezza del bordo superiore.
-   * </p>
-   *
-   * @param newHeadingEdgeWidth Larghezza del bordo superiore.
-   */
-  public void setHeadingEdgeWidth(final int newHeadingEdgeWidth) {
-    this.headingEdgeWidth = newHeadingEdgeWidth;
   }
 
   /**

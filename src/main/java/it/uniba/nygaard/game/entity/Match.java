@@ -213,8 +213,6 @@ public final class Match {
     this.defenseGrid.setMaxRows(newSize);
     this.attackGrid.setMaxRows(newSize);
 
-    this.attackGrid.setHeadingEdgeWidth(newSize + UGrid.BORDER_ADDER);
-    this.defenseGrid.setHeadingEdgeWidth(newSize + UGrid.BORDER_ADDER);
   }
 
   /**
