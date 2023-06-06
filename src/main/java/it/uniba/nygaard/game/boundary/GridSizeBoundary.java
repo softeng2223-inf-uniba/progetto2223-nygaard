@@ -54,7 +54,7 @@ public final class GridSizeBoundary {
    * </p>
    */
   public static void sameSize() {
-    System.out.println(UColor.RED + "Dimensioni gia' impostate" + UColor.RESET);
+    System.out.println(UColor.RED + "Questa dimensione è stata già impostata" + UColor.RESET);
   }
 
   /**
