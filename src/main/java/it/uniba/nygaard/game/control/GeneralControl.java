@@ -1,7 +1,6 @@
 package it.uniba.nygaard.game.control;
 
 import it.uniba.nygaard.game.utility.UDifficulty;
-import it.uniba.nygaard.game.utility.UGrid;
 import it.uniba.nygaard.game.utility.UShutdown;
 import it.uniba.nygaard.game.boundary.InputBoundary;
 import it.uniba.nygaard.game.boundary.LeaveMatchBoundary;

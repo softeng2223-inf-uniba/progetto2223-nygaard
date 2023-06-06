@@ -1,7 +1,6 @@
 package it.uniba.nygaard.game.control;
 
 import it.uniba.nygaard.game.entity.Match;
-import it.uniba.nygaard.game.utility.UGrid;
 
 /**
  * << Control >>
