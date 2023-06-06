@@ -28,13 +28,17 @@ public final class ShowShipsBoundary {
    * </p>
    */
   public static void showShips() {
-    System.out.println(Util.CYAN + Util.ITALIC + "\tCacciatorpediniere \t" + Util.RESET + "■■ \t"
-        + Util.CYAN + Util.BOLD + "Esemplari: " + Util.DESTROYER_NO + Util.RESET);
-    System.out.println(Util.CYAN + Util.ITALIC + "\tIncrociatore \t\t" + Util.RESET + "■■■ \t"
-        + Util.CYAN + Util.BOLD + "Esemplari: " + Util.CRUISER_NO + Util.RESET);
-    System.out.println(Util.CYAN + Util.ITALIC + "\tCorazzata \t\t" + Util.RESET + "■■■■ \t"
-        + Util.CYAN + Util.BOLD + "Esemplari: " + Util.BATTLESHIP_NO + Util.RESET);
-    System.out.println(Util.CYAN + Util.ITALIC + "\tPortaerei \t\t" + Util.RESET + "■■■■■ \t"
-        + Util.CYAN + Util.BOLD + "Esemplari: " + Util.AIRCRAFT_NO + Util.RESET);
+    System.out.println(UColor.CYAN + UColor.ITALIC + "\tCacciatorpediniere \t" + UColor.RESET
+        + "■".repeat(UShip.DESTROYER_HP) + "\t" + UColor.CYAN + UColor.BOLD
+        + "Esemplari: " + UShip.DESTROYER_NO + UColor.RESET);
+    System.out.println(UColor.CYAN + UColor.ITALIC + "\tIncrociatore \t\t" + UColor.RESET
+        + "■".repeat(UShip.CRUISER_HP) + "\t" + UColor.CYAN + UColor.BOLD
+        + "Esemplari: " + UShip.CRUISER_NO + UColor.RESET);
+    System.out.println(UColor.CYAN + UColor.ITALIC + "\tCorazzata \t\t" + UColor.RESET
+        + "■".repeat(UShip.BATTLESHIP_HP) + "\t" + UColor.CYAN + UColor.BOLD
+        + "Esemplari: " + UShip.BATTLESHIP_NO + UColor.RESET);
+    System.out.println(UColor.CYAN + UColor.ITALIC + "\tPortaerei \t\t" + UColor.RESET
+        + "■".repeat(UShip.AIRCRAFT_HP) + "\t" + UColor.CYAN + UColor.BOLD
+        + "Esemplari: " + UShip.AIRCRAFT_NO + UColor.RESET);
   }
 }
