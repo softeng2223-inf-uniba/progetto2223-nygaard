@@ -1,6 +1,6 @@
 package it.uniba.nygaard.game.entity.ships;
 
-import it.uniba.nygaard.game.Util;
+import it.uniba.nygaard.game.utility.UShip;
 
 /**
  * <h2> ShipType </h2>
@@ -10,17 +10,17 @@ import it.uniba.nygaard.game.Util;
  * </p>
  */
 public enum ShipType {
-  AIRCRAFT(Util.AIRCRAFT_NO, Util.AIRCRAFT_CARRIER_HP),
-  BATTLESHIP(Util.BATTLESHIP_NO, Util.BATTLESHIP_HP),
-  CRUISER(Util.CRUISER_NO, Util.CRUISER_HP),
-  DESTROYER(Util.DESTROYER_NO, Util.DESTROYER_HP);
+  AIRCRAFT(UShip.AIRCRAFT_NO, UShip.AIRCRAFT_HP),
+  BATTLESHIP(UShip.BATTLESHIP_NO, UShip.BATTLESHIP_HP),
+  CRUISER(UShip.CRUISER_NO, UShip.CRUISER_HP),
+  DESTROYER(UShip.DESTROYER_NO, UShip.DESTROYER_HP);
 
   private final int numShips;
   private final int hp;
 
-  ShipType(int numShips, int hp) {
-    this.numShips = numShips;
-    this.hp = hp;
+  ShipType(final int newNumShips, final int newHp) {
+    this.numShips = newNumShips;
+    this.hp = newHp;
   }
 
   public int getNumShips() {

@@ -1,7 +1,10 @@
 package it.uniba.nygaard.game.control;
 
-import it.uniba.nygaard.game.Util;
+import it.uniba.nygaard.game.utility.UDifficulty;
+import it.uniba.nygaard.game.utility.UGrid;
+import it.uniba.nygaard.game.utility.UShutdown;
 import it.uniba.nygaard.game.boundary.InputBoundary;
+import it.uniba.nygaard.game.boundary.LeaveMatchBoundary;
 import it.uniba.nygaard.game.boundary.MatchBoundary;
 import it.uniba.nygaard.game.boundary.ShowGridBoundary;
 import it.uniba.nygaard.game.entity.Match;
@@ -100,13 +103,13 @@ public final class GeneralControl {
     ParamControl.initUI();
     do {
       GameManager.setMatch(new Match());
-      GameManager.setMatchDifficulty(Util.DIFFICULTY_MEDIUM);
-      GameManager.setNextGridSizeName(Util.STANDARD_GRID_SIZE);
-      shutDown = Util.NOT_TERMINATION_CODE;
-      while (shutDown == Util.NOT_TERMINATION_CODE) {
+      GameManager.setMatchDifficulty(UDifficulty.DIFFICULTY_MEDIUM);
+      GameManager.setNextGridSizeName(UGrid.STANDARD_GRID_SIZE);
+      shutDown = UShutdown.NOT_TERMINATION_CODE;
+      while (shutDown == UShutdown.NOT_TERMINATION_CODE) {
         String[] command = InputBoundary.getCommand().trim().replaceAll(" +", " ").split(" ");
         InputBoundary.resetColor();
-        if (shutDown != Util.NOT_TERMINATION_CODE) {
+        if (shutDown != UShutdown.NOT_TERMINATION_CODE) {
           break;
         }
         matcher = pattern.matcher(command[0]);
@@ -127,13 +130,13 @@ public final class GeneralControl {
         default -> {
         }
       }
-      if (shutDown != Util.QUIT_TERMINATION_CODE) {
-        if (shutDown != Util.WIN_TERMINATION_CODE) {
+      if (shutDown != UShutdown.QUIT_TERMINATION_CODE) {
+        if (shutDown != UShutdown.WIN_TERMINATION_CODE) {
           MatchBoundary.printSolution();
           ShowGridBoundary.printGrid(GameManager.getMatch().getDefenseGrid());
         }
         MatchBoundary.playAgain();
       }
-    } while (shutDown != Util.QUIT_TERMINATION_CODE);
+    } while (shutDown != UShutdown.QUIT_TERMINATION_CODE);
   }
 }

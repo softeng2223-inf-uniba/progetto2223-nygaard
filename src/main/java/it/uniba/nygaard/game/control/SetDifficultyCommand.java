@@ -1,6 +1,7 @@
 package it.uniba.nygaard.game.control;
 
-import it.uniba.nygaard.game.Util;
+import it.uniba.nygaard.game.utility.UDifficulty;
+import it.uniba.nygaard.game.boundary.InputBoundary;
 import it.uniba.nygaard.game.boundary.SetDifficultyBoundary;
 import it.uniba.nygaard.game.entity.Match;
 
@@ -65,9 +66,9 @@ final class SetDifficultyCommand extends Command {
       SetDifficultyBoundary.alreadyInGame(command.length == 1);
       return;
     }
-    int difficultyInvolved = command[0].equals("/facile") ? Util.DIFFICULTY_EASY
-        : command[0].equals("/medio") ? Util.DIFFICULTY_MEDIUM
-        : Util.DIFFICULTY_HARD;
+    int difficultyInvolved = command[0].equals("/facile") ? UDifficulty.DIFFICULTY_EASY
+        : command[0].equals("/medio") ? UDifficulty.DIFFICULTY_MEDIUM
+        : UDifficulty.DIFFICULTY_HARD;
 
     if (command.length == 1) {
       GameManager.setMatchDifficulty(difficultyInvolved);

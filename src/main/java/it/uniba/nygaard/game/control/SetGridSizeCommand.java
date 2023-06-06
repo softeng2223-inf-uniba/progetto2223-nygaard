@@ -1,7 +1,8 @@
 package it.uniba.nygaard.game.control;
 
-import it.uniba.nygaard.game.Util;
+import it.uniba.nygaard.game.utility.UGrid;
 import it.uniba.nygaard.game.boundary.GridSizeBoundary;
+import it.uniba.nygaard.game.boundary.InputBoundary;
 import it.uniba.nygaard.game.entity.Match;
 
 /**
@@ -111,13 +112,13 @@ final class SetGridSizeCommand extends Command {
 
     switch (command) {
       case "/standard" -> {
-        size = Util.STANDARD_GRID_SIZE;
+        size = UGrid.STANDARD_GRID_SIZE;
       }
       case "/large" -> {
-        size = Util.LARGE_GRID_SIZE;
+        size = UGrid.LARGE_GRID_SIZE;
       }
       case "/extralarge" -> {
-        size = Util.EXTRA_LARGE_GRID_SIZE;
+        size = UGrid.EXTRA_LARGE_GRID_SIZE;
       }
       default -> {
       }

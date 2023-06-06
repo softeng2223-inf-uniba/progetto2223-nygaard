@@ -80,25 +80,25 @@ public final class CharactersGrid extends Grid {
     String str = "";
     char c;
 
-    int headingEdgeWidth = this.getMaxRows() + Util.BORDER_ADDER;
+    int headingEdgeWidth = this.getMaxRows() + UGrid.BORDER_ADDER;
 
     str += "-".repeat(headingEdgeWidth);
     str += UColor.PURPLE + UColor.BOLD + "Attacco" + UColor.RESET;
     str += "-".repeat(headingEdgeWidth);
     str += "\n\n";
-    str += " ".repeat(Util.COLUMNS_EDGE_WIDTH);
-    for (char y = Util.MIN_COLUMN; y <= this.getMaxColumn(); y++) {
+    str += " ".repeat(UGrid.COLUMNS_EDGE_WIDTH);
+    for (char y = UGrid.MIN_COLUMN; y <= this.getMaxColumn(); y++) {
       str += y + " ";
     }
     str += "\n\n";
-    for (int x = Util.MIN_ROWS; x <= this.getMaxRows(); x++) {
-      str += " ".repeat(Util.ROWS_EDGE_WIDTH);
+    for (int x = UGrid.MIN_ROWS; x <= this.getMaxRows(); x++) {
+      str += " ".repeat(UGrid.ROWS_EDGE_WIDTH);
       if (x < Util.FIRST_TWO_DIGITS) {
         str += " ";
       }
       str += x + "   ";
-      for (char y = Util.MIN_COLUMN; y <= this.getMaxColumn(); y++) {
-        c = this.getCharacter(x - 1, y - Util.MIN_COLUMN);
+      for (char y = UGrid.MIN_COLUMN; y <= this.getMaxColumn(); y++) {
+        c = this.getCharacter(x - 1, y - UGrid.MIN_COLUMN);
         switch (c) {
           case 'X':
             str += UColor.YELLOW;
@@ -117,8 +117,8 @@ public final class CharactersGrid extends Grid {
       str += "  " + x + "\n";
     }
     str += "\n";
-    str += " ".repeat(Util.COLUMNS_EDGE_WIDTH);
-    for (char y = Util.MIN_COLUMN; y <= this.getMaxColumn(); y++) {
+    str += " ".repeat(UGrid.COLUMNS_EDGE_WIDTH);
+    for (char y = UGrid.MIN_COLUMN; y <= this.getMaxColumn(); y++) {
       str += y + " ";
     }
     str += "\n\n";

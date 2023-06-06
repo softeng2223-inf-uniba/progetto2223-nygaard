@@ -1,6 +1,6 @@
 package it.uniba.nygaard.game.control;
 
-import it.uniba.nygaard.game.Util;
+import it.uniba.nygaard.game.utility.UDifficulty;
 import it.uniba.nygaard.game.boundary.AttemptsBoundary;
 import it.uniba.nygaard.game.boundary.InputBoundary;
 
@@ -75,7 +75,7 @@ final class AttemptsCommand extends Command {
         AttemptsBoundary.notValidChoice();
         return;
       }
-      for (int i = Util.DIFFICULTY_EASY; i <= Util.DIFFICULTY_HARD; i++) {
+      for (int i = UDifficulty.DIFFICULTY_EASY; i <= UDifficulty.DIFFICULTY_HARD; i++) {
         GameManager.getMatch().setAttempts(i, newAttempts);
       }
       AttemptsBoundary.operationDone();

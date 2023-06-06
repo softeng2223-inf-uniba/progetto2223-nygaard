@@ -1,7 +1,8 @@
 package it.uniba.nygaard.game.entity.ships;
 
-import it.uniba.nygaard.game.Util;
+import it.uniba.nygaard.game.utility.UGrid;
 import it.uniba.nygaard.game.entity.grids.CellsGrid;
+import it.uniba.nygaard.game.utility.UShip;
 
 /**
  * <h2> Ship </h2>
@@ -45,7 +46,7 @@ public class Ship {
    */
   public Ship(final int newHp) {
     this.coord = new Coordinate();
-    this.direction = Util.HORIZONTAL;
+    this.direction = UShip.HORIZONTAL;
     this.hp = newHp;
   }
 
@@ -153,7 +154,7 @@ public class Ship {
    * @return True se la nave è fuori dalla griglia, false altrimenti.
    */
   public boolean outOfMap(final CellsGrid grid) {
-    if (this.direction == Util.VERTICAL) {
+    if (this.direction == UShip.VERTICAL) {
       return this.coord.getRow() + this.hp > grid.getMaxRows();
     } else {
       return this.coord.getColumn() + this.hp > grid.getMaxColumn();
@@ -170,20 +171,20 @@ public class Ship {
    * @return True se la nave interseca altre navi, false altrimenti.
    */
   public boolean intersects(final CellsGrid grid) {
-    int startx = Math.max(this.coord.getRow() - 2, Util.MIN_ROWS - 1);
-    int starty = Math.max(this.coord.getColumn() - Util.MIN_COLUMN - 1, Util.MIN_ROWS - 1);
+    int startx = Math.max(this.coord.getRow() - 2, UGrid.MIN_ROWS - 1);
+    int starty = Math.max(this.coord.getColumn() - UGrid.MIN_COLUMN - 1, UGrid.MIN_ROWS - 1);
     int endx;
     int endy;
-    if (this.direction == Util.VERTICAL) {
+    if (this.direction == UShip.VERTICAL) {
       endx = Math.min(this.coord.getRow() + this.hp - 1, grid.getMaxRows() - 1);
-      endy = Math.min(this.coord.getColumn() - Util.MIN_COLUMN + 1, grid.getMaxRows() - 1);
+      endy = Math.min(this.coord.getColumn() - UGrid.MIN_COLUMN + 1, grid.getMaxRows() - 1);
     } else {
       endx = Math.min(this.coord.getRow(), grid.getMaxRows() - 1);
-      endy = Math.min(this.coord.getColumn() - Util.MIN_COLUMN + this.hp, grid.getMaxRows() - 1);
+      endy = Math.min(this.coord.getColumn() - UGrid.MIN_COLUMN + this.hp, grid.getMaxRows() - 1);
     }
     for (int i = startx; i <= endx; i++) {
       for (int j = starty; j <= endy; j++) {
-        if (grid.getCellCharacter(i, j) != Util.SEA_CHARACTER) {
+        if (grid.getCellCharacter(i, j) != UGrid.SEA_CHARACTER) {
           return true;
         }
       }

@@ -1,6 +1,6 @@
 package it.uniba.nygaard.game.entity.grids;
 
-import it.uniba.nygaard.game.Util;
+import it.uniba.nygaard.game.utility.UGrid;
 
 /**
  * <h2> Cell </h2>
@@ -35,7 +35,7 @@ class Cell {
    */
   Cell(final char c) {
     this.character = c;
-    this.shipIndex = Util.SEA_INDEX;
+    this.shipIndex = UGrid.SEA_INDEX;
   }
 
   /**

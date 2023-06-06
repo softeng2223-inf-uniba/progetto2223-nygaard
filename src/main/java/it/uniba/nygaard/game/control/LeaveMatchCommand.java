@@ -1,6 +1,7 @@
 package it.uniba.nygaard.game.control;
 
-import it.uniba.nygaard.game.Util;
+import it.uniba.nygaard.game.utility.UShutdown;
+import it.uniba.nygaard.game.boundary.InputBoundary;
 import it.uniba.nygaard.game.boundary.LeaveMatchBoundary;
 
 /**
@@ -61,17 +62,14 @@ public final class LeaveMatchCommand extends Command {
       LeaveMatchBoundary.notInGame();
       return;
     }
-    if (invalidNumber(command)) {
-      return;
-    }
     String choice;
     do {
       choice = LeaveMatchBoundary.ask();
-      if (GeneralControl.getShutDown() != Util.NOT_TERMINATION_CODE) {
+      if (GeneralControl.getShutDown() != UShutdown.NOT_TERMINATION_CODE) {
         return;
       }
       if (choice.equals("y")) {
-        GeneralControl.setShutDown(Util.LEFT_TERMINATION_CODE);
+        GeneralControl.setShutDown(UShutdown.LEFT_TERMINATION_CODE);
         return;
       }
       if (choice.equals("n")) {

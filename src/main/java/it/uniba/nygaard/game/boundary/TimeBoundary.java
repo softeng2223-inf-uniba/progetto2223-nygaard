@@ -84,8 +84,8 @@ public final class TimeBoundary {
    * @param startTime Tempo d'inizio della partita.
    */
   public static void showTime(final long startTime) {
-    long elapsedTime = (System.currentTimeMillis() - startTime) / Util.ONE_MINUTE;
-    System.out.println(Util.CYAN + "Il tempo trascorso è di " + elapsedTime + " minuti");
+    long elapsedTime = (System.currentTimeMillis() - startTime) / UTime.ONE_MINUTE;
+    System.out.println(UColor.CYAN + "Il tempo trascorso è di " + elapsedTime + " minuti");
     System.out.println("Il tempo rimanente è di " + (GameManager.getMatchTime() - elapsedTime) + " minuti"
         + UColor.RESET);
   }

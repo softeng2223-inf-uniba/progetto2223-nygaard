@@ -1,6 +1,7 @@
 package it.uniba.nygaard.game.control;
 
-import it.uniba.nygaard.game.Util;
+import it.uniba.nygaard.game.utility.UShutdown;
+import it.uniba.nygaard.game.utility.UTime;
 import it.uniba.nygaard.game.boundary.MatchBoundary;
 import it.uniba.nygaard.game.entity.Match;
 
@@ -23,9 +24,9 @@ class TimeCounter extends Thread {
    */
   public void run() {
     Match p = GameManager.getMatch();
-    while (GeneralControl.getShutDown() == Util.NOT_TERMINATION_CODE) {
-      if (System.currentTimeMillis() - p.getStartTime() > p.getMaxTime() * Util.ONE_MINUTE) {
-        GeneralControl.setShutDown(Util.OUT_OF_TIME_TERMINATION_CODE);
+    while (GeneralControl.getShutDown() == UShutdown.NOT_TERMINATION_CODE) {
+      if (System.currentTimeMillis() - p.getStartTime() > p.getMaxTime() * UTime.ONE_MINUTE) {
+        GeneralControl.setShutDown(UShutdown.OUT_OF_TIME_TERMINATION_CODE);
         MatchBoundary.timeOut();
         break;
       }

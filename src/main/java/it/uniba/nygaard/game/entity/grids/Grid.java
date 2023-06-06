@@ -1,6 +1,6 @@
 package it.uniba.nygaard.game.entity.grids;
 
-import it.uniba.nygaard.game.Util;
+import it.uniba.nygaard.game.utility.UGrid;
 
 /**
  * <h2> Grid </h2>
@@ -39,7 +39,7 @@ public abstract class Grid {
    * </p>
    */
   Grid() {
-    maxRows = Util.STANDARD_GRID_SIZE;
+    maxRows = UGrid.STANDARD_GRID_SIZE;
     maxColumn = 'J';
   }
 
