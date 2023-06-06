@@ -65,10 +65,6 @@ final class SetGridSizeCommand extends Command {
       return;
     }
 
-    if (invalidNumber(command)) {
-      return;
-    }
-
     Match p = GameManager.getMatch();
     int sizeCommand = this.getMappedCommand(command[0]);
     int currentSize = p.getGridSize();
