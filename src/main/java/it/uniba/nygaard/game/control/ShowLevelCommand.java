@@ -79,6 +79,7 @@ final class ShowLevelCommand extends Command {
     s += p.getDifficultyNames(p.getDifficulty()) + Util.RESET + "\n"
         + "Numero massimo di tentativi falliti: " + Util.BOLD;
     s += actualColor + p.getAttempts(p.getDifficulty()) + Util.RESET;
-    ShowLevelBoundary.printActualDifficulty(s);
+
+    ShowLevelBoundary.printDifficulty(s);
   }
 }
