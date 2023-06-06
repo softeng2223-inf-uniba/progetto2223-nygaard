@@ -1,4 +1,4 @@
-package it.uniba.nygaard.game;
+package it.uniba.nygaard.game.utility;
 
 /**
  * <h2> Util </h2>
