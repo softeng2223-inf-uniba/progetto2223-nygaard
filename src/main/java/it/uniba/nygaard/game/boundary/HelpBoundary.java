@@ -55,23 +55,23 @@ public final class HelpBoundary {
         + UColor.ITALIC + UColor.CYAN + "    * /esci                " + UColor.RESET
         + "Ti permette di uscire dal gioco\n"
         + UColor.ITALIC + UColor.CYAN + "    * /facile              " + UColor.RESET
-        + "Imposta la difficolta' della partita a \"Facile\"\n"
+        + "Imposta la difficoltà della partita a \"Facile\"\n"
         + UColor.ITALIC + UColor.CYAN + "    * /medio               " + UColor.RESET
-        + "Imposta la difficolta' della partita a \"Medio\"\n"
+        + "Imposta la difficoltà della partita a \"Medio\"\n"
         + UColor.ITALIC + UColor.CYAN + "    * /difficile           " + UColor.RESET
-        + "Imposta la difficolta' della partita a \"Difficile\"\n"
+        + "Imposta la difficoltà della partita a \"Difficile\"\n"
         + UColor.ITALIC + UColor.CYAN + "    * /tentativi numero    " + UColor.RESET
         + "Imposta un numero massimo di tentativi fallibili, pari a \n"
         + UColor.ITALIC + "                           numero" + UColor.RESET + ", per tutti i"
-        + " livelli di difficolta'\n"
+        + " livelli di difficoltà\n"
         + UColor.ITALIC + UColor.CYAN + "    * /mostralivello       " + UColor.RESET
         + "Mostra il livello della partita\n"
         + UColor.ITALIC + UColor.CYAN + "    * /mostratentativi     " + UColor.RESET
         + "In base allo stato del gioco, il comando si comporta nei seguenti modi: \n"
         + "                             - Se sei in partita mostra il numero di tentativi effettuati, il numero\n"
-        + "                               di tentativi falliti e il numero massimo\n"
+        + "                               di tentativi falliti e il numero massimo di tentativi fallibili\n"
         + "                             - Se non sei in partita mostra il numero massimo di tentativi "
-        + "falliti effettuati\n"
+        + "fallibili\n"
         + UColor.ITALIC + UColor.CYAN + "    * /mostragriglia       " + UColor.RESET
         + "Mostra la griglia contenente le navi affondate e le parti di \n"
         + "                           navi colpite ma non affondate\n"
@@ -82,7 +82,7 @@ public final class HelpBoundary {
         + UColor.ITALIC + UColor.CYAN + "    * /svelagriglia        " + UColor.RESET
         + "Mostra la griglia generata dal computer\n"
         + UColor.ITALIC + UColor.CYAN + "    * /abbandona           " + UColor.RESET
-        + "Ti fa abbandonare una parita gia' in corso e, una volta \n"
+        + "Ti fa abbandonare una partita già in corso e, una volta \n"
         + "                           confermato, ti mostra le posizioni generate di tutte le navi\n\n";
   }
 

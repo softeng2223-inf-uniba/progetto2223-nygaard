@@ -34,11 +34,11 @@ public final class DescriptionBoundary {
         + "i suoi relativi comandi.\n\n"
         + UColor.YELLOW + UColor.BOLD + "> INTRODUZIONE\n" + UColor.RESET
         + "    In questa realizzazione della battaglia navale, giocherete voi contro il vostro\n"
-        + "    computer che posizionera' le navi in automatico prima dell'inizio della partita.\n\n"
+        + "    computer che posizionerà le navi in automatico prima dell'inizio della partita.\n\n"
         + "    Come giocatore, dovete individuare le posizioni delle navi e affondarle\n"
         + "    tutte, dalla prima all'ultima.\n\n"
         + "    Vincerete la partita solamente se affonderete tutte le navi prima di raggiungere\n"
-        + "    il numero massimo di tentativi falliti, che cambia in base alla difficolta' scelta.\n";
+        + "    il numero massimo di tentativi falliti, che cambia in base alla difficoltà scelta.\n";
     System.out.println(description);
   }
 }
