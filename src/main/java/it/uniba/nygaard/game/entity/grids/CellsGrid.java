@@ -1,6 +1,8 @@
 package it.uniba.nygaard.game.entity.grids;
 
-import it.uniba.nygaard.game.Util;
+import it.uniba.nygaard.game.utility.UColor;
+import it.uniba.nygaard.game.utility.UGrid;
+import it.uniba.nygaard.game.utility.Util;
 
 /**
  * <h2> CellsGrid </h2>
@@ -109,7 +111,7 @@ public final class CellsGrid extends Grid {
     int headingEdgeWidth = this.getMaxRows() + Util.BORDER_ADDER;
 
     str += "-".repeat(headingEdgeWidth);
-    str += Util.PURPLE + Util.BOLD + "Difesa" + Util.RESET;
+    str += UColor.PURPLE + UColor.BOLD + "Difesa" + UColor.RESET;
     str += "-".repeat(headingEdgeWidth);
     str += "\n\n";
     str += " ".repeat(Util.COLUMNS_EDGE_WIDTH);
@@ -127,21 +129,21 @@ public final class CellsGrid extends Grid {
         c = this.getCellCharacter(x - 1, y - Util.MIN_COLUMN);
         switch (c) {
           case 'X':
-            str += Util.YELLOW;
+            str += UColor.YELLOW;
             break;
           case '#':
-            str += Util.RED;
+            str += UColor.RED;
             break;
           case '~':
-            str += Util.CYAN;
+            str += UColor.CYAN;
             break;
           case '*':
-            str += Util.GREEN;
+            str += UColor.GREEN;
             break;
           default:
-            str += Util.RESET;
+            str += UColor.RESET;
         }
-        str += c + " " + Util.RESET;
+        str += c + " " + UColor.RESET;
       }
       str += "  " + x + "\n";
     }
@@ -152,7 +154,7 @@ public final class CellsGrid extends Grid {
     }
     str += "\n\n";
     str += "-".repeat(headingEdgeWidth);
-    str += Util.PURPLE + Util.BOLD + "Difesa" + Util.RESET;
+    str += UColor.PURPLE + UColor.BOLD + "Difesa" + UColor.RESET;
     str += "-".repeat(headingEdgeWidth);
     str += "\n";
     return str;

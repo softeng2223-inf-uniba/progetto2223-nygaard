@@ -1,6 +1,6 @@
 package it.uniba.nygaard.game.boundary;
 
-import it.uniba.nygaard.game.Util;
+import it.uniba.nygaard.game.utility.UColor;
 
 /**
  * <<Boundary>>
@@ -47,8 +47,8 @@ public final class ShowAttemptsBoundary {
    * @param maxAttempts Tentativi massimi fallibili
    */
   public static void showAttempts(final int maxAttempts) {
-    System.out.println(Util.CYAN + "Puoi fallire al massimo " + Util.BOLD + maxAttempts + " tentativi"
-        + Util.RESET);
+    System.out.println(UColor.CYAN + "Puoi fallire al massimo " + UColor.BOLD + maxAttempts + " tentativi"
+        + UColor.RESET);
   }
 
 }

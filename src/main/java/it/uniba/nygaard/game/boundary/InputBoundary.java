@@ -1,6 +1,6 @@
 package it.uniba.nygaard.game.boundary;
 
-import it.uniba.nygaard.game.Util;
+import it.uniba.nygaard.game.utility.UColor;
 
 import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
@@ -34,7 +34,7 @@ public final class InputBoundary {
    * @return Stringa che rappresenta il comando inserito dall'utente.
    */
   public static String getCommand() {
-    System.out.print("Inserire un comando: " + Util.CYAN);
+    System.out.print("Inserire un comando: " + UColor.CYAN);
     return new Scanner(System.in, StandardCharsets.UTF_8).nextLine().toLowerCase();
   }
 
@@ -59,7 +59,7 @@ public final class InputBoundary {
    * </p>
    */
   public static void resetColor() {
-    System.out.print(Util.RESET);
+    System.out.print(UColor.RESET);
   }
 
   /**

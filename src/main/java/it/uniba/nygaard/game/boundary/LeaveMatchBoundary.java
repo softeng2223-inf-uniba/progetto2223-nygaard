@@ -1,6 +1,7 @@
 package it.uniba.nygaard.game.boundary;
 
-import it.uniba.nygaard.game.Util;
+import it.uniba.nygaard.game.utility.UColor;
+
 import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
 
@@ -27,8 +28,8 @@ public final class LeaveMatchBoundary {
      * </p>
      */
     public static void notInGame() {
-        System.out.println(Util.RED + "Non puoi usare il comando quando non sei in partita"
-            + Util.RESET);
+        System.out.println(UColor.RED + "Non puoi usare il comando quando non sei in partita"
+            + UColor.RESET);
     }
     /**
      * <h2> invalidChoice </h2>
@@ -37,7 +38,7 @@ public final class LeaveMatchBoundary {
      * </p>
      */
     public static void invalidChoice() {
-        System.out.println(Util.RED + "Scelta non valida" + Util.RESET);
+        System.out.println(UColor.RED + "Scelta non valida" + UColor.RESET);
     }
 
     /**
@@ -50,8 +51,8 @@ public final class LeaveMatchBoundary {
      */
     public static String ask() {
         System.out.print("Vuoi abbandonare la partita? "
-            + "(" + Util.GREEN + "y" + Util.RESET
-            + "/" + Util.RED + "n" + Util.RESET + ") ");
+            + "(" + UColor.GREEN + "y" + UColor.RESET
+            + "/" + UColor.RED + "n" + UColor.RESET + ") ");
         return new Scanner(System.in, StandardCharsets.UTF_8).nextLine().toLowerCase();
     }
 

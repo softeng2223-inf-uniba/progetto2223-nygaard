@@ -1,6 +1,7 @@
 package it.uniba.nygaard.game.boundary;
 
-import it.uniba.nygaard.game.Util;
+import it.uniba.nygaard.game.utility.UColor;
+import it.uniba.nygaard.game.utility.UTime;
 import it.uniba.nygaard.game.control.GameManager;
 
 /**
@@ -29,8 +30,8 @@ public final class TimeBoundary {
    * </p>
    */
   public static void errorTime() {
-    System.out.println(Util.RED + "Errore: il tempo inserito non è valido.\nInserire un intero positivo"
-        + " rappresentante i minuti di gioco" + Util.RESET);
+    System.out.println(UColor.RED + "Errore: il tempo inserito non è valido.\nInserire un intero positivo"
+        + " rappresentante i minuti di gioco" + UColor.RESET);
   }
 
   /**
@@ -40,7 +41,7 @@ public final class TimeBoundary {
    * </p>
    */
   public static void operationDone() {
-    System.out.println(Util.GREEN + "OK" + Util.RESET);
+    System.out.println(UColor.GREEN + "OK" + UColor.RESET);
   }
 
   /**
@@ -51,7 +52,7 @@ public final class TimeBoundary {
    * </p>
    */
   public static void notInGame() {
-    System.out.println(Util.RED + "Non puoi cambiare il tempo di gioco se sei in partita" + Util.RESET);
+    System.out.println(UColor.RED + "Non puoi cambiare il tempo di gioco se sei in partita" + UColor.RESET);
   }
 
   /**
@@ -61,7 +62,7 @@ public final class TimeBoundary {
    * </p>
    */
   public static void mustBeInGame() {
-    System.out.println(Util.RED + "Devi essere in partita per vedere il tempo" + Util.RESET);
+    System.out.println(UColor.RED + "Devi essere in partita per vedere il tempo" + UColor.RESET);
   }
 
   /**
@@ -71,7 +72,7 @@ public final class TimeBoundary {
    * </p>
    */
   public static void infiniteTime() {
-    System.out.println(Util.CYAN + "Il tempo è illimitato" + Util.RESET);
+    System.out.println(UColor.CYAN + "Il tempo è illimitato" + UColor.RESET);
   }
 
   /**
@@ -86,6 +87,6 @@ public final class TimeBoundary {
     long elapsedTime = (System.currentTimeMillis() - startTime) / Util.ONE_MINUTE;
     System.out.println(Util.CYAN + "Il tempo trascorso è di " + elapsedTime + " minuti");
     System.out.println("Il tempo rimanente è di " + (GameManager.getMatchTime() - elapsedTime) + " minuti"
-        + Util.RESET);
+        + UColor.RESET);
   }
 }

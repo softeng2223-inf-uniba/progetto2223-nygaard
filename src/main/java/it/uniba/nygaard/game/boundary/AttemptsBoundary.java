@@ -1,6 +1,6 @@
 package it.uniba.nygaard.game.boundary;
 
-import it.uniba.nygaard.game.Util;
+import it.uniba.nygaard.game.utility.UColor;
 
 /**
  * << Boundary >>
@@ -27,7 +27,7 @@ public final class AttemptsBoundary {
    * </p>
    */
   public static void notValidChoice() {
-    System.out.println(Util.RED + "Numero di tentativi non valido" + Util.RESET);
+    System.out.println(UColor.RED + "Numero di tentativi non valido" + UColor.RESET);
   }
 
   /**
@@ -37,7 +37,7 @@ public final class AttemptsBoundary {
    * </p>
    */
   public static void operationDone() {
-    System.out.println(Util.GREEN + "OK" + Util.RESET);
+    System.out.println(UColor.GREEN + "OK" + UColor.RESET);
   }
 
   /**
@@ -48,6 +48,6 @@ public final class AttemptsBoundary {
    * </p>
    */
   public static void alreadyInGame() {
-    System.out.println(Util.RED + "Non puoi cambiare il numero di tentativi durante una partita" + Util.RESET);
+    System.out.println(UColor.RED + "Non puoi cambiare il numero di tentativi durante una partita" + UColor.RESET);
   }
 }

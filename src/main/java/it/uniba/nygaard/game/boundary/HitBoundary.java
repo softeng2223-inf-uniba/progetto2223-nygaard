@@ -1,6 +1,6 @@
 package it.uniba.nygaard.game.boundary;
 
-import it.uniba.nygaard.game.Util;
+import it.uniba.nygaard.game.utility.UColor;
 
 /**
  * <h2> HitBoundary </h2>
@@ -29,7 +29,7 @@ public final class HitBoundary {
    * </p>
    */
   public static void notInGame() {
-    System.out.println(Util.RED + "Non puoi eseguire colpi se non sei in una partita" + Util.RESET);
+    System.out.println(UColor.RED + "Non puoi eseguire colpi se non sei in una partita" + UColor.RESET);
   }
 
   /**
@@ -41,7 +41,7 @@ public final class HitBoundary {
    * </p>
    */
   public static void invalidChoice() {
-    System.out.println(Util.RED + "Coordinate non valide" + Util.RESET);
+    System.out.println(UColor.RED + "Coordinate non valide" + UColor.RESET);
   }
 
   /**
@@ -52,7 +52,7 @@ public final class HitBoundary {
    * </p>
    */
   public static void miss() {
-    System.out.println(Util.BOLD + "Acqua!" + Util.RESET);
+    System.out.println(UColor.BOLD + "Acqua!" + UColor.RESET);
   }
 
   /**
@@ -63,7 +63,7 @@ public final class HitBoundary {
    * </p>
    */
   public static void hit() {
-    System.out.println(Util.YELLOW + Util.BOLD + "Colpito!" + Util.RESET);
+    System.out.println(UColor.YELLOW + UColor.BOLD + "Colpito!" + UColor.RESET);
   }
 
   /**
@@ -74,7 +74,7 @@ public final class HitBoundary {
    * </p>
    */
   public static void sunk() {
-    System.out.println(Util.RED + Util.BOLD + "Colpito e affondato!" + Util.RESET);
+    System.out.println(UColor.RED + UColor.BOLD + "Colpito e affondato!" + UColor.RESET);
   }
 
 }

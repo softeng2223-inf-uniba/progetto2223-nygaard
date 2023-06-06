@@ -1,6 +1,6 @@
 package it.uniba.nygaard.game.boundary;
 
-import it.uniba.nygaard.game.Util;
+import it.uniba.nygaard.game.utility.UColor;
 
 /**
  * << Boundary >>
@@ -27,12 +27,12 @@ public final class DescriptionBoundary {
    * </p>
    */
   public static void getDescription() {
-    String description = Util.BOLD + Util.PURPLE
+    String description = UColor.BOLD + UColor.PURPLE
         + "Benvenuti nel gioco della battaglia navale!\n"
-        + Util.RESET
+        + UColor.RESET
         + "Prima di iniziare vi andiamo a presentare una breve introduzione al gioco con\n"
         + "i suoi relativi comandi.\n\n"
-        + Util.YELLOW + Util.BOLD + "> INTRODUZIONE\n" + Util.RESET
+        + UColor.YELLOW + UColor.BOLD + "> INTRODUZIONE\n" + UColor.RESET
         + "    In questa realizzazione della battaglia navale, giocherete voi contro il vostro\n"
         + "    computer che posizionera' le navi in automatico prima dell'inizio della partita.\n\n"
         + "    Come giocatore, dovete individuare le posizioni delle navi e affondarle\n"

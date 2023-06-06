@@ -1,6 +1,8 @@
 package it.uniba.nygaard.game.entity.grids;
 
-import it.uniba.nygaard.game.Util;
+import it.uniba.nygaard.game.utility.UColor;
+import it.uniba.nygaard.game.utility.UGrid;
+import it.uniba.nygaard.game.utility.Util;
 
 /**
  * <h2> CharactersGrid </h2>
@@ -81,7 +83,7 @@ public final class CharactersGrid extends Grid {
     int headingEdgeWidth = this.getMaxRows() + Util.BORDER_ADDER;
 
     str += "-".repeat(headingEdgeWidth);
-    str += Util.PURPLE + Util.BOLD + "Attacco" + Util.RESET;
+    str += UColor.PURPLE + UColor.BOLD + "Attacco" + UColor.RESET;
     str += "-".repeat(headingEdgeWidth);
     str += "\n\n";
     str += " ".repeat(Util.COLUMNS_EDGE_WIDTH);
@@ -99,18 +101,18 @@ public final class CharactersGrid extends Grid {
         c = this.getCharacter(x - 1, y - Util.MIN_COLUMN);
         switch (c) {
           case 'X':
-            str += Util.YELLOW;
+            str += UColor.YELLOW;
             break;
           case '#':
-            str += Util.RED;
+            str += UColor.RED;
             break;
           case '~':
-            str += Util.CYAN;
+            str += UColor.CYAN;
             break;
           default:
-            str += Util.RESET;
+            str += UColor.RESET;
         }
-        str += c + " " + Util.RESET;
+        str += c + " " + UColor.RESET;
       }
       str += "  " + x + "\n";
     }
@@ -121,7 +123,7 @@ public final class CharactersGrid extends Grid {
     }
     str += "\n\n";
     str += "-".repeat(headingEdgeWidth);
-    str += Util.PURPLE + Util.BOLD + "Attacco" + Util.RESET;
+    str += UColor.PURPLE + UColor.BOLD + "Attacco" + UColor.RESET;
     str += "-".repeat(headingEdgeWidth);
     str += "\n";
     return str;
