@@ -93,33 +93,4 @@ final class SetGridSizeCommand extends Command {
     p.resizeGrids(sizeCommand);
     GridSizeBoundary.operationDone();
   }
-
-  /**
-   * <h2> getMappedCommand </h2>
-   * <p>
-   * Ritorna la dimensione della griglia mappata al comando.
-   * </p>
-   *
-   * @param command Comando da mappare
-   * @return griglia mappata al comando
-   */
-  private int getMappedCommand(final String command) {
-    int size = 0;
-
-    switch (command) {
-      case "/standard" -> {
-        size = UGrid.STANDARD_GRID_SIZE;
-      }
-      case "/large" -> {
-        size = UGrid.LARGE_GRID_SIZE;
-      }
-      case "/extralarge" -> {
-        size = UGrid.EXTRA_LARGE_GRID_SIZE;
-      }
-      default -> {
-      }
-    }
-
-    return size;
-  }
 }
