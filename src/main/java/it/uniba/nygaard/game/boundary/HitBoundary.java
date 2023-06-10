@@ -29,7 +29,7 @@ public final class HitBoundary {
    * </p>
    */
   public static void notInGame() {
-    System.out.println(UColor.RED + "Non puoi eseguire colpi se non sei in una partita" + UColor.RESET);
+    System.out.println(UColor.RED + "Non puoi eseguire colpi se non sei in partita" + UColor.RESET);
   }
 
   /**
