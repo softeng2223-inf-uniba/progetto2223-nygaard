@@ -21,12 +21,12 @@ public final class AttemptsBoundary {
   }
 
   /**
-   * <h3> notValidChoice </h3>
+   * <h3> invalidChoice </h3>
    * <p>
    * Stampa il messaggio relativo alla scelta non valida.
    * </p>
    */
-  public static void notValidChoice() {
+  public static void invalidChoice() {
     System.out.println(UColor.RED + "Numero di tentativi non valido" + UColor.RESET);
   }
 

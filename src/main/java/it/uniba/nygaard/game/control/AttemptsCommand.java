@@ -66,7 +66,7 @@ final class AttemptsCommand extends Command {
       try {
         newAttempts = Integer.parseInt(command[1]);
       } catch (NumberFormatException e) {
-        AttemptsBoundary.notValidChoice();
+        AttemptsBoundary.invalidChoice();
         return;
       }
       for (int i = UDifficulty.DIFFICULTY_EASY; i <= UDifficulty.DIFFICULTY_HARD; i++) {
@@ -74,7 +74,7 @@ final class AttemptsCommand extends Command {
       }
       AttemptsBoundary.operationDone();
     } else {
-      AttemptsBoundary.notValidChoice();
+      AttemptsBoundary.invalidChoice();
     }
   }
 }
