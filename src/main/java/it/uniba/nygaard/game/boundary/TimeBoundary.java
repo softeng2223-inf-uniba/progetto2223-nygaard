@@ -62,7 +62,7 @@ public final class TimeBoundary {
    * </p>
    */
   public static void mustBeInGame() {
-    System.out.println(UColor.RED + "Devi essere in partita per vedere il tempo" + UColor.RESET);
+    System.out.println(UColor.RED + "Non puoi visualizzare il tempo rimanente se non sei in partita" + UColor.RESET);
   }
 
   /**
