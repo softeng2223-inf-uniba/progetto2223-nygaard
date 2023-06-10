@@ -13,7 +13,7 @@ import it.uniba.nygaard.game.boundary.LeaveMatchBoundary;
  *
  * @see Command
  */
-public final class LeaveMatchCommand extends Command {
+final class LeaveMatchCommand extends Command {
 
   /**
    * <h3> instance </h3>
