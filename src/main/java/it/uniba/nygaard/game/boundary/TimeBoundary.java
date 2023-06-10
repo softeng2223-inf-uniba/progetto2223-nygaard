@@ -30,8 +30,7 @@ public final class TimeBoundary {
    * </p>
    */
   public static void errorTime() {
-    System.out.println(UColor.RED + "Errore: il tempo inserito non è valido.\nInserire un intero positivo"
-        + " rappresentante i minuti di gioco" + UColor.RESET);
+    System.out.println(UColor.RED + "Tempo inserito non valido" + UColor.RESET);
   }
 
   /**
