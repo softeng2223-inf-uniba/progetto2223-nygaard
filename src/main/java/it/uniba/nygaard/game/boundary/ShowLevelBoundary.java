@@ -27,7 +27,7 @@ public final class ShowLevelBoundary {
    *
    * @param s Livello di difficoltà
    */
-  public static void printActualDifficulty(final String s) {
+  public static void printDifficulty(final String s) {
     System.out.println(s);
   }
 }

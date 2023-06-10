@@ -1,7 +1,5 @@
 package it.uniba.nygaard.game.control;
 
-import it.uniba.nygaard.game.boundary.InputBoundary;
-
 /**
  * <h2> Command </h2>
  * <p>
@@ -11,35 +9,42 @@ import it.uniba.nygaard.game.boundary.InputBoundary;
 abstract class Command {
 
   /**
-   * <h3> paramNumber </h3>
+   * <h3> minParam </h3>
    * <p>
-   * Numero di parametri del comando.
+   * Numero minimo di parametri del comando.
    * </p>
    */
-  private int paramNumber;
+  private int minParamNumber;
+  /**
+   * <h3> maxParam </h3>
+   * <p>
+   * Numero massimo di parametri del comando.
+   * </p>
+   */
+  private int maxParamNumber;
 
   /**
-   * <h3> getParamNumber </h3>
+   * <h3> setParamNumber </h3>
    * <p>
-   * Restituisce il numero di parametri del comando.
+   * Imposta il numero minimo di parametri del comando.
    * </p>
    *
-   * @return Numero di parametri del comando.
+   * @param newParamNumber Numero minimo di parametri del comando.
    */
-  int getParamNumber() {
-    return paramNumber;
+  void setMinParamNumber(final int newParamNumber) {
+    this.minParamNumber = newParamNumber;
   }
 
   /**
    * <h3> setParamNumber </h3>
    * <p>
-   * Imposta il numero di parametri del comando.
+   * Imposta il numero massimo di parametri del comando.
    * </p>
    *
-   * @param newParamNumber Numero di parametri del comando.
+   * @param newParamNumber Numero massimo di parametri del comando.
    */
-  void setParamNumber(final int newParamNumber) {
-    this.paramNumber = newParamNumber;
+  void setMaxParamNumber(final int newParamNumber) {
+    this.maxParamNumber = newParamNumber;
   }
 
   /**
@@ -53,7 +58,7 @@ abstract class Command {
   abstract void executeCommand(String[] command);
 
   /**
-   * <h3> invalidNumber </h3>
+   * <h3> checkNoParams </h3>
    * <p>
    * Controlla se il numero di parametri è valido.
    * </p>
@@ -61,15 +66,7 @@ abstract class Command {
    * @param command Comando da eseguire.
    * @return true se il numero di parametri è valido, false altrimenti.
    */
-  boolean invalidNumber(final String[] command, final String... params) {
-    if (command.length > paramNumber) {
-      if (params.length == 0) {
-        InputBoundary.howToUse(command[0]);
-      } else {
-        InputBoundary.howToUse(command[0], String.join(" ", params));
-      }
-      return true;
-    }
-    return false;
+  boolean checkNoParams(final String[] command) {
+    return command.length > maxParamNumber || command.length < minParamNumber;
   }
 }

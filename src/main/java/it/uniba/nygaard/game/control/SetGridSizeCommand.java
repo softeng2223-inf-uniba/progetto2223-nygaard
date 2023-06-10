@@ -1,7 +1,8 @@
 package it.uniba.nygaard.game.control;
 
-import it.uniba.nygaard.game.Util;
+import it.uniba.nygaard.game.utility.UGrid;
 import it.uniba.nygaard.game.boundary.GridSizeBoundary;
+import it.uniba.nygaard.game.boundary.InputBoundary;
 import it.uniba.nygaard.game.entity.Match;
 
 /**
@@ -29,7 +30,8 @@ final class SetGridSizeCommand extends Command {
    * Costruttore della classe SetGridSizeCommand.
    */
   private SetGridSizeCommand() {
-    setParamNumber(1);
+    setMinParamNumber(1);
+    setMaxParamNumber(1);
   }
 
   /**
@@ -53,30 +55,33 @@ final class SetGridSizeCommand extends Command {
    * @param command Comando da eseguire
    */
   void executeCommand(final String[] command) {
-    if (GameManager.getMatch().getInGame()) {
-      GridSizeBoundary.inGameError();
+    if (checkNoParams(command)) {
+      InputBoundary.howToUse(command[0]);
       return;
     }
 
-    if (invalidNumber(command)) {
+    if (GameManager.getMatch().getInGame()) {
+      GridSizeBoundary.alreadyInGame();
       return;
     }
 
     Match p = GameManager.getMatch();
-    int sizeCommand = this.getMappedCommand(command[0]);
+    int sizeInvolved = command[0].equals("/standard") ? UGrid.STANDARD_GRID_SIZE
+        : command[0].equals("/large") ? UGrid.LARGE_GRID_SIZE
+        : UGrid.EXTRA_LARGE_GRID_SIZE;
     int currentSize = p.getGridSize();
 
     String choice;
 
-    if (sizeCommand == currentSize) {
-      GridSizeBoundary.sameSizeError();
+    if (sizeInvolved == currentSize) {
+      GridSizeBoundary.sameSize();
       return;
     }
 
     do {
-      choice = GridSizeBoundary.ask(sizeCommand);
+      choice = GridSizeBoundary.ask(sizeInvolved);
       if (!choice.equals("n") && !choice.equals("y")) {
-        GridSizeBoundary.invalidChoiceError();
+        GridSizeBoundary.invalidChoice();
       }
     }
     while (!choice.equals("y") && !choice.equals("n"));
@@ -86,38 +91,8 @@ final class SetGridSizeCommand extends Command {
       return;
     }
 
-    p.setGridSize(sizeCommand);
-    p.resizeGrids(sizeCommand);
+    p.setGridSize(sizeInvolved);
+    p.resizeGrids(sizeInvolved);
     GridSizeBoundary.operationDone();
-  }
-
-  /**
-   * <h2> getMappedCommand </h2>
-   * <p>
-   * Ritorna la dimensione della griglia mappata al comando.
-   * </p>
-   *
-   * @param command Comando da mappare
-   * @return griglia mappata al comando
-   */
-  private int getMappedCommand(final String command) {
-    int size = 0;
-
-    switch (command) {
-      case "/standard" -> {
-        size = Util.STANDARD_GRID_SIZE;
-      }
-      case "/large" -> {
-        size = Util.LARGE_GRID_SIZE;
-      }
-      case "/extralarge" -> {
-        size = Util.EXTRA_LARGE_GRID_SIZE;
-      }
-      default -> {
-        size = Util.STANDARD_GRID_SIZE;
-      }
-    }
-
-    return size;
   }
 }

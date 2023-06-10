@@ -1,5 +1,6 @@
 package it.uniba.nygaard.game.control;
 
+import it.uniba.nygaard.game.boundary.InputBoundary;
 import it.uniba.nygaard.game.boundary.ShowGridBoundary;
 import it.uniba.nygaard.game.entity.Match;
 
@@ -29,7 +30,8 @@ final class RevealGridCommand extends Command {
    * </p>
    */
   private RevealGridCommand() {
-    setParamNumber(1);
+    setMinParamNumber(1);
+    setMaxParamNumber(1);
   }
 
   /**
@@ -41,7 +43,8 @@ final class RevealGridCommand extends Command {
    * @param command Comando da eseguire.
    */
   public void executeCommand(final String[] command) {
-    if (invalidNumber(command)) {
+    if (checkNoParams(command)) {
+      InputBoundary.howToUse(command[0]);
       return;
     }
     Match p = GameManager.getMatch();

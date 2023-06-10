@@ -1,7 +1,8 @@
 package it.uniba.nygaard.game.control;
 
-import it.uniba.nygaard.game.Util;
+import it.uniba.nygaard.game.utility.UShutdown;
 import it.uniba.nygaard.game.boundary.ExitBoundary;
+import it.uniba.nygaard.game.boundary.InputBoundary;
 
 /**
  * << Control >>
@@ -29,7 +30,8 @@ final class ExitCommand extends Command {
    * </p>
    */
   private ExitCommand() {
-    setParamNumber(1);
+    setMinParamNumber(1);
+    setMaxParamNumber(1);
   }
 
   /**
@@ -56,18 +58,19 @@ final class ExitCommand extends Command {
    * @param command Comando da eseguire.
    */
   public void executeCommand(final String[] command) {
-    if (invalidNumber(command)) {
+    if (checkNoParams(command)) {
+      InputBoundary.howToUse(command[0]);
       return;
     }
     String choice;
     do {
       choice = ExitBoundary.ask();
-      if (GeneralControl.getShutDown() != Util.NOT_TERMINATION_CODE) {
+      if (GeneralControl.getShutDown() != UShutdown.NOT_TERMINATION_CODE) {
         return;
       }
       if (choice.equals("y")) {
         ExitBoundary.exitString();
-        GeneralControl.setShutDown(Util.QUIT_TERMINATION_CODE);
+        GeneralControl.setShutDown(UShutdown.QUIT_TERMINATION_CODE);
         return;
       }
       if (choice.equals("n")) {

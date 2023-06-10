@@ -1,6 +1,6 @@
 package it.uniba.nygaard.game.boundary;
 
-import it.uniba.nygaard.game.Util;
+import it.uniba.nygaard.game.utility.UColor;
 
 import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
@@ -34,7 +34,7 @@ public final class InputBoundary {
    * @return Stringa che rappresenta il comando inserito dall'utente.
    */
   public static String getCommand() {
-    System.out.print("Inserire un comando: " + Util.CYAN);
+    System.out.print("Inserire un comando: " + UColor.CYAN);
     return new Scanner(System.in, StandardCharsets.UTF_8).nextLine().toLowerCase();
   }
 
@@ -47,9 +47,8 @@ public final class InputBoundary {
    * @param command Vettore di stringhe che rappresenta il comando non riconosciuto.
    */
   public static void notRecognisedCommand(final String[] command) {
-    String commandString = "";
-    commandString = String.join(" ", command);
-    System.out.println(Util.RED + "Comando non riconosciuto: " + commandString + Util.RESET);
+    String commandString = String.join(" ", command);
+    System.out.println(UColor.RED + "Comando non riconosciuto: " + commandString + UColor.RESET);
   }
 
   /**
@@ -59,7 +58,7 @@ public final class InputBoundary {
    * </p>
    */
   public static void resetColor() {
-    System.out.print(Util.RESET);
+    System.out.print(UColor.RESET);
   }
 
   /**
@@ -70,20 +69,12 @@ public final class InputBoundary {
    *
    * @param command Stringa che rappresenta il comando.
    */
-  public static void howToUse(final String command) {
-    System.out.println(Util.CYAN + "Il comando dovrebbe essere usato come segue: " + command + Util.RESET);
+  public static void howToUse(final String... command) {
+    System.out.print(UColor.CYAN + "Il comando dovrebbe essere usato come segue: ");
+    for (String s : command) {
+      System.out.print(s);
+    }
+    System.out.println(UColor.RESET);
   }
 
-  /**
-   * <h3> howToUse </h3>
-   * <p>
-   * Metodo che stampa a video il messaggio di come usare un comando.
-   * </p>
-   *
-   * @param command Stringa che rappresenta il comando.
-   */
-  public static void howToUse(final String command, final String command2) {
-    System.out.println(Util.CYAN + "Il comando dovrebbe essere usato come segue: " + command + command2
-        + Util.RESET);
-  }
 }

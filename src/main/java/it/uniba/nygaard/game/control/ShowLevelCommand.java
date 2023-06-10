@@ -1,6 +1,8 @@
 package it.uniba.nygaard.game.control;
 
-import it.uniba.nygaard.game.Util;
+import it.uniba.nygaard.game.utility.UColor;
+import it.uniba.nygaard.game.utility.UDifficulty;
+import it.uniba.nygaard.game.boundary.InputBoundary;
 import it.uniba.nygaard.game.boundary.ShowLevelBoundary;
 import it.uniba.nygaard.game.entity.Match;
 
@@ -40,7 +42,8 @@ final class ShowLevelCommand extends Command {
    * </p>
    */
   private ShowLevelCommand() {
-    setParamNumber(1);
+    setMinParamNumber(1);
+    setMaxParamNumber(1);
   }
 
   /**
@@ -52,31 +55,32 @@ final class ShowLevelCommand extends Command {
    * @param command comando da eseguire
    */
   public void executeCommand(final String[] command) {
-    if (invalidNumber(command)) {
+    if (checkNoParams(command)) {
+      InputBoundary.howToUse(command[0]);
       return;
     }
     Match p = GameManager.getMatch();
-    String actualColor = Util.RESET;
-    String s = "";
-    s = "Livello di difficoltà scelto: " + Util.BOLD;
+    String actualColor;
+    String s = "Livello di difficoltà scelto: " + UColor.BOLD;
     switch (p.getDifficultyNames(p.getDifficulty())) {
-      case Util.EASY_NAME -> {
-        actualColor = Util.GREEN;
+      case UDifficulty.EASY_NAME -> {
+        actualColor = UColor.GREEN;
       }
-      case Util.MEDIUM_NAME -> {
-        actualColor = Util.YELLOW;
+      case UDifficulty.MEDIUM_NAME -> {
+        actualColor = UColor.YELLOW;
       }
-      case Util.HARD_NAME -> {
-        actualColor = Util.RED;
+      case UDifficulty.HARD_NAME -> {
+        actualColor = UColor.RED;
       }
       default -> {
-        actualColor = Util.RESET;
+        actualColor = UColor.RESET;
       }
     }
     s += (actualColor);
-    s += p.getDifficultyNames(p.getDifficulty()) + Util.RESET + "\n"
-        + "Numero massimo di tentativi falliti: " + Util.BOLD;
-    s += actualColor + p.getAttempts(p.getDifficulty()) + Util.RESET;
-    ShowLevelBoundary.printActualDifficulty(s);
+    s += p.getDifficultyNames(p.getDifficulty()) + UColor.RESET + "\n"
+        + "Numero massimo di tentativi falliti: " + UColor.BOLD;
+    s += actualColor + p.getAttempts(p.getDifficulty()) + UColor.RESET;
+
+    ShowLevelBoundary.printDifficulty(s);
   }
 }

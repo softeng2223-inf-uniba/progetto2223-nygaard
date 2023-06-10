@@ -1,6 +1,6 @@
 package it.uniba.nygaard.game.boundary;
 
-import it.uniba.nygaard.game.Util;
+import it.uniba.nygaard.game.utility.UColor;
 
 /**
  * << Boundary >>
@@ -27,14 +27,14 @@ public final class LogoBoundary {
    * </p>
    */
   public static void printLogo() {
-    String logo = Util.BOLD + Util.RED
+    String logo = UColor.BOLD + UColor.RED
         + "    ____   ___   ______ ______ __     ______ _____  __  __ ____ ____ \n"
         + "   / __ ) /   | /_  __//_  __// /    / ____// ___/ / / / //  _// __ \\\n"
         + "  / __  |/ /| |  / /    / /  / /    / __/   \\__ \\ / /_/ / / / / /_/ /\n"
-        + Util.BLUE
+        + UColor.BLUE
         + " / /_/ // ___ | / /    / /  / /___ / /___  ___/ // __  /_/ / / ____/ \n"
         + "/_____//_/  |_|/_/    /_/  /_____//_____/ /____//_/ /_//___//_/      \n"
-        + Util.RESET;
+        + UColor.RESET;
     System.out.println(logo);
   }
 }

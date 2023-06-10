@@ -1,6 +1,6 @@
 package it.uniba.nygaard.game.boundary;
 
-import it.uniba.nygaard.game.Util;
+import it.uniba.nygaard.game.utility.UColor;
 
 /**
  * << Boundary >>
@@ -28,8 +28,8 @@ public final class MatchBoundary {
    * </p>
    */
   public static void alreadyInGame() {
-    System.out.println(Util.RED + "Partita in corso\nPer cominciare una nuova partita abbandona la corrente"
-        + Util.RESET);
+    System.out.println(UColor.RED + "Partita in corso\nPer cominciare una nuova partita abbandona la corrente"
+        + UColor.RESET);
   }
 
   /**
@@ -40,7 +40,7 @@ public final class MatchBoundary {
    * </p>
    */
   public static void win() {
-    System.out.println(Util.GREEN + Util.BOLD + "Hai vinto la partita!" + Util.RESET);
+    System.out.println(UColor.GREEN + UColor.BOLD + "Hai vinto la partita!" + UColor.RESET);
   }
 
   /**
@@ -51,7 +51,7 @@ public final class MatchBoundary {
    * </p>
    */
   public static void outOfAttempts() {
-    System.out.println(Util.RED + Util.BOLD + "Hai perso! Hai finito i tentativi disponibili!" + Util.RESET);
+    System.out.println(UColor.RED + UColor.BOLD + "Hai perso! Hai finito i tentativi disponibili!" + UColor.RESET);
   }
 
   /**
@@ -62,8 +62,9 @@ public final class MatchBoundary {
    * </p>
    */
   public static void timeOut() {
-    System.out.println(Util.RED + Util.BOLD + "\nHai perso! Hai esaurito il tempo a tua disposizione!" + Util.RESET);
-    System.out.print(Util.CYAN + "Premere invio per continuare..." + Util.RESET);
+    System.out.println(UColor.RED + UColor.BOLD
+        + "\nHai perso! Hai esaurito il tempo a tua disposizione!" + UColor.RESET);
+    System.out.print(UColor.CYAN + "Premere invio per continuare..." + UColor.RESET);
   }
 
   /**
@@ -73,10 +74,10 @@ public final class MatchBoundary {
    * il giocatore ha terminato la partita precedente.
    * </p>
    */
-  public static void playAgain() {
-    System.out.println(Util.CYAN + "\nHai terminato la partita precedente, "
-        + "i parametri sono stati resettati." + Util.RESET);
-    System.out.println(Util.CYAN + "Puoi inserire qualsiasi comando o iniziare una nuova partita.\n" + Util.RESET);
+  public static void endMatch() {
+    System.out.println(UColor.CYAN + "\nHai terminato la partita precedente, "
+        + "i parametri sono stati resettati." + UColor.RESET);
+    System.out.println(UColor.CYAN + "Puoi inserire qualsiasi comando o iniziare una nuova partita.\n" + UColor.RESET);
   }
 
   /**
@@ -86,7 +87,7 @@ public final class MatchBoundary {
    * </p>
    */
   public static void printSolution() {
-    System.out.println(Util.CYAN + "Questa era la disposizione delle navi!" + Util.RESET);
+    System.out.println(UColor.CYAN + "Questa era la disposizione delle navi!" + UColor.RESET);
   }
 
   /**
@@ -97,8 +98,6 @@ public final class MatchBoundary {
    * </p>
    */
   public static void leave() {
-    System.out.println(Util.RED + Util.BOLD + "Hai perso! Hai abbandonato la partita!" + Util.RESET);
+    System.out.println(UColor.RED + UColor.BOLD + "Hai perso! Hai abbandonato la partita!" + UColor.RESET);
   }
-
-
 }

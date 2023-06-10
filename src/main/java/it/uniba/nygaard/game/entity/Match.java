@@ -1,14 +1,16 @@
 package it.uniba.nygaard.game.entity;
 
-import it.uniba.nygaard.game.Util;
 import it.uniba.nygaard.game.entity.grids.CellsGrid;
 import it.uniba.nygaard.game.entity.grids.CharactersGrid;
 import it.uniba.nygaard.game.entity.ships.Coordinate;
-import it.uniba.nygaard.game.entity.ships.Destroyer;
-import it.uniba.nygaard.game.entity.ships.AircraftCarrier;
-import it.uniba.nygaard.game.entity.ships.Battleship;
-import it.uniba.nygaard.game.entity.ships.Cruiser;
 import it.uniba.nygaard.game.entity.ships.Ship;
+import it.uniba.nygaard.game.entity.ships.ShipType;
+import it.uniba.nygaard.game.utility.UGrid;
+import it.uniba.nygaard.game.utility.UShip;
+import it.uniba.nygaard.game.utility.UDifficulty;
+import it.uniba.nygaard.game.utility.UTime;
+import it.uniba.nygaard.game.utility.UResult;
+import it.uniba.nygaard.game.utility.Util;
 
 import java.util.Random;
 
@@ -124,34 +126,25 @@ public final class Match {
    */
   public Match() {
     this.inGame = false;
-    this.difficulty = Util.DIFFICULTY_MEDIUM;
-    this.difficultyNames = new String[]{Util.EASY_NAME, Util.MEDIUM_NAME, Util.HARD_NAME};
-    this.gridSize = Util.STANDARD_GRID_SIZE;
-    this.attempts = new int[]{Util.EASY_ATTEMPTS, Util.MEDIUM_ATTEMPTS, Util.HARD_ATTEMPTS};
+    this.difficulty = UDifficulty.DIFFICULTY_MEDIUM;
+    this.difficultyNames = new String[]{UDifficulty.EASY_NAME, UDifficulty.MEDIUM_NAME, UDifficulty.HARD_NAME};
+    this.gridSize = UGrid.STANDARD_GRID_SIZE;
+    this.attempts = new int[]{UDifficulty.EASY_ATTEMPTS, UDifficulty.MEDIUM_ATTEMPTS, UDifficulty.HARD_ATTEMPTS};
     this.failedAttempts = 0;
     this.usedAttempts = 0;
-    this.ships = new Ship[Util.MAX_SHIP];
-    int i = Util.MIN_SHIP;
-    for (int j = 0; j < Util.AIRCRAFT_NO; j++) {
-      this.ships[i - 1] = new AircraftCarrier();
-      i++;
-    }
-    for (int j = 0; j < Util.BATTLESHIP_NO; j++) {
-      this.ships[i - 1] = new Battleship();
-      i++;
-    }
-    for (int j = 0; j < Util.CRUISER_NO; j++) {
-      this.ships[i - 1] = new Cruiser();
-      i++;
-    }
-    for (int j = 0; j < Util.DESTROYER_NO; j++) {
-      this.ships[i - 1] = new Destroyer();
-      i++;
+    this.ships = new Ship[UShip.MAX_SHIP];
+
+    int i = UShip.MIN_SHIP;
+    for (ShipType ship : ShipType.values()) {
+      for (int j = 0; j < ship.getNumShips(); j++) {
+        this.ships[i - 1] = new Ship(ship.getHp());
+        i++;
+      }
     }
 
-    this.defenseGrid = new CellsGrid(Util.STANDARD_GRID_SIZE);
-    this.attackGrid = new CharactersGrid(Util.STANDARD_GRID_SIZE);
-    maxTime = Util.DEFAULT_TIME;
+    this.defenseGrid = new CellsGrid(UGrid.STANDARD_GRID_SIZE);
+    this.attackGrid = new CharactersGrid(UGrid.STANDARD_GRID_SIZE);
+    maxTime = UTime.DEFAULT_TIME;
   }
 
   /**
@@ -220,8 +213,6 @@ public final class Match {
     this.defenseGrid.setMaxRows(newSize);
     this.attackGrid.setMaxRows(newSize);
 
-    this.attackGrid.setHeadingEdgeWidth(newSize + Util.BORDER_ADDER);
-    this.defenseGrid.setHeadingEdgeWidth(newSize + Util.BORDER_ADDER);
   }
 
   /**
@@ -385,20 +376,20 @@ public final class Match {
    * @return true se tutte le navi sono state inizializzate, false altrimenti.
    */
   public boolean initializeShips(final int i) {
-    if (i > Util.MAX_SHIP) {
+    if (i > UShip.MAX_SHIP) {
       return true;
     }
     boolean direction;
     Random rnd = new Random();
     Coordinate coord = new Coordinate();
-    for (int j = Util.MIN_GENERATIONS; j <= Util.MAX_GENERATIONS; j++) {
+    for (int j = UShip.MIN_GENERATIONS; j <= UShip.MAX_GENERATIONS; j++) {
       if (rnd.nextInt(2) == 1) {
-        direction = Util.VERTICAL;
+        direction = UShip.VERTICAL;
       } else {
-        direction = Util.HORIZONTAL;
+        direction = UShip.HORIZONTAL;
       }
       coord.setRow(rnd.nextInt(this.attackGrid.getMaxRows()) + 1);
-      coord.setColumn((char) (rnd.nextInt(this.attackGrid.getMaxColumn() - Util.MIN_COLUMN + 1) + Util.MIN_COLUMN));
+      coord.setColumn((char) (rnd.nextInt(this.attackGrid.getMaxColumn() - UGrid.MIN_COLUMN + 1) + UGrid.MIN_COLUMN));
       this.ships[i - 1].setDirection(direction);
       this.ships[i - 1].setCoord(coord);
       if (this.ships[i - 1].outOfMap(this.defenseGrid)) {
@@ -426,19 +417,19 @@ public final class Match {
    * @param i Indice della nave da posizionare.
    */
   private void placeShip(final int i) {
-    if (ships[i].getDirection() == Util.VERTICAL) {
+    if (ships[i].getDirection() == UShip.VERTICAL) {
       for (int j = 0; j < ships[i].getHp(); j++) {
         defenseGrid.setCellCharacter(ships[i].getCoordRow() - 1 + j,
-            ships[i].getCoordColumn() - Util.MIN_COLUMN, Util.SHIP_CHARACTER);
+            ships[i].getCoordColumn() - UGrid.MIN_COLUMN, UGrid.SHIP_CHARACTER);
         defenseGrid.setCellShipIndex(ships[i].getCoordRow() - 1 + j,
-            ships[i].getCoordColumn() - Util.MIN_COLUMN, i);
+            ships[i].getCoordColumn() - UGrid.MIN_COLUMN, i);
       }
     } else {
       for (int j = 0; j < ships[i].getHp(); j++) {
         defenseGrid.setCellCharacter(ships[i].getCoordRow() - 1,
-            ships[i].getCoordColumn() - Util.MIN_COLUMN + j, Util.SHIP_CHARACTER);
+            ships[i].getCoordColumn() - UGrid.MIN_COLUMN + j, UGrid.SHIP_CHARACTER);
         defenseGrid.setCellShipIndex(ships[i].getCoordRow() - 1,
-            ships[i].getCoordColumn() - Util.MIN_COLUMN + j, i);
+            ships[i].getCoordColumn() - UGrid.MIN_COLUMN + j, i);
       }
     }
   }
@@ -452,11 +443,11 @@ public final class Match {
    * @param i Indice della nave da rimuovere.
    */
   private void removeShip(final int i) {
-    for (int j = Util.MIN_ROWS; j <= this.attackGrid.getMaxRows(); j++) {
-      for (int k = Util.MIN_ROWS; k <= this.attackGrid.getMaxRows(); k++) {
+    for (int j = UGrid.MIN_ROWS; j <= this.attackGrid.getMaxRows(); j++) {
+      for (int k = UGrid.MIN_ROWS; k <= this.attackGrid.getMaxRows(); k++) {
         if (defenseGrid.getCellShipIndex(j - 1, k - 1) == i) {
-          defenseGrid.setCellCharacter(j - 1, k - 1, Util.SEA_CHARACTER);
-          defenseGrid.setCellShipIndex(j - 1, k - 1, Util.SEA_INDEX);
+          defenseGrid.setCellCharacter(j - 1, k - 1, UGrid.SEA_CHARACTER);
+          defenseGrid.setCellShipIndex(j - 1, k - 1, UGrid.SEA_INDEX);
         }
       }
     }
@@ -475,24 +466,24 @@ public final class Match {
    *         Util.SANK_CODE se la cella è stata colpita e affondata.
    */
   public int hit(final int row, final int column) {
-    if (defenseGrid.getCellCharacter(row, column) == Util.SHIP_CHARACTER
-        && attackGrid.getCharacter(row, column) == Util.SEA_CHARACTER) {
+    if (defenseGrid.getCellCharacter(row, column) == UGrid.SHIP_CHARACTER
+        && attackGrid.getCharacter(row, column) == UGrid.SEA_CHARACTER) {
       usedAttempts++;
       ships[defenseGrid.getCellShipIndex(row, column)].hit();
       if (ships[defenseGrid.getCellShipIndex(row, column)].getHp() == 0) {
         sunkShip(defenseGrid.getCellShipIndex(row, column));
-        return Util.SANK_CODE;
+        return UResult.SANK_CODE;
       } else {
-        attackGrid.setCharacter(row, column, Util.HITTED_SHIP_CHARACTER);
-        return Util.HITTED_CODE;
+        attackGrid.setCharacter(row, column, UGrid.HITTED_SHIP_CHARACTER);
+        return UResult.HITTED_CODE;
       }
     } else {
       usedAttempts++;
       failedAttempts++;
-      if (defenseGrid.getCellCharacter(row, column) == Util.SEA_CHARACTER) {
-        attackGrid.setCharacter(row, column, Util.HITTED_SEA_CHARACTER);
+      if (defenseGrid.getCellCharacter(row, column) == UGrid.SEA_CHARACTER) {
+        attackGrid.setCharacter(row, column, UGrid.HITTED_SEA_CHARACTER);
       }
-      return Util.WATER_CODE;
+      return UResult.WATER_CODE;
     }
   }
 
@@ -506,10 +497,10 @@ public final class Match {
    * @param index Indice della nave di cui cambiare i caratteri.
    */
   private void sunkShip(final int index) {
-    for (int j = Util.MIN_ROWS; j <= this.attackGrid.getMaxRows(); j++) {
-      for (int k = Util.MIN_COLUMN; k <= this.attackGrid.getMaxColumn(); k++) {
+    for (int j = UGrid.MIN_ROWS; j <= this.attackGrid.getMaxRows(); j++) {
+      for (int k = UGrid.MIN_COLUMN; k <= this.attackGrid.getMaxColumn(); k++) {
         if (defenseGrid.getCellShipIndex(j - 1, k - Util.INT_TO_CHAR - 1) == index) {
-          attackGrid.setCharacter(j - 1, k - Util.INT_TO_CHAR - 1, Util.SUNK_SHIP_CHARACTER);
+          attackGrid.setCharacter(j - 1, k - Util.INT_TO_CHAR - 1, UGrid.SUNK_SHIP_CHARACTER);
         }
       }
     }
@@ -524,7 +515,7 @@ public final class Match {
    * @return true se tutte le navi sono state affondate, false altrimenti.
    */
   public boolean win() {
-    for (int i = 0; i < Util.MAX_SHIP; i++) {
+    for (int i = 0; i < UShip.MAX_SHIP; i++) {
       if (ships[i].getHp() != 0) {
         return false;
       }

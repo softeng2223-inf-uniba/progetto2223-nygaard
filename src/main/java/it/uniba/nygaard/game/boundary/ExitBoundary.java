@@ -1,6 +1,6 @@
 package it.uniba.nygaard.game.boundary;
 
-import it.uniba.nygaard.game.Util;
+import it.uniba.nygaard.game.utility.UColor;
 
 import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
@@ -31,7 +31,7 @@ public final class ExitBoundary {
    * </p>
    */
   public static void exitString() {
-    System.out.println(Util.YELLOW + Util.BOLD + "GRAZIE PER AVER GIOCATO!" + Util.RESET);
+    System.out.println(UColor.YELLOW + UColor.BOLD + "GRAZIE PER AVER GIOCATO!" + UColor.RESET);
   }
 
   /**
@@ -45,9 +45,9 @@ public final class ExitBoundary {
   public static String ask() {
     Scanner in = new Scanner(System.in, StandardCharsets.UTF_8);
     String command;
-    System.out.print("Vuoi veramente uscire? "
-        + "(" + Util.GREEN + "y" + Util.RESET
-        + "/" + Util.RED + "n" + Util.RESET + ") ");
+    System.out.print("Vuoi veramente uscire dal gioco? "
+        + "(" + UColor.GREEN + "y" + UColor.RESET
+        + "/" + UColor.RED + "n" + UColor.RESET + ") ");
     command = in.nextLine().toLowerCase();
     return command;
   }
@@ -59,7 +59,7 @@ public final class ExitBoundary {
    * </p>
    */
   public static void operationCancelled() {
-    System.out.println(Util.RED + "Operazione annullata" + Util.RESET);
+    System.out.println(UColor.RED + "Uscita dall'applicazione annullata" + UColor.RESET);
   }
 
   /**
@@ -69,7 +69,7 @@ public final class ExitBoundary {
    * </p>
    */
   public static void invalidChoice() {
-    System.out.println(Util.RED + "Scelta non valida" + Util.RESET);
+    System.out.println(UColor.RED + "Scelta non valida" + UColor.RESET);
   }
 
 }

@@ -1,11 +1,8 @@
 package it.uniba.nygaard.game.control;
 
-import it.uniba.nygaard.game.Util;
+import it.uniba.nygaard.game.utility.UDifficulty;
 import it.uniba.nygaard.game.boundary.AttemptsBoundary;
 import it.uniba.nygaard.game.boundary.InputBoundary;
-
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 /**
  * << Control >>
@@ -32,7 +29,8 @@ final class AttemptsCommand extends Command {
    * </p>
    */
   private AttemptsCommand() {
-    setParamNumber(2);
+    setMinParamNumber(2);
+    setMaxParamNumber(2);
   }
 
   /**
@@ -55,34 +53,28 @@ final class AttemptsCommand extends Command {
    * @param command Comando da eseguire.
    */
   void executeCommand(final String[] command) {
-    if (invalidNumber(command, " <numero intero positivo>")) {
-      return;
-    }
-    if (command.length < 2) {
-      InputBoundary.howToUse(command[0], " <numero intero positivo>");
+    if (checkNoParams(command)) {
+      InputBoundary.howToUse(command[0], " <numero tentativi>");
       return;
     }
     if (GameManager.getMatch().getInGame()) {
       AttemptsBoundary.alreadyInGame();
       return;
     }
-    String regex = "^[1-9][0-9]*$";
-    Pattern pattern = Pattern.compile(regex);
-    Matcher matcher = pattern.matcher(command[1]);
-    int newAttempts = 0;
-    if (matcher.matches()) {
+    int newAttempts;
+    if (command[1].matches("^[1-9][0-9]*$")) {
       try {
         newAttempts = Integer.parseInt(command[1]);
       } catch (NumberFormatException e) {
-        AttemptsBoundary.notValidChoice();
+        AttemptsBoundary.invalidChoice();
         return;
       }
-      for (int i = Util.DIFFICULTY_EASY; i <= Util.DIFFICULTY_HARD; i++) {
+      for (int i = UDifficulty.DIFFICULTY_EASY; i <= UDifficulty.DIFFICULTY_HARD; i++) {
         GameManager.getMatch().setAttempts(i, newAttempts);
       }
       AttemptsBoundary.operationDone();
     } else {
-      AttemptsBoundary.notValidChoice();
+      AttemptsBoundary.invalidChoice();
     }
   }
 }

@@ -1,6 +1,7 @@
 package it.uniba.nygaard.game.boundary;
 
-import it.uniba.nygaard.game.Util;
+import it.uniba.nygaard.game.utility.UColor;
+import it.uniba.nygaard.game.utility.UTime;
 import it.uniba.nygaard.game.control.GameManager;
 
 /**
@@ -23,14 +24,13 @@ public final class TimeBoundary {
   }
 
   /**
-   * <h3> errorTime </h3>
+   * <h3> invalidChoice </h3>
    * <p>
    * Stampa a video il messaggio di errore relativo a un tempo di gioco non valido.
    * </p>
    */
-  public static void errorTime() {
-    System.out.println(Util.RED + "Errore: il tempo inserito non è valido.\nInserire un intero positivo"
-        + " rappresentante i minuti di gioco" + Util.RESET);
+  public static void invalidChoice() {
+    System.out.println(UColor.RED + "Tempo inserito non valido" + UColor.RESET);
   }
 
   /**
@@ -40,7 +40,7 @@ public final class TimeBoundary {
    * </p>
    */
   public static void operationDone() {
-    System.out.println(Util.GREEN + "OK" + Util.RESET);
+    System.out.println(UColor.GREEN + "OK" + UColor.RESET);
   }
 
   /**
@@ -50,8 +50,8 @@ public final class TimeBoundary {
    * se si è in partita.
    * </p>
    */
-  public static void notInGame() {
-    System.out.println(Util.RED + "Non puoi cambiare il tempo di gioco se sei in partita" + Util.RESET);
+  public static void alreadyInGame() {
+    System.out.println(UColor.RED + "Non puoi cambiare il tempo di gioco durante una partita" + UColor.RESET);
   }
 
   /**
@@ -60,8 +60,8 @@ public final class TimeBoundary {
    * Stampa il messaggio relativo al fatto che non si può vedere il tempo di gioco.
    * </p>
    */
-  public static void mustBeInGame() {
-    System.out.println(Util.RED + "Devi essere in partita per vedere il tempo" + Util.RESET);
+  public static void notInGame() {
+    System.out.println(UColor.RED + "Non puoi visualizzare il tempo rimanente se non sei in partita" + UColor.RESET);
   }
 
   /**
@@ -71,7 +71,7 @@ public final class TimeBoundary {
    * </p>
    */
   public static void infiniteTime() {
-    System.out.println(Util.CYAN + "Il tempo è illimitato" + Util.RESET);
+    System.out.println(UColor.CYAN + "Il tempo è illimitato" + UColor.RESET);
   }
 
   /**
@@ -83,9 +83,9 @@ public final class TimeBoundary {
    * @param startTime Tempo d'inizio della partita.
    */
   public static void showTime(final long startTime) {
-    long elapsedTime = (System.currentTimeMillis() - startTime) / Util.ONE_MINUTE;
-    System.out.println(Util.CYAN + "Il tempo trascorso è di " + elapsedTime + " minuti");
+    long elapsedTime = (System.currentTimeMillis() - startTime) / UTime.ONE_MINUTE;
+    System.out.println(UColor.CYAN + "Il tempo trascorso è di " + elapsedTime + " minuti");
     System.out.println("Il tempo rimanente è di " + (GameManager.getMatchTime() - elapsedTime) + " minuti"
-        + Util.RESET);
+        + UColor.RESET);
   }
 }

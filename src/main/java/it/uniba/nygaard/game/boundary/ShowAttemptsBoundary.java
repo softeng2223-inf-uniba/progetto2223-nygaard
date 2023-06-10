@@ -1,6 +1,6 @@
 package it.uniba.nygaard.game.boundary;
 
-import it.uniba.nygaard.game.Util;
+import it.uniba.nygaard.game.utility.UColor;
 
 /**
  * <<Boundary>>
@@ -32,10 +32,9 @@ public final class ShowAttemptsBoundary {
    * @param maxAttempts    Tentativi massimi fallibili
    */
   public static void showAttempts(final int usedAttempts, final int failedAttempts, final int maxAttempts) {
-    System.out.println(Util.CYAN + "Hai già effettuato " + Util.BOLD + usedAttempts + " tentativi " + Util.RESET
-        + Util.CYAN + "di cui " + Util.BOLD + failedAttempts + " falliti." + Util.RESET);
-    System.out.println(Util.CYAN + "Puoi fallire al massimo " + Util.BOLD + maxAttempts + " tentativi"
-        + Util.RESET + Util.CYAN + " prima di perdere la partita." + Util.RESET);
+    System.out.println(UColor.CYAN + "Hai già effettuato " + UColor.BOLD + usedAttempts + " tentativi " + UColor.RESET
+        + UColor.CYAN + "di cui " + UColor.BOLD + failedAttempts + " falliti." + UColor.RESET);
+    showAttempts(maxAttempts);
   }
 
   /**
@@ -47,8 +46,8 @@ public final class ShowAttemptsBoundary {
    * @param maxAttempts Tentativi massimi fallibili
    */
   public static void showAttempts(final int maxAttempts) {
-    System.out.println(Util.CYAN + "Puoi fallire al massimo " + Util.BOLD + maxAttempts + " tentativi"
-        + Util.RESET);
+    System.out.println(UColor.CYAN + "Puoi fallire al massimo " + UColor.BOLD + maxAttempts + " tentativi"
+        + UColor.RESET);
   }
 
 }

@@ -1,6 +1,7 @@
 package it.uniba.nygaard.game.control;
 
 import it.uniba.nygaard.game.boundary.HelpBoundary;
+import it.uniba.nygaard.game.boundary.InputBoundary;
 
 
 /**
@@ -29,7 +30,8 @@ final class HelpCommand extends Command {
    * </p>
    */
   private HelpCommand() {
-    setParamNumber(1);
+    setMinParamNumber(1);
+    setMaxParamNumber(1);
   }
 
   /**
@@ -41,7 +43,8 @@ final class HelpCommand extends Command {
    * @param command Comando da eseguire.
    */
   public void executeCommand(final String[] command) {
-    if (invalidNumber(command)) {
+    if (checkNoParams(command)) {
+      InputBoundary.howToUse(command[0]);
       return;
     }
     HelpBoundary.getHelp();

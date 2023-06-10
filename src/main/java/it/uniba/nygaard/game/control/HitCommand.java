@@ -1,6 +1,8 @@
 package it.uniba.nygaard.game.control;
 
-import it.uniba.nygaard.game.Util;
+import it.uniba.nygaard.game.utility.UResult;
+import it.uniba.nygaard.game.utility.UShutdown;
+import it.uniba.nygaard.game.utility.UTime;
 import it.uniba.nygaard.game.boundary.TimeBoundary;
 import it.uniba.nygaard.game.boundary.HitBoundary;
 import it.uniba.nygaard.game.boundary.InputBoundary;
@@ -34,7 +36,8 @@ final class HitCommand extends Command {
    * </p>
    */
   private HitCommand() {
-    setParamNumber(1);
+    setMinParamNumber(1);
+    setMaxParamNumber(1);
   }
 
   /**
@@ -48,24 +51,6 @@ final class HitCommand extends Command {
   }
 
   /**
-   * <h3> invalidNumber </h3>
-   * <p>
-   * Controlla se il numero di parametri è valido.
-   * </p>
-   *
-   * @param command comando da eseguire
-   * @param params  parametri del comando
-   * @return true se il numero di parametri è invalido, false altrimenti
-   */
-  boolean invalidNumber(final String[] command, final String... params) {
-    if (command.length > this.getParamNumber()) {
-      InputBoundary.howToUse("<lettera>-<numero>");
-      return true;
-    }
-    return false;
-  }
-
-  /**
    * <h3> executeCommand </h3>
    * <p>
    * Esegue il comando per colpire una nave.
@@ -74,7 +59,8 @@ final class HitCommand extends Command {
    * @param command comando da eseguire
    */
   public void executeCommand(final String[] command) {
-    if (invalidNumber(command)) {
+    if (checkNoParams(command)) {
+      InputBoundary.howToUse("<lettera>-<numero>");
       return;
     }
     Match p = GameManager.getMatch();
@@ -89,30 +75,29 @@ final class HitCommand extends Command {
       int x = Integer.parseInt(coordinates[1]) - 1;
       res = p.hit(x, y);
     } catch (NumberFormatException | IndexOutOfBoundsException e) {
-      HitBoundary.invalidCoordinates();
+      HitBoundary.invalidChoice();
       return;
     }
     ShowGridBoundary.printGrid(p.getAttackGrid());
     switch (res) {
-      case Util.WATER_CODE -> HitBoundary.miss();
-      case Util.HITTED_CODE -> HitBoundary.hit();
-      case Util.SANK_CODE -> HitBoundary.sunk();
+      case UResult.WATER_CODE -> HitBoundary.miss();
+      case UResult.HITTED_CODE -> HitBoundary.hit();
+      case UResult.SANK_CODE -> HitBoundary.sunk();
       default -> {
       }
     }
     ShowAttemptsBoundary.showAttempts(p.getUsedAttempts(), p.getFailedAttempts(), p.getAttempts(p.getDifficulty()));
-    if (p.getMaxTime() != Util.DEFAULT_TIME) {
+    if (p.getMaxTime() != UTime.DEFAULT_TIME) {
       TimeBoundary.showTime(p.getStartTime());
     } else {
       TimeBoundary.infiniteTime();
     }
     if (p.win()) {
-      GeneralControl.setShutDown(Util.WIN_TERMINATION_CODE);
+      GeneralControl.setShutDown(UShutdown.WIN_TERMINATION_CODE);
       return;
     }
     if (p.getFailedAttempts() == p.getAttempts(p.getDifficulty())) {
-      GeneralControl.setShutDown(Util.OUT_OF_ATTEMPTS_TERMINATION_CODE);
-      return;
+      GeneralControl.setShutDown(UShutdown.OUT_OF_ATTEMPTS_TERMINATION_CODE);
     }
   }
 

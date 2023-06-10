@@ -1,6 +1,6 @@
 package it.uniba.nygaard.game.entity.grids;
 
-import it.uniba.nygaard.game.Util;
+import it.uniba.nygaard.game.utility.UGrid;
 
 /**
  * <h2> Grid </h2>
@@ -24,13 +24,6 @@ public abstract class Grid {
    * </p>
    */
   private char maxColumn;
-  /**
-   * <h3> headingEdgeWidth </h3>
-   * <p>
-   * Larghezza del bordo superiore.
-   * </p>
-   */
-  private int headingEdgeWidth;
 
   /**
    * <h3> Costruttore </h3>
@@ -39,32 +32,8 @@ public abstract class Grid {
    * </p>
    */
   Grid() {
-    maxRows = Util.STANDARD_GRID_SIZE;
+    maxRows = UGrid.STANDARD_GRID_SIZE;
     maxColumn = 'J';
-  }
-
-  /**
-   * <h3> getHeadingEdgeWidth </h3>
-   * <p>
-   * Restituisce la larghezza del bordo superiore.
-   * </p>
-   *
-   * @return Larghezza del bordo superiore.
-   */
-  public int getHeadingEdgeWidth() {
-    return headingEdgeWidth;
-  }
-
-  /**
-   * <h3> setHeadingEdgeWidth </h3>
-   * <p>
-   * Imposta la larghezza del bordo superiore.
-   * </p>
-   *
-   * @param newHeadingEdgeWidth Larghezza del bordo superiore.
-   */
-  public void setHeadingEdgeWidth(final int newHeadingEdgeWidth) {
-    this.headingEdgeWidth = newHeadingEdgeWidth;
   }
 
   /**

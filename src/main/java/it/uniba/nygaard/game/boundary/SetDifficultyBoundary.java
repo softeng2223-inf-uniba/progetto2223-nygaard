@@ -1,6 +1,6 @@
 package it.uniba.nygaard.game.boundary;
 
-import it.uniba.nygaard.game.Util;
+import it.uniba.nygaard.game.utility.UColor;
 import it.uniba.nygaard.game.control.GameManager;
 
 import java.nio.charset.StandardCharsets;
@@ -37,9 +37,9 @@ public final class SetDifficultyBoundary {
    */
   public static void alreadyInGame(final boolean diff) {
     if (diff) {
-      System.out.println(Util.RED + "Non puoi cambiare difficoltà durante una partita" + Util.RESET);
+      System.out.println(UColor.RED + "Non puoi cambiare difficoltà durante una partita" + UColor.RESET);
     } else {
-      System.out.println(Util.RED + "Non puoi cambiare il numero di tentativi durante una partita" + Util.RESET);
+      System.out.println(UColor.RED + "Non puoi cambiare il numero di tentativi durante una partita" + UColor.RESET);
     }
   }
 
@@ -51,7 +51,7 @@ public final class SetDifficultyBoundary {
    * </p>
    */
   public static void sameDifficulty() {
-    System.out.println(Util.RED + "Hai già impostato questa difficoltà" + Util.RESET);
+    System.out.println(UColor.RED + "Hai già impostato questa difficoltà" + UColor.RESET);
   }
 
   /**
@@ -62,7 +62,7 @@ public final class SetDifficultyBoundary {
    * </p>
    */
   public static void sameAttempts() {
-    System.out.println(Util.RED + "Questo numero di tentativi è uguale a quello già impostato" + Util.RESET);
+    System.out.println(UColor.RED + "Questo numero di tentativi è uguale a quello già impostato" + UColor.RESET);
   }
 
   /**
@@ -75,11 +75,11 @@ public final class SetDifficultyBoundary {
    * @return Risposta dell'utente
    */
   public static String ask(final int newDifficulty) {
-    System.out.print("Il livello attuale è " + Util.BOLD
-        + GameManager.actualDifficultyName() + Util.RESET + ". Confermare cambio in "
-        + Util.BOLD + GameManager.newDifficultyName(newDifficulty) + Util.RESET
-        + "? (" + Util.GREEN + "y" + Util.RESET
-        + "/" + Util.RED + "n" + Util.RESET + ") ");
+    System.out.print("Il livello attuale è " + UColor.BOLD
+        + GameManager.actualDifficultyName() + UColor.RESET + ". Confermare cambio in "
+        + UColor.BOLD + GameManager.newDifficultyName(newDifficulty) + UColor.RESET
+        + "? (" + UColor.GREEN + "y" + UColor.RESET
+        + "/" + UColor.RED + "n" + UColor.RESET + ") ");
     return new Scanner(System.in, StandardCharsets.UTF_8).next().toLowerCase();
   }
 
@@ -90,7 +90,7 @@ public final class SetDifficultyBoundary {
    * </p>
    */
   public static void operationCancelled() {
-    System.out.println(Util.RED + "Cambio difficoltà annullato" + Util.RESET);
+    System.out.println(UColor.RED + "Cambio difficoltà annullato" + UColor.RESET);
   }
 
   /**
@@ -100,16 +100,16 @@ public final class SetDifficultyBoundary {
    * </p>
    */
   public static void operationDone() {
-    System.out.println(Util.GREEN + "OK" + Util.RESET);
+    System.out.println(UColor.GREEN + "OK" + UColor.RESET);
   }
 
   /**
-   * <h3> notValideChoice </h3>
+   * <h3> invalidChoice </h3>
    * <p>
    * Stampa il messaggio relativo alla scelta non valida.
    * </p>
    */
-  public static void notValidChoice() {
-    System.out.println(Util.RED + "Scelta non valida" + Util.RESET);
+  public static void invalidChoice() {
+    System.out.println(UColor.RED + "Scelta non valida" + UColor.RESET);
   }
 }

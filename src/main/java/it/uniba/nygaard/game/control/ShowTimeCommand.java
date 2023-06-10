@@ -1,6 +1,7 @@
 package it.uniba.nygaard.game.control;
 
-import it.uniba.nygaard.game.Util;
+import it.uniba.nygaard.game.utility.UTime;
+import it.uniba.nygaard.game.boundary.InputBoundary;
 import it.uniba.nygaard.game.boundary.TimeBoundary;
 
 /**
@@ -29,7 +30,8 @@ final class ShowTimeCommand extends Command {
    * </p>
    */
   private ShowTimeCommand() {
-    setParamNumber(1);
+    setMinParamNumber(1);
+    setMaxParamNumber(1);
   }
 
   /**
@@ -51,14 +53,15 @@ final class ShowTimeCommand extends Command {
    * @param command Comando da eseguire.
    */
   public void executeCommand(final String[] command) {
-    if (invalidNumber(command)) {
+    if (checkNoParams(command)) {
+      InputBoundary.howToUse(command[0]);
       return;
     }
     if (!GameManager.getMatch().getInGame()) {
-      TimeBoundary.mustBeInGame();
+      TimeBoundary.notInGame();
       return;
     }
-    if (GameManager.getMatch().getMaxTime() == Util.DEFAULT_TIME) {
+    if (GameManager.getMatch().getMaxTime() == UTime.DEFAULT_TIME) {
       TimeBoundary.infiniteTime();
     } else {
       TimeBoundary.showTime(GameManager.getMatch().getStartTime());

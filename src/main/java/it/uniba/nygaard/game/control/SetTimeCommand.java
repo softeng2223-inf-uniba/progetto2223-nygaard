@@ -29,7 +29,8 @@ final class SetTimeCommand extends Command {
    * </p>
    */
   private SetTimeCommand() {
-    setParamNumber(2);
+    setMinParamNumber(2);
+    setMaxParamNumber(2);
   }
 
   /**
@@ -52,26 +53,24 @@ final class SetTimeCommand extends Command {
    * @param command Comando da eseguire.
    */
   public void executeCommand(final String[] command) {
+    if (checkNoParams(command)) {
+      InputBoundary.howToUse("/tempo", " <tempo in minuti>");
+      return;
+    }
     if (GameManager.getMatch().getInGame()) {
-      TimeBoundary.notInGame();
+      TimeBoundary.alreadyInGame();
       return;
     }
-    int maxTime = 0;
-    if (invalidNumber(command, " <numero> (intero positivo)")) {
-      return;
-    }
-    if (command.length < 2) {
-      InputBoundary.howToUse("/tempo", " <numero> (intero positivo)");
-      return;
-    }
-    try {
-      maxTime = Integer.parseInt(command[1]);
-      if (maxTime <= 0) {
-        TimeBoundary.errorTime();
+    int maxTime;
+    if (command[1].matches("^[1-9][0-9]*$")) {
+      try {
+        maxTime = Integer.parseInt(command[1]);
+      } catch (NumberFormatException e) {
+        TimeBoundary.invalidChoice();
         return;
       }
-    } catch (NumberFormatException e) {
-      TimeBoundary.errorTime();
+    } else {
+      TimeBoundary.invalidChoice();
       return;
     }
     GameManager.getMatch().setMaxTime(maxTime);

@@ -1,6 +1,8 @@
 package it.uniba.nygaard.game.entity.grids;
 
-import it.uniba.nygaard.game.Util;
+import it.uniba.nygaard.game.utility.UColor;
+import it.uniba.nygaard.game.utility.UGrid;
+import it.uniba.nygaard.game.utility.Util;
 
 /**
  * <h2> CharactersGrid </h2>
@@ -78,50 +80,50 @@ public final class CharactersGrid extends Grid {
     String str = "";
     char c;
 
-    int headingEdgeWidth = this.getMaxRows() + Util.BORDER_ADDER;
+    int headingEdgeWidth = this.getMaxRows() + UGrid.BORDER_ADDER;
 
     str += "-".repeat(headingEdgeWidth);
-    str += Util.PURPLE + Util.BOLD + "Attacco" + Util.RESET;
+    str += UColor.PURPLE + UColor.BOLD + "Attacco" + UColor.RESET;
     str += "-".repeat(headingEdgeWidth);
     str += "\n\n";
-    str += " ".repeat(Util.COLUMNS_EDGE_WIDTH);
-    for (char y = Util.MIN_COLUMN; y <= this.getMaxColumn(); y++) {
+    str += " ".repeat(UGrid.COLUMNS_EDGE_WIDTH);
+    for (char y = UGrid.MIN_COLUMN; y <= this.getMaxColumn(); y++) {
       str += y + " ";
     }
     str += "\n\n";
-    for (int x = Util.MIN_ROWS; x <= this.getMaxRows(); x++) {
-      str += " ".repeat(Util.ROWS_EDGE_WIDTH);
+    for (int x = UGrid.MIN_ROWS; x <= this.getMaxRows(); x++) {
+      str += " ".repeat(UGrid.ROWS_EDGE_WIDTH);
       if (x < Util.FIRST_TWO_DIGITS) {
         str += " ";
       }
       str += x + "   ";
-      for (char y = Util.MIN_COLUMN; y <= this.getMaxColumn(); y++) {
-        c = this.getCharacter(x - 1, y - Util.MIN_COLUMN);
+      for (char y = UGrid.MIN_COLUMN; y <= this.getMaxColumn(); y++) {
+        c = this.getCharacter(x - 1, y - UGrid.MIN_COLUMN);
         switch (c) {
           case 'X':
-            str += Util.YELLOW;
+            str += UColor.YELLOW;
             break;
           case '#':
-            str += Util.RED;
+            str += UColor.RED;
             break;
           case '~':
-            str += Util.CYAN;
+            str += UColor.CYAN;
             break;
           default:
-            str += Util.RESET;
+            str += UColor.RESET;
         }
-        str += c + " " + Util.RESET;
+        str += c + " " + UColor.RESET;
       }
       str += "  " + x + "\n";
     }
     str += "\n";
-    str += " ".repeat(Util.COLUMNS_EDGE_WIDTH);
-    for (char y = Util.MIN_COLUMN; y <= this.getMaxColumn(); y++) {
+    str += " ".repeat(UGrid.COLUMNS_EDGE_WIDTH);
+    for (char y = UGrid.MIN_COLUMN; y <= this.getMaxColumn(); y++) {
       str += y + " ";
     }
     str += "\n\n";
     str += "-".repeat(headingEdgeWidth);
-    str += Util.PURPLE + Util.BOLD + "Attacco" + Util.RESET;
+    str += UColor.PURPLE + UColor.BOLD + "Attacco" + UColor.RESET;
     str += "-".repeat(headingEdgeWidth);
     str += "\n";
     return str;

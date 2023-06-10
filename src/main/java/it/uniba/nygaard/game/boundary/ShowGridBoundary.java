@@ -1,6 +1,6 @@
 package it.uniba.nygaard.game.boundary;
 
-import it.uniba.nygaard.game.Util;
+import it.uniba.nygaard.game.utility.UColor;
 
 /**
  * << Boundary >>
@@ -28,7 +28,7 @@ public final class ShowGridBoundary {
    * </p>
    */
   public static void notInGame() {
-    System.out.println(Util.RED + "Non sei in partita" + Util.RESET);
+    System.out.println(UColor.RED + "Non puoi visualizzare le griglie se non sei in partita" + UColor.RESET);
   }
 
   /**

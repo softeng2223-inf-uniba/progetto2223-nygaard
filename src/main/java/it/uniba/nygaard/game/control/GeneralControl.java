@@ -1,14 +1,13 @@
 package it.uniba.nygaard.game.control;
 
-import it.uniba.nygaard.game.Util;
+import it.uniba.nygaard.game.utility.UDifficulty;
+import it.uniba.nygaard.game.utility.UShutdown;
 import it.uniba.nygaard.game.boundary.InputBoundary;
 import it.uniba.nygaard.game.boundary.MatchBoundary;
 import it.uniba.nygaard.game.boundary.ShowGridBoundary;
 import it.uniba.nygaard.game.entity.Match;
 
 import java.util.HashMap;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 /**
  * << Control >>
@@ -60,15 +59,7 @@ public final class GeneralControl {
     GeneralControl.shutDown = value;
   }
 
-  /**
-   * <h3> startGame </h3>
-   * <p>
-   * Avvia il gioco.
-   * </p>
-   *
-   * @param args Argomenti passati al programma.
-   */
-  public static void startGame(final String[] args) {
+  private static HashMap<String, Command> initCommands() {
     HashMap<String, Command> availableCommands = new HashMap<>();
     availableCommands.put("/esci", ExitCommand.getInstance());
     availableCommands.put("/facile", SetDifficultyCommand.getInstance());
@@ -88,47 +79,56 @@ public final class GeneralControl {
     availableCommands.put("/tentativi", AttemptsCommand.getInstance());
     availableCommands.put("/abbandona", LeaveMatchCommand.getInstance());
     availableCommands.put("/mostragriglia", ShowGridCommand.getInstance());
-    String regex = "^[a-z]-[1-9][0-9]*$";
-    Pattern pattern = Pattern.compile(regex);
-    Matcher matcher;
+    return availableCommands;
+  }
+
+  /**
+   * <h3> startGame </h3>
+   * <p>
+   * Avvia il gioco.
+   * </p>
+   *
+   * @param args Argomenti passati al programma.
+   */
+  public static void startGame(final String[] args) {
+    HashMap<String, Command> availableCommands = initCommands();
     GameManager.setArgs(args);
     ParamControl.initUI();
     do {
       GameManager.setMatch(new Match());
-      GameManager.setMatchDifficulty(Util.DIFFICULTY_MEDIUM);
-      GameManager.setNextGridSizeName(Util.STANDARD_GRID_SIZE);
-      shutDown = Util.NOT_TERMINATION_CODE;
-      while (shutDown == Util.NOT_TERMINATION_CODE) {
+      GameManager.setMatchDifficulty(UDifficulty.DIFFICULTY_MEDIUM);
+      shutDown = UShutdown.NOT_TERMINATION_CODE;
+      while (shutDown == UShutdown.NOT_TERMINATION_CODE) {
         String[] command = InputBoundary.getCommand().trim().replaceAll(" +", " ").split(" ");
+        String inputCommand = command[0];
         InputBoundary.resetColor();
-        if (shutDown != Util.NOT_TERMINATION_CODE) {
+        if (shutDown != UShutdown.NOT_TERMINATION_CODE) {
           break;
         }
-        matcher = pattern.matcher(command[0]);
-        if (matcher.matches()) {
+        if (inputCommand.matches("^[a-z]-[1-9][0-9]*$")) {
           HitCommand.getInstance().executeCommand(command);
           continue;
         }
-        if (availableCommands.containsKey(command[0])) {
-          availableCommands.get(command[0]).executeCommand(command);
+        if (availableCommands.containsKey(inputCommand)) {
+          availableCommands.get(inputCommand).executeCommand(command);
         } else {
           InputBoundary.notRecognisedCommand(command);
         }
       }
       switch (shutDown) {
-        case Util.WIN_TERMINATION_CODE -> MatchBoundary.win();
-        case Util.OUT_OF_ATTEMPTS_TERMINATION_CODE -> MatchBoundary.outOfAttempts();
-        case Util.LEFT_TERMINATION_CODE -> MatchBoundary.leave();
+        case UShutdown.WIN_TERMINATION_CODE -> MatchBoundary.win();
+        case UShutdown.OUT_OF_ATTEMPTS_TERMINATION_CODE -> MatchBoundary.outOfAttempts();
+        case UShutdown.LEFT_TERMINATION_CODE -> MatchBoundary.leave();
         default -> {
         }
       }
-      if (shutDown != Util.QUIT_TERMINATION_CODE) {
-        if (shutDown != Util.WIN_TERMINATION_CODE) {
+      if (shutDown != UShutdown.QUIT_TERMINATION_CODE) {
+        if (shutDown != UShutdown.WIN_TERMINATION_CODE) {
           MatchBoundary.printSolution();
           ShowGridBoundary.printGrid(GameManager.getMatch().getDefenseGrid());
         }
-        MatchBoundary.playAgain();
+        MatchBoundary.endMatch();
       }
-    } while (shutDown != Util.QUIT_TERMINATION_CODE);
+    } while (shutDown != UShutdown.QUIT_TERMINATION_CODE);
   }
 }

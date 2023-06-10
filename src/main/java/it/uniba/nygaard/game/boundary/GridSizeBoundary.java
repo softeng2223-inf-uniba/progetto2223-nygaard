@@ -1,6 +1,6 @@
 package it.uniba.nygaard.game.boundary;
 
-import it.uniba.nygaard.game.Util;
+import it.uniba.nygaard.game.utility.UColor;
 import it.uniba.nygaard.game.control.GameManager;
 
 import java.nio.charset.StandardCharsets;
@@ -31,9 +31,9 @@ public final class GridSizeBoundary {
    * mentre si è in partita.
    * </p>
    */
-  public static void inGameError() {
-    System.out.println(Util.RED + "Non puoi impostare le dimensioni della griglia"
-        + "mentre sei in partita" + Util.RESET);
+  public static void alreadyInGame() {
+    System.out.println(UColor.RED + "Non puoi cambiare le dimensioni della griglia"
+        + " durante una partita" + UColor.RESET);
   }
 
   /**
@@ -43,7 +43,7 @@ public final class GridSizeBoundary {
    * </p>
    */
   public static void operationDone() {
-    System.out.println(Util.GREEN + "OK" + Util.RESET);
+    System.out.println(UColor.GREEN + "OK" + UColor.RESET);
   }
 
   /**
@@ -53,8 +53,8 @@ public final class GridSizeBoundary {
    * con le stesse dimensioni attuali.
    * </p>
    */
-  public static void sameSizeError() {
-    System.out.println(Util.RED + "Dimensioni gia' impostate" + Util.RESET);
+  public static void sameSize() {
+    System.out.println(UColor.RED + "Questa dimensione è stata già impostata" + UColor.RESET);
   }
 
   /**
@@ -63,8 +63,8 @@ public final class GridSizeBoundary {
    * Messaggio di errore per quando si inserisce una scelta non valida.
    * </p>
    */
-  public static void invalidChoiceError() {
-    System.out.println(Util.RED + "Scelta non valida" + Util.RESET);
+  public static void invalidChoice() {
+    System.out.println(UColor.RED + "Scelta non valida" + UColor.RESET);
   }
 
   /**
@@ -78,11 +78,11 @@ public final class GridSizeBoundary {
    */
   public static String ask(final int newSize) {
     int cSize = GameManager.currentGridSize();
-    System.out.print("Le dimensioni attuali sono " + Util.BOLD
-        + cSize + "x" + cSize + Util.RESET + ". Confermare cambio in "
-        + Util.BOLD + newSize + "x" + newSize + Util.RESET
-        + "? (" + Util.GREEN + "y" + Util.RESET
-        + "/" + Util.RED + "n" + Util.RESET + ") ");
+    System.out.print("Le dimensioni attuali sono " + UColor.BOLD
+        + cSize + "x" + cSize + UColor.RESET + ". Confermare cambio in "
+        + UColor.BOLD + newSize + "x" + newSize + UColor.RESET
+        + "? (" + UColor.GREEN + "y" + UColor.RESET
+        + "/" + UColor.RED + "n" + UColor.RESET + ") ");
     return new Scanner(System.in, StandardCharsets.UTF_8).next().toLowerCase();
   }
 
@@ -93,6 +93,6 @@ public final class GridSizeBoundary {
    * </p>
    */
   public static void operationCancelled() {
-    System.out.println(Util.RED + "Cambio dimensioni annullato" + Util.RESET);
+    System.out.println(UColor.RED + "Cambio dimensioni della griglia annullato" + UColor.RESET);
   }
 }
