@@ -5,9 +5,6 @@ import it.uniba.nygaard.game.boundary.InputBoundary;
 import it.uniba.nygaard.game.boundary.SetDifficultyBoundary;
 import it.uniba.nygaard.game.entity.Match;
 
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
 /**
  * << Control >>
  * <h2> SetDifficultyCommand </h2>
@@ -74,11 +71,7 @@ final class SetDifficultyCommand extends Command {
       GameManager.setMatchDifficulty(difficultyInvolved);
       setNewMatchDifficulty();
     } else {
-      String regex = "^[1-9][0-9]*$";
-      Pattern pattern = Pattern.compile(regex);
-      Matcher matcher = pattern.matcher(command[1]);
-
-      if (matcher.matches()) {
+      if (command[1].matches("^[1-9][0-9]*$")) {
         try {
           GameManager.setMatchAttempts(Integer.parseInt(command[1]));
         } catch (NumberFormatException e) {

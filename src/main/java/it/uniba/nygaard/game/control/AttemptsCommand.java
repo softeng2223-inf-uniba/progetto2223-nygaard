@@ -4,9 +4,6 @@ import it.uniba.nygaard.game.utility.UDifficulty;
 import it.uniba.nygaard.game.boundary.AttemptsBoundary;
 import it.uniba.nygaard.game.boundary.InputBoundary;
 
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
 /**
  * << Control >>
  * <h2> AttemptsCommand </h2>
@@ -64,11 +61,8 @@ final class AttemptsCommand extends Command {
       AttemptsBoundary.alreadyInGame();
       return;
     }
-    String regex = "^[1-9][0-9]*$";
-    Pattern pattern = Pattern.compile(regex);
-    Matcher matcher = pattern.matcher(command[1]);
-    int newAttempts = 0;
-    if (matcher.matches()) {
+    int newAttempts;
+    if (command[1].matches("^[1-9][0-9]*$")) {
       try {
         newAttempts = Integer.parseInt(command[1]);
       } catch (NumberFormatException e) {

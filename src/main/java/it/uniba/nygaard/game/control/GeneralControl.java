@@ -8,8 +8,6 @@ import it.uniba.nygaard.game.boundary.ShowGridBoundary;
 import it.uniba.nygaard.game.entity.Match;
 
 import java.util.HashMap;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 /**
  * << Control >>
@@ -94,9 +92,6 @@ public final class GeneralControl {
    */
   public static void startGame(final String[] args) {
     HashMap<String, Command> availableCommands = initCommands();
-    String regex = "^[a-z]-[1-9][0-9]*$";
-    Pattern pattern = Pattern.compile(regex);
-    Matcher matcher;
     GameManager.setArgs(args);
     ParamControl.initUI();
     do {
@@ -110,8 +105,7 @@ public final class GeneralControl {
         if (shutDown != UShutdown.NOT_TERMINATION_CODE) {
           break;
         }
-        matcher = pattern.matcher(inputCommand);
-        if (matcher.matches()) {
+        if (inputCommand.matches("^[a-z]-[1-9][0-9]*$")) {
           HitCommand.getInstance().executeCommand(command);
           continue;
         }

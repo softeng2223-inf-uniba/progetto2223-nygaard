@@ -3,9 +3,6 @@ package it.uniba.nygaard.game.control;
 import it.uniba.nygaard.game.boundary.InputBoundary;
 import it.uniba.nygaard.game.boundary.TimeBoundary;
 
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
 /**
  * <<Control>>
  * <h2>SetTimeCommand</h2>
@@ -65,10 +62,7 @@ final class SetTimeCommand extends Command {
       return;
     }
     int maxTime;
-    String regex = "^[1-9][0-9]*$";
-    Pattern pattern = Pattern.compile(regex);
-    Matcher matcher = pattern.matcher(command[1]);
-    if (matcher.matches()) {
+    if (command[1].matches("^[1-9][0-9]*$")) {
       try {
         maxTime = Integer.parseInt(command[1]);
       } catch (NumberFormatException e) {
