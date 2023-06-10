@@ -61,7 +61,7 @@ final class SetTimeCommand extends Command {
       return;
     }
     if (GameManager.getMatch().getInGame()) {
-      TimeBoundary.notInGame();
+      TimeBoundary.alreadyInGame();
       return;
     }
     int maxTime;
