@@ -28,7 +28,7 @@ public final class ShowGridBoundary {
    * </p>
    */
   public static void notInGame() {
-    System.out.println(UColor.RED + "Non sei in partita" + UColor.RESET);
+    System.out.println(UColor.RED + "Non puoi visualizzare le griglie se non sei in partita" + UColor.RESET);
   }
 
   /**
