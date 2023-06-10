@@ -3,7 +3,6 @@ package it.uniba.nygaard.game.control;
 import it.uniba.nygaard.game.utility.UDifficulty;
 import it.uniba.nygaard.game.utility.UShutdown;
 import it.uniba.nygaard.game.boundary.InputBoundary;
-import it.uniba.nygaard.game.boundary.LeaveMatchBoundary;
 import it.uniba.nygaard.game.boundary.MatchBoundary;
 import it.uniba.nygaard.game.boundary.ShowGridBoundary;
 import it.uniba.nygaard.game.entity.Match;
@@ -124,7 +123,7 @@ public final class GeneralControl {
       switch (shutDown) {
         case UShutdown.WIN_TERMINATION_CODE -> MatchBoundary.win();
         case UShutdown.OUT_OF_ATTEMPTS_TERMINATION_CODE -> MatchBoundary.outOfAttempts();
-        case UShutdown.LEFT_TERMINATION_CODE -> LeaveMatchBoundary.leave();
+        case UShutdown.LEFT_TERMINATION_CODE -> MatchBoundary.leave();
         default -> {
         }
       }

@@ -66,15 +66,4 @@ public final class LeaveMatchBoundary {
         System.out.println(UColor.RED + "Operazione annullata" + UColor.RESET);
     }
 
-    /**
-     * <h3> leave </h3>
-     * <p>
-     * Stampa il messaggio relativo al fatto che
-     * il giocatore ha abbandonato la partita.
-     * </p>
-     */
-    public static void leave() {
-        System.out.println(UColor.RED + UColor.BOLD + "Hai perso! Hai abbandonato la partita!" + UColor.RESET);
-    }
-
 }
