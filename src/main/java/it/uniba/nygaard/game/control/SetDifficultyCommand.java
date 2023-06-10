@@ -75,7 +75,7 @@ final class SetDifficultyCommand extends Command {
         try {
           GameManager.setMatchAttempts(Integer.parseInt(command[1]));
         } catch (NumberFormatException e) {
-          SetDifficultyBoundary.invalidChoice();
+          AttemptsBoundary.invalidChoice();
           return;
         }
         setNewDiffAttempts(difficultyInvolved);
