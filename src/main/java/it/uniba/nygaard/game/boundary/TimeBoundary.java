@@ -24,12 +24,12 @@ public final class TimeBoundary {
   }
 
   /**
-   * <h3> errorTime </h3>
+   * <h3> invalidChoice </h3>
    * <p>
    * Stampa a video il messaggio di errore relativo a un tempo di gioco non valido.
    * </p>
    */
-  public static void errorTime() {
+  public static void invalidChoice() {
     System.out.println(UColor.RED + "Tempo inserito non valido" + UColor.RESET);
   }
 
