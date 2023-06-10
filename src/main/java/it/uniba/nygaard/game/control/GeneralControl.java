@@ -105,17 +105,18 @@ public final class GeneralControl {
       shutDown = UShutdown.NOT_TERMINATION_CODE;
       while (shutDown == UShutdown.NOT_TERMINATION_CODE) {
         String[] command = InputBoundary.getCommand().trim().replaceAll(" +", " ").split(" ");
+        String inputCommand = command[0];
         InputBoundary.resetColor();
         if (shutDown != UShutdown.NOT_TERMINATION_CODE) {
           break;
         }
-        matcher = pattern.matcher(command[0]);
+        matcher = pattern.matcher(inputCommand);
         if (matcher.matches()) {
           HitCommand.getInstance().executeCommand(command);
           continue;
         }
-        if (availableCommands.containsKey(command[0])) {
-          availableCommands.get(command[0]).executeCommand(command);
+        if (availableCommands.containsKey(inputCommand)) {
+          availableCommands.get(inputCommand).executeCommand(command);
         } else {
           InputBoundary.notRecognisedCommand(command);
         }
