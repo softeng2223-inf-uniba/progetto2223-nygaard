@@ -52,7 +52,7 @@ public final class TimeBoundary {
    * </p>
    */
   public static void alreadyInGame() {
-    System.out.println(UColor.RED + "Non puoi cambiare il tempo di gioco se sei in partita" + UColor.RESET);
+    System.out.println(UColor.RED + "Non puoi cambiare il tempo di gioco durante una partita" + UColor.RESET);
   }
 
   /**
