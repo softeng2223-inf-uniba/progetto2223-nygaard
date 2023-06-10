@@ -61,7 +61,7 @@ public final class TimeBoundary {
    * Stampa il messaggio relativo al fatto che non si può vedere il tempo di gioco.
    * </p>
    */
-  public static void mustBeInGame() {
+  public static void notInGame() {
     System.out.println(UColor.RED + "Non puoi visualizzare il tempo rimanente se non sei in partita" + UColor.RESET);
   }
 

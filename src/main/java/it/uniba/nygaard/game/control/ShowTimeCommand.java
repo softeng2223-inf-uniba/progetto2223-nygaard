@@ -58,7 +58,7 @@ final class ShowTimeCommand extends Command {
       return;
     }
     if (!GameManager.getMatch().getInGame()) {
-      TimeBoundary.mustBeInGame();
+      TimeBoundary.notInGame();
       return;
     }
     if (GameManager.getMatch().getMaxTime() == UTime.DEFAULT_TIME) {
