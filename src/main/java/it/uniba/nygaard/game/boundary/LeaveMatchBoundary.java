@@ -28,7 +28,7 @@ public final class LeaveMatchBoundary {
      * </p>
      */
     public static void notInGame() {
-        System.out.println(UColor.RED + "Non puoi usare il comando quando non sei in partita"
+        System.out.println(UColor.RED + "Non puoi abbandonare la partita se non sei in partita"
             + UColor.RESET);
     }
     /**
