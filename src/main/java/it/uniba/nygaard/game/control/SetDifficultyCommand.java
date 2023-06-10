@@ -80,7 +80,7 @@ final class SetDifficultyCommand extends Command {
         }
         setNewDiffAttempts(difficultyInvolved);
       } else {
-        SetDifficultyBoundary.invalidChoice();
+        AttemptsBoundary.invalidChoice();
       }
     }
   }
