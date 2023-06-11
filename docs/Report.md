@@ -460,6 +460,8 @@ Il seguente *diagramma* è il **Diagramma di affinità** presentato nella [sezio
 
 Infine consideriamo il *diagramma* relativo a ciò che vorremmo **mantenere**, **smettere** o **incomiciare** a fare:
 
+![AvviaArrestaContinua](img/AnalisiRetrospettivaSprint1/AvviaArrestaContinua1.png)
+
 
 
 
