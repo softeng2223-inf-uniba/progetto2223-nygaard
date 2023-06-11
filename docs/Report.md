@@ -445,6 +445,6 @@ Il seguente *diagramma*, definito **Diagramma di affinità** raggruppa gli stati
 
 Infine consideriamo il *diagramma* relativo a ciò che vorremmo **mantenere**, **smettere** o **incomiciare** a fare:
 
-![AvviaArrestaContinua](img/AnalisiRetrospettivaSprint0/AvviaArrestaContinua.jpg)
+![AvviaArrestaContinua](img/AnalisiRetrospettivaSprint0/AvviaArrestaContinua0.jpg)
 
 <br/>
