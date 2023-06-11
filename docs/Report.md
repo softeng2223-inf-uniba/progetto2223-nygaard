@@ -453,6 +453,7 @@ Infine consideriamo il *diagramma* relativo a ciò che vorremmo **mantenere**, *
 
 Il seguente *diagramma* è relativo agli **stati emotivi** e alle ragioni che li hanno scatenati provati durante l'esecuzione dello Sprint 1:
 
+![Arrabbiato Triste Felice](img/AnalisiRetrospettivaSprint1/ArrabbiatoTristeFelice1.png)
 
 Il seguente *diagramma* è il **Diagramma di affinità** presentato nella [sezione precedente](#91-sprint-0-dimostrare-familiarità-con-github-e-il-processo-agile):
 
