@@ -441,7 +441,7 @@ Il seguente *diagramma*, definito **Diagramma di affinità** raggruppa gli stati
 - *strumenti*
 - *problemi individuali*
 
-![DiagrammaDiAffinità](img/AnalisiRetrospettivaSprint0/DiagrammaDiAffinita'.png)
+![DiagrammaDiAffinità](img/AnalisiRetrospettivaSprint0/DiagrammaDiAffinita'0.png)
 
 Infine consideriamo il *diagramma* relativo a ciò che vorremmo **mantenere**, **smettere** o **incomiciare** a fare:
 
