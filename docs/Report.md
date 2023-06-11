@@ -451,4 +451,6 @@ Infine consideriamo il *diagramma* relativo a ciò che vorremmo **mantenere**, *
 
 ## 9.2 **Sprint 1**: *preparare il gioco*
 
+Il seguente *diagramma* è relativo agli **stati emotivi** e alle ragioni che li hanno scatenati provati durante l'esecuzione dello Sprint 1:
+
 
