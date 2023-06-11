@@ -448,3 +448,7 @@ Infine consideriamo il *diagramma* relativo a ciò che vorremmo **mantenere**, *
 ![AvviaArrestaContinua](img/AnalisiRetrospettivaSprint0/AvviaArrestaContinua0.jpg)
 
 <br/>
+
+## 9.2 **Sprint 1**: *preparare il gioco*
+
+
