@@ -113,4 +113,20 @@ class SetTimeCommandTest {
     assertEquals(expectedOutput, outContent.toString(StandardCharsets.UTF_8),
         "Non è stato stampato il messaggio di errore corretto");
   }
+
+  @Test
+  @DisplayName("/tempo in partita")
+  void testSetTimeCommandInGame() {
+    String[] args = new String[]{"/tempo", "10"};
+    GameManager.getMatch().setInGame(true);
+    try {
+      execute.invoke(setTimeCommand, (Object) args);
+    } catch (IllegalAccessException | InvocationTargetException e) {
+      fail("Impossibile invocare il metodo executeCommand");
+    }
+    String expectedOutput = UColor.RED + "Non puoi cambiare il tempo di gioco durante una partita" + UColor.RESET
+        + System.lineSeparator();
+    assertEquals(expectedOutput, outContent.toString(StandardCharsets.UTF_8),
+        "Non è stato stampato il messaggio di errore corretto");
+  }
 }
