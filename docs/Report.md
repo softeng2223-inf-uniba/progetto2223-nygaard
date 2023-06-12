@@ -476,6 +476,28 @@ Per la gestione dello sviluppo dei task è stato utilizzato il [Github Flow](htt
 | 1          | Preparare il gioco                                | 03/05/2022  | 19/05/2022 | 16 giorni | 29/05/2022    |
 | 2          | Completare il gioco, assicurando la qualità del lavoro svolto               | 30/05/2022  | 14/06/2022 | 14 giorni | 15-28/06/2022 | 
 
+## 8.3 Gestione degli Sprint
+
+Dato l'utilizzo del framework Scrum, gli Sprint si compongono di quattro fasi principali: analisi, progettazione, implementazione e testing
+
+Alla fine dello Sprint 1 e dello Sprint 2, abbiamo intrapreso una fase di manutenzione evolutiva del codice.
+
+
+### Sprint 0
+
+Lo *Sprint Goal* era quello di mostrare familiarità con [Git](https://git-scm.com/), [Github](https://github.com/) e il processo Agile. 
+
+- Per questo Sprint si è deciso, al seguito della data inizio dello Sprint, di incontrarsi in uno Scrum Meeting, della durata di circa 30 minuti, per svolgere la **fase di analisi**, ovvero assegnare i task e stabilire le modalità di lavoro successive. 
+<br> In particolare si è deciso di prevedere una prima fase di lavoro on-site, in modo che tutti imparassero a padroneggiare gli strumenti necessari e per testare il nostro modo di lavorare individualmente in un contesto collaborativo. Questa scelta si è rivelata efficace sul lungo termine, dato che non sono sorte problematiche di alcun tipo nello Sprint stesso e in quelli successivi.
+
+- In questo Sprint, i task riguardavano per lo più documentazione in modo da permettere ai componenti del team di prendere confidenza con gli strumenti e i processi senza aggiungere complicazione dovute all'analisi, alla progettazione e alla stesura di codice. Data quindi la natura delle attività, la **fase di progettazione** non è stata inclusa.
+
+- La **fase di implementazione** ha previsto la stesura del codice di condotta per definire convenzioni interne, la modifica della [*Guida per lo studente.md*](Guida%20per%20lo%20studente.md), del [*README.md*](../README.md) ed è stato creato un file che conteneva la biografia dell'[*ispiratore del gruppo*](ISPIRATORE.md).
+
+- La **fase di testing** ha previsto la revisione di tali documenti per correggere eventuali errori sfuggiti nelle Review, e di migliorie applicabili alla repository, come ad esempio la correzione della struttura nel README oppure l'eliminazione delle immagini inutilizzate dalla Guida per lo Studente.md.
+
+Il primo approccio all'utilizzo di Github, di alcuni componenti del team, è stato facilitato dalla precedente esperienza di utilizzo di altri componenti.
+
 
 
 # 9. Analisi retrospettiva
