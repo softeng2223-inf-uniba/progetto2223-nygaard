@@ -10,7 +10,7 @@
 - [Manuale Utente](#7-manuale-utente)
 - [Analisi retrospettiva](#9-analisi-retrospettiva)
   - [Sprint 0](#91-sprint-0-dimostrare-familiarità-con-github-e-il-processo-agile)
-
+  - [Sprint 1](#92-sprint-1-preparare-il-gioco)
 # 1. Introduzione
 Nella seguente documentazione verrà descritta la relazione tecnica del progetto di **Ingegneria del Software Anno Accademico 2022-2023**.
 
