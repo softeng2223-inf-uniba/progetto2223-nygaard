@@ -105,4 +105,17 @@ class ParamControlTest {
         "E' stato erroneamente settato il codice di terminazione");
   }
 
+  @Test
+  @DisplayName("Avvio del programma con parametro --help, verifica che non venga cambiato lo stato di shutDown")
+  void testParamControlWithArgumentHelp() {
+    GameManager.setArgs(new String[]{"--help"});
+    try {
+      initUI.invoke(null);
+    } catch (Exception e) {
+      fail("Impossibile invocare il metodo initUI");
+    }
+    assertEquals(UShutdown.NOT_TERMINATION_CODE, GeneralControl.getShutDown(),
+        "E' stato erroneamente settato il codice di terminazione");
+  }
+
 }
