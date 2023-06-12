@@ -10,7 +10,7 @@
 - [Manuale Utente](#7-manuale-utente)
 - [Analisi retrospettiva](#9-analisi-retrospettiva)
   - [Sprint 0](#91-sprint-0-dimostrare-familiarità-con-github-e-il-processo-agile)
-
+  - [Sprint 1](#92-sprint-1-preparare-il-gioco)
 # 1. Introduzione
 Nella seguente documentazione verrà descritta la relazione tecnica del progetto di **Ingegneria del Software Anno Accademico 2022-2023**.
 
@@ -431,9 +431,9 @@ tempo, ad ogni ***Sprint Feedback***, seguendo questo *schema* strutturato:
 
 ## 9.1 **Sprint 0**: *dimostrare familiarità con GitHub e il processo agile*
 
-Il seguente *diagramma* è relativo agli **stati emotivi** e alle ragioni che li hanno scatenati provati durante l'esecuzione dello Sprint 0:
+Il seguente *diagramma* è relativo agli **stati emotivi** e alle ragioni che li hanno scatenati, provati durante l'esecuzione dello Sprint 0:
 
-![ArrabbiatoTristeFelice](img/AnalisiRetrospettivaSprint0/ArrabbiatoTristeFelice.jpg)
+![ArrabbiatoTristeFelice](img/AnalisiRetrospettivaSprint0/ArrabbiatoTristeFelice0.jpg)
 
 Il seguente *diagramma*, definito **Diagramma di affinità** raggruppa gli stati d'animo, precedentemente elencati, rispetto ai seguenti ambiti di lavoro:
 
@@ -441,10 +441,32 @@ Il seguente *diagramma*, definito **Diagramma di affinità** raggruppa gli stati
 - *strumenti*
 - *problemi individuali*
 
-![DiagrammaDiAffinità](img/AnalisiRetrospettivaSprint0/DiagrammaDiAffinita'.png)
+![DiagrammaDiAffinità](img/AnalisiRetrospettivaSprint0/DiagrammaDiAffinita'0.png)
 
 Infine consideriamo il *diagramma* relativo a ciò che vorremmo **mantenere**, **smettere** o **incomiciare** a fare:
 
-![AvviaArrestaContinua](img/AnalisiRetrospettivaSprint0/AvviaArrestaContinua.jpg)
+![AvviaArrestaContinua](img/AnalisiRetrospettivaSprint0/AvviaArrestaContinua0.jpg)
 
 <br/>
+
+## 9.2 **Sprint 1**: *preparare il gioco*
+
+Il seguente *diagramma* è relativo agli **stati emotivi** e alle ragioni che li hanno scatenati, provati durante l'esecuzione dello Sprint 1:
+
+![Arrabbiato Triste Felice](img/AnalisiRetrospettivaSprint1/ArrabbiatoTristeFelice1.png)
+
+Il seguente *diagramma*, definito **Diagramma di affinità** raggruppa gli stati d'animo, precedentemente elencati, rispetto ai seguenti ambiti di lavoro:
+
+- *collaborazione*
+- *strumenti*
+- *problemi individuali*
+
+![Diagramma di affinità](img/AnalisiRetrospettivaSprint1/DiagrammaDiAffinita'1.png)
+
+Infine consideriamo il *diagramma* relativo a ciò che vorremmo **mantenere**, **smettere** o **incomiciare** a fare:
+
+![AvviaArrestaContinua](img/AnalisiRetrospettivaSprint1/AvviaArrestaContinua1.png)
+
+
+
+
