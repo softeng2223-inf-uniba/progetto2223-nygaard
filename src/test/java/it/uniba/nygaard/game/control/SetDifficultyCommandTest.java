@@ -134,4 +134,18 @@ class SetDifficultyCommandTest {
     assertEquals(expectedOutput, outContent.toString(StandardCharsets.UTF_8),
         "Non è stato stampato il messaggio di errore corretto");
   }
+
+  @Test
+  @DisplayName("Reimposta la stessa difficoltà")
+  void testSetDifficultyCommandSameDifficulty() {
+    String[] args = new String[]{"/medio"};
+    try {
+      execute.invoke(setDifficultyCommand, (Object) args);
+    } catch (IllegalAccessException | InvocationTargetException e) {
+      fail("Impossibile invocare il metodo executeCommand");
+    }
+    String expectedOutput = UColor.RED + "Hai già impostato questa difficoltà" + UColor.RESET + System.lineSeparator();
+    assertEquals(expectedOutput, outContent.toString(StandardCharsets.UTF_8),
+        "Non è stato stampato il messaggio di errore corretto");
+  }
 }
