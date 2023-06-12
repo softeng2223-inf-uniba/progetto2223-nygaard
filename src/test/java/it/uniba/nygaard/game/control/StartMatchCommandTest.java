@@ -26,4 +26,19 @@ class StartMatchCommandTest {
     System.setOut(new PrintStream(outContent, true, StandardCharsets.UTF_8));
     GameManager.getMatch().setInGame(false);
   }
+
+  @Test
+  @DisplayName("/gioca con troppi argomenti")
+  void testStartMatchCommandTooManyArgs() {
+    String[] args = new String[]{"/gioca", "parametro"};
+    try {
+      execute.invoke(startMatchCommand, (Object) args);
+    } catch (IllegalAccessException | InvocationTargetException e) {
+      fail("Impossibile invocare il metodo executeCommand");
+    }
+    String expectedOutput = UColor.CYAN + "Il comando dovrebbe essere usato come segue: /gioca"
+        + UColor.RESET + System.lineSeparator();
+    assertEquals(expectedOutput, outContent.toString(StandardCharsets.UTF_8),
+        "Non è stato stampato il messaggio di errore corretto");
+  }
 }
