@@ -468,6 +468,16 @@ Per la gestione dello sviluppo dei task è stato utilizzato il [Github Flow](htt
 
 
 
+## 8.2 Roadmap degli sprint
+
+| Sprint No. | Descrizione                                           | Data Inizio | Data Fine  | Durata    | Data Feedback |
+| ---------- | ----------------------------------------------------- | ----------- | ---------- | --------- | ------------- |
+| 0          | Dimostrare familiarità con GitHub e il processo agile | 3/04/2022  | 14/04/2022 | 11 giorni | 26/04/2022    |
+| 1          | Preparare il gioco                                | 03/05/2022  | 19/05/2022 | 16 giorni | 29/05/2022    |
+| 2          | Completare il gioco, assicurando la qualità del lavoro svolto               | 30/05/2022  | 14/06/2022 | 14 giorni | 15-28/06/2022 | 
+
+
+
 # 9. Analisi retrospettiva
 
 All'interno di questa sezione, verranno riportate le ***analisi retrospettive*** fatte dal **Team**, nel corso del
