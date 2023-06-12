@@ -454,7 +454,7 @@ Il processo di sviluppo è stato strutturato seguendo un approccio [*simil-Scrum
 
 Il professore ha interpretato il ruolo di **Product Owner**. Per ogni Sprint, in aula e via [_Microsoft Teams_](https://www.microsoft.com/en-us/microsoft-teams/group-chat-software), ci sono stati comunicati i requisiti, sotto forma di *Definition of Done* e *User Story*. Il team ha provveduto a realizzare una Board per ogni Sprint e dallo Sprint 1 è stato anche realizzato il Product Backlog, per contenere le User Story degli Sprint successivi.
 
-Il professore, nel ruolo dello **Scrum Master**, ha definito un'organizzazione in stile Kanban per una Board avente 5 sezioni:
+E' stata definita un'organizzazione in stile Kanban per una Board avente 5 sezioni:
 - **To Do**: Task da risolvere;
 - **In Progress**: Task prese in carico dall'assignee;
 - **Review**: Task risolte, in fase di revisione;
@@ -464,9 +464,12 @@ Il professore, nel ruolo dello **Scrum Master**, ha definito un'organizzazione i
 La Board è stata gestita utilizzando la sezione Project messa a disposizione da Github. Tale organizzazione, per la gestione dei task, è stata imposta per lo Sprint 0 per mostrare al team un modo per dividere il lavoro e tracciare i progressi dei vari task.
 Successivamente, per le iterazioni successive, è stata concessa liberta al team di autogestirsi; avendo valutato come ottimale questa struttura, è stato deciso di mantenere lo stesso approccio utilizzato nello Sprint 0.
 
-Per la gestione dello sviluppo dei task è stato utilizzato il [_Github Flow_](https://docs.github.com/en/get-started/quickstart/github-flow): Per ogni issue, identificata progressivamente con `#n`, è stato creato un branch, identificato con `issue#n`, da parte del componente a cui è stata assegnata la issue. Una volta che il componente, ha concluso il suo lavoro, veniva sottoposto ad un minimo di 2 reviewers, attraverso una **Pull Request**, in cui si discutevano eventuali problemi e/o migliorie per portare a termine la issue. Dallo Sprint 1 per le User Story che, in fase di analisi risultavano essere quelle che avrebbero richiesto più effort, si è scelto di inserire come reviewers l'intero team, ad eccezione di chi ha sviluppato la User Story in questione. Una volta approvata la Pull Request unito al branch principale, cancellato successivamente il branch usato per la specifica issue.
+Per la gestione dello sviluppo dei task è stato utilizzato il [_Github Flow_](https://docs.github.com/en/get-started/quickstart/github-flow): Per ogni issue, identificata progressivamente con `#n`, è stato creato un branch, identificato con `issue#n`, da parte del componente a cui è stata assegnata la issue. Una volta che il componente, ha concluso 
+il suo lavoro, veniva sottoposto ad un minimo di 2 reviewers, attraverso una **Pull Request**, in cui si discutevano eventuali problemi e/o migliorie per portare a termine la issue. Dallo Sprint 1 per le User Story che, in fase di analisi risultavano essere quelle che avrebbero richiesto più effort, si è scelto di inserire come reviewers 
+l'intero team, ad eccezione di chi ha sviluppato la User Story in questione. Una volta approvata la Pull Request, il suo branch viene unito 
+al branch principale  e, una volta unito, il branch della Pull Request viene cancellato.
 
-Ad ogni Sprint, svolto all'intero del progetto, è stato dedicato una **Milestone** ed un **Project** dove, all'intero di ogni Project, sono state le issue da svolgere per lo Sprint corrente.
+Ad ogni Sprint, svolto all'interno del progetto, è stato dedicato una **Milestone** ed un **Project** dove, all'interno di ogni Project, sono state insertite le issue da svolgere per lo Sprint corrente.
 In questo modo, è stato possibile avere un quadro generale dei task dei progressi fatto dal team, tenendo così traccia di quali erano le issue da iniziare, quali in corso, quali in revisione e quali pronte alla revisione dello Scrum Master.
 
 Ogni qualvolta una issue veniva conclusa, i progressi di completamento della Milestone venivano aggiornati e, il suo completamento, significava il completamento delle issue assegnate per lo Sprint corrente.
