@@ -40,4 +40,24 @@ class ShipTest {
     assertTrue(ship.outOfMap(grid), "Nave verticale fuori dalle righe non rilevata");
   }
 
+  @RepeatedTest(value = UShip.MAX_SHIP, name = "{displayName}: Test {currentRepetition} di {totalRepetitions}")
+  @DisplayName("Nave orizzontale nella griglia")
+  void testInMapHorizontal() {
+    ship.setDirection(UShip.HORIZONTAL);
+    coord.setRow(rnd.nextInt(UGrid.STANDARD_GRID_SIZE) + 1);
+    coord.setColumn((char) (rnd.nextInt(UGrid.STANDARD_GRID_SIZE - ship.getHp()) + UGrid.MIN_COLUMN));
+    ship.setCoord(coord);
+    assertFalse(ship.outOfMap(grid), "Nave orizzontale nella griglia non rilevata");
+  }
+
+  @RepeatedTest(value = UShip.MAX_SHIP, name = "{displayName}: Test {currentRepetition} di {totalRepetitions}")
+  @DisplayName("Nave verticale nella griglia")
+  void testInMapVertical() {
+    ship.setDirection(UShip.VERTICAL);
+    coord.setRow(rnd.nextInt(UGrid.STANDARD_GRID_SIZE - ship.getHp()) + 1);
+    coord.setColumn((char) (rnd.nextInt(UGrid.STANDARD_GRID_SIZE) + UGrid.MIN_COLUMN));
+    ship.setCoord(coord);
+    assertFalse(ship.outOfMap(grid), "Nave verticale nella griglia non rilevata");
+  }
+
 }
