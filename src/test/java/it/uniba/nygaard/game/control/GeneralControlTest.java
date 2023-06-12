@@ -30,4 +30,16 @@ class GeneralControlTest {
     System.setOut(new PrintStream(outContent, true, StandardCharsets.UTF_8));
   }
 
+  @Test
+  @DisplayName("Controlla dell'esistenza dell'HashMap dei comandi")
+  void testAvailableCommand() {
+    Object r = null;
+    try {
+      r = initCommands.invoke(null);
+    } catch (IllegalAccessException | InvocationTargetException e) {
+      fail("Impossibile invocare il metodo initCommands");
+    }
+    assertNotNull(r, "La lista dei comandi non è stata inizializzata correttamente");
+  }
+
 }
