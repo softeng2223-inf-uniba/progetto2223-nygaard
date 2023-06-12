@@ -44,4 +44,32 @@ class MatchTest {
     assertTrue(match.initializeShips(UShip.MIN_SHIP), "Le navi non sono state piazzate correttamente");
   }
 
+  @Test
+  @DisplayName("Colpo fuori dalle righe della griglia")
+  void testHitRowOutOfBound() {
+    assertThrows(IndexOutOfBoundsException.class, () -> match.hit(UGrid.EXTRA_LARGE_GRID_SIZE, 0),
+        "Effettuato colpo fuori dalle righe della griglia");
+  }
+
+  @Test
+  @DisplayName("Colpo fuori dalle colonne della griglia")
+  void testHitColumnOutOfBound() {
+    assertThrows(IndexOutOfBoundsException.class, () -> match.hit(0, UGrid.EXTRA_LARGE_GRID_SIZE),
+        "Effettuato colpo fuori dalle colonne della griglia");
+  }
+
+  @Test
+  @DisplayName("Colpo con una riga negativa")
+  void testHitNegativeRow() {
+    assertThrows(IndexOutOfBoundsException.class, () -> match.hit(-1, 0),
+        "Effettuato colpo con una riga negativa");
+  }
+
+  @Test
+  @DisplayName("Colpo con una colonna negativa")
+  void testHitNegativeColumn() {
+    assertThrows(IndexOutOfBoundsException.class, () -> match.hit(0, -1),
+        "Effettuato colpo con una colonna negativa");
+  }
+
 }
