@@ -29,4 +29,19 @@ class HitCommandTest {
     GeneralControl.setShutDown(UShutdown.NOT_TERMINATION_CODE);
     GameManager.getMatch().setInGame(true);
   }
+
+  @Test
+  @DisplayName("Colpo con troppi argomenti")
+  void testHitCommandWithTooManyArgs() {
+    String[] args = new String[]{"B-4", "altro parametro"};
+    try {
+      execute.invoke(hitCommand, (Object) args);
+    } catch (IllegalAccessException | InvocationTargetException e) {
+      fail("Impossibile invocare il metodo executeCommand");
+    }
+    String expectedOutput = UColor.CYAN + "Il comando dovrebbe essere usato come segue: "
+        + "<lettera>-<numero>" + UColor.RESET + System.lineSeparator();
+    assertEquals(expectedOutput, outContent.toString(StandardCharsets.UTF_8),
+        "Non è stato stampato il messaggio di errore corretto");
+  }
 }
