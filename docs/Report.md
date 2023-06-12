@@ -295,7 +295,7 @@ Di seguito, i ***Requisiti Funzionali*** del progetto, facenti parte della *User
 
 <br/>
 
-- ***RF13**: effettuare un colpo*
+- *[**RF13**](https://github.com/softeng2223-inf-uniba/progetto2223-nygaard/issues/82): effettuare un colpo*
 
   Come giocatore voglio effettuare un tentativo per colpire una nave
 
@@ -307,7 +307,7 @@ Di seguito, i ***Requisiti Funzionali*** del progetto, facenti parte della *User
 
     - "colpito" se sulla cella è posizionata una nave; 
 
-    - colpito e affondato" se sulla cella è posizionata una nave ed è l’ultima cella non colpita della nave. 
+    - "colpito e affondato" se sulla cella è posizionata una nave ed è l’ultima cella non colpita della nave. 
   
   - Qualunque sia l’esito del tentativo, l’applicazione mostra la griglia con le navi colpite parzialmente o affondate, il numero di tentativi già effettuati, e il tempo trascorso.  
 
