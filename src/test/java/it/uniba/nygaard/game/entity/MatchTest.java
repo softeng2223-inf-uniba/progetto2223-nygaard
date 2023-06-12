@@ -72,4 +72,19 @@ class MatchTest {
         "Effettuato colpo con una colonna negativa");
   }
 
+  @Test
+  @DisplayName("Colpo su acqua, verifica l'esito del colpo")
+  void testHitWater() {
+    assumeTrue(match.initializeShips(UShip.MIN_SHIP));
+    for (int i = 0; i < UGrid.STANDARD_GRID_SIZE; i++) {
+      for (int j = 0; j < UGrid.STANDARD_GRID_SIZE; j++) {
+        if (defenseGrid.getCellCharacter(i, j) == UGrid.SEA_CHARACTER) {
+          assertEquals(UResult.WATER_CODE, match.hit(i, j), "Colpo in acqua non rilevato");
+          i = UGrid.STANDARD_GRID_SIZE;
+          j = UGrid.STANDARD_GRID_SIZE;
+        }
+      }
+    }
+  }
+
 }
