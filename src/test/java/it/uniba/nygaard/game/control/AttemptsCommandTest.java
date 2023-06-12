@@ -42,4 +42,19 @@ class AttemptsCommandTest {
     assertEquals(expectedOutput, outContent.toString(StandardCharsets.UTF_8),
         "Non è stato stampato il messaggio di errore corretto");
   }
+
+  @Test
+  @DisplayName("/tentativi con troppi argomenti")
+  void testAttemptsCommandWithTooManyArgument() {
+    String[] args = new String[]{"/tentativi", "stringa", "stringa"};
+    try {
+      execute.invoke(attemptsCommand, (Object) args);
+    } catch (IllegalAccessException | InvocationTargetException e) {
+      fail("Impossibile invocare il metodo executeCommand");
+    }
+    String expectedOutput = UColor.CYAN + "Il comando dovrebbe essere usato come segue: "
+        + "/tentativi <numero tentativi>" + UColor.RESET + System.lineSeparator();
+    assertEquals(expectedOutput, outContent.toString(StandardCharsets.UTF_8),
+        "Non è stato stampato il messaggio di errore corretto");
+  }
 }
