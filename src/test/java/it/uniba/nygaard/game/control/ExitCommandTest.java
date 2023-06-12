@@ -60,4 +60,21 @@ class ExitCommandTest {
     assertTrue(outContent.toString(StandardCharsets.UTF_8).contains(expectedOutput),
         "Non è stata stampata la frase prevista per l'operazione annullata");
   }
+
+  @Test
+  @DisplayName("/esci confermato, verifica l'output")
+  void testExitCommandAffirmativeAnswerOutput() {
+    ByteArrayInputStream in = new ByteArrayInputStream("y\n".getBytes(StandardCharsets.UTF_8));
+    System.setIn(in);
+    String[] args = new String[]{"/esci"};
+    try {
+      execute.invoke(exitCommand, (Object) args);
+    } catch (IllegalAccessException | InvocationTargetException e) {
+      fail("Impossibile invocare il metodo executeCommand");
+    }
+    String expectedOutput = UColor.YELLOW + UColor.BOLD + "GRAZIE PER AVER GIOCATO!" + UColor.RESET
+        + System.lineSeparator();
+    assertTrue(outContent.toString(StandardCharsets.UTF_8).contains(expectedOutput),
+        "Non è stata stampata la frase prevista per l'uscita dal gioco");
+  }
 }
