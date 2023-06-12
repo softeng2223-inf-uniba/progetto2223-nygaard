@@ -105,4 +105,20 @@ class MatchTest {
     }
   }
 
+  @Test
+  @DisplayName("Colpo doppio sulla stessa cella di una nave, verifica l'esito del colpo")
+  void testDoubleHitShip() {
+    assumeTrue(match.initializeShips(UShip.MIN_SHIP));
+    for (int i = 0; i < UGrid.STANDARD_GRID_SIZE; i++) {
+      for (int j = 0; j < UGrid.STANDARD_GRID_SIZE; j++) {
+        if (defenseGrid.getCellCharacter(i, j) == UGrid.SHIP_CHARACTER) {
+          match.hit(i, j);
+          assertEquals(UResult.WATER_CODE, match.hit(i, j), "Tentativo fallito per colpo doppio non rilevato");
+          i = UGrid.STANDARD_GRID_SIZE;
+          j = UGrid.STANDARD_GRID_SIZE;
+        }
+      }
+    }
+  }
+
 }
