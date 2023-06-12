@@ -76,4 +76,21 @@ class SetGridSizeCommandTest {
     assertEquals(expectedOutput, outContent.toString(StandardCharsets.UTF_8),
         "Non è stato stampato il messaggio di errore corretto");
   }
+
+  @Test
+  @DisplayName("Cambio dimensione griglia non confermato")
+  void testSetGridSizeCommandNegativeAnswer() {
+    ByteArrayInputStream in = new ByteArrayInputStream("n\n".getBytes(StandardCharsets.UTF_8));
+    System.setIn(in);
+    String[] args = new String[]{"/large"};
+    try {
+      execute.invoke(setGridSizeCommand, (Object) args);
+    } catch (IllegalAccessException | InvocationTargetException e) {
+      fail("Impossibile invocare il metodo executeCommand");
+    }
+    String expectedOutput = UColor.RED + "Cambio dimensioni della griglia annullato"
+        + UColor.RESET + System.lineSeparator();
+    assertTrue(outContent.toString(StandardCharsets.UTF_8).contains(expectedOutput),
+        "Non è stato stampato il messaggio di errore corretto");
+  }
 }
