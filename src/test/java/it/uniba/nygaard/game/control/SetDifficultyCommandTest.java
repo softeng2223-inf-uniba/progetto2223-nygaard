@@ -241,4 +241,9 @@ class SetDifficultyCommandTest {
     assertEquals(UDifficulty.EASY_ATTEMPTS, GameManager.getMatch().getAttempts(UDifficulty.DIFFICULTY_MEDIUM),
         "Il numero di tentativi non è stato impostato correttamente");
   }
+
+  @AfterEach
+  void tearDown() {
+    System.setIn(inBackup);
+  }
 }
