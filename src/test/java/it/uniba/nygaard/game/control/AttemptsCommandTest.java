@@ -143,4 +143,21 @@ class AttemptsCommandTest {
     assertEquals(expectedOutput, outContent.toString(StandardCharsets.UTF_8),
         "Non è stato stampato il messaggio di operazione andata a buon fine");
   }
+
+  @Test
+  @DisplayName("/tentativi corretto, verifica che i tentativi di tutte le difficoltà siano stati modificati")
+  void testAttemptsCommandModifiedAttempts() {
+    String[] args = new String[]{"/tentativi", String.valueOf(UDifficulty.EASY_ATTEMPTS)};
+    try {
+      execute.invoke(attemptsCommand, (Object) args);
+    } catch (IllegalAccessException | InvocationTargetException e) {
+      fail("Impossibile invocare il metodo executeCommand");
+    }
+    int[] actualAttempts = {GameManager.getMatch().getAttempts(UDifficulty.DIFFICULTY_EASY),
+        GameManager.getMatch().getAttempts(UDifficulty.DIFFICULTY_MEDIUM),
+        GameManager.getMatch().getAttempts(UDifficulty.DIFFICULTY_HARD)};
+    int[] expectedAttempts = {UDifficulty.EASY_ATTEMPTS, UDifficulty.EASY_ATTEMPTS, UDifficulty.EASY_ATTEMPTS};
+    assertArrayEquals(expectedAttempts, actualAttempts,
+        "Il numero di tentativi non è stato modificato correttamente");
+  }
 }
