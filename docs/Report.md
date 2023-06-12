@@ -239,7 +239,7 @@ Di seguito, i ***Requisiti Funzionali*** del progetto, facenti parte della *User
 
 <br/>
 
-- *[**RF9**](https://github.com/softeng2223-inf-uniba/progetto2223-nygaard/issues/79): mostrare i tentativi*
+- *[**RF9**](https://github.com/softeng2223-inf-uniba/progetto2223-nygaard/issues/92): mostrare i tentativi*
 
   Come giocatore voglio mostrare il numero massimo di tentativi falliti
 
