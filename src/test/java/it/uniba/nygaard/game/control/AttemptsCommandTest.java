@@ -129,4 +129,18 @@ class AttemptsCommandTest {
     assertEquals(expectedOutput, outContent.toString(StandardCharsets.UTF_8),
         "Non è stato stampato il messaggio di errore corretto");
   }
+
+  @Test
+  @DisplayName("/tentativi corretto, verifica l'output")
+  void testAttemptsCommandCorrectOutput() {
+    String[] args = new String[]{"/tentativi", "10"};
+    try {
+      execute.invoke(attemptsCommand, (Object) args);
+    } catch (IllegalAccessException | InvocationTargetException e) {
+      fail("Impossibile invocare il metodo executeCommand");
+    }
+    String expectedOutput = UColor.GREEN + "OK" + UColor.RESET + System.lineSeparator();
+    assertEquals(expectedOutput, outContent.toString(StandardCharsets.UTF_8),
+        "Non è stato stampato il messaggio di operazione andata a buon fine");
+  }
 }
