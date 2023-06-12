@@ -121,4 +121,23 @@ class MatchTest {
     }
   }
 
+  @Test
+  @DisplayName("Colpo doppio sulla stessa cella di una nave, verifica l'incremento dei tentativi falliti")
+  void testHitFailedDouble() {
+    assumeTrue(match.initializeShips(UShip.MIN_SHIP));
+    for (int i = 0; i < UGrid.STANDARD_GRID_SIZE; i++) {
+      for (int j = 0; j < UGrid.STANDARD_GRID_SIZE; j++) {
+        if (defenseGrid.getCellCharacter(i, j) == UGrid.SHIP_CHARACTER) {
+          int previous = match.getFailedAttempts();
+          match.hit(i, j);
+          match.hit(i, j);
+          assertEquals(previous + 1, match.getFailedAttempts(),
+              "Tentativi falliti non aggiornati correttamente");
+          i = UGrid.STANDARD_GRID_SIZE;
+          j = UGrid.STANDARD_GRID_SIZE;
+        }
+      }
+    }
+  }
+
 }
