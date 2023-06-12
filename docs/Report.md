@@ -90,10 +90,14 @@ Il progetto svolto, consiste nella realizzazione della **Battaglia Navale**, sot
 In questa realizzazione, il giocatore si scontrerà contro il proprio computer che, ad inizio partita, genererà casualmente le posizioni delle navi. 
 Spetterà quindi al giocatore trovarle tutte e affondarle prima di esaurire il numero massimo di tentaviti falliti dati.
 
-Il numero massimo di tentativi falliti consentiti, dipende dalla difficoltà scelta:
+Il numero massimo di tentativi falliti consentiti all'avvio dell'applicazione presenta i seguenti valori, in base alla difficoltà:
 * **Facile**: Massimo 50;
 * **Medio**: Massimo 30;
 * **Difficile**: Massimo 10;
+
+La difficoltà di default è **Medio**. Sarà comunque possibile personalizzare il numero di tentativi utilizzando gli appositi comandi.
+
+All'avvio dell'applicazione di default verrà usata una griglia 10x10 ma sarà possibile in seguito selezionare altre opzioni di griglia attraverso specifici comandi.
 
 # 2. Modello Di Dominio
 
@@ -115,7 +119,7 @@ con **StarUML**.* (https://staruml.io/)
 
 Di seguito, i ***Requisiti Funzionali*** del progetto, facenti parte della *User Story*.
 
-- ***RF1**: mostrare l'help con elenco comandi e regole del gioco*
+- *[**RF1**](https://github.com/softeng2223-inf-uniba/progetto2223-nygaard/issues/25): mostrare l'help con elenco comandi e regole del gioco*
 
   Come giocatore voglio mostrare l'help con elenco comandi.
 
@@ -134,7 +138,7 @@ Di seguito, i ***Requisiti Funzionali*** del progetto, facenti parte della *User
 
 <br/>
 
-- ***RF2**: chiudere il gioco*
+- *[**RF2**](https://github.com/softeng2223-inf-uniba/progetto2223-nygaard/issues/26): chiudere il gioco*
 
   Come giocatore voglio chiudere il gioco.
 
@@ -148,7 +152,7 @@ Di seguito, i ***Requisiti Funzionali*** del progetto, facenti parte della *User
 
 <br/>
 
-- ***RF3**: impostare il livello di gioco per variare il numero massimo di tentativi falliti*
+- *[**RF3**](https://github.com/softeng2223-inf-uniba/progetto2223-nygaard/issues/27): impostare il livello di gioco per variare il numero massimo di tentativi falliti*
 
   Come giocatore voglio impostare il livello di gioco per variare il numero massimo di tentativi sbagliati.
 
@@ -167,7 +171,7 @@ Di seguito, i ***Requisiti Funzionali*** del progetto, facenti parte della *User
 
 <br/>
 
-- ***RF4**: mostrare i tipi di nave e il numero*
+- *[**RF4**](https://github.com/softeng2223-inf-uniba/progetto2223-nygaard/issues/29): mostrare i tipi di nave e il numero*
 
   Come giocatore voglio mostrare i tipi di nave e il numero
   
@@ -182,7 +186,7 @@ Di seguito, i ***Requisiti Funzionali*** del progetto, facenti parte della *User
 
 <br/>
 
-- ***RF5**: iniziare una nuova partita*
+- *[**RF5**](https://github.com/softeng2223-inf-uniba/progetto2223-nygaard/issues/30): iniziare una nuova partita*
 
   Come giocatore voglio iniziare una nuova partita
 
@@ -194,7 +198,7 @@ Di seguito, i ***Requisiti Funzionali*** del progetto, facenti parte della *User
 
 <br/>
 
-- ***RF6**: svelare la griglia con le navi posizionate*
+- *[**RF6**](https://github.com/softeng2223-inf-uniba/progetto2223-nygaard/issues/31): svelare la griglia con le navi posizionate*
 
   Come giocatore voglio svelare la griglia con le navi posizionate
 
@@ -207,7 +211,7 @@ Di seguito, i ***Requisiti Funzionali*** del progetto, facenti parte della *User
 <br/>
 
 
-- ***RF7**: impostare il numero di tentativi per difficoltà*
+- *[**RF7**](https://github.com/softeng2223-inf-uniba/progetto2223-nygaard/issues/85): impostare il numero di tentativi per difficoltà*
 
   Come giocatore voglio impostare il numero massimo di tentativi falliti per livello di gioco 
   
@@ -227,7 +231,7 @@ Di seguito, i ***Requisiti Funzionali*** del progetto, facenti parte della *User
 
 <br/>
 
-- ***RF8**: impostare direttamente il numero di tentativi*
+- *[**RF8**](https://github.com/softeng2223-inf-uniba/progetto2223-nygaard/issues/87): impostare direttamente il numero di tentativi*
 
   Come giocatore voglio impostare direttamente il numero massimo di tentativi che si possono fallire
 
@@ -239,7 +243,7 @@ Di seguito, i ***Requisiti Funzionali*** del progetto, facenti parte della *User
 
 <br/>
 
-- ***RF9**: mostrare i tentativi*
+- *[**RF9**](https://github.com/softeng2223-inf-uniba/progetto2223-nygaard/issues/92): mostrare i tentativi*
 
   Come giocatore voglio mostrare il numero massimo di tentativi falliti
 
@@ -247,11 +251,11 @@ Di seguito, i ***Requisiti Funzionali*** del progetto, facenti parte della *User
 
   Al comando ```/mostratentativi``` (quando non si è in partita)
 
-  - l’applicazione risponde visualizzando il numero di tentativi già effettuati, il numero di tentativi falliti e il numero massimo di tentativi falliti  
+  - l’applicazione risponde visualizzando il numero massimo di tentativi falliti  
 
 <br/>
 
-- ***RF10**: impostare la dimensione della griglia*
+- *[**RF10**](https://github.com/softeng2223-inf-uniba/progetto2223-nygaard/issues/83): impostare la dimensione della griglia*
 
   Come giocatore voglio impostare la taglia della griglia
 
@@ -271,7 +275,7 @@ Di seguito, i ***Requisiti Funzionali*** del progetto, facenti parte della *User
 
 <br/>
 
-- ***RF11**: impostare il tempo di gioco*
+- *[**RF11**](https://github.com/softeng2223-inf-uniba/progetto2223-nygaard/issues/80): impostare il tempo di gioco*
 
   Come giocatore voglio impostare il tempo di gioco
 
@@ -283,7 +287,7 @@ Di seguito, i ***Requisiti Funzionali*** del progetto, facenti parte della *User
 
 <br/>
 
-- ***RF12**: mostrare il tempo di gioco*
+- *[**RF12**](https://github.com/softeng2223-inf-uniba/progetto2223-nygaard/issues/81): mostrare il tempo di gioco*
 
   Come giocatore voglio mostrare il tempo di gioco
 
@@ -295,7 +299,7 @@ Di seguito, i ***Requisiti Funzionali*** del progetto, facenti parte della *User
 
 <br/>
 
-- ***RF13**: effettuare un colpo*
+- *[**RF13**](https://github.com/softeng2223-inf-uniba/progetto2223-nygaard/issues/82): effettuare un colpo*
 
   Come giocatore voglio effettuare un tentativo per colpire una nave
 
@@ -307,7 +311,7 @@ Di seguito, i ***Requisiti Funzionali*** del progetto, facenti parte della *User
 
     - "colpito" se sulla cella è posizionata una nave; 
 
-    - colpito e affondato" se sulla cella è posizionata una nave ed è l’ultima cella non colpita della nave. 
+    - "colpito e affondato" se sulla cella è posizionata una nave ed è l’ultima cella non colpita della nave. 
   
   - Qualunque sia l’esito del tentativo, l’applicazione mostra la griglia con le navi colpite parzialmente o affondate, il numero di tentativi già effettuati, e il tempo trascorso.  
 
@@ -317,7 +321,7 @@ Di seguito, i ***Requisiti Funzionali*** del progetto, facenti parte della *User
 
 <br/>
 
-- ***RF14**: mostrare la griglia di conoscenza*
+- *[**RF14**](https://github.com/softeng2223-inf-uniba/progetto2223-nygaard/issues/93): mostrare la griglia di conoscenza*
 
   Come giocatore voglio mostrare la griglia con le navi colpite e affondate
 
@@ -329,7 +333,7 @@ Di seguito, i ***Requisiti Funzionali*** del progetto, facenti parte della *User
 
 <br/>
 
-- ***RF15**: mostrare i tentativi effettuati*
+- *[**RF15**](https://github.com/softeng2223-inf-uniba/progetto2223-nygaard/issues/79): mostrare i tentativi effettuati*
 
   Come giocatore voglio mostrare i tentativi effettuati
 
@@ -341,7 +345,7 @@ Di seguito, i ***Requisiti Funzionali*** del progetto, facenti parte della *User
 
 <br/>
 
-- ***RF16**: abbandonare la partita*
+- *[**RF16**](https://github.com/softeng2223-inf-uniba/progetto2223-nygaard/issues/88): abbandonare la partita*
 
   Come giocatore voglio abbandonare la partita
 
@@ -354,6 +358,18 @@ Di seguito, i ***Requisiti Funzionali*** del progetto, facenti parte della *User
     - se la conferma è positiva, l’applicazione risponde visualizzando sulla griglia la posizione di tutte le navi e si predispone a ricevere nuovi comandi
 
     - se la conferma è negativa, l'applicazione si predispone a ricevere nuovi tentativi o comandi
+
+<br/>
+
+- *[**RF17**](https://github.com/softeng2223-inf-uniba/progetto2223-nygaard/issues/28): mostrare il livello attuale*
+
+  Come giocatore voglio mostrare il livello di gioco e il numero massimo di tentativi falliti
+
+  **Criteri di accettazione**
+
+  Al comando ```/mostralivello```
+  
+  - l’applicazione risponde visualizzando il livello di gioco e il numero massimo di tentativi falliti
 
 </br>
 
@@ -434,7 +450,7 @@ Per avere informazioni su tutti i comandi disponibili nel gioco, utilizzare il c
 
 ![esecuzione_help.png](img%2FManualeUtente%2Fesecuzione_help.png)
 
-Per iniziare una nuova partita, impostare la difficoltà utilizzando uno dei comandi tra ***/facile***, ***/medio*** o ***/difficile***, ed eseguire il comando ***/gioca***.
+Per iniziare una nuova partita eseguire il comando ***/gioca***.
 
 ### Comandi in gioco
 
