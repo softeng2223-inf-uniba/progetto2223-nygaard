@@ -191,4 +191,10 @@ class MatchTest {
     }
   }
 
+  @Test
+  @DisplayName("Controlla che una partita non vinta non sia rilevata come vittoria")
+  void testNotWin() {
+    assertFalse(match.win(), "Vittoria rilevata erroneamente");
+  }
+
 }
