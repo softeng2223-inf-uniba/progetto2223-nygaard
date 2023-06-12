@@ -182,7 +182,7 @@ Di seguito, i ***Requisiti Funzionali*** del progetto, facenti parte della *User
 
 <br/>
 
-- ***RF5**: iniziare una nuova partita*
+- *[**RF5**](https://github.com/softeng2223-inf-uniba/progetto2223-nygaard/issues/30): iniziare una nuova partita*
 
   Come giocatore voglio iniziare una nuova partita
 
