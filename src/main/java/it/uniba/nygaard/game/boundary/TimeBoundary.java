@@ -24,14 +24,13 @@ public final class TimeBoundary {
   }
 
   /**
-   * <h3> errorTime </h3>
+   * <h3> invalidChoice </h3>
    * <p>
    * Stampa a video il messaggio di errore relativo a un tempo di gioco non valido.
    * </p>
    */
-  public static void errorTime() {
-    System.out.println(UColor.RED + "Errore: il tempo inserito non è valido.\nInserire un intero positivo"
-        + " rappresentante i minuti di gioco" + UColor.RESET);
+  public static void invalidChoice() {
+    System.out.println(UColor.RED + "Tempo inserito non valido" + UColor.RESET);
   }
 
   /**
@@ -52,7 +51,7 @@ public final class TimeBoundary {
    * </p>
    */
   public static void alreadyInGame() {
-    System.out.println(UColor.RED + "Non puoi cambiare il tempo di gioco se sei in partita" + UColor.RESET);
+    System.out.println(UColor.RED + "Non puoi cambiare il tempo di gioco durante una partita" + UColor.RESET);
   }
 
   /**

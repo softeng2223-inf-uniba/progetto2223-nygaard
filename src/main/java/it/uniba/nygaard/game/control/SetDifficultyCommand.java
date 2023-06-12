@@ -1,5 +1,6 @@
 package it.uniba.nygaard.game.control;
 
+import it.uniba.nygaard.game.boundary.AttemptsBoundary;
 import it.uniba.nygaard.game.utility.UDifficulty;
 import it.uniba.nygaard.game.boundary.InputBoundary;
 import it.uniba.nygaard.game.boundary.SetDifficultyBoundary;
@@ -75,12 +76,12 @@ final class SetDifficultyCommand extends Command {
         try {
           GameManager.setMatchAttempts(Integer.parseInt(command[1]));
         } catch (NumberFormatException e) {
-          SetDifficultyBoundary.notValidChoice();
+          AttemptsBoundary.invalidChoice();
           return;
         }
         setNewDiffAttempts(difficultyInvolved);
       } else {
-        SetDifficultyBoundary.notValidChoice();
+        AttemptsBoundary.invalidChoice();
       }
     }
   }
@@ -103,7 +104,7 @@ final class SetDifficultyCommand extends Command {
     do {
       choice = SetDifficultyBoundary.ask(actualDifficulty);
       if (!choice.equals("n") && !choice.equals("y")) {
-        SetDifficultyBoundary.notValidChoice();
+        SetDifficultyBoundary.invalidChoice();
       }
     }
     while (!choice.equals("y") && !choice.equals("n"));

@@ -63,7 +63,7 @@ public final class LeaveMatchBoundary {
      * </p>
      */
     public static void operationCancelled() {
-        System.out.println(UColor.RED + "Operazione annullata" + UColor.RESET);
+        System.out.println(UColor.RED + "Abbandono della partita annullato" + UColor.RESET);
     }
 
 }

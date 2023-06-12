@@ -66,11 +66,11 @@ final class SetTimeCommand extends Command {
       try {
         maxTime = Integer.parseInt(command[1]);
       } catch (NumberFormatException e) {
-        TimeBoundary.errorTime();
+        TimeBoundary.invalidChoice();
         return;
       }
     } else {
-      TimeBoundary.errorTime();
+      TimeBoundary.invalidChoice();
       return;
     }
     GameManager.getMatch().setMaxTime(maxTime);
