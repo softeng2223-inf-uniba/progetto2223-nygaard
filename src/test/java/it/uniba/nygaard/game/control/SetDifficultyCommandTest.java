@@ -1,5 +1,26 @@
 package it.uniba.nygaard.game.control;
 
+import it.uniba.nygaard.game.entity.Match;
+import it.uniba.nygaard.game.utility.UColor;
+import it.uniba.nygaard.game.utility.UDifficulty;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.InputStream;
+import java.io.PrintStream;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+import java.nio.charset.StandardCharsets;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.fail;
+
 class SetDifficultyCommandTest {
 
   private static SetDifficultyCommand setDifficultyCommand;
