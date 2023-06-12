@@ -87,4 +87,22 @@ class MatchTest {
     }
   }
 
+  @Test
+  @DisplayName("Colpo su acqua, verifica l'incremento dei tentativi falliti")
+  void testHitFailedWater() {
+    assumeTrue(match.initializeShips(UShip.MIN_SHIP));
+    for (int i = 0; i < UGrid.STANDARD_GRID_SIZE; i++) {
+      for (int j = 0; j < UGrid.STANDARD_GRID_SIZE; j++) {
+        if (defenseGrid.getCellCharacter(i, j) == UGrid.SEA_CHARACTER) {
+          int previous = match.getFailedAttempts();
+          match.hit(i, j);
+          assertEquals(previous + 1, match.getFailedAttempts(),
+              "Tentativo fallito per acqua non rilevato");
+          i = UGrid.STANDARD_GRID_SIZE;
+          j = UGrid.STANDARD_GRID_SIZE;
+        }
+      }
+    }
+  }
+
 }
