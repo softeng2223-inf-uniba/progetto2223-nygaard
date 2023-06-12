@@ -149,4 +149,9 @@ class SetGridSizeCommandTest {
     assertEquals(UGrid.LARGE_GRID_SIZE, GameManager.getMatch().getGridSize(),
         "Le dimensioni della griglia non sono state impostate correttamente");
   }
+
+  @AfterEach
+  void tearDown() {
+    System.setIn(inBackup);
+  }
 }
