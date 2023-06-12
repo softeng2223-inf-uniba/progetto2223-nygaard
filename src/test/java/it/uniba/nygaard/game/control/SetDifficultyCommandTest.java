@@ -31,4 +31,19 @@ class SetDifficultyCommandTest {
     GameManager.getMatch().setDifficulty(UDifficulty.DIFFICULTY_MEDIUM);
     GameManager.getMatch().setInGame(false);
   }
+
+  @Test
+  @DisplayName("Cambio difficoltà con troppi argomenti")
+  void testSetDifficultyCommandWithTooManyArgument() {
+    String[] args = new String[]{"/facile", "stringa", "stringa"};
+    try {
+      execute.invoke(setDifficultyCommand, (Object) args);
+    } catch (IllegalAccessException | InvocationTargetException e) {
+      fail("Impossibile invocare il metodo executeCommand");
+    }
+    String expectedOutput = UColor.CYAN + "Il comando dovrebbe essere usato come segue: "
+        + "/facile [<numero tentativi>]" + UColor.RESET + System.lineSeparator();
+    assertEquals(expectedOutput, outContent.toString(StandardCharsets.UTF_8),
+        "Non è stato stampato il messaggio di errore corretto");
+  }
 }
