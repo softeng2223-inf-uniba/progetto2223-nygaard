@@ -498,6 +498,22 @@ Lo *Sprint Goal* era quello di mostrare familiarità con [Git](https://git-scm.c
 
 Il primo approccio all'utilizzo di Github, di alcuni componenti del team, è stato facilitato dalla precedente esperienza di utilizzo di altri componenti.
 
+### Sprint 1
+
+Lo *Sprint Goal* era quello di preparare il gioco.
+
+- Nella **fase di analisi** è stato indetto uno Scrum Meeting per leggere e assegnare i task che avrebbero richiesti più sforzi, in modo da garantire una suddivisione il più possibile equa della mole di lavoro prevista, considerando le conoscenze pregresse di ogni singolo componente. <br>
+In particolare, la User Story più onerosa individuata è stata la ***RF5***: *iniziare una nuova partita*, assegnata a [*Davide Cirilli*](#davide-cirilli) poichè ha esperienza con l'utilizzo di [*Algoritmi di Backtracking*](https://en.wikipedia.org/wiki/Backtracking).<br> Inoltre, si è individuata la necessità di costruire uno scheletro del codice necessario allo sviluppo delle User Story.
+
+- Nella **fase di progettazione** è stato sviluppato il [*modello di dominio*](#2-modello-di-dominio) con prospettiva concettuale. Questa fase ha richiesto una [*continua comunicazione*](https://github.com/softeng2223-inf-uniba/progetto2223-nygaard/pull/39) tra l'incaricato alla progettazione e i reviewers del lavoro, dato che il modello rappresenta una visione di insieme sull'intero progetto.
+ 
+- Nella **fase di implementazione** ogni assignee ha lavorato individualmente, coordinandosi con gli altri componenti del team per limitare il più possibile eventuali **Merge Conflicts**. 
+  
+- Nella **fase di testing**, del lavoro svolto, i componenti coinvolti (Assignee e Reviewers) hanno adoperato una metodologia sincrona e una asincrona: 
+  - In caso di *comunicazioni sincrone*, è stato utilizzato un server [*Discord*](https://discord.com/), per testare in tempo reale il software, utilizzando il debugger e avviando l'applicazione per testare tutti i possibili input, per assicurarne la robustezza. 
+  - In maniera *asincrona*, laddove non fosse possibile la presenza nei meeting, venivano sfruttati gli strumenti messi a disposizione dalle Pull Request di Github: si è rivelata molto utile la possibilità di proporre delle suggestions da parte dei reviewers direttamente nel codice permettendo all'assignee di fare direttamente i commit per apportare la miglioria proposta.
+  <br> Nel caso di [*problemi*](https://www.youtube.com/watch?v=st8tff2nxXQ) maggiori, veninva lasciato all'assignee il compito di risolverli.
+
 
 
 # 9. Analisi retrospettiva
