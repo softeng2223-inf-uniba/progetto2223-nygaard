@@ -71,4 +71,18 @@ class AttemptsCommandTest {
     assertEquals(expectedOutput, outContent.toString(StandardCharsets.UTF_8),
         "Non è stato stampato il messaggio di errore corretto");
   }
+
+  @Test
+  @DisplayName("/tentativi con un numero negativo come argomento")
+  void testAttemptsCommandWithNegativeArgument() {
+    String[] args = new String[]{"/tentativi", "-10"};
+    try {
+      execute.invoke(attemptsCommand, (Object) args);
+    } catch (IllegalAccessException | InvocationTargetException e) {
+      fail("Impossibile invocare il metodo executeCommand");
+    }
+    String expectedOutput = UColor.RED + "Numero di tentativi non valido" + UColor.RESET + System.lineSeparator();
+    assertEquals(expectedOutput, outContent.toString(StandardCharsets.UTF_8),
+        "Non è stato stampato il messaggio di errore corretto");
+  }
 }
