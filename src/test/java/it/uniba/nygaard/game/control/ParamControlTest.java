@@ -91,4 +91,18 @@ class ParamControlTest {
     assertEquals(expectedOutput, outContent.toString(StandardCharsets.UTF_8),
         "Non è stato stampato il messaggio di errore corretto");
   }
+
+  @Test
+  @DisplayName("Avvio del programma con parametro -h, verifica che non venga cambiato lo stato di shutDown")
+  void testParamControlWithArgumentH() {
+    GameManager.setArgs(new String[]{"-h"});
+    try {
+      initUI.invoke(null);
+    } catch (Exception e) {
+      fail("Impossibile invocare il metodo initUI");
+    }
+    assertEquals(UShutdown.NOT_TERMINATION_CODE, GeneralControl.getShutDown(),
+        "E' stato erroneamente settato il codice di terminazione");
+  }
+
 }
