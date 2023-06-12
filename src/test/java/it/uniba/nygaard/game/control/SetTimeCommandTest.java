@@ -57,4 +57,60 @@ class SetTimeCommandTest {
     assertEquals(expectedOutput, outContent.toString(StandardCharsets.UTF_8),
         "Non è stato stampato il messaggio di errore corretto");
   }
+
+  @Test
+  @DisplayName("/tempo con un argomento di tipo stringa")
+  void testSetTimeCommandWithStringArgument() {
+    String[] args = new String[]{"/tempo", "stringaqualsiasi"};
+    try {
+      execute.invoke(setTimeCommand, (Object) args);
+    } catch (IllegalAccessException | InvocationTargetException e) {
+      fail("Impossibile invocare il metodo executeCommand");
+    }
+    String expectedOutput = UColor.RED + "Tempo inserito non valido" + UColor.RESET + System.lineSeparator();
+    assertEquals(expectedOutput, outContent.toString(StandardCharsets.UTF_8),
+        "Non è stato stampato il messaggio di errore corretto");
+  }
+
+  @Test
+  @DisplayName("/tempo con un argomento negativo")
+  void testSetTimeCommandNegativeArgument() {
+    String[] args = new String[]{"/tempo", "-10"};
+    try {
+      execute.invoke(setTimeCommand, (Object) args);
+    } catch (IllegalAccessException | InvocationTargetException e) {
+      fail("Impossibile invocare il metodo executeCommand");
+    }
+    String expectedOutput = UColor.RED + "Tempo inserito non valido" + UColor.RESET + System.lineSeparator();
+    assertEquals(expectedOutput, outContent.toString(StandardCharsets.UTF_8),
+        "Non è stato stampato il messaggio di errore corretto");
+  }
+
+  @Test
+  @DisplayName("/tempo con un numero più grande di Integer.MAX_VALUE come argomento")
+  void testSetTimeCommandOverflowArgument() {
+    String[] args = new String[]{"/tempo", String.valueOf((long) Integer.MAX_VALUE + 1)};
+    try {
+      execute.invoke(setTimeCommand, (Object) args);
+    } catch (IllegalAccessException | InvocationTargetException e) {
+      fail("Impossibile invocare il metodo executeCommand");
+    }
+    String expectedOutput = UColor.RED + "Tempo inserito non valido" + UColor.RESET + System.lineSeparator();
+    assertEquals(expectedOutput, outContent.toString(StandardCharsets.UTF_8),
+        "Non è stato stampato il messaggio di errore corretto");
+  }
+
+  @Test
+  @DisplayName("/tempo con un argomento con zeri iniziali")
+  void testSetTimeCommandWithLeadingZeros() {
+    String[] args = new String[]{"/tempo", "001"};
+    try {
+      execute.invoke(setTimeCommand, (Object) args);
+    } catch (IllegalAccessException | InvocationTargetException e) {
+      fail("Impossibile invocare il metodo executeCommand");
+    }
+    String expectedOutput = UColor.RED + "Tempo inserito non valido" + UColor.RESET + System.lineSeparator();
+    assertEquals(expectedOutput, outContent.toString(StandardCharsets.UTF_8),
+        "Non è stato stampato il messaggio di errore corretto");
+  }
 }
