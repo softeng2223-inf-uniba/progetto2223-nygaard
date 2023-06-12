@@ -214,4 +214,18 @@ class SetDifficultyCommandTest {
     assertEquals(UDifficulty.DIFFICULTY_EASY, GameManager.getMatch().getDifficulty(),
         "La difficoltà non è stata impostata correttamente");
   }
+
+  @Test
+  @DisplayName("Cambio tentativi difficoltà, controlla stampa messaggio di operazione completata")
+  void testSetDifficultyCommandAttemptsPrint() {
+    String[] args = new String[]{"/medio", "50"};
+    try {
+      execute.invoke(setDifficultyCommand, (Object) args);
+    } catch (IllegalAccessException | InvocationTargetException e) {
+      fail("Impossibile invocare il metodo executeCommand");
+    }
+    String expectedOutput = UColor.GREEN + "OK" + UColor.RESET + System.lineSeparator();
+    assertEquals(expectedOutput, outContent.toString(StandardCharsets.UTF_8),
+        "Non è stato stampato il messaggio di operazione completata");
+  }
 }
