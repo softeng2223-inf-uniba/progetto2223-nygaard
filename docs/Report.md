@@ -555,6 +555,10 @@ a pieno le funzionalità del tools [*Code With Me*](https://www.jetbrains.com/co
 - **Software per la creazione di diagrammi**
   - [*StarUML*](https://staruml.io/), dato il precedente utilizzo di alcuni membri del team. 
 
+## 8.5 Comunicazione interna al team
+
+
+
 # 9. Analisi retrospettiva
 
 All'interno di questa sezione, verranno riportate le ***analisi retrospettive*** fatte dal **Team**, nel corso del
