@@ -341,7 +341,7 @@ Di seguito, i ***Requisiti Funzionali*** del progetto, facenti parte della *User
 
 <br/>
 
-- ***RF16**: abbandonare la partita*
+- *[**RF16**](https://github.com/softeng2223-inf-uniba/progetto2223-nygaard/issues/88): abbandonare la partita*
 
   Come giocatore voglio abbandonare la partita
 
