@@ -140,4 +140,19 @@ class MatchTest {
     }
   }
 
+  @Test
+  @DisplayName("Colpo su una nave")
+  void testHitShip() {
+    assumeTrue(match.initializeShips(UShip.MIN_SHIP));
+    for (int i = 0; i < UGrid.STANDARD_GRID_SIZE; i++) {
+      for (int j = 0; j < UGrid.STANDARD_GRID_SIZE; j++) {
+        if (defenseGrid.getCellCharacter(i, j) == UGrid.SHIP_CHARACTER) {
+          assertEquals(UResult.HITTED_CODE, match.hit(i, j), "Nave colpita non rilevata");
+          i = UGrid.STANDARD_GRID_SIZE;
+          j = UGrid.STANDARD_GRID_SIZE;
+        }
+      }
+    }
+  }
+
 }
