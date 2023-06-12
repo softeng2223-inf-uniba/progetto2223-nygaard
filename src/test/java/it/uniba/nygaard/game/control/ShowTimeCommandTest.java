@@ -1,5 +1,22 @@
 package it.uniba.nygaard.game.control;
 
+import it.uniba.nygaard.game.entity.Match;
+import it.uniba.nygaard.game.utility.UColor;
+import it.uniba.nygaard.game.utility.UTime;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+import java.nio.charset.StandardCharsets;
+import static org.junit.jupiter.api.Assertions.fail;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 class ShowTimeCommandTest {
 
   private static ShowTimeCommand showTimeCommand;
