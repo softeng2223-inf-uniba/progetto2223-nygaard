@@ -247,7 +247,7 @@ Di seguito, i ***Requisiti Funzionali*** del progetto, facenti parte della *User
 
   Al comando ```/mostratentativi``` (quando non si è in partita)
 
-  - l’applicazione risponde visualizzando il numero di tentativi già effettuati, il numero di tentativi falliti e il numero massimo di tentativi falliti  
+  - l’applicazione risponde visualizzando il numero massimo di tentativi falliti  
 
 <br/>
 
