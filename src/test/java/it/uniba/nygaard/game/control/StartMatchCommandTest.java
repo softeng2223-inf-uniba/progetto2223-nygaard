@@ -41,4 +41,20 @@ class StartMatchCommandTest {
     assertEquals(expectedOutput, outContent.toString(StandardCharsets.UTF_8),
         "Non è stato stampato il messaggio di errore corretto");
   }
+
+  @Test
+  @DisplayName("/gioca in partita")
+  void testStartMatchCommandInGame() {
+    String[] args = new String[]{"/gioca"};
+    GameManager.getMatch().setInGame(true);
+    try {
+      execute.invoke(startMatchCommand, (Object) args);
+    } catch (IllegalAccessException | InvocationTargetException e) {
+      fail("Impossibile invocare il metodo executeCommand");
+    }
+    String expectedOutput = UColor.RED + "Partita in corso\nPer cominciare una nuova partita abbandona la corrente"
+        + UColor.RESET + System.lineSeparator();
+    assertEquals(expectedOutput, outContent.toString(StandardCharsets.UTF_8),
+        "Non è stato stampato il messaggio di errore corretto");
+  }
 }
