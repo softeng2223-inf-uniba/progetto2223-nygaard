@@ -2,14 +2,36 @@
 
 ## Indice
 
-- [Introduzione](#1-introduzione)
-- [Modello di Dominio](#2-modello-di-dominio)
-- [Requisiti specifici](#3-requisiti-specifici)
-  - [Requisiti funzionali](#31-requisiti-funzionali)
-  - [Requisiti non funzionali](#32-requisiti-non-funzionali)
-- [Manuale Utente](#7-manuale-utente)
-- [Analisi retrospettiva](#9-analisi-retrospettiva)
-  - [Sprint 0](#91-sprint-0-dimostrare-familiarità-con-github-e-il-processo-agile)
+- [Report](#report)
+  - [Indice](#indice)
+- [1. Introduzione](#1-introduzione)
+  - [Gruppo Nygaard](#gruppo-nygaard)
+    - [**Davide Cirilli**](#davide-cirilli)
+    - [**Mattia Curri** ](#mattia-curri-)
+    - [**Emanuele Fontana**](#emanuele-fontana-)
+    - [**Stefano Labianca**](#stefano-labianca)
+    - [**Giuditta Izzo**](#giuditta-izzo-)
+- [2. Modello Di Dominio](#2-modello-di-dominio)
+- [3. Requisiti specifici](#3-requisiti-specifici)
+  - [3.1 Requisiti Funzionali](#31-requisiti-funzionali)
+  - [3.2 Requisiti non Funzionali](#32-requisiti-non-funzionali)
+- [7. Manuale utente](#7-manuale-utente)
+  - [Indice](#indice-1)
+  - [Passi preliminari](#passi-preliminari)
+    - [Installazione e configurazione di Docker](#installazione-e-configurazione-di-docker)
+    - [Autenticazione con Github](#autenticazione-con-github)
+  - [Avvio dell'applicazione](#avvio-dellapplicazione)
+    - [Comandi in gioco](#comandi-in-gioco)
+- [8. Processo di sviluppo e organizzazione del lavoro](#8-processo-di-sviluppo-e-organizzazione-del-lavoro)
+  - [8.1 Introduzione al processo di sviluppo](#81-introduzione-al-processo-di-sviluppo)
+  - [8.2 Roadmap degli sprint](#82-roadmap-degli-sprint)
+  - [8.3 Gestione degli Sprint](#83-gestione-degli-sprint)
+    - [Sprint 0](#sprint-0)
+    - [Sprint 1](#sprint-1)
+    - [Sprint 2](#sprint-2)
+  - [8.4 Software utilizzati](#84-software-utilizzati)
+- [9. Analisi retrospettiva](#9-analisi-retrospettiva)
+  - [9.1 **Sprint 0**: *dimostrare familiarità con GitHub e il processo agile*](#91-sprint-0-dimostrare-familiarità-con-github-e-il-processo-agile)
 
 # 1. Introduzione
 Nella seguente documentazione verrà descritta la relazione tecnica del progetto di **Ingegneria del Software Anno Accademico 2022-2023**.
@@ -419,6 +441,12 @@ Per iniziare una nuova partita, impostare la difficoltà utilizzando uno dei com
 Una volta avviata la partita è possibile visualizzare la griglia con le navi posizionate utilizzando il comando ***/svelagriglia***:
 
 ![svela_griglia.png](img%2FManualeUtente%2Fsvela_griglia.png)
+
+# 8. Processo di sviluppo e organizzazione del lavoro
+
+## 8.1 Introduzione al processo di sviluppo
+
+
 
 # 9. Analisi retrospettiva
 
