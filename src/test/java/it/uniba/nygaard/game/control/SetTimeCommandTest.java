@@ -129,4 +129,18 @@ class SetTimeCommandTest {
     assertEquals(expectedOutput, outContent.toString(StandardCharsets.UTF_8),
         "Non è stato stampato il messaggio di errore corretto");
   }
+
+  @Test
+  @DisplayName("/tempo con un argomento corretto, controlla output")
+  void testSetTimeCommandCorrectOutput() {
+    String[] args = new String[]{"/tempo", "10"};
+    try {
+      execute.invoke(setTimeCommand, (Object) args);
+    } catch (IllegalAccessException | InvocationTargetException e) {
+      fail("Impossibile invocare il metodo executeCommand");
+    }
+    String expectedOutput = UColor.GREEN + "OK" + UColor.RESET + System.lineSeparator();
+    assertEquals(expectedOutput, outContent.toString(StandardCharsets.UTF_8),
+        "Non è stato stampato il messaggio di operazione effettuata con successo");
+  }
 }
