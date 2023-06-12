@@ -317,7 +317,7 @@ Di seguito, i ***Requisiti Funzionali*** del progetto, facenti parte della *User
 
 <br/>
 
-- ***RF14**: mostrare la griglia di conoscenza*
+- *[**RF14**](https://github.com/softeng2223-inf-uniba/progetto2223-nygaard/issues/93): mostrare la griglia di conoscenza*
 
   Come giocatore voglio mostrare la griglia con le navi colpite e affondate
 
