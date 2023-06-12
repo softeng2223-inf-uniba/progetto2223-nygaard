@@ -194,7 +194,7 @@ Di seguito, i ***Requisiti Funzionali*** del progetto, facenti parte della *User
 
 <br/>
 
-- ***RF6**: svelare la griglia con le navi posizionate*
+- *[**RF6**](https://github.com/softeng2223-inf-uniba/progetto2223-nygaard/issues/31): svelare la griglia con le navi posizionate*
 
   Come giocatore voglio svelare la griglia con le navi posizionate
 
