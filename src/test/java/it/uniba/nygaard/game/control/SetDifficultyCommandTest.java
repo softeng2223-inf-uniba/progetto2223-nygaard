@@ -228,4 +228,17 @@ class SetDifficultyCommandTest {
     assertEquals(expectedOutput, outContent.toString(StandardCharsets.UTF_8),
         "Non è stato stampato il messaggio di operazione completata");
   }
+
+  @Test
+  @DisplayName("Cambio tentativi difficoltà, controlla che il numero di tentativi sia stato impostato correttamente")
+  void testSetDifficultyCommandAttemptsSet() {
+    String[] args = new String[]{"/medio", String.valueOf(UDifficulty.EASY_ATTEMPTS)};
+    try {
+      execute.invoke(setDifficultyCommand, (Object) args);
+    } catch (IllegalAccessException | InvocationTargetException e) {
+      fail("Impossibile invocare il metodo executeCommand");
+    }
+    assertEquals(UDifficulty.EASY_ATTEMPTS, GameManager.getMatch().getAttempts(UDifficulty.DIFFICULTY_MEDIUM),
+        "Il numero di tentativi non è stato impostato correttamente");
+  }
 }
