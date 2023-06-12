@@ -96,13 +96,13 @@ final class SetDifficultyCommand extends Command {
   private void setNewMatchDifficulty() {
     int actualDifficulty = GameManager.getMatchDifficulty();
     Match p = GameManager.getMatch();
-    if (p.getDifficulty() == actualDifficulty) {
+    if (p.getDifficulty() == newMatchDifficulty) {
       SetDifficultyBoundary.sameDifficulty();
       return;
     }
     String choice;
     do {
-      choice = SetDifficultyBoundary.ask(actualDifficulty);
+      choice = SetDifficultyBoundary.ask(newMatchDifficulty);
       if (!choice.equals("n") && !choice.equals("y")) {
         SetDifficultyBoundary.invalidChoice();
       }
@@ -112,7 +112,7 @@ final class SetDifficultyCommand extends Command {
       SetDifficultyBoundary.operationCancelled();
       return;
     }
-    p.setDifficulty(actualDifficulty);
+    p.setDifficulty(newMatchDifficulty);
     SetDifficultyBoundary.operationDone();
   }
 

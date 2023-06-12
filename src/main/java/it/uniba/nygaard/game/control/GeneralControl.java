@@ -96,7 +96,6 @@ public final class GeneralControl {
     ParamControl.initUI();
     do {
       GameManager.setMatch(new Match());
-      GameManager.setMatchDifficulty(UDifficulty.DIFFICULTY_MEDIUM);
       shutDown = UShutdown.NOT_TERMINATION_CODE;
       while (shutDown == UShutdown.NOT_TERMINATION_CODE) {
         String[] command = InputBoundary.getCommand().trim().replaceAll(" +", " ").split(" ");

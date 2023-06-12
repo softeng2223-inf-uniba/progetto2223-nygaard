@@ -20,14 +20,6 @@ public final class GameManager {
   private static Match match;
 
   /**
-   * <h3> matchDifficulty </h3>
-   * <p>
-   * Difficoltà della prossima partita.
-   * </p>
-   */
-  private static int matchDifficulty;
-
-  /**
    * <h3> matchAttempts </h3>
    * <p>
    * Numero di tentativi della prossima partita.
@@ -74,30 +66,6 @@ public final class GameManager {
    */
   static void setMatch(final Match newMatch) {
     GameManager.match = newMatch;
-  }
-
-  /**
-   * <h3> getMatchDifficulty </h3>
-   * <p>
-   * Restituisce la difficoltà della prossima partita.
-   * </p>
-   *
-   * @return Difficoltà della prossima partita.
-   */
-  static int getMatchDifficulty() {
-    return matchDifficulty;
-  }
-
-  /**
-   * <h3> setMatchDifficulty </h3>
-   * <p>
-   * Imposta la difficoltà della prossima partita.
-   * </p>
-   *
-   * @param newMatchDifficulty Difficoltà della prossima partita.
-   */
-  static void setMatchDifficulty(final int newMatchDifficulty) {
-    GameManager.matchDifficulty = newMatchDifficulty;
   }
 
   /**
