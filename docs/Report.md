@@ -524,7 +524,7 @@ In particolare, la User Story più onerosa individuata è stata la ***RF5***: *i
 - Nella **fase di testing**, del lavoro svolto, i componenti coinvolti (Assignee e Reviewers) hanno adoperato una metodologia sincrona e una asincrona: 
   - In caso di *comunicazioni sincrone*, è stato utilizzato un server [*Discord*](https://discord.com/), per testare in tempo reale il software, utilizzando il debugger e avviando l'applicazione per testare tutti i possibili input, per assicurarne la robustezza. 
   - In maniera *asincrona*, laddove non fosse possibile la presenza nei meeting, venivano sfruttati gli strumenti messi a disposizione dalle Pull Request di Github: si è rivelata molto utile la possibilità di proporre delle suggestions da parte dei reviewers direttamente nel codice permettendo all'assignee di fare direttamente i commit per apportare la miglioria proposta.
-  <br> Nel caso di [*problemi*](https://www.youtube.com/watch?v=st8tff2nxXQ) maggiori, veninva lasciato all'assignee il compito di risolverli.
+  <br> Nel caso di problemi maggiori, veninva lasciato all'assignee il compito di risolverli.
 
 ### Sprint 2
 
