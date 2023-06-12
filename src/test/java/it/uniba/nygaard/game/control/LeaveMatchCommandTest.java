@@ -74,4 +74,23 @@ class LeaveMatchCommandTest {
     assertEquals(GeneralControl.getShutDown(), UShutdown.LEFT_TERMINATION_CODE,
         "Non è stato impostato il codice di terminazione corretto");
   }
+
+  @Test
+  @DisplayName("/abbandona con conferma non valida")
+  void testLeaveMatchCommandInvalidAnswer() {
+    ByteArrayInputStream in = new ByteArrayInputStream("yn\n".getBytes(StandardCharsets.UTF_8));
+    System.setIn(in);
+    String[] args = new String[]{"/abbandona"};
+    try {
+      execute.invoke(leaveMatchCommand, (Object) args);
+    } catch (IllegalAccessException | InvocationTargetException e) {
+      System.err.println("testLeaveMatchCommandInvalidAnswer:");
+      System.err.println(e.getCause());
+      System.err.println("Eccezione dovuta al fatto che dopo il test il metodo in esame aspetta altri input");
+      System.err.println("Tale eccezione non compromette l'esito del test ed è stata considerata la sua presenza\n");
+    }
+    String expectedOutput = UColor.RED + "Scelta non valida" + UColor.RESET + System.lineSeparator();
+    assertTrue(outContent.toString(StandardCharsets.UTF_8).contains(expectedOutput),
+        "Non è stata stampata la frase prevista per la scelta non valida");
+  }
 }
