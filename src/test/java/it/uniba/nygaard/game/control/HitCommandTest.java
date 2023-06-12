@@ -60,4 +60,18 @@ class HitCommandTest {
     assertEquals(expectedOutput, outContent.toString(StandardCharsets.UTF_8),
         "Non è stato stampato il messaggio di errore corretto");
   }
+
+  @Test
+  @DisplayName("Colpo con riga maggiore di Integer.MAX_VALUE")
+  void testHitCommandNumberFormatException() {
+    String[] args = new String[]{"B-" + ((long) Integer.MAX_VALUE + 1)};
+    try {
+      execute.invoke(hitCommand, (Object) args);
+    } catch (IllegalAccessException | InvocationTargetException e) {
+      fail("Impossibile invocare il metodo executeCommand");
+    }
+    String expectedOutput = UColor.RED + "Coordinate non valide" + UColor.RESET + System.lineSeparator();
+    assertEquals(expectedOutput, outContent.toString(StandardCharsets.UTF_8),
+        "Non è stato stampato il messaggio di errore corretto");
+  }
 }
