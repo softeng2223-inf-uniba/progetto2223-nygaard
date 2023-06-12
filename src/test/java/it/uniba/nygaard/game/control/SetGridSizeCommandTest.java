@@ -93,4 +93,23 @@ class SetGridSizeCommandTest {
     assertTrue(outContent.toString(StandardCharsets.UTF_8).contains(expectedOutput),
         "Non è stato stampato il messaggio di errore corretto");
   }
+
+  @Test
+  @DisplayName("Cambio dimensione griglia con conferma non valida")
+  void testSetGridSizeCommandInvalidAnswer() {
+    ByteArrayInputStream in = new ByteArrayInputStream("yn\n".getBytes(StandardCharsets.UTF_8));
+    System.setIn(in);
+    String[] args = new String[]{"/large"};
+    try {
+      execute.invoke(setGridSizeCommand, (Object) args);
+    } catch (IllegalAccessException | InvocationTargetException e) {
+      System.err.println("testSetGridSizeCommandInvalidAnswer:");
+      System.err.println(e.getCause());
+      System.err.println("Eccezione dovuta al fatto che dopo il test il metodo in esame aspetta altri input");
+      System.err.println("Tale eccezione non compromette l'esito del test ed è stata considerata la sua presenza\n");
+    }
+    String expectedOutput = UColor.RED + "Scelta non valida" + UColor.RESET + System.lineSeparator();
+    assertTrue(outContent.toString(StandardCharsets.UTF_8).contains(expectedOutput),
+        "Non è stato stampato il messaggio di errore corretto");
+  }
 }
