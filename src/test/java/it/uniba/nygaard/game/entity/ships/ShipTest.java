@@ -60,4 +60,43 @@ class ShipTest {
     assertFalse(ship.outOfMap(grid), "Nave verticale nella griglia non rilevata");
   }
 
+  @RepeatedTest(value = UShip.MAX_SHIP, name = "{displayName}: Test {currentRepetition} di {totalRepetitions}")
+  @DisplayName("Navi verticali intersecate")
+  void testIntersectsVertical() {
+    for (int i = 0; i < UShip.AIRCRAFT_HP; i++) {
+      grid.setCellCharacter(i, 0, UGrid.SHIP_CHARACTER);
+    }
+    ship.setDirection(UShip.VERTICAL);
+    coord.setRow(UShip.DESTROYER_HP);
+    coord.setColumn(UGrid.MIN_COLUMN);
+    ship.setCoord(coord);
+    assertTrue(ship.intersects(grid), "Intersezione tra navi verticali non rilevata");
+  }
+
+  @RepeatedTest(value = UShip.MAX_SHIP, name = "{displayName}: Test {currentRepetition} di {totalRepetitions}")
+  @DisplayName("Navi orizzontali intersecate")
+  void testIntersectsHorizontal() {
+    for (int i = 0; i < UShip.AIRCRAFT_HP; i++) {
+      grid.setCellCharacter(0, i, UGrid.SHIP_CHARACTER);
+    }
+    ship.setDirection(UShip.HORIZONTAL);
+    coord.setRow(UGrid.MIN_ROWS - 1);
+    coord.setColumn((char) (UGrid.MIN_COLUMN + 1));
+    ship.setCoord(coord);
+    assertTrue(ship.intersects(grid), "Intersezione tra navi orizzontali non rilevata");
+  }
+
+  @RepeatedTest(value = UShip.MAX_SHIP, name = "{displayName}: Test {currentRepetition} di {totalRepetitions}")
+  @DisplayName("Nave orizzontale e nave verticale che si intersecano")
+  void testIntersectsMix() {
+    for (int i = 2; i < UShip.AIRCRAFT_HP + 2; i++) {
+      grid.setCellCharacter(2, i, UGrid.SHIP_CHARACTER);
+    }
+    ship.setDirection(UShip.VERTICAL);
+    coord.setRow(UGrid.MIN_ROWS);
+    coord.setColumn((char) (UGrid.MIN_COLUMN + UShip.CRUISER_HP));
+    ship.setCoord(coord);
+    assertTrue(ship.intersects(grid), "Intersezione tra navi con direzione diversa non rilevata");
+  }
+
 }
