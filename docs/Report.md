@@ -329,7 +329,7 @@ Di seguito, i ***Requisiti Funzionali*** del progetto, facenti parte della *User
 
 <br/>
 
-- ***RF15**: mostrare i tentativi effettuati*
+- *[**RF15**](https://github.com/softeng2223-inf-uniba/progetto2223-nygaard/issues/79): mostrare i tentativi effettuati*
 
   Come giocatore voglio mostrare i tentativi effettuati
 
