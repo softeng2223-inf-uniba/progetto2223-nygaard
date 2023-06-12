@@ -172,4 +172,23 @@ class MatchTest {
     }
   }
 
+  @Test
+  @DisplayName("Controlla che una partita vinta sia rilevata come vittoria")
+  void testWin() {
+    int sankedShips = 0;
+    assumeTrue(match.initializeShips(UShip.MIN_SHIP));
+    for (int i = 0; i < UGrid.STANDARD_GRID_SIZE; i++) {
+      for (int j = 0; j < UGrid.STANDARD_GRID_SIZE; j++) {
+        if (defenseGrid.getCellCharacter(i, j) == UGrid.SHIP_CHARACTER) {
+          if (match.hit(i, j) == UResult.SANK_CODE) {
+            sankedShips++;
+            if (sankedShips == UShip.MAX_SHIP) {
+              assertTrue(match.win(), "Vittoria non rilevata");
+            }
+          }
+        }
+      }
+    }
+  }
+
 }
