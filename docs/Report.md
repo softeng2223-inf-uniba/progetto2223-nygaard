@@ -494,10 +494,16 @@ Dato l'utilizzo del framework Scrum, gli Sprint si compongono di quattro fasi pr
 
 Alla fine dello Sprint 1 e dello Sprint 2, abbiamo intrapreso una fase di manutenzione evolutiva del codice.
 
+In generale sono state seguite queste regole:
+- Le issue tecniche, riguardanti Github e documentazione, sono state affidate a [_Stefano Labianca_](#stefano-labianca) e a [_Mattia Curri_](#mattia-curri-), date le loro conoscenze
+pregresse con il Version Control;
+- Le issue che richiedevano maggiori capacità di gestione e stesura di algoritmi complessi, sono state assegnate a [_Davide Cirilli_](#davide-cirilli);
+- Le restanti issue sono state assegnate principalmente a [_Giuditta Izzo_](#giuditta-izzo-) e a [_Emanuele Fontana_](#emanuele-fontana-), non escludendo però gli alti membri del team in modo da 
+distribuire il carico di lavoro in maniera equa.
 
 ### Sprint 0
 
-Lo *Sprint Goal* era quello di mostrare familiarità con [Git](https://git-scm.com/), [Github](https://github.com/) e il processo Agile. 
+Lo *Sprint Goal* era quello di mostrare familiarità con [_Git_](https://git-scm.com/), [_Github_](https://github.com/) e il processo Agile. 
 
 - Per questo Sprint si è deciso, al seguito della data inizio dello Sprint, di incontrarsi in uno Scrum Meeting, della durata di circa 30 minuti, per svolgere la **fase di analisi**, ovvero assegnare i task e stabilire le modalità di lavoro successive. 
 <br> In particolare si è deciso di prevedere una prima fase di lavoro on-site, in modo che tutti imparassero a padroneggiare gli strumenti necessari e per testare il nostro modo di lavorare individualmente in un contesto collaborativo. Questa scelta si è rivelata efficace sul lungo termine, dato che non sono sorte problematiche di alcun tipo nello Sprint stesso e in quelli successivi.
