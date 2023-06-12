@@ -207,7 +207,7 @@ Di seguito, i ***Requisiti Funzionali*** del progetto, facenti parte della *User
 <br/>
 
 
-- ***RF7**: impostare il numero di tentativi per difficoltà*
+- *[**RF7**](https://github.com/softeng2223-inf-uniba/progetto2223-nygaard/issues/85): impostare il numero di tentativi per difficoltà*
 
   Come giocatore voglio impostare il numero massimo di tentativi falliti per livello di gioco 
   
