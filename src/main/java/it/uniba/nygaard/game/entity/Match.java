@@ -108,7 +108,7 @@ public final class Match {
    * Tempo di inizio della partita espresso in millisecondi.
    * </p>
    */
-  private long startTime;
+  private long startTime = UTime.DEFAULT_TIME;
   /**
    * <h3> gridSize </h3>
    * <p>
