@@ -43,4 +43,20 @@ class LeaveMatchCommandTest {
     assertEquals(expectedOutput, outContent.toString(StandardCharsets.UTF_8),
         "Non è stato stampato il messaggio di errore corretto");
   }
+
+  @Test
+  @DisplayName("/abbandona non confermato")
+  void testLeaveMatchCommandNegativeAnswer() {
+    ByteArrayInputStream in = new ByteArrayInputStream("n\n".getBytes(StandardCharsets.UTF_8));
+    System.setIn(in);
+    String[] args = new String[]{"/abbandona"};
+    try {
+      execute.invoke(leaveMatchCommand, (Object) args);
+    } catch (IllegalAccessException | InvocationTargetException e) {
+      fail("Impossibile invocare il metodo executeCommand");
+    }
+    String expectedOutput = UColor.RED + "Abbandono della partita annullato" + UColor.RESET + System.lineSeparator();
+    assertTrue(outContent.toString(StandardCharsets.UTF_8).contains(expectedOutput),
+        "Non è stata stampata la frase prevista per l'operazione annullata");
+  }
 }
