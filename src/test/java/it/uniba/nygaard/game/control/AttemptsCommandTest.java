@@ -27,4 +27,19 @@ class AttemptsCommandTest {
     System.setOut(new PrintStream(outContent, true, StandardCharsets.UTF_8));
     GameManager.getMatch().setInGame(false);
   }
+
+  @Test
+  @DisplayName("/tentativi senza argomenti")
+  void testAttemptsCommandWithoutArgument() {
+    String[] args = new String[]{"/tentativi"};
+    try {
+      execute.invoke(attemptsCommand, (Object) args);
+    } catch (IllegalAccessException | InvocationTargetException e) {
+      fail("Impossibile invocare il metodo executeCommand");
+    }
+    String expectedOutput = UColor.CYAN + "Il comando dovrebbe essere usato come segue: "
+        + "/tentativi <numero tentativi>" + UColor.RESET + System.lineSeparator();
+    assertEquals(expectedOutput, outContent.toString(StandardCharsets.UTF_8),
+        "Non è stato stampato il messaggio di errore corretto");
+  }
 }
