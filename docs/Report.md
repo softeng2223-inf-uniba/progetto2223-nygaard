@@ -115,7 +115,7 @@ con **StarUML**.* (https://staruml.io/)
 
 Di seguito, i ***Requisiti Funzionali*** del progetto, facenti parte della *User Story*.
 
-- ***RF1**: mostrare l'help con elenco comandi e regole del gioco*
+- *[**RF1**](https://github.com/softeng2223-inf-uniba/progetto2223-nygaard/issues/25): mostrare l'help con elenco comandi e regole del gioco*
 
   Come giocatore voglio mostrare l'help con elenco comandi.
 
