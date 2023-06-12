@@ -564,8 +564,14 @@ a pieno le funzionalità del tools [*Code With Me*](https://www.jetbrains.com/co
 <br />
 
 ![chat-discord.jpg](img%2FCanaliDiComunicazione%2Fchat-discord.jpg)
+
 *In questa foto è possibile vedere l'uso della chat testuale di Discord, in cui condividere immagini e file.*
 
+<br />
+
+![wp.jpg](img%2FCanaliDiComunicazione%2Fwp.jpg)
+
+*Esempio di comunicazione asincrona tramite gruppo Whatsapp*
 
 # 9. Analisi retrospettiva
 
