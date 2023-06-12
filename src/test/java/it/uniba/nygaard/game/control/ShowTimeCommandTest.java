@@ -73,4 +73,21 @@ class ShowTimeCommandTest {
     assertEquals(expectedOutput, outContent.toString(StandardCharsets.UTF_8),
         "Non è stato stampato il messaggio di tempo illimitato");
   }
+
+  @Test
+  @DisplayName("/mostratempo con tempo non illimitato")
+  void testShowTimeCommandNotInfiniteTime() {
+    String[] args = new String[]{"/mostratempo"};
+    GameManager.getMatch().setStartTime(System.currentTimeMillis());
+    GameManager.getMatch().setMaxTime(1);
+    try {
+      execute.invoke(showTimeCommand, (Object) args);
+    } catch (IllegalAccessException | InvocationTargetException e) {
+      fail("Impossibile invocare il metodo executeCommand");
+    }
+    String expectedOutput = UColor.CYAN + "Il tempo trascorso è di 0 minuti" + System.lineSeparator()
+        + "Il tempo rimanente è di 1 minuti" + UColor.RESET + System.lineSeparator();
+    assertEquals(expectedOutput, outContent.toString(StandardCharsets.UTF_8),
+        "Non è stato stampato il messaggio di tempo corretto");
+  }
 }
