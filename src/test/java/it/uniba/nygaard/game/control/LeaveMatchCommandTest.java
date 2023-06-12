@@ -93,4 +93,9 @@ class LeaveMatchCommandTest {
     assertTrue(outContent.toString(StandardCharsets.UTF_8).contains(expectedOutput),
         "Non è stata stampata la frase prevista per la scelta non valida");
   }
+
+  @AfterEach
+  void tearDown() {
+    System.setIn(inBackup);
+  }
 }
