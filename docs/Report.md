@@ -355,6 +355,18 @@ Di seguito, i ***Requisiti Funzionali*** del progetto, facenti parte della *User
 
     - se la conferma è negativa, l'applicazione si predispone a ricevere nuovi tentativi o comandi
 
+<br/>
+
+- *[**RF17**](https://github.com/softeng2223-inf-uniba/progetto2223-nygaard/issues/28): mostrare il livello attuale*
+
+  Come giocatore voglio mostrare il livello di gioco e il numero massimo di tentativi falliti
+
+  **Criteri di accettazione**
+
+  Al comando ```/mostralivello```
+  
+  - l’applicazione risponde visualizzando il livello di gioco e il numero massimo di tentativi falliti
+
 </br>
 
 ## 3.2 Requisiti non Funzionali
