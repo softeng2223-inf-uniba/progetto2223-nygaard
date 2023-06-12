@@ -46,4 +46,60 @@ class SetDifficultyCommandTest {
     assertEquals(expectedOutput, outContent.toString(StandardCharsets.UTF_8),
         "Non è stato stampato il messaggio di errore corretto");
   }
+
+  @Test
+  @DisplayName("Cambio tentativi difficoltà con una stringa come argomento")
+  void testSetDifficultyCommandWithStringArgument() {
+    String[] args = new String[]{"/facile", "stringaqualsiasi"};
+    try {
+      execute.invoke(setDifficultyCommand, (Object) args);
+    } catch (IllegalAccessException | InvocationTargetException e) {
+      fail("Impossibile invocare il metodo executeCommand");
+    }
+    String expectedOutput = UColor.RED + "Numero di tentativi non valido" + UColor.RESET + System.lineSeparator();
+    assertEquals(expectedOutput, outContent.toString(StandardCharsets.UTF_8),
+        "Non è stato stampato il messaggio di errore corretto");
+  }
+
+  @Test
+  @DisplayName("Cambio tentativi difficoltà con un numero negativo come argomento")
+  void testSetDifficultyCommandWithNegativeArgument() {
+    String[] args = new String[]{"/facile", "-10"};
+    try {
+      execute.invoke(setDifficultyCommand, (Object) args);
+    } catch (IllegalAccessException | InvocationTargetException e) {
+      fail("Impossibile invocare il metodo executeCommand");
+    }
+    String expectedOutput = UColor.RED + "Numero di tentativi non valido" + UColor.RESET + System.lineSeparator();
+    assertEquals(expectedOutput, outContent.toString(StandardCharsets.UTF_8),
+        "Non è stato stampato il messaggio di errore corretto");
+  }
+
+  @Test
+  @DisplayName("Cambio tentativi difficoltà con un numero più grande di Integer.MAX_VALUE come argomento")
+  void testSetDifficultyCommandWithOverflowArgument() {
+    String[] args = new String[]{"/facile", String.valueOf((long) Integer.MAX_VALUE + 1)};
+    try {
+      execute.invoke(setDifficultyCommand, (Object) args);
+    } catch (IllegalAccessException | InvocationTargetException e) {
+      fail("Impossibile invocare il metodo executeCommand");
+    }
+    String expectedOutput = UColor.RED + "Numero di tentativi non valido" + UColor.RESET + System.lineSeparator();
+    assertEquals(expectedOutput, outContent.toString(StandardCharsets.UTF_8),
+        "Non è stato stampato il messaggio di errore corretto");
+  }
+
+  @Test
+  @DisplayName("Cambio tentativi difficoltà con un numero con zeri iniziali come argomento")
+  void testSetDifficultyCommandWithLeadingZeros() {
+    String[] args = new String[]{"/facile", "001"};
+    try {
+      execute.invoke(setDifficultyCommand, (Object) args);
+    } catch (IllegalAccessException | InvocationTargetException e) {
+      fail("Impossibile invocare il metodo executeCommand");
+    }
+    String expectedOutput = UColor.RED + "Numero di tentativi non valido" + UColor.RESET + System.lineSeparator();
+    assertEquals(expectedOutput, outContent.toString(StandardCharsets.UTF_8),
+        "Non è stato stampato il messaggio di errore corretto");
+  }
 }
