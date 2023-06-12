@@ -514,6 +514,19 @@ In particolare, la User Story più onerosa individuata è stata la ***RF5***: *i
   - In maniera *asincrona*, laddove non fosse possibile la presenza nei meeting, venivano sfruttati gli strumenti messi a disposizione dalle Pull Request di Github: si è rivelata molto utile la possibilità di proporre delle suggestions da parte dei reviewers direttamente nel codice permettendo all'assignee di fare direttamente i commit per apportare la miglioria proposta.
   <br> Nel caso di [*problemi*](https://www.youtube.com/watch?v=st8tff2nxXQ) maggiori, veninva lasciato all'assignee il compito di risolverli.
 
+### Sprint 2
+
+Lo _Sprint Goal_ era quello di completare il gioco, assicurandone la sua qualità.
+- Nella **fase di analisi** è stato indetto uno Scrum Meeting, per discuttere e per assegnare i vari task ai membri del gruppo di lavoro. In particolare, una volta finite le task implementative, si è scelto di dedicare del tempo alla **manutenzione evolutiva** del codice scritto, così da ridurre il più possibile _codice ridondante_, migliorando di conseguenza.
+- Nella **fase di progettazione** sono stati sviluppati i **diagrammi delle classi**, i **diagrammi dei package** e i **diagrammi di sequenza** delle user story principali, ovvero:
+  - _Abbandona partita_;
+  - _Effetuare un colpo_;
+  - _Iniziare una nuova partita_.
+- Nella **fase implementativa** ogni assignee ha continuato a lavorare individualmente alla propria user story, mantenendosi sempre in contatto con gli altri membri del team. 
+Una volta terminate le user story del codice, [*Mattia Curri*](#mattia-curri-) si è dedicato alla successiva fase di manutenzione evolutiva, richiedendo attivamente feedback agli altri membri del gruppo di lavoro, sfruttando i canali comunicativi interni al gruppo.
+- La **fase di testing** è stata sviluppata da [*Mattia Curri*](#mattia-curri-) e da [*Davide Cirilli*](#davide-cirilli) e, durante la seguente fase, i due membri del gruppo di lavoro hanno sviluppato i test comunicando in chiamata vocale, attraverso un server [*Discord*](https://discord.com/), sfruttando
+a pieno le funzionalità del tools [*Code With Me*](https://www.jetbrains.com/code-with-me/), integrato nell'IDE di [*IntelliJ IDEA*](https://www.jetbrains.com/idea/)
+
 
 
 # 9. Analisi retrospettiva
