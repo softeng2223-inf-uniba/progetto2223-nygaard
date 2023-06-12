@@ -56,4 +56,20 @@ class ParamControlTest {
     assertEquals(expectedOutput, outContent.toString(StandardCharsets.UTF_8),
         "Non è stato stampato il messaggio di errore corretto");
   }
+
+  @Test
+  @DisplayName("Avvio del programma con parametro non riconosciuto, verifica che venga cambiato lo stato di shutDown")
+  void testParamControlWithInvalidArgumentShutdown() {
+    GameManager.setArgs(new String[]{"ciao"});
+    try {
+      initUI.invoke(null);
+    } catch (Exception e) {
+      System.err.println("testParamControlWithInvalidArgumentShutdown:");
+      System.err.println(e.getCause());
+      System.err.println("Eccezione dovuta al fatto che dopo il test il metodo in esame aspetta altri input");
+      System.err.println("Tale eccezione non compromette l'esito del test ed è stata considerata la sua presenza\n");
+    }
+    assertEquals(UShutdown.QUIT_TERMINATION_CODE, GeneralControl.getShutDown(),
+        "Non è stato impostato il codice di terminazione corretto");
+  }
 }
