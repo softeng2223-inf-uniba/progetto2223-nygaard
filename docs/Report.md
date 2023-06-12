@@ -466,6 +466,15 @@ Successivamente, per le iterazioni successive, è stata concessa liberta al team
 
 Per la gestione dello sviluppo dei task è stato utilizzato il [Github Flow](https://docs.github.com/en/get-started/quickstart/github-flow): Per ogni issue, identificata progressivamente con `#n`, è stato creato un branch, identificato con `issue#n`, da parte del componente a cui è stata assegnata la issue. Una volta che il componente, ha concluso il suo lavoro, veniva sottoposto ad un minimo di 2 reviewers, attraverso una **Pull Request**, in cui si discutevano eventuali problemi e/o migliorie per portare a termine la issue. Dallo Sprint 1 per le User Story che, in fase di analisi risultavano essere quelle che avrebbero richiesto più effort, si è scelto di inserire come reviewers l'intero team, ad eccezione di chi ha sviluppato la User Story in questione. Una volta approvata la Pull Request unito al branch principale, cancellato successivamente il branch usato per la specifica issue.
 
+Ad ogni Sprint, svolto all'intero del progetto, è stato dedicato una **Milestone** ed un **Project** dove, all'intero di ogni Project, sono state le issue da svolgere per lo Sprint corrente.
+In questo modo, è stato possibile avere un quadro generale dei task dei progressi fatto dal team, tenendo così traccia di quali erano le issue da iniziare, quali in corso, quali in revisione e quali pronte alla revisione dello Scrum Master.
+
+Ogni qualvolta una issue veniva conclusa, i progressi di completamento della Milestone venivano aggiornati e, il suo completamento, significava il completamento delle issue assegnate per lo Sprint corrente.
+
+Con l'inizio dello Sprint 2, sono stati utilizzati due Project: 
+- Il primo è stato dedicato alle user story dello Sprint 2 più eventuali migliorie;
+- Il secondo, rinominato **Product Backlog**, contiene tutte le user story di tutti gli Sprint da implementare e risoluzioni di bug 
+riscontrati negli Sprint precedenti,che riguardavano le user story già implementate.
 
 
 ## 8.2 Roadmap degli sprint
