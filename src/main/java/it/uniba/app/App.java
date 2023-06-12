@@ -13,7 +13,7 @@ import it.uniba.nygaard.game.control.GeneralControl;
  */
 final class App {
 
-  App() {
+  private App() {
   }
 
   /**
