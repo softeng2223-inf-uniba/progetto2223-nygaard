@@ -42,4 +42,19 @@ class SetTimeCommandTest {
     assertEquals(expectedOutput, outContent.toString(StandardCharsets.UTF_8),
         "Non è stato stampato il messaggio di errore corretto");
   }
+
+  @Test
+  @DisplayName("/tempo con troppi argomenti")
+  void testSetTimeCommandWithTooManyArgument() {
+    String[] args = new String[]{"/tempo", "2", "stringa"};
+    try {
+      execute.invoke(setTimeCommand, (Object) args);
+    } catch (IllegalAccessException | InvocationTargetException e) {
+      fail("Impossibile invocare il metodo executeCommand");
+    }
+    String expectedOutput = UColor.CYAN + "Il comando dovrebbe essere usato come segue: "
+        + "/tempo <tempo in minuti>" + UColor.RESET + System.lineSeparator();
+    assertEquals(expectedOutput, outContent.toString(StandardCharsets.UTF_8),
+        "Non è stato stampato il messaggio di errore corretto");
+  }
 }
