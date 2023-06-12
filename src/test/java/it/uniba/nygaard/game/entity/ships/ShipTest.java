@@ -1,5 +1,18 @@
 package it.uniba.nygaard.game.entity.ships;
 
+import it.uniba.nygaard.game.entity.grids.CellsGrid;
+import it.uniba.nygaard.game.utility.UGrid;
+import it.uniba.nygaard.game.utility.UShip;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.RepeatedTest;
+
+import java.util.Random;
+
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
 class ShipTest {
 
   private Ship ship;
