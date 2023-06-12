@@ -77,4 +77,19 @@ class ExitCommandTest {
     assertTrue(outContent.toString(StandardCharsets.UTF_8).contains(expectedOutput),
         "Non è stata stampata la frase prevista per l'uscita dal gioco");
   }
+
+  @Test
+  @DisplayName("/esci confermato, verifica che venga cambiato lo stato di Shutdown")
+  void testExitCommandAffirmativeAnswerShutdown() {
+    ByteArrayInputStream in = new ByteArrayInputStream("y\n".getBytes(StandardCharsets.UTF_8));
+    System.setIn(in);
+    String[] args = new String[]{"/esci"};
+    try {
+      execute.invoke(exitCommand, (Object) args);
+    } catch (IllegalAccessException | InvocationTargetException e) {
+      fail("Impossibile invocare il metodo executeCommand");
+    }
+    assertEquals(GeneralControl.getShutDown(), UShutdown.QUIT_TERMINATION_CODE,
+        "Non è stato impostato il codice di terminazione corretto");
+  }
 }
