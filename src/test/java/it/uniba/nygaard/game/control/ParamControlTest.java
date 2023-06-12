@@ -23,4 +23,19 @@ class ParamControlTest {
     GeneralControl.setShutDown(UShutdown.NOT_TERMINATION_CODE);
   }
 
+  @Test
+  @DisplayName("Avvio del programma con troppi parametri, verifica che venga cambiato lo stato di shutDown")
+  void testParamControlWithTooManyArgumentShutdown() {
+    GameManager.setArgs(new String[]{"-h", "--help"});
+    try {
+      initUI.invoke(null);
+    } catch (Exception e) {
+      System.err.println("testParamControlWithTooManyArgumentShutdown:");
+      System.err.println(e.getCause());
+      System.err.println("Eccezione dovuta al fatto che dopo il test il metodo in esame aspetta altri input");
+      System.err.println("Tale eccezione non compromette l'esito del test ed è stata considerata la sua presenza\n");
+    }
+    assertEquals(UShutdown.QUIT_TERMINATION_CODE, GeneralControl.getShutDown(),
+        "Non è stato impostato il codice di terminazione corretto");
+  }
 }
