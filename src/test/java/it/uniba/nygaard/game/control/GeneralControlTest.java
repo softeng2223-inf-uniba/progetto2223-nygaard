@@ -42,4 +42,24 @@ class GeneralControlTest {
     assertNotNull(r, "La lista dei comandi non è stata inizializzata correttamente");
   }
 
+  @ParameterizedTest(name = "Inserimento del comando {0} nell'HashMap")
+  @ValueSource(strings = {"/esci", "/facile", "/medio", "/difficile", "/mostralivello", "/mostranavi",
+      "/gioca", "/svelagriglia", "/help", "/tempo", "/mostratempo", "/mostratentativi", "/standard",
+      "/large", "/extralarge", "/tentativi", "/abbandona", "/mostragriglia"})
+  @DisplayName("Inserimento dei comandi nell'HashMap")
+  void testCommandList(final String command) {
+    HashMap<?, ?> r = null;
+    try {
+      r = ((HashMap<?, ?>) initCommands.invoke(null));
+    } catch (Exception e) {
+      fail("Impossibile invocare il metodo initCommands");
+    }
+    assumeTrue(r != null, "La lista dei comandi non è stata inizializzata correttamente");
+    try {
+      assertNotNull(r.get(command), "Il comando " + command + " non è stato inizializzato");
+    } catch (Exception e) {
+      fail("Il comando" + command + " non è stato inizializzato");
+    }
+  }
+
 }
