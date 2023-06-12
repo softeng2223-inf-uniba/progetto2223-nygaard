@@ -227,7 +227,7 @@ Di seguito, i ***Requisiti Funzionali*** del progetto, facenti parte della *User
 
 <br/>
 
-- ***RF8**: impostare direttamente il numero di tentativi*
+- *[**RF8**](https://github.com/softeng2223-inf-uniba/progetto2223-nygaard/issues/87): impostare direttamente il numero di tentativi*
 
   Come giocatore voglio impostare direttamente il numero massimo di tentativi che si possono fallire
 
