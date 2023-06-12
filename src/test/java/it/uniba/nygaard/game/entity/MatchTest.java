@@ -38,4 +38,10 @@ class MatchTest {
     }
   }
 
+  @RepeatedTest(value = UShip.MAX_SHIP, name = "{displayName}: Test {currentRepetition} di {totalRepetitions}")
+  @DisplayName("Piazzamento delle navi nella griglia")
+  void testInitializeShip() {
+    assertTrue(match.initializeShips(UShip.MIN_SHIP), "Le navi non sono state piazzate correttamente");
+  }
+
 }
