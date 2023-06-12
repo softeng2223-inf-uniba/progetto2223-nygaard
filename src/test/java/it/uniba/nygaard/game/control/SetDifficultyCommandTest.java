@@ -102,4 +102,36 @@ class SetDifficultyCommandTest {
     assertEquals(expectedOutput, outContent.toString(StandardCharsets.UTF_8),
         "Non è stato stampato il messaggio di errore corretto");
   }
+
+  @Test
+  @DisplayName("Cambio difficoltà in partita")
+  void testSetDifficultyCommandWithoutArgsInGame() {
+    String[] args = new String[]{"/facile"};
+    GameManager.getMatch().setInGame(true);
+    try {
+      execute.invoke(setDifficultyCommand, (Object) args);
+    } catch (IllegalAccessException | InvocationTargetException e) {
+      fail("Impossibile invocare il metodo executeCommand");
+    }
+    String expectedOutput = UColor.RED + "Non puoi cambiare difficoltà durante una partita" + UColor.RESET
+        + System.lineSeparator();
+    assertEquals(expectedOutput, outContent.toString(StandardCharsets.UTF_8),
+        "Non è stato stampato il messaggio di errore corretto");
+  }
+
+  @Test
+  @DisplayName("Cambio tentativi difficoltà in partita")
+  void testSetDifficultyCommandWithArgsInGame() {
+    String[] args = new String[]{"/facile", "25"};
+    GameManager.getMatch().setInGame(true);
+    try {
+      execute.invoke(setDifficultyCommand, (Object) args);
+    } catch (IllegalAccessException | InvocationTargetException e) {
+      fail("Impossibile invocare il metodo executeCommand");
+    }
+    String expectedOutput = UColor.RED + "Non puoi cambiare il numero di tentativi durante una partita" + UColor.RESET
+        + System.lineSeparator();
+    assertEquals(expectedOutput, outContent.toString(StandardCharsets.UTF_8),
+        "Non è stato stampato il messaggio di errore corretto");
+  }
 }
