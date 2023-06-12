@@ -72,4 +72,23 @@ class ParamControlTest {
     assertEquals(UShutdown.QUIT_TERMINATION_CODE, GeneralControl.getShutDown(),
         "Non è stato impostato il codice di terminazione corretto");
   }
+
+  @Test
+  @DisplayName("Avvio del programma con parametro non riconosciuto,"
+      + "verifica che venga stampato il messaggio di errore corretto")
+  void testParamControlWithInvalidArgumentPrint() {
+    GameManager.setArgs(new String[]{"ciao"});
+    try {
+      initUI.invoke(null);
+    } catch (Exception e) {
+      System.err.println("testParamControlWithInvalidArgumentPrint:");
+      System.err.println(e.getCause());
+      System.err.println("Eccezione dovuta al fatto che dopo il test il metodo in esame aspetta altri input");
+      System.err.println("Tale eccezione non compromette l'esito del test ed è stata considerata la sua presenza\n");
+    }
+    String expectedOutput = UColor.RED + "Parametro ciao non riconosciuto.\n"
+        + "Premere invio per uscire" + UColor.RESET + System.lineSeparator();
+    assertEquals(expectedOutput, outContent.toString(StandardCharsets.UTF_8),
+        "Non è stato stampato il messaggio di errore corretto");
+  }
 }
