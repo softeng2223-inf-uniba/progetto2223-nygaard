@@ -143,4 +143,17 @@ class SetTimeCommandTest {
     assertEquals(expectedOutput, outContent.toString(StandardCharsets.UTF_8),
         "Non è stato stampato il messaggio di operazione effettuata con successo");
   }
+
+  @Test
+  @DisplayName("/tempo con un argomento corretto, controlla impostazione tempo")
+  void testSetTimeCommandCorrectTime() {
+    String[] args = new String[]{"/tempo", "1"};
+    try {
+      execute.invoke(setTimeCommand, (Object) args);
+    } catch (IllegalAccessException | InvocationTargetException e) {
+      fail("Impossibile invocare il metodo executeCommand");
+    }
+    assertEquals(1, GameManager.getMatch().getMaxTime(),
+        "Il tempo di gioco non è stato impostato correttamente");
+  }
 }
