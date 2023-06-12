@@ -62,4 +62,27 @@ class GeneralControlTest {
     }
   }
 
+  @Test
+  @DisplayName("Esecuzione di un comando non presente nell'HashMap")
+  void testGeneralControlInvalidCommand() {
+    ByteArrayInputStream in = new ByteArrayInputStream("/ciao\n".getBytes(StandardCharsets.UTF_8));
+    System.setIn(in);
+    try {
+      startGame.invoke(null, (Object) new String[]{});
+    } catch (IllegalAccessException | InvocationTargetException e) {
+      System.err.println("testGeneralControlInvalidCommand:");
+      System.err.println(e.getCause());
+      System.err.println("Eccezione dovuta al fatto che dopo il test il metodo in esame aspetta altri input");
+      System.err.println("Tale eccezione non compromette l'esito del test ed è stata considerata la sua presenza\n");
+    }
+    String expectedOutput = UColor.RED + "Comando non riconosciuto: /ciao" + UColor.RESET + System.lineSeparator();
+    assertTrue(outContent.toString(StandardCharsets.UTF_8).contains(expectedOutput),
+        "Non è stato stampato il messaggio di errore corretto");
+  }
+
+  @AfterEach
+  void tearDown() {
+    System.setIn(inBackup);
+  }
+
 }
