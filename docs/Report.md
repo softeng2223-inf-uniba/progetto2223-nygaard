@@ -450,7 +450,7 @@ Per avere informazioni su tutti i comandi disponibili nel gioco, utilizzare il c
 
 ![esecuzione_help.png](img%2FManualeUtente%2Fesecuzione_help.png)
 
-Per iniziare una nuova partita, impostare la difficoltà utilizzando uno dei comandi tra ***/facile***, ***/medio*** o ***/difficile***, ed eseguire il comando ***/gioca***.
+Per iniziare una nuova partita eseguire il comando ***/gioca***.
 
 ### Comandi in gioco
 
