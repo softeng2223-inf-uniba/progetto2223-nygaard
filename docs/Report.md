@@ -2,15 +2,37 @@
 
 ## Indice
 
-- [Introduzione](#1-introduzione)
-- [Modello di Dominio](#2-modello-di-dominio)
-- [Requisiti specifici](#3-requisiti-specifici)
-  - [Requisiti funzionali](#31-requisiti-funzionali)
-  - [Requisiti non funzionali](#32-requisiti-non-funzionali)
-- [Manuale Utente](#7-manuale-utente)
-- [Analisi retrospettiva](#9-analisi-retrospettiva)
-  - [Sprint 0](#91-sprint-0-dimostrare-familiarità-con-github-e-il-processo-agile)
-  - [Sprint 1](#92-sprint-1-preparare-il-gioco)
+- [Report](#report)
+  - [Indice](#indice)
+- [1. Introduzione](#1-introduzione)
+  - [Gruppo Nygaard](#gruppo-nygaard)
+    - [**Davide Cirilli**](#davide-cirilli)
+    - [**Mattia Curri** ](#mattia-curri-)
+    - [**Emanuele Fontana**](#emanuele-fontana-)
+    - [**Stefano Labianca**](#stefano-labianca)
+    - [**Giuditta Izzo**](#giuditta-izzo-)
+- [2. Modello Di Dominio](#2-modello-di-dominio)
+- [3. Requisiti specifici](#3-requisiti-specifici)
+  - [3.1 Requisiti Funzionali](#31-requisiti-funzionali)
+  - [3.2 Requisiti non Funzionali](#32-requisiti-non-funzionali)
+- [7. Manuale utente](#7-manuale-utente)
+  - [Indice](#indice-1)
+  - [Passi preliminari](#passi-preliminari)
+    - [Installazione e configurazione di Docker](#installazione-e-configurazione-di-docker)
+    - [Autenticazione con Github](#autenticazione-con-github)
+  - [Avvio dell'applicazione](#avvio-dellapplicazione)
+    - [Comandi in gioco](#comandi-in-gioco)
+- [8. Processo di sviluppo e organizzazione del lavoro](#8-processo-di-sviluppo-e-organizzazione-del-lavoro)
+  - [8.1 Introduzione al processo di sviluppo](#81-introduzione-al-processo-di-sviluppo)
+  - [8.2 Roadmap degli sprint](#82-roadmap-degli-sprint)
+  - [8.3 Gestione degli Sprint](#83-gestione-degli-sprint)
+    - [Sprint 0](#sprint-0)
+    - [Sprint 1](#sprint-1)
+    - [Sprint 2](#sprint-2)
+  - [8.4 Software utilizzati](#84-software-utilizzati)
+- [9. Analisi retrospettiva](#9-analisi-retrospettiva)
+  - [**Sprint 0**](#91-sprint-0-dimostrare-familiarità-con-github-e-il-processo-agile)
+  - [**Sprint 1**](#92-sprint-1-preparare-il-gioco)
 # 1. Introduzione
 Nella seguente documentazione verrà descritta la relazione tecnica del progetto di **Ingegneria del Software Anno Accademico 2022-2023**.
 
@@ -419,6 +441,143 @@ Per iniziare una nuova partita, impostare la difficoltà utilizzando uno dei com
 Una volta avviata la partita è possibile visualizzare la griglia con le navi posizionate utilizzando il comando ***/svelagriglia***:
 
 ![svela_griglia.png](img%2FManualeUtente%2Fsvela_griglia.png)
+
+# 8. Processo di sviluppo e organizzazione del lavoro
+
+## 8.1 Introduzione al processo di sviluppo
+
+Durante l'intero periodo di sviluppo del progetto, il gruppo ha adoperato il metodo dello sviluppo software [*Agile*](https://agilemanifesto.org/iso/it/manifesto.html). Lo sviluppo Agile consiste in una fase iniziale di *analisi dei requisiti* con progressivi *miglioramenti* e *aggiornamenti* del prodotto software svolti dai membri del team di sviluppo.
+
+Seguendo i principi cardine dello sviluppo Agile, il team è stato in grado di pianificare e organizzare i task assegnati in maniera efficiente, con l'obbiettivo di ottenere un prodotto software stabile e robusto.
+
+Il processo di sviluppo è stato strutturato seguendo un approccio [*simil-Scrum*](https://www.scrum.org/). La metodologia Scrum offre delle iterazioni time-boxed, dette anche **Sprint**. In questo modo si è potuto suddividere l'intero sviluppo del progetto in 3 Sprint, ciascuno dei quali avente durata di 2 settimane.
+
+Il professore ha interpretato il ruolo di **Product Owner**. Per ogni Sprint, in aula e via [_Microsoft Teams_](https://www.microsoft.com/en-us/microsoft-teams/group-chat-software), ci sono stati comunicati i requisiti, sotto forma di *Definition of Done* e *User Story*. Il team ha provveduto a realizzare una Board per ogni Sprint e dallo Sprint 1 è stato anche realizzato il Product Backlog, per contenere le User Story degli Sprint successivi.
+
+E' stata definita un'organizzazione in stile Kanban per una Board avente 5 sezioni:
+- **To Do**: Task da risolvere;
+- **In Progress**: Task prese in carico dall'assignee;
+- **Review**: Task risolte, in fase di revisione;
+- **Ready**: Task risolte e revisionate dai reviewers;
+- **Done**: Task risolte, revisionate dai reviewers e approvate dallo Scrum Master. 
+
+La Board è stata gestita utilizzando la sezione Project messa a disposizione da Github. Tale organizzazione, per la gestione dei task, è stata imposta per lo Sprint 0 per mostrare al team un modo per dividere il lavoro e tracciare i progressi dei vari task.
+Successivamente, per le iterazioni successive, è stata concessa liberta al team di autogestirsi; avendo valutato come ottimale questa struttura, è stato deciso di mantenere lo stesso approccio utilizzato nello Sprint 0.
+
+Per la gestione dello sviluppo dei task è stato utilizzato il [_Github Flow_](https://docs.github.com/en/get-started/quickstart/github-flow): Per ogni issue, identificata progressivamente con `#n`, è stato creato un branch, identificato con `issue#n`, da parte del componente a cui è stata assegnata la issue. Una volta che il componente, ha concluso 
+il suo lavoro, veniva sottoposto ad un minimo di 2 reviewers, attraverso una **Pull Request**, in cui si discutevano eventuali problemi e/o migliorie per portare a termine la issue. Dallo Sprint 1 per le User Story che, in fase di analisi risultavano essere quelle che avrebbero richiesto più effort, si è scelto di inserire come reviewers 
+l'intero team, ad eccezione di chi ha sviluppato la User Story in questione. Una volta approvata la Pull Request, il suo branch viene unito 
+al branch principale  e, una volta unito, il branch della Pull Request viene cancellato.
+
+Ad ogni Sprint, svolto all'interno del progetto, è stato dedicato una **Milestone** ed un **Project** dove, all'interno di ogni Project, sono state insertite le issue da svolgere per lo Sprint corrente.
+In questo modo, è stato possibile avere un quadro generale dei task dei progressi fatto dal team, tenendo così traccia di quali erano le issue da iniziare, quali in corso, quali in revisione e quali pronte alla revisione dello Scrum Master.
+
+Ogni qualvolta una issue veniva conclusa, i progressi di completamento della Milestone venivano aggiornati e, il suo completamento, significava il completamento delle issue assegnate per lo Sprint corrente.
+
+Con l'inizio dello Sprint 2, sono stati utilizzati due Project: 
+- Il primo è stato dedicato alle user story dello Sprint 2 più eventuali migliorie;
+- Il secondo, rinominato **Product Backlog**, contiene tutte le user story di tutti gli Sprint da implementare e risoluzioni di bug 
+riscontrati negli Sprint precedenti,che riguardavano le user story già implementate.
+
+
+## 8.2 Roadmap degli sprint
+
+| Sprint No. | Descrizione                                           | Data Inizio | Data Fine  | Durata    | Data Feedback |
+| ---------- | ----------------------------------------------------- | ----------- | ---------- | --------- | ------------- |
+| 0          | Dimostrare familiarità con GitHub e il processo agile | 3/04/2022  | 14/04/2022 | 11 giorni | 26/04/2022    |
+| 1          | Preparare il gioco                                | 03/05/2022  | 19/05/2022 | 16 giorni | 29/05/2022    |
+| 2          | Completare il gioco, assicurando la qualità del lavoro svolto               | 30/05/2022  | 14/06/2022 | 14 giorni | 15-28/06/2022 | 
+
+## 8.3 Gestione degli Sprint
+
+Dato l'utilizzo del framework Scrum, gli Sprint si compongono di quattro fasi principali: analisi, progettazione, implementazione e testing
+
+Alla fine dello Sprint 1 e dello Sprint 2, abbiamo intrapreso una fase di manutenzione evolutiva del codice.
+
+In generale sono state seguite queste regole:
+- Le issue tecniche, riguardanti Github e documentazione, sono state affidate a [_Stefano Labianca_](#stefano-labianca) e a [_Mattia Curri_](#mattia-curri-), date le loro conoscenze
+pregresse con il Version Control;
+- Le issue che richiedevano maggiori capacità di gestione e stesura di algoritmi complessi, sono state assegnate a [_Davide Cirilli_](#davide-cirilli);
+- Le restanti issue sono state assegnate principalmente a [_Giuditta Izzo_](#giuditta-izzo-) e a [_Emanuele Fontana_](#emanuele-fontana-), non escludendo però gli alti membri del team in modo da 
+distribuire il carico di lavoro in maniera equa.
+
+### Sprint 0
+
+Lo *Sprint Goal* era quello di mostrare familiarità con [_Git_](https://git-scm.com/), [_Github_](https://github.com/) e il processo Agile. 
+
+- Per questo Sprint si è deciso, al seguito della data inizio dello Sprint, di incontrarsi in uno Scrum Meeting, della durata di circa 30 minuti, per svolgere la **fase di analisi**, ovvero assegnare i task e stabilire le modalità di lavoro successive. 
+<br> In particolare si è deciso di prevedere una prima fase di lavoro on-site, in modo che tutti imparassero a padroneggiare gli strumenti necessari e per testare il nostro modo di lavorare individualmente in un contesto collaborativo. Questa scelta si è rivelata efficace sul lungo termine, dato che non sono sorte problematiche di alcun tipo nello Sprint stesso e in quelli successivi.
+
+- In questo Sprint, i task riguardavano per lo più documentazione in modo da permettere ai componenti del team di prendere confidenza con gli strumenti e i processi senza aggiungere complicazione dovute all'analisi, alla progettazione e alla stesura di codice. Data quindi la natura delle attività, la **fase di progettazione** non è stata inclusa.
+
+- La **fase di implementazione** ha previsto la stesura del codice di condotta per definire convenzioni interne, la modifica della [*Guida per lo studente.md*](Guida%20per%20lo%20studente.md), del [*README.md*](../README.md) ed è stato creato un file che conteneva la biografia dell'[*ispiratore del gruppo*](ISPIRATORE.md).
+
+- La **fase di testing** ha previsto la revisione di tali documenti per correggere eventuali errori sfuggiti nelle Review, e di migliorie applicabili alla repository, come ad esempio la correzione della struttura nel README oppure l'eliminazione delle immagini inutilizzate dalla Guida per lo Studente.md.
+
+Il primo approccio all'utilizzo di Github, di alcuni componenti del team, è stato facilitato dalla precedente esperienza di utilizzo di altri componenti.
+
+### Sprint 1
+
+Lo *Sprint Goal* era quello di preparare il gioco.
+
+- Nella **fase di analisi** è stato indetto uno Scrum Meeting per leggere e assegnare i task che avrebbero richiesti più sforzi, in modo da garantire una suddivisione il più possibile equa della mole di lavoro prevista, considerando le conoscenze pregresse di ogni singolo componente. <br>
+In particolare, la User Story più onerosa individuata è stata la ***RF5***: *iniziare una nuova partita*, assegnata a [*Davide Cirilli*](#davide-cirilli) poichè ha esperienza con l'utilizzo di [*Algoritmi di Backtracking*](https://en.wikipedia.org/wiki/Backtracking).<br> Inoltre, si è individuata la necessità di costruire uno scheletro del codice necessario allo sviluppo delle User Story.
+
+- Nella **fase di progettazione** è stato sviluppato il [*modello di dominio*](#2-modello-di-dominio) con prospettiva concettuale. Questa fase ha richiesto una [*continua comunicazione*](https://github.com/softeng2223-inf-uniba/progetto2223-nygaard/pull/39) tra l'incaricato alla progettazione e i reviewers del lavoro, dato che il modello rappresenta una visione di insieme sull'intero progetto.
+ 
+- Nella **fase di implementazione** ogni assignee ha lavorato individualmente, coordinandosi con gli altri componenti del team per limitare il più possibile eventuali **Merge Conflicts**. 
+  
+- Nella **fase di testing**, del lavoro svolto, i componenti coinvolti (Assignee e Reviewers) hanno adoperato una metodologia sincrona e una asincrona: 
+  - In caso di *comunicazioni sincrone*, è stato utilizzato un server [*Discord*](https://discord.com/), per testare in tempo reale il software, utilizzando il debugger e avviando l'applicazione per testare tutti i possibili input, per assicurarne la robustezza. 
+  - In maniera *asincrona*, laddove non fosse possibile la presenza nei meeting, venivano sfruttati gli strumenti messi a disposizione dalle Pull Request di Github: si è rivelata molto utile la possibilità di proporre delle suggestions da parte dei reviewers direttamente nel codice permettendo all'assignee di fare direttamente i commit per apportare la miglioria proposta.
+  <br> Nel caso di problemi maggiori, veninva lasciato all'assignee il compito di risolverli.
+
+### Sprint 2
+
+Lo _Sprint Goal_ era quello di completare il gioco, assicurandone la sua qualità.
+- Nella **fase di analisi** è stato indetto uno Scrum Meeting, per discuttere e per assegnare i vari task ai membri del gruppo di lavoro. In particolare, una volta finite le task implementative, si è scelto di dedicare del tempo alla **manutenzione evolutiva** del codice scritto, così da ridurre il più possibile _codice ridondante_, migliorando di conseguenza.
+- Nella **fase di progettazione** sono stati sviluppati il **diagramma dei package**,  relativo al System Design, insieme ai **diagrammi delle classi** e i **diagrammi di sequenza** delle user story principali, ovvero:
+  - _Abbandona partita_;
+  - _Effetuare un colpo_;
+  - _Iniziare una nuova partita_.
+- Nella **fase implementativa** ogni assignee ha continuato a lavorare individualmente alla propria user story, mantenendosi sempre in contatto con gli altri membri del team. 
+Una volta terminate le user story del codice, [*Mattia Curri*](#mattia-curri-) si è dedicato alla successiva fase di manutenzione evolutiva, richiedendo attivamente feedback agli altri membri del gruppo di lavoro, sfruttando i canali comunicativi interni al gruppo.
+- La **fase di testing** è stata sviluppata da [*Mattia Curri*](#mattia-curri-) e da [*Davide Cirilli*](#davide-cirilli) e, durante la seguente fase, i due membri del gruppo di lavoro hanno sviluppato i test comunicando in chiamata vocale, attraverso un server [*Discord*](https://discord.com/), sfruttando
+a pieno le funzionalità del tools [*Code With Me*](https://www.jetbrains.com/code-with-me/), integrato nell'IDE di [*IntelliJ IDEA*](https://www.jetbrains.com/idea/).
+
+## 8.4 Software utilizzati
+- **Organizzazione e Review del lavoro**
+  - [*Microsoft Teams*](https://www.microsoft.com/en-us/microsoft-teams/group-chat-software), in cui venivano definiti i compiti per ogni Sprint;
+  - [*Discord*](https://discord.com/), per le riunioni interne al team;
+  - [*Whatsapp*](https://www.whatsapp.com/), per organizzare le riunioni sincrone.
+- **Ambienti di sviluppo**
+  - [*IntelliJ IDEA*](https://www.jetbrains.com/idea/), perchè è stato ritenuto dai componenti del team il miglior IDE sul mercato per lo sviluppo Java e per le integrazioni con Github. Si è anche rivelato un ottimo text editor per il Markdown;
+    - *Plugin aggiuntivi*
+      - [*CheckStyle IDEA*](https://plugins.jetbrains.com/plugin/1065-checkstyle-idea), per controllare eventuali problemi di CheckStyle evitando così di eseguire sempre il comando `./gradlew build`;
+      - [*Gradle*](https://gradle.org/), utilizzato per l'esecuzione del programma all'interno di IntelliJ;
+      - [*Code With Me*](https://www.jetbrains.com/code-with-me/) è un tool di IntelliJ che permette di lavorare in maniera collaborativa su un progetto, permettendo di 
+      condividere il proprio IDE con altri utenti, in modo da poter lavorare in maniera sincrona sullo stesso progetto.
+  - [*Visual Studio Code*](https://code.visualstudio.com/), utilizzato prettamente come text editor per il Markdown.
+- **Software per la creazione di diagrammi**
+  - [*StarUML*](https://staruml.io/), dato il precedente utilizzo di alcuni membri del team. 
+
+## 8.5 Comunicazione interna al team
+
+![discord.jpg](img%2FCanaliDiComunicazione%2Fdiscord.jpg)
+
+*In questa foto è possibile vedere come Discord sia stato utile per lo svolgimento del lavoro, grazie all'uso di canali vocali, testuali e la possibilità di condividere il proprio schermo.*
+
+<br />
+
+![chat-discord.jpg](img%2FCanaliDiComunicazione%2Fchat-discord.jpg)
+
+*In questa foto è possibile vedere l'uso della chat testuale di Discord, in cui condividere immagini e file.*
+
+<br />
+
+![wp.jpg](img%2FCanaliDiComunicazione%2Fwp.jpg)
+
+*Esempio di comunicazione asincrona tramite gruppo Whatsapp*
 
 # 9. Analisi retrospettiva
 
