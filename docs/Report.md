@@ -148,7 +148,7 @@ Di seguito, i ***Requisiti Funzionali*** del progetto, facenti parte della *User
 
 <br/>
 
-- ***RF3**: impostare il livello di gioco per variare il numero massimo di tentativi falliti*
+- *[**RF3**](https://github.com/softeng2223-inf-uniba/progetto2223-nygaard/issues/27): impostare il livello di gioco per variare il numero massimo di tentativi falliti*
 
   Come giocatore voglio impostare il livello di gioco per variare il numero massimo di tentativi sbagliati.
 
