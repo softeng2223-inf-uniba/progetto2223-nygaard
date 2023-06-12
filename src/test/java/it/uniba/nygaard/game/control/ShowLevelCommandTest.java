@@ -27,4 +27,19 @@ class ShowLevelCommandTest {
     System.setOut(new PrintStream(outContent, true, StandardCharsets.UTF_8));
   }
 
+  @Test
+  @DisplayName("/mostralivello con troppi argomenti")
+  void testShowLevelCommandWithTooManyArgument() {
+    String[] args = new String[]{"/mostralivello", "stringa"};
+    try {
+      execute.invoke(showLevelCommand, (Object) args);
+    } catch (IllegalAccessException | InvocationTargetException e) {
+      fail("Impossibile invocare il metodo executeCommand");
+    }
+    String expectedOutput = UColor.CYAN + "Il comando dovrebbe essere usato come segue: /mostralivello" + UColor.RESET
+        + System.lineSeparator();
+    assertEquals(expectedOutput, outContent.toString(StandardCharsets.UTF_8),
+        "Non è stato stampato il messaggio di errore corretto");
+  }
+
 }
