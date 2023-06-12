@@ -86,10 +86,9 @@ final class SetDifficultyCommand extends Command {
   }
 
   /**
-   * <h3> setDifficulty </h3>
+   * <h3> setNewMatchDifficulty </h3>
    * <p>
-   * Imposta la difficoltà se questa non è già impostata,
-   * altrimenti chiede all'utente se vuole cambiare difficoltà.
+   * Imposta la difficoltà chiedendo all'utente se vuole cambiarla.
    * </p>
    */
   private void setNewMatchDifficulty(final int newMatchDifficulty) {
@@ -114,6 +113,12 @@ final class SetDifficultyCommand extends Command {
     SetDifficultyBoundary.operationDone();
   }
 
+  /**
+   * <h3> setNewDiffAttempts </h3>
+   * <p>
+   * Imposta il numero di tentativi per una difficoltà.
+   * </p>
+   */
   private void setNewDiffAttempts(final int difficultyToModify) {
     int attempts = GameManager.getMatchAttempts();
     Match p = GameManager.getMatch();
