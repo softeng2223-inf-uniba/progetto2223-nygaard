@@ -90,10 +90,12 @@ Il progetto svolto, consiste nella realizzazione della **Battaglia Navale**, sot
 In questa realizzazione, il giocatore si scontrerà contro il proprio computer che, ad inizio partita, genererà casualmente le posizioni delle navi. 
 Spetterà quindi al giocatore trovarle tutte e affondarle prima di esaurire il numero massimo di tentaviti falliti dati.
 
-Il numero massimo di tentativi falliti consentiti, dipende dalla difficoltà scelta:
+Il numero massimo di tentativi falliti consentiti all'avvio dell'applicazione presenta i seguenti valori, in base alla difficoltà:
 * **Facile**: Massimo 50;
 * **Medio**: Massimo 30;
 * **Difficile**: Massimo 10;
+
+La difficoltà di default è **Medio**. Sarà comunque possibile personalizzare il numero di tentativi utilizzando gli appositi comandi.
 
 # 2. Modello Di Dominio
 
