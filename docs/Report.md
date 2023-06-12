@@ -134,7 +134,7 @@ Di seguito, i ***Requisiti Funzionali*** del progetto, facenti parte della *User
 
 <br/>
 
-- ***RF2**: chiudere il gioco*
+- *[**RF2**](https://github.com/softeng2223-inf-uniba/progetto2223-nygaard/issues/26): chiudere il gioco*
 
   Come giocatore voglio chiudere il gioco.
 
