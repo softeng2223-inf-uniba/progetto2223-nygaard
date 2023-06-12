@@ -199,4 +199,19 @@ class SetDifficultyCommandTest {
     assertTrue(outContent.toString(StandardCharsets.UTF_8).contains(expectedOutput),
         "Non è stato stampato il messaggio di operazione completata");
   }
+
+  @Test
+  @DisplayName("Cambio difficoltà confermato, controlla che la difficoltà sia stata impostata correttamente")
+  void testSetDifficultyCommandAffirmativeAnswerSet() {
+    ByteArrayInputStream in = new ByteArrayInputStream("y\n".getBytes(StandardCharsets.UTF_8));
+    System.setIn(in);
+    String[] args = new String[]{"/facile"};
+    try {
+      execute.invoke(setDifficultyCommand, (Object) args);
+    } catch (IllegalAccessException | InvocationTargetException e) {
+      fail("Impossibile invocare il metodo executeCommand");
+    }
+    assertEquals(UDifficulty.DIFFICULTY_EASY, GameManager.getMatch().getDifficulty(),
+        "La difficoltà non è stata impostata correttamente");
+  }
 }
