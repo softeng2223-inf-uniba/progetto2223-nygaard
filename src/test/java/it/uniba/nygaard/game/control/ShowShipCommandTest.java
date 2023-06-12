@@ -25,4 +25,19 @@ class ShowShipCommandTest {
     outContent.reset();
     System.setOut(new PrintStream(outContent, true, StandardCharsets.UTF_8));
   }
+
+  @Test
+  @DisplayName("/mostranavi con troppi argomenti")
+  void testShowShipCommandWithTooManyArgument() {
+    String[] args = new String[]{"/mostranavi", "stringa"};
+    try {
+      execute.invoke(showShipCommand, (Object) args);
+    } catch (Exception e) {
+      fail("Impossibile invocare il metodo executeCommand");
+    }
+    String expectedOutput = UColor.CYAN + "Il comando dovrebbe essere usato come segue: /mostranavi" + UColor.RESET
+        + System.lineSeparator();
+    assertEquals(expectedOutput, outContent.toString(StandardCharsets.UTF_8),
+        "Non è stato stampato il messaggio di errore corretto");
+  }
 }
