@@ -557,6 +557,9 @@ a pieno le funzionalità del tools [*Code With Me*](https://www.jetbrains.com/co
 
 ## 8.5 Comunicazione interna al team
 
+![discord.jpg](img%2FCanaliDiComunicazione%2Fdiscord.jpg)
+*In questa foto è possibile vedere come Discord sia stato utile per lo svolgimento del lavoro, grazie all'uso di canali vocali, testuali e la possibilità di condividere il proprio schermo.*
+
 
 
 # 9. Analisi retrospettiva
