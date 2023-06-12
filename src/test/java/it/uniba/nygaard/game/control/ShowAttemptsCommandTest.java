@@ -61,4 +61,21 @@ class ShowAttemptsCommandTest {
         "Non è stato stampato il messaggio corretto");
   }
 
+  @Test
+  @DisplayName("/mostratentativi non in gioco")
+  void testShowAttemptsCommandNotInGame() {
+    String[] args = new String[]{"/mostratentativi"};
+    Match match = GameManager.getMatch();
+    match.setInGame(false);
+    try {
+      execute.invoke(showAttemptsCommand, (Object) args);
+    } catch (IllegalAccessException | InvocationTargetException e) {
+      fail("Impossibile invocare il metodo executeCommand");
+    }
+    String expectedOutput = UColor.CYAN + "Puoi fallire al massimo " + UColor.BOLD
+        + match.getAttempts(match.getDifficulty()) + " tentativi" + UColor.RESET + System.lineSeparator();
+    assertEquals(expectedOutput, outContent.toString(StandardCharsets.UTF_8),
+        "Non è stato stampato il messaggio corretto");
+  }
+
 }
