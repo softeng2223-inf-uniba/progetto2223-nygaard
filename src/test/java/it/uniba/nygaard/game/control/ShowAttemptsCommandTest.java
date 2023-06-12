@@ -27,4 +27,19 @@ class ShowAttemptsCommandTest {
     GameManager.setMatch(new Match());
   }
 
+  @Test
+  @DisplayName("/mostratentativi con troppi argomenti")
+  void testShowAttemptsCommandWithTooManyArgument() {
+    String[] args = new String[]{"/mostratentativi", "stringa"};
+    try {
+      execute.invoke(showAttemptsCommand, (Object) args);
+    } catch (IllegalAccessException | InvocationTargetException e) {
+      fail("Impossibile invocare il metodo executeCommand");
+    }
+    String expectedOutput = UColor.CYAN + "Il comando dovrebbe essere usato come segue: /mostratentativi" + UColor.RESET
+        + System.lineSeparator();
+    assertEquals(expectedOutput, outContent.toString(StandardCharsets.UTF_8),
+        "Il comando non ha stampato il numero di tentativi corretto");
+  }
+
 }
