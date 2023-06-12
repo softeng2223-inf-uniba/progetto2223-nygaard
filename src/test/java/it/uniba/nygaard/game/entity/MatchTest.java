@@ -155,4 +155,21 @@ class MatchTest {
     }
   }
 
+  @Test
+  @DisplayName("Colpo che affonda una nave")
+  void testHitSank() {
+    assumeTrue(match.initializeShips(UShip.MIN_SHIP));
+    for (int i = 0; i < UGrid.STANDARD_GRID_SIZE; i++) {
+      for (int j = 0; j < UGrid.STANDARD_GRID_SIZE; j++) {
+        if (defenseGrid.getCellCharacter(i, j) == UGrid.SHIP_CHARACTER) {
+          if (ships[defenseGrid.getCellShipIndex(i, j)].getHp() == 1) {
+            assertEquals(UResult.SANK_CODE, match.hit(i, j), "Nave affondata non rilevata");
+          } else {
+            match.hit(i, j);
+          }
+        }
+      }
+    }
+  }
+
 }
