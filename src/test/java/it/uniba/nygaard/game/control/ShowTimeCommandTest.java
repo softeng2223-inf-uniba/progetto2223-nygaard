@@ -42,4 +42,20 @@ class ShowTimeCommandTest {
     assertEquals(expectedOutput, outContent.toString(StandardCharsets.UTF_8),
         "Non è stato stampato il messaggio di errore corretto");
   }
+
+  @Test
+  @DisplayName("/mostratempo non in gioco")
+  void testShowTimeCommandNotInGame() {
+    String[] args = new String[]{"/mostratempo"};
+    GameManager.getMatch().setInGame(false);
+    try {
+      execute.invoke(showTimeCommand, (Object) args);
+    } catch (IllegalAccessException | InvocationTargetException e) {
+      fail("Impossibile invocare il metodo executeCommand");
+    }
+    String expectedOutput = UColor.RED + "Non puoi visualizzare il tempo rimanente se non sei in partita" + UColor.RESET
+        + System.lineSeparator();
+    assertEquals(expectedOutput, outContent.toString(StandardCharsets.UTF_8),
+        "Non è stato stampato il messaggio di errore corretto");
+  }
 }
