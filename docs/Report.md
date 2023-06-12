@@ -446,6 +446,26 @@ Una volta avviata la partita è possibile visualizzare la griglia con le navi po
 
 ## 8.1 Introduzione al processo di sviluppo
 
+Durante l'intero periodo di sviluppo del progetto, il gruppo ha adoperato il metodo dello sviluppo software [*Agile*](https://agilemanifesto.org/iso/it/manifesto.html). Lo sviluppo Agile consiste in una fase iniziale di *analisi dei requisiti* con progressivi *miglioramenti* e *aggiornamenti* del prodotto software svolti dai membri del team di sviluppo.
+
+Seguendo i principi cardine dello sviluppo Agile, il team è stato in grado di pianificare e organizzare i task assegnati in maniera efficiente, con l'obbiettivo di ottenere un prodotto software stabile e robusto.
+
+Il processo di sviluppo è stato strutturato seguendo un approccio [*simil-Scrum*](https://www.scrum.org/). La metodologia Scrum offre delle iterazioni time-boxed, dette anche **Sprint**. In questo modo si è potuto suddividere l'intero sviluppo del progetto in 3 Sprint, ciascuno dei quali avente durata di 2 settimane.
+
+Il professore ha interpretato il ruolo di **Product Owner**. Per ogni Sprint, in aula e via [Microsoft Teams](https://www.microsoft.com/en-us/microsoft-teams/group-chat-software), ci sono stati comunicati i requisiti, sotto forma di *Definition of Done* e *User Story*. Il team ha provveduto a realizzare una Board per ogni Sprint e dallo Sprint 1 è stato anche realizzato il Product Backlog, per contenere le User Story degli Sprint successivi.
+
+Il professore, nel ruolo dello **Scrum Master**, ha definito un'organizzazione in stile Kanban per una Board avente 5 sezioni:
+- **To Do**: Task da risolvere;
+- **In Progress**: Task prese in carico dall'assignee;
+- **Review**: Task risolte, in fase di revisione;
+- **Ready**: Task risolte e revisionate dai reviewers;
+- **Done**: Task risolte, revisionate dai reviewers e approvate dallo Scrum Master. 
+
+La Board è stata gestita utilizzando la sezione Project messa a disposizione da Github. Tale organizzazione, per la gestione dei task, è stata imposta per lo Sprint 0 per mostrare al team un modo per dividere il lavoro e tracciare i progressi dei vari task.
+Successivamente, per le iterazioni successive, è stata concessa liberta al team di autogestirsi; avendo valutato come ottimale questa struttura, è stato deciso di mantenere lo stesso approccio utilizzato nello Sprint 0.
+
+Per la gestione dello sviluppo dei task è stato utilizzato il [Github Flow](https://docs.github.com/en/get-started/quickstart/github-flow): Per ogni issue, identificata progressivamente con `#n`, è stato creato un branch, identificato con `issue#n`, da parte del componente a cui è stata assegnata la issue. Una volta che il componente, ha concluso il suo lavoro, veniva sottoposto ad un minimo di 2 reviewers, attraverso una **Pull Request**, in cui si discutevano eventuali problemi e/o migliorie per portare a termine la issue. Dallo Sprint 1 per le User Story che, in fase di analisi risultavano essere quelle che avrebbero richiesto più effort, si è scelto di inserire come reviewers l'intero team, ad eccezione di chi ha sviluppato la User Story in questione. Una volta approvata la Pull Request unito al branch principale, cancellato successivamente il branch usato per la specifica issue.
+
 
 
 # 9. Analisi retrospettiva
