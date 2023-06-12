@@ -43,4 +43,21 @@ class ExitCommandTest {
     assertEquals(expectedOutput, outContent.toString(StandardCharsets.UTF_8),
         "Non è stato stampato il messaggio di errore corretto");
   }
+
+  @Test
+  @DisplayName("/esci non confermato")
+  void testExitCommandNegativeAnswer() {
+    ByteArrayInputStream in = new ByteArrayInputStream("n\n".getBytes(StandardCharsets.UTF_8));
+    System.setIn(in);
+    String[] args = new String[]{"/esci"};
+    try {
+      execute.invoke(exitCommand, (Object) args);
+    } catch (IllegalAccessException | InvocationTargetException e) {
+      fail("Impossibile invocare il metodo executeCommand");
+    }
+    String expectedOutput = UColor.RED + "Uscita dall'applicazione annullata" + UColor.RESET
+        + System.lineSeparator();
+    assertTrue(outContent.toString(StandardCharsets.UTF_8).contains(expectedOutput),
+        "Non è stata stampata la frase prevista per l'operazione annullata");
+  }
 }
