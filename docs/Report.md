@@ -167,7 +167,7 @@ Di seguito, i ***Requisiti Funzionali*** del progetto, facenti parte della *User
 
 <br/>
 
-- ***RF4**: mostrare i tipi di nave e il numero*
+- *[**RF4**](https://github.com/softeng2223-inf-uniba/progetto2223-nygaard/issues/29): mostrare i tipi di nave e il numero*
 
   Come giocatore voglio mostrare i tipi di nave e il numero
   
