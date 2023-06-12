@@ -20,4 +20,24 @@ class ShipTest {
     rnd.setSeed(System.currentTimeMillis());
   }
 
+  @RepeatedTest(value = UShip.MAX_SHIP, name = "{displayName}: Test {currentRepetition} di {totalRepetitions}")
+  @DisplayName("Nave orizzontale fuori dalla griglia")
+  void testOutOfMapHorizontal() {
+    ship.setDirection(UShip.HORIZONTAL);
+    coord.setRow(UGrid.MIN_ROWS);
+    coord.setColumn((char) (UGrid.MIN_COLUMN + UGrid.STANDARD_GRID_SIZE - ship.getHp() + 1));
+    ship.setCoord(coord);
+    assertTrue(ship.outOfMap(grid), "Nave orizzontale fuori dalle colonne non rilevata");
+  }
+
+  @RepeatedTest(value = UShip.MAX_SHIP, name = "{displayName}: Test {currentRepetition} di {totalRepetitions}")
+  @DisplayName("Nave verticale fuori dalla griglia")
+  void testOutOfMapVertical() {
+    ship.setDirection(UShip.VERTICAL);
+    coord.setRow(UGrid.MIN_ROWS + UGrid.STANDARD_GRID_SIZE - ship.getHp() + 1);
+    coord.setColumn(UGrid.MIN_COLUMN);
+    ship.setCoord(coord);
+    assertTrue(ship.outOfMap(grid), "Nave verticale fuori dalle righe non rilevata");
+  }
+
 }
