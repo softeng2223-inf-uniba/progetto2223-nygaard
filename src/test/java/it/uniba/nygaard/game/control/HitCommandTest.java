@@ -74,4 +74,9 @@ class HitCommandTest {
     assertEquals(expectedOutput, outContent.toString(StandardCharsets.UTF_8),
         "Non è stato stampato il messaggio di errore corretto");
   }
+
+  @AfterEach
+  void tearDown() {
+    System.setIn(inBackup);
+  }
 }
