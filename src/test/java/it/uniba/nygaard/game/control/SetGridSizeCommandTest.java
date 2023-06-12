@@ -45,4 +45,20 @@ class SetGridSizeCommandTest {
     assertEquals(expectedOutput, outContent.toString(StandardCharsets.UTF_8),
         "Non è stato stampato il messaggio di errore corretto");
   }
+
+  @Test
+  @DisplayName("Cambio dimensione griglia in partita")
+  void testSetGridSizeCommandInGame() {
+    String[] args = new String[]{"/large"};
+    GameManager.getMatch().setInGame(true);
+    try {
+      execute.invoke(setGridSizeCommand, (Object) args);
+    } catch (IllegalAccessException | InvocationTargetException e) {
+      fail("Impossibile invocare il metodo executeCommand");
+    }
+    String expectedOutput = UColor.RED + "Non puoi cambiare le dimensioni della griglia durante una partita"
+        + UColor.RESET + System.lineSeparator();
+    assertEquals(expectedOutput, outContent.toString(StandardCharsets.UTF_8),
+        "Non è stato stampato il messaggio di errore corretto");
+  }
 }
