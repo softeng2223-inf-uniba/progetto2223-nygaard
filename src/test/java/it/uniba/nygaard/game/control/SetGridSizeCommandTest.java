@@ -30,4 +30,19 @@ class SetGridSizeCommandTest {
     GameManager.getMatch().setGridSize(UGrid.STANDARD_GRID_SIZE);
     GameManager.getMatch().setInGame(false);
   }
+
+  @Test
+  @DisplayName("Cambio dimensione griglia con troppi argomenti")
+  void testSetGridSizeCommandWithTooManyArgument() {
+    String[] args = new String[]{"/large", "stringa"};
+    try {
+      execute.invoke(setGridSizeCommand, (Object) args);
+    } catch (IllegalAccessException | InvocationTargetException e) {
+      fail("Impossibile invocare il metodo executeCommand");
+    }
+    String expectedOutput = UColor.CYAN + "Il comando dovrebbe essere usato come segue: "
+        + "/large" + UColor.RESET + System.lineSeparator();
+    assertEquals(expectedOutput, outContent.toString(StandardCharsets.UTF_8),
+        "Non è stato stampato il messaggio di errore corretto");
+  }
 }
