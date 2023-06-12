@@ -17,15 +17,6 @@ final class App {
   }
 
   /**
-   * Get a greeting sentence.
-   *
-   * @return the "Hello World!" string.
-   */
-  String getGreeting() {
-    return "Hello World!!!";
-  }
-
-  /**
    * <h3> Main </h3>
    * <p>
    * Punto d'ingresso dell'applicazione.
