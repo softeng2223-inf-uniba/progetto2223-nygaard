@@ -455,7 +455,11 @@ Il seguente *diagramma* è relativo agli **stati emotivi** e alle ragioni che li
 
 ![Arrabbiato Triste Felice](img/AnalisiRetrospettivaSprint1/ArrabbiatoTristeFelice1.png)
 
-Il seguente *diagramma* è il **Diagramma di affinità** presentato nella [sezione precedente](#91-sprint-0-dimostrare-familiarità-con-github-e-il-processo-agile):
+Il seguente *diagramma*, definito **Diagramma di affinità** raggruppa gli stati d'animo, precedentemente elencati, rispetto ai seguenti ambiti di lavoro:
+
+- *collaborazione*
+- *strumenti*
+- *problemi individuali*
 
 ![Diagramma di affinità](img/AnalisiRetrospettivaSprint1/DiagrammaDiAffinita'1.png)
 
