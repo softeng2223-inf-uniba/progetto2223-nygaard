@@ -69,8 +69,7 @@ final class SetDifficultyCommand extends Command {
         : UDifficulty.DIFFICULTY_HARD;
 
     if (command.length == 1) {
-      GameManager.setMatchDifficulty(difficultyInvolved);
-      setNewMatchDifficulty();
+      setNewMatchDifficulty(difficultyInvolved);
     } else {
       if (command[1].matches("^[1-9][0-9]*$")) {
         try {
@@ -93,8 +92,7 @@ final class SetDifficultyCommand extends Command {
    * altrimenti chiede all'utente se vuole cambiare difficoltà.
    * </p>
    */
-  private void setNewMatchDifficulty() {
-    int actualDifficulty = GameManager.getMatchDifficulty();
+  private void setNewMatchDifficulty(final int newMatchDifficulty) {
     Match p = GameManager.getMatch();
     if (p.getDifficulty() == newMatchDifficulty) {
       SetDifficultyBoundary.sameDifficulty();
