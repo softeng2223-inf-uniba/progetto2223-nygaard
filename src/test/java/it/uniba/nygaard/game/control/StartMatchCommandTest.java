@@ -57,4 +57,18 @@ class StartMatchCommandTest {
     assertEquals(expectedOutput, outContent.toString(StandardCharsets.UTF_8),
         "Non è stato stampato il messaggio di errore corretto");
   }
+
+  @Test
+  @DisplayName("/gioca dopo aver impostato il tempo massimo, controlla che il tempo massimo sia stato impostato")
+  void testStartMatchCommandStartTime() {
+    String[] args = new String[]{"/gioca"};
+    GameManager.getMatch().setMaxTime(1);
+    try {
+      execute.invoke(startMatchCommand, (Object) args);
+    } catch (IllegalAccessException | InvocationTargetException e) {
+      fail("Impossibile invocare il metodo executeCommand");
+    }
+    assertNotEquals(UTime.DEFAULT_TIME, GameManager.getMatch().getStartTime(),
+        "Il tempo di default non è stato cambiato");
+  }
 }
