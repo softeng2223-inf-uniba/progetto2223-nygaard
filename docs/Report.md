@@ -271,7 +271,7 @@ Di seguito, i ***Requisiti Funzionali*** del progetto, facenti parte della *User
 
 <br/>
 
-- ***RF11**: impostare il tempo di gioco*
+- *[**RF11**](https://github.com/softeng2223-inf-uniba/progetto2223-nygaard/issues/80): impostare il tempo di gioco*
 
   Come giocatore voglio impostare il tempo di gioco
 
