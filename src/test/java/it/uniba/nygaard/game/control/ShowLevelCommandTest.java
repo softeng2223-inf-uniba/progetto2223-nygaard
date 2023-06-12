@@ -42,4 +42,22 @@ class ShowLevelCommandTest {
         "Non è stato stampato il messaggio di errore corretto");
   }
 
+  @Test
+  @DisplayName("/mostralivello corretto")
+  void testShowLevelCommandCorrect() {
+    String[] args = new String[]{"/mostralivello"};
+    Match match = GameManager.getMatch();
+    try {
+      execute.invoke(showLevelCommand, (Object) args);
+    } catch (IllegalAccessException | InvocationTargetException e) {
+      fail("Impossibile invocare il metodo executeCommand");
+    }
+    String expectedOutput = "Livello di difficoltà scelto: " + UColor.BOLD + UColor.YELLOW
+        + match.getDifficultyNames(match.getDifficulty()) + UColor.RESET + "\nNumero massimo di tentativi falliti: "
+        + UColor.BOLD + UColor.YELLOW + match.getAttempts(match.getDifficulty()) + UColor.RESET
+        + System.lineSeparator();
+    assertEquals(expectedOutput, outContent.toString(StandardCharsets.UTF_8),
+        "Non è stato stampato il messaggio corretto");
+  }
+
 }
