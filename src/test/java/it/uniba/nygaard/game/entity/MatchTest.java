@@ -1,5 +1,27 @@
 package it.uniba.nygaard.game.entity;
 
+import it.uniba.nygaard.game.entity.grids.CellsGrid;
+import it.uniba.nygaard.game.entity.grids.CharactersGrid;
+import it.uniba.nygaard.game.entity.ships.Ship;
+import it.uniba.nygaard.game.entity.ships.ShipType;
+import it.uniba.nygaard.game.utility.UGrid;
+import it.uniba.nygaard.game.utility.UResult;
+import it.uniba.nygaard.game.utility.UShip;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.RepeatedTest;
+import org.junit.jupiter.api.Test;
+
+import java.lang.reflect.Field;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.fail;
+import static org.junit.jupiter.api.Assumptions.assumeTrue;
+
 class MatchTest {
 
   private static Match match;
