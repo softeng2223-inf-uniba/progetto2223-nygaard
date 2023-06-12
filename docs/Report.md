@@ -97,6 +97,8 @@ Il numero massimo di tentativi falliti consentiti all'avvio dell'applicazione pr
 
 La difficoltà di default è **Medio**. Sarà comunque possibile personalizzare il numero di tentativi utilizzando gli appositi comandi.
 
+All'avvio dell'applicazione di default verrà usata una griglia 10x10 ma sarà possibile in seguito selezionare altre opzioni di griglia attraverso specifici comandi.
+
 # 2. Modello Di Dominio
 
 *I diagrammi che verranno mostrati, all'interno della relazione, sono stati realizzati
