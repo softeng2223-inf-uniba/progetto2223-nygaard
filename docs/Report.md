@@ -527,7 +527,21 @@ Una volta terminate le user story del codice, [*Mattia Curri*](#mattia-curri-) s
 - La **fase di testing** è stata sviluppata da [*Mattia Curri*](#mattia-curri-) e da [*Davide Cirilli*](#davide-cirilli) e, durante la seguente fase, i due membri del gruppo di lavoro hanno sviluppato i test comunicando in chiamata vocale, attraverso un server [*Discord*](https://discord.com/), sfruttando
 a pieno le funzionalità del tools [*Code With Me*](https://www.jetbrains.com/code-with-me/), integrato nell'IDE di [*IntelliJ IDEA*](https://www.jetbrains.com/idea/)
 
-
+## 8.4 Software utilizzati
+- **Organizzazione e Review del lavoro**
+  - [*Microsoft Teams*](https://www.microsoft.com/en-us/microsoft-teams/group-chat-software), in cui venivano definiti i compiti per ogni Sprint;
+  - [*Discord*](https://discord.com/), per le riunioni interne al team;
+  - [*Whatsapp*](https://www.whatsapp.com/), per organizzare le riunioni sincrone.
+- **Ambienti di sviluppo**
+  - [*IntelliJ IDEA*](https://www.jetbrains.com/idea/), perchè è stato ritenuto dai componenti del team il miglior IDE sul mercato per lo sviluppo Java e per le integrazioni con Github. Si è anche rivelato un ottimo text editor per il Markdown;
+    - *Plugin aggiuntivi*
+      - [*CheckStyle IDEA*](https://plugins.jetbrains.com/plugin/1065-checkstyle-idea), per controllare eventuali problemi di CheckStyle evitando così di eseguire sempre il comando `./gradlew build`;
+      - [*Gradle*](https://gradle.org/), utilizzato per l'esecuzione del programma all'interno di IntelliJ;
+      - [*Code With Me*](https://www.jetbrains.com/code-with-me/) è un tool di IntelliJ che permette di lavorare in maniera collaborativa su un progetto, permettendo di 
+      condividere il proprio IDE con altri utenti, in modo da poter lavorare in maniera sincrona sullo stesso progetto.
+  - [*Visual Studio Code*](https://code.visualstudio.com/), utilizzato prettamente come text editor per il Markdown.
+- **Software per la creazione di diagrammi**
+  - [*StarUML*](https://staruml.io/), dato il precedente utilizzo di alcuni membri del team. 
 
 # 9. Analisi retrospettiva
 
