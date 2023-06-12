@@ -58,4 +58,36 @@ class ShowGridCommandTest {
         "Non è stato stampato il messaggio di errore corretto");
   }
 
+  @Test
+  @DisplayName("/mostragriglia non in gioco")
+  void testShowAttackGridCommandNotInGame() {
+    String[] args = new String[]{"/mostragriglia"};
+    GameManager.getMatch().setInGame(false);
+    try {
+      execute.invoke(revealGridCommand, (Object) args);
+    } catch (Exception e) {
+      fail("Impossibile invocare il metodo executeCommand");
+    }
+    String expectedOutput = UColor.RED + "Non puoi visualizzare le griglie se non sei in partita" + UColor.RESET
+        + System.lineSeparator();
+    assertEquals(expectedOutput, outContent.toString(StandardCharsets.UTF_8),
+        "Non è stato stampato il messaggio di errore corretto");
+  }
+
+  @Test
+  @DisplayName("/svelagriglia non in gioco")
+  void testShowDefenseGridCommandNotInGame() {
+    String[] args = new String[]{"/svelagriglia"};
+    GameManager.getMatch().setInGame(false);
+    try {
+      execute.invoke(revealGridCommand, (Object) args);
+    } catch (Exception e) {
+      fail("Impossibile invocare il metodo executeCommand");
+    }
+    String expectedOutput = UColor.RED + "Non puoi visualizzare le griglie se non sei in partita" + UColor.RESET
+        + System.lineSeparator();
+    assertEquals(expectedOutput, outContent.toString(StandardCharsets.UTF_8),
+        "Non è stato stampato il messaggio di errore corretto");
+  }
+
 }
