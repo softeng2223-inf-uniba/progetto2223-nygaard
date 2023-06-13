@@ -448,6 +448,9 @@ Alcuni test sono stati ripetuti più volte con parametri od oggetti diversi, in 
 
 Come criterio di terminazione del testing è stato adottato il criterio di copertura delle classi di equivalenza, ovvero si è deciso di terminare il testing quando tutti i casi di test relativi a tutte le classi di equivalenza sono stati eseguiti.
 
+***N.B.*** A causa della natura di alcuni metodi di libreria (es. Scanner) alcuni metodi lanciano eccezioni indesiderate quando vengono testati senza seguire il flusso naturale del programma.
+Per questo motivo all'interno dei metodi di test suddette eccezioni sono state catturate, reportate e successivamente ignorate in quanto non rilevanti ai fini del testing.
+
 # 7. Manuale utente
 
 ### Indice
