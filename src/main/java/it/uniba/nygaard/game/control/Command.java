@@ -16,7 +16,7 @@ abstract class Command {
    */
   private int minParamNumber;
   /**
-   * <h3> maxParam </h3>
+   * <h3> maxParamNumber </h3>
    * <p>
    * Numero massimo di parametri del comando.
    * </p>
