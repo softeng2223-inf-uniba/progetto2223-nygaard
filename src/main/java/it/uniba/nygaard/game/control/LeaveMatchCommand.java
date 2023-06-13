@@ -48,6 +48,8 @@ final class LeaveMatchCommand extends Command {
    * <h2> executeCommand </h2>
    * <p>
    * Esegue il comando per decidere se abbandonare la partita.
+   * Il comando è disponibile solo se non si è in partita.
+   * Se viene passato un numero sbagliato di parametri, viene stampato il come usare il comando.
    * </p>
    *
    * @param command comando da eseguire
