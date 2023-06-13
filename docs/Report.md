@@ -442,16 +442,25 @@ Se tutto è andato a buon fine, l'applicazione verrà avviata e verrà eseguita 
 - **Esempio di esecuzione senza argomenti**
 ![esempio_esecuzione_noargs.png](img%2FManualeUtente%2Fesempio_esecuzione_noargs.png)
 
-All'avvio dell'applicazione, verrà eseguita la schermata di benvenuto, con la scritta *Inserire un comando:* che viene visualizzata ogni qualvolta si richiede un comando all'utente.
+All'avvio dell'applicazione, verrà eseguita la schermata di benvenuto, con la scritta ***Inserire un comando:*** che viene visualizzata ogni qualvolta si richiede un comando all'utente.
 
 Per avere informazioni su tutti i comandi disponibili nel gioco, utilizzare il comando ***/help*** che mostrerà la lista dei comandi a disposizione seguiti da una breve descrizione del loro funzionamento:
 
 ![esecuzione_help.png](img%2FManualeUtente%2Fesecuzione_help.png)
 
-Per iniziare una nuova partita eseguire il comando ***/gioca***.
 
 ### Preparazione della partita
 
+Le caratteristiche principali di una partita sono modulari: l'utente ha la possibilità di modificare le seguenti caratteristiche della partita che giocherà:
+  - Dimensione della griglia su cui saranno posizionate le navi con i comandi ***/standard*** (griglia 10x10), ***/large*** (griglia 18x18), ***/extralarge*** (griglia 26x26)
+    - Di default la griglia è 10 x10
+  - Numero di tentativi di una specifica difficoltà con i comandi ***/facile*** *numero*, ***/medio*** *numero*, ***/difficile*** *numero*
+    - Di default il numero di tentativi è 50 per la difficoltà facile, 30 per la difficoltà media, 10 per la difficoltà difficile
+  - Numero di tentativi indipendenti dalla difficoltà (**Attenzione**: questo comando sovrascrive il numero di tentativi di **tutte** le difficoltà) col comando ***/tentativi*** *numero*
+  - Tempo a disposizione col comando ***/tempo*** *minuti*
+    - Di default, il tempo a disposizione è illimitato
+
+Per iniziare una nuova partita eseguire il comando ***/gioca***.
 
 ### Comandi in gioco
 
