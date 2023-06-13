@@ -464,7 +464,7 @@ public final class Match {
   /**
    * <h3> hit </h3>
    * <p>
-   * Il metodo hit colpisce la cella di coordinate (row, column) e restituisce cosa è stato colpito
+   * Il metodo hit colpisce la cella di coordinate (row, column) e restituisce cosa è stato colpito.
    * </p>
    *
    * @param row    Riga della cella da colpire.
