@@ -433,6 +433,8 @@ Sono stati implementati un totale di **164** casi di test di cui alcuni sono rip
 
 ![Build](img/Riepilogo del Test/buildSuccessful.png)
 
+## 6.3 Descrizione dei test effettuati
+
 # 7. Manuale utente
 
 ### Indice
