@@ -504,6 +504,10 @@ Per visualizzare la griglia che mostra i colpi effettuati è possibile utilizzar
 
 #### Visualizzare il numero di tentativi effettuati
 
+Per visualizzare il numero di tentativi effettuati, falliti, e il massimo numero di tentativi che possono essere falliti, è possibile utilizzare il comando ***/mostratentativi***:
+
+![/mostratentativi](img%2FManualeUtente%2Fmostra_tentativi.png)
+
 
 #### Visualizzare la griglia con le navi posizionate
 
