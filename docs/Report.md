@@ -392,6 +392,9 @@ Il funzionamento del software richiede:
   - [Preparazione della partita](#preparazione-della-partita)
   - [Comandi in gioco](#comandi-in-gioco)
     - [Colpire una cella](#colpire-una-cella)
+    - [Visualizzare la griglia d'attacco](#visualizzare-la-griglia-di-attacco)
+    - [Visualizzare il numero di tentativi effettuati](#visualizzare-il-numero-di-tentativi-effettuati)
+    - [Visualizzare il tempo rimanente](#visualizzare-il-tempo-rimanente)
     - [Visualizzare la griglia con le navi posizionate](#visualizzare-la-griglia-con-le-navi-posizionate)
 
 ## Passi preliminari
