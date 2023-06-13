@@ -463,6 +463,22 @@ Il package *Entity* dove sono contenuti:
 
 Questo package contiene dunque tutte le classi di tipo **Entity** previste dallo standard ECB.
 
+Il package *Control* dove sono contenuti:
+
+- Command è la classe astratta da cui derivano tutte le classi dei comandi. Di essi ne definisce il metodo principale `executeCommand()` e alcune caratteristiche comuni (come il numero dei parametri minimi e massimi).
+
+- I vari comandi corrispondendi ai [*requisiti funzionali*](#31-requisiti-funzionali)
+
+- GeneralControl si occupa di gestire la logica principale del gioco: inizializzazione, avvio, gestione dei comandi e chiusura.
+
+- GameManager si occupa della gestione della partita. In particolare permette alle varie classi di comunicare con la partita in corso.
+
+- TimeCounter si occupa della gestione del tempo di gioco.
+
+- ParamControl si occupa della gestione dei parametri all'avvio dell'applicazione.
+
+Questo package contiene dunque tutte le classi di tipo **Control** previste dallo standard ECB.
+
 # 6. Riepilogo del Test
 
 ## 6.1 Strumenti di analisi/testing del codice utilizzati
