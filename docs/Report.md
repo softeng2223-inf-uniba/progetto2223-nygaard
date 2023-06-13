@@ -384,6 +384,16 @@ Il funzionamento del software richiede:
 
 # 6. Riepilogo del Test
 
+## 6.1 Strumenti di analisi/testing del codice utilizzati
+
+- [JUnit 5](https://junit.org/junit5/)
+
+- [Checkstyle](https://checkstyle.sourceforge.io/)
+
+- [Spotbugs](https://spotbugs.github.io/)
+
+- [PMD](https://pmd.github.io/)
+
 # 7. Manuale utente
 
 ### Indice
