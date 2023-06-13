@@ -444,7 +444,24 @@ Il package *Nygaard* contiene tutti i package e le classi create dal team di svi
 - Boundary
 - Utility
 
+Il package *Entity* dove sono contenuti:
 
+- Match che rappresenta la partita in corso. Contiene tutte le informazioni necessarie per gestire la partita e le classi che la compongono.
+
+- package *Ships* che contiene:
+
+  - Coordinate: classe che rappresenta le coordinate di una cella della griglia di gioco
+  - Ship: classe che rappresenta una nave. Contiene tutte le informazioni sulla singola nave
+  - ShipType: enum che contiene i tipi di navi presenti nel gioco
+
+- package *Grids* che contiene:
+
+  - Grid: classe astrata che rappresenta una generica griglia
+  - Cell: classe che rappresenta una cella della griglia di gioco. Contiene tutte le informazioni sulla singola cella. In particolare contiene un riferimento alla nave che occupa la cella (se presente)
+  - CharactersGrid: classe che rappresenta la griglia di conoscenza del giocatore. Essa mostra le informazioni che il giocatore ha sulla griglia di gioco dell'avversario
+  - CellsGrid: classe che rappresenta la griglia di gioco. Essa è una griglia formata da Cell
+
+Questo package contiene dunque tutte le classi di tipo **Entity** previste dallo standard ECB.
 
 # 6. Riepilogo del Test
 
