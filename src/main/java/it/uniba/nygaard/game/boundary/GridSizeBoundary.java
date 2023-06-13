@@ -47,10 +47,10 @@ public final class GridSizeBoundary {
   }
 
   /**
-   * <h2> sameSizeError </h2>
+   * <h2> sameSize </h2>
    * <p>
    * Messaggio di errore per quando si tenta di impostare la dimensione della griglia
-   * con le stesse dimensioni attuali.
+   * con la stessa dimensione attuale.
    * </p>
    */
   public static void sameSize() {
