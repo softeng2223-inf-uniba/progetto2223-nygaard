@@ -36,7 +36,7 @@ abstract class Command {
   }
 
   /**
-   * <h3> setParamNumber </h3>
+   * <h3> setMaxParamNumber </h3>
    * <p>
    * Imposta il numero massimo di parametri del comando.
    * </p>
