@@ -498,6 +498,10 @@ Se il tempo a disposizione termina la partita verrà ritenuta conclusa, senza at
 
 #### Visualizzare la griglia di attacco
 
+Per visualizzare la griglia che mostra i colpi effettuati è possibile utilizzare il comando ***/mostragriglia***:
+
+![/mostragriglia](img%2FManualeUtente%2Fmostra_griglia.png)
+
 
 #### Visualizzare la griglia con le navi posizionate
 
