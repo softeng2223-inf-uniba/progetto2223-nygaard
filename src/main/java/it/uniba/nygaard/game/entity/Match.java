@@ -254,6 +254,14 @@ public final class Match {
     this.attempts[index] = value;
   }
 
+  /**
+   * <h3> getFailedAttempts </h3>
+   * <p>
+   * Restituisce il numero di tentativi falliti.
+   * </p>
+   *
+   * @return failedAttempts Tentativi falliti.
+   */
   public int getFailedAttempts() {
     return this.failedAttempts;
   }
