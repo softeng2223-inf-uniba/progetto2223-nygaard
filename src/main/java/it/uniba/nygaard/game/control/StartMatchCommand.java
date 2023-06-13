@@ -31,6 +31,7 @@ final class StartMatchCommand extends Command {
    * <h3> Costruttore </h3>
    * <p>
    * Costruttore della classe StartMatchCommand.
+   * Setta il numero minimo e massimo di parametri che rendono valido il comando.
    * </p>
    */
   private StartMatchCommand() {
