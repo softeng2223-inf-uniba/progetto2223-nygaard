@@ -49,6 +49,11 @@ public enum ShipType {
     this.hp = newHp;
   }
 
+  /**
+   * <h3> getNumShips </h3>
+   * Restituisce il numero di occorrenze della nave.
+   * @return
+   */
   public int getNumShips() {
     return numShips;
   }
