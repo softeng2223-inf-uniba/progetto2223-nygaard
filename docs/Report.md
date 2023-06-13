@@ -502,6 +502,8 @@ Per visualizzare la griglia che mostra i colpi effettuati è possibile utilizzar
 
 ![/mostragriglia](img%2FManualeUtente%2Fmostra_griglia.png)
 
+#### Visualizzare il numero di tentativi effettuati
+
 
 #### Visualizzare la griglia con le navi posizionate
 
