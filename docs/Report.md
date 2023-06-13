@@ -455,7 +455,7 @@ Per avere informazioni su tutti i comandi disponibili nel gioco, utilizzare il c
 
 Le caratteristiche principali di una partita sono modulari: l'utente ha la possibilità di modificare le seguenti caratteristiche della partita che giocherà:
   - Dimensione della griglia su cui saranno posizionate le navi con i comandi ***/standard*** (griglia 10x10), ***/large*** (griglia 18x18), ***/extralarge*** (griglia 26x26)
-    - Di default la griglia è 10 x10
+    - Di default la griglia è 10x10
   - Numero di tentativi di una specifica difficoltà con i comandi ***/facile*** *numero*, ***/medio*** *numero*, ***/difficile*** *numero*
     - L'utilizzo di questi comandi **NON** cambia la difficoltà per la prossima partita ma solo il numero di tentativi, per farlo utilizzare ***/facile***, ***/medio*** e ***/difficile*** senza argomenti.
     - Di default il numero di tentativi è 50 per la difficoltà facile, 30 per la difficoltà media, 10 per la difficoltà difficile
@@ -473,7 +473,7 @@ Per iniziare una nuova partita eseguire il comando ***/gioca***, che mostrerà l
 
 Per colpire una cella, è necessario digitare come comando la lettera della colonna seguita da un trattino - e dal numero della riga. 
 
-Ad esempio, per colpire la cella in posizione A1, digitare il comando ***A-1***:
+Ad esempio, per colpire la cella in posizione A1, digitare il comando ***A-1***.
 
 Sulla griglia verrà mostrato il colpo appena effettuato con un simbolo, che dipende dall'esito:
 
