@@ -58,6 +58,11 @@ public enum ShipType {
     return numShips;
   }
 
+  /**
+   * <h3> getHp </h3>
+   * Restituisce gli hp della nave.
+   * @return
+   */
   public int getHp() {
     return hp;
   }
