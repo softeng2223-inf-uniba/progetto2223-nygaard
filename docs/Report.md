@@ -482,6 +482,7 @@ Sulla griglia verrà mostrato il colpo appena effettuato con un simbolo, che dip
 | Colpito             | ***X*** | /                                                                                      |
 | Colpito e Affondato | ***#*** | Il simbolo sostituirà le ***X*** delle celle precedentemente colpite della stessa nave |
 
+**Attenzione!** Se si prova a colpire una cella già colpita, questo verrà considerato come un tentativo fallito.
 
 ![Esiti dei colpi](img%2FManualeUtente%2Fesiti_colpi.png)
 
