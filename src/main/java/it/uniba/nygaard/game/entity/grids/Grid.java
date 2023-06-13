@@ -28,7 +28,7 @@ public abstract class Grid {
   /**
    * <h3> Costruttore </h3>
    * <p>
-   * Costruttore della classe Grid.
+   * Costruttore della classe Grid. Imposta il numero massimo di righe e colonne.
    * </p>
    */
   Grid() {
