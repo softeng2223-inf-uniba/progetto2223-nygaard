@@ -438,6 +438,13 @@ Passiamo ora all'elenco dei package e delle classi in essi contenuti:
 Il package *app* dove è contenuta la classe App che si occupa dell'inizializzazione e avvio del software.
 Questo package è stato definito dal Product Owner.
 
+Il package *Nygaard* contiene tutti i package e le classi create dal team di sviluppo. In particolare abbiamo il package *game* dedicato al gioco nel quale troviamo i seguenti package:
+- Entity
+- Control
+- Boundary
+- Utility
+
+
 
 # 6. Riepilogo del Test
 
