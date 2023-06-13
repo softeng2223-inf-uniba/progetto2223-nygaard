@@ -508,6 +508,8 @@ Per visualizzare il numero di tentativi effettuati, falliti, e il massimo numero
 
 ![/mostratentativi](img%2FManualeUtente%2Fmostra_tentativi.png)
 
+#### Visualizzare il tempo rimanente
+
 
 #### Visualizzare la griglia con le navi posizionate
 
