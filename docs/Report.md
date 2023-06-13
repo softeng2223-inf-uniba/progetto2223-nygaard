@@ -479,6 +479,20 @@ Il package *Control* dove sono contenuti:
 
 Questo package contiene dunque tutte le classi di tipo **Control** previste dallo standard ECB.
 
+Il package *Boundary* dove sono contenuti:
+
+ - Le varie boundary per gestire gli output dei [*requisiti funzionali*](#31-requisiti-funzionali)
+
+ - InputBoundary che si occupa di gestire l'input dell'utente
+
+ - LogoBoundary che si occupa di mostrare il logo del gioco
+
+ - ParamsBoundary che si occupa della gestione delle stampe a video dipendenti dai parametri dei comandi/avvio applicazione
+
+ - DescriptionBoundary che si occupa di mostrare la descrizione del gioco
+
+Questo package contiene dunque tutte le classi di tipo **Entity** previste dallo standard ECB.
+
 # 6. Riepilogo del Test
 
 ## 6.1 Strumenti di analisi/testing del codice utilizzati
