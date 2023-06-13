@@ -15,7 +15,6 @@
 - [3. Requisiti specifici](#3-requisiti-specifici)
     - [3.1 Requisiti Funzionali](#31-requisiti-funzionali)
     - [3.2 Requisiti non Funzionali](#32-requisiti-non-funzionali)
-- [4. System Design](#4-system-design)
 - [6. Riepilogo del Testing](#6-riepilogo-del-test)
     - [6.1 Strumenti di analisi/testing del codice utilizzati](#61-strumenti-di-analisitesting-del-codice-utilizzati)
     - [6.2 Presentazione esiti test e considerazioni](#62-presentazione-esiti-test-e-considerazioni)
@@ -420,6 +419,10 @@ Il funzionamento del software richiede:
 # 4. System Design
 
 ## 4.1 Diagramma dei package
+
+![Diagramma dei package](img/Design/DiagrammaPackage.png)
+
+
 # 6. Riepilogo del Test
 
 ## 6.1 Strumenti di analisi/testing del codice utilizzati
