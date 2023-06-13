@@ -439,6 +439,13 @@ Seguendo l'organizzazione canonica della test suite è stata redatta una classe 
 Tutte le classi di test sono state raggruppate in un unico package denominato "test" separato dal resto del codice e la struttura delle classi nel package test rispecchia la struttura delle classi nel package main.
 Inoltre tutti i metodi di test hanno la stringa "test" come prefisso in testa al nome del metodo.
 
+I test sono stati effettuati utilizzando dei criteri **black-box** (o funzionali), ovvero selezionando i casi di test esclusivamente a partire dalle specifiche e senza conoscere la struttura interna del software.
+I criteri adottati sono:
+- **Suddivisione in classi di equivalenza**: i casi di test sono stati selezionati in modo da coprire tutti i possibili casi d'input, raggruppando i valori in classi di equivalenza.
+- **State-based testing**: i casi di test sono stati selezionati in modo da coprire tutti i possibili stati in cui può trovarsi il sistema (prima e dopo l'esecuzione del test).
+
+Alcuni test sono stati ripetuti più volte con parametri od oggetti diversi, in modo da coprire tutti i casi possibili oppure essere sicuri statisticamente di aver testato anche la natura intrinsecamente randomica di alcuni metodi (es. initializeShips).
+
 # 7. Manuale utente
 
 ### Indice
