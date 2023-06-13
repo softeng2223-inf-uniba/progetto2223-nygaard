@@ -26,6 +26,7 @@ final class AttemptsCommand extends Command {
    * <h3> Costruttore </h3>
    * <p>
    * Costruttore della classe AttemptsCommand.
+   * Setta il numero minimo e massimo di parametri che rendono valido il comando.
    * </p>
    */
   private AttemptsCommand() {
@@ -48,6 +49,8 @@ final class AttemptsCommand extends Command {
    * <p>
    * Esegue il comando per impostare un numero di tentativi
    * indipendentemente dalla difficoltà.
+   * Il comando è disponibile solo se non si è in partita.
+   * Se viene passato un numero sbagliato di parametri, viene stampato il come usare il comando.
    * </p>
    *
    * @param command Comando da eseguire.

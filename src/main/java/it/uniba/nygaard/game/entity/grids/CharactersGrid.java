@@ -26,6 +26,7 @@ public final class CharactersGrid extends Grid {
    * <h3> Costruttore </h3>
    * <p>
    * Costruttore della classe CharactersGrid.
+   * Inizializza la griglia di caratteri con caratteri di mare.
    * </p>
    *
    * @param dimension Dimensione della griglia.

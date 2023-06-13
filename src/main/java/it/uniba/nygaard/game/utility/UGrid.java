@@ -9,6 +9,12 @@ package it.uniba.nygaard.game.utility;
  *
  */
 public final class UGrid {
+  /**
+   * <h3> Costanti </h3>
+   * <p>
+   *   Costanti per la gestione della griglia di gioco.
+   * </p>
+   */
   public static final int COLUMNS_EDGE_WIDTH = 13;
   public static final int ROWS_EDGE_WIDTH = 8;
   public static final char SEA_CHARACTER = '~';

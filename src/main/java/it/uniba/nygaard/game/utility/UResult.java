@@ -9,7 +9,12 @@ package it.uniba.nygaard.game.utility;
  *
  */
 public final class UResult {
-
+  /**
+   * <h3> Costanti </h3>
+   * <p>
+   *   Costanti per la gestione del risultato di un attacco.
+   * </p>
+   */
   public static final int WATER_CODE = 0;
   public static final int HITTED_CODE = 1;
   public static final int SANK_CODE = 2;

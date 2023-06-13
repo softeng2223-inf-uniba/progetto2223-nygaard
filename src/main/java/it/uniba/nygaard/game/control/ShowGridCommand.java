@@ -27,6 +27,7 @@ final class ShowGridCommand extends Command {
    * <h3> Costruttore </h3>
    * <p>
    * Costruttore della classe ShowGridCommand.
+   * Setta il numero minimo e massimo di parametri che rendono valido il comando.
    * </p>
    */
   private ShowGridCommand() {
@@ -48,6 +49,8 @@ final class ShowGridCommand extends Command {
    * <h3> executeCommand </h3>
    * <p>
    * Esegue il comando per mostrare la griglia di attacco.
+   * Il comando è disponibile solo se si è in partita.
+   * Se viene passato un numero sbagliato di parametri, viene stampato il come usare il comando.
    * </p>
    *
    * @param command Comando da eseguire.

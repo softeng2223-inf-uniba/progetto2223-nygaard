@@ -40,6 +40,8 @@ public class Ship {
    * <h3> Costruttore </h3>
    * <p>
    * Costruttore della classe Ship.
+   * Imposta gli hp della nave.
+   * La nave è posizionata in orizzontale.
    * </p>
    *
    * @param newHp Hp della nave.

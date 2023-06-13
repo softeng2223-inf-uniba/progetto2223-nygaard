@@ -29,6 +29,9 @@ class Cell {
    * <h3> Costruttore </h3>
    * <p>
    * Costruttore della classe Cell.
+   * Inizializza il carattere della cella
+   * a quello passato come parametro e
+   * l'indice della nave a quello di mare.
    * </p>
    *
    * @param c Carattere della cella.

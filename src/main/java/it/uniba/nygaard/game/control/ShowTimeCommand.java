@@ -27,6 +27,7 @@ final class ShowTimeCommand extends Command {
    * <h3> Costruttore </h3>
    * <p>
    * Costruttore della classe ShowTimeCommand.
+   * Setta il numero minimo e massimo di parametri che rendono valido il comando.
    * </p>
    */
   private ShowTimeCommand() {
@@ -47,8 +48,10 @@ final class ShowTimeCommand extends Command {
   /**
    * <h3> executeCommand </h3>
    * <p>
-   * Esegue il comando di visualizzazione del tempo se si è in partita.
-   * </p>
+   * Il comando è disponibile solo se si è in partita.
+   * Se viene passato un numero sbagliato di parametri, viene stampato il come usare il comando.
+   * Se si è in partita, viene stampato il tempo trascorso dall'inizio della partita.
+   * * </p>
    *
    * @param command Comando da eseguire.
    */

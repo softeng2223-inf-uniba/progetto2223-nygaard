@@ -9,6 +9,12 @@ package it.uniba.nygaard.game.utility;
  *
  */
 public final class UShutdown {
+  /**
+   * <h3> Costanti </h3>
+   * <p>
+   *   Costanti per la gestione della terminazione del gioco.
+   * </p>
+   */
   public static final int NOT_TERMINATION_CODE = 0;
   public static final int WIN_TERMINATION_CODE = 1;
   public static final int OUT_OF_ATTEMPTS_TERMINATION_CODE = 2;

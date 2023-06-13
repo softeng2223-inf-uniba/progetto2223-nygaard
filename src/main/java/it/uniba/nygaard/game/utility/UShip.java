@@ -1,14 +1,21 @@
 package it.uniba.nygaard.game.utility;
 
 /**
- * <h2> UColor </h2>
+ * <h2> UShip </h2>
  * <p>
- *   La classe UColor contiene delle costanti utili
- *   per la gestione dei colori.
+ * La classe UShip contiene delle costanti utili
+ * per la gestione delle navi.
  * </p>
  *
  */
 public final class UShip {
+
+  /**
+   * <h3> Costanti </h3>
+   * <p>
+   *   Costanti per la gestione delle navi.
+   * </p>
+   */
   public static final int MIN_SHIP = 1;
   public static final int MAX_SHIP = 10;
   public static final int AIRCRAFT_HP = 5;
