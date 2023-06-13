@@ -33,7 +33,7 @@ public final class HitBoundary {
   }
 
   /**
-   * <h3> invalidCoordinates </h3>
+   * <h3> invalidChoice </h3>
    * <p>
    * Stampa il messaggio di errore relativo
    * al tentativo di effettuare un colpo
