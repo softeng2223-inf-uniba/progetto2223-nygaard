@@ -7,10 +7,10 @@
 - [1. Introduzione](#1-introduzione)
   - [Gruppo Nygaard](#gruppo-nygaard)
     - [**Davide Cirilli**](#davide-cirilli)
-    - [**Mattia Curri** ](#mattia-curri-)
-    - [**Emanuele Fontana**](#emanuele-fontana-)
+    - [**Mattia Curri** ](#mattia-curri)
+    - [**Emanuele Fontana**](#emanuele-fontana)
     - [**Stefano Labianca**](#stefano-labianca)
-    - [**Giuditta Izzo**](#giuditta-izzo-)
+    - [**Giuditta Izzo**](#giuditta-izzo)
 - [2. Modello Di Dominio](#2-modello-di-dominio)
 - [3. Requisiti specifici](#3-requisiti-specifici)
   - [3.1 Requisiti Funzionali](#31-requisiti-funzionali)
@@ -30,6 +30,7 @@
     - [Sprint 1](#sprint-1)
     - [Sprint 2](#sprint-2)
   - [8.4 Software utilizzati](#84-software-utilizzati)
+  - [8.5 Comunicazione interna al team](#85-comunicazione-interna-al-team)
 - [9. Analisi retrospettiva](#9-analisi-retrospettiva)
   - [**Sprint 0**](#91-sprint-0-dimostrare-familiarità-con-github-e-il-processo-agile)
   - [**Sprint 1**](#92-sprint-1-preparare-il-gioco)
@@ -511,10 +512,10 @@ Dato l'utilizzo del framework Scrum, gli Sprint si compongono di quattro fasi pr
 Alla fine dello Sprint 1 e dello Sprint 2, abbiamo intrapreso una fase di manutenzione evolutiva del codice.
 
 In generale sono state seguite queste regole:
-- Le issue tecniche, riguardanti Github e documentazione, sono state affidate a [_Stefano Labianca_](#stefano-labianca) e a [_Mattia Curri_](#mattia-curri-), date le loro conoscenze
+- Le issue tecniche, riguardanti Github e documentazione, sono state affidate a [_Stefano Labianca_](#stefano-labianca) e a [_Mattia Curri_](#mattia-curri), date le loro conoscenze
 pregresse con il Version Control;
 - Le issue che richiedevano maggiori capacità di gestione e stesura di algoritmi complessi, sono state assegnate a [_Davide Cirilli_](#davide-cirilli);
-- Le restanti issue sono state assegnate principalmente a [_Giuditta Izzo_](#giuditta-izzo-) e a [_Emanuele Fontana_](#emanuele-fontana-), non escludendo però gli alti membri del team in modo da 
+- Le restanti issue sono state assegnate principalmente a [_Giuditta Izzo_](#giuditta-izzo) e a [_Emanuele Fontana_](#emanuele-fontana), non escludendo però gli alti membri del team in modo da 
 distribuire il carico di lavoro in maniera equa.
 
 ### Sprint 0
@@ -557,8 +558,8 @@ Lo _Sprint Goal_ era quello di completare il gioco, assicurandone la sua qualit�
   - _Effetuare un colpo_;
   - _Iniziare una nuova partita_.
 - Nella **fase implementativa** ogni assignee ha continuato a lavorare individualmente alla propria user story, mantenendosi sempre in contatto con gli altri membri del team. 
-Una volta terminate le user story del codice, [*Mattia Curri*](#mattia-curri-) si è dedicato alla successiva fase di manutenzione evolutiva, richiedendo attivamente feedback agli altri membri del gruppo di lavoro, sfruttando i canali comunicativi interni al gruppo.
-- La **fase di testing** è stata sviluppata da [*Mattia Curri*](#mattia-curri-) e da [*Davide Cirilli*](#davide-cirilli) e, durante la seguente fase, i due membri del gruppo di lavoro hanno sviluppato i test comunicando in chiamata vocale, attraverso un server [*Discord*](https://discord.com/), sfruttando
+Una volta terminate le user story del codice, [*Mattia Curri*](#mattia-curri) si è dedicato alla successiva fase di manutenzione evolutiva, richiedendo attivamente feedback agli altri membri del gruppo di lavoro, sfruttando i canali comunicativi interni al gruppo.
+- La **fase di testing** è stata sviluppata da [*Mattia Curri*](#mattia-curri) e da [*Davide Cirilli*](#davide-cirilli) e, durante la seguente fase, i due membri del gruppo di lavoro hanno sviluppato i test comunicando in chiamata vocale, attraverso un server [*Discord*](https://discord.com/), sfruttando
 a pieno le funzionalità del tools [*Code With Me*](https://www.jetbrains.com/code-with-me/), integrato nell'IDE di [*IntelliJ IDEA*](https://www.jetbrains.com/idea/).
 
 ## 8.4 Software utilizzati
