@@ -51,6 +51,8 @@ final class SetDifficultyCommand extends Command {
    * <p>
    * Esegue il comando per impostare una difficoltà
    * o un nuovo numero di tentativi per una delle difficoltà.
+   * Il comando è disponibile solo se non si è in partita.
+   * Se viene passato un numero sbagliato di parametri, viene stampato il come usare il comando.
    * </p>
    *
    * @param command Comando da eseguire.
