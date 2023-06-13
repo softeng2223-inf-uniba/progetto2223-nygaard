@@ -494,11 +494,12 @@ nei casi precedenti non era stato impostato un tempo, pertanto il tempo è illim
 
 #### Visualizzare la griglia con le navi posizionate
 
-**Attenzione!** Questo comando mostra dove sono posizionate tutte le navi, questo significa che la partita perde di significato da giocare, dato che l'utente sarà a conoscenza della posizione di **tutte** le navi
-
-Una volta avviata la partita è possibile visualizzare la griglia con le navi posizionate utilizzando il comando ***/svelagriglia***:
+È possibile visualizzare la griglia con le navi posizionate utilizzando il comando ***/svelagriglia***:
 
 ![svela_griglia.png](img%2FManualeUtente%2Fsvela_griglia.png)
+
+**Attenzione!** Questo comando mostra dove sono posizionate **tutte** le navi,
+anche quelle non colpite.
 
 # 8. Processo di sviluppo e organizzazione del lavoro
 
