@@ -53,6 +53,7 @@ final class ExitCommand extends Command {
    * chiedendo all'utente se è sicuro di voler uscire.
    * Se l'utente conferma l'uscita, il gioco termina
    * altrimenti viene annullata l'operazione.
+   *
    * </p>
    *
    * @param command Comando da eseguire.
