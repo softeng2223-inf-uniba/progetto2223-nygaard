@@ -405,6 +405,14 @@ Sono stati implementati un totale di **164** casi di test di cui alcuni sono rip
 
 ![Casi di test](img/Riepilogo del Test/testReport.png)
 
+- **Esito CheckStyle: Main**
+
+![CheckStyle main](img/Riepilogo del Test/checkStyleMainReport.png)
+
+- **Esito CheckStyle: Test**
+
+![CheckStyle test](img/Riepilogo del Test/checkStyleTestReport.png)
+
 # 7. Manuale utente
 
 ### Indice
