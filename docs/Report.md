@@ -464,6 +464,8 @@ Le caratteristiche principali di una partita sono modulari: l'utente ha la possi
 
 Per iniziare una nuova partita eseguire il comando ***/gioca***, che mostrerà la griglia di attacco vuota.
 
+![/gioca](img%2FManualeUtente%2Fesecuzione_gioca.png)
+
 ### Comandi in gioco
 
 #### Colpire una cella
