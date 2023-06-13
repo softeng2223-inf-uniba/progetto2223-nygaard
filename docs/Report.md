@@ -438,11 +438,8 @@ sostituendo `<ARGOMENTO>` con gli argomenti che si vogliono passare all'applicaz
 
 Se tutto è andato a buon fine, l'applicazione verrà avviata e verrà eseguita la schermata di benvenuto:
 
-- **Esecuzione senza argomenti**
+- **Esempio di esecuzione senza argomenti**
 ![esempio_esecuzione_noargs.png](img%2FManualeUtente%2Fesempio_esecuzione_noargs.png)
-
-- **Esecuzione con argomenti**
-![esempio_esecuzione_withargs.png](img%2FManualeUtente%2Fesempio_esecuzione_withargs.png)
 
 All'avvio dell'applicazione, verrà eseguita la schermata di benvenuto, con la scritta *Inserire un comando:* che viene visualizzata ogni qualvolta si richiede un comando all'utente.
 
