@@ -438,65 +438,65 @@ La suddivisione in package è stata effettuata accomunando le classi in base all
 
 Passiamo ora all'elenco dei package e delle classi in essi contenuti:
 
-Il package *app* dove è contenuta la classe App che si occupa dell'inizializzazione e avvio del software.
-Questo package è stato definito dal Product Owner.
+- Il package *app* dove è contenuta la classe App che si occupa dell'inizializzazione e avvio del software.
+  Questo package è stato definito dal Product Owner.
 
-Il package *Nygaard* contiene tutti i package e le classi create dal team di sviluppo. In particolare abbiamo il package *game* dedicato al gioco nel quale troviamo i seguenti package:
-- Entity
-- Control
-- Boundary
-- Utility
+- Il package *nygaard* contiene tutti i package e le classi create dal team di sviluppo. In particolare abbiamo il package *game* dedicato al gioco nel quale troviamo i seguenti package:
+  - entity
+  - control
+  - boundary
+  - utility
 
-Il package *Entity* dove sono contenuti:
+- Il package *entity* dove sono contenuti:
 
-- Match che rappresenta la partita in corso. Contiene tutte le informazioni necessarie per gestire la partita e le classi che la compongono.
+  - Match che rappresenta la partita in corso. Contiene tutte le informazioni necessarie per gestire la partita e le classi che la compongono.
 
-- package *Ships* che contiene:
+  - package *ships* che contiene:
 
-  - Coordinate: classe che rappresenta le coordinate di una cella della griglia di gioco
-  - Ship: classe che rappresenta una nave. Contiene tutte le informazioni sulla singola nave
-  - ShipType: enum che contiene i tipi di navi presenti nel gioco
+    - Coordinate: classe che rappresenta le coordinate di una cella della griglia di gioco
+    - Ship: classe che rappresenta una nave. Contiene tutte le informazioni sulla singola nave
+    - ShipType: enumeratore che contiene i tipi di navi presenti nel gioco
 
-- package *Grids* che contiene:
+  - package *Grids* che contiene:
 
-  - Grid: classe astrata che rappresenta una generica griglia
-  - Cell: classe che rappresenta una cella della griglia di gioco. Contiene tutte le informazioni sulla singola cella. In particolare contiene un riferimento alla nave che occupa la cella (se presente)
-  - CharactersGrid: classe che rappresenta la griglia di conoscenza del giocatore. Essa mostra le informazioni che il giocatore ha sulla griglia di gioco dell'avversario
-  - CellsGrid: classe che rappresenta la griglia di gioco. Essa è una griglia formata da Cell
+    - Grid: classe astratta che rappresenta una generica griglia
+    - Cell: classe che rappresenta una cella della griglia di gioco. Contiene tutte le informazioni sulla singola cella. In particolare contiene un riferimento alla nave che occupa la cella (se presente)
+    - CharactersGrid: classe che rappresenta la griglia di conoscenza del giocatore. Essa mostra le informazioni che il giocatore ha sulla griglia di gioco dell'avversario
+    - CellsGrid: classe che rappresenta la griglia di gioco. Essa è una griglia formata da Cell
 
-Questo package contiene dunque tutte le classi di tipo **Entity** previste dallo standard ECB.
+  Questo package contiene dunque tutte le classi di tipo **Entity** previste dallo standard ECB.
 
-Il package *Control* dove sono contenuti:
+- Il package *control* dove sono contenuti:
 
-- Command è la classe astratta da cui derivano tutte le classi dei comandi. Di essi ne definisce il metodo principale `executeCommand()` e alcune caratteristiche comuni (come il numero dei parametri minimi e massimi).
+  - Command è la classe astratta da cui derivano tutte le classi dei comandi. Di essi ne definisce il metodo principale `executeCommand()` e alcune caratteristiche comuni (come il numero dei parametri minimi e massimi).
 
-- I vari comandi corrispondendi ai [*requisiti funzionali*](#31-requisiti-funzionali)
+  - I vari comandi corrispondendi ai [*requisiti funzionali*](#31-requisiti-funzionali)
 
-- GeneralControl si occupa di gestire la logica principale del gioco: inizializzazione, avvio, gestione dei comandi e chiusura.
+  - GeneralControl si occupa di gestire la logica principale del gioco: inizializzazione, avvio, gestione dei comandi e chiusura.
 
-- GameManager si occupa della gestione della partita. In particolare permette alle varie classi di comunicare con la partita in corso.
+  - GameManager si occupa della gestione della partita. In particolare permette alle varie classi di comunicare con la partita in corso.
 
-- TimeCounter si occupa della gestione del tempo di gioco.
+  - TimeCounter si occupa della gestione del tempo di gioco.
 
-- ParamControl si occupa della gestione dei parametri all'avvio dell'applicazione.
+  - ParamControl si occupa della gestione dei parametri all'avvio dell'applicazione.
 
-Questo package contiene dunque tutte le classi di tipo **Control** previste dallo standard ECB.
+  Questo package contiene dunque tutte le classi di tipo **Control** previste dallo standard ECB.
 
-Il package *Boundary* dove sono contenuti:
+- Il package *boundary* dove sono contenuti:
 
- - Le varie boundary per gestire gli output dei [*requisiti funzionali*](#31-requisiti-funzionali)
+   - Le varie boundary per gestire gli output dei [*requisiti funzionali*](#31-requisiti-funzionali)
 
- - InputBoundary che si occupa di gestire l'input dell'utente
+   - InputBoundary che si occupa di gestire l'input dell'utente
 
- - LogoBoundary che si occupa di mostrare il logo del gioco
+   - LogoBoundary che si occupa di mostrare il logo del gioco
 
- - ParamsBoundary che si occupa della gestione delle stampe a video dipendenti dai parametri dei comandi/avvio applicazione
+   - ParamsBoundary che si occupa della gestione delle stampe a video dipendenti dai parametri dei comandi/avvio applicazione
 
- - DescriptionBoundary che si occupa di mostrare la descrizione del gioco
+   - DescriptionBoundary che si occupa di mostrare la descrizione del gioco
 
-Questo package contiene dunque tutte le classi di tipo **Entity** previste dallo standard ECB.
+  Questo package contiene dunque tutte le classi di tipo **Boundary** previste dallo standard ECB.
 
-Il package *Utility* dove sono contenuti tutte le classi contenenti le costanti di utilità.
+- Il package *utility* contiene tutte le classi contenenti le costanti di utilità.
 
 # 6. Riepilogo del Test
 
