@@ -383,7 +383,7 @@ Il funzionamento del software richiede:
 
 # 7. Manuale utente
 
-## Indice
+### Indice
 
 - [Passi preliminari](#passi-preliminari)
   - [Installazione e configurazione di Docker](#installazione-e-configurazione-di-docker)
