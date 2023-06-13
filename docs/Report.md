@@ -433,6 +433,11 @@ La suddivisione in package è stata effettuata accomunando le classi in base all
 
  Un'altro patter architetturale utilizzato è stato quella del [*Singleton*](https://it.wikipedia.org/wiki/Singleton_(informatica)) che prevede la creazione di una classe che può essere istanziata una sola volta e che fornisce un punto di accesso globale a tale istanza. Questo pattern è stato utilizzato per le classi di tipo Control e per la classe Match (in quanto è possibile giocare solo una partita per volta)
 
+Passiamo ora all'elenco dei package e delle classi in essi contenuti:
+
+Il package *app* dove è contenuta la classe App che si occupa dell'inizializzazione e avvio del software.
+Questo package è stato definito dal Product Owner.
+
 
 # 6. Riepilogo del Test
 
