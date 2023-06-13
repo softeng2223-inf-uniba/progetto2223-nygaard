@@ -446,6 +446,8 @@ I criteri adottati sono:
 
 Alcuni test sono stati ripetuti più volte con parametri od oggetti diversi, in modo da coprire tutti i casi possibili oppure essere sicuri statisticamente di aver testato anche la natura intrinsecamente randomica di alcuni metodi (es. initializeShips).
 
+Come criterio di terminazione del testing è stato adottato il criterio di copertura delle classi di equivalenza, ovvero si è deciso di terminare il testing quando tutti i casi di test relativi a tutte le classi di equivalenza sono stati eseguiti.
+
 # 7. Manuale utente
 
 ### Indice
