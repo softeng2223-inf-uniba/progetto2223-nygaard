@@ -421,6 +421,14 @@ Sono stati implementati un totale di **164** casi di test di cui alcuni sono rip
 
 ![SpotBugs test](img/Riepilogo del Test/spotBugsTestReport.png)
 
+- **Esito PMD: Main**
+
+![PMD Main](img/Riepilogo del Test/PMDMainReport.png)
+
+- **Esito PMD: Test**
+
+![PMD Test](img/Riepilogo del Test/PMDTestReport.png)
+
 # 7. Manuale utente
 
 ### Indice
