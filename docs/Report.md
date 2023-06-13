@@ -394,6 +394,17 @@ Il funzionamento del software richiede:
 
 - [PMD](https://pmd.github.io/)
 
+## 6.2 Presentazione esiti test e considerazioni
+
+Nello Sprint 2, il gruppo "Nygaard" si è adoperato per effettuare l'attività di Verification&Validation (V&V) che si suddivide in un processo statico (finalizzato all'analisi del codice con Checkstyle, Spotbugs e PMD) e un processo dinamico (finalizzato alla creazione di casi di test con JUnit 5 e verifica del funzionamento dei metodi).
+
+Di seguito vengono presentati gli esiti delle fasi di test.
+
+- **Esito test JUnit5**<br/>
+Sono stati implementati un totale di **164** casi di test di cui alcuni sono ripetuti più volte (con parametri od oggetti diversi) arrivando così a un totale di **218** casi di test.
+
+![Casi di test](img/Riepilogo del Test/testReport.png)
+
 # 7. Manuale utente
 
 ### Indice
