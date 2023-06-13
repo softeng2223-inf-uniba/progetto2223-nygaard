@@ -52,6 +52,9 @@ final class StartMatchCommand extends Command {
    * <h3> executeCommand </h3>
    * <p>
    * Esegue il comando per iniziare la partita.
+   * Se viene passato un numero sbagliato di parametri, viene stampato il come usare il comando.
+   * Se la partita è già iniziata, viene stampato un messaggio di errore.
+   * Se la partita non è ancora iniziata, viene stampata la griglia di gioco.
    * </p>
    *
    * @param command Comando da eseguire.
