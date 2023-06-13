@@ -7,9 +7,11 @@ import it.uniba.nygaard.game.utility.UShip;
  * <p>
  *   La classe ShipType modella le tipologie di navi
  *   presenti nel gioco, con i loro hp e il numero di occorrenze.
+ *   Sono presenti quattro tipologie di navi: Aircraft, Battleship, Cruiser e Destroyer.
  * </p>
  */
 public enum ShipType {
+
   AIRCRAFT(UShip.AIRCRAFT_NO, UShip.AIRCRAFT_HP),
   BATTLESHIP(UShip.BATTLESHIP_NO, UShip.BATTLESHIP_HP),
   CRUISER(UShip.CRUISER_NO, UShip.CRUISER_HP),
