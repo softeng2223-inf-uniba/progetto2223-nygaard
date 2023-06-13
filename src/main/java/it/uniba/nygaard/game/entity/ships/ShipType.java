@@ -24,6 +24,13 @@ public enum ShipType {
    * </p>
    */
   private final int numShips;
+
+  /**
+   * <h3> hp </h3>
+   * <p>
+   * Hp della nave.
+   * </p>
+   */
   private final int hp;
 
   ShipType(final int newNumShips, final int newHp) {
