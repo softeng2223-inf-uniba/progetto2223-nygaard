@@ -69,8 +69,7 @@ final class SetDifficultyCommand extends Command {
         : UDifficulty.DIFFICULTY_HARD;
 
     if (command.length == 1) {
-      GameManager.setMatchDifficulty(difficultyInvolved);
-      setNewMatchDifficulty();
+      setNewMatchDifficulty(difficultyInvolved);
     } else {
       if (command[1].matches("^[1-9][0-9]*$")) {
         try {
@@ -87,22 +86,20 @@ final class SetDifficultyCommand extends Command {
   }
 
   /**
-   * <h3> setDifficulty </h3>
+   * <h3> setNewMatchDifficulty </h3>
    * <p>
-   * Imposta la difficoltà se questa non è già impostata,
-   * altrimenti chiede all'utente se vuole cambiare difficoltà.
+   * Imposta la difficoltà chiedendo all'utente se vuole cambiarla.
    * </p>
    */
-  private void setNewMatchDifficulty() {
-    int actualDifficulty = GameManager.getMatchDifficulty();
+  private void setNewMatchDifficulty(final int newMatchDifficulty) {
     Match p = GameManager.getMatch();
-    if (p.getDifficulty() == actualDifficulty) {
+    if (p.getDifficulty() == newMatchDifficulty) {
       SetDifficultyBoundary.sameDifficulty();
       return;
     }
     String choice;
     do {
-      choice = SetDifficultyBoundary.ask(actualDifficulty);
+      choice = SetDifficultyBoundary.ask(newMatchDifficulty);
       if (!choice.equals("n") && !choice.equals("y")) {
         SetDifficultyBoundary.invalidChoice();
       }
@@ -112,10 +109,16 @@ final class SetDifficultyCommand extends Command {
       SetDifficultyBoundary.operationCancelled();
       return;
     }
-    p.setDifficulty(actualDifficulty);
+    p.setDifficulty(newMatchDifficulty);
     SetDifficultyBoundary.operationDone();
   }
 
+  /**
+   * <h3> setNewDiffAttempts </h3>
+   * <p>
+   * Imposta il numero di tentativi per una difficoltà.
+   * </p>
+   */
   private void setNewDiffAttempts(final int difficultyToModify) {
     int attempts = GameManager.getMatchAttempts();
     Match p = GameManager.getMatch();

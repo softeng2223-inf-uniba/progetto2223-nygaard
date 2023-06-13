@@ -4,6 +4,7 @@ import it.uniba.nygaard.game.boundary.DescriptionBoundary;
 import it.uniba.nygaard.game.boundary.HelpBoundary;
 import it.uniba.nygaard.game.boundary.LogoBoundary;
 import it.uniba.nygaard.game.boundary.ParamsBoundary;
+import it.uniba.nygaard.game.utility.UShutdown;
 import it.uniba.nygaard.game.utility.Util;
 
 /**
@@ -38,15 +39,15 @@ final class ParamControl {
     String[] args = GameManager.getArgs();
     if (args.length > Util.MIN_ARGS) {
       if (args.length > Util.MAX_ARGS) {
+        GeneralControl.setShutDown(UShutdown.QUIT_TERMINATION_CODE);
         ParamsBoundary.tooManyArgs();
-        System.exit(0);
       }
       String argument = args[0].toLowerCase();
       if (argument.equals("--help") || argument.equals("-h")) {
         HelpBoundary.getHelp();
       } else {
+        GeneralControl.setShutDown(UShutdown.QUIT_TERMINATION_CODE);
         ParamsBoundary.notRecognisedArg(argument);
-        System.exit(0);
       }
     } else {
       LogoBoundary.printLogo();

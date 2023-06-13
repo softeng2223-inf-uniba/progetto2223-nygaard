@@ -1,11 +1,11 @@
 package it.uniba.nygaard.game.control;
 
-import it.uniba.nygaard.game.utility.UShip;
-import it.uniba.nygaard.game.utility.UTime;
 import it.uniba.nygaard.game.boundary.InputBoundary;
 import it.uniba.nygaard.game.boundary.MatchBoundary;
 import it.uniba.nygaard.game.boundary.ShowGridBoundary;
 import it.uniba.nygaard.game.entity.Match;
+import it.uniba.nygaard.game.utility.UShip;
+import it.uniba.nygaard.game.utility.UTime;
 
 
 /**
@@ -71,7 +71,11 @@ final class StartMatchCommand extends Command {
       new TimeCounter().start();
     }
     p.setInGame(true);
-    p.initializeShips(UShip.MIN_SHIP);
+    while (true) {
+      if (p.initializeShips(UShip.MIN_SHIP)) {
+        break;
+      }
+    }
     ShowGridBoundary.printGrid(p.getAttackGrid());
   }
 }

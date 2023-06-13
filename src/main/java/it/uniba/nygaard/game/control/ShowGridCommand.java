@@ -62,8 +62,11 @@ final class ShowGridCommand extends Command {
       ShowGridBoundary.notInGame();
       return;
     }
-    ShowGridBoundary.printGrid(p.getAttackGrid());
+    if (command[0].equals("/svelagriglia")) {
+      ShowGridBoundary.printGrid(p.getDefenseGrid());
+    } else {
+      ShowGridBoundary.printGrid(p.getAttackGrid());
+    }
+
   }
-
-
 }

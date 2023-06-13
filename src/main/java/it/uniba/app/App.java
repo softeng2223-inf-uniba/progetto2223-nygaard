@@ -13,16 +13,7 @@ import it.uniba.nygaard.game.control.GeneralControl;
  */
 final class App {
 
-  App() {
-  }
-
-  /**
-   * Get a greeting sentence.
-   *
-   * @return the "Hello World!" string.
-   */
-  String getGreeting() {
-    return "Hello World!!!";
+  private App() {
   }
 
   /**
