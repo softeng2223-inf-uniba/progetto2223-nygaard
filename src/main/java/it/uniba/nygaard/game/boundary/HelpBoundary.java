@@ -76,7 +76,7 @@ public final class HelpBoundary {
         + "Mostra la griglia contenente le navi affondate e le parti di \n"
         + "                           navi colpite ma non affondate\n"
         + UColor.ITALIC + UColor.CYAN + "    * /mostranavi          " + UColor.RESET
-        + "Mostra le navi ancora in gioco e il loro numero\n"
+        + "Mostra la dimensione dei vari tipi di nave e il numero di esemplari\n"
         + UColor.ITALIC + UColor.CYAN + "    * /gioca               " + UColor.RESET
         + "Ti fa iniziare una partita\n"
         + UColor.ITALIC + UColor.CYAN + "    * /svelagriglia        " + UColor.RESET

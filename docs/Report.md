@@ -372,7 +372,7 @@ Di seguito, i ***Requisiti Funzionali*** del progetto, facenti parte della *User
   
   - l’applicazione risponde visualizzando il livello di gioco e il numero massimo di tentativi falliti
 
-</br>
+<br/>
 
 ## 3.2 Requisiti non Funzionali
 
@@ -384,13 +384,19 @@ Il funzionamento del software richiede:
 
 # 7. Manuale utente
 
-## Indice
+### Indice
 
 - [Passi preliminari](#passi-preliminari)
   - [Installazione e configurazione di Docker](#installazione-e-configurazione-di-docker)
   - [Autenticazione con Github](#autenticazione-con-github)
-- [Avvio dell'applicazione](#avvio-dellapplicazione)
+- [Avvio dell'applicazione](#avvio-dellapplicazione) 
+  - [Preparazione della partita](#preparazione-della-partita)
   - [Comandi in gioco](#comandi-in-gioco)
+    - [Colpire una cella](#colpire-una-cella)
+    - [Visualizzare la griglia d'attacco](#visualizzare-la-griglia-di-attacco)
+    - [Visualizzare il numero di tentativi effettuati](#visualizzare-il-numero-di-tentativi-effettuati)
+    - [Visualizzare il tempo rimanente](#visualizzare-il-tempo-rimanente)
+    - [Visualizzare la griglia con le navi posizionate](#visualizzare-la-griglia-con-le-navi-posizionate)
 
 ## Passi preliminari
 
@@ -435,29 +441,107 @@ docker run --rm -it ghcr.io/softeng2223-inf-uniba/battleship-nygaard:latest <ARG
 
 sostituendo `<ARGOMENTO>` con gli argomenti che si vogliono passare all'applicazione (ricordiamo che al momento sono ammessi `--help` o la versione compatta `-h`)
 
-**Attenzione!** Eseguire i comandi in un terminale che soddisfa il Requisito non Funzionale riportato nella sezione dedicata.
+**Attenzione!** Eseguire i comandi in un terminale che soddisfa i [**requisiti non funzionali**](#32-requisiti-non-funzionali).
 
 Se tutto è andato a buon fine, l'applicazione verrà avviata e verrà eseguita la schermata di benvenuto:
 
-- **Esecuzione senza argomenti**
+- **Esempio di esecuzione senza argomenti**
 ![esempio_esecuzione_noargs.png](img%2FManualeUtente%2Fesempio_esecuzione_noargs.png)
 
-- **Esecuzione con argomenti**
-![esempio_esecuzione_withargs.png](img%2FManualeUtente%2Fesempio_esecuzione_withargs.png)
+All'avvio dell'applicazione, verrà eseguita la schermata di benvenuto, con la scritta ***Inserire un comando:*** che viene visualizzata ogni qualvolta si richiede un comando all'utente.
 
-All'avvio dell'applicazione, verrà eseguita la schermata di benvenuto, con la scritta *Inserire un comando:* che viene visualizzata ogni qualvolta si richiede un comando all'utente.
-
-Per avere informazioni su tutti i comandi disponibili nel gioco, utilizzare il comando ***/help*** che mostrerà la lista dei comandi a disposizione seguiti da una breve descrizione del loro funzionamento:
+Per avere informazioni su tutti i comandi disponibili nel gioco è possibile avviare l'applicazione con i flag ***--help*** o ***-h***, oppure utilizzare il comando ***/help*** ad applicazione avviata. In entrambi i casi verrà mostrata la lista dei comandi a disposizione seguiti da una breve descrizione del loro funzionamento:
 
 ![esecuzione_help.png](img%2FManualeUtente%2Fesecuzione_help.png)
 
-Per iniziare una nuova partita eseguire il comando ***/gioca***.
+### Preparazione della partita
+
+Le caratteristiche principali di una partita sono modulari: l'utente ha la possibilità di modificare le seguenti caratteristiche della partita che giocherà:
+  - Dimensione della griglia su cui saranno posizionate le navi con i comandi ***/standard*** (griglia 10x10), ***/large*** (griglia 18x18), ***/extralarge*** (griglia 26x26)
+    - Di default la griglia è 10x10
+  - Numero di tentativi di una specifica difficoltà con i comandi ***/facile*** *numero*, ***/medio*** *numero*, ***/difficile*** *numero*
+    - L'utilizzo di questi comandi **NON** cambia la difficoltà per la prossima partita ma solo il numero di tentativi, per farlo utilizzare ***/facile***, ***/medio*** e ***/difficile*** senza argomenti.
+    - Di default il numero di tentativi è 50 per la difficoltà facile, 30 per la difficoltà media, 10 per la difficoltà difficile
+  - Numero di tentativi indipendenti dalla difficoltà (**Attenzione**: questo comando sovrascrive il numero di tentativi di **tutte** le difficoltà) col comando ***/tentativi*** *numero*
+  - Tempo a disposizione col comando ***/tempo*** *minuti*
+    - Di default, il tempo a disposizione è illimitato
+
+Per iniziare una nuova partita eseguire il comando ***/gioca***, che mostrerà la griglia di attacco vuota.
+
+![/gioca](img%2FManualeUtente%2Fesecuzione_gioca.png)
 
 ### Comandi in gioco
 
-Una volta avviata la partita è possibile visualizzare la griglia con le navi posizionate utilizzando il comando ***/svelagriglia***:
+#### Colpire una cella
+
+Per colpire una cella, è necessario digitare come comando la lettera della colonna seguita da un trattino - e dal numero della riga. 
+
+Ad esempio, per colpire la cella in posizione A1, digitare il comando ***A-1***.
+
+Sulla griglia verrà mostrato il colpo appena effettuato con un simbolo, che dipende dall'esito:
+
+| Esito               | Simbolo | Note                                                                                   |
+|---------------------|---------|----------------------------------------------------------------------------------------|
+| Acqua               | ***O*** | /                                                                                      |
+| Colpito             | ***X*** | /                                                                                      |
+| Colpito e Affondato | ***#*** | Il simbolo sostituirà le ***X*** delle celle precedentemente colpite della stessa nave |
+
+**Attenzione!** Se si prova a colpire una cella già colpita, questo verrà considerato come un tentativo fallito.
+
+![Esiti dei colpi](img%2FManualeUtente%2Fesiti_colpi.png)
+
+Dopo ogni colpo verrà mostrato quanti tentativi sono stati effettuati, 
+quanti di questi sono stati falliti, e quanti tentativi possono essere falliti al massimo, 
+a seconda della difficoltà o dei tentativi impostati.
+
+Inoltre, viene riportato quanto tempo è passato e quanto ne rimane prima della fine della partita; 
+nei casi precedenti non era stato impostato un tempo, pertanto il tempo è illimitato:
+
+![Tempo impostato a 2 minuti](img%2FManualeUtente%2Ftempo_impostato.png)
+
+Se il tempo a disposizione termina la partita verrà ritenuta conclusa, senza attendere l'ultima mossa dell'utente, mostrando la disposizione delle navi:
+
+![Tempo scaduto](img%2FManualeUtente%2Ftempo_esaurito.png)
+
+#### Visualizzare la griglia di attacco
+
+Per visualizzare la griglia che mostra i colpi effettuati è possibile utilizzare il comando ***/mostragriglia***:
+
+![/mostragriglia](img%2FManualeUtente%2Fmostra_griglia.png)
+
+#### Visualizzare il numero di tentativi effettuati
+
+Per visualizzare il numero di tentativi effettuati, falliti, e il massimo numero di tentativi che possono essere falliti, è possibile utilizzare il comando ***/mostratentativi***:
+
+![/mostratentativi](img%2FManualeUtente%2Fmostra_tentativi.png)
+
+#### Visualizzare il tempo rimanente
+
+Per visualizzare il tempo trascorso e quello rimanente alla fine della partita, è possibile utilizzare il comando ***/mostratempo***:
+
+![/mostratempo](img%2FManualeUtente%2Ftempo_trascorso.png)
+
+**Attenzione!** Il tempo trascorso viene generalmente riportato per difetto, pertanto è possibile che il tempo trascorso sia maggiore di quello riportato fino a 59 secondi. 
+
+#### Visualizzare la griglia con le navi posizionate
+
+È possibile visualizzare la griglia con le navi posizionate utilizzando il comando ***/svelagriglia***:
 
 ![svela_griglia.png](img%2FManualeUtente%2Fsvela_griglia.png)
+
+**Attenzione!** Questo comando mostra dove sono posizionate **tutte** le navi,
+anche quelle non colpite.
+
+#### Abbandonare la partita
+
+Per abbandonare la partita è possibile utilizzare il comando ***/abbandona***. 
+
+Una volta confermato il comando, la partita sarà automaticamente considerata persa 
+e verrà mostrata la disposizione delle navi:
+
+![/abbandona](img%2FManualeUtente%2Fesecuzione_abbandona.png)
+
+Dopodiché sarà possibile impostare e iniziare una nuova partita con il comando ***/gioca***.
 
 # 8. Processo di sviluppo e organizzazione del lavoro
 
