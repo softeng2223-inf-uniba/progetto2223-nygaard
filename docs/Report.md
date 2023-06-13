@@ -493,6 +493,8 @@ Il package *Boundary* dove sono contenuti:
 
 Questo package contiene dunque tutte le classi di tipo **Entity** previste dallo standard ECB.
 
+Il package *Utility* dove sono contenuti tutte le classi contenenti le costanti di utilità.
+
 # 6. Riepilogo del Test
 
 ## 6.1 Strumenti di analisi/testing del codice utilizzati
