@@ -422,6 +422,8 @@ Il funzionamento del software richiede:
 
 ![Diagramma dei package](img/Design/DiagrammaPackage.png)
 
+## 4.2 Commento decisioni prese
+
 
 # 6. Riepilogo del Test
 
