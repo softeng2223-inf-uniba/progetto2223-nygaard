@@ -9,6 +9,13 @@ package it.uniba.nygaard.game.utility;
  */
 public final class Util {
 
+  /**
+   * <h3> Costanti </h3>
+   * <p>
+   *   Costanti per conversioni e funzioni di stampa.
+   * </p>
+   */
+
   public static final int FIRST_TWO_DIGITS = 10;
   public static final int INT_TO_CHAR = 64;
   public static final int MIN_ARGS = 0;
