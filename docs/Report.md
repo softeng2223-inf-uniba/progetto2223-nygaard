@@ -413,6 +413,14 @@ Sono stati implementati un totale di **164** casi di test di cui alcuni sono rip
 
 ![CheckStyle test](img/Riepilogo del Test/checkStyleTestReport.png)
 
+- **Esito SpotBugs: Main**
+
+![SpotBugs main](img/Riepilogo del Test/spotBugsMainReport.png)
+
+- **Esito SpotBugs: Test**
+
+![SpotBugs test](img/Riepilogo del Test/spotBugsTestReport.png)
+
 # 7. Manuale utente
 
 ### Indice
