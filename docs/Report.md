@@ -533,6 +533,15 @@ anche quelle non colpite.
 
 #### Abbandonare la partita
 
+Per abbandonare la partita è possibile utilizzare il comando ***/abbandona***. 
+
+Una volta confermato il comando, la partita sarà automaticamente considerata persa 
+e verrà mostrata la disposizione delle navi:
+
+![/abbandona](img%2FManualeUtente%2Fesecuzione_abbandona.png)
+
+Dopodiché sarà possibile impostare e iniziare una nuova partita con il comando ***/gioca***.
+
 # 8. Processo di sviluppo e organizzazione del lavoro
 
 ## 8.1 Introduzione al processo di sviluppo
