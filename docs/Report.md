@@ -15,6 +15,7 @@
 - [3. Requisiti specifici](#3-requisiti-specifici)
     - [3.1 Requisiti Funzionali](#31-requisiti-funzionali)
     - [3.2 Requisiti non Funzionali](#32-requisiti-non-funzionali)
+- [4. System Design](#4-system-design)
 - [6. Riepilogo del Testing](#6-riepilogo-del-test)
     - [6.1 Strumenti di analisi/testing del codice utilizzati](#61-strumenti-di-analisitesting-del-codice-utilizzati)
     - [6.2 Presentazione esiti test e considerazioni](#62-presentazione-esiti-test-e-considerazioni)
@@ -418,6 +419,7 @@ Il funzionamento del software richiede:
 
 # 4. System Design
 
+## 4.1 Diagramma dei package
 # 6. Riepilogo del Test
 
 ## 6.1 Strumenti di analisi/testing del codice utilizzati
@@ -442,35 +444,35 @@ Di seguito vengono presentati gli esiti delle fasi di test.
   Sono stati implementati un totale di **164** casi di test di cui alcuni sono ripetuti più volte (con parametri od
   oggetti diversi) arrivando così a un totale di **218** casi di test.
 
-![Casi di test](img/Riepilogo del Test/testReport.png)
+![Casi di test](img/Riepilogo%20del%20Test/testReport.png)
 
 - **Esito CheckStyle: Main**
 
-![CheckStyle main](img/Riepilogo del Test/checkStyleMainReport.png)
+![CheckStyle main](img/Riepilogo%20del%20Test/checkStyleMainReport.png)
 
 - **Esito CheckStyle: Test**
 
-![CheckStyle test](img/Riepilogo del Test/checkStyleTestReport.png)
+![CheckStyle test](img/Riepilogo%20del%20Test/checkStyleTestReport.png)
 
 - **Esito SpotBugs: Main**
 
-![SpotBugs main](img/Riepilogo del Test/spotBugsMainReport.png)
+![SpotBugs main](img/Riepilogo%20del%20Test/spotBugsMainReport.png)
 
 - **Esito SpotBugs: Test**
 
-![SpotBugs test](img/Riepilogo del Test/spotBugsTestReport.png)
+![SpotBugs test](img/Riepilogo%20del%20Test/spotBugsTestReport.png)
 
 - **Esito PMD: Main**
 
-![PMD Main](img/Riepilogo del Test/PMDMainReport.png)
+![PMD Main](img/Riepilogo%20del%20Test/PMDMainReport.png)
 
 - **Esito PMD: Test**
 
-![PMD Test](img/Riepilogo del Test/PMDTestReport.png)
+![PMD Test](img/Riepilogo%20del%20Test/PMDTestReport.png)
 
 - **Esito Build (GitHub Actions)**
 
-![Build](img/Riepilogo del Test/buildSuccessful.png)
+![Build](img/Riepilogo%20del%20Test/buildSuccessful.png)
 
 ## 6.3 Descrizione dei test effettuati
 
