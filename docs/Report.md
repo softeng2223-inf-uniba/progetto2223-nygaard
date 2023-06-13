@@ -531,6 +531,8 @@ Per visualizzare il tempo trascorso e quello rimanente alla fine della partita, 
 **Attenzione!** Questo comando mostra dove sono posizionate **tutte** le navi,
 anche quelle non colpite.
 
+#### Abbandonare la partita
+
 # 8. Processo di sviluppo e organizzazione del lavoro
 
 ## 8.1 Introduzione al processo di sviluppo
