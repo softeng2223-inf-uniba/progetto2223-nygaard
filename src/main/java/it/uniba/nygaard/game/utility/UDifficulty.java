@@ -10,6 +10,12 @@ package it.uniba.nygaard.game.utility;
  */
 public final class UDifficulty {
 
+  /**
+   * <h3> Costanti </h3>
+   * <p>
+   *   Costanti per la gestione della difficoltà di gioco.
+   * </p>
+   */
   public static final int DIFFICULTY_EASY = 0;
   public static final int DIFFICULTY_MEDIUM = 1;
   public static final int DIFFICULTY_HARD = 2;
