@@ -30,6 +30,7 @@
     - [Sprint 1](#sprint-1)
     - [Sprint 2](#sprint-2)
   - [8.4 Software utilizzati](#84-software-utilizzati)
+  - [8.5 Comunicazione interna al team](#85-comunicazione-interna-al-team)
 - [9. Analisi retrospettiva](#9-analisi-retrospettiva)
   - [**Sprint 0**](#91-sprint-0-dimostrare-familiarità-con-github-e-il-processo-agile)
   - [**Sprint 1**](#92-sprint-1-preparare-il-gioco)
