@@ -50,6 +50,7 @@ final class ShowLevelCommand extends Command {
    * <h3> executeCommand </h3>
    * <p>
    * Esegue il comando per mostrare il livello di difficoltà con relativo numero di tentativi.
+   * Se viene passato un numero sbagliato di parametri, viene stampato il come usare il comando.
    * </p>
    *
    * @param command comando da eseguire
