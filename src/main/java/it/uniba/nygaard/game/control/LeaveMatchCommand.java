@@ -27,6 +27,7 @@ final class LeaveMatchCommand extends Command {
    * <h2> Costruttore </h2>
    * <p>
    * Costruttore  della classe LeaveMatchCommand.
+   * Setta il numero minimo e massimo di parametri che rendono valido il comando.
    * </p>
    */
   private LeaveMatchCommand() {
