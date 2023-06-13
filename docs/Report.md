@@ -468,7 +468,25 @@ Per iniziare una nuova partita eseguire il comando ***/gioca***, che mostrerà l
 
 #### Colpire una cella
 
+Per colpire una cella, è necessario digitare come comando la lettera della colonna seguita da un trattino - e dal numero della riga. 
 
+Ad esempio, per colpire la cella in posizione A1, digitare il comando ***A-1***:
+
+
+Sulla griglia verrà mostrato il colpo appena effettuato con un simbolo, che dipende dall'esito:
+  - **Acqua!** - simbolo ***O***
+
+![Tentativo colpo acqua](img%2FManualeUtente%2Fcolpo_acqua.png)
+  - **Colpito!** - simbolo ***X***
+
+![Tentativo colpo a segno](img%2FManualeUtente%2Fcolpo_colpito.png)
+  - **Affondato!** - simbolo ***#***, che sostituirà le ***X*** dei punti precedentemente colpiti della stessa nave
+
+![Tentativo colpo a segno, affonda nave](img%2FManualeUtente%2Fcolpo_affondato.png)
+
+Dopo ogni tentativo verrà mostrato quanti tentativi sono stati effettuati, quanti di questi sono stati falliti, e quanti tentativi possono essere falliti al massimo, a seconda della difficoltà o dei tentativi impostati.
+
+Inoltre, viene riportato all'utente quanto tempo è passato e quanto ne rimane prima della fine della partita; nei casi precedenti non era stato impostato un tempo, pertanto il tempo è illimitato.
 
 #### Visualizzare la griglia con le navi posizionate
 
