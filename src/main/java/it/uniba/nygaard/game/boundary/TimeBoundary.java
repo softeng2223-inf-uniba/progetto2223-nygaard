@@ -55,7 +55,7 @@ public final class TimeBoundary {
   }
 
   /**
-   * <h3> mustBeInGame </h3>
+   * <h3> notInGame </h3>
    * <p>
    * Stampa il messaggio relativo al fatto che non si può vedere il tempo di gioco.
    * </p>
