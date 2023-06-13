@@ -9,7 +9,7 @@ package it.uniba.nygaard.game.control;
 abstract class Command {
 
   /**
-   * <h3> minParam </h3>
+   * <h3> minParamNumber </h3>
    * <p>
    * Numero minimo di parametri del comando.
    * </p>
