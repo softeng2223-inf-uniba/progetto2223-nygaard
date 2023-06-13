@@ -392,6 +392,7 @@ Il funzionamento del software richiede:
   - [Preparazione della partita](#preparazione-della-partita)
   - [Comandi in gioco](#comandi-in-gioco)
     - [Colpire una cella](#colpire-una-cella)
+    - [Visualizzare la griglia con le navi posizionate](#visualizzare-la-griglia-con-le-navi-posizionate)
 
 ## Passi preliminari
 
@@ -467,6 +468,11 @@ Per iniziare una nuova partita eseguire il comando ***/gioca***, che mostrerà l
 
 #### Colpire una cella
 
+
+
+#### Visualizzare la griglia con le navi posizionate
+
+**Attenzione!** questo comando mostra dove sono posizionate tutte le navi, questo significa che la partita perde di significato da giocare, dato che l'utente sarà a conoscenza della posizione di **tutte** le navi
 
 
 Una volta avviata la partita è possibile visualizzare la griglia con le navi posizionate utilizzando il comando ***/svelagriglia***:
