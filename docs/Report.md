@@ -371,7 +371,7 @@ Di seguito, i ***Requisiti Funzionali*** del progetto, facenti parte della *User
   
   - l’applicazione risponde visualizzando il livello di gioco e il numero massimo di tentativi falliti
 
-</br>
+<br/>
 
 ## 3.2 Requisiti non Funzionali
 
@@ -434,7 +434,7 @@ docker run --rm -it ghcr.io/softeng2223-inf-uniba/battleship-nygaard:latest <ARG
 
 sostituendo `<ARGOMENTO>` con gli argomenti che si vogliono passare all'applicazione (ricordiamo che al momento sono ammessi `--help` o la versione compatta `-h`)
 
-**Attenzione!** Eseguire i comandi in un terminale che soddisfa il Requisito non Funzionale riportato nella sezione dedicata.
+**Attenzione!** Eseguire i comandi in un terminale che soddisfa i [**requisiti non funzionali**](#32-requisiti-non-funzionali).
 
 Se tutto è andato a buon fine, l'applicazione verrà avviata e verrà eseguita la schermata di benvenuto:
 
