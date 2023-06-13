@@ -26,6 +26,7 @@ public final class CellsGrid extends Grid {
    * <h3> Costruttore </h3>
    * <p>
    * Costruttore della classe CellsGrid.
+   * Inizializza la griglia di celle carattere-intero con celle di mare.
    * </p>
    *
    * @param dimension Dimensione della griglia.
