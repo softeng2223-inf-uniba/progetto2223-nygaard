@@ -116,7 +116,7 @@ final class SetDifficultyCommand extends Command {
   /**
    * <h3> setNewDiffAttempts </h3>
    * <p>
-   * Imposta il numero di tentativi per una difficoltà.
+   * Imposta il nuovo numero di tentativi per la difficoltà scelta.
    * </p>
    */
   private void setNewDiffAttempts(final int difficultyToModify) {
