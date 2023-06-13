@@ -55,7 +55,7 @@ final class HitCommand extends Command {
    * <h3> executeCommand </h3>
    * <p>
    * Esegue il comando per colpire una nave.
-   * Il comando è disponibile solo se non si è in partita.
+   * Il comando è disponibile solo se si è in partita.
    * Se viene passato un numero sbagliato di parametri, viene stampato il come usare il comando.
    * </p>
    *
