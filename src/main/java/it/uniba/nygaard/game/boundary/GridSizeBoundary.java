@@ -58,7 +58,7 @@ public final class GridSizeBoundary {
   }
 
   /**
-   * <h2> invalidChoiceError </h2>
+   * <h2> invalidChoice </h2>
    * <p>
    * Messaggio di errore per quando si inserisce una scelta non valida.
    * </p>
