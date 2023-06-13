@@ -17,6 +17,12 @@ public enum ShipType {
   CRUISER(UShip.CRUISER_NO, UShip.CRUISER_HP),
   DESTROYER(UShip.DESTROYER_NO, UShip.DESTROYER_HP);
 
+  /**
+   * <h3> numShips </h3>
+   * <p>
+   * Numero di occorrenze della nave.
+   * </p>
+   */
   private final int numShips;
   private final int hp;
 
