@@ -388,7 +388,8 @@ Il funzionamento del software richiede:
 - [Passi preliminari](#passi-preliminari)
   - [Installazione e configurazione di Docker](#installazione-e-configurazione-di-docker)
   - [Autenticazione con Github](#autenticazione-con-github)
-- [Avvio dell'applicazione](#avvio-dellapplicazione)
+- [Avvio dell'applicazione](#avvio-dellapplicazione) 
+  - [Preparazione della partita](#preparazione-della-partita)
   - [Comandi in gioco](#comandi-in-gioco)
 
 ## Passi preliminari
@@ -448,6 +449,9 @@ Per avere informazioni su tutti i comandi disponibili nel gioco, utilizzare il c
 ![esecuzione_help.png](img%2FManualeUtente%2Fesecuzione_help.png)
 
 Per iniziare una nuova partita eseguire il comando ***/gioca***.
+
+### Preparazione della partita
+
 
 ### Comandi in gioco
 
