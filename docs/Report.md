@@ -492,6 +492,11 @@ nei casi precedenti non era stato impostato un tempo, pertanto il tempo è illim
 
 ![Tempo impostato a 2 minuti](img%2FManualeUtente%2Ftempo_impostato.png)
 
+Se il tempo a disposizione termina la partita verrà ritenuta conclusa, senza attendere l'ultima mossa dell'utente, mostrando la disposizione delle navi:
+
+![Tempo scaduto](img%2FManualeUtente%2Ftempo_esaurito.png)
+
+
 #### Visualizzare la griglia con le navi posizionate
 
 È possibile visualizzare la griglia con le navi posizionate utilizzando il comando ***/svelagriglia***:
