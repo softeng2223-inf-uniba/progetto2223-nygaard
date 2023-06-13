@@ -33,6 +33,17 @@ public enum ShipType {
    */
   private final int hp;
 
+  /**
+   * <h3> Costruttore </h3>
+   * <p>
+   * Costruttore della classe ShipType.
+   * Imposta il numero di occorrenze e gli hp della nave.
+   * </p>
+   *
+   * @param newNumShips Numero di occorrenze della nave.
+   * @param newHp Hp della nave.
+   */
+
   ShipType(final int newNumShips, final int newHp) {
     this.numShips = newNumShips;
     this.hp = newHp;
