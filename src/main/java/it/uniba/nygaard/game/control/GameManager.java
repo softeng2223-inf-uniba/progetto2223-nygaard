@@ -80,6 +80,14 @@ public final class GameManager {
     GameManager.matchAttempts = newMatchAttempts;
   }
 
+  /**
+   * <h3> getMatchAttempts </h3>
+   * <p>
+   * Restituisce il numero di tentativi della prossima partita.
+   * </p>
+   *
+   * @return Numero di tentativi della prossima partita.
+   */
   static int getMatchAttempts() {
     return matchAttempts;
   }
