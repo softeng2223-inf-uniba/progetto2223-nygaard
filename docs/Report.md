@@ -391,6 +391,7 @@ Il funzionamento del software richiede:
 - [Avvio dell'applicazione](#avvio-dellapplicazione) 
   - [Preparazione della partita](#preparazione-della-partita)
   - [Comandi in gioco](#comandi-in-gioco)
+    - [Colpire una cella](#colpire-una-cella)
 
 ## Passi preliminari
 
@@ -460,9 +461,13 @@ Le caratteristiche principali di una partita sono modulari: l'utente ha la possi
   - Tempo a disposizione col comando ***/tempo*** *minuti*
     - Di default, il tempo a disposizione è illimitato
 
-Per iniziare una nuova partita eseguire il comando ***/gioca***.
+Per iniziare una nuova partita eseguire il comando ***/gioca***, che mostrerà la griglia di attacco vuota.
 
 ### Comandi in gioco
+
+#### Colpire una cella
+
+
 
 Una volta avviata la partita è possibile visualizzare la griglia con le navi posizionate utilizzando il comando ***/svelagriglia***:
 
