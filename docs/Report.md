@@ -435,6 +435,10 @@ Sono stati implementati un totale di **164** casi di test di cui alcuni sono rip
 
 ## 6.3 Descrizione dei test effettuati
 
+Seguendo l'organizzazione canonica della test suite è stata redatta una classe di test per ogni classe del software ad eccezione delle classi Boundary, in quanto è stato applicato il principio di presentazione separata, e Utility, in quanto non presentano metodi da testare.
+Tutte le classi di test sono state raggruppate in un unico package denominato "test" separato dal resto del codice e la struttura delle classi nel package test rispecchia la struttura delle classi nel package main.
+Inoltre tutti i metodi di test hanno la stringa "test" come prefisso in testa al nome del metodo.
+
 # 7. Manuale utente
 
 ### Indice
