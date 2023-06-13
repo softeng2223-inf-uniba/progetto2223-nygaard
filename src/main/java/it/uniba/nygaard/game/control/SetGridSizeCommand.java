@@ -28,6 +28,7 @@ final class SetGridSizeCommand extends Command {
   /**
    * <h2> Costruttore </h2>
    * Costruttore della classe SetGridSizeCommand.
+   * Setta il numero minimo e massimo di parametri che rendono valido il comando.
    */
   private SetGridSizeCommand() {
     setMinParamNumber(1);
