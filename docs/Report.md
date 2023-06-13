@@ -510,6 +510,11 @@ Per visualizzare il numero di tentativi effettuati, falliti, e il massimo numero
 
 #### Visualizzare il tempo rimanente
 
+Per visualizzare il tempo trascorso e quello rimanente alla fine della partita, è possibile utilizzare il comando ***/mostratempo***:
+
+![/mostratempo](img%2FManualeUtente%2Ftempo_trascorso.png)
+
+**Attenzione!** Il tempo trascorso viene generalmente riportato per difetto, pertanto è possibile che il tempo trascorso sia maggiore di quello riportato fino a 59 secondi. 
 
 #### Visualizzare la griglia con le navi posizionate
 
