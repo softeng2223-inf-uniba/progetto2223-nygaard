@@ -27,6 +27,7 @@ final class ExitCommand extends Command {
    * <h3> Costruttore </h3>
    * <p>
    * Costruttore della classe ExitCommand.
+   * Setta il numero minimo e massimo di parametri che rendono valido il comando.
    * </p>
    */
   private ExitCommand() {
