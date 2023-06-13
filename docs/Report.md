@@ -424,6 +424,15 @@ Il funzionamento del software richiede:
 
 ## 4.2 Commento decisioni prese
 
+La suddivisione in package è stata effettuata accomunando le classi in base alle loro responsabilità e compiti svolti. In particolare è stato utilizzato il pattern architetturale del [*Entity Control Boundary*](https://en.wikipedia.org/wiki/Entity-control-boundary) (ECB) che prevede la suddivisione in tre parti:
+ - **CONTROL**: contiene le classi che si occupano della logica del software. In particolare si occupano di gestire le interazioni tra le entità e di gestire le richieste dell'utente.
+
+ - **BOUNDARY**: contiene le classi che si occupano dell'interfaccia con l'utente. In particolare si occupano di ricevere i comandi dell'utente e di mostrare i risultati delle operazioni.
+
+ - **ENTITY**: contiene le classi che rappresentano le entità del dominio del problema. In particolare si occupano di rappresentare le entità del gioco e di gestire le loro interazioni.
+
+ Un'altro patter architetturale utilizzato è stato quella del [*Singleton*](https://it.wikipedia.org/wiki/Singleton_(informatica)) che prevede la creazione di una classe che può essere istanziata una sola volta e che fornisce un punto di accesso globale a tale istanza. Questo pattern è stato utilizzato per le classi di tipo Control e per la classe Match (in quanto è possibile giocare solo una partita per volta)
+
 
 # 6. Riepilogo del Test
 
