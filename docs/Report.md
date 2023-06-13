@@ -488,10 +488,11 @@ Dopo ogni tentativo verrà mostrato quanti tentativi sono stati effettuati, quan
 
 Inoltre, viene riportato all'utente quanto tempo è passato e quanto ne rimane prima della fine della partita; nei casi precedenti non era stato impostato un tempo, pertanto il tempo è illimitato.
 
+![Tempo impostato a 2 minuti](img%2FManualeUtente%2Ftempo_impostato.png)
+
 #### Visualizzare la griglia con le navi posizionate
 
-**Attenzione!** questo comando mostra dove sono posizionate tutte le navi, questo significa che la partita perde di significato da giocare, dato che l'utente sarà a conoscenza della posizione di **tutte** le navi
-
+**Attenzione!** Questo comando mostra dove sono posizionate tutte le navi, questo significa che la partita perde di significato da giocare, dato che l'utente sarà a conoscenza della posizione di **tutte** le navi
 
 Una volta avviata la partita è possibile visualizzare la griglia con le navi posizionate utilizzando il comando ***/svelagriglia***:
 
