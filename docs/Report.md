@@ -449,10 +449,9 @@ Se tutto è andato a buon fine, l'applicazione verrà avviata e verrà eseguita 
 
 All'avvio dell'applicazione, verrà eseguita la schermata di benvenuto, con la scritta ***Inserire un comando:*** che viene visualizzata ogni qualvolta si richiede un comando all'utente.
 
-Per avere informazioni su tutti i comandi disponibili nel gioco, utilizzare il comando ***/help*** che mostrerà la lista dei comandi a disposizione seguiti da una breve descrizione del loro funzionamento:
+Per avere informazioni su tutti i comandi disponibili nel gioco, è possibile avviare l'applicazione con i flag ***--help*** oppure ***-h***, oppure utilizzando il comando ***/help*** ad applicazione avviata che mostrerà la lista dei comandi a disposizione seguiti da una breve descrizione del loro funzionamento:
 
 ![esecuzione_help.png](img%2FManualeUtente%2Fesecuzione_help.png)
-
 
 ### Preparazione della partita
 
