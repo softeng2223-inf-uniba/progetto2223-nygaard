@@ -25,10 +25,10 @@ public final class GridSizeBoundary {
   }
 
   /**
-   * <h2> inGameError </h2>
+   * <h2> alreadyInGame </h2>
    * <p>
    * Messaggio di errore per quando si tenta di impostare la dimensione della griglia
-   * mentre si è in partita.
+   * durante una partita.
    * </p>
    */
   public static void alreadyInGame() {
