@@ -382,6 +382,8 @@ Il funzionamento del software richiede:
 
 <br/>
 
+# 6. Riepilogo del Test
+
 # 7. Manuale utente
 
 ### Indice
