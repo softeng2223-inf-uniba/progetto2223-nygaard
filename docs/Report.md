@@ -429,6 +429,10 @@ Sono stati implementati un totale di **164** casi di test di cui alcuni sono rip
 
 ![PMD Test](img/Riepilogo del Test/PMDTestReport.png)
 
+- **Esito Build (GitHub Actions)**
+
+![Build](img/Riepilogo del Test/buildSuccessful.png)
+
 # 7. Manuale utente
 
 ### Indice
