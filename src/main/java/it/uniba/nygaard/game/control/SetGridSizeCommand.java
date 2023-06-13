@@ -50,6 +50,8 @@ final class SetGridSizeCommand extends Command {
    * <h2> executeCommand </h2>
    * <p>
    * Esegue il comando per impostare la dimensione della griglia.
+   * Il comando è disponibile solo se non si è in partita.
+   * Se viene passato un numero sbagliato di parametri, viene stampato il come usare il comando.
    * </p>
    *
    * @param command Comando da eseguire
