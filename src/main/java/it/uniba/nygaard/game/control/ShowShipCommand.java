@@ -48,6 +48,7 @@ final class ShowShipCommand extends Command {
    * <h3> executeCommand </h3>
    * <p>
    * Esegue il comando di visualizzazione delle navi.
+   * Se viene passato un numero sbagliato di parametri, viene stampato il come usare il comando.
    * </p>
    *
    * @param command Comando da eseguire.
