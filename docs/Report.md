@@ -496,6 +496,8 @@ Se il tempo a disposizione termina la partita verrà ritenuta conclusa, senza at
 
 ![Tempo scaduto](img%2FManualeUtente%2Ftempo_esaurito.png)
 
+#### Visualizzare la griglia di attacco
+
 
 #### Visualizzare la griglia con le navi posizionate
 
