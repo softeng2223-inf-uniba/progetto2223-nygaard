@@ -409,6 +409,8 @@ una partita
 
 ![Diagramma di sequenza del colpo](img/Diagrammi/Sequenza_Colpo.png)
 
+## 5.2 Design Pattern
+
 
 
 # 7. Manuale utente
