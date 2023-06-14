@@ -49,7 +49,7 @@ Accademico 2022-2023**.
 
 Iniziamo con le presentazioni:
 
-## Gruppo Nygaard
+## Gruppo [Nygaard](ISPIRATORE.md)
 
 <br>
 
