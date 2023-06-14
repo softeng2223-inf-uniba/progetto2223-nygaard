@@ -425,7 +425,7 @@ riportando l'esempio di un singolo comando per comodità di rappresentazione:
 
 ![Design pattern](img/Diagrammi/Design_Pattern.png)
 
-## 5.4 Principi di OO Design
+## 5.3 Principi di OO Design
 
 Data la realizzazione del progetto in Java, un linguaggio inerentemente *Object-Oriented*, l'architettura dell'applicazione doveva attenersi ai seguenti principi:
 
@@ -457,6 +457,8 @@ Data la realizzazione del progetto in Java, un linguaggio inerentemente *Object-
   Il principio *DRY* è stato rispettato, in quanto non ci sono duplicazioni di codice all'interno del progetto,
   e dove possibile si è sfruttata l'esistenza di classi esistenti (vedi *Scanner*) 
   o metodi già implementati per realizzare la logica dell'applicazione (vedi *matches* di String)
+
+## 5.4 Principi SOLID
 
 
 
