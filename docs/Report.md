@@ -469,6 +469,8 @@ e alla modularità fornita dall'architettura
 - **Interface Segregation**: non sono state utilizzate interfacce
 - **Dependency Inversion**: le classi che implementano dei comandi dipendono esclusivamente dalla classe astratta *Command*
 
+## 5.5 Commenti sulle decisioni prese
+
 
 
 # 7. Manuale utente
