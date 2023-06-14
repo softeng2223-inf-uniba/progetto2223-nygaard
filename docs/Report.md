@@ -482,7 +482,7 @@ Passiamo ora all'elenco dei package e delle classi in essi contenuti:
 
   - *TimeCounter*: si occupa della gestione del tempo di gioco.
 
-  - *ParamControl*. si occupa della gestione dei parametri all'avvio dell'applicazione.
+  - *ParamControl*: si occupa della gestione dei parametri all'avvio dell'applicazione.
 
   Questo package contiene dunque tutte le classi di tipo **Control** previste dallo standard ECB.
 
@@ -617,10 +617,7 @@ Alcune classi, come la *LogoBoundary* e la *HelpBoundary*,
 richiedono la stampa di una mole di testo importante, 
 motivo per cui inizialmente si era pensato all'utilizzo di file di testo. 
 
-La configurazione del workflow però non permette di portare file di testo esterni 
-al *jar* che viene creato dalla build di Gradle, pertanto il team si è attenuto al
-workflow e ha ripiegato sull'utilizzo di classiche stampe e suddivisione in
-sottometodi di stampe molto corpose.
+La configurazione del workflow però non permette di portare file di testo esterni al jar all'interno del container Docker, che viene creato dalla build di Gradle, pertanto il team si è attenuto al workflow e ha ripiegato sull'utilizzo di classiche stampe e suddivisione in sottometodi di stampe molto corpose.
 
 # 6. Riepilogo dei Test
 
@@ -727,7 +724,7 @@ ignorate in quanto non rilevanti ai fini del testing.
 
 ### Installazione e configurazione di Docker
 
-- Scaricare e installare **Docker Desktop** dal sito ufficiale (*https://www.docker.com/products/docker-desktop/*)
+- Scaricare e installare [**Docker Desktop**](https://www.docker.com/products/docker-desktop) dal sito ufficiale 
 - Assicurarsi che l'installazione sia andata a buon fine
     - Avviare il programma **con privilegi elevati**
     - Utilizzare un prompt dei comandi e digitare il seguente comando: ``` docker info ```
@@ -918,7 +915,7 @@ Sprint 1 è stato anche realizzato il Product Backlog, per contenere le User Sto
 - **In Progress**: Task prese in carico dall'assignee;
 - **Review**: Task risolte, in fase di revisione;
 - **Ready**: Task risolte e revisionate dai reviewers;
-- **Done**: Task risolte, revisionate dai reviewers e approvate dallo Scrum Master.
+- **Done**: Task risolte, revisionate dai reviewers e approvate dallo Product Owner.
 
 La Board è stata gestita utilizzando la sezione Project messa a disposizione da Github. Tale organizzazione, per la
 gestione dei task, è stata imposta per lo Sprint 0 per mostrare al team un modo per dividere il lavoro e tracciare i
@@ -927,7 +924,7 @@ Successivamente, per le iterazioni successive, è stata concessa libertà al tea
 ottimale questa struttura, è stato deciso di mantenere lo stesso approccio utilizzato nello Sprint 0.
 
 Per la gestione dello sviluppo dei task è stato utilizzato il [_Github
-Flow_](https://docs.github.com/en/get-started/quickstart/github-flow): Per ogni issue, identificata progressivamente
+Flow_](https://docs.github.com/en/get-started/quickstart/github-flow): per ogni issue, identificata progressivamente
 con `#n`, è stato creato un branch, identificato con `issue#n`, da parte del componente a cui è stata assegnata la
 issue. Una volta che il componente, ha concluso
 il suo lavoro, veniva sottoposto a un minimo di 2 reviewers, attraverso una **Pull Request**, in cui si discutevano
@@ -976,7 +973,7 @@ In generale sono state seguite queste regole:
 - Le issue che richiedevano maggiori capacità di gestione e stesura di algoritmi complessi, sono state assegnate a [
   _Davide Cirilli_](#davide-cirilli);
 - Le restanti issue sono state assegnate principalmente a [_Giuditta Izzo_](#giuditta-izzo) e a [_Emanuele
-  Fontana_](#emanuele-fontana), non escludendo però gli alti membri del team in modo da
+  Fontana_](#emanuele-fontana), non escludendo però gli altri membri del team in modo da
   distribuire il carico di lavoro in maniera equa.
 
 ### Sprint 0
@@ -1045,8 +1042,7 @@ Lo _Sprint Goal_ era quello di completare il gioco, assicurandone la sua qualit�
 
 - Nella **fase di analisi** è stato indetto uno Scrum Meeting, per discutere e per assegnare i vari task ai membri del
   gruppo di lavoro. In particolare, una volta finite le task implementative, si è scelto di dedicare del tempo alla
-  **manutenzione evolutiva** del codice scritto, così da ridurre il più possibile _codice ridondante_, migliorando di
-  conseguenza.
+  **manutenzione evolutiva** del codice scritto, così da ridurre il più possibile _codice ridondante_.
 - Nella **fase di progettazione** sono stati sviluppati il **diagramma dei package**, relativo al System Design, insieme
   ai **diagrammi delle classi** e i **diagrammi di sequenza** delle user story principali, ovvero:
     - _Abbandona partita_;
