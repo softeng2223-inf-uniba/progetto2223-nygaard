@@ -20,14 +20,6 @@ public final class GameManager {
   private static Match match;
 
   /**
-   * <h3> matchAttempts </h3>
-   * <p>
-   * Numero di tentativi della prossima partita.
-   * </p>
-   */
-  private static int matchAttempts;
-
-  /**
    * <h3> args </h3>
    * <p>
    * Argomenti passati al programma.
