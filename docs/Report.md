@@ -460,6 +460,15 @@ Data la realizzazione del progetto in Java, un linguaggio inerentemente *Object-
 
 ## 5.4 Principi SOLID
 
+I principi SOLID sono intesi come linee guida per lo sviluppo di software leggibile, estendibile e manutenibile:
+
+- **Single Responsibility**: ogni classe ha una sola responsabilità
+- **Open-Closed**: le classi sono aperte all'estensione e chiuse alle modifiche mediante i modificatori di accesso giusti 
+e alla modularità fornita dall'architettura
+- **Liskov Substitution**: le classi che implementano dei comandi sono le uniche che estendono un'altra classe, e vengono utilizzate al posto del padre correttamente, essendo vitali per il funzionamento dell'intera applicazione
+- **Interface Segregation**: non sono state utilizzate interfacce
+- **Dependency Inversion**: le classi che implementano dei comandi dipendono esclusivamente dalla classe astratta *Command*
+
 
 
 # 7. Manuale utente
