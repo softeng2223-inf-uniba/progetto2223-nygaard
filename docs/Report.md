@@ -17,7 +17,8 @@
     - [3.2 Requisiti non Funzionali](#32-requisiti-non-funzionali)
 - [4. System Design](#4-system-design)
     - [4.1 Diagramma dei package](#41-diagramma-dei-package)
-    - [4.2 Commento sulle decisioni prese](#42-commento-decisioni-prese)
+    - [4.2 Architettura dell'applicazione](#42-architettura-dellapplicazione)
+    - [4.3 Commenti sulle decisioni prese](#43-commenti-sulle-decisioni-prese)
 - [6. Riepilogo del Testing](#6-riepilogo-del-test)
     - [6.1 Strumenti di analisi/testing del codice utilizzati](#61-strumenti-di-analisitesting-del-codice-utilizzati)
     - [6.2 Presentazione esiti test e considerazioni](#62-presentazione-esiti-test-e-considerazioni)
@@ -425,7 +426,7 @@ Il funzionamento del software richiede:
 
 ![Diagramma dei package](img/Design/DiagrammaPackage.png)
 
-## 4.2 Commento sulle decisioni prese
+## 4.2 Architettura dell'applicazione
 
 La suddivisione in package è stata effettuata accomunando le classi in base alle loro responsabilità e compiti svolti. 
 In particolare è stato utilizzato il pattern architetturale dell'[*Entity Control Boundary*](https://en.wikipedia.org/wiki/Entity-control-boundary) 
@@ -497,6 +498,14 @@ Passiamo ora all'elenco dei package e delle classi in essi contenuti:
   Questo package contiene dunque tutte le classi di tipo **Boundary** previste dallo standard ECB.
 
 - Il package ***utility*** contiene tutte le classi contenenti le costanti di utilità, suddivise per categorie.
+
+## 4.3 Commenti sulle decisioni prese
+
+Il team di sviluppo ha deciso di utilizzare il pattern architetturale ECB per la sua semplicità. 
+In particolare, il pattern ECB è stato scelto per la sua capacità di separare le classi in base alle loro
+responsabilità, in modo da rispettare gli *OO Design*, e per la sua capacità di rendere il codice più manutenibile e testabile,
+data la modularità delle componenti.
+
 
 # 6. Riepilogo del Test
 
