@@ -19,7 +19,7 @@
     - [4.1 Diagramma dei package](#41-diagramma-dei-package)
     - [4.2 Architettura dell'applicazione](#42-architettura-dellapplicazione)
     - [4.3 Commenti sulle decisioni prese](#43-commenti-sulle-decisioni-prese)
-- [6. Riepilogo del Testing](#6-riepilogo-del-test)
+- [6. Riepilogo dei Test](#6-riepilogo-dei-test)
     - [6.1 Strumenti di analisi/testing del codice utilizzati](#61-strumenti-di-analisitesting-del-codice-utilizzati)
     - [6.2 Presentazione esiti test e considerazioni](#62-presentazione-esiti-test-e-considerazioni)
     - [6.3 Descrizione dei test effettuati](#63-descrizione-dei-test-effettuati)
@@ -507,7 +507,7 @@ responsabilità, in modo da rispettare gli *OO Design*, e per la sua capacità d
 data la modularità delle componenti.
 
 
-# 6. Riepilogo del Test
+# 6. Riepilogo dei Test
 
 ## 6.1 Strumenti di analisi/testing del codice utilizzati
 
