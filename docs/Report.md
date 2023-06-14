@@ -471,7 +471,16 @@ e alla modularità fornita dall'architettura
 
 ## 5.5 Commenti sulle decisioni prese
 
+**Considerazioni in merito alla decisione di non utilizzare file di testo**
 
+Alcune classi, come la *LogoBoundary* e la *HelpBoundary*, 
+richiedono la stampa di una mole di testo importante, 
+motivo per cui inizialmente si era pensato all'utilizzo di file di testo. 
+
+La configurazione del workflow però non permette di portare file di testo esterni 
+al *jar* che viene creato dalla build di Gradle, pertanto il team si è attenuto al
+workflow e ha ripiegato sull'utilizzo di classiche stampe e suddivisione in
+sottometodi di stampe molto corpose.
 
 # 7. Manuale utente
 
