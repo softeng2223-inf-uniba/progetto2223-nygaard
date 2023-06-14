@@ -411,6 +411,20 @@ una partita
 
 ## 5.2 Design Pattern
 
+Tutte le classi *Control* che gestiscono i comandi dell'applicazione sono state implementate utilizzando il design pattern [**Singleton**](https://refactoring.guru/design-patterns/singleton), 
+un pattern della categoria dei *Creational design pattern* che assicura che una classe abbia una sola istanza, mettendo a disposizione un punto globale di accesso a tale istanza della classe.
+
+Inoltre, le classi *Control* sono state modellate secondo il design pattern [**Command**](https://refactoring.guru/design-patterns/command), 
+che sposa il *principio di presentazione separata* e permette di demandare la gestione e l'esecuzione dei comandi a una classe apposita
+che si occupa di invocare il metodo corretto della classe destinataria del comando. Questo design pattern permette di rendere il codice
+più flessibile e manutenibile, in quanto è possibile aggiungere nuovi comandi senza dover modificare il codice già esistente, ma soltanto
+creando una nuova classe che estende la classe astratta *Command*, implementando il metodo *executeCommand()*.
+
+Di seguito viene riportato un diagramma che spiega nel dettaglio come i design pattern sopra citati sono stati implementati nel progetto, 
+riportando l'esempio di un singolo comando per comodità di rappresentazione:
+
+![Design pattern](img/Diagrammi/Design_Pattern.png)
+
 
 
 # 7. Manuale utente
