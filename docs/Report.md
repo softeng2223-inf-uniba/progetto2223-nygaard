@@ -425,6 +425,8 @@ riportando l'esempio di un singolo comando per comodità di rappresentazione:
 
 ![Design pattern](img/Diagrammi/Design_Pattern.png)
 
+## 5.4 Principi di OO Design
+
 
 
 # 7. Manuale utente
