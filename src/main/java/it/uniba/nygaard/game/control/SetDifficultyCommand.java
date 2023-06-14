@@ -72,13 +72,14 @@ final class SetDifficultyCommand extends Command {
       setNewMatchDifficulty(difficultyInvolved);
     } else {
       if (command[1].matches("^[1-9][0-9]*$")) {
+        int newAttempts = 0;
         try {
-          GameManager.setMatchAttempts(Integer.parseInt(command[1]));
+          newAttempts = Integer.parseInt(command[1]);
         } catch (NumberFormatException e) {
           AttemptsBoundary.invalidChoice();
           return;
         }
-        setNewDiffAttempts(difficultyInvolved);
+        setNewDiffAttempts(difficultyInvolved, newAttempts);
       } else {
         AttemptsBoundary.invalidChoice();
       }
@@ -119,14 +120,13 @@ final class SetDifficultyCommand extends Command {
    * Imposta il numero di tentativi per una difficoltà.
    * </p>
    */
-  private void setNewDiffAttempts(final int difficultyToModify) {
-    int attempts = GameManager.getMatchAttempts();
+  private void setNewDiffAttempts(final int difficultyToModify, final int newAttempts) {
     Match p = GameManager.getMatch();
-    if (p.getAttempts(difficultyToModify) == attempts) {
+    if (p.getAttempts(difficultyToModify) == newAttempts) {
       SetDifficultyBoundary.sameAttempts();
       return;
     }
-    p.setAttempts(difficultyToModify, attempts);
+    p.setAttempts(difficultyToModify, newAttempts);
     SetDifficultyBoundary.operationDone();
   }
 }
