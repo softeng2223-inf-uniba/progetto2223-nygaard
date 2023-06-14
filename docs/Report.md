@@ -382,6 +382,12 @@ Il funzionamento del software richiede:
 
 <br/>
 
+# 5. OO Design
+
+## 5.1 Diagramma delle classi e di sequenza
+
+
+
 # 7. Manuale utente
 
 ### Indice
