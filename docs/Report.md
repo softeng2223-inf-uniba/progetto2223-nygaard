@@ -915,7 +915,7 @@ Sprint 1 è stato anche realizzato il Product Backlog, per contenere le User Sto
 - **In Progress**: Task prese in carico dall'assignee;
 - **Review**: Task risolte, in fase di revisione;
 - **Ready**: Task risolte e revisionate dai reviewers;
-- **Done**: Task risolte, revisionate dai reviewers e approvate dal Product Owner.
+- **Done**: Task risolte, revisionate dai reviewers e approvate dal *Product Owner*.
 
 La Board è stata gestita utilizzando la sezione Project messa a disposizione da Github. Tale organizzazione, per la
 gestione dei task, è stata imposta per lo Sprint 0 per mostrare al team un modo per dividere il lavoro e tracciare i
@@ -937,8 +937,7 @@ al branch principale e, una volta unito, il branch della Pull Request viene canc
 A ogni Sprint, svolto all'interno del progetto, è stato dedicato una **Milestone** e un **Project** dove, all'interno
 di ogni Project, sono state inserite le issue da svolgere per lo Sprint corrente.
 In questo modo, è stato possibile avere un quadro generale dei task dei progressi fatto dal team, tenendo così traccia
-di quali erano le issue da iniziare, quali in corso, quali in revisione e quali pronte alla revisione dello Scrum
-Master.
+di quali erano le issue da iniziare, quali in corso, quali in revisione e quali pronte alla revisione del *Product Owner*.
 
 Ogni qualvolta una issue veniva conclusa, i progressi di completamento della Milestone venivano aggiornati e, il suo
 completamento, significava il completamento delle issue assegnate per lo Sprint corrente.
