@@ -12,7 +12,6 @@ import it.uniba.nygaard.game.control.GeneralControl;
  * </p>
  */
 final class App {
-
   private App() {
   }
 

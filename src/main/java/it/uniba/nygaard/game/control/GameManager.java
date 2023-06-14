@@ -20,14 +20,6 @@ public final class GameManager {
   private static Match match;
 
   /**
-   * <h3> matchAttempts </h3>
-   * <p>
-   * Numero di tentativi della prossima partita.
-   * </p>
-   */
-  private static int matchAttempts;
-
-  /**
    * <h3> args </h3>
    * <p>
    * Argomenti passati al programma.
@@ -66,30 +58,6 @@ public final class GameManager {
    */
   static void setMatch(final Match newMatch) {
     GameManager.match = newMatch;
-  }
-
-  /**
-   * <h3> setMatchAttempts </h3>
-   * <p>
-   * Imposta il numero di tentativi della prossima partita.
-   * </p>
-   *
-   * @param newMatchAttempts Numero di tentativi della prossima partita.
-   */
-  static void setMatchAttempts(final int newMatchAttempts) {
-    GameManager.matchAttempts = newMatchAttempts;
-  }
-
-  /**
-   * <h3> getMatchAttempts </h3>
-   * <p>
-   * Restituisce il numero di tentativi della prossima partita.
-   * </p>
-   *
-   * @return Numero di tentativi della prossima partita.
-   */
-  static int getMatchAttempts() {
-    return matchAttempts;
   }
 
   /**
