@@ -55,7 +55,7 @@ Iniziamo con le presentazioni:
 
 <img style="width: 128px; height: auto;" src="./img/membri/cirilli.jpg" alt="Davy592">
 
-### **Davide Cirilli**
+### [**Davide Cirilli**](https://github.com/Davy592)
 
 20 anni, Molfetta (BA) <br>
 d.cirilli2@studenti.uniba.it
@@ -64,7 +64,7 @@ d.cirilli2@studenti.uniba.it
 
 <img style="width: 128px; height: auto;" src="./img/membri/curri.png" alt="mattiacurri">
 
-### **Mattia Curri**
+### [**Mattia Curri**](https://github.com/mattiacurri)
 
 20 anni, Ceglie Messapica (BR) <br>
 m.curri8@studenti.uniba.it
@@ -73,7 +73,7 @@ m.curri8@studenti.uniba.it
 
 <img style="width: 128px; height: auto;" src="./img/membri/fontana.jpg" alt="Fonty02">
 
-### **Emanuele Fontana**
+### [**Emanuele Fontana**](https://github.com/Fonty02)
 
 20 anni, Matera (MT) <br>
 e.fontana7@studenti.uniba.it
@@ -82,7 +82,7 @@ e.fontana7@studenti.uniba.it
 
 <img style="width: 128px; height: auto;" src="./img/membri/labianca.jpg" alt="Stefano-Labianca">
 
-### **Stefano Labianca**
+### [**Stefano Labianca**](https://github.com/Stefano-Labianca)
 
 20 anni, Corato (BA)  <br>
 s.labianca10@studenti.uniba.it
@@ -91,7 +91,7 @@ s.labianca10@studenti.uniba.it
 
 <img style="width: 128px; height: auto;" src="./img/membri/izzo.jpg" alt="GiudittaIzzo">
 
-### **Giuditta Izzo**
+### [**Giuditta Izzo**](https://github.com/GiudittaIzzo)
 
 21 anni, Bari (BA)  <br>
 g.izzo2@studenti.uniba.it
