@@ -427,8 +427,10 @@ Il funzionamento del software richiede:
 
 ## 4.2 Commento sulle decisioni prese
 
-La suddivisione in package è stata effettuata accomunando le classi in base alle loro responsabilità e compiti svolti. In particolare è stato utilizzato il pattern architetturale del [*Entity Control Boundary*](https://en.wikipedia.org/wiki/Entity-control-boundary) (ECB) che prevede la suddivisione in tre parti:
- - **CONTROL**: contiene le classi che si occupano della logica del software. In particolare si occupano di gestire le interazioni tra le entità e di gestire le richieste dell'utente.
+La suddivisione in package è stata effettuata accomunando le classi in base alle loro responsabilità e compiti svolti. 
+In particolare è stato utilizzato il pattern architetturale dell'[*Entity Control Boundary*](https://en.wikipedia.org/wiki/Entity-control-boundary) 
+(ECB) che prevede la classificazione delle classi in tre categorie:
+ - **CONTROL**: sono le classi che si occupano della logica del software. In particolare si occupano di gestire le interazioni tra le entità e di gestire le richieste dell'utente.
 
  - **BOUNDARY**: contiene le classi che si occupano dell'interfaccia con l'utente. In particolare si occupano di ricevere i comandi dell'utente e di mostrare i risultati delle operazioni.
 
