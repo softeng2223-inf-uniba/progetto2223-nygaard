@@ -386,6 +386,16 @@ Il funzionamento del software richiede:
 
 ## 5.1 Diagramma delle classi e di sequenza
 
+Di seguito sono riportati i **diagrammi delle classi a prospettiva software** e i **diagrammi di sequenza** per 
+le user story maggiormente significative.
+
+- [**RF5**](https://github.com/softeng2223-inf-uniba/progetto2223-nygaard/issues/30): Come giocatore voglio iniziare 
+una nuova partita
+
+![Diagramma delle classi di inizio partita](img/Diagrammi/Classi_Iniziare_Partita.png)
+
+![Diagramma di sequenza di inizio partita](img/Diagrammi/Sequenza_Iniziare_Partita.png)
+
 
 
 # 7. Manuale utente
