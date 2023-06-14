@@ -426,7 +426,7 @@ Il funzionamento del software richiede:
 Di seguito sono riportati i **diagrammi delle classi a prospettiva software** e i **diagrammi di sequenza** per 
 le user story maggiormente significative.
 
-- [**RF5**](https://github.com/softeng2223-inf-uniba/progetto2223-nygaard/issues/30): Come giocatore voglio iniziare 
+- [***RF5***](https://github.com/softeng2223-inf-uniba/progetto2223-nygaard/issues/30): Come giocatore voglio iniziare 
 una nuova partita
 
 **Diagramma delle classi**
