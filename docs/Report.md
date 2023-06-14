@@ -437,7 +437,7 @@ una nuova partita
 
 ![Diagramma di sequenza di inizio partita](img/Diagrammi/Sequenza_Iniziare_Partita.png)
 
-- [**RF16**](https://github.com/softeng2223-inf-uniba/progetto2223-nygaard/issues/88): Come giocatore voglio abbandonare 
+- [***RF16***](https://github.com/softeng2223-inf-uniba/progetto2223-nygaard/issues/88): Come giocatore voglio abbandonare 
 una partita
 
 **Diagramma delle classi**
