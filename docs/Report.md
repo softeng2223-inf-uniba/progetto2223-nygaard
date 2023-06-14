@@ -915,7 +915,7 @@ Sprint 1 è stato anche realizzato il Product Backlog, per contenere le User Sto
 - **In Progress**: Task prese in carico dall'assignee;
 - **Review**: Task risolte, in fase di revisione;
 - **Ready**: Task risolte e revisionate dai reviewers;
-- **Done**: Task risolte, revisionate dai reviewers e approvate dallo Product Owner.
+- **Done**: Task risolte, revisionate dai reviewers e approvate dal Product Owner.
 
 La Board è stata gestita utilizzando la sezione Project messa a disposizione da Github. Tale organizzazione, per la
 gestione dei task, è stata imposta per lo Sprint 0 per mostrare al team un modo per dividere il lavoro e tracciare i
