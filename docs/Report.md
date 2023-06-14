@@ -2,8 +2,6 @@
 
 ## Indice
 
-- [Report](#report)
-    - [Indice](#indice)
 - [1. Introduzione](#1-introduzione)
     - [Gruppo Nygaard](#gruppo-nygaard)
         - [**Davide Cirilli**](#davide-cirilli)
@@ -11,7 +9,7 @@
         - [**Emanuele Fontana**](#emanuele-fontana)
         - [**Stefano Labianca**](#stefano-labianca)
         - [**Giuditta Izzo**](#giuditta-izzo)
-- [2. Modello Di Dominio](#2-modello-di-dominio)
+- [2. Modello di Dominio](#2-modello-di-dominio)
 - [3. Requisiti specifici](#3-requisiti-specifici)
     - [3.1 Requisiti Funzionali](#31-requisiti-funzionali)
     - [3.2 Requisiti non Funzionali](#32-requisiti-non-funzionali)
@@ -19,17 +17,22 @@
     - [4.1 Diagramma dei package](#41-diagramma-dei-package)
     - [4.2 Architettura dell'applicazione](#42-architettura-dellapplicazione)
     - [4.3 Commenti sulle decisioni prese](#43-commenti-sulle-decisioni-prese)
+- [5. OO Design](#5-oo-design)
+  - [5.1 Diagramma delle classi e di sequenza](#51-diagramma-delle-classi-e-di-sequenza)
+  - [5.2 Design Pattern](#52-design-pattern)
+  - [5.3 Principi di *OO Design*](#53-principi-di-oo-design)
+    - [5.3.1 Principi *SOLID*](#531-principi-solid)
+  - [5.4 Commento sulle decisioni prese](#54-commenti-sulle-decisioni-prese)
 - [6. Riepilogo dei Test](#6-riepilogo-dei-test)
     - [6.1 Strumenti di analisi/testing del codice utilizzati](#61-strumenti-di-analisitesting-del-codice-utilizzati)
     - [6.2 Presentazione esiti test e considerazioni](#62-presentazione-esiti-test-e-considerazioni)
     - [6.3 Descrizione dei test effettuati](#63-descrizione-dei-test-effettuati)
 - [7. Manuale utente](#7-manuale-utente)
-    - [Indice](#indice-1)
-    - [Passi preliminari](#passi-preliminari)
-        - [Installazione e configurazione di Docker](#installazione-e-configurazione-di-docker)
-        - [Autenticazione con Github](#autenticazione-con-github)
-    - [Avvio dell'applicazione](#avvio-dellapplicazione)
-        - [Comandi in gioco](#comandi-in-gioco)
+  - [Passi preliminari](#passi-preliminari)
+    - [Installazione e configurazione di Docker](#installazione-e-configurazione-di-docker)
+    - [Autenticazione con Github](#autenticazione-con-github)
+  - [Avvio dell'applicazione](#avvio-dellapplicazione)
+    - [Comandi in gioco](#comandi-in-gioco)
 - [8. Processo di sviluppo e organizzazione del lavoro](#8-processo-di-sviluppo-e-organizzazione-del-lavoro)
     - [8.1 Introduzione al processo di sviluppo](#81-introduzione-al-processo-di-sviluppo)
     - [8.2 Roadmap degli sprint](#82-roadmap-degli-sprint)
@@ -40,8 +43,8 @@
     - [8.4 Software utilizzati](#84-software-utilizzati)
     - [8.5 Comunicazione interna al team](#85-comunicazione-interna-al-team)
 - [9. Analisi retrospettiva](#9-analisi-retrospettiva)
-    - [**Sprint 0**](#91-sprint-0-dimostrare-familiarità-con-github-e-il-processo-agile)
-    - [**Sprint 1**](#92-sprint-1-preparare-il-gioco)
+    - [Sprint 0](#91-sprint-0-dimostrare-familiarità-con-github-e-il-processo-agile)
+    - [Sprint 1](#92-sprint-1-preparare-il-gioco)
 
 # 1. Introduzione
 
@@ -50,13 +53,13 @@ Accademico 2022-2023**.
 
 Iniziamo con le presentazioni:
 
-## Gruppo Nygaard
+## Gruppo [Nygaard](ISPIRATORE.md)
 
 <br>
 
 <img style="width: 128px; height: auto;" src="./img/membri/cirilli.jpg" alt="Davy592">
 
-### **Davide Cirilli**
+### [**Davide Cirilli**](https://github.com/Davy592)
 
 20 anni, Molfetta (BA) <br>
 d.cirilli2@studenti.uniba.it
@@ -65,7 +68,7 @@ d.cirilli2@studenti.uniba.it
 
 <img style="width: 128px; height: auto;" src="./img/membri/curri.png" alt="mattiacurri">
 
-### **Mattia Curri**
+### [**Mattia Curri**](https://github.com/mattiacurri)
 
 20 anni, Ceglie Messapica (BR) <br>
 m.curri8@studenti.uniba.it
@@ -74,7 +77,7 @@ m.curri8@studenti.uniba.it
 
 <img style="width: 128px; height: auto;" src="./img/membri/fontana.jpg" alt="Fonty02">
 
-### **Emanuele Fontana**
+### [**Emanuele Fontana**](https://github.com/Fonty02)
 
 20 anni, Matera (MT) <br>
 e.fontana7@studenti.uniba.it
@@ -83,7 +86,7 @@ e.fontana7@studenti.uniba.it
 
 <img style="width: 128px; height: auto;" src="./img/membri/labianca.jpg" alt="Stefano-Labianca">
 
-### **Stefano Labianca**
+### [**Stefano Labianca**](https://github.com/Stefano-Labianca)
 
 20 anni, Corato (BA)  <br>
 s.labianca10@studenti.uniba.it
@@ -92,7 +95,7 @@ s.labianca10@studenti.uniba.it
 
 <img style="width: 128px; height: auto;" src="./img/membri/izzo.jpg" alt="GiudittaIzzo">
 
-### **Giuditta Izzo**
+### [**Giuditta Izzo**](https://github.com/GiudittaIzzo)
 
 21 anni, Bari (BA)  <br>
 g.izzo2@studenti.uniba.it
@@ -123,14 +126,14 @@ opzioni di griglia attraverso specifici comandi.
 
 # 2. Modello Di Dominio
 
-*I diagrammi che verranno mostrati, all'interno della relazione, sono stati realizzati
-con **StarUML**.* (https://staruml.io/)
+I diagrammi che verranno mostrati, all'interno della relazione, sono stati realizzati
+con [*StarUML*](https://staruml.io/).
 
 <br/>
 
 - ### Diagramma delle Classi con prospettiva concettuale
 
-![diagramma](img/ModelloDominio.png)
+![Diagramma delle classi con prospettiva concettuale](img/Diagrammi/ModelloDominio.png)
 
   <br/>
 
@@ -138,7 +141,7 @@ con **StarUML**.* (https://staruml.io/)
 
 ## 3.1 Requisiti Funzionali
 
-Di seguito, i ***Requisiti Funzionali*** del progetto, facenti parte della *User Story*.
+Di seguito sono riportati i ***Requisiti Funzionali*** del progetto, ovvero le *User Story*.
 
 - *[**RF1**](https://github.com/softeng2223-inf-uniba/progetto2223-nygaard/issues/25): mostrare l'help con elenco
   comandi e regole del gioco*
@@ -506,6 +509,118 @@ In particolare, il pattern ECB è stato scelto per la sua capacità di separare 
 responsabilità, in modo da rispettare gli *OO Design*, e per la sua capacità di rendere il codice più manutenibile e testabile,
 data la modularità delle componenti.
 
+
+# 5. OO Design
+
+## 5.1 Diagramma delle classi e di sequenza
+
+Di seguito sono riportati i **diagrammi delle classi a prospettiva software** e i **diagrammi di sequenza** per 
+le user story maggiormente significative.
+
+- [***RF5***](https://github.com/softeng2223-inf-uniba/progetto2223-nygaard/issues/30): Come giocatore voglio iniziare 
+una nuova partita
+
+**Diagramma delle classi**
+
+![Diagramma delle classi di inizio partita](img/Diagrammi/Classi_Iniziare_Partita.png)
+
+**Diagramma di sequenza**
+
+![Diagramma di sequenza di inizio partita](img/Diagrammi/Sequenza_Iniziare_Partita.png)
+
+- [***RF16***](https://github.com/softeng2223-inf-uniba/progetto2223-nygaard/issues/88): Come giocatore voglio abbandonare 
+una partita
+
+**Diagramma delle classi**
+
+![Diagramma delle classi di abbandono partita](img/Diagrammi/Classi_Abbandona_Partita.png)
+
+**Diagramma di sequenza**
+
+![Diagramma di sequenza di abbandono partita](img/Diagrammi/Sequenza_Abbandona_Partita.png)
+
+- [***RF13***](https://github.com/softeng2223-inf-uniba/progetto2223-nygaard/issues/82): Come giocatore voglio effettuare un tentativo per colpire una nave
+
+**Diagramma delle classi**
+
+![Diagramma delle classi del colpo](img/Diagrammi/Classi_Colpo.png)
+
+**Diagramma di sequenza**
+
+![Diagramma di sequenza del colpo](img/Diagrammi/Sequenza_Colpo.png)
+
+## 5.2 Design Pattern
+
+Tutte le classi *Control* che gestiscono i comandi dell'applicazione sono state implementate utilizzando il design pattern [*Singleton*](https://refactoring.guru/design-patterns/singleton), 
+un pattern della categoria dei *Creational design pattern* che assicura che una classe abbia una sola istanza, mettendo a disposizione un punto globale di accesso a tale istanza della classe.
+
+Inoltre, le classi *Control* sono state modellate secondo il design pattern [*Command*](https://refactoring.guru/design-patterns/command), 
+che sposa il *principio di presentazione separata* e permette di demandare la gestione e l'esecuzione dei comandi a una classe apposita
+che si occupa di invocare il metodo corretto della classe destinataria del comando. Questo design pattern permette di rendere il codice
+più flessibile e manutenibile, in quanto è possibile aggiungere nuovi comandi senza dover modificare il codice già esistente, ma soltanto
+creando una nuova classe che estende la classe astratta *Command*, implementando il metodo *executeCommand()*.
+
+Di seguito viene riportato un diagramma che spiega nel dettaglio come i design pattern sopra citati sono stati implementati nel progetto, 
+riportando l'esempio di un singolo comando per comodità di rappresentazione:
+
+![Design pattern](img/Diagrammi/Design_Pattern.png)
+
+## 5.3 Principi di OO Design
+
+Data la realizzazione del progetto in Java, un linguaggio inerentemente *Object-Oriented*, l'architettura dell'applicazione doveva attenersi ai seguenti principi:
+
+- **Information Hiding**
+
+  Gli attributi di tutte le classi sono privati e sono stati messi a disposizione dei getters/setters per potervi accedere in maniera controllata e corretta.
+  Laddove un metodo utilizzasse un altro metodo di servizio, questo è stato reso privato.
+
+
+- **Alta coesione**
+  
+  Le classi hanno una ben definita responsabilità, grazie alla tassonomia ECB e ai design pattern utilizzati
+
+
+- **Basso accoppiamento**
+
+  Poichè il progetto rispetta il principio dell'*information hiding*, non ci sono forti dipendenze tra componenti, 
+  questo permette di non propagare i cambiamenti.
+
+
+- **Presentazione separata**
+
+  Dato l'utilizzo della tassonomia ECB, le classi *Boundary* si occupano esclusivamente della logica di presentazione 
+  e di interfacciarsi con l'utente, mentre le classi *Control* implementano la logica di dominio 
+
+
+- **Do not Repeat Yourself (*DRY*)**
+    
+  Il principio *DRY* è stato rispettato, in quanto non ci sono duplicazioni di codice all'interno del progetto,
+  e dove possibile si è sfruttata l'esistenza di classi esistenti (vedi *Scanner*) 
+  o metodi già implementati per realizzare la logica dell'applicazione (vedi *matches* di String)
+
+### 5.3.1 Principi SOLID
+
+I principi SOLID sono intesi come linee guida per lo sviluppo di software leggibile, estendibile e manutenibile:
+
+- **Single Responsibility**: ogni classe ha una sola responsabilità
+- **Open-Closed**: le classi sono aperte all'estensione e chiuse alle modifiche mediante i modificatori di accesso giusti 
+e alla modularità fornita dall'architettura
+- **Liskov Substitution**: le classi che implementano dei comandi sono le uniche che estendono un'altra classe, e vengono utilizzate al posto del padre correttamente, essendo vitali per il funzionamento dell'intera applicazione
+- **Interface Segregation**: non sono state utilizzate interfacce
+- **Dependency Inversion**: le classi che implementano dei comandi dipendono esclusivamente dalla classe astratta *Command*
+
+## 5.4 Commenti sulle decisioni prese
+
+**Considerazioni in merito alla decisione di non utilizzare file di testo**
+
+Alcune classi, come la *LogoBoundary* e la *HelpBoundary*, 
+richiedono la stampa di una mole di testo importante, 
+motivo per cui inizialmente si era pensato all'utilizzo di file di testo. 
+
+La configurazione del workflow però non permette di portare file di testo esterni 
+al *jar* che viene creato dalla build di Gradle, pertanto il team si è attenuto al
+workflow e ha ripiegato sull'utilizzo di classiche stampe e suddivisione in
+sottometodi di stampe molto corpose.
 
 # 6. Riepilogo dei Test
 
