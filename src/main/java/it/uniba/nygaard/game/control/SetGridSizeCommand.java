@@ -28,6 +28,7 @@ final class SetGridSizeCommand extends Command {
   /**
    * <h2> Costruttore </h2>
    * Costruttore della classe SetGridSizeCommand.
+   * Setta il numero minimo e massimo di parametri che rendono valido il comando.
    */
   private SetGridSizeCommand() {
     setMinParamNumber(1);
@@ -50,6 +51,8 @@ final class SetGridSizeCommand extends Command {
    * <h2> executeCommand </h2>
    * <p>
    * Esegue il comando per impostare la dimensione della griglia.
+   * Il comando è disponibile solo se non si è in partita.
+   * Se viene passato un numero sbagliato di parametri, viene stampato il come usare il comando.
    * </p>
    *
    * @param command Comando da eseguire

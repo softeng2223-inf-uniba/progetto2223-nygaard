@@ -9,14 +9,14 @@ package it.uniba.nygaard.game.control;
 abstract class Command {
 
   /**
-   * <h3> minParam </h3>
+   * <h3> minParamNumber </h3>
    * <p>
    * Numero minimo di parametri del comando.
    * </p>
    */
   private int minParamNumber;
   /**
-   * <h3> maxParam </h3>
+   * <h3> maxParamNumber </h3>
    * <p>
    * Numero massimo di parametri del comando.
    * </p>
@@ -24,7 +24,7 @@ abstract class Command {
   private int maxParamNumber;
 
   /**
-   * <h3> setParamNumber </h3>
+   * <h3> setMinParamNumber </h3>
    * <p>
    * Imposta il numero minimo di parametri del comando.
    * </p>
@@ -36,7 +36,7 @@ abstract class Command {
   }
 
   /**
-   * <h3> setParamNumber </h3>
+   * <h3> setMaxParamNumber </h3>
    * <p>
    * Imposta il numero massimo di parametri del comando.
    * </p>

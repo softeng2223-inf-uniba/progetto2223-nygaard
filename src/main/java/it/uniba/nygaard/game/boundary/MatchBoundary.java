@@ -68,7 +68,7 @@ public final class MatchBoundary {
   }
 
   /**
-   * <h3> playAgain </h3>
+   * <h3> endMatch </h3>
    * <p>
    * Stampa il messaggio relativo al fatto che
    * il giocatore ha terminato la partita precedente.

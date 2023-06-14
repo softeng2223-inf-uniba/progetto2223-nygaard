@@ -26,6 +26,7 @@ final class SetTimeCommand extends Command {
    * <h3> Costruttore </h3>
    * <p>
    * Costruttore della classe SetTimeCommand.
+   * Setta il numero minimo e massimo di parametri che rendono valido il comando.
    * </p>
    */
   private SetTimeCommand() {
@@ -48,6 +49,7 @@ final class SetTimeCommand extends Command {
    * <p>
    * Esegue il comando di impostazione del tempo se non si è in partita.
    * Se il tempo non è valido verrà mostrato un messaggio di errore.
+   * Se viene passato un numero sbagliato di parametri, viene stampato il come usare il comando.
    * </p>
    *
    * @param command Comando da eseguire.

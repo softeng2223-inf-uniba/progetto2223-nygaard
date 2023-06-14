@@ -27,6 +27,7 @@ final class LeaveMatchCommand extends Command {
    * <h2> Costruttore </h2>
    * <p>
    * Costruttore  della classe LeaveMatchCommand.
+   * Setta il numero minimo e massimo di parametri che rendono valido il comando.
    * </p>
    */
   private LeaveMatchCommand() {
@@ -48,6 +49,8 @@ final class LeaveMatchCommand extends Command {
    * <h2> executeCommand </h2>
    * <p>
    * Esegue il comando per decidere se abbandonare la partita.
+   * Il comando è disponibile solo se si è in partita.
+   * Se viene passato un numero sbagliato di parametri, viene stampato il come usare il comando.
    * </p>
    *
    * @param command comando da eseguire

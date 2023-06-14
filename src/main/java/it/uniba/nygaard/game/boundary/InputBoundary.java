@@ -52,7 +52,7 @@ public final class InputBoundary {
   }
 
   /**
-   * <h3> reset </h3>
+   * <h3> resetColor </h3>
    * <p>
    * Metodo che resetta il colore del testo a quello di default.
    * </p>

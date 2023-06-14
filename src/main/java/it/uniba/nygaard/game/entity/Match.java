@@ -254,6 +254,14 @@ public final class Match {
     this.attempts[index] = value;
   }
 
+  /**
+   * <h3> getFailedAttempts </h3>
+   * <p>
+   * Restituisce il numero di tentativi falliti.
+   * </p>
+   *
+   * @return failedAttempts Tentativi falliti.
+   */
   public int getFailedAttempts() {
     return this.failedAttempts;
   }
@@ -456,7 +464,7 @@ public final class Match {
   /**
    * <h3> hit </h3>
    * <p>
-   * Il metodo hit colpisce la cella di coordinate (row, column).
+   * Il metodo hit colpisce la cella di coordinate (row, column) e restituisce cosa è stato colpito.
    * </p>
    *
    * @param row    Riga della cella da colpire.

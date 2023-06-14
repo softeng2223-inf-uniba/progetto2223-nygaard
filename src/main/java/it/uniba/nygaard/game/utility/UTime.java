@@ -9,6 +9,13 @@ package it.uniba.nygaard.game.utility;
  *
  */
 public final class UTime {
+
+  /**
+   * <h3> Costanti </h3>
+   * <p>
+   *   Costanti per la gestione del tempo di gioco.
+   * </p>
+   */
   public static final int DEFAULT_TIME = -1;
   public static final long ONE_MINUTE = 60000;
 

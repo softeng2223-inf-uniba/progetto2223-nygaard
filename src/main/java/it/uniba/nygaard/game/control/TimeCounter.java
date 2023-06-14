@@ -20,6 +20,7 @@ class TimeCounter extends Thread {
    * <h3> run </h3>
    * <p>
    * Avvia il contatore del tempo di gioco.
+   * Se il tempo di gioco è scaduto, viene stampato un messaggio di timeout.
    * </p>
    */
   public void run() {

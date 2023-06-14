@@ -27,6 +27,7 @@ final class HelpCommand extends Command {
    * <h3> Costruttore </h3>
    * <p>
    * Costruttore della classe HelpCommand.
+   * Setta il numero minimo e massimo di parametri che rendono valido il comando.
    * </p>
    */
   private HelpCommand() {
@@ -38,6 +39,7 @@ final class HelpCommand extends Command {
    * <h3> executeCommand </h3>
    * <p>
    * Esegue il comando di aiuto.
+   * Se viene passato un numero sbagliato di parametri, viene stampato il come usare il comando.
    * </p>
    *
    * @param command Comando da eseguire.

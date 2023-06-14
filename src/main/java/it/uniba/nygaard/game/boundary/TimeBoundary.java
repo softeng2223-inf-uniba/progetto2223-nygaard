@@ -44,7 +44,7 @@ public final class TimeBoundary {
   }
 
   /**
-   * <h3> notInGame </h3>
+   * <h3> alreadyInGame </h3>
    * <p>
    * Stampa il messaggio relativo al fatto che non si può cambiare il tempo di gioco
    * se si è in partita.
@@ -55,7 +55,7 @@ public final class TimeBoundary {
   }
 
   /**
-   * <h3> mustBeInGame </h3>
+   * <h3> notInGame </h3>
    * <p>
    * Stampa il messaggio relativo al fatto che non si può vedere il tempo di gioco.
    * </p>

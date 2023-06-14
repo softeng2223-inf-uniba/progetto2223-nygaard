@@ -30,9 +30,11 @@ final class ParamControl {
   /**
    * <h3> initUI </h3>
    * <p>
-   * Controlla se l'applicazione è stava avviata con dei parametri.
-   * In caso positivo controlla se i parametri sono validi e, se lo sono,
-   * esegue i comandi corrispondenti.
+   * Inizializza l'interfaccia utente.
+   * Se il parametro è --help o -h stampa l'help,
+   * altrimenti se il parametro è diverso da --help o -h stampa
+   * un messaggio di errore e poi termina il programma.
+   * Se non ci sono parametri stampa il logo e la descrizione.
    * </p>
    */
   public static void initUI() {

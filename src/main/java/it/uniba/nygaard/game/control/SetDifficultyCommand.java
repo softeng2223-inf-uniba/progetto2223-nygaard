@@ -21,6 +21,7 @@ final class SetDifficultyCommand extends Command {
    * <h3> Costruttore </h3>
    * <p>
    * Costruttore della classe SetDifficultyCommand.
+   * Setta il numero minimo e massimo di parametri che rendono valido il comando.
    * </p>
    */
   private SetDifficultyCommand() {
@@ -51,6 +52,8 @@ final class SetDifficultyCommand extends Command {
    * <p>
    * Esegue il comando per impostare una difficoltà
    * o un nuovo numero di tentativi per una delle difficoltà.
+   * Il comando è disponibile solo se non si è in partita.
+   * Se viene passato un numero sbagliato di parametri, viene stampato il come usare il comando.
    * </p>
    *
    * @param command Comando da eseguire.
@@ -117,7 +120,7 @@ final class SetDifficultyCommand extends Command {
   /**
    * <h3> setNewDiffAttempts </h3>
    * <p>
-   * Imposta il numero di tentativi per una difficoltà.
+   * Imposta il nuovo numero di tentativi per la difficoltà scelta.
    * </p>
    */
   private void setNewDiffAttempts(final int difficultyToModify, final int newAttempts) {

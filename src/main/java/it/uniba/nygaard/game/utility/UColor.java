@@ -9,6 +9,12 @@ package it.uniba.nygaard.game.utility;
  *
  */
 public final class UColor {
+  /**
+   * <h3> Costanti </h3>
+   * <p>
+   *   Costanti per la gestione dei colori.
+   * </p>
+   */
   public static final String RED = "\u001B[31m";
   public static final String GREEN = "\u001B[32m";
   public static final String YELLOW = "\u001B[33m";
