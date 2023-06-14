@@ -403,6 +403,12 @@ una partita
 
 ![Diagramma di sequenza di abbandono partita](img/Diagrammi/Sequenza_Abbandona_Partita.png)
 
+- [**RF13**](https://github.com/softeng2223-inf-uniba/progetto2223-nygaard/issues/82): Come giocatore voglio effettuare un tentativo per colpire una nave
+
+![Diagramma delle classi del colpo](img/Diagrammi/Classi_Colpo.png)
+
+![Diagramma di sequenza del colpo](img/Diagrammi/Sequenza_Colpo.png)
+
 
 
 # 7. Manuale utente
