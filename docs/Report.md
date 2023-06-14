@@ -137,7 +137,7 @@ con **StarUML**.* (https://staruml.io/)
 
 ## 3.1 Requisiti Funzionali
 
-Di seguito, i ***Requisiti Funzionali*** del progetto, facenti parte della *User Story*.
+Di seguito sono riportati i ***Requisiti Funzionali*** del progetto, ovvero le *User Story*.
 
 - *[**RF1**](https://github.com/softeng2223-inf-uniba/progetto2223-nygaard/issues/25): mostrare l'help con elenco
   comandi e regole del gioco*
