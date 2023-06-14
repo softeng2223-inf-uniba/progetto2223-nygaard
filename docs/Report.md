@@ -122,8 +122,8 @@ opzioni di griglia attraverso specifici comandi.
 
 # 2. Modello Di Dominio
 
-*I diagrammi che verranno mostrati, all'interno della relazione, sono stati realizzati
-con **StarUML**.* (https://staruml.io/)
+I diagrammi che verranno mostrati, all'interno della relazione, sono stati realizzati
+con [**StarUML**](https://staruml.io/).
 
 <br/>
 
