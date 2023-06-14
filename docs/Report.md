@@ -129,7 +129,7 @@ con **StarUML**.* (https://staruml.io/)
 
 - ### Diagramma delle Classi con prospettiva concettuale
 
-![diagramma](img/ModelloDominio.png)
+![Diagramma delle classi con prospettiva concettuale](img/Diagrammi/ModelloDominio.png)
 
   <br/>
 
