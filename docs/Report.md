@@ -2,8 +2,6 @@
 
 ## Indice
 
-- [Report](#report)
-  - [Indice](#indice)
 - [1. Introduzione](#1-introduzione)
   - [Gruppo Nygaard](#gruppo-nygaard)
     - [**Davide Cirilli**](#davide-cirilli)
@@ -15,8 +13,13 @@
 - [3. Requisiti specifici](#3-requisiti-specifici)
   - [3.1 Requisiti Funzionali](#31-requisiti-funzionali)
   - [3.2 Requisiti non Funzionali](#32-requisiti-non-funzionali)
+- [5. OO Design](#5-oo-design)
+  - [5.1 Diagramma delle classi e di sequenza](#51-diagramma-delle-classi-e-di-sequenza)
+  - [5.2 Design Pattern](#52-design-pattern)
+  - [5.3 Principi di OO Design](#53-principi-di-oo-design)
+  - [5.4 Principi SOLID](#54-principi-solid)
+  - [5.5 Commento sulle decisioni prese](#55-commenti-sulle-decisioni-prese)
 - [7. Manuale utente](#7-manuale-utente)
-  - [Indice](#indice-1)
   - [Passi preliminari](#passi-preliminari)
     - [Installazione e configurazione di Docker](#installazione-e-configurazione-di-docker)
     - [Autenticazione con Github](#autenticazione-con-github)
