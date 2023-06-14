@@ -9,16 +9,16 @@
         - [**Emanuele Fontana**](#emanuele-fontana)
         - [**Stefano Labianca**](#stefano-labianca)
         - [**Giuditta Izzo**](#giuditta-izzo)
-- [2. Modello Di Dominio](#2-modello-di-dominio)
+- [2. Modello di Dominio](#2-modello-di-dominio)
 - [3. Requisiti specifici](#3-requisiti-specifici)
   - [3.1 Requisiti Funzionali](#31-requisiti-funzionali)
   - [3.2 Requisiti non Funzionali](#32-requisiti-non-funzionali)
 - [5. OO Design](#5-oo-design)
   - [5.1 Diagramma delle classi e di sequenza](#51-diagramma-delle-classi-e-di-sequenza)
   - [5.2 Design Pattern](#52-design-pattern)
-  - [5.3 Principi di OO Design](#53-principi-di-oo-design)
-  - [5.4 Principi SOLID](#54-principi-solid)
-  - [5.5 Commento sulle decisioni prese](#55-commenti-sulle-decisioni-prese)
+  - [5.3 Principi di *OO Design*](#53-principi-di-oo-design)
+    - [5.3.1 Principi *SOLID*](#531-principi-solid)
+  - [5.4 Commento sulle decisioni prese](#54-commenti-sulle-decisioni-prese)
 - [6. Riepilogo del Testing](#6-riepilogo-del-test)
     - [6.1 Strumenti di analisi/testing del codice utilizzati](#61-strumenti-di-analisitesting-del-codice-utilizzati)
     - [6.2 Presentazione esiti test e considerazioni](#62-presentazione-esiti-test-e-considerazioni)
@@ -39,8 +39,8 @@
     - [8.4 Software utilizzati](#84-software-utilizzati)
     - [8.5 Comunicazione interna al team](#85-comunicazione-interna-al-team)
 - [9. Analisi retrospettiva](#9-analisi-retrospettiva)
-    - [**Sprint 0**](#91-sprint-0-dimostrare-familiarità-con-github-e-il-processo-agile)
-    - [**Sprint 1**](#92-sprint-1-preparare-il-gioco)
+    - [Sprint 0](#91-sprint-0-dimostrare-familiarità-con-github-e-il-processo-agile)
+    - [Sprint 1](#92-sprint-1-preparare-il-gioco)
 
 # 1. Introduzione
 
@@ -123,7 +123,7 @@ opzioni di griglia attraverso specifici comandi.
 # 2. Modello Di Dominio
 
 I diagrammi che verranno mostrati, all'interno della relazione, sono stati realizzati
-con [**StarUML**](https://staruml.io/).
+con [*StarUML*](https://staruml.io/).
 
 <br/>
 
@@ -429,20 +429,32 @@ le user story maggiormente significative.
 - [**RF5**](https://github.com/softeng2223-inf-uniba/progetto2223-nygaard/issues/30): Come giocatore voglio iniziare 
 una nuova partita
 
+**Diagramma delle classi**
+
 ![Diagramma delle classi di inizio partita](img/Diagrammi/Classi_Iniziare_Partita.png)
+
+**Diagramma di sequenza**
 
 ![Diagramma di sequenza di inizio partita](img/Diagrammi/Sequenza_Iniziare_Partita.png)
 
 - [**RF16**](https://github.com/softeng2223-inf-uniba/progetto2223-nygaard/issues/88): Come giocatore voglio abbandonare 
 una partita
 
+**Diagramma delle classi**
+
 ![Diagramma delle classi di abbandono partita](img/Diagrammi/Classi_Abbandona_Partita.png)
+
+**Diagramma di sequenza**
 
 ![Diagramma di sequenza di abbandono partita](img/Diagrammi/Sequenza_Abbandona_Partita.png)
 
 - [**RF13**](https://github.com/softeng2223-inf-uniba/progetto2223-nygaard/issues/82): Come giocatore voglio effettuare un tentativo per colpire una nave
 
+**Diagramma delle classi**
+
 ![Diagramma delle classi del colpo](img/Diagrammi/Classi_Colpo.png)
+
+**Diagramma di sequenza**
 
 ![Diagramma di sequenza del colpo](img/Diagrammi/Sequenza_Colpo.png)
 
@@ -474,18 +486,18 @@ Data la realizzazione del progetto in Java, un linguaggio inerentemente *Object-
 
 - **Alta coesione**
   
-  Le classi hanno delle ben definite responsabilità, grazie alla tassonomia ECB e ai design pattern utilizzati
+  Le classi hanno una ben definita responsabilità, grazie alla tassonomia ECB e ai design pattern utilizzati
 
 
 - **Basso accoppiamento**
 
   Poichè il progetto rispetta il principio dell'*information hiding*, non ci sono forti dipendenze tra componenti, 
-  questo permette di non propagare cambiamenti a troppi componenti.
+  questo permette di non propagare i cambiamenti.
 
 
 - **Presentazione separata**
 
-  Data l'utilizzo della tassonomia ECB, le classi *Boundary* si occupano esclusivamente della logica di presentazione 
+  Dato l'utilizzo della tassonomia ECB, le classi *Boundary* si occupano esclusivamente della logica di presentazione 
   e di interfacciarsi con l'utente, mentre le classi *Control* implementano la logica di dominio 
 
 
@@ -495,7 +507,7 @@ Data la realizzazione del progetto in Java, un linguaggio inerentemente *Object-
   e dove possibile si è sfruttata l'esistenza di classi esistenti (vedi *Scanner*) 
   o metodi già implementati per realizzare la logica dell'applicazione (vedi *matches* di String)
 
-## 5.4 Principi SOLID
+### 5.3.1 Principi SOLID
 
 I principi SOLID sono intesi come linee guida per lo sviluppo di software leggibile, estendibile e manutenibile:
 
@@ -506,7 +518,7 @@ e alla modularità fornita dall'architettura
 - **Interface Segregation**: non sono state utilizzate interfacce
 - **Dependency Inversion**: le classi che implementano dei comandi dipendono esclusivamente dalla classe astratta *Command*
 
-## 5.5 Commenti sulle decisioni prese
+## 5.4 Commenti sulle decisioni prese
 
 **Considerazioni in merito alla decisione di non utilizzare file di testo**
 
