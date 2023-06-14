@@ -11,15 +11,19 @@
         - [**Giuditta Izzo**](#giuditta-izzo)
 - [2. Modello di Dominio](#2-modello-di-dominio)
 - [3. Requisiti specifici](#3-requisiti-specifici)
-  - [3.1 Requisiti Funzionali](#31-requisiti-funzionali)
-  - [3.2 Requisiti non Funzionali](#32-requisiti-non-funzionali)
+    - [3.1 Requisiti Funzionali](#31-requisiti-funzionali)
+    - [3.2 Requisiti non Funzionali](#32-requisiti-non-funzionali)
+- [4. System Design](#4-system-design)
+    - [4.1 Diagramma dei package](#41-diagramma-dei-package)
+    - [4.2 Architettura dell'applicazione](#42-architettura-dellapplicazione)
+    - [4.3 Commenti sulle decisioni prese](#43-commenti-sulle-decisioni-prese)
 - [5. OO Design](#5-oo-design)
   - [5.1 Diagramma delle classi e di sequenza](#51-diagramma-delle-classi-e-di-sequenza)
   - [5.2 Design Pattern](#52-design-pattern)
   - [5.3 Principi di *OO Design*](#53-principi-di-oo-design)
     - [5.3.1 Principi *SOLID*](#531-principi-solid)
   - [5.4 Commento sulle decisioni prese](#54-commenti-sulle-decisioni-prese)
-- [6. Riepilogo del Testing](#6-riepilogo-del-test)
+- [6. Riepilogo dei Test](#6-riepilogo-dei-test)
     - [6.1 Strumenti di analisi/testing del codice utilizzati](#61-strumenti-di-analisitesting-del-codice-utilizzati)
     - [6.2 Presentazione esiti test e considerazioni](#62-presentazione-esiti-test-e-considerazioni)
     - [6.3 Descrizione dei test effettuati](#63-descrizione-dei-test-effettuati)
@@ -419,6 +423,93 @@ Il funzionamento del software richiede:
 
 <br/>
 
+# 4. System Design
+
+## 4.1 Diagramma dei package
+
+![Diagramma dei package](img/Design/DiagrammaPackage.png)
+
+## 4.2 Architettura dell'applicazione
+
+La suddivisione in package è stata effettuata accomunando le classi in base alle loro responsabilità e compiti svolti. 
+In particolare è stato utilizzato il pattern architetturale dell'[*Entity Control Boundary*](https://en.wikipedia.org/wiki/Entity-control-boundary) 
+(ECB) che prevede la classificazione delle classi in tre categorie:
+ - **CONTROL**: sono le classi che si occupano della logica del software. In particolare si occupano di gestire le interazioni tra le entità e di gestire le richieste dell'utente.
+
+ - **BOUNDARY**: sono le classi che si occupano di interfacciarsi con l'utente e di gestire le logiche di presentazione. 
+In particolare si occupano di ricevere i comandi dell'utente e di mostrare i risultati delle operazioni.
+
+ - **ENTITY**: sono le classi che rappresentano le entità del dominio del problema. In particolare si occupano di rappresentare le entità del gioco e di gestire le loro interazioni.
+
+Passiamo ora all'elenco dei package e delle classi in essi contenuti:
+
+- Il package ***app*** contiene la classe *App* che si occupa dell'inizializzazione e avvio del software, come definito dal *workflow* utilizzato.
+
+- Il package ***nygaard*** contiene tutti i package e le classi create dal team di sviluppo. In particolare abbiamo il package ***game*** dedicato al gioco nel quale troviamo i seguenti package:
+  - *entity*
+  - *control*
+  - *boundary*
+  - *utility*
+
+- Il package ***entity*** contiene:
+
+  - *Match*, che rappresenta la partita in corso. Contiene tutte le informazioni necessarie per gestire la partita e le classi che la compongono.
+
+  - package ***ships***:
+
+    - *Coordinate*: classe che rappresenta le coordinate di una cella della griglia di gioco
+    - *Ship*: classe che contiene tutte le informazioni sulla singola nave
+    - *ShipType*: enumeratore che contiene i tipi di navi presenti nel gioco
+
+  - package ***Grids***:
+
+    - *Grid*: classe astratta che rappresenta una generica griglia
+    - *Cell*: classe che rappresenta una cella della griglia di gioco. Contiene tutte le informazioni sulla singola cella. In particolare contiene un riferimento alla nave che occupa la cella (se presente)
+    - *CharactersGrid*: classe che rappresenta la griglia di conoscenza del giocatore. Essa mostra le informazioni che il giocatore ha sulla griglia di gioco dell'avversario
+    - *CellsGrid*: classe che rappresenta la griglia di difesa, ovvero la griglia che ha conoscenza delle navi piazzate dal computer 
+
+  Questo package contiene dunque tutte le classi di tipo **Entity** previste dallo standard ECB.
+
+- Il package ***control*** contiene:
+
+  - *Command*: classe astratta da cui derivano tutte le classi dei comandi. Di essi ne definisce il metodo principale `executeCommand()` e alcune caratteristiche comuni (come il numero dei parametri minimi e massimi).
+
+  - I vari *comandi* corrispondenti ai [*requisiti funzionali*](#31-requisiti-funzionali)
+
+  - *GeneralControl*: si occupa di gestire la logica principale del gioco: inizializzazione, avvio, gestione dei comandi e chiusura.
+
+  - *GameManager*: si occupa della gestione della partita. In particolare permette alle varie classi di comunicare con la partita in corso.
+
+  - *TimeCounter*: si occupa della gestione del tempo di gioco.
+
+  - *ParamControl*. si occupa della gestione dei parametri all'avvio dell'applicazione.
+
+  Questo package contiene dunque tutte le classi di tipo **Control** previste dallo standard ECB.
+
+- Il package ***boundary*** contiene:
+
+   - Le varie boundary per gestire gli output dei [*requisiti funzionali*](#31-requisiti-funzionali)
+
+   - *InputBoundary*: si occupa di gestire l'input dell'utente
+
+   - *LogoBoundary*: si occupa di mostrare il logo del gioco
+
+   - *ParamsBoundary*: si occupa della gestione delle stampe a video dei *flag* passati all'avvio dell'applicazione
+
+   - *DescriptionBoundary*: si occupa di mostrare la descrizione del gioco
+
+  Questo package contiene dunque tutte le classi di tipo **Boundary** previste dallo standard ECB.
+
+- Il package ***utility*** contiene tutte le classi contenenti le costanti di utilità, suddivise per categorie.
+
+## 4.3 Commenti sulle decisioni prese
+
+Il team di sviluppo ha deciso di utilizzare il pattern architetturale ECB per la sua semplicità. 
+In particolare, il pattern ECB è stato scelto per la sua capacità di separare le classi in base alle loro
+responsabilità, in modo da rispettare gli *OO Design*, e per la sua capacità di rendere il codice più manutenibile e testabile,
+data la modularità delle componenti.
+
+
 # 5. OO Design
 
 ## 5.1 Diagramma delle classi e di sequenza
@@ -531,7 +622,7 @@ al *jar* che viene creato dalla build di Gradle, pertanto il team si è attenuto
 workflow e ha ripiegato sull'utilizzo di classiche stampe e suddivisione in
 sottometodi di stampe molto corpose.
 
-# 6. Riepilogo del Test
+# 6. Riepilogo dei Test
 
 ## 6.1 Strumenti di analisi/testing del codice utilizzati
 
@@ -555,35 +646,35 @@ Di seguito vengono presentati gli esiti delle fasi di test.
   Sono stati implementati un totale di **164** casi di test di cui alcuni sono ripetuti più volte (con parametri od
   oggetti diversi) arrivando così a un totale di **218** casi di test.
 
-![Casi di test](img/Riepilogo del Test/testReport.png)
+![Casi di test](img/Riepilogo%20del%20Test/testReport.png)
 
 - **Esito CheckStyle: Main**
 
-![CheckStyle main](img/Riepilogo del Test/checkStyleMainReport.png)
+![CheckStyle main](img/Riepilogo%20del%20Test/checkStyleMainReport.png)
 
 - **Esito CheckStyle: Test**
 
-![CheckStyle test](img/Riepilogo del Test/checkStyleTestReport.png)
+![CheckStyle test](img/Riepilogo%20del%20Test/checkStyleTestReport.png)
 
 - **Esito SpotBugs: Main**
 
-![SpotBugs main](img/Riepilogo del Test/spotBugsMainReport.png)
+![SpotBugs main](img/Riepilogo%20del%20Test/spotBugsMainReport.png)
 
 - **Esito SpotBugs: Test**
 
-![SpotBugs test](img/Riepilogo del Test/spotBugsTestReport.png)
+![SpotBugs test](img/Riepilogo%20del%20Test/spotBugsTestReport.png)
 
 - **Esito PMD: Main**
 
-![PMD Main](img/Riepilogo del Test/PMDMainReport.png)
+![PMD Main](img/Riepilogo%20del%20Test/PMDMainReport.png)
 
 - **Esito PMD: Test**
 
-![PMD Test](img/Riepilogo del Test/PMDTestReport.png)
+![PMD Test](img/Riepilogo%20del%20Test/PMDTestReport.png)
 
 - **Esito Build (GitHub Actions)**
 
-![Build](img/Riepilogo del Test/buildSuccessful.png)
+![Build](img/Riepilogo%20del%20Test/buildSuccessful.png)
 
 ## 6.3 Descrizione dei test effettuati
 
