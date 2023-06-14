@@ -427,6 +427,37 @@ riportando l'esempio di un singolo comando per comodità di rappresentazione:
 
 ## 5.4 Principi di OO Design
 
+Data la realizzazione del progetto in Java, un linguaggio inerentemente *Object-Oriented*, l'architettura dell'applicazione doveva attenersi ai seguenti principi:
+
+- **Information Hiding**
+
+  Gli attributi di tutte le classi sono privati e sono stati messi a disposizione dei getters/setters per potervi accedere in maniera controllata e corretta.
+  Laddove un metodo utilizzasse un altro metodo di servizio, questo è stato reso privato.
+
+
+- **Alta coesione**
+  
+  Le classi hanno delle ben definite responsabilità, grazie alla tassonomia ECB e ai design pattern utilizzati
+
+
+- **Basso accoppiamento**
+
+  Poichè il progetto rispetta il principio dell'*information hiding*, non ci sono forti dipendenze tra componenti, 
+  questo permette di non propagare cambiamenti a troppi componenti.
+
+
+- **Presentazione separata**
+
+  Data l'utilizzo della tassonomia ECB, le classi *Boundary* si occupano esclusivamente della logica di presentazione 
+  e di interfacciarsi con l'utente, mentre le classi *Control* implementano la logica di dominio 
+
+
+- **Do not Repeat Yourself (*DRY*)**
+    
+  Il principio *DRY* è stato rispettato, in quanto non ci sono duplicazioni di codice all'interno del progetto,
+  e dove possibile si è sfruttata l'esistenza di classi esistenti (vedi *Scanner*) 
+  o metodi già implementati per realizzare la logica dell'applicazione (vedi *matches* di String)
+
 
 
 # 7. Manuale utente
