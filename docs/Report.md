@@ -17,7 +17,7 @@
     - [3.2 Requisiti non Funzionali](#32-requisiti-non-funzionali)
 - [4. System Design](#4-system-design)
     - [4.1 Diagramma dei package](#41-diagramma-dei-package)
-    - [4.2 Commento decisioni prese](#42-commento-decisioni-prese)
+    - [4.2 Commento sulle decisioni prese](#42-commento-decisioni-prese)
 - [6. Riepilogo del Testing](#6-riepilogo-del-test)
     - [6.1 Strumenti di analisi/testing del codice utilizzati](#61-strumenti-di-analisitesting-del-codice-utilizzati)
     - [6.2 Presentazione esiti test e considerazioni](#62-presentazione-esiti-test-e-considerazioni)
@@ -425,7 +425,7 @@ Il funzionamento del software richiede:
 
 ![Diagramma dei package](img/Design/DiagrammaPackage.png)
 
-## 4.2 Commento decisioni prese
+## 4.2 Commento sulle decisioni prese
 
 La suddivisione in package è stata effettuata accomunando le classi in base alle loro responsabilità e compiti svolti. In particolare è stato utilizzato il pattern architetturale del [*Entity Control Boundary*](https://en.wikipedia.org/wiki/Entity-control-boundary) (ECB) che prevede la suddivisione in tre parti:
  - **CONTROL**: contiene le classi che si occupano della logica del software. In particolare si occupano di gestire le interazioni tra le entità e di gestire le richieste dell'utente.
